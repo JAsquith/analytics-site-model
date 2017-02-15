@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Setup 120" parallel="tests" thread-count="4">
+
+    <parameter name="suite-name" value="Regression Setup 120" />
+    <parameter name="log-folder" value="C:/Selenium/Logs" />
+
+    <parameter name="test-domain" value="dev" />
+    <parameter name="platform" value="Windows" />
+    <parameter name="browser" value="firefox" />
+    <parameter name="version" value="ANY" />
+
+    <!-- Use these settings when running on personal laptop grid -->
+    <parameter name="grid-type" value="local" />
+
+<!--
+-->
+
+    <test name="ImportEAP0001">
+
+        <parameter name="username" value="regset173967" />
+        <parameter name="password" value="QtQeFiBj7" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="eap-name" value="BTEC Single" />
+        <parameter name="file-path" value="upload-files\eaps\BTEC Single EAP.csv" />
+
+        <classes>
+            <class name="admin.data.basedata.ImportEAPTest" />
+        </classes>
+    </test>
+
+
+    <test name="ImportEAP0002">
+
+        <parameter name="username" value="regset173968" />
+        <parameter name="password" value="NxKmKeAj4" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="eap-name" value="Eng GCSE 9-1" />
+        <parameter name="file-path" value="upload-files\eaps\Eng GCSE 9-1 EAP.csv" />
+
+        <classes>
+            <class name="admin.data.basedata.ImportEAPTest" />
+        </classes>
+    </test>
+
+    <test name="ImportEAP0003">
+
+        <parameter name="username" value="regset173969" />
+        <parameter name="password" value="RpStKsCh8" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="eap-name" value="GCSE A*-G" />
+        <parameter name="file-path" value="upload-files\eaps\GCSE A-G EAP.csv" />
+
+        <classes>
+            <class name="admin.data.basedata.ImportEAPTest" />
+        </classes>
+    </test>
+
+    <test name="ImportEAP0004">
+
+        <parameter name="username" value="regset173970" />
+        <parameter name="password" value="JcNoPoPn6" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="eap-name" value="Mat GCSE 9-1" />
+        <parameter name="file-path" value="upload-files\eaps\Mat GCSE 9-1 EAP.csv" />
+
+        <classes>
+            <class name="admin.data.basedata.ImportEAPTest" />
+        </classes>
+    </test>
+
+<!--
+
+    -->
+
+</suite>

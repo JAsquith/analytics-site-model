@@ -1,0 +1,431 @@
+Student ID,Student Name,Qual Name,Grade
+5001,Adams; William,Art GCSE,G+
+5001,Adams; William,BTEC H&SC,C-
+5001,Adams; William,Business Studies GCSE,G+
+5001,Adams; William,DT Textiles GCSE,F-
+5001,Adams; William,English AS Level,B+
+5001,Adams; William,Maths - Further GCSE,8=
+5001,Adams; William,MFL - Spanish GCSE,E=
+5001,Adams; William,Sci - Biology GCSE,G+
+5001,Adams; William,Sci - Chemistry GCSE,A=
+5002,Albarn; Damon,Art GCSE,G-
+5002,Albarn; Damon,BTEC ICT,B-
+5002,Albarn; Damon,English AS Level,X
+5002,Albarn; Damon,Geography GCSE,D-
+5002,Albarn; Damon,Maths - GCSE,8-
+5002,Albarn; Damon,MFL - French GCSE,D-
+5002,Albarn; Damon,Science Double GCSE,1=
+5003,Ament; Jeff,Art GCSE,G+
+5003,Ament; Jeff,DT ResMat GCSE,A*=
+5003,Ament; Jeff,English AS Level,D=
+5003,Ament; Jeff,Geography GCSE,B=
+5003,Ament; Jeff,Maths - Further GCSE,8+
+5003,Ament; Jeff,MFL - German GCSE,C+
+5003,Ament; Jeff,Science Double GCSE,9+
+5004,Aniston; Jennifer,Art GCSE,D=
+5004,Aniston; Jennifer,Computing GCSE,G-
+5004,Aniston; Jennifer,English Lang GCSE,X
+5004,Aniston; Jennifer,English Lit GCSE,1=
+5004,Aniston; Jennifer,History GCSE,X
+5004,Aniston; Jennifer,Maths AS Level,C-
+5004,Aniston; Jennifer,MFL - Spanish GCSE,C-
+5004,Aniston; Jennifer,Science (Core) GCSE,A-
+5004,Aniston; Jennifer,Science Additional GCSE,G+
+5005,Ant; Adam,BTEC H&SC,A*-
+5005,Ant; Adam,Computing GCSE,E+
+5005,Ant; Adam,English AS Level,X
+5005,Ant; Adam,History GCSE,C=
+5005,Ant; Adam,Maths AS Level,E+
+5005,Ant; Adam,MFL - German GCSE,X
+5005,Ant; Adam,Science (Core) GCSE,X
+5005,Ant; Adam,Science Additional GCSE,E-
+5006,Ashe; Arthur,Art GCSE,G=
+5006,Ashe; Arthur,Business Studies GCSE,G-
+5006,Ashe; Arthur,Computing GCSE,F+
+5006,Ashe; Arthur,DT Textiles GCSE,F-
+5006,Ashe; Arthur,English AS Level,B-
+5006,Ashe; Arthur,Geography GCSE,A*-
+5006,Ashe; Arthur,Maths AS Level,D=
+5006,Ashe; Arthur,MFL - Spanish GCSE,D+
+5006,Ashe; Arthur,Science Double GCSE,U
+5007,Austen; Jane,BTEC H&SC,D=
+5007,Austen; Jane,Computing GCSE,C+
+5007,Austen; Jane,English Old GCSE,E=
+5007,Austen; Jane,History GCSE,C=
+5007,Austen; Jane,Maths - GCSE,3=
+5007,Austen; Jane,MFL - French GCSE,X
+5007,Austen; Jane,Science (Core) GCSE,F=
+5007,Austen; Jane,Science Additional GCSE,A*=
+5008,Aykroyd; Dan,Art GCSE,B=
+5008,Aykroyd; Dan,Computing GCSE,E=
+5008,Aykroyd; Dan,English Lang GCSE,6=
+5008,Aykroyd; Dan,English Lit GCSE,X
+5008,Aykroyd; Dan,Geography GCSE,E-
+5008,Aykroyd; Dan,History GCSE,G=
+5008,Aykroyd; Dan,Maths AS Level,E-
+5008,Aykroyd; Dan,MFL - Spanish GCSE,A=
+5008,Aykroyd; Dan,Science (Core) GCSE,C+
+5009,Balzary; Michael,BTEC H&SC,G+
+5009,Balzary; Michael,Business Studies GCSE,D+
+5009,Balzary; Michael,DT Graphics GCSE,F+
+5009,Balzary; Michael,DT ResMat GCSE,E-
+5009,Balzary; Michael,English Lang GCSE,X
+5009,Balzary; Michael,English Lit GCSE,3-
+5009,Balzary; Michael,Geography GCSE,A*=
+5009,Balzary; Michael,Maths AS Level,C-
+5009,Balzary; Michael,MFL - Spanish GCSE,B=
+5009,Balzary; Michael,Science Double GCSE,2-
+5010,Bangalter; Thomas,BTEC H&SC,A+
+5010,Bangalter; Thomas,Business Studies GCSE,U
+5010,Bangalter; Thomas,DT Food GCSE,G-
+5010,Bangalter; Thomas,DT ResMat GCSE,B=
+5010,Bangalter; Thomas,English Lang GCSE,7+
+5010,Bangalter; Thomas,Maths - Further GCSE,8+
+5010,Bangalter; Thomas,MFL - French GCSE,F-
+5010,Bangalter; Thomas,Science Double GCSE,2+
+5011,Banks; Tyra,Computing GCSE,D-
+5011,Banks; Tyra,DT ResMat GCSE,E-
+5011,Banks; Tyra,English AS Level,B=
+5011,Banks; Tyra,English Lang GCSE,4+
+5011,Banks; Tyra,English Lit GCSE,7-
+5011,Banks; Tyra,Geography GCSE,D+
+5011,Banks; Tyra,History GCSE,D+
+5011,Banks; Tyra,Maths - GCSE,8+
+5011,Banks; Tyra,MFL - French GCSE,C=
+5011,Banks; Tyra,Sci - Biology GCSE,G+
+5011,Banks; Tyra,Sci - Chemistry GCSE,F-
+5011,Banks; Tyra,Sci - Physics GCSE,A*+
+5012,Baresi; Franco,Art GCSE,A*+
+5012,Baresi; Franco,BTEC ICT,B=
+5012,Baresi; Franco,English Lang GCSE,5=
+5012,Baresi; Franco,English Lit GCSE,3=
+5012,Baresi; Franco,History GCSE,A*+
+5012,Baresi; Franco,Maths - Further GCSE,5=
+5012,Baresi; Franco,Maths - Statistics GCSE,6-
+5012,Baresi; Franco,MFL - French GCSE,X
+5012,Baresi; Franco,Science Double GCSE,9+
+5013,Barrymore; Drew,Art GCSE,A+
+5013,Barrymore; Drew,BTEC ICT,A+
+5013,Barrymore; Drew,DT Graphics GCSE,E-
+5013,Barrymore; Drew,English AS Level,B+
+5013,Barrymore; Drew,Maths - GCSE,3=
+5013,Barrymore; Drew,MFL - German GCSE,F=
+5013,Barrymore; Drew,MFL - Spanish GCSE,F+
+5013,Barrymore; Drew,Sci - Biology GCSE,D-
+5013,Barrymore; Drew,Sci - Chemistry GCSE,G-
+5013,Barrymore; Drew,Sci - Physics GCSE,F-
+5014,Benatar; Pat,Art GCSE,E+
+5014,Benatar; Pat,BTEC H&SC,C=
+5014,Benatar; Pat,Business Studies GCSE,E-
+5014,Benatar; Pat,Computing GCSE,D=
+5014,Benatar; Pat,DT Textiles GCSE,G+
+5014,Benatar; Pat,English Old GCSE,B-
+5014,Benatar; Pat,History GCSE,G-
+5014,Benatar; Pat,Maths - Further GCSE,1=
+5014,Benatar; Pat,MFL - German GCSE,D+
+5014,Benatar; Pat,MFL - Spanish GCSE,A+
+5014,Benatar; Pat,Sci - Biology GCSE,D=
+5014,Benatar; Pat,Sci - Chemistry GCSE,G=
+5014,Benatar; Pat,Sci - Physics GCSE,A*-
+5015,Bergman; Jaime,BTEC H&SC,E-
+5015,Bergman; Jaime,DT Textiles GCSE,G-
+5015,Bergman; Jaime,English Old GCSE,E-
+5015,Bergman; Jaime,Geography GCSE,E-
+5015,Bergman; Jaime,History GCSE,F-
+5015,Bergman; Jaime,Maths - Further GCSE,X
+5015,Bergman; Jaime,MFL - German GCSE,E+
+5015,Bergman; Jaime,MFL - Spanish GCSE,F=
+5015,Bergman; Jaime,Science Double GCSE,8=
+5016,Black; Frank,Art GCSE,A+
+5016,Black; Frank,Business Studies GCSE,G-
+5016,Black; Frank,Computing GCSE,B-
+5016,Black; Frank,DT ResMat GCSE,E+
+5016,Black; Frank,English Old GCSE,G=
+5016,Black; Frank,Maths - GCSE,7+
+5016,Black; Frank,MFL - French GCSE,G=
+5016,Black; Frank,MFL - German GCSE,B=
+5016,Black; Frank,Sci - Biology GCSE,B-
+5016,Black; Frank,Sci - Chemistry GCSE,F=
+5016,Black; Frank,Sci - Physics GCSE,A+
+5017,Bordin; Mike,Art GCSE,A+
+5017,Bordin; Mike,DT Graphics GCSE,A*+
+5017,Bordin; Mike,DT Textiles GCSE,E-
+5017,Bordin; Mike,English AS Level,A-
+5017,Bordin; Mike,History GCSE,A+
+5017,Bordin; Mike,Maths AS Level,C=
+5017,Bordin; Mike,Sci - Biology GCSE,B-
+5017,Bordin; Mike,Sci - Chemistry GCSE,B=
+5017,Bordin; Mike,Sci - Physics GCSE,F-
+5018,Bowie; David,Art GCSE,E=
+5018,Bowie; David,English Lang GCSE,3=
+5018,Bowie; David,English Lit GCSE,2-
+5018,Bowie; David,Geography GCSE,A-
+5018,Bowie; David,Maths AS Level,E=
+5018,Bowie; David,MFL - Spanish GCSE,G=
+5018,Bowie; David,Science Double GCSE,4=
+5019,Bradshaw; Terry,BTEC H&SC,B=
+5019,Bradshaw; Terry,Business Studies GCSE,F-
+5019,Bradshaw; Terry,DT Graphics GCSE,F+
+5019,Bradshaw; Terry,English Old GCSE,G+
+5019,Bradshaw; Terry,Geography GCSE,D=
+5019,Bradshaw; Terry,Maths AS Level,E+
+5019,Bradshaw; Terry,MFL - French GCSE,F=
+5019,Bradshaw; Terry,MFL - German GCSE,A*-
+5019,Bradshaw; Terry,Science Double GCSE,U
+5020,Brokaw; Tom,Art GCSE,A+
+5020,Brokaw; Tom,Computing GCSE,E=
+5020,Brokaw; Tom,DT ResMat GCSE,X
+5020,Brokaw; Tom,English Lang GCSE,9-
+5020,Brokaw; Tom,English Lit GCSE,U
+5020,Brokaw; Tom,Geography GCSE,A=
+5020,Brokaw; Tom,Maths AS Level,B=
+5020,Brokaw; Tom,MFL - German GCSE,A=
+5020,Brokaw; Tom,MFL - Spanish GCSE,X
+5020,Brokaw; Tom,Science Double GCSE,7+
+5021,Bryan; Ritzy,Art GCSE,D+
+5021,Bryan; Ritzy,Computing GCSE,G-
+5021,Bryan; Ritzy,DT Textiles GCSE,U
+5021,Bryan; Ritzy,English Old GCSE,F=
+5021,Bryan; Ritzy,Maths AS Level,C+
+5021,Bryan; Ritzy,MFL - French GCSE,G+
+5021,Bryan; Ritzy,MFL - German GCSE,D-
+5021,Bryan; Ritzy,Science (Core) GCSE,G=
+5022,Burnett; Carol,Art GCSE,B=
+5022,Burnett; Carol,BTEC H&SC,E-
+5022,Burnett; Carol,DT Food GCSE,A=
+5022,Burnett; Carol,DT ResMat GCSE,D-
+5022,Burnett; Carol,English Old GCSE,E-
+5022,Burnett; Carol,Geography GCSE,B=
+5022,Burnett; Carol,Maths - Further GCSE,4-
+5022,Burnett; Carol,Maths - Statistics GCSE,1-
+5022,Burnett; Carol,MFL - Spanish GCSE,C=
+5022,Burnett; Carol,Science (Core) GCSE,A=
+5022,Burnett; Carol,Science Additional GCSE,U
+5023,Bush; Kate,Art GCSE,A-
+5023,Bush; Kate,DT Graphics GCSE,B=
+5023,Bush; Kate,English AS Level,U
+5023,Bush; Kate,Geography GCSE,A-
+5023,Bush; Kate,Maths - GCSE,3=
+5023,Bush; Kate,MFL - Spanish GCSE,F-
+5023,Bush; Kate,Science Double GCSE,5-
+5024,Byrne; David,Business Studies GCSE,D=
+5024,Byrne; David,DT Food GCSE,A*=
+5024,Byrne; David,DT Textiles GCSE,G=
+5024,Byrne; David,English AS Level,U
+5024,Byrne; David,History GCSE,U
+5024,Byrne; David,Maths - Further GCSE,3=
+5024,Byrne; David,Maths - Statistics GCSE,1=
+5024,Byrne; David,MFL - French GCSE,G=
+5024,Byrne; David,Science Double GCSE,5-
+5025,Caesar; Augustus,Art GCSE,A=
+5025,Caesar; Augustus,BTEC H&SC,A+
+5025,Caesar; Augustus,Computing GCSE,G+
+5025,Caesar; Augustus,English Old GCSE,A*+
+5025,Caesar; Augustus,Maths - GCSE,9=
+5025,Caesar; Augustus,MFL - French GCSE,C-
+5025,Caesar; Augustus,MFL - German GCSE,F-
+5025,Caesar; Augustus,Science Double GCSE,U
+5026,Cameron; Matt,BTEC H&SC,B=
+5026,Cameron; Matt,Business Studies GCSE,C+
+5026,Cameron; Matt,Computing GCSE,A*+
+5026,Cameron; Matt,DT Graphics GCSE,E-
+5026,Cameron; Matt,English Lang GCSE,4+
+5026,Cameron; Matt,English Lit GCSE,3-
+5026,Cameron; Matt,Maths AS Level,B-
+5026,Cameron; Matt,MFL - French GCSE,A=
+5026,Cameron; Matt,MFL - Spanish GCSE,C+
+5026,Cameron; Matt,Science (Core) GCSE,A*=
+5026,Cameron; Matt,Science Additional GCSE,F+
+5027,Campbell; Naomi,Art GCSE,C=
+5027,Campbell; Naomi,BTEC H&SC,A+
+5027,Campbell; Naomi,DT ResMat GCSE,B+
+5027,Campbell; Naomi,English Old GCSE,B+
+5027,Campbell; Naomi,Geography GCSE,X
+5027,Campbell; Naomi,Maths AS Level,C=
+5027,Campbell; Naomi,MFL - French GCSE,B=
+5027,Campbell; Naomi,MFL - German GCSE,D+
+5027,Campbell; Naomi,Science (Core) GCSE,F=
+5027,Campbell; Naomi,Science Additional GCSE,F=
+5028,Candy; John,BTEC H&SC,A+
+5028,Candy; John,BTEC ICT,C+
+5028,Candy; John,DT Food GCSE,B-
+5028,Candy; John,English AS Level,E+
+5028,Candy; John,History GCSE,F=
+5028,Candy; John,Maths - GCSE,6=
+5028,Candy; John,MFL - Spanish GCSE,E+
+5028,Candy; John,Science (Core) GCSE,F=
+5028,Candy; John,Science Additional GCSE,F+
+5029,Carey; Danny,BTEC H&SC,C+
+5029,Carey; Danny,Business Studies GCSE,D=
+5029,Carey; Danny,DT ResMat GCSE,B=
+5029,Carey; Danny,DT Textiles GCSE,B=
+5029,Carey; Danny,English Old GCSE,G+
+5029,Carey; Danny,History GCSE,E=
+5029,Carey; Danny,Maths AS Level,B=
+5029,Carey; Danny,MFL - German GCSE,E=
+5029,Carey; Danny,Sci - Biology GCSE,A*=
+5029,Carey; Danny,Sci - Chemistry GCSE,F+
+5030,Carey; Mariah,BTEC H&SC,C=
+5030,Carey; Mariah,Business Studies GCSE,B+
+5030,Carey; Mariah,Computing GCSE,B-
+5030,Carey; Mariah,DT Food GCSE,F-
+5030,Carey; Mariah,English AS Level,C-
+5030,Carey; Mariah,Geography GCSE,E=
+5030,Carey; Mariah,Maths - GCSE,4+
+5030,Carey; Mariah,MFL - German GCSE,A=
+5030,Carey; Mariah,Sci - Biology GCSE,A*+
+5030,Carey; Mariah,Sci - Chemistry GCSE,D+
+5031,Carlin; George,BTEC H&SC,F=
+5031,Carlin; George,BTEC ICT,G-
+5031,Carlin; George,Business Studies GCSE,C=
+5031,Carlin; George,DT Textiles GCSE,A=
+5031,Carlin; George,English Lang GCSE,6=
+5031,Carlin; George,English Lit GCSE,2+
+5031,Carlin; George,Maths AS Level,D-
+5031,Carlin; George,MFL - French GCSE,G-
+5031,Carlin; George,Science Double GCSE,5=
+5032,Carrey; Jim,Art GCSE,B=
+5032,Carrey; Jim,DT Textiles GCSE,A-
+5032,Carrey; Jim,English Lang GCSE,8-
+5032,Carrey; Jim,English Lit GCSE,5-
+5032,Carrey; Jim,Maths - Further GCSE,7=
+5032,Carrey; Jim,Maths - Statistics GCSE,6+
+5032,Carrey; Jim,MFL - German GCSE,F=
+5032,Carrey; Jim,Science (Core) GCSE,A+
+5032,Carrey; Jim,Science Additional GCSE,G-
+5033,Carrol; Lewis,Art GCSE,D+
+5033,Carrol; Lewis,BTEC ICT,C=
+5033,Carrol; Lewis,English Old GCSE,D+
+5033,Carrol; Lewis,Geography GCSE,A*=
+5033,Carrol; Lewis,Maths - GCSE,6+
+5033,Carrol; Lewis,MFL - French GCSE,D-
+5033,Carrol; Lewis,MFL - Spanish GCSE,A*=
+5033,Carrol; Lewis,Science (Core) GCSE,C+
+5033,Carrol; Lewis,Science Additional GCSE,F=
+5034,Casablancas; Julian,BTEC ICT,D-
+5034,Casablancas; Julian,DT Food GCSE,G+
+5034,Casablancas; Julian,English Lang GCSE,3=
+5034,Casablancas; Julian,English Lit GCSE,4+
+5034,Casablancas; Julian,Maths - Further GCSE,2+
+5034,Casablancas; Julian,Maths - Statistics GCSE,3-
+5034,Casablancas; Julian,MFL - French GCSE,G+
+5034,Casablancas; Julian,MFL - Spanish GCSE,A*+
+5034,Casablancas; Julian,Sci - Biology GCSE,C-
+5034,Casablancas; Julian,Sci - Chemistry GCSE,E=
+5035,Cash; Johnny,BTEC H&SC,A*+
+5035,Cash; Johnny,BTEC ICT,D-
+5035,Cash; Johnny,DT Food GCSE,E+
+5035,Cash; Johnny,English Lang GCSE,9+
+5035,Cash; Johnny,English Lit GCSE,9+
+5035,Cash; Johnny,Geography GCSE,C+
+5035,Cash; Johnny,Maths AS Level,X
+5035,Cash; Johnny,MFL - German GCSE,G-
+5035,Cash; Johnny,Sci - Biology GCSE,E=
+5035,Cash; Johnny,Sci - Chemistry GCSE,C-
+5036,Chamberlain; Jimmy,Business Studies GCSE,A*=
+5036,Chamberlain; Jimmy,English AS Level,C+
+5036,Chamberlain; Jimmy,Maths - Further GCSE,1-
+5036,Chamberlain; Jimmy,MFL - German GCSE,A*-
+5036,Chamberlain; Jimmy,Science (Core) GCSE,C-
+5036,Chamberlain; Jimmy,Science Additional GCSE,A*-
+5037,Chancelor; Justin,Art GCSE,F+
+5037,Chancelor; Justin,Business Studies GCSE,E+
+5037,Chancelor; Justin,DT Food GCSE,C-
+5037,Chancelor; Justin,DT Textiles GCSE,D+
+5037,Chancelor; Justin,English AS Level,D=
+5037,Chancelor; Justin,Geography GCSE,F+
+5037,Chancelor; Justin,Maths - GCSE,1=
+5037,Chancelor; Justin,Science (Core) GCSE,C-
+5037,Chancelor; Justin,Science Additional GCSE,E-
+5038,Chase; Chevy,BTEC H&SC,F+
+5038,Chase; Chevy,DT ResMat GCSE,E-
+5038,Chase; Chevy,English Old GCSE,D-
+5038,Chase; Chevy,History GCSE,G-
+5038,Chase; Chevy,Maths - Further GCSE,5=
+5038,Chase; Chevy,MFL - German GCSE,A*-
+5038,Chase; Chevy,Science (Core) GCSE,A*-
+5038,Chase; Chevy,Science Additional GCSE,E-
+5039,Child; Julia,BTEC H&SC,G=
+5039,Child; Julia,English Old GCSE,D=
+5039,Child; Julia,Geography GCSE,C-
+5039,Child; Julia,History GCSE,F=
+5039,Child; Julia,Maths - Further GCSE,2=
+5039,Child; Julia,Maths - Statistics GCSE,9+
+5039,Child; Julia,MFL - French GCSE,A+
+5039,Child; Julia,Sci - Biology GCSE,E-
+5039,Child; Julia,Sci - Chemistry GCSE,G-
+5040,Clinton; Bill,BTEC H&SC,F+
+5040,Clinton; Bill,BTEC ICT,D=
+5040,Clinton; Bill,DT Food GCSE,G+
+5040,Clinton; Bill,English AS Level,A-
+5040,Clinton; Bill,Geography GCSE,D+
+5040,Clinton; Bill,Maths AS Level,A+
+5040,Clinton; Bill,MFL - German GCSE,F=
+5040,Clinton; Bill,Science (Core) GCSE,D+
+5040,Clinton; Bill,Science Additional GCSE,A*+
+5041,Cobain; Kurt,Art GCSE,A*+
+5041,Cobain; Kurt,DT ResMat GCSE,A=
+5041,Cobain; Kurt,English AS Level,E=
+5041,Cobain; Kurt,English Lang GCSE,6=
+5041,Cobain; Kurt,English Lit GCSE,9-
+5041,Cobain; Kurt,History GCSE,D-
+5041,Cobain; Kurt,Maths AS Level,U
+5041,Cobain; Kurt,Science (Core) GCSE,A=
+5041,Cobain; Kurt,Science Additional GCSE,F=
+5042,Collins; Phil,BTEC H&SC,F-
+5042,Collins; Phil,Business Studies GCSE,A*-
+5042,Collins; Phil,Computing GCSE,A-
+5042,Collins; Phil,DT ResMat GCSE,A+
+5042,Collins; Phil,English Old GCSE,D=
+5042,Collins; Phil,History GCSE,A*+
+5042,Collins; Phil,Maths - GCSE,3-
+5042,Collins; Phil,Science (Core) GCSE,D+
+5042,Collins; Phil,Science Additional GCSE,E=
+5043,Corgan; Billy,Art GCSE,G-
+5043,Corgan; Billy,BTEC H&SC,U
+5043,Corgan; Billy,DT ResMat GCSE,E=
+5043,Corgan; Billy,English Lang GCSE,U
+5043,Corgan; Billy,English Lit GCSE,6-
+5043,Corgan; Billy,History GCSE,X
+5043,Corgan; Billy,Maths AS Level,B-
+5043,Corgan; Billy,MFL - Spanish GCSE,G+
+5043,Corgan; Billy,Science (Core) GCSE,A=
+5043,Corgan; Billy,Science Additional GCSE,A+
+5044,Cornell; Chris,Art GCSE,F+
+5044,Cornell; Chris,Business Studies GCSE,G+
+5044,Cornell; Chris,DT Textiles GCSE,C+
+5044,Cornell; Chris,English AS Level,A=
+5044,Cornell; Chris,Maths - Further GCSE,6-
+5044,Cornell; Chris,Maths - Statistics GCSE,5-
+5044,Cornell; Chris,Science (Core) GCSE,A-
+5044,Cornell; Chris,Science Additional GCSE,D=
+5045,Cox; Courtney,BTEC H&SC,D+
+5045,Cox; Courtney,DT Graphics GCSE,G=
+5045,Cox; Courtney,DT Textiles GCSE,D-
+5045,Cox; Courtney,English Lang GCSE,7+
+5045,Cox; Courtney,History GCSE,G-
+5045,Cox; Courtney,Maths - Further GCSE,3+
+5045,Cox; Courtney,MFL - French GCSE,F+
+5045,Cox; Courtney,MFL - German GCSE,B-
+5045,Cox; Courtney,Science (Core) GCSE,F-
+5045,Cox; Courtney,Science Additional GCSE,U
+5046,Cronkite; Walter,Art GCSE,B-
+5046,Cronkite; Walter,Computing GCSE,C-
+5046,Cronkite; Walter,DT Textiles GCSE,G+
+5046,Cronkite; Walter,English AS Level,X
+5046,Cronkite; Walter,Geography GCSE,D+
+5046,Cronkite; Walter,Maths - Further GCSE,9+
+5046,Cronkite; Walter,Maths - Statistics GCSE,U
+5046,Cronkite; Walter,MFL - German GCSE,E-
+5046,Cronkite; Walter,Sci - Biology GCSE,F+
+5046,Cronkite; Walter,Sci - Chemistry GCSE,B=
+5046,Cronkite; Walter,Sci - Physics GCSE,F+
+5047,Cusack; John,BTEC H&SC,B+
+5047,Cusack; John,DT Graphics GCSE,B=
+5047,Cusack; John,DT Textiles GCSE,B-
+5047,Cusack; John,English Old GCSE,G+
+5047,Cusack; John,History GCSE,U
+5047,Cusack; John,Maths - Further GCSE,7+
+5047,Cusack; John,MFL - German GCSE,A*-
+5047,Cusack; John,Science (Core) GCSE,D+
+5047,Cusack; John,Science Additional GCSE,G-

@@ -1,0 +1,2386 @@
+Student ID,Student Name,Subject,Class,Gender,Ethnic Code,SEN,Gifted Talented,FSM Ever 6,Looked After
+A493151217723,Moore; Camden,French,8Fr-B,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,Geography,8Ge-C,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,Spanish,8Sp-B,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,English,8En-A,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,Maths,8Ma-A,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,German,8Ge-C,M,WBRI,A,No,No,No
+A493151217723,Moore; Camden,History,8Hi-B,M,WBRI,A,No,No,No
+A598943809099,Ward; Jackson,Spanish,8Sp-A,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,English,8En-B,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,DT Graphics,8DT-C,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,German,8Ge-B,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,Geography,8Ge-B,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,PE,8PE-B,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,Maths,8Ma-A,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,French,8Fr-A,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,Science,8Sc-C,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,History,8Hi-B,F,AOTH,T,No,No,No
+A598943809099,Ward; Jackson,Computer Studies,8Co-B,F,AOTH,T,No,No,No
+A689423717751,Howard; Maria,English,8En-B,M,WBRI,N,No,No,No
+A689423717751,Howard; Maria,History,8Hi-A,M,WBRI,N,No,No,No
+A689423717751,Howard; Maria,Geography,8Ge-B,M,WBRI,N,No,No,No
+A689423717751,Howard; Maria,Maths,8Ma-A,M,WBRI,N,No,No,No
+A689423717751,Howard; Maria,French,8Fr-C,M,WBRI,N,No,No,No
+A689423717751,Howard; Maria,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+A739767326465,Whelan; Sophia,Spanish,8Sp-A,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,German,8Ge-A,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,Maths,8Ma-C,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,History,8Hi-C,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,Geography,8Ge-B,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,PE,8PE-B,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,Science,8Sc-B,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,English,8En-A,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,French,8Fr-A,M,WBRI,N,No,No,Yes
+A739767326465,Whelan; Sophia,Computer Studies,8Co-B,M,WBRI,N,No,No,Yes
+A750927644457,Stewart; Sarah,History,8Hi-A,F,MBCA,K,No,No,No
+A750927644457,Stewart; Sarah,Geography,8Ge-A,F,MBCA,K,No,No,No
+A750927644457,Stewart; Sarah,Maths,8Ma-C,F,MBCA,K,No,No,No
+A750927644457,Stewart; Sarah,English,8En-A,F,MBCA,K,No,No,No
+A750927644457,Stewart; Sarah,French,8Fr-A,F,MBCA,K,No,No,No
+A750927644457,Stewart; Sarah,Computer Studies,8Co-B,F,MBCA,K,No,No,No
+A824299187910,Atkinson; Tristan,English,8En-B,F,WBRI,T,No,No,No
+A824299187910,Atkinson; Tristan,Geography,8Ge-B,F,WBRI,T,No,No,No
+A824299187910,Atkinson; Tristan,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+A824299187910,Atkinson; Tristan,Maths,8Ma-B,F,WBRI,T,No,No,No
+A824299187910,Atkinson; Tristan,History,8Hi-B,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,English,8En-B,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,French,8Fr-B,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,Geography,8Ge-C,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,German,8Ge-A,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,Maths,8Ma-C,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,Spanish,8Sp-B,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,Science,8Sc-B,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+A846230550355,Berry; Ellie,History,8Hi-B,F,WBRI,T,No,No,No
+A846626395291,Garner; Nathan,English,8En-B,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,DT Textiles,8DT-A,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,DT Graphics,8DT-C,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,Geography,8Ge-C,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,Science,8Sc-A,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,Spanish,8Sp-B,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,Computer Studies,8Co-C,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,Maths,8Ma-B,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,French,8Fr-C,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,PE,8PE-C,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,German,8Ge-C,M,AOTH,K,No,No,No
+A846626395291,Garner; Nathan,History,8Hi-B,M,AOTH,K,No,No,No
+A883142957736,Davey; Mia,English,8En-B,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,History,8Hi-A,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,Geography,8Ge-A,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,German,8Ge-A,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,Maths,8Ma-C,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,Spanish,8Sp-B,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,French,8Fr-A,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+A883142957736,Davey; Mia,Science,8Sc-C,F,WBRI,T,No,No,No
+B168719795979,Reilly; Micah,History,8Hi-A,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,Spanish,8Sp-C,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,English,8En-C,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,Geography,8Ge-C,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,German,8Ge-B,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,Science,8Sc-B,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,French,8Fr-A,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,Maths,8Ma-B,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,PE,8PE-C,F,WBRI,N,No,Yes,No
+B168719795979,Reilly; Micah,Computer Studies,8Co-B,F,WBRI,N,No,Yes,No
+B314363314405,Morris; Kaitlyn,Spanish,8Sp-C,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,Maths,8Ma-C,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,History,8Hi-C,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,German,8Ge-B,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,Geography,8Ge-B,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,English,8En-A,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,French,8Fr-A,M,WBRI,T,No,Yes,No
+B314363314405,Morris; Kaitlyn,Computer Studies,8Co-C,M,WBRI,T,No,Yes,No
+B414250941387,Henderson; Chase,Geography,8Ge-B,F,WBRI,N,No,No,No
+B414250941387,Henderson; Chase,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+B414250941387,Henderson; Chase,English,8En-A,F,WBRI,N,No,No,No
+B414250941387,Henderson; Chase,Maths,8Ma-A,F,WBRI,N,No,No,No
+B414250941387,Henderson; Chase,French,8Fr-A,F,WBRI,N,No,No,No
+B414250941387,Henderson; Chase,History,8Hi-B,F,WBRI,N,No,No,No
+B617768878671,Henderson; Blake,English,8En-C,F,WBRI,N,Yes,No,No
+B617768878671,Henderson; Blake,Geography,8Ge-B,F,WBRI,N,Yes,No,No
+B617768878671,Henderson; Blake,Maths,8Ma-A,F,WBRI,N,Yes,No,No
+B617768878671,Henderson; Blake,French,8Fr-A,F,WBRI,N,Yes,No,No
+B617768878671,Henderson; Blake,Computer Studies,8Co-C,F,WBRI,N,Yes,No,No
+B617768878671,Henderson; Blake,History,8Hi-B,F,WBRI,N,Yes,No,No
+B643405220619,Harvey; Jackson,Spanish,8Sp-A,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,English,8En-B,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,French,8Fr-B,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,DT Graphics,8DT-C,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,Dance/Drama,8Da-C,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,History,8Hi-C,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,DT Textiles,8DT-B,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,Geography,8Ge-B,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,PE,8PE-B,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,Science,8Sc-B,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,Art,8Ar-C,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,Maths,8Ma-A,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,German,8Ge-C,F,AOTH,T,No,No,Yes
+B643405220619,Harvey; Jackson,Computer Studies,8Co-B,F,AOTH,T,No,No,Yes
+B747160682713,Holland; Max,Spanish,8Sp-A,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,History,8Hi-A,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,English,8En-C,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,French,8Fr-B,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,PE,8PE-A,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,Geography,8Ge-A,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,German,8Ge-B,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,Science,8Sc-B,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,Maths,8Ma-B,F,WBRI,K,No,No,No
+B747160682713,Holland; Max,Computer Studies,8Co-B,F,WBRI,K,No,No,No
+B928286521446,Heath; Leah,History,8Hi-A,F,AOTH,K,No,No,No
+B928286521446,Heath; Leah,English,8En-C,F,AOTH,K,No,No,No
+B928286521446,Heath; Leah,Geography,8Ge-C,F,AOTH,K,No,No,No
+B928286521446,Heath; Leah,Maths,8Ma-C,F,AOTH,K,No,No,No
+B928286521446,Heath; Leah,Spanish,8Sp-B,F,AOTH,K,No,No,No
+B928286521446,Heath; Leah,French,8Fr-A,F,AOTH,K,No,No,No
+B928286521446,Heath; Leah,Computer Studies,8Co-C,F,AOTH,K,No,No,No
+C167699710664,Brady; Brayden,English,8En-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,DT Textiles,8DT-C,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,History,8Hi-A,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,French,8Fr-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,PE,8PE-A,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Maths,8Ma-C,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Art,8Ar-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Dance/Drama,8Da-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,German,8Ge-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Geography,8Ge-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Spanish,8Sp-B,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,DT Graphics,8DT-A,M,WBRI,A,No,No,No
+C167699710664,Brady; Brayden,Science,8Sc-C,M,WBRI,A,No,No,No
+C221326773090,Newman; Isabella,English,8En-B,M,WBRI,A,No,No,No
+C221326773090,Newman; Isabella,History,8Hi-A,M,WBRI,A,No,No,No
+C221326773090,Newman; Isabella,Geography,8Ge-C,M,WBRI,A,No,No,No
+C221326773090,Newman; Isabella,Maths,8Ma-A,M,WBRI,A,No,No,No
+C221326773090,Newman; Isabella,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+C226100559381,Barrett; Charlie,Spanish,8Sp-A,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,History,8Hi-A,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,English,8En-C,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,PE,8PE-A,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,DT Textiles,8DT-B,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,German,8Ge-B,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,Geography,8Ge-B,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,Science,8Sc-B,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,DT Graphics,8DT-A,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,Maths,8Ma-B,F,WBRI,T,No,No,No
+C226100559381,Barrett; Charlie,French,8Fr-C,F,WBRI,T,No,No,No
+C236983957890,Heath; Adrian,Spanish,8Sp-A,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,English,8En-B,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,French,8Fr-B,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,Geography,8Ge-A,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,Science,8Sc-A,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,German,8Ge-B,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,Computer Studies,8Co-A,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,Maths,8Ma-B,M,AOTH,A,Yes,No,No
+C236983957890,Heath; Adrian,History,8Hi-B,M,AOTH,A,Yes,No,No
+C284963493649,Duncan; Adam,History,8Hi-A,F,WBRI,A,No,No,No
+C284963493649,Duncan; Adam,Geography,8Ge-A,F,WBRI,A,No,No,No
+C284963493649,Duncan; Adam,Spanish,8Sp-B,F,WBRI,A,No,No,No
+C284963493649,Duncan; Adam,English,8En-A,F,WBRI,A,No,No,No
+C284963493649,Duncan; Adam,Maths,8Ma-A,F,WBRI,A,No,No,No
+C284963493649,Duncan; Adam,Computer Studies,8Co-C,F,WBRI,A,No,No,No
+C284963493649,Duncan; Adam,French,8Fr-C,F,WBRI,A,No,No,No
+C290631018426,Lane; David,English,8En-B,F,WBRI,N,No,No,No
+C290631018426,Lane; David,Geography,8Ge-C,F,WBRI,N,No,No,No
+C290631018426,Lane; David,History,8Hi-C,F,WBRI,N,No,No,No
+C290631018426,Lane; David,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+C290631018426,Lane; David,Maths,8Ma-A,F,WBRI,N,No,No,No
+C290631018426,Lane; David,French,8Fr-A,F,WBRI,N,No,No,No
+C579819292479,Matthews; Gianna,Spanish,8Sp-A,M,WBRI,A,Yes,Yes,No
+C579819292479,Matthews; Gianna,Geography,8Ge-A,M,WBRI,A,Yes,Yes,No
+C579819292479,Matthews; Gianna,History,8Hi-C,M,WBRI,A,Yes,Yes,No
+C579819292479,Matthews; Gianna,Computer Studies,8Co-A,M,WBRI,A,Yes,Yes,No
+C579819292479,Matthews; Gianna,English,8En-A,M,WBRI,A,Yes,Yes,No
+C579819292479,Matthews; Gianna,French,8Fr-A,M,WBRI,A,Yes,Yes,No
+C579819292479,Matthews; Gianna,Maths,8Ma-B,M,WBRI,A,Yes,Yes,No
+C642399429584,Thompson; Vivian,Spanish,8Sp-A,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,English,8En-C,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,French,8Fr-B,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,PE,8PE-A,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,Geography,8Ge-C,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,Science,8Sc-A,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,German,8Ge-A,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,Computer Studies,8Co-A,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,Maths,8Ma-B,M,WBRI,N,No,No,No
+C642399429584,Thompson; Vivian,History,8Hi-B,M,WBRI,N,No,No,No
+C722973260180,Bailey; Xavier,English,8En-B,F,WBRI,T,No,No,No
+C722973260180,Bailey; Xavier,Geography,8Ge-C,F,WBRI,T,No,No,No
+C722973260180,Bailey; Xavier,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+C722973260180,Bailey; Xavier,Maths,8Ma-B,F,WBRI,T,No,No,No
+C722973260180,Bailey; Xavier,History,8Hi-B,F,WBRI,T,No,No,No
+C901254922738,Heath; Cooper,DT Textiles,8DT-C,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Spanish,8Sp-C,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Science,8Sc-A,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Art,8Ar-B,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,History,8Hi-C,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Dance/Drama,8Da-B,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,German,8Ge-B,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Geography,8Ge-B,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,PE,8PE-B,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,English,8En-A,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Maths,8Ma-A,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,Computer Studies,8Co-C,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,DT Graphics,8DT-A,M,WBRI,A,Yes,No,No
+C901254922738,Heath; Cooper,French,8Fr-C,M,WBRI,A,Yes,No,No
+C933004252395,Howell; Henry,Spanish,8Sp-C,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,English,8En-C,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,Geography,8Ge-C,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,German,8Ge-B,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,Maths,8Ma-A,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,Computer Studies,8Co-C,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,French,8Fr-C,F,AOTH,T,No,No,No
+C933004252395,Howell; Henry,History,8Hi-B,F,AOTH,T,No,No,No
+C936623858778,Thorne; Julia,Spanish,8Sp-C,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,Geography,8Ge-C,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,History,8Hi-C,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,German,8Ge-B,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,PE,8PE-B,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,Science,8Sc-B,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,English,8En-A,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,Maths,8Ma-A,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,French,8Fr-C,F,AOTH,T,Yes,No,No
+C936623858778,Thorne; Julia,Computer Studies,8Co-B,F,AOTH,T,Yes,No,No
+D333475566358,Moss; Makayla,English,8En-C,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,DT Graphics,8DT-C,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,Geography,8Ge-A,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,German,8Ge-B,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,Spanish,8Sp-B,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,Science,8Sc-B,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,Computer Studies,8Co-C,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,Maths,8Ma-B,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,French,8Fr-C,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,PE,8PE-C,M,AOTH,A,Yes,No,No
+D333475566358,Moss; Makayla,History,8Hi-B,M,AOTH,A,Yes,No,No
+D501869430132,Garner; Tristan,History,8Hi-A,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,English,8En-C,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,French,8Fr-B,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,PE,8PE-A,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,Geography,8Ge-A,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,Maths,8Ma-C,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,Spanish,8Sp-B,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,Science,8Sc-C,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,German,8Ge-C,F,WBRI,K,Yes,No,No
+D501869430132,Garner; Tristan,Computer Studies,8Co-B,F,WBRI,K,Yes,No,No
+D587217346794,O'Brien; Lila,English,8En-B,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,Maths,8Ma-C,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,History,8Hi-C,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,Geography,8Ge-B,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,Spanish,8Sp-B,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,Computer Studies,8Co-A,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,French,8Fr-A,M,MBCA,T,No,No,Yes
+D587217346794,O'Brien; Lila,German,8Ge-C,M,MBCA,T,No,No,Yes
+D589847137410,Fraser; Max,Spanish,8Sp-C,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,PE,8PE-A,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,Science,8Sc-A,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,German,8Ge-A,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,Maths,8Ma-C,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,History,8Hi-C,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,Geography,8Ge-B,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,English,8En-A,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,Computer Studies,8Co-C,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,DT Graphics,8DT-A,M,WBRI,T,No,No,No
+D589847137410,Fraser; Max,French,8Fr-C,M,WBRI,T,No,No,No
+D600738863875,Reynolds; Asher,Spanish,8Sp-A,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,English,8En-C,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,Geography,8Ge-C,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,Maths,8Ma-C,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,German,8Ge-B,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,French,8Fr-A,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,Computer Studies,8Co-C,M,WBRI,K,No,No,No
+D600738863875,Reynolds; Asher,History,8Hi-B,M,WBRI,K,No,No,No
+D662510642854,Rossi; Charlie,English,8En-B,M,WBRI,T,No,No,No
+D662510642854,Rossi; Charlie,French,8Fr-B,M,WBRI,T,No,No,No
+D662510642854,Rossi; Charlie,Geography,8Ge-C,M,WBRI,T,No,No,No
+D662510642854,Rossi; Charlie,Maths,8Ma-C,M,WBRI,T,No,No,No
+D662510642854,Rossi; Charlie,History,8Hi-C,M,WBRI,T,No,No,No
+D662510642854,Rossi; Charlie,Computer Studies,8Co-A,M,WBRI,T,No,No,No
+D719927107036,Mellor; Ella,DT Textiles,8DT-C,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,Spanish,8Sp-C,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,PE,8PE-A,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,History,8Hi-C,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,Geography,8Ge-B,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,Science,8Sc-B,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,Computer Studies,8Co-A,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,English,8En-A,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,Maths,8Ma-A,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,DT Graphics,8DT-A,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,French,8Fr-C,M,AOTH,T,No,No,No
+D719927107036,Mellor; Ella,German,8Ge-C,M,AOTH,T,No,No,No
+D751403842717,Dunn; Josiah,Spanish,8Sp-A,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,History,8Hi-A,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,Geography,8Ge-A,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,Maths,8Ma-C,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,German,8Ge-B,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,English,8En-A,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,French,8Fr-A,F,MBCA,N,No,No,No
+D751403842717,Dunn; Josiah,Computer Studies,8Co-C,F,MBCA,N,No,No,No
+D755628804900,Davidson; Thomas,English,8En-B,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,History,8Hi-A,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Spanish,8Sp-C,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,DT Textiles,8DT-A,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,DT Graphics,8DT-C,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Geography,8Ge-C,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Maths,8Ma-C,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Dance/Drama,8Da-B,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,German,8Ge-B,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Art,8Ar-A,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Computer Studies,8Co-A,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,Science,8Sc-C,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,French,8Fr-C,M,AOTH,A,No,No,No
+D755628804900,Davidson; Thomas,PE,8PE-C,M,AOTH,A,No,No,No
+E144229979368,Gough; Taylor,Spanish,8Sp-C,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,English,8En-C,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,PE,8PE-A,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,Geography,8Ge-C,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,Science,8Sc-A,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,Maths,8Ma-A,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,French,8Fr-A,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,German,8Ge-C,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,History,8Hi-B,F,WBRI,A,No,Yes,No
+E144229979368,Gough; Taylor,Computer Studies,8Co-B,F,WBRI,A,No,Yes,No
+E187483911869,Summers; Christopher,Spanish,8Sp-C,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,PE,8PE-A,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,Geography,8Ge-C,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,Science,8Sc-A,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,German,8Ge-A,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,History,8Hi-C,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,Computer Studies,8Co-A,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,English,8En-A,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,French,8Fr-A,F,WBRI,A,Yes,Yes,No
+E187483911869,Summers; Christopher,Maths,8Ma-B,F,WBRI,A,Yes,Yes,No
+E198003666553,Knowles; Kaylee,Spanish,8Sp-C,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,French,8Fr-B,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,German,8Ge-B,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,Geography,8Ge-B,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,Computer Studies,8Co-A,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,English,8En-A,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,Maths,8Ma-A,M,WBRI,A,No,No,No
+E198003666553,Knowles; Kaylee,History,8Hi-B,M,WBRI,A,No,No,No
+E233854084105,Simpson; Sophia,Spanish,8Sp-A,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,DT Textiles,8DT-C,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,History,8Hi-A,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,English,8En-C,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,Dance/Drama,8Da-B,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,German,8Ge-B,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,Geography,8Ge-B,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,PE,8PE-B,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,Art,8Ar-A,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,DT Graphics,8DT-A,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,Science,8Sc-C,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,Maths,8Ma-B,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,French,8Fr-C,F,WBRI,N,No,No,No
+E233854084105,Simpson; Sophia,Computer Studies,8Co-B,F,WBRI,N,No,No,No
+E249289957107,Barton; Riley,Spanish,8Sp-A,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,Geography,8Ge-C,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,German,8Ge-A,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,PE,8PE-B,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,Computer Studies,8Co-A,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,English,8En-A,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,Science,8Sc-C,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,Maths,8Ma-B,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,French,8Fr-C,M,WBRI,K,No,No,No
+E249289957107,Barton; Riley,History,8Hi-B,M,WBRI,K,No,No,No
+E291216252791,Wyatt; Andrew,DT Textiles,8DT-A,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,PE,8PE-A,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,Geography,8Ge-C,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,Science,8Sc-A,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,DT Graphics,8DT-B,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,Spanish,8Sp-B,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,Art,8Ar-A,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,Computer Studies,8Co-A,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,English,8En-A,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,Maths,8Ma-B,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,French,8Fr-C,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,German,8Ge-C,M,WBRI,A,No,No,Yes
+E291216252791,Wyatt; Andrew,History,8Hi-B,M,WBRI,A,No,No,Yes
+E317818276799,Park; Anna,English,8En-B,M,WBRI,K,No,No,No
+E317818276799,Park; Anna,History,8Hi-C,M,WBRI,K,No,No,No
+E317818276799,Park; Anna,Geography,8Ge-B,M,WBRI,K,No,No,No
+E317818276799,Park; Anna,Maths,8Ma-A,M,WBRI,K,No,No,No
+E317818276799,Park; Anna,Computer Studies,8Co-B,M,WBRI,K,No,No,No
+E340818379906,Davis; Lauren,Spanish,8Sp-A,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,History,8Hi-A,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,English,8En-C,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,German,8Ge-A,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,Geography,8Ge-B,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,Computer Studies,8Co-A,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,Maths,8Ma-B,M,WBRI,T,No,No,No
+E340818379906,Davis; Lauren,French,8Fr-C,M,WBRI,T,No,No,No
+E401967677222,Stephenson; Sophia,English,8En-B,F,MBCA,T,No,No,No
+E401967677222,Stephenson; Sophia,French,8Fr-B,F,MBCA,T,No,No,No
+E401967677222,Stephenson; Sophia,Geography,8Ge-A,F,MBCA,T,No,No,No
+E401967677222,Stephenson; Sophia,History,8Hi-C,F,MBCA,T,No,No,No
+E401967677222,Stephenson; Sophia,Computer Studies,8Co-C,F,MBCA,T,No,No,No
+E401967677222,Stephenson; Sophia,Maths,8Ma-B,F,MBCA,T,No,No,No
+E570921309702,Davidson; Sadie,Spanish,8Sp-A,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,French,8Fr-B,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,DT Graphics,8DT-C,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,Geography,8Ge-A,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,German,8Ge-A,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,PE,8PE-B,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,English,8En-A,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,Maths,8Ma-A,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,Computer Studies,8Co-C,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,Science,8Sc-C,F,WBRI,N,No,Yes,No
+E570921309702,Davidson; Sadie,History,8Hi-B,F,WBRI,N,No,Yes,No
+E571285851928,George; Alexandra,English,8En-B,F,MBCA,A,No,No,No
+E571285851928,George; Alexandra,History,8Hi-A,F,MBCA,A,No,No,No
+E571285851928,George; Alexandra,French,8Fr-B,F,MBCA,A,No,No,No
+E571285851928,George; Alexandra,Geography,8Ge-B,F,MBCA,A,No,No,No
+E571285851928,George; Alexandra,Spanish,8Sp-B,F,MBCA,A,No,No,No
+E571285851928,George; Alexandra,Computer Studies,8Co-C,F,MBCA,A,No,No,No
+E571285851928,George; Alexandra,Maths,8Ma-B,F,MBCA,A,No,No,No
+E655356387134,Cole; Skyler,English,8En-B,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,French,8Fr-B,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,DT Graphics,8DT-C,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,History,8Hi-C,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,German,8Ge-B,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,Geography,8Ge-B,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,Spanish,8Sp-B,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,Computer Studies,8Co-A,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,Maths,8Ma-A,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,Science,8Sc-C,M,AOTH,K,Yes,No,No
+E655356387134,Cole; Skyler,PE,8PE-C,M,AOTH,K,Yes,No,No
+E954894339391,Collins; Benjamin,History,8Hi-A,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,Spanish,8Sp-C,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,English,8En-C,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,DT Textiles,8DT-A,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,Geography,8Ge-C,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,German,8Ge-A,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,Computer Studies,8Co-A,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,Maths,8Ma-A,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,DT Graphics,8DT-A,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,Science,8Sc-C,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,French,8Fr-C,F,WBRI,N,No,No,Yes
+E954894339391,Collins; Benjamin,PE,8PE-C,F,WBRI,N,No,No,Yes
+F176486431908,Mcgregor; Ryan,Spanish,8Sp-A,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,DT Textiles,8DT-C,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,French,8Fr-B,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,Maths,8Ma-C,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,History,8Hi-C,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,DT Graphics,8DT-B,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,Geography,8Ge-B,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,PE,8PE-B,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,English,8En-A,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,Computer Studies,8Co-C,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,Science,8Sc-C,F,WBRI,A,No,No,No
+F176486431908,Mcgregor; Ryan,German,8Ge-C,F,WBRI,A,No,No,No
+F185326702250,Jordan; Bentley,Spanish,8Sp-A,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,English,8En-C,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,French,8Fr-B,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,Geography,8Ge-A,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,Maths,8Ma-C,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,PE,8PE-B,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,Computer Studies,8Co-C,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,Science,8Sc-C,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,German,8Ge-C,M,WBRI,N,No,No,No
+F185326702250,Jordan; Bentley,History,8Hi-B,M,WBRI,N,No,No,No
+F274419033921,Russell; Skyler,English,8En-B,M,WBRI,A,No,No,No
+F274419033921,Russell; Skyler,History,8Hi-A,M,WBRI,A,No,No,No
+F274419033921,Russell; Skyler,Spanish,8Sp-C,M,WBRI,A,No,No,No
+F274419033921,Russell; Skyler,Geography,8Ge-B,M,WBRI,A,No,No,No
+F274419033921,Russell; Skyler,French,8Fr-A,M,WBRI,A,No,No,No
+F274419033921,Russell; Skyler,Maths,8Ma-B,M,WBRI,A,No,No,No
+F274419033921,Russell; Skyler,Computer Studies,8Co-B,M,WBRI,A,No,No,No
+F500820377306,Howard; Allison,Spanish,8Sp-A,M,AOTH,A,No,No,No
+F500820377306,Howard; Allison,Maths,8Ma-C,M,AOTH,A,No,No,No
+F500820377306,Howard; Allison,History,8Hi-C,M,AOTH,A,No,No,No
+F500820377306,Howard; Allison,Geography,8Ge-B,M,AOTH,A,No,No,No
+F500820377306,Howard; Allison,English,8En-A,M,AOTH,A,No,No,No
+F500820377306,Howard; Allison,French,8Fr-C,M,AOTH,A,No,No,No
+F500820377306,Howard; Allison,Computer Studies,8Co-B,M,AOTH,A,No,No,No
+F570138183732,Poole; Noah,History,8Hi-A,M,WBRI,K,No,No,No
+F570138183732,Poole; Noah,English,8En-C,M,WBRI,K,No,No,No
+F570138183732,Poole; Noah,French,8Fr-B,M,WBRI,K,No,No,No
+F570138183732,Poole; Noah,Geography,8Ge-C,M,WBRI,K,No,No,No
+F570138183732,Poole; Noah,Spanish,8Sp-B,M,WBRI,K,No,No,No
+F570138183732,Poole; Noah,Maths,8Ma-B,M,WBRI,K,No,No,No
+F570138183732,Poole; Noah,Computer Studies,8Co-B,M,WBRI,K,No,No,No
+F656724543366,Burgess; Jason,English,8En-B,F,WBRI,T,No,No,No
+F656724543366,Burgess; Jason,History,8Hi-C,F,WBRI,T,No,No,No
+F656724543366,Burgess; Jason,Geography,8Ge-B,F,WBRI,T,No,No,No
+F656724543366,Burgess; Jason,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+F656724543366,Burgess; Jason,Maths,8Ma-B,F,WBRI,T,No,No,No
+F656724543366,Burgess; Jason,French,8Fr-C,F,WBRI,T,No,No,No
+F791111102458,Davidson; Colton,English,8En-C,M,WBRI,N,No,No,No
+F791111102458,Davidson; Colton,Geography,8Ge-A,M,WBRI,N,No,No,No
+F791111102458,Davidson; Colton,Maths,8Ma-C,M,WBRI,N,No,No,No
+F791111102458,Davidson; Colton,History,8Hi-B,M,WBRI,N,No,No,No
+F791111102458,Davidson; Colton,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+F895338554889,Whitehead; Harper,English,8En-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,DT Graphics,8DT-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,Geography,8Ge-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,Science,8Sc-A,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,History,8Hi-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,Spanish,8Sp-B,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,Maths,8Ma-B,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,French,8Fr-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,PE,8PE-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,German,8Ge-C,F,AOTH,K,No,No,No
+F895338554889,Whitehead; Harper,Computer Studies,8Co-B,F,AOTH,K,No,No,No
+F909758708584,Johnson; Landon,Spanish,8Sp-A,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,English,8En-C,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,Geography,8Ge-A,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,History,8Hi-C,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,German,8Ge-B,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,Science,8Sc-B,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,Computer Studies,8Co-A,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,French,8Fr-A,M,WBRI,N,No,No,No
+F909758708584,Johnson; Landon,Maths,8Ma-B,M,WBRI,N,No,No,No
+F929862564436,Harding; Kaitlyn,Spanish,8Sp-A,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,English,8En-C,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,Science,8Sc-A,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,German,8Ge-B,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,Geography,8Ge-B,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,Computer Studies,8Co-A,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,Maths,8Ma-B,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,French,8Fr-C,M,MBCA,A,No,No,No
+F929862564436,Harding; Kaitlyn,History,8Hi-B,M,MBCA,A,No,No,No
+F974161630057,Burke; Sophia,DT Textiles,8DT-C,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,English,8En-C,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,PE,8PE-A,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,Geography,8Ge-A,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,DT Graphics,8DT-B,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,Spanish,8Sp-B,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,Science,8Sc-B,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,Art,8Ar-A,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,Maths,8Ma-B,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,French,8Fr-C,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,German,8Ge-C,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,History,8Hi-B,F,AOTH,N,No,No,Yes
+F974161630057,Burke; Sophia,Computer Studies,8Co-B,F,AOTH,N,No,No,Yes
+G101691132275,Finch; Brody,English,8En-B,F,WBRI,A,No,No,No
+G101691132275,Finch; Brody,Maths,8Ma-C,F,WBRI,A,No,No,No
+G101691132275,Finch; Brody,History,8Hi-C,F,WBRI,A,No,No,No
+G101691132275,Finch; Brody,Geography,8Ge-B,F,WBRI,A,No,No,No
+G101691132275,Finch; Brody,Spanish,8Sp-B,F,WBRI,A,No,No,No
+G101691132275,Finch; Brody,Computer Studies,8Co-A,F,WBRI,A,No,No,No
+G101691132275,Finch; Brody,French,8Fr-C,F,WBRI,A,No,No,No
+G379918051919,Robertson; Addison,Maths,8Ma-C,F,MBCA,N,No,No,No
+G379918051919,Robertson; Addison,History,8Hi-C,F,MBCA,N,No,No,No
+G379918051919,Robertson; Addison,Geography,8Ge-B,F,MBCA,N,No,No,No
+G379918051919,Robertson; Addison,English,8En-A,F,MBCA,N,No,No,No
+G379918051919,Robertson; Addison,Computer Studies,8Co-B,F,MBCA,N,No,No,No
+G668724535079,Howe; Hannah,Spanish,8Sp-C,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,Geography,8Ge-A,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,History,8Hi-C,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,German,8Ge-B,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,English,8En-A,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,Maths,8Ma-B,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,French,8Fr-C,F,AOTH,N,No,No,No
+G668724535079,Howe; Hannah,Computer Studies,8Co-B,F,AOTH,N,No,No,No
+G686248444854,Gibson; Isaac,Spanish,8Sp-A,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,History,8Hi-A,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,PE,8PE-A,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,Geography,8Ge-A,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,German,8Ge-A,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,English,8En-A,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,Science,8Sc-C,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,Maths,8Ma-B,M,WBRI,A,No,No,No
+G686248444854,Gibson; Isaac,French,8Fr-C,M,WBRI,A,No,No,No
+G701824481466,Johnson; Cole,Spanish,8Sp-C,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,French,8Fr-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,PE,8PE-A,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,DT Graphics,8DT-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,Dance/Drama,8Da-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,DT Textiles,8DT-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,Geography,8Ge-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,Science,8Sc-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,Computer Studies,8Co-A,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,Art,8Ar-C,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,English,8En-A,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,Maths,8Ma-B,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,German,8Ge-C,F,WBRI,K,No,No,No
+G701824481466,Johnson; Cole,History,8Hi-B,F,WBRI,K,No,No,No
+G828477332560,Cameron; Jayden,English,8En-B,F,AOTH,T,No,No,No
+G828477332560,Cameron; Jayden,History,8Hi-A,F,AOTH,T,No,No,No
+G828477332560,Cameron; Jayden,French,8Fr-B,F,AOTH,T,No,No,No
+G828477332560,Cameron; Jayden,Maths,8Ma-C,F,AOTH,T,No,No,No
+G828477332560,Cameron; Jayden,Geography,8Ge-B,F,AOTH,T,No,No,No
+G828477332560,Cameron; Jayden,Spanish,8Sp-B,F,AOTH,T,No,No,No
+G828477332560,Cameron; Jayden,Computer Studies,8Co-B,F,AOTH,T,No,No,No
+G837480432955,Holt; Charlie,Spanish,8Sp-A,F,WBRI,N,Yes,No,No
+G837480432955,Holt; Charlie,English,8En-B,F,WBRI,N,Yes,No,No
+G837480432955,Holt; Charlie,French,8Fr-B,F,WBRI,N,Yes,No,No
+G837480432955,Holt; Charlie,Geography,8Ge-C,F,WBRI,N,Yes,No,No
+G837480432955,Holt; Charlie,Maths,8Ma-C,F,WBRI,N,Yes,No,No
+G837480432955,Holt; Charlie,History,8Hi-B,F,WBRI,N,Yes,No,No
+G837480432955,Holt; Charlie,Computer Studies,8Co-B,F,WBRI,N,Yes,No,No
+G903721988708,Ferguson; David,English,8En-B,F,AOTH,A,No,No,No
+G903721988708,Ferguson; David,Spanish,8Sp-C,F,AOTH,A,No,No,No
+G903721988708,Ferguson; David,French,8Fr-B,F,AOTH,A,No,No,No
+G903721988708,Ferguson; David,Geography,8Ge-C,F,AOTH,A,No,No,No
+G903721988708,Ferguson; David,Maths,8Ma-C,F,AOTH,A,No,No,No
+G903721988708,Ferguson; David,Computer Studies,8Co-C,F,AOTH,A,No,No,No
+G903721988708,Ferguson; David,History,8Hi-B,F,AOTH,A,No,No,No
+G946204764472,Hopkins; Lillian,History,8Hi-A,M,MBCA,K,No,No,No
+G946204764472,Hopkins; Lillian,Geography,8Ge-A,M,MBCA,K,No,No,No
+G946204764472,Hopkins; Lillian,Spanish,8Sp-B,M,MBCA,K,No,No,No
+G946204764472,Hopkins; Lillian,English,8En-A,M,MBCA,K,No,No,No
+G946204764472,Hopkins; Lillian,Maths,8Ma-A,M,MBCA,K,No,No,No
+G946204764472,Hopkins; Lillian,French,8Fr-A,M,MBCA,K,No,No,No
+G946204764472,Hopkins; Lillian,Computer Studies,8Co-C,M,MBCA,K,No,No,No
+H219929637491,Harris; Charlie,DT Graphics,8DT-C,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,PE,8PE-A,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,Geography,8Ge-A,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,Science,8Sc-A,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,Maths,8Ma-C,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,DT Textiles,8DT-B,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,Spanish,8Sp-B,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,English,8En-A,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,French,8Fr-C,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,German,8Ge-C,F,WBRI,N,No,No,No
+H219929637491,Harris; Charlie,History,8Hi-B,F,WBRI,N,No,No,No
+H380039418342,Paul; Benjamin,Spanish,8Sp-C,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,Geography,8Ge-A,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,History,8Hi-C,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,PE,8PE-B,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,Science,8Sc-B,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,English,8En-A,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,Maths,8Ma-B,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,French,8Fr-C,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,German,8Ge-C,M,AOTH,N,No,No,No
+H380039418342,Paul; Benjamin,Computer Studies,8Co-B,M,AOTH,N,No,No,No
+H419909757648,Sharma; William,History,8Hi-A,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,Spanish,8Sp-C,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,English,8En-C,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,Geography,8Ge-C,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,Science,8Sc-A,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,German,8Ge-B,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,Computer Studies,8Co-A,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,Maths,8Ma-A,F,WBRI,A,No,No,No
+H419909757648,Sharma; William,French,8Fr-C,F,WBRI,A,No,No,No
+H444890145619,Perry; Makayla,Spanish,8Sp-A,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,English,8En-B,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,History,8Hi-A,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,French,8Fr-B,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,PE,8PE-A,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,Geography,8Ge-A,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,Science,8Sc-A,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,Maths,8Ma-C,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,Computer Studies,8Co-C,M,AOTH,A,No,No,No
+H444890145619,Perry; Makayla,German,8Ge-C,M,AOTH,A,No,No,No
+H532714350522,Gardner; Nicholas,English,8En-C,F,WBRI,K,No,No,No
+H532714350522,Gardner; Nicholas,Maths,8Ma-C,F,WBRI,K,No,No,No
+H532714350522,Gardner; Nicholas,History,8Hi-C,F,WBRI,K,No,No,No
+H532714350522,Gardner; Nicholas,Geography,8Ge-B,F,WBRI,K,No,No,No
+H532714350522,Gardner; Nicholas,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Spanish,8Sp-A,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,English,8En-B,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,DT Textiles,8DT-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,History,8Hi-A,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,DT Graphics,8DT-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,PE,8PE-A,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Dance/Drama,8Da-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,German,8Ge-A,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Maths,8Ma-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Geography,8Ge-B,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Art,8Ar-A,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Science,8Sc-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,French,8Fr-C,F,WBRI,K,No,No,No
+H556934396285,Carpenter; Kaitlyn,Computer Studies,8Co-B,F,WBRI,K,No,No,No
+H566514023096,Jarvis; Logan,Spanish,8Sp-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,English,8En-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,DT Graphics,8DT-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,Geography,8Ge-A,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,Science,8Sc-A,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,Maths,8Ma-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,DT Textiles,8DT-B,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,French,8Fr-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,PE,8PE-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,German,8Ge-C,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,History,8Hi-B,F,AOTH,A,No,No,No
+H566514023096,Jarvis; Logan,Computer Studies,8Co-B,F,AOTH,A,No,No,No
+H785125283270,Baldwin; Zachary,Spanish,8Sp-A,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,History,8Hi-A,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,English,8En-C,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,Geography,8Ge-B,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,French,8Fr-A,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,Science,8Sc-C,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,Maths,8Ma-B,F,WBRI,T,No,No,No
+H785125283270,Baldwin; Zachary,German,8Ge-C,F,WBRI,T,No,No,No
+H813181346204,Lynch; Nora,Spanish,8Sp-C,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,Geography,8Ge-A,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,Science,8Sc-A,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,German,8Ge-A,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,History,8Hi-C,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,English,8En-A,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,Maths,8Ma-B,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,French,8Fr-C,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,PE,8PE-C,M,WBRI,K,No,No,No
+H813181346204,Lynch; Nora,Computer Studies,8Co-B,M,WBRI,K,No,No,No
+H973382776733,Reynolds; Jayden,History,8Hi-A,F,WBRI,T,No,Yes,No
+H973382776733,Reynolds; Jayden,Geography,8Ge-C,F,WBRI,T,No,Yes,No
+H973382776733,Reynolds; Jayden,Maths,8Ma-C,F,WBRI,T,No,Yes,No
+H973382776733,Reynolds; Jayden,English,8En-A,F,WBRI,T,No,Yes,No
+H973382776733,Reynolds; Jayden,Computer Studies,8Co-B,F,WBRI,T,No,Yes,No
+H999390314045,Morgan; Lillian,Spanish,8Sp-A,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,English,8En-B,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,German,8Ge-B,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,Geography,8Ge-B,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,Computer Studies,8Co-A,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,French,8Fr-A,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,Science,8Sc-C,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,Maths,8Ma-B,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,PE,8PE-C,F,MBCA,T,No,No,No
+H999390314045,Morgan; Lillian,History,8Hi-B,F,MBCA,T,No,No,No
+I150963294774,Griffiths; Austin,DT Textiles,8DT-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Spanish,8Sp-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,English,8En-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,DT Graphics,8DT-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,PE,8PE-A,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Geography,8Ge-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Dance/Drama,8Da-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,History,8Hi-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Computer Studies,8Co-A,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Art,8Ar-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,French,8Fr-A,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Science,8Sc-C,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,Maths,8Ma-B,M,AOTH,N,No,No,Yes
+I150963294774,Griffiths; Austin,German,8Ge-C,M,AOTH,N,No,No,Yes
+I243537862012,Crawford; Tyler,English,8En-C,M,WBRI,N,No,No,No
+I243537862012,Crawford; Tyler,History,8Hi-C,M,WBRI,N,No,No,No
+I243537862012,Crawford; Tyler,Geography,8Ge-B,M,WBRI,N,No,No,No
+I243537862012,Crawford; Tyler,Maths,8Ma-B,M,WBRI,N,No,No,No
+I243537862012,Crawford; Tyler,French,8Fr-C,M,WBRI,N,No,No,No
+I243537862012,Crawford; Tyler,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+I392645649882,Ferguson; Hannah,French,8Fr-B,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,PE,8PE-A,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,Maths,8Ma-C,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,History,8Hi-C,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,Geography,8Ge-B,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,Spanish,8Sp-B,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,Science,8Sc-B,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,English,8En-A,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,Computer Studies,8Co-C,M,MBCA,K,No,No,No
+I392645649882,Ferguson; Hannah,German,8Ge-C,M,MBCA,K,No,No,No
+I446360972298,Woodward; Aiden,Spanish,8Sp-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,History,8Hi-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,English,8En-C,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,DT Textiles,8DT-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,DT Graphics,8DT-C,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,Geography,8Ge-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,Science,8Sc-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,German,8Ge-B,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,Art,8Ar-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,Computer Studies,8Co-C,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,Dance/Drama,8Da-A,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,Maths,8Ma-B,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,French,8Fr-C,M,WBRI,N,No,No,Yes
+I446360972298,Woodward; Aiden,PE,8PE-C,M,WBRI,N,No,No,Yes
+I471398589899,Stewart; Kayla,History,8Hi-A,M,AOTH,K,No,No,No
+I471398589899,Stewart; Kayla,Spanish,8Sp-C,M,AOTH,K,No,No,No
+I471398589899,Stewart; Kayla,Geography,8Ge-A,M,AOTH,K,No,No,No
+I471398589899,Stewart; Kayla,English,8En-A,M,AOTH,K,No,No,No
+I471398589899,Stewart; Kayla,Maths,8Ma-B,M,AOTH,K,No,No,No
+I471398589899,Stewart; Kayla,French,8Fr-C,M,AOTH,K,No,No,No
+I471398589899,Stewart; Kayla,Computer Studies,8Co-B,M,AOTH,K,No,No,No
+I647429680597,Sheppard; Blake,Spanish,8Sp-C,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,Geography,8Ge-C,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,History,8Hi-C,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,German,8Ge-B,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,PE,8PE-B,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,Science,8Sc-B,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,Computer Studies,8Co-A,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,English,8En-A,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,French,8Fr-A,M,WBRI,A,No,No,No
+I647429680597,Sheppard; Blake,Maths,8Ma-B,M,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,History,8Hi-A,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,English,8En-C,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,Geography,8Ge-A,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,Science,8Sc-A,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,Spanish,8Sp-B,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,Maths,8Ma-A,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,French,8Fr-C,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,German,8Ge-C,F,WBRI,A,No,No,No
+I754723008227,Bentley; Ruby,Computer Studies,8Co-B,F,WBRI,A,No,No,No
+I758474326307,Cullen; Matthew,Spanish,8Sp-C,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,French,8Fr-B,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,PE,8PE-A,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,Geography,8Ge-C,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,German,8Ge-A,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,History,8Hi-C,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,Science,8Sc-B,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,English,8En-A,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,Maths,8Ma-A,M,WBRI,T,No,No,No
+I758474326307,Cullen; Matthew,Computer Studies,8Co-B,M,WBRI,T,No,No,No
+I924630154499,Matthews; Sophie,Spanish,8Sp-A,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,English,8En-C,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,German,8Ge-A,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,History,8Hi-C,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,Geography,8Ge-B,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,Science,8Sc-B,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,French,8Fr-A,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,Maths,8Ma-B,F,WBRI,N,No,No,No
+I924630154499,Matthews; Sophie,Computer Studies,8Co-B,F,WBRI,N,No,No,No
+I959532599374,Rowe; Elena,English,8En-C,M,WBRI,K,No,No,No
+I959532599374,Rowe; Elena,French,8Fr-B,M,WBRI,K,No,No,No
+I959532599374,Rowe; Elena,Geography,8Ge-A,M,WBRI,K,No,No,No
+I959532599374,Rowe; Elena,Maths,8Ma-C,M,WBRI,K,No,No,No
+I959532599374,Rowe; Elena,Spanish,8Sp-B,M,WBRI,K,No,No,No
+I959532599374,Rowe; Elena,Computer Studies,8Co-C,M,WBRI,K,No,No,No
+I959532599374,Rowe; Elena,History,8Hi-B,M,WBRI,K,No,No,No
+I963264928594,Lindsay; Muhammad,English,8En-B,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+I963264928594,Lindsay; Muhammad,History,8Hi-A,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+I963264928594,Lindsay; Muhammad,Geography,8Ge-C,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+I963264928594,Lindsay; Muhammad,Computer Studies,8Co-A,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+I963264928594,Lindsay; Muhammad,Maths,8Ma-B,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+J103299896463,Wyatt; Julia,English,8En-C,M,WBRI,K,No,No,No
+J103299896463,Wyatt; Julia,Geography,8Ge-A,M,WBRI,K,No,No,No
+J103299896463,Wyatt; Julia,French,8Fr-A,M,WBRI,K,No,No,No
+J103299896463,Wyatt; Julia,Computer Studies,8Co-C,M,WBRI,K,No,No,No
+J103299896463,Wyatt; Julia,Maths,8Ma-B,M,WBRI,K,No,No,No
+J103299896463,Wyatt; Julia,History,8Hi-B,M,WBRI,K,No,No,No
+J121106224269,Watson; Isaiah,English,8En-C,F,AOTH,T,No,No,No
+J121106224269,Watson; Isaiah,Geography,8Ge-A,F,AOTH,T,No,No,No
+J121106224269,Watson; Isaiah,Maths,8Ma-C,F,AOTH,T,No,No,No
+J121106224269,Watson; Isaiah,Computer Studies,8Co-A,F,AOTH,T,No,No,No
+J121106224269,Watson; Isaiah,History,8Hi-B,F,AOTH,T,No,No,No
+J352152614012,Whitehead; Anna,Spanish,8Sp-A,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,History,8Hi-A,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,English,8En-C,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,German,8Ge-A,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,Geography,8Ge-B,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,Maths,8Ma-A,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,French,8Fr-A,M,WBRI,N,No,No,No
+J352152614012,Whitehead; Anna,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+J705190648113,Goddard; Lucy,English,8En-B,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,French,8Fr-B,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,Geography,8Ge-C,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,Science,8Sc-A,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,History,8Hi-C,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,German,8Ge-B,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,Spanish,8Sp-B,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,Maths,8Ma-A,F,WBRI,T,No,No,No
+J705190648113,Goddard; Lucy,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+J808585718305,Welch; Gavin,Geography,8Ge-B,F,WBRI,A,No,No,No
+J808585718305,Welch; Gavin,English,8En-A,F,WBRI,A,No,No,No
+J808585718305,Welch; Gavin,Computer Studies,8Co-C,F,WBRI,A,No,No,No
+J808585718305,Welch; Gavin,Maths,8Ma-B,F,WBRI,A,No,No,No
+J808585718305,Welch; Gavin,French,8Fr-C,F,WBRI,A,No,No,No
+J808585718305,Welch; Gavin,History,8Hi-B,F,WBRI,A,No,No,No
+J812506450370,Brown; Annabelle,Spanish,8Sp-A,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,History,8Hi-A,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,English,8En-C,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,French,8Fr-B,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,Science,8Sc-A,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,German,8Ge-A,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,DT Textiles,8DT-B,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,Geography,8Ge-B,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,Art,8Ar-C,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,Maths,8Ma-A,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,DT Graphics,8DT-A,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,PE,8PE-C,F,AOTH,T,No,No,No
+J812506450370,Brown; Annabelle,Computer Studies,8Co-B,F,AOTH,T,No,No,No
+J896091542707,Evans; Noah,DT Textiles,8DT-C,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,History,8Hi-A,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Spanish,8Sp-C,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,English,8En-C,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,French,8Fr-B,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,PE,8PE-A,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Geography,8Ge-A,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Maths,8Ma-C,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Art,8Ar-B,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,DT Graphics,8DT-B,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,German,8Ge-B,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Computer Studies,8Co-A,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Science,8Sc-C,F,AOTH,K,No,Yes,No
+J896091542707,Evans; Noah,Dance/Drama,8Da-A,F,AOTH,K,No,Yes,No
+K172314035213,West; Anna,Spanish,8Sp-A,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,Geography,8Ge-A,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,Science,8Sc-A,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,History,8Hi-C,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,DT Graphics,8DT-B,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,Computer Studies,8Co-A,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,English,8En-A,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,Maths,8Ma-A,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,French,8Fr-C,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,PE,8PE-C,F,WBRI,A,No,No,Yes
+K172314035213,West; Anna,German,8Ge-C,F,WBRI,A,No,No,Yes
+K174144930752,Campbell; Colin,English,8En-C,M,WBRI,A,No,No,No
+K174144930752,Campbell; Colin,French,8Fr-B,M,WBRI,A,No,No,No
+K174144930752,Campbell; Colin,Geography,8Ge-B,M,WBRI,A,No,No,No
+K174144930752,Campbell; Colin,Spanish,8Sp-B,M,WBRI,A,No,No,No
+K174144930752,Campbell; Colin,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+K174144930752,Campbell; Colin,Maths,8Ma-B,M,WBRI,A,No,No,No
+K174144930752,Campbell; Colin,History,8Hi-B,M,WBRI,A,No,No,No
+K472198218863,Palmer; Noah,Spanish,8Sp-C,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,English,8En-C,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,Geography,8Ge-A,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,Science,8Sc-A,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,Maths,8Ma-C,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,German,8Ge-B,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,PE,8PE-B,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,French,8Fr-A,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,History,8Hi-B,M,AOTH,T,No,No,No
+K472198218863,Palmer; Noah,Computer Studies,8Co-B,M,AOTH,T,No,No,No
+K551571976875,Richardson; Peyton,History,8Hi-A,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,English,8En-C,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,Geography,8Ge-C,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,German,8Ge-A,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,Maths,8Ma-C,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,Spanish,8Sp-B,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,French,8Fr-C,F,WBRI,A,Yes,No,No
+K551571976875,Richardson; Peyton,Computer Studies,8Co-B,F,WBRI,A,Yes,No,No
+K900506772183,Khan; Landon,Spanish,8Sp-C,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,Geography,8Ge-A,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,Maths,8Ma-C,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,History,8Hi-C,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,German,8Ge-B,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,PE,8PE-B,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,Science,8Sc-B,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,English,8En-A,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,French,8Fr-C,F,AOTH,N,No,No,No
+K900506772183,Khan; Landon,Computer Studies,8Co-B,F,AOTH,N,No,No,No
+L224053389825,Burns; Alyssa,Spanish,8Sp-C,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,DT Textiles,8DT-A,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,Geography,8Ge-C,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,German,8Ge-A,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,PE,8PE-B,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,Science,8Sc-B,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,English,8En-A,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,French,8Fr-A,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,DT Graphics,8DT-A,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,Maths,8Ma-B,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,History,8Hi-B,M,WBRI,N,No,No,No
+L224053389825,Burns; Alyssa,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+L319165386774,Long; Elena,French,8Fr-B,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,PE,8PE-A,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,Maths,8Ma-C,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,History,8Hi-C,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,German,8Ge-B,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,Geography,8Ge-B,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,Spanish,8Sp-B,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,Computer Studies,8Co-A,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,English,8En-A,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,DT Graphics,8DT-A,M,WBRI,A,No,No,No
+L319165386774,Long; Elena,Science,8Sc-C,M,WBRI,A,No,No,No
+L421780318312,Frost; Cameron,Spanish,8Sp-A,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,English,8En-C,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,History,8Hi-C,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,German,8Ge-B,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,Geography,8Ge-B,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,PE,8PE-B,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,Maths,8Ma-A,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,Science,8Sc-C,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,French,8Fr-C,M,AOTH,K,No,No,No
+L421780318312,Frost; Cameron,Computer Studies,8Co-B,M,AOTH,K,No,No,No
+L508606461424,Palmer; Blake,Spanish,8Sp-C,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,French,8Fr-B,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,Geography,8Ge-A,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,German,8Ge-A,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,History,8Hi-C,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,English,8En-A,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,Computer Studies,8Co-C,M,WBRI,N,No,No,No
+L508606461424,Palmer; Blake,Maths,8Ma-B,M,WBRI,N,No,No,No
+L539254347894,Sheppard; Camilla,Spanish,8Sp-A,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,History,8Hi-A,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,English,8En-C,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,DT Textiles,8DT-A,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,PE,8PE-A,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,Geography,8Ge-C,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,Maths,8Ma-C,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,DT Graphics,8DT-B,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,German,8Ge-B,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,French,8Fr-A,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+L539254347894,Sheppard; Camilla,Science,8Sc-C,F,WBRI,K,No,No,No
+L706494521199,Kennedy; Alice,Spanish,8Sp-A,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,Geography,8Ge-C,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,Science,8Sc-A,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,German,8Ge-A,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,PE,8PE-B,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,Computer Studies,8Co-A,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,English,8En-A,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,French,8Fr-A,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,Maths,8Ma-B,M,MBCA,N,No,No,No
+L706494521199,Kennedy; Alice,History,8Hi-B,M,MBCA,N,No,No,No
+L891987999198,Price; Jeremiah,Spanish,8Sp-A,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,English,8En-B,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,History,8Hi-A,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,Geography,8Ge-C,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,German,8Ge-B,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,PE,8PE-B,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,Maths,8Ma-A,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,DT Graphics,8DT-A,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,Science,8Sc-C,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,French,8Fr-C,M,WBRI,N,No,No,No
+L891987999198,Price; Jeremiah,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+L926235979653,John; Anthony,History,8Hi-A,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,Geography,8Ge-C,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,Spanish,8Sp-B,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,English,8En-A,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,Maths,8Ma-A,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,French,8Fr-A,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,Science,8Sc-C,F,WBRI,T,No,No,No
+L926235979653,John; Anthony,German,8Ge-C,F,WBRI,T,No,No,No
+M165513113264,Mcgregor; Hunter,Geography,8Ge-C,M,MBCA,N,No,No,No
+M165513113264,Mcgregor; Hunter,History,8Hi-C,M,MBCA,N,No,No,No
+M165513113264,Mcgregor; Hunter,Computer Studies,8Co-A,M,MBCA,N,No,No,No
+M165513113264,Mcgregor; Hunter,English,8En-A,M,MBCA,N,No,No,No
+M165513113264,Mcgregor; Hunter,Maths,8Ma-A,M,MBCA,N,No,No,No
+M165513113264,Mcgregor; Hunter,French,8Fr-C,M,MBCA,N,No,No,No
+M223103960235,Willis; Connor,History,8Hi-A,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,Spanish,8Sp-C,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,Geography,8Ge-A,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,German,8Ge-A,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,Computer Studies,8Co-A,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,English,8En-A,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,Maths,8Ma-B,F,WBRI,A,Yes,No,No
+M223103960235,Willis; Connor,French,8Fr-C,F,WBRI,A,Yes,No,No
+M302559119343,Walters; Owen,English,8En-B,F,WBRI,A,No,Yes,No
+M302559119343,Walters; Owen,History,8Hi-A,F,WBRI,A,No,Yes,No
+M302559119343,Walters; Owen,French,8Fr-B,F,WBRI,A,No,Yes,No
+M302559119343,Walters; Owen,Geography,8Ge-B,F,WBRI,A,No,Yes,No
+M302559119343,Walters; Owen,Computer Studies,8Co-A,F,WBRI,A,No,Yes,No
+M302559119343,Walters; Owen,Maths,8Ma-B,F,WBRI,A,No,Yes,No
+M308685222897,Wilkins; Charlie,English,8En-B,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,DT Textiles,8DT-A,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,DT Graphics,8DT-C,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,PE,8PE-A,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,Geography,8Ge-C,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,German,8Ge-A,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,Spanish,8Sp-B,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,Maths,8Ma-A,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,Science,8Sc-C,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,French,8Fr-C,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,History,8Hi-B,F,WBRI,A,No,No,No
+M308685222897,Wilkins; Charlie,Computer Studies,8Co-B,F,WBRI,A,No,No,No
+M526787358561,Barnett; Isabella,Spanish,8Sp-A,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,History,8Hi-A,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,French,8Fr-B,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,DT Textiles,8DT-A,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,DT Graphics,8DT-C,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,PE,8PE-A,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,Geography,8Ge-C,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,German,8Ge-B,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,Science,8Sc-B,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,Computer Studies,8Co-A,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,English,8En-A,M,WBRI,T,No,No,No
+M526787358561,Barnett; Isabella,Maths,8Ma-A,M,WBRI,T,No,No,No
+M641131002492,Watson; Elena,History,8Hi-A,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,DT Graphics,8DT-C,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,Geography,8Ge-A,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,Science,8Sc-A,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,German,8Ge-A,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,PE,8PE-B,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,Spanish,8Sp-B,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,English,8En-A,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,French,8Fr-A,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,Maths,8Ma-B,M,WBRI,A,No,No,Yes
+M641131002492,Watson; Elena,Computer Studies,8Co-B,M,WBRI,A,No,No,Yes
+M709792646940,Kemp; Leo,English,8En-B,F,WBRI,A,No,No,No
+M709792646940,Kemp; Leo,Geography,8Ge-B,F,WBRI,A,No,No,No
+M709792646940,Kemp; Leo,Spanish,8Sp-B,F,WBRI,A,No,No,No
+M709792646940,Kemp; Leo,Maths,8Ma-A,F,WBRI,A,No,No,No
+M709792646940,Kemp; Leo,Computer Studies,8Co-C,F,WBRI,A,No,No,No
+M709792646940,Kemp; Leo,French,8Fr-C,F,WBRI,A,No,No,No
+M709792646940,Kemp; Leo,History,8Hi-B,F,WBRI,A,No,No,No
+N106487741549,Mann; Anna,Spanish,8Sp-C,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,Geography,8Ge-C,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,German,8Ge-A,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,History,8Hi-C,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,English,8En-A,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,Maths,8Ma-A,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,Science,8Sc-C,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,French,8Fr-C,F,WBRI,T,No,Yes,No
+N106487741549,Mann; Anna,Computer Studies,8Co-B,F,WBRI,T,No,Yes,No
+N186715495411,Holmes; Madelyn,French,8Fr-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,DT Graphics,8DT-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,Geography,8Ge-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,PE,8PE-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,Spanish,8Sp-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,Science,8Sc-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,Computer Studies,8Co-A,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,English,8En-A,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,Maths,8Ma-B,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,German,8Ge-C,F,WBRI,N,Yes,No,No
+N186715495411,Holmes; Madelyn,History,8Hi-B,F,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,History,8Hi-A,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,Spanish,8Sp-C,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,English,8En-C,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,PE,8PE-A,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,German,8Ge-A,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,Maths,8Ma-C,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,Geography,8Ge-B,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,Science,8Sc-B,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,French,8Fr-A,M,WBRI,N,Yes,No,No
+N353730483863,Greenwood; Wyatt,Computer Studies,8Co-C,M,WBRI,N,Yes,No,No
+N452427615037,Morgan; Mia,DT Textiles,8DT-C,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,History,8Hi-A,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,Spanish,8Sp-C,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,English,8En-C,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,French,8Fr-B,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,PE,8PE-A,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,Geography,8Ge-A,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,Science,8Sc-A,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,Maths,8Ma-C,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,DT Graphics,8DT-A,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,German,8Ge-C,F,WBRI,T,No,No,No
+N452427615037,Morgan; Mia,Computer Studies,8Co-B,F,WBRI,T,No,No,No
+N482132373278,Stephens; Alexander,English,8En-C,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,German,8Ge-A,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,Maths,8Ma-C,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,Geography,8Ge-B,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,Spanish,8Sp-B,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,Science,8Sc-B,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,French,8Fr-A,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,Computer Studies,8Co-C,F,WBRI,A,Yes,No,No
+N482132373278,Stephens; Alexander,History,8Hi-B,F,WBRI,A,Yes,No,No
+N508597003416,Bennett; Addison,Spanish,8Sp-A,F,MBCA,N,No,Yes,No
+N508597003416,Bennett; Addison,History,8Hi-A,F,MBCA,N,No,Yes,No
+N508597003416,Bennett; Addison,Geography,8Ge-C,F,MBCA,N,No,Yes,No
+N508597003416,Bennett; Addison,English,8En-A,F,MBCA,N,No,Yes,No
+N508597003416,Bennett; Addison,French,8Fr-A,F,MBCA,N,No,Yes,No
+N508597003416,Bennett; Addison,Maths,8Ma-B,F,MBCA,N,No,Yes,No
+N508597003416,Bennett; Addison,Computer Studies,8Co-B,F,MBCA,N,No,Yes,No
+N510562862107,Adam; Bella,Spanish,8Sp-A,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,DT Textiles,8DT-C,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,History,8Hi-A,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,French,8Fr-B,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,Geography,8Ge-A,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,Art,8Ar-B,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,German,8Ge-B,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,PE,8PE-B,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,English,8En-A,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,Computer Studies,8Co-C,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,DT Graphics,8DT-A,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,Science,8Sc-C,F,WBRI,N,Yes,No,No
+N510562862107,Adam; Bella,Maths,8Ma-B,F,WBRI,N,Yes,No,No
+N514068733899,Taylor; Lucas,English,8En-B,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,Spanish,8Sp-C,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,DT Graphics,8DT-C,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,PE,8PE-A,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,German,8Ge-B,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,Geography,8Ge-B,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,Science,8Sc-B,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,Computer Studies,8Co-C,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,Maths,8Ma-B,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,French,8Fr-C,M,WBRI,N,No,No,No
+N514068733899,Taylor; Lucas,History,8Hi-B,M,WBRI,N,No,No,No
+N707675647546,Mcgregor; Lauren,Spanish,8Sp-C,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,English,8En-C,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,French,8Fr-B,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,Geography,8Ge-C,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,History,8Hi-C,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,PE,8PE-B,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,Science,8Sc-B,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,Computer Studies,8Co-A,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,Maths,8Ma-B,M,WBRI,A,No,No,No
+N707675647546,Mcgregor; Lauren,German,8Ge-C,M,WBRI,A,No,No,No
+N854728830844,Phillips; Callie,Spanish,8Sp-A,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,English,8En-B,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,Geography,8Ge-C,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,Maths,8Ma-A,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,French,8Fr-A,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,German,8Ge-C,F,WBRI,T,No,No,No
+N854728830844,Phillips; Callie,History,8Hi-B,F,WBRI,T,No,No,No
+N855365732596,Bloggs; Amelia,English,8En-B,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,Geography,8Ge-A,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,Science,8Sc-A,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,German,8Ge-A,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,History,8Hi-C,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,DT Graphics,8DT-B,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,PE,8PE-B,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,Spanish,8Sp-B,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,Maths,8Ma-A,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,French,8Fr-A,F,WBRI,A,Yes,No,Yes
+N855365732596,Bloggs; Amelia,Computer Studies,8Co-B,F,WBRI,A,Yes,No,Yes
+O384879244549,Rees; Levi,DT Textiles,8DT-C,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,English,8En-C,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,Geography,8Ge-A,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,German,8Ge-A,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,Spanish,8Sp-B,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,Science,8Sc-B,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,Art,8Ar-C,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,Maths,8Ma-A,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,French,8Fr-A,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,DT Graphics,8DT-A,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,PE,8PE-C,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,History,8Hi-B,M,WBRI,T,No,No,No
+O384879244549,Rees; Levi,Computer Studies,8Co-B,M,WBRI,T,No,No,No
+O588810047879,Todd; Jacob,Spanish,8Sp-A,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,DT Textiles,8DT-C,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,DT Graphics,8DT-C,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,Dance/Drama,8Da-C,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,German,8Ge-A,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,Geography,8Ge-B,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,PE,8PE-B,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,Science,8Sc-B,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,Art,8Ar-A,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,English,8En-A,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,French,8Fr-A,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,Maths,8Ma-B,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,History,8Hi-B,M,AOTH,K,No,No,No
+O588810047879,Todd; Jacob,Computer Studies,8Co-B,M,AOTH,K,No,No,No
+O696869699690,Sanderson; James,English,8En-B,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,Spanish,8Sp-C,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,French,8Fr-B,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,Maths,8Ma-C,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,History,8Hi-C,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,Geography,8Ge-B,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,Computer Studies,8Co-C,F,WBRI,A,No,No,No
+O696869699690,Sanderson; James,German,8Ge-C,F,WBRI,A,No,No,No
+O698759319832,Begum; Peyton,Spanish,8Sp-A,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,History,8Hi-A,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,DT Graphics,8DT-C,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,German,8Ge-A,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,Geography,8Ge-B,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,PE,8PE-B,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,English,8En-A,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,Science,8Sc-C,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,Maths,8Ma-B,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,French,8Fr-C,F,WBRI,K,No,No,No
+O698759319832,Begum; Peyton,Computer Studies,8Co-B,F,WBRI,K,No,No,No
+O929997353196,Kaur; Dominic,English,8En-B,M,AOTH,N,No,No,No
+O929997353196,Kaur; Dominic,Geography,8Ge-B,M,AOTH,N,No,No,No
+O929997353196,Kaur; Dominic,Computer Studies,8Co-C,M,AOTH,N,No,No,No
+O929997353196,Kaur; Dominic,Maths,8Ma-B,M,AOTH,N,No,No,No
+O929997353196,Kaur; Dominic,History,8Hi-B,M,AOTH,N,No,No,No
+O942989511279,Stephens; Ruby,English,8En-B,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,History,8Hi-A,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,Spanish,8Sp-C,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,French,8Fr-B,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,PE,8PE-A,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,Geography,8Ge-A,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,German,8Ge-B,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,Science,8Sc-C,F,WBRI,K,No,No,No
+O942989511279,Stephens; Ruby,Maths,8Ma-B,F,WBRI,K,No,No,No
+O947916182025,Dixon; Skyler,DT Textiles,8DT-C,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,History,8Hi-A,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Spanish,8Sp-C,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,English,8En-C,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Geography,8Ge-A,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Science,8Sc-A,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,German,8Ge-A,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Maths,8Ma-C,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Dance/Drama,8Da-B,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Art,8Ar-C,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,French,8Fr-A,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,DT Graphics,8DT-A,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,PE,8PE-C,F,WBRI,A,No,No,No
+O947916182025,Dixon; Skyler,Computer Studies,8Co-B,F,WBRI,A,No,No,No
+P172620576302,Duffy; Carter,Spanish,8Sp-A,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,English,8En-C,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,French,8Fr-B,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,DT Graphics,8DT-C,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,Science,8Sc-A,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,History,8Hi-C,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,DT Textiles,8DT-B,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,German,8Ge-B,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,Geography,8Ge-B,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,PE,8PE-B,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,Computer Studies,8Co-A,F,WBRI,K,No,No,No
+P172620576302,Duffy; Carter,Maths,8Ma-A,F,WBRI,K,No,No,No
+P197258302201,Norman; Christopher,Spanish,8Sp-A,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,English,8En-B,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,DT Graphics,8DT-C,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,PE,8PE-A,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,Dance/Drama,8Da-C,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,Geography,8Ge-A,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,German,8Ge-A,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,Maths,8Ma-C,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,DT Textiles,8DT-B,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,Art,8Ar-C,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,French,8Fr-A,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,Computer Studies,8Co-C,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,Science,8Sc-C,F,WBRI,T,Yes,No,No
+P197258302201,Norman; Christopher,History,8Hi-B,F,WBRI,T,Yes,No,No
+P204846975374,Ashton; Violet,History,8Hi-A,F,MBCA,K,No,No,No
+P204846975374,Ashton; Violet,English,8En-C,F,MBCA,K,No,No,No
+P204846975374,Ashton; Violet,French,8Fr-B,F,MBCA,K,No,No,No
+P204846975374,Ashton; Violet,Geography,8Ge-B,F,MBCA,K,No,No,No
+P204846975374,Ashton; Violet,Maths,8Ma-A,F,MBCA,K,No,No,No
+P204846975374,Ashton; Violet,Computer Studies,8Co-C,F,MBCA,K,No,No,No
+P285728145804,Mellor; Brooklyn,Spanish,8Sp-A,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,English,8En-B,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,Geography,8Ge-A,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,German,8Ge-A,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,History,8Hi-C,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,Computer Studies,8Co-A,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,Maths,8Ma-B,M,WBRI,N,No,No,Yes
+P285728145804,Mellor; Brooklyn,French,8Fr-C,M,WBRI,N,No,No,Yes
+P347688625178,Paterson; Zachary,Spanish,8Sp-A,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,DT Textiles,8DT-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,Geography,8Ge-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,Maths,8Ma-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,History,8Hi-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,Science,8Sc-B,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,Art,8Ar-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,English,8En-A,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,French,8Fr-A,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,Computer Studies,8Co-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,DT Graphics,8DT-A,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,PE,8PE-C,F,WBRI,N,No,No,No
+P347688625178,Paterson; Zachary,German,8Ge-C,F,WBRI,N,No,No,No
+P596863824489,Browne; Alice,Spanish,8Sp-C,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,English,8En-C,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,French,8Fr-B,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,DT Textiles,8DT-A,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,Geography,8Ge-C,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,German,8Ge-A,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,Maths,8Ma-C,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,History,8Hi-C,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,DT Graphics,8DT-B,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,PE,8PE-B,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,Science,8Sc-B,M,WBRI,T,No,No,No
+P596863824489,Browne; Alice,Computer Studies,8Co-A,M,WBRI,T,No,No,No
+P809224327453,Howard; Nathan,Spanish,8Sp-A,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,English,8En-C,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,PE,8PE-A,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,Maths,8Ma-C,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,History,8Hi-C,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,German,8Ge-B,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,Geography,8Ge-B,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,French,8Fr-A,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,Science,8Sc-C,M,WBRI,K,No,No,No
+P809224327453,Howard; Nathan,Computer Studies,8Co-B,M,WBRI,K,No,No,No
+P887027397485,Singh; Jordan,English,8En-C,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P887027397485,Singh; Jordan,French,8Fr-B,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P887027397485,Singh; Jordan,Geography,8Ge-A,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P887027397485,Singh; Jordan,Maths,8Ma-C,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P887027397485,Singh; Jordan,History,8Hi-C,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P887027397485,Singh; Jordan,Spanish,8Sp-B,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P887027397485,Singh; Jordan,Computer Studies,8Co-C,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273,-2146826273
+P897027763842,Bond; Nathaniel,History,8Hi-A,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,Spanish,8Sp-C,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,PE,8PE-A,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,Geography,8Ge-B,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,Science,8Sc-B,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,Computer Studies,8Co-A,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,English,8En-A,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,Maths,8Ma-A,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,French,8Fr-A,F,AOTH,T,Yes,No,Yes
+P897027763842,Bond; Nathaniel,German,8Ge-C,F,AOTH,T,Yes,No,Yes
+P930206832381,Phillips; Emily,English,8En-B,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,History,8Hi-A,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,Spanish,8Sp-C,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,DT Textiles,8DT-A,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,Geography,8Ge-C,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,Maths,8Ma-C,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,French,8Fr-A,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,DT Graphics,8DT-A,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,Science,8Sc-C,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,PE,8PE-C,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,German,8Ge-C,F,WBRI,T,No,No,No
+P930206832381,Phillips; Emily,Computer Studies,8Co-B,F,WBRI,T,No,No,No
+P939750970382,Reed; Taylor,History,8Hi-A,F,WBRI,N,No,No,No
+P939750970382,Reed; Taylor,English,8En-C,F,WBRI,N,No,No,No
+P939750970382,Reed; Taylor,Maths,8Ma-C,F,WBRI,N,No,No,No
+P939750970382,Reed; Taylor,Geography,8Ge-B,F,WBRI,N,No,No,No
+P939750970382,Reed; Taylor,Computer Studies,8Co-B,F,WBRI,N,No,No,No
+P951960305957,Austin; James,English,8En-B,M,WBRI,K,No,No,No
+P951960305957,Austin; James,History,8Hi-A,M,WBRI,K,No,No,No
+P951960305957,Austin; James,Spanish,8Sp-C,M,WBRI,K,No,No,No
+P951960305957,Austin; James,PE,8PE-A,M,WBRI,K,No,No,No
+P951960305957,Austin; James,Geography,8Ge-A,M,WBRI,K,No,No,No
+P951960305957,Austin; James,Maths,8Ma-C,M,WBRI,K,No,No,No
+P951960305957,Austin; James,DT Graphics,8DT-B,M,WBRI,K,No,No,No
+P951960305957,Austin; James,German,8Ge-B,M,WBRI,K,No,No,No
+P951960305957,Austin; James,Science,8Sc-B,M,WBRI,K,No,No,No
+P951960305957,Austin; James,French,8Fr-A,M,WBRI,K,No,No,No
+P951960305957,Austin; James,Computer Studies,8Co-C,M,WBRI,K,No,No,No
+Q330592263431,Daniel; Harper,Spanish,8Sp-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,French,8Fr-B,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,DT Textiles,8DT-A,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,DT Graphics,8DT-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,Maths,8Ma-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,History,8Hi-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,Geography,8Ge-B,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,PE,8PE-B,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,Art,8Ar-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,English,8En-A,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,Computer Studies,8Co-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,Science,8Sc-C,M,WBRI,N,Yes,No,No
+Q330592263431,Daniel; Harper,German,8Ge-C,M,WBRI,N,Yes,No,No
+Q382348900091,Donaldson; Nathan,Spanish,8Sp-A,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,English,8En-B,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,History,8Hi-A,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,Science,8Sc-A,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,Maths,8Ma-C,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,Geography,8Ge-B,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,French,8Fr-A,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,Computer Studies,8Co-C,F,AOTH,A,No,No,No
+Q382348900091,Donaldson; Nathan,German,8Ge-C,F,AOTH,A,No,No,No
+Q441044219524,Baker; Evan,Spanish,8Sp-A,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,DT Textiles,8DT-C,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,English,8En-C,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,Geography,8Ge-A,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,German,8Ge-A,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,Maths,8Ma-C,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,DT Graphics,8DT-A,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,Science,8Sc-C,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,French,8Fr-C,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,PE,8PE-C,F,WBRI,T,No,No,No
+Q441044219524,Baker; Evan,History,8Hi-B,F,WBRI,T,No,No,No
+Q477476307133,Thomson; Hannah,English,8En-C,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,Science,8Sc-A,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,German,8Ge-A,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,Maths,8Ma-C,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,History,8Hi-C,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,Geography,8Ge-B,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,Spanish,8Sp-B,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,Computer Studies,8Co-A,F,WBRI,N,No,Yes,No
+Q477476307133,Thomson; Hannah,French,8Fr-C,F,WBRI,N,No,Yes,No
+Q497969236809,Hussain; Jacob,English,8En-B,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,DT Textiles,8DT-C,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,PE,8PE-A,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,Geography,8Ge-A,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,German,8Ge-A,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,DT Graphics,8DT-B,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,Spanish,8Sp-B,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,Science,8Sc-B,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,Computer Studies,8Co-A,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,French,8Fr-A,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,Maths,8Ma-B,M,WBRI,N,No,No,No
+Q497969236809,Hussain; Jacob,History,8Hi-B,M,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,History,8Hi-A,F,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,Spanish,8Sp-C,F,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,English,8En-C,F,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,French,8Fr-B,F,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,Geography,8Ge-A,F,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,Maths,8Ma-B,F,WBRI,N,No,No,No
+Q601774937037,Harper; Lily,Computer Studies,8Co-B,F,WBRI,N,No,No,No
+Q628301985450,Sinclair; Adeline,DT Textiles,8DT-C,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,History,8Hi-A,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,Spanish,8Sp-C,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,Geography,8Ge-A,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,Art,8Ar-B,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,DT Graphics,8DT-B,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,PE,8PE-B,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,Science,8Sc-B,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,Computer Studies,8Co-A,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,English,8En-A,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,French,8Fr-A,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,Maths,8Ma-B,F,WBRI,K,Yes,No,No
+Q628301985450,Sinclair; Adeline,German,8Ge-C,F,WBRI,K,Yes,No,No
+Q677589583827,Bull; Makayla,DT Textiles,8DT-C,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,History,8Hi-A,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,Spanish,8Sp-C,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,PE,8PE-A,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,Geography,8Ge-C,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,Science,8Sc-A,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,Art,8Ar-B,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,DT Graphics,8DT-B,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,German,8Ge-B,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,English,8En-A,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,Maths,8Ma-A,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,French,8Fr-C,M,AOTH,K,No,No,No
+Q677589583827,Bull; Makayla,Computer Studies,8Co-B,M,AOTH,K,No,No,No
+Q723096708061,Warren; Owen,DT Textiles,8DT-C,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Spanish,8Sp-C,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,DT Graphics,8DT-C,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,PE,8PE-A,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Science,8Sc-A,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Art,8Ar-B,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,German,8Ge-B,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Geography,8Ge-B,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Computer Studies,8Co-A,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,English,8En-A,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Maths,8Ma-A,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,Dance/Drama,8Da-A,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,French,8Fr-C,M,WBRI,A,No,No,No
+Q723096708061,Warren; Owen,History,8Hi-B,M,WBRI,A,No,No,No
+Q770971060430,Pearce; Michael,Spanish,8Sp-A,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,English,8En-B,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,French,8Fr-B,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,DT Textiles,8DT-A,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,Geography,8Ge-C,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,Dance/Drama,8Da-C,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,Maths,8Ma-C,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,DT Graphics,8DT-B,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,Art,8Ar-A,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,Science,8Sc-C,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,PE,8PE-C,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,German,8Ge-C,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,History,8Hi-B,F,WBRI,T,No,No,No
+Q770971060430,Pearce; Michael,Computer Studies,8Co-B,F,WBRI,T,No,No,No
+Q868765051946,O'Neill; Hannah,English,8En-B,F,WBRI,N,No,No,No
+Q868765051946,O'Neill; Hannah,Geography,8Ge-C,F,WBRI,N,No,No,No
+Q868765051946,O'Neill; Hannah,History,8Hi-C,F,WBRI,N,No,No,No
+Q868765051946,O'Neill; Hannah,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+Q868765051946,O'Neill; Hannah,Maths,8Ma-B,F,WBRI,N,No,No,No
+Q868765051946,O'Neill; Hannah,French,8Fr-C,F,WBRI,N,No,No,No
+Q909411534249,Mcfarlane; Zoe,History,8Hi-A,M,WBRI,N,No,No,No
+Q909411534249,Mcfarlane; Zoe,English,8En-C,M,WBRI,N,No,No,No
+Q909411534249,Mcfarlane; Zoe,Maths,8Ma-C,M,WBRI,N,No,No,No
+Q909411534249,Mcfarlane; Zoe,Geography,8Ge-B,M,WBRI,N,No,No,No
+Q909411534249,Mcfarlane; Zoe,French,8Fr-C,M,WBRI,N,No,No,No
+Q909411534249,Mcfarlane; Zoe,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+Q966744686151,Duncan; Riley,Spanish,8Sp-A,F,WBRI,T,No,No,No
+Q966744686151,Duncan; Riley,History,8Hi-A,F,WBRI,T,No,No,No
+Q966744686151,Duncan; Riley,English,8En-C,F,WBRI,T,No,No,No
+Q966744686151,Duncan; Riley,French,8Fr-B,F,WBRI,T,No,No,No
+Q966744686151,Duncan; Riley,Geography,8Ge-A,F,WBRI,T,No,No,No
+Q966744686151,Duncan; Riley,Maths,8Ma-C,F,WBRI,T,No,No,No
+Q966744686151,Duncan; Riley,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+Q967101831222,Bloggs; Kylie,Spanish,8Sp-A,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,History,8Hi-A,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,DT Graphics,8DT-C,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,PE,8PE-A,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,Geography,8Ge-B,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,English,8En-A,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,Computer Studies,8Co-C,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,Science,8Sc-C,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,Maths,8Ma-B,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,French,8Fr-C,F,AOTH,K,No,No,No
+Q967101831222,Bloggs; Kylie,German,8Ge-C,F,AOTH,K,No,No,No
+Q976374308486,Welch; Sophie,Spanish,8Sp-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,PE,8PE-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,Geography,8Ge-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,German,8Ge-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,English,8En-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,Maths,8Ma-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,French,8Fr-A,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,Science,8Sc-C,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,History,8Hi-B,M,WBRI,T,No,Yes,No
+Q976374308486,Welch; Sophie,Computer Studies,8Co-B,M,WBRI,T,No,Yes,No
+R142684168530,Connolly; Leo,Spanish,8Sp-C,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,English,8En-C,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,German,8Ge-A,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,Geography,8Ge-B,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,Computer Studies,8Co-C,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,Science,8Sc-C,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,Maths,8Ma-B,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,French,8Fr-C,M,WBRI,N,No,No,No
+R142684168530,Connolly; Leo,History,8Hi-B,M,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,DT Textiles,8DT-C,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Spanish,8Sp-C,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,English,8En-C,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Science,8Sc-A,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Maths,8Ma-C,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Art,8Ar-B,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Dance/Drama,8Da-B,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,German,8Ge-B,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Geography,8Ge-B,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,DT Graphics,8DT-A,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,French,8Fr-C,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,PE,8PE-C,F,WBRI,N,No,No,No
+R350954488294,Duffy; Joseph,History,8Hi-B,F,WBRI,N,No,No,No
+R379234878680,Davies; Adrian,English,8En-C,F,WBRI,T,No,No,No
+R379234878680,Davies; Adrian,French,8Fr-B,F,WBRI,T,No,No,No
+R379234878680,Davies; Adrian,Geography,8Ge-C,F,WBRI,T,No,No,No
+R379234878680,Davies; Adrian,Maths,8Ma-C,F,WBRI,T,No,No,No
+R379234878680,Davies; Adrian,History,8Hi-C,F,WBRI,T,No,No,No
+R379234878680,Davies; Adrian,Spanish,8Sp-B,F,WBRI,T,No,No,No
+R379234878680,Davies; Adrian,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+R554431637451,Wilkinson; Samuel,English,8En-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,Spanish,8Sp-C,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,French,8Fr-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,Science,8Sc-A,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,DT Graphics,8DT-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,DT Textiles,8DT-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,German,8Ge-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,Geography,8Ge-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,Art,8Ar-A,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,Maths,8Ma-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,PE,8PE-C,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,History,8Hi-B,M,WBRI,T,Yes,No,No
+R554431637451,Wilkinson; Samuel,Computer Studies,8Co-B,M,WBRI,T,Yes,No,No
+R611402568375,Hawkins; Zachary,History,8Hi-A,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Spanish,8Sp-C,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,DT Graphics,8DT-C,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Dance/Drama,8Da-C,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Science,8Sc-A,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Art,8Ar-B,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,DT Textiles,8DT-B,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Geography,8Ge-B,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Computer Studies,8Co-A,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,English,8En-A,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,Maths,8Ma-A,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,French,8Fr-A,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,PE,8PE-C,M,MBCA,A,No,No,No
+R611402568375,Hawkins; Zachary,German,8Ge-C,M,MBCA,A,No,No,No
+R616064691162,Davey; Eliana,Spanish,8Sp-A,F,WBRI,N,No,No,No
+R616064691162,Davey; Eliana,English,8En-B,F,WBRI,N,No,No,No
+R616064691162,Davey; Eliana,Geography,8Ge-C,F,WBRI,N,No,No,No
+R616064691162,Davey; Eliana,Maths,8Ma-A,F,WBRI,N,No,No,No
+R616064691162,Davey; Eliana,Computer Studies,8Co-C,F,WBRI,N,No,No,No
+R616064691162,Davey; Eliana,French,8Fr-C,F,WBRI,N,No,No,No
+R616064691162,Davey; Eliana,History,8Hi-B,F,WBRI,N,No,No,No
+R669632361586,Barnett; Mackenzie,History,8Hi-A,F,AOTH,A,No,No,No
+R669632361586,Barnett; Mackenzie,French,8Fr-B,F,AOTH,A,No,No,No
+R669632361586,Barnett; Mackenzie,Geography,8Ge-C,F,AOTH,A,No,No,No
+R669632361586,Barnett; Mackenzie,English,8En-A,F,AOTH,A,No,No,No
+R669632361586,Barnett; Mackenzie,Maths,8Ma-B,F,AOTH,A,No,No,No
+R669632361586,Barnett; Mackenzie,Computer Studies,8Co-B,F,AOTH,A,No,No,No
+R757978777302,Sutton; Miles,Spanish,8Sp-A,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,English,8En-B,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,Geography,8Ge-A,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,French,8Fr-A,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,Maths,8Ma-B,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,German,8Ge-C,F,WBRI,T,No,No,No
+R757978777302,Sutton; Miles,History,8Hi-B,F,WBRI,T,No,No,No
+R824548046441,Brown; Andrew,Geography,8Ge-C,F,WBRI,A,No,No,No
+R824548046441,Brown; Andrew,History,8Hi-C,F,WBRI,A,No,No,No
+R824548046441,Brown; Andrew,English,8En-A,F,WBRI,A,No,No,No
+R824548046441,Brown; Andrew,Maths,8Ma-B,F,WBRI,A,No,No,No
+R824548046441,Brown; Andrew,French,8Fr-C,F,WBRI,A,No,No,No
+R824548046441,Brown; Andrew,Computer Studies,8Co-B,F,WBRI,A,No,No,No
+R888427307683,Bennett; Liliana,Geography,8Ge-C,M,AOTH,T,No,No,No
+R888427307683,Bennett; Liliana,History,8Hi-C,M,AOTH,T,No,No,No
+R888427307683,Bennett; Liliana,English,8En-A,M,AOTH,T,No,No,No
+R888427307683,Bennett; Liliana,Computer Studies,8Co-C,M,AOTH,T,No,No,No
+R888427307683,Bennett; Liliana,Maths,8Ma-B,M,AOTH,T,No,No,No
+R908769287672,Crawford; Riley,Geography,8Ge-C,M,WBRI,A,No,No,No
+R908769287672,Crawford; Riley,History,8Hi-C,M,WBRI,A,No,No,No
+R908769287672,Crawford; Riley,English,8En-A,M,WBRI,A,No,No,No
+R908769287672,Crawford; Riley,Maths,8Ma-A,M,WBRI,A,No,No,No
+R908769287672,Crawford; Riley,Computer Studies,8Co-B,M,WBRI,A,No,No,No
+R958301717329,Walton; Elena,English,8En-C,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,Geography,8Ge-A,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,German,8Ge-B,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,PE,8PE-B,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,Spanish,8Sp-B,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,Maths,8Ma-A,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,French,8Fr-A,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,Computer Studies,8Co-C,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,Science,8Sc-C,F,WBRI,A,No,No,No
+R958301717329,Walton; Elena,History,8Hi-B,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,Spanish,8Sp-A,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,History,8Hi-A,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,English,8En-C,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,Geography,8Ge-A,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,Science,8Sc-A,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,DT Graphics,8DT-B,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,French,8Fr-A,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,Maths,8Ma-B,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,PE,8PE-C,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,German,8Ge-C,F,WBRI,A,No,No,No
+R989030240418,Kay; Kaelyn,Computer Studies,8Co-B,F,WBRI,A,No,No,No
+S192569136307,Peters; Jasmine,English,8En-B,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,History,8Hi-A,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,Spanish,8Sp-C,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,French,8Fr-B,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,DT Textiles,8DT-A,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,Geography,8Ge-C,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,Science,8Sc-A,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,German,8Ge-A,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,Art,8Ar-C,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,DT Graphics,8DT-A,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,Maths,8Ma-B,F,WBRI,K,No,No,No
+S192569136307,Peters; Jasmine,PE,8PE-C,F,WBRI,K,No,No,No
+S229996936193,Millar; Riley,Spanish,8Sp-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,History,8Hi-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,Geography,8Ge-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,Science,8Sc-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,PE,8PE-B,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,English,8En-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,French,8Fr-A,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,Maths,8Ma-B,F,WBRI,T,No,No,No
+S229996936193,Millar; Riley,German,8Ge-C,F,WBRI,T,No,No,No
+S261435329677,Moran; Jasmine,English,8En-B,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,Spanish,8Sp-C,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,French,8Fr-B,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,DT Textiles,8DT-A,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,PE,8PE-A,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,German,8Ge-A,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,Maths,8Ma-C,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,DT Graphics,8DT-B,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,Geography,8Ge-B,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,Computer Studies,8Co-A,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,Science,8Sc-C,F,WBRI,K,No,No,No
+S261435329677,Moran; Jasmine,History,8Hi-B,F,WBRI,K,No,No,No
+S277499749447,Silva; Victoria,Spanish,8Sp-A,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,History,8Hi-C,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,DT Textiles,8DT-B,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,Geography,8Ge-B,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,PE,8PE-B,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,Science,8Sc-B,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,Computer Studies,8Co-A,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,English,8En-A,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,Maths,8Ma-A,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,DT Graphics,8DT-A,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,French,8Fr-C,F,WBRI,N,Yes,No,No
+S277499749447,Silva; Victoria,German,8Ge-C,F,WBRI,N,Yes,No,No
+S348742756730,Blair; Mila,English,8En-B,M,AOTH,A,No,No,No
+S348742756730,Blair; Mila,Geography,8Ge-C,M,AOTH,A,No,No,No
+S348742756730,Blair; Mila,Maths,8Ma-C,M,AOTH,A,No,No,No
+S348742756730,Blair; Mila,Spanish,8Sp-B,M,AOTH,A,No,No,No
+S348742756730,Blair; Mila,French,8Fr-C,M,AOTH,A,No,No,No
+S348742756730,Blair; Mila,History,8Hi-B,M,AOTH,A,No,No,No
+S348742756730,Blair; Mila,Computer Studies,8Co-B,M,AOTH,A,No,No,No
+S394370857271,Daniel; Aiden,DT Textiles,8DT-C,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,Spanish,8Sp-C,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,DT Graphics,8DT-C,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,Geography,8Ge-A,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,Science,8Sc-A,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,German,8Ge-A,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,Maths,8Ma-C,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,Art,8Ar-B,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,History,8Hi-C,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,PE,8PE-B,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,Computer Studies,8Co-A,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,English,8En-A,F,WBRI,K,No,No,No
+S394370857271,Daniel; Aiden,French,8Fr-C,F,WBRI,K,No,No,No
+S465873456765,Riley; David,Spanish,8Sp-A,F,WBRI,K,No,No,No
+S465873456765,Riley; David,English,8En-B,F,WBRI,K,No,No,No
+S465873456765,Riley; David,French,8Fr-B,F,WBRI,K,No,No,No
+S465873456765,Riley; David,Geography,8Ge-C,F,WBRI,K,No,No,No
+S465873456765,Riley; David,Maths,8Ma-C,F,WBRI,K,No,No,No
+S465873456765,Riley; David,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+S465873456765,Riley; David,German,8Ge-C,F,WBRI,K,No,No,No
+S465873456765,Riley; David,History,8Hi-B,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,Spanish,8Sp-A,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,History,8Hi-A,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,French,8Fr-B,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,Geography,8Ge-C,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,German,8Ge-A,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,Maths,8Ma-C,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,English,8En-A,F,WBRI,K,No,No,No
+S491345760311,George; Adalyn,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+S679375397048,Duffy; Alexandra,Spanish,8Sp-A,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,DT Textiles,8DT-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,English,8En-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,DT Graphics,8DT-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,Geography,8Ge-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,Dance/Drama,8Da-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,History,8Hi-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,German,8Ge-B,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,PE,8PE-B,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,Art,8Ar-A,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,Maths,8Ma-A,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,French,8Fr-A,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+S679375397048,Duffy; Alexandra,Science,8Sc-C,M,WBRI,A,No,No,No
+S977823697130,Davies; Harper,English,8En-C,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,Geography,8Ge-C,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,History,8Hi-C,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,German,8Ge-B,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,Spanish,8Sp-B,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,French,8Fr-A,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,Science,8Sc-C,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,Maths,8Ma-B,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,PE,8PE-C,M,WBRI,K,No,No,No
+S977823697130,Davies; Harper,Computer Studies,8Co-B,M,WBRI,K,No,No,No
+T203335257559,Adam; Oliver,English,8En-B,M,WBRI,A,No,No,No
+T203335257559,Adam; Oliver,French,8Fr-B,M,WBRI,A,No,No,No
+T203335257559,Adam; Oliver,Geography,8Ge-A,M,WBRI,A,No,No,No
+T203335257559,Adam; Oliver,Maths,8Ma-C,M,WBRI,A,No,No,No
+T203335257559,Adam; Oliver,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+T203335257559,Adam; Oliver,History,8Hi-B,M,WBRI,A,No,No,No
+T374718650797,Vincent; Oliver,Spanish,8Sp-A,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,DT Textiles,8DT-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,English,8En-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,DT Graphics,8DT-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,PE,8PE-A,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,Geography,8Ge-A,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,Science,8Sc-A,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,Maths,8Ma-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,History,8Hi-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,Computer Studies,8Co-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,French,8Fr-C,F,WBRI,T,No,No,No
+T374718650797,Vincent; Oliver,German,8Ge-C,F,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,DT Textiles,8DT-C,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,PE,8PE-A,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,German,8Ge-A,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,History,8Hi-C,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,Geography,8Ge-B,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,Spanish,8Sp-B,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,Science,8Sc-B,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,English,8En-A,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,French,8Fr-A,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,DT Graphics,8DT-A,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,Maths,8Ma-B,M,WBRI,T,No,No,No
+T394572257238,Hobbs; Sadie,Computer Studies,8Co-B,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,DT Textiles,8DT-C,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,Spanish,8Sp-C,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,English,8En-C,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,DT Graphics,8DT-C,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,Science,8Sc-A,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,German,8Ge-A,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,Art,8Ar-B,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,History,8Hi-C,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,Geography,8Ge-B,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,PE,8PE-B,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,Computer Studies,8Co-A,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,French,8Fr-A,M,WBRI,T,No,No,No
+T676408614036,Cassidy; Andrew,Maths,8Ma-B,M,WBRI,T,No,No,No
+T708268861624,Mellor; Kaylee,English,8En-B,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,DT Textiles,8DT-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Spanish,8Sp-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,French,8Fr-B,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,DT Graphics,8DT-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Dance/Drama,8Da-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,German,8Ge-B,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Geography,8Ge-B,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Science,8Sc-B,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Art,8Ar-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Maths,8Ma-A,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,Computer Studies,8Co-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,PE,8PE-C,M,AOTH,N,No,No,No
+T708268861624,Mellor; Kaylee,History,8Hi-B,M,AOTH,N,No,No,No
+T826247444508,Hartley; Brooklyn,Spanish,8Sp-A,M,AOTH,K,No,No,No
+T826247444508,Hartley; Brooklyn,English,8En-B,M,AOTH,K,No,No,No
+T826247444508,Hartley; Brooklyn,Geography,8Ge-A,M,AOTH,K,No,No,No
+T826247444508,Hartley; Brooklyn,Computer Studies,8Co-A,M,AOTH,K,No,No,No
+T826247444508,Hartley; Brooklyn,French,8Fr-A,M,AOTH,K,No,No,No
+T826247444508,Hartley; Brooklyn,Maths,8Ma-B,M,AOTH,K,No,No,No
+T826247444508,Hartley; Brooklyn,History,8Hi-B,M,AOTH,K,No,No,No
+U198549358765,Wallace; Landon,English,8En-B,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,DT Textiles,8DT-C,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,History,8Hi-A,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,French,8Fr-B,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,DT Graphics,8DT-C,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,Geography,8Ge-C,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,Maths,8Ma-C,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,German,8Ge-B,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,Spanish,8Sp-B,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,Computer Studies,8Co-C,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,Science,8Sc-C,M,AOTH,N,No,No,No
+U198549358765,Wallace; Landon,PE,8PE-C,M,AOTH,N,No,No,No
+U382302917867,Donnelly; Charlie,History,8Hi-A,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,Spanish,8Sp-C,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,English,8En-C,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,French,8Fr-B,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,Geography,8Ge-B,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,Science,8Sc-C,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,Maths,8Ma-B,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,PE,8PE-C,F,WBRI,T,No,No,No
+U382302917867,Donnelly; Charlie,German,8Ge-C,F,WBRI,T,No,No,No
+U455825238691,Bartlett; Taylor,Geography,8Ge-B,M,WBRI,K,No,No,No
+U455825238691,Bartlett; Taylor,English,8En-A,M,WBRI,K,No,No,No
+U455825238691,Bartlett; Taylor,Computer Studies,8Co-C,M,WBRI,K,No,No,No
+U455825238691,Bartlett; Taylor,Maths,8Ma-B,M,WBRI,K,No,No,No
+U455825238691,Bartlett; Taylor,French,8Fr-C,M,WBRI,K,No,No,No
+U455825238691,Bartlett; Taylor,History,8Hi-B,M,WBRI,K,No,No,No
+U568124815275,Daniels; Dominic,English,8En-C,F,MBCA,K,No,No,No
+U568124815275,Daniels; Dominic,French,8Fr-B,F,MBCA,K,No,No,No
+U568124815275,Daniels; Dominic,Geography,8Ge-A,F,MBCA,K,No,No,No
+U568124815275,Daniels; Dominic,Maths,8Ma-C,F,MBCA,K,No,No,No
+U568124815275,Daniels; Dominic,History,8Hi-C,F,MBCA,K,No,No,No
+U568124815275,Daniels; Dominic,Computer Studies,8Co-B,F,MBCA,K,No,No,No
+U890725998207,Bishop; Jeremiah,English,8En-B,M,WBRI,K,No,No,No
+U890725998207,Bishop; Jeremiah,Maths,8Ma-C,M,WBRI,K,No,No,No
+U890725998207,Bishop; Jeremiah,Geography,8Ge-B,M,WBRI,K,No,No,No
+U890725998207,Bishop; Jeremiah,Computer Studies,8Co-A,M,WBRI,K,No,No,No
+U890725998207,Bishop; Jeremiah,History,8Hi-B,M,WBRI,K,No,No,No
+V226561851881,Gallagher; Sarah,English,8En-B,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,Spanish,8Sp-C,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,Geography,8Ge-C,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,German,8Ge-A,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,History,8Hi-C,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,Science,8Sc-B,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,Maths,8Ma-A,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,French,8Fr-C,F,MBCA,A,Yes,No,No
+V226561851881,Gallagher; Sarah,Computer Studies,8Co-B,F,MBCA,A,Yes,No,No
+V259459487035,Yates; Tyler,English,8En-B,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,DT Textiles,8DT-C,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,Spanish,8Sp-C,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,French,8Fr-B,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,Geography,8Ge-A,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,Science,8Sc-A,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,German,8Ge-A,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,History,8Hi-C,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,DT Graphics,8DT-B,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,PE,8PE-B,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,Art,8Ar-A,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,Maths,8Ma-A,M,AOTH,K,No,No,No
+V259459487035,Yates; Tyler,Computer Studies,8Co-C,M,AOTH,K,No,No,No
+V279588697006,Murray; Katherine,English,8En-C,M,WBRI,N,No,No,No
+V279588697006,Murray; Katherine,Geography,8Ge-A,M,WBRI,N,No,No,No
+V279588697006,Murray; Katherine,Maths,8Ma-C,M,WBRI,N,No,No,No
+V279588697006,Murray; Katherine,History,8Hi-C,M,WBRI,N,No,No,No
+V279588697006,Murray; Katherine,French,8Fr-C,M,WBRI,N,No,No,No
+V279588697006,Murray; Katherine,Computer Studies,8Co-B,M,WBRI,N,No,No,No
+V432372573915,Nicholson; Cole,History,8Hi-A,F,AOTH,A,Yes,No,No
+V432372573915,Nicholson; Cole,English,8En-C,F,AOTH,A,Yes,No,No
+V432372573915,Nicholson; Cole,Geography,8Ge-C,F,AOTH,A,Yes,No,No
+V432372573915,Nicholson; Cole,Spanish,8Sp-B,F,AOTH,A,Yes,No,No
+V432372573915,Nicholson; Cole,Maths,8Ma-A,F,AOTH,A,Yes,No,No
+V432372573915,Nicholson; Cole,French,8Fr-C,F,AOTH,A,Yes,No,No
+V432372573915,Nicholson; Cole,Computer Studies,8Co-B,F,AOTH,A,Yes,No,No
+V560933573237,Buckley; Charlie,Geography,8Ge-C,F,AOTH,K,No,No,No
+V560933573237,Buckley; Charlie,Maths,8Ma-C,F,AOTH,K,No,No,No
+V560933573237,Buckley; Charlie,History,8Hi-C,F,AOTH,K,No,No,No
+V560933573237,Buckley; Charlie,English,8En-A,F,AOTH,K,No,No,No
+V560933573237,Buckley; Charlie,Computer Studies,8Co-B,F,AOTH,K,No,No,No
+V694113087572,Dale; Tyler,History,8Hi-C,M,WBRI,A,Yes,No,No
+V694113087572,Dale; Tyler,Geography,8Ge-B,M,WBRI,A,Yes,No,No
+V694113087572,Dale; Tyler,English,8En-A,M,WBRI,A,Yes,No,No
+V694113087572,Dale; Tyler,Maths,8Ma-A,M,WBRI,A,Yes,No,No
+V694113087572,Dale; Tyler,Computer Studies,8Co-B,M,WBRI,A,Yes,No,No
+V698356341646,Read; David,Spanish,8Sp-A,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,English,8En-C,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,Geography,8Ge-C,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,German,8Ge-A,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,DT Textiles,8DT-B,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,PE,8PE-B,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,Science,8Sc-B,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,Art,8Ar-A,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,French,8Fr-A,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,Computer Studies,8Co-C,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,DT Graphics,8DT-A,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,Maths,8Ma-B,F,AOTH,T,No,Yes,No
+V698356341646,Read; David,History,8Hi-B,F,AOTH,T,No,Yes,No
+V854888997293,Campbell; Sarah,English,8En-B,F,WBRI,N,Yes,No,No
+V854888997293,Campbell; Sarah,Geography,8Ge-B,F,WBRI,N,Yes,No,No
+V854888997293,Campbell; Sarah,Computer Studies,8Co-A,F,WBRI,N,Yes,No,No
+V854888997293,Campbell; Sarah,French,8Fr-A,F,WBRI,N,Yes,No,No
+V854888997293,Campbell; Sarah,Maths,8Ma-B,F,WBRI,N,Yes,No,No
+V854888997293,Campbell; Sarah,History,8Hi-B,F,WBRI,N,Yes,No,No
+V893123580994,Hutchinson; Brody,French,8Fr-B,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,DT Textiles,8DT-A,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,DT Graphics,8DT-C,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,PE,8PE-A,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,Geography,8Ge-C,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,Maths,8Ma-C,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,German,8Ge-B,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,Spanish,8Sp-B,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,Science,8Sc-B,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,English,8En-A,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+V893123580994,Hutchinson; Brody,History,8Hi-B,F,WBRI,K,No,No,No
+V950308356999,Wallace; Camden,Spanish,8Sp-A,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,English,8En-C,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,PE,8PE-A,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,Geography,8Ge-C,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,Science,8Sc-A,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,Computer Studies,8Co-A,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,French,8Fr-A,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,Maths,8Ma-B,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,German,8Ge-C,M,AOTH,N,Yes,No,No
+V950308356999,Wallace; Camden,History,8Hi-B,M,AOTH,N,Yes,No,No
+W185339943764,Mason; Chase,Spanish,8Sp-A,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,English,8En-C,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,French,8Fr-B,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,Geography,8Ge-A,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,History,8Hi-C,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,DT Textiles,8DT-B,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,Science,8Sc-B,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,Computer Studies,8Co-A,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,DT Graphics,8DT-A,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,Maths,8Ma-B,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,PE,8PE-C,M,WBRI,A,No,Yes,No
+W185339943764,Mason; Chase,German,8Ge-C,M,WBRI,A,No,Yes,No
+W219454945402,Sanders; Skyler,Spanish,8Sp-A,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,French,8Fr-B,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,DT Graphics,8DT-C,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,Geography,8Ge-C,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,Science,8Sc-A,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,German,8Ge-B,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,PE,8PE-B,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,English,8En-A,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,Maths,8Ma-A,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+W219454945402,Sanders; Skyler,History,8Hi-B,F,WBRI,K,No,No,No
+W275143984697,Fraser; Madelyn,Spanish,8Sp-A,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,Geography,8Ge-C,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,Science,8Sc-A,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,Maths,8Ma-C,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,History,8Hi-C,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,DT Graphics,8DT-B,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,English,8En-A,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,French,8Fr-A,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,PE,8PE-C,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,German,8Ge-C,M,WBRI,A,No,No,No
+W275143984697,Fraser; Madelyn,Computer Studies,8Co-B,M,WBRI,A,No,No,No
+W362450843489,Mohamed; James,Spanish,8Sp-C,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,English,8En-C,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,Geography,8Ge-C,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,German,8Ge-A,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,Maths,8Ma-A,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,Computer Studies,8Co-C,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,Science,8Sc-C,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,French,8Fr-C,F,WBRI,A,No,Yes,No
+W362450843489,Mohamed; James,History,8Hi-B,F,WBRI,A,No,Yes,No
+W436779477647,Jackson; Katherine,DT Graphics,8DT-C,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,German,8Ge-A,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,Maths,8Ma-C,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,Geography,8Ge-B,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,Spanish,8Sp-B,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,English,8En-A,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,Science,8Sc-C,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,French,8Fr-C,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,PE,8PE-C,F,WBRI,N,No,No,No
+W436779477647,Jackson; Katherine,History,8Hi-B,F,WBRI,N,No,No,No
+W586038832703,Crawford; Aaron,History,8Hi-A,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,English,8En-C,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,DT Textiles,8DT-A,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Maths,8Ma-C,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,DT Graphics,8DT-B,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,German,8Ge-B,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Geography,8Ge-B,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,PE,8PE-B,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Spanish,8Sp-B,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Art,8Ar-A,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Computer Studies,8Co-C,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Science,8Sc-C,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,Dance/Drama,8Da-A,M,WBRI,N,Yes,No,No
+W586038832703,Crawford; Aaron,French,8Fr-C,M,WBRI,N,Yes,No,No
+W616449959274,Osborne; Aubrey,History,8Hi-A,F,AOTH,K,No,No,No
+W616449959274,Osborne; Aubrey,English,8En-C,F,AOTH,K,No,No,No
+W616449959274,Osborne; Aubrey,French,8Fr-B,F,AOTH,K,No,No,No
+W616449959274,Osborne; Aubrey,Geography,8Ge-B,F,AOTH,K,No,No,No
+W616449959274,Osborne; Aubrey,Computer Studies,8Co-C,F,AOTH,K,No,No,No
+W616449959274,Osborne; Aubrey,Maths,8Ma-B,F,AOTH,K,No,No,No
+W663721388989,Robson; Lily,Spanish,8Sp-A,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,History,8Hi-A,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,English,8En-C,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,DT Textiles,8DT-A,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,DT Graphics,8DT-C,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,Geography,8Ge-A,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,German,8Ge-A,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,Science,8Sc-B,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,Art,8Ar-C,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,Dance/Drama,8Da-A,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,Maths,8Ma-B,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,French,8Fr-C,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,PE,8PE-C,F,AOTH,N,No,No,No
+W663721388989,Robson; Lily,Computer Studies,8Co-B,F,AOTH,N,No,No,No
+W761969155909,Murphy; Amelia,English,8En-C,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,PE,8PE-A,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,Geography,8Ge-C,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,Spanish,8Sp-B,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,Computer Studies,8Co-A,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,Science,8Sc-C,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,Maths,8Ma-B,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,French,8Fr-C,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,German,8Ge-C,M,WBRI,N,No,No,No
+W761969155909,Murphy; Amelia,History,8Hi-B,M,WBRI,N,No,No,No
+W807247165586,Blair; Brody,Spanish,8Sp-A,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,English,8En-B,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,Geography,8Ge-C,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,Science,8Sc-A,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,German,8Ge-B,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,French,8Fr-A,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,Maths,8Ma-B,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,PE,8PE-C,F,WBRI,K,No,No,No
+W807247165586,Blair; Brody,History,8Hi-B,F,WBRI,K,No,No,No
+W900333686283,Griffin; Alice,History,8Hi-A,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,English,8En-C,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,French,8Fr-B,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,Geography,8Ge-B,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,Spanish,8Sp-B,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,Computer Studies,8Co-A,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,Maths,8Ma-A,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,Science,8Sc-C,F,AOTH,A,No,No,No
+W900333686283,Griffin; Alice,German,8Ge-C,F,AOTH,A,No,No,No
+W926657565800,Johnson; Josiah,English,8En-C,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,Geography,8Ge-C,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,Art,8Ar-B,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,History,8Hi-C,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,DT Graphics,8DT-B,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,DT Textiles,8DT-B,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,German,8Ge-B,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,Spanish,8Sp-B,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,Maths,8Ma-A,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,Computer Studies,8Co-C,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,Science,8Sc-C,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,French,8Fr-C,F,WBRI,K,Yes,No,No
+W926657565800,Johnson; Josiah,PE,8PE-C,F,WBRI,K,Yes,No,No
+W967350510049,White; Peyton,Spanish,8Sp-C,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,English,8En-C,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,PE,8PE-A,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,Geography,8Ge-A,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,Science,8Sc-A,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,German,8Ge-A,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,History,8Hi-C,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,French,8Fr-A,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,Computer Studies,8Co-C,M,WBRI,K,No,No,No
+W967350510049,White; Peyton,Maths,8Ma-B,M,WBRI,K,No,No,No
+X419225329737,Griffiths; Lauren,English,8En-C,M,AOTH,T,Yes,No,No
+X419225329737,Griffiths; Lauren,Geography,8Ge-A,M,AOTH,T,Yes,No,No
+X419225329737,Griffiths; Lauren,Computer Studies,8Co-A,M,AOTH,T,Yes,No,No
+X419225329737,Griffiths; Lauren,Maths,8Ma-B,M,AOTH,T,Yes,No,No
+X419225329737,Griffiths; Lauren,History,8Hi-B,M,AOTH,T,Yes,No,No
+X565386621344,Cooke; Nicholas,DT Textiles,8DT-C,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,Spanish,8Sp-C,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,Geography,8Ge-A,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,Science,8Sc-A,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,Maths,8Ma-C,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,History,8Hi-C,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,DT Graphics,8DT-B,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,German,8Ge-B,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,Computer Studies,8Co-A,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,Art,8Ar-C,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,English,8En-A,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,French,8Fr-A,F,MBCA,A,No,No,No
+X565386621344,Cooke; Nicholas,PE,8PE-C,F,MBCA,A,No,No,No
+X581776993404,Sharma; James,History,8Hi-A,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,Spanish,8Sp-C,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,French,8Fr-B,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,DT Graphics,8DT-C,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,German,8Ge-A,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,Geography,8Ge-B,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,PE,8PE-B,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,Science,8Sc-B,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,Computer Studies,8Co-A,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,English,8En-A,M,AOTH,A,No,No,No
+X581776993404,Sharma; James,Maths,8Ma-B,M,AOTH,A,No,No,No
+X626230782316,Holland; Eliana,English,8En-B,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,History,8Hi-A,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,Spanish,8Sp-C,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,French,8Fr-B,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,Geography,8Ge-A,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,Science,8Sc-A,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,German,8Ge-B,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,PE,8PE-B,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,Maths,8Ma-B,F,WBRI,T,No,No,No
+X626230782316,Holland; Eliana,Computer Studies,8Co-B,F,WBRI,T,No,No,No
+X687174700738,Greenwood; Emily,History,8Hi-A,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,English,8En-C,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,Geography,8Ge-A,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,German,8Ge-A,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,DT Graphics,8DT-B,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,Spanish,8Sp-B,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,Maths,8Ma-A,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,French,8Fr-A,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,Computer Studies,8Co-C,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,Science,8Sc-C,M,WBRI,N,No,No,No
+X687174700738,Greenwood; Emily,PE,8PE-C,M,WBRI,N,No,No,No
+X797762583812,Murphy; Zachary,English,8En-C,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,Geography,8Ge-C,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,Art,8Ar-B,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,History,8Hi-C,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,DT Graphics,8DT-B,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,DT Textiles,8DT-B,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,PE,8PE-B,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,Spanish,8Sp-B,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,Science,8Sc-C,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,Maths,8Ma-B,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,French,8Fr-C,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,German,8Ge-C,F,WBRI,K,No,No,No
+X797762583812,Murphy; Zachary,Computer Studies,8Co-B,F,WBRI,K,No,No,No
+X817534762267,Henry; Stella,English,8En-B,M,AOTH,T,No,No,No
+X817534762267,Henry; Stella,History,8Hi-A,M,AOTH,T,No,No,No
+X817534762267,Henry; Stella,Spanish,8Sp-C,M,AOTH,T,No,No,No
+X817534762267,Henry; Stella,Geography,8Ge-B,M,AOTH,T,No,No,No
+X817534762267,Henry; Stella,Computer Studies,8Co-A,M,AOTH,T,No,No,No
+X817534762267,Henry; Stella,Maths,8Ma-A,M,AOTH,T,No,No,No
+X817534762267,Henry; Stella,French,8Fr-A,M,AOTH,T,No,No,No
+X876948624611,Anderson; Annabelle,Spanish,8Sp-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,English,8En-B,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,DT Textiles,8DT-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,DT Graphics,8DT-C,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,Geography,8Ge-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,History,8Hi-C,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,German,8Ge-B,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,Science,8Sc-B,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,Art,8Ar-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,Maths,8Ma-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,Dance/Drama,8Da-A,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,French,8Fr-C,F,WBRI,T,No,No,No
+X876948624611,Anderson; Annabelle,PE,8PE-C,F,WBRI,T,No,No,No
+X962797607560,Patterson; Sarah,DT Textiles,8DT-C,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,History,8Hi-A,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,Spanish,8Sp-C,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,German,8Ge-A,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,Maths,8Ma-C,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,DT Graphics,8DT-B,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,Geography,8Ge-B,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,PE,8PE-B,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,Computer Studies,8Co-A,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,English,8En-A,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,Science,8Sc-C,F,WBRI,N,No,No,No
+X962797607560,Patterson; Sarah,French,8Fr-C,F,WBRI,N,No,No,No
+Y350005157015,Thomas; Madison,Spanish,8Sp-A,M,WBRI,T,No,No,Yes
+Y350005157015,Thomas; Madison,French,8Fr-B,M,WBRI,T,No,No,Yes
+Y350005157015,Thomas; Madison,History,8Hi-C,M,WBRI,T,No,No,Yes
+Y350005157015,Thomas; Madison,Geography,8Ge-B,M,WBRI,T,No,No,Yes
+Y350005157015,Thomas; Madison,English,8En-A,M,WBRI,T,No,No,Yes
+Y350005157015,Thomas; Madison,Maths,8Ma-A,M,WBRI,T,No,No,Yes
+Y350005157015,Thomas; Madison,Computer Studies,8Co-B,M,WBRI,T,No,No,Yes
+Y397173710677,Heath; Violet,Spanish,8Sp-A,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,English,8En-B,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,DT Graphics,8DT-C,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,Geography,8Ge-C,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,Science,8Sc-A,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,German,8Ge-A,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,History,8Hi-C,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,Maths,8Ma-A,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,French,8Fr-A,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,Computer Studies,8Co-C,F,AOTH,T,No,No,No
+Y397173710677,Heath; Violet,PE,8PE-C,F,AOTH,T,No,No,No
+Y406011012735,Hilton; Chase,History,8Hi-A,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,Geography,8Ge-B,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,Spanish,8Sp-B,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,English,8En-A,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,French,8Fr-A,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,Computer Studies,8Co-C,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,DT Graphics,8DT-A,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,Science,8Sc-C,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,Maths,8Ma-B,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,PE,8PE-C,F,WBRI,T,Yes,Yes,No
+Y406011012735,Hilton; Chase,German,8Ge-C,F,WBRI,T,Yes,Yes,No
+Y466484398210,Perkins; Gabriel,English,8En-B,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Spanish,8Sp-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,DT Textiles,8DT-A,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Geography,8Ge-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Art,8Ar-B,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,DT Graphics,8DT-B,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Dance/Drama,8Da-B,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Maths,8Ma-A,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Computer Studies,8Co-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,Science,8Sc-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,French,8Fr-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,PE,8PE-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,German,8Ge-C,M,MBCA,T,No,No,No
+Y466484398210,Perkins; Gabriel,History,8Hi-B,M,MBCA,T,No,No,No
+Y563723988992,Newman; Jason,Spanish,8Sp-A,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,History,8Hi-A,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,English,8En-C,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,Geography,8Ge-B,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,Maths,8Ma-A,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,French,8Fr-A,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,Computer Studies,8Co-C,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,Science,8Sc-C,F,AOTH,A,No,No,No
+Y563723988992,Newman; Jason,German,8Ge-C,F,AOTH,A,No,No,No
+Y599905399878,Kerr; Evelyn,History,8Hi-A,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,Spanish,8Sp-C,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,French,8Fr-B,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,Geography,8Ge-A,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,German,8Ge-B,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,Science,8Sc-B,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,English,8En-A,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,Computer Studies,8Co-C,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,DT Graphics,8DT-A,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,Maths,8Ma-B,F,WBRI,K,No,No,No
+Y599905399878,Kerr; Evelyn,PE,8PE-C,F,WBRI,K,No,No,No
+Y732910668688,Frost; Bentley,English,8En-C,F,AOTH,A,No,No,No
+Y732910668688,Frost; Bentley,Geography,8Ge-C,F,AOTH,A,No,No,No
+Y732910668688,Frost; Bentley,Spanish,8Sp-B,F,AOTH,A,No,No,No
+Y732910668688,Frost; Bentley,Computer Studies,8Co-A,F,AOTH,A,No,No,No
+Y732910668688,Frost; Bentley,Maths,8Ma-A,F,AOTH,A,No,No,No
+Y732910668688,Frost; Bentley,French,8Fr-A,F,AOTH,A,No,No,No
+Y732910668688,Frost; Bentley,History,8Hi-B,F,AOTH,A,No,No,No
+Y953264565160,Ferguson; Riley,English,8En-B,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,Spanish,8Sp-C,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,DT Graphics,8DT-C,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,PE,8PE-A,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,Geography,8Ge-A,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,German,8Ge-B,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,Maths,8Ma-A,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,Science,8Sc-C,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,French,8Fr-C,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,History,8Hi-B,F,AOTH,T,No,No,No
+Y953264565160,Ferguson; Riley,Computer Studies,8Co-B,F,AOTH,T,No,No,No
+Y989541169041,Ashton; Isabella,History,8Hi-A,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,Spanish,8Sp-C,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,English,8En-C,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,French,8Fr-B,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,Science,8Sc-A,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,Maths,8Ma-C,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,German,8Ge-B,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,Geography,8Ge-B,M,MBCA,N,Yes,No,No
+Y989541169041,Ashton; Isabella,Computer Studies,8Co-B,M,MBCA,N,Yes,No,No
+Z195748582728,Vaughan; Molly,Geography,8Ge-C,F,WBRI,K,No,No,No
+Z195748582728,Vaughan; Molly,History,8Hi-C,F,WBRI,K,No,No,No
+Z195748582728,Vaughan; Molly,English,8En-A,F,WBRI,K,No,No,No
+Z195748582728,Vaughan; Molly,Maths,8Ma-A,F,WBRI,K,No,No,No
+Z195748582728,Vaughan; Molly,Computer Studies,8Co-B,F,WBRI,K,No,No,No
+Z319233558687,West; Carson,English,8En-C,F,WBRI,K,No,No,No
+Z319233558687,West; Carson,French,8Fr-B,F,WBRI,K,No,No,No
+Z319233558687,West; Carson,Geography,8Ge-A,F,WBRI,K,No,No,No
+Z319233558687,West; Carson,Maths,8Ma-A,F,WBRI,K,No,No,No
+Z319233558687,West; Carson,History,8Hi-B,F,WBRI,K,No,No,No
+Z319233558687,West; Carson,Computer Studies,8Co-B,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,English,8En-B,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,History,8Hi-A,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,Spanish,8Sp-C,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,French,8Fr-B,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,DT Textiles,8DT-A,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,Geography,8Ge-C,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,German,8Ge-A,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,Maths,8Ma-C,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,DT Graphics,8DT-B,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,Science,8Sc-B,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,Computer Studies,8Co-A,F,WBRI,K,No,No,No
+Z395379384341,Fox; Joshua,PE,8PE-C,F,WBRI,K,No,No,No
+Z431941680380,Barlow; Kennedy,Spanish,8Sp-A,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,History,8Hi-A,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,English,8En-C,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,DT Textiles,8DT-A,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,Geography,8Ge-A,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,Maths,8Ma-C,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,DT Graphics,8DT-B,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,Art,8Ar-A,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,Computer Studies,8Co-C,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,Science,8Sc-C,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,French,8Fr-C,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,PE,8PE-C,F,WBRI,N,No,No,No
+Z431941680380,Barlow; Kennedy,German,8Ge-C,F,WBRI,N,No,No,No
+Z496058655612,Shaw; Adalyn,English,8En-C,F,WBRI,N,No,No,No
+Z496058655612,Shaw; Adalyn,Geography,8Ge-C,F,WBRI,N,No,No,No
+Z496058655612,Shaw; Adalyn,Maths,8Ma-C,F,WBRI,N,No,No,No
+Z496058655612,Shaw; Adalyn,History,8Hi-C,F,WBRI,N,No,No,No
+Z496058655612,Shaw; Adalyn,Computer Studies,8Co-B,F,WBRI,N,No,No,No
+Z510568998781,Morgan; Jordyn,Spanish,8Sp-A,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,English,8En-B,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,Geography,8Ge-B,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,Computer Studies,8Co-A,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,French,8Fr-A,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,Maths,8Ma-B,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,German,8Ge-C,F,WBRI,T,No,No,No
+Z510568998781,Morgan; Jordyn,History,8Hi-B,F,WBRI,T,No,No,No
+Z615636064408,Bartlett; Dominic,English,8En-B,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,Spanish,8Sp-C,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,Geography,8Ge-C,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,History,8Hi-C,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,German,8Ge-B,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,PE,8PE-B,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,Maths,8Ma-A,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,French,8Fr-A,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,Computer Studies,8Co-C,M,MBCA,A,No,No,No
+Z615636064408,Bartlett; Dominic,Science,8Sc-C,M,MBCA,A,No,No,No
+Z653047954519,Hart; Henry,Spanish,8Sp-C,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,English,8En-C,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,Geography,8Ge-A,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,DT Graphics,8DT-B,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,PE,8PE-B,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,Science,8Sc-B,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,Computer Studies,8Co-A,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,Maths,8Ma-A,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,French,8Fr-C,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,German,8Ge-C,M,WBRI,N,No,No,No
+Z653047954519,Hart; Henry,History,8Hi-B,M,WBRI,N,No,No,No
+Z666735299180,Allan; Evelyn,English,8En-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,DT Textiles,8DT-A,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,Geography,8Ge-C,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,German,8Ge-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,PE,8PE-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,Spanish,8Sp-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,Science,8Sc-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,Art,8Ar-A,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,French,8Fr-A,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,DT Graphics,8DT-A,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,Maths,8Ma-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,History,8Hi-B,F,WBRI,K,No,Yes,No
+Z666735299180,Allan; Evelyn,Computer Studies,8Co-B,F,WBRI,K,No,Yes,No
+Z718910469332,Day; Micah,English,8En-B,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,History,8Hi-A,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,French,8Fr-B,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,German,8Ge-A,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,Geography,8Ge-B,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,Spanish,8Sp-B,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,Science,8Sc-B,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,Computer Studies,8Co-C,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,Maths,8Ma-B,M,WBRI,A,No,No,No
+Z718910469332,Day; Micah,PE,8PE-C,M,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,Spanish,8Sp-A,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,English,8En-B,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,History,8Hi-A,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,Geography,8Ge-C,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,Science,8Sc-B,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,Computer Studies,8Co-A,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,French,8Fr-A,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,Maths,8Ma-B,F,WBRI,A,No,No,No
+Z853141687976,Ferguson; Vivian,German,8Ge-C,F,WBRI,A,No,No,No

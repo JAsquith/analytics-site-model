@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Setup 130" parallel="tests" thread-count="4">
+
+    <parameter name="suite-name" value="Regression Setup 130" />
+    <parameter name="log-folder" value="C:/Selenium/Logs" />
+
+    <parameter name="test-domain" value="dev" />
+    <parameter name="platform" value="Windows" />
+    <parameter name="browser" value="firefox" />
+    <parameter name="version" value="ANY" />
+
+    <!-- Use these settings when running on personal laptop grid -->
+    <parameter name="grid-type" value="local" />
+
+    <test name="CreateAssessmentCollection0001">
+        <parameter name="username" value="admate173364" />
+        <parameter name="password" value="AvDbUxGf3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y11 Summer" />
+        <parameter name="coll-date" value="1/1/2017" />
+        <parameter name="coll-term" value="Year 11 Term 3" />
+        <parameter name="coll-description" value="Y11 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0002">
+        <parameter name="username" value="admbte173366" />
+        <parameter name="password" value="VuStGeHp3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y11 Spring" />
+        <parameter name="coll-date" value="31/12/2016" />
+        <parameter name="coll-term" value="Year 11 Term 2" />
+        <parameter name="coll-description" value="Y11 Spring" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0003">
+        <parameter name="username" value="admcte173367" />
+        <parameter name="password" value="YsEfYjGj2" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y11 Autumn" />
+        <parameter name="coll-date" value="30/12/2016" />
+        <parameter name="coll-term" value="Year 11 Term 1" />
+        <parameter name="coll-description" value="Y11 Autumn" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0004">
+        <parameter name="username" value="admdte173368" />
+        <parameter name="password" value="QpVpYuJz3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y10 Summer" />
+        <parameter name="coll-date" value="29/12/2016" />
+        <parameter name="coll-term" value="Year 10 Term 3" />
+        <parameter name="coll-description" value="Y10 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0005">
+        <parameter name="username" value="admete173369" />
+        <parameter name="password" value="XxMfHxXq7" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y10 Spring" />
+        <parameter name="coll-date" value="28/12/2016" />
+        <parameter name="coll-term" value="Year 10 Term 2" />
+        <parameter name="coll-description" value="Y10 Spring" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0006">
+        <parameter name="username" value="admfte173370" />
+        <parameter name="password" value="TdQzQwWs3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y10 Autumn" />
+        <parameter name="coll-date" value="27/12/2016" />
+        <parameter name="coll-term" value="Year 10 Term 1" />
+        <parameter name="coll-description" value="Y10 Autumn" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0007">
+        <parameter name="username" value="admgte173371" />
+        <parameter name="password" value="SyMvFyYx3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y9 End of Year" />
+        <parameter name="coll-date" value="26/12/2016" />
+        <parameter name="coll-term" value="Year 9 Term 3" />
+        <parameter name="coll-description" value="Y9 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0008">
+        <parameter name="username" value="admhte173372" />
+        <parameter name="password" value="PeKiFqBh2" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y9 Mid Year" />
+        <parameter name="coll-date" value="25/12/2016" />
+        <parameter name="coll-term" value="Year 9 Term 2" />
+        <parameter name="coll-description" value="Y9 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0009">
+        <parameter name="username" value="admite173373" />
+        <parameter name="password" value="DhBuSsAo3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 End of Year" />
+        <parameter name="coll-date" value="24/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 3" />
+        <parameter name="coll-description" value="Y8 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0010">
+        <parameter name="username" value="admjte173374" />
+        <parameter name="password" value="GfQfJxZh2" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 Mid Year" />
+        <parameter name="coll-date" value="23/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 2" />
+        <parameter name="coll-description" value="Y8 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0011">
+        <parameter name="username" value="regset173955" />
+        <parameter name="password" value="MkVcGyNn3" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 End of Year" />
+        <parameter name="coll-date" value="22/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 3" />
+        <parameter name="coll-description" value="Y7 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0012">
+        <parameter name="username" value="regset173956" />
+        <parameter name="password" value="KmZtRrAn7" />
+        <parameter name="eap-cohort" value="17" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 Mid Year" />
+        <parameter name="coll-date" value="21/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 2" />
+        <parameter name="coll-description" value="Y7 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0013">
+        <parameter name="username" value="regset173957" />
+        <parameter name="password" value="CjEsFxEd9" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y10 Summer" />
+        <parameter name="coll-date" value="29/12/2016" />
+        <parameter name="coll-term" value="Year 10 Term 3" />
+        <parameter name="coll-description" value="Y10 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0014">
+        <parameter name="username" value="regset173958" />
+        <parameter name="password" value="AmRoMdTk9" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y10 Spring" />
+        <parameter name="coll-date" value="28/12/2016" />
+        <parameter name="coll-term" value="Year 10 Term 2" />
+        <parameter name="coll-description" value="Y10 Spring" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0015">
+        <parameter name="username" value="regset173959" />
+        <parameter name="password" value="FcYaKgQw5" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y10 Autumn" />
+        <parameter name="coll-date" value="27/12/2016" />
+        <parameter name="coll-term" value="Year 10 Term 1" />
+        <parameter name="coll-description" value="Y10 Autumn" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0016">
+        <parameter name="username" value="regset173961" />
+        <parameter name="password" value="HwBvQsAr8" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y9 End of Year" />
+        <parameter name="coll-date" value="26/12/2016" />
+        <parameter name="coll-term" value="Year 9 Term 3" />
+        <parameter name="coll-description" value="Y9 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0017">
+        <parameter name="username" value="regset173962" />
+        <parameter name="password" value="SaDqXnWv3" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y9 Mid Year" />
+        <parameter name="coll-date" value="25/12/2016" />
+        <parameter name="coll-term" value="Year 9 Term 2" />
+        <parameter name="coll-description" value="Y9 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0018">
+        <parameter name="username" value="regset173963" />
+        <parameter name="password" value="NnXjSpGx6" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 End of Year" />
+        <parameter name="coll-date" value="24/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 3" />
+        <parameter name="coll-description" value="Y8 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0019">
+        <parameter name="username" value="regset173964" />
+        <parameter name="password" value="PrJiJmJc4" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 Mid Year" />
+        <parameter name="coll-date" value="23/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 2" />
+        <parameter name="coll-description" value="Y8 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0020">
+        <parameter name="username" value="regset173965" />
+        <parameter name="password" value="SySzHcKz4" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 End of Year" />
+        <parameter name="coll-date" value="22/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 3" />
+        <parameter name="coll-description" value="Y7 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0021">
+        <parameter name="username" value="regset173966" />
+        <parameter name="password" value="QdEuKdTt5" />
+        <parameter name="eap-cohort" value="18" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 Mid Year" />
+        <parameter name="coll-date" value="21/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 2" />
+        <parameter name="coll-description" value="Y7 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0022">
+        <parameter name="username" value="regset173967" />
+        <parameter name="password" value="QtQeFiBj7" />
+        <parameter name="eap-cohort" value="19" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y9 End of Year" />
+        <parameter name="coll-date" value="26/12/2016" />
+        <parameter name="coll-term" value="Year 9 Term 3" />
+        <parameter name="coll-description" value="Y9 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0023">
+        <parameter name="username" value="regset173968" />
+        <parameter name="password" value="NxKmKeAj4" />
+        <parameter name="eap-cohort" value="19" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y9 Mid Year" />
+        <parameter name="coll-date" value="25/12/2016" />
+        <parameter name="coll-term" value="Year 9 Term 2" />
+        <parameter name="coll-description" value="Y9 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0024">
+        <parameter name="username" value="regset173969" />
+        <parameter name="password" value="RpStKsCh8" />
+        <parameter name="eap-cohort" value="19" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 End of Year" />
+        <parameter name="coll-date" value="24/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 3" />
+        <parameter name="coll-description" value="Y8 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0025">
+        <parameter name="username" value="regset173970" />
+        <parameter name="password" value="JcNoPoPn6" />
+        <parameter name="eap-cohort" value="19" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 Mid Year" />
+        <parameter name="coll-date" value="23/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 2" />
+        <parameter name="coll-description" value="Y8 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0026">
+        <parameter name="username" value="admate173364" />
+        <parameter name="password" value="AvDbUxGf3" />
+        <parameter name="eap-cohort" value="19" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 End of Year" />
+        <parameter name="coll-date" value="22/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 3" />
+        <parameter name="coll-description" value="Y7 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0027">
+        <parameter name="username" value="admbte173366" />
+        <parameter name="password" value="VuStGeHp3" />
+        <parameter name="eap-cohort" value="19" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 Mid Year" />
+        <parameter name="coll-date" value="21/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 2" />
+        <parameter name="coll-description" value="Y7 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0028">
+        <parameter name="username" value="admcte173367" />
+        <parameter name="password" value="YsEfYjGj2" />
+        <parameter name="eap-cohort" value="20" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 End of Year" />
+        <parameter name="coll-date" value="24/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 3" />
+        <parameter name="coll-description" value="Y8 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0029">
+        <parameter name="username" value="admdte173368" />
+        <parameter name="password" value="QpVpYuJz3" />
+        <parameter name="eap-cohort" value="20" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y8 Mid Year" />
+        <parameter name="coll-date" value="23/12/2016" />
+        <parameter name="coll-term" value="Year 8 Term 2" />
+        <parameter name="coll-description" value="Y8 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0030">
+        <parameter name="username" value="admete173369" />
+        <parameter name="password" value="XxMfHxXq7" />
+        <parameter name="eap-cohort" value="20" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 End of Year" />
+        <parameter name="coll-date" value="22/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 3" />
+        <parameter name="coll-description" value="Y7 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0031">
+        <parameter name="username" value="admfte173370" />
+        <parameter name="password" value="TdQzQwWs3" />
+        <parameter name="eap-cohort" value="20" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 Mid Year" />
+        <parameter name="coll-date" value="21/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 2" />
+        <parameter name="coll-description" value="Y7 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0032">
+        <parameter name="username" value="admgte173371" />
+        <parameter name="password" value="SyMvFyYx3" />
+        <parameter name="eap-cohort" value="21" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 End of Year" />
+        <parameter name="coll-date" value="22/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 3" />
+        <parameter name="coll-description" value="Y7 Summer" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+    <test name="CreateAssessmentCollection0033">
+        <parameter name="username" value="admhte173372" />
+        <parameter name="password" value="PeKiFqBh2" />
+        <parameter name="eap-cohort" value="21" />
+        <parameter name="dataset-name" value="Assessments" />
+        <parameter name="coll-name" value="Y7 Mid Year" />
+        <parameter name="coll-date" value="21/12/2016" />
+        <parameter name="coll-term" value="Year 7 Term 2" />
+        <parameter name="coll-description" value="Y7 Winter" />
+        <classes>
+            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+        </classes>
+    </test>
+
+
+</suite>

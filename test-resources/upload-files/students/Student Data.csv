@@ -1,0 +1,2290 @@
+StudentID,StudentName,Subject,Class,Gender,Ethnic Code,SEN,Gifted Talented,FSM Ever 6,Looked After,Pupil Premium,EAL,Registration Group
+5001,Adams; William,Art,11AAr2,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,English,11EEn4,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Info Technology,11B1It2,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Mathematics,11MMa11,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Physical Ed,11YPe3,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,PSHE,11P7Pq,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Religious Study,11B1Rs2,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Science,11B1Sc2,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Sport Gcse,11BSp1,M,WENG,N,N,N,N,Y,N,11CH
+5001,Adams; William,Technology,11YTx2,M,WENG,N,N,N,N,Y,N,11CH
+5002,Albarn; Damon,English,11EEn5,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,History,11AHi2,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Info Technology,11B1It2,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Mathematics,11MMa07,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Physical Ed,11YPe3,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,PSHE,11P4Pq,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Religious Study,11B1Rs2,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Science,11B1Sc2,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Sport Gcse,11BSp1,M,WENG,A,N,N,N,N,N,11JB
+5002,Albarn; Damon,Technology,11YGP2,M,WENG,A,N,N,N,N,N,11JB
+5003,Ament; Jeff,Art,11AAr1,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,English,11EEn3,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,History,11BHi1,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Science,11RSc2,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11MOB
+5003,Ament; Jeff,Technology,11XTx1,M,WENG,N,N,N,N,N,N,11MOB
+5004,Aniston; Jennifer,Art,11BAr1,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,English,11EEn1,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Science,11RSc2,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11JW
+5004,Aniston; Jennifer,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11JW
+5005,Ant; Adam,English,11EEn4,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Physical Ed,11YPe2,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Science,11RSc4,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11LMK
+5005,Ant; Adam,Technology,11YRM2,M,WENG,N,N,N,N,N,N,11LMK
+5006,Ashe; Arthur,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,English,11EEn4,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Info Technology,11B1It2,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Mathematics,11MMa04,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Physical Ed,11XPe4,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Religious Study,11B1Rs2,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Science,11B1Sc2,M,WENG,N,N,N,N,N,N,11EK
+5006,Ashe; Arthur,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11EK
+5007,Austen; Jane,Art,11BAr1,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,English,11EEn2,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,French,11RFr2,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Geography,11AGg1,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Info Technology,11RIt3,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Mathematics,11MMa01,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Physical Ed,11XPe6,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,PSHE,11P5Pq,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Religious Study,11R1Rs3,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Science,11RSc3,F,WENG,N,N,Y,N,Y,N,11DB
+5007,Austen; Jane,Technology,11XGP1,F,WENG,N,N,Y,N,Y,N,11DB
+5008,Aykroyd; Dan,CIDA,11ACi2,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,English,11EEn6,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Info Technology,11B1It2,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Religious Study,11B1Rs2,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Science,11B1Sc2,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11SM
+5008,Aykroyd; Dan,Technology,11XRM1,M,WENG,N,N,N,N,N,N,11SM
+5009,Balzary; Michael,English,11EEn2,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,French,11RFr1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,History,11AHi1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Info Technology,11RIt1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Mathematics,11MMa01,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Physical Ed,11XPe1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,PSHE,11P5Pq,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Psychology,11BPs1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Religious Study,11R1Rs1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Science,11RSc1,M,WENG,A,N,N,N,N,N,11CH
+5009,Balzary; Michael,Technology,11XTx1,M,WENG,A,N,N,N,N,N,11CH
+5010,Bangalter; Thomas,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,English,11EEn2,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,French,11RFr2,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,History,11AHi2,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,Science,11RSc4,M,WENG,N,N,N,N,N,N,11DB
+5010,Bangalter; Thomas,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11DB
+5011,Banks; Tyra,Art,11AAr2,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,English,11EEn4,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Info Technology,11B1It2,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Mathematics,11MMa02,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Physical Ed,11XPe2,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,PSHE,11P1Pq,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Religious Study,11B1Rs2,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Science,11B1Sc2,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Sport Gcse,11BSp1,F,WENG,N,N,Y,N,Y,N,11EK
+5011,Banks; Tyra,Technology,11XFd1,F,WENG,N,N,Y,N,Y,N,11EK
+5012,Baresi; Franco,English,11EEn1,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,French,11RFr2,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,History,11AHi1,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Info Technology,11RIt3,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Mathematics,11MMa03,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Music,11BMu1,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Physical Ed,11XPe5,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,PSHE,11P1Pq,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Religious Study,11R1Rs3,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Science,11RSc3,M,WENG,N,N,Y,N,Y,Y,11JB
+5012,Baresi; Franco,Technology,11XGP1,M,WENG,N,N,Y,N,Y,Y,11JB
+5013,Barrymore; Drew,Childcare,11ACd1,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Dance,11BDa1,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,English,11EEn7,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Mathematics,11MMa07,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Physical Ed,11YPe6,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11JW
+5013,Barrymore; Drew,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11JW
+5014,Benatar; Pat,English,11EEn4,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,History,11BHi1,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Info Technology,11RIt5,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Physical Ed,11XPe2,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Religious Study,11RRs5,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Science,11RSc3,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Spanish,11R1Es2,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Spanish,11REs2,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Sport Gcse,11ASp1,F,WENG,N,N,N,N,N,N,11LMK
+5014,Benatar; Pat,Technology,11XEl1,F,WENG,N,N,N,N,N,N,11LMK
+5015,Bergman; Jaime,Childcare,11ACd1,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,English,11EEn2,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,French,11RFr2,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,History,11BHi2,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,Info Technology,11RIt3,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,Mathematics,11MMa05,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,Physical Ed,11XPe6,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,PSHE,11P5Pq,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,Religious Study,11R1Rs3,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,Science,11RSc5,M,WENG,P,N,N,N,N,N,11SM
+5015,Bergman; Jaime,Technology,11XTx1,M,WENG,P,N,N,N,N,N,11SM
+5016,Black; Frank,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,English,11EEn5,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Psychology,11BPs1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Science,11BSc1,M,WENG,N,N,N,N,N,N,11MOB
+5016,Black; Frank,Technology,11XTx1,M,WENG,N,N,N,N,N,N,11MOB
+5017,Bordin; Mike,Alternative Curriculum,11GAc1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Art,11AAr1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Arts Award,11GAa1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,English,11GEn1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Info Technology,11GIt1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Mathematics,11GMa1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Physical Ed,11GPe1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,PSHE,11P7Pq,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Religious Study,11GRs1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Science,11GSc1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Technology,11GTe1,M,MWOE,N,N,N,N,N,N,11CH
+5017,Bordin; Mike,Work Experience,11GWe1,M,MWOE,N,N,N,N,N,N,11CH
+5018,Bowie; David,Art,11AAr2,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,English,11EEn5,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,History,11BHi2,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,Info Technology,11B1It2,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,Mathematics,11MMa08,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,Physical Ed,11XPe6,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,PSHE,11P2Pq,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,Religious Study,11B1Rs2,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,Science,11B1Sc2,M,WENG,N,N,Y,N,Y,N,11JB
+5018,Bowie; David,Technology,11XFd1,M,WENG,N,N,Y,N,Y,N,11JB
+5019,Bradshaw; Terry,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,English,11EEn1,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,History,11AHi2,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Science,11RSc1,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11MOB
+5019,Bradshaw; Terry,Technology,11YGP2,M,WENG,N,N,N,N,N,N,11MOB
+5020,Brokaw; Tom,CIDA,11ACi1,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,English,11EEn4,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,French,11R1Fr3,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,French,11RFr3,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,History,11BHi2,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,Info Technology,11RIt4,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,Mathematics,11MMa07,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,Physical Ed,11YPe6,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,PSHE,11P8Pq,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,Religious Study,11RRs4,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,Science,11RSc3,M,WENG,N,N,Y,N,Y,N,11JW
+5020,Brokaw; Tom,Technology,11YFd2,M,WENG,N,N,Y,N,Y,N,11JW
+5021,Bryan; Ritzy,CIDA,11BCi1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,English,11EEn1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,French,11RFr1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,History,11AHi1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,Science,11RSc1,F,WENG,N,N,N,N,N,N,11LMK
+5021,Bryan; Ritzy,Technology,11XEl1,F,WENG,N,N,N,N,N,N,11LMK
+5022,Burnett; Carol,CIDA,11ACi2,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,English,11EEn7,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,History,11BHi2,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,Mathematics,11MMa07,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11EK
+5022,Burnett; Carol,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11EK
+5023,Bush; Kate,Art,11AAr2,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,CIDA,11BCi1,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,English,11EEn7,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,Info Technology,11B1It4,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,Mathematics,11MMa11,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,Physical Ed,11XPe5,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,PSHE,11P1Pq,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,Religious Study,11B1Rs4,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,Science,11B1Sc4,F,WENG,P,N,Y,N,Y,N,11DB
+5023,Bush; Kate,Technology,11XEl1,F,WENG,P,N,Y,N,Y,N,11DB
+5024,Byrne; David,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,English,11EEn5,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,Science,11BSc1,M,WENG,N,N,N,N,N,N,11SM
+5024,Byrne; David,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11SM
+5025,Caesar; Augustus,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,English,11EEn3,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,French,11RFr2,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,History,11BHi1,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,Science,11RSc2,M,WENG,N,N,N,N,N,N,11CH
+5025,Caesar; Augustus,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11CH
+5026,Cameron; Matt,CIDA,11BCi1,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,English,11EEn2,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,French,11R1Fr3,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,French,11RFr3,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,History,11AHi1,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,Info Technology,11RIt4,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,Mathematics,11MMa01,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,Physical Ed,11YPe6,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,PSHE,11P8Pq,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,Religious Study,11RRs4,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,Science,11RSc4,M,WENG,A,N,N,N,N,N,11JB
+5026,Cameron; Matt,Technology,11YGP2,M,WENG,A,N,N,N,N,N,11JB
+5027,Campbell; Naomi,English,11EEn6,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,History,11AHi3,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Info Technology,11B1It3,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Mathematics,11MMa08,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Physical Ed,11YPe2,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Religious Study,11BRs3,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Science,11B1Sc3,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11MOB
+5027,Campbell; Naomi,Technology,11YRM2,F,WENG,N,N,N,N,N,N,11MOB
+5028,Candy; John,English,11EEn2,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,History,11AHi1,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Info Technology,11RIt2,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Mathematics,11MMa01,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Music,11BMu1,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Physical Ed,11XPe5,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,PSHE,11P1Pq,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Religious Study,11R1Rs2,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Science,11RSc3,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Spanish,11REs1,M,WENG,P,N,N,N,N,N,11JW
+5028,Candy; John,Technology,11XRM1,M,WENG,P,N,N,N,N,N,11JW
+5029,Carey; Danny,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,CIDA,11ACi2,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,English,11EEn7,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,Science,11BSc1,M,WENG,N,N,N,N,N,N,11LMK
+5029,Carey; Danny,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11LMK
+5030,Carey; Mariah,English,11EEn4,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,French,11RFr2,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,History,11AHi2,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,PSHE,11P4Pq,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Science,11RSc3,F,WENG,N,N,N,N,N,N,11EK
+5030,Carey; Mariah,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11EK
+5031,Carlin; George,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,English,11EEn5,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Info Technology,11B1It4,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Religious Study,11B1Rs4,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Science,11B1Sc4,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11DB
+5031,Carlin; George,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11DB
+5032,Carrey; Jim,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,English,11EEn2,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,French,11R1Fr3,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,French,11RFr3,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,History,11BHi1,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,Info Technology,11RIt4,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,Religious Study,11RRs4,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,Science,11RSc3,M,WENG,N,N,N,N,N,N,11SM
+5032,Carrey; Jim,Technology,11XTx1,M,WENG,N,N,N,N,N,N,11SM
+5033,Carrol; Lewis,CIDA,11ACi1,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Dance,11BDa1,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,English,11EEn6,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Geography,11AGg1,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Info Technology,11B1It3,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Mathematics,11MMa08,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Physical Ed,11XPe6,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,PSHE,11P3Pq,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Religious Study,11BRs3,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Science,11BSc1,M,WENG,P,N,N,N,N,N,11CH
+5033,Carrol; Lewis,Technology,11XRM1,M,WENG,P,N,N,N,N,N,11CH
+5034,Casablancas; Julian,Childcare,11ACd1,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,English,11EEn2,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,History,11BHi2,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Info Technology,11RIt2,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Mathematics,11MMa02,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Physical Ed,11YPe6,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,PSHE,11P2Pq,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Science,11RSc3,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Spanish,11REs1,M,WENG,N,N,N,N,N,Y,11JB
+5034,Casablancas; Julian,Technology,11YTx2,M,WENG,N,N,N,N,N,Y,11JB
+5035,Cash; Johnny,English,11EEn4,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Music,11BMu1,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,PSHE,11P5Pq,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Science,11RSc3,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11MOB
+5035,Cash; Johnny,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11MOB
+5036,Chamberlain; Jimmy,Alternative Curriculum,11GAc1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Arts Award,11GAa1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,English,11GEn1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Info Technology,11GIt1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Mathematics,11GMa1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Physical Ed,11GPe1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Religious Study,11GRs1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Science,11GSc1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Technology,11GTe1,M,WENG,N,N,N,N,N,N,11JW
+5036,Chamberlain; Jimmy,Work Experience,11GWe1,M,WENG,N,N,N,N,N,N,11JW
+5037,Chancelor; Justin,English,11EEn3,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,History,11AHi3,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Music,11BMu1,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Science,11RSc2,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11LMK
+5037,Chancelor; Justin,Technology,11YRM2,M,WENG,N,N,N,N,N,N,11LMK
+5038,Chase; Chevy,Art,11BAr1,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,English,11EEn2,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,French,11R1Fr3,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,French,11RFr3,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Geography,11AGg1,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Info Technology,11RIt4,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Mathematics,11MMa04,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Physical Ed,11XPe6,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,PSHE,11P3Pq,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Religious Study,11RRs4,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Science,11RSc4,M,WENG,P,N,N,N,N,N,11EK
+5038,Chase; Chevy,Technology,11XTx1,M,WENG,P,N,N,N,N,N,11EK
+5039,Childs; Julia,Art,11BAr1,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,English,11EEn7,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Info Technology,11B1It1,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Mathematics,11MMa02,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Physical Ed,11XPe2,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Religious Study,11BRs1,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Science,11BSc1,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Sport Gcse,11ASp1,F,WENG,N,N,N,N,N,N,11DB
+5039,Childs; Julia,Technology,11XRM1,F,WENG,N,N,N,N,N,N,11DB
+5040,Clinton; Bill,Alternative Curriculum,11GAc1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Arts Award,11GAa1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,English,11GEn1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Info Technology,11GIt1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Mathematics,11GMa1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Physical Ed,11GPe1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Religious Study,11GRs1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Science,11GSc1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Technology,11GTe1,M,WENG,N,N,N,N,N,N,11SM
+5040,Clinton; Bill,Work Experience,11GWe1,M,WENG,N,N,N,N,N,N,11SM
+5041,Cobain; Kurt,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,English,11EEn1,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,History,11AHi1,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Physical Ed,11XPe4,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Science,11RSc1,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11CH
+5041,Cobain; Kurt,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11CH
+5042,Collins; Phil,Alternative Curriculum,11GAc1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Arts Award,11GAa1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,English,11GEn1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Info Technology,11GIt1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Mathematics,11GMa1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Physical Ed,11GPe1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,PSHE,11P4Pq,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Religious Study,11GRs1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Science,11GSc1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Technology,11GTe1,M,WENG,S,N,N,Y,N,N,11JB
+5042,Collins; Phil,Work Experience,11GWe1,M,WENG,S,N,N,Y,N,N,11JB
+5043,Corgan; Billy,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,English,11EEn2,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,French,11RFr1,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,History,11AHi1,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,Science,11RSc1,M,WENG,N,N,N,N,N,N,11MOB
+5043,Corgan; Billy,Technology,11YTx2,M,WENG,N,N,N,N,N,N,11MOB
+5044,Cornell; Chris,English,11EEn4,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,French,11RFr2,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,History,11BHi2,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Science,11RSc1,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Sport Gcse,11ASp1,M,WENG,N,N,N,N,N,N,11JW
+5044,Cornell; Chris,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11JW
+5045,Cox; Courtney,CIDA,11BCi1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,English,11EEn1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,French,11RFr1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,History,11AHi1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,Info Technology,11RIt1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,Mathematics,11MMa01,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,Physical Ed,11YPe1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,PSHE,11P3Pq,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,Religious Study,11R1Rs2,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,Science,11RSc1,F,WENG,N,N,Y,N,Y,N,11LMK
+5045,Cox; Courtney,Technology,11YTx2,F,WENG,N,N,Y,N,Y,N,11LMK
+5046,Cronkite; Walter,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,English,11EEn3,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,History,11BHi1,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,Mathematics,11MMa04,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,Science,11BSc1,M,WENG,N,N,N,N,N,N,11EK
+5046,Cronkite; Walter,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11EK
+5047,Cusack; John,Art,11AAr1,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,English,11EEn1,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,French,11RFr1,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,History,11BHi2,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,Info Technology,11RIt1,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,Mathematics,11MMa01,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,Physical Ed,11XPe6,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,PSHE,11P2Pq,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,Religious Study,11R1Rs1,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,Science,11RSc1,M,WENG,N,N,N,N,Y,N,11DB
+5047,Cusack; John,Technology,11XGP1,M,WENG,N,N,N,N,Y,N,11DB
+5048,Danes; Claire,Art,11AAr1,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,English,11EEn2,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,French,11RFr2,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,History,11BHi1,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,Mathematics,11MMa02,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,PSHE,11P2Pq,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,Science,11RSc4,F,WENG,N,N,N,N,N,N,11SM
+5048,Danes; Claire,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11SM
+5049,Davis; Miles,Business Studies,11BBs1,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,CIDA,11ACi1,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Dance,11BDa1,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,English,11EEn7,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Info Technology,11B1It2,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Mathematics,11MMa11,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Physical Ed,11YPe4,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,PSHE,11P5Pq,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Religious Study,11B1Rs2,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Science,11B1Sc2,M,WENG,N,N,Y,N,Y,N,11CH
+5049,Davis; Miles,Technology,11YRM2,M,WENG,N,N,Y,N,Y,N,11CH
+5050,Deal; Kelly,English,11EEn1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,French,11RFr1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,History,11AHi1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,PSHE,11P8Pq,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Science,11RSc3,F,WENG,N,N,N,N,N,N,11JB
+5050,Deal; Kelly,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11JB
+5051,Deal; Kim,Drama,11BDr1,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,English,11EEn4,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,History,11AHi3,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,Info Technology,11B1It1,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,Physical Ed,11YPe4,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,Religious Study,11BRs1,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,Science,11BSc1,F,WENG,N,N,N,N,N,N,11MOB
+5051,Deal; Kim,Technology,11YRM2,F,WENG,N,N,N,N,N,N,11MOB
+5052,Delany; Dana,Childcare,11ACd1,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,English,11EEn2,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,French,11RFr2,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,History,11BHi1,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,Mathematics,11MMa07,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,Science,11RSc4,F,WENG,N,N,N,N,N,N,11JW
+5052,Delany; Dana,Technology,11XFd1,F,WENG,N,N,N,N,N,N,11JW
+5053,Derek; Bo,Art,11BAr1,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,English,11EEn7,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Info Technology,11B1It1,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Mathematics,11MMa11,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Physical Ed,11XPe2,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,PSHE,11P7Pq,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Religious Study,11BRs1,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Science,11BSc1,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Sport Gcse,11ASp1,F,WENG,N,N,Y,N,Y,N,11LMK
+5053,Derek; Bo,Technology,11XFd1,F,WENG,N,N,Y,N,Y,N,11LMK
+5054,Dickens; Charles,Alternative Curriculum,11GAc1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Arts Award,11GAa1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Dance,11BDa1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,English,11GEn1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Info Technology,11GIt1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Mathematics,11GMa1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Physical Ed,11GPe1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,PSHE,11P8Pq,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Religious Study,11GRs1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Science,11GSc1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Technology,11GTe1,M,WENG,N,N,Y,N,Y,N,11EK
+5054,Dickens; Charles,Work Experience,11GWe1,M,WENG,N,N,Y,N,Y,N,11EK
+5055,Disney; Walt,Alternative Curriculum,11GAc1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Arts Award,11GAa1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,English,11GEn1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Info Technology,11GIt1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Mathematics,11GMa1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Physical Ed,11GPe1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,PSHE,11P7Pq,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Religious Study,11GRs1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Science,11GSc1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Technology,11GTe1,M,WENG,P,N,N,N,N,N,11DB
+5055,Disney; Walt,Work Experience,11GWe1,M,WENG,P,N,N,N,N,N,11DB
+5056,Donahue; Phil,English,11EEn1,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,History,11BHi2,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Info Technology,11RIt2,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Mathematics,11MMa05,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Physical Ed,11XPe3,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,PSHE,11P8Pq,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Religious Study,11R1Rs1,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Science,11RSc3,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Spanish,11REs1,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Sport Gcse,11ASp1,M,WENG,N,N,Y,N,Y,N,11SM
+5056,Donahue; Phil,Technology,11XGP1,M,WENG,N,N,Y,N,Y,N,11SM
+5057,Driver; Minnie,Art,11BAr1,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,English,11EEn3,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,French,11R1Fr3,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,French,11RFr3,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Info Technology,11RIt4,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Physical Ed,11YPe6,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Religious Study,11RRs4,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Science,11RSc3,F,WENG,N,N,N,N,N,N,11CH
+5057,Driver; Minnie,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11CH
+5058,Durose; Steve,Business Studies,11BBs1,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,English,11EEn4,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,History,11AHi3,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Info Technology,11RIt5,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Mathematics,11MMa02,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Physical Ed,11YPe4,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,PSHE,11P4Pq,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Religious Study,11RRs5,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Science,11RSc4,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Spanish,11R1Es2,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Spanish,11REs2,M,WENG,N,N,Y,N,Y,N,11JB
+5058,Durose; Steve,Technology,11YEl2,M,WENG,N,N,Y,N,Y,N,11JB
+5059,Durst; Fred,English,11EEn7,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,History,11AHi3,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Info Technology,11B1It3,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Mathematics,11MMa08,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Physical Ed,11XPe6,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,PSHE,11P8Pq,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Psychology,11BPs1,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Religious Study,11BRs3,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Science,11B1Sc3,M,WENG,N,N,Y,N,Y,N,11MOB
+5059,Durst; Fred,Technology,11XGP1,M,WENG,N,N,Y,N,Y,N,11MOB
+5060,Electra; Carmen,Dance,11BDa1,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,English,11EEn1,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,French,11RFr1,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Science,11RSc2,F,WENG,N,N,N,N,N,N,11JW
+5060,Electra; Carmen,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11JW
+5061,Ferguson; Stacy,Alternative Curriculum,11GAc1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Arts Award,11GAa1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,English,11GEn1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Info Technology,11GIt1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Mathematics,11GMa1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Physical Ed,11GPe1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,PSHE,11P1Pq,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Religious Study,11GRs1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Science,11GSc1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Technology,11GTe1,F,WENG,P,N,N,N,N,N,11LMK
+5061,Ferguson; Stacy,Work Experience,11GWe1,F,WENG,P,N,N,N,N,N,11LMK
+5062,Finn; Neil,Art,11AAr2,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Drama,11BDr1,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,English,11EEn3,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Info Technology,11B1It3,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Religious Study,11BRs3,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Science,11B1Sc3,M,WENG,N,N,N,N,N,N,11EK
+5062,Finn; Neil,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11EK
+5063,Fleetwood; Mick,Childcare,11ACd1,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Dance,11BDa1,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,English,11EEn8,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Info Technology,11B1It4,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Mathematics,11MMa09,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Physical Ed,11YPe6,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,PSHE,11P1Pq,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Religious Study,11B1Rs4,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Science,11B1Sc4,M,WENG,N,N,Y,N,Y,N,11DB
+5063,Fleetwood; Mick,Technology,11YFd2,M,WENG,N,N,Y,N,Y,N,11DB
+5064,Flockhart; Calista,English,11EEn4,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,French,11RFr1,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,History,11AHi2,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Physical Ed,11YPe3,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Science,11RSc2,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11SM
+5064,Flockhart; Calista,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11SM
+5065,Fonda; Bridget,CIDA,11BCi1,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,English,11EEn1,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,History,11AHi1,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Physical Ed,11YPe4,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,PSHE,11P4Pq,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Science,11RSc1,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11CH
+5065,Fonda; Bridget,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11CH
+5066,Ford; Harrison,Childcare,11ACd1,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Dance,11BDa1,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,English,11EEn5,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Info Technology,11B1It1,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Mathematics,11MMa02,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Physical Ed,11XPe6,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,PSHE,11P4Pq,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Religious Study,11BRs1,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Science,11BSc1,M,WENG,P,N,Y,N,Y,N,11JB
+5066,Ford; Harrison,Technology,11XFd1,M,WENG,P,N,Y,N,Y,N,11JB
+5067,Furler; Sia,Business Studies,11BBs1,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,English,11EEn3,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,French,11RFr2,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,History,11AHi1,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,Physical Ed,11YPe6,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,Science,11RSc1,F,WENG,N,N,N,N,N,N,11MOB
+5067,Furler; Sia,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11MOB
+5068,Furtado; Nelly,Art,11BAr1,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,English,11EEn6,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Geography,11AGg1,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Info Technology,11B1It3,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Mathematics,11MMa06,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Physical Ed,11XPe4,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,PSHE,11P4Pq,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Religious Study,11BRs3,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Science,11B1Sc3,F,MWBC,N,N,N,N,N,N,11JW
+5068,Furtado; Nelly,Technology,11XFd1,F,MWBC,N,N,N,N,N,N,11JW
+5069,Gallagher; Liam,Art,11BAr1,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,English,11EEn1,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Science,11RSc1,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11LMK
+5069,Gallagher; Liam,Technology,11YRM2,M,WENG,N,N,N,N,N,N,11LMK
+5070,Garfunkel; Art,English,11EEn4,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Info Technology,11B1It1,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Mathematics,11MMa07,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Physical Ed,11YPe3,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,PSHE,11P5Pq,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Psychology,11BPs1,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Religious Study,11BRs1,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Science,11BSc1,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Sport Gcse,11ASp1,M,WENG,P,N,Y,N,Y,N,11EK
+5070,Garfunkel; Art,Technology,11YFd2,M,WENG,P,N,Y,N,Y,N,11EK
+5071,Garvey; Guy,Drama,11BDr1,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,English,11EEn2,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,History,11AHi1,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Science,11RSc3,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11DB
+5071,Garvey; Guy,Technology,11XTx1,M,WENG,N,N,N,N,N,N,11DB
+5072,Germanotta; Stefani,CIDA,11ACi2,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,English,11EEn6,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Info Technology,11B1It1,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Mathematics,11MMa07,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Physical Ed,11YPe1,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,PSHE,11P8Pq,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Psychology,11BPs1,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Religious Study,11BRs1,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Science,11BSc1,F,WENG,N,N,Y,N,Y,Y,11SM
+5072,Germanotta; Stefani,Technology,11YFd2,F,WENG,N,N,Y,N,Y,Y,11SM
+5073,Gingrich; Newt,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,English,11EEn4,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Science,11RSc1,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11CH
+5073,Gingrich; Newt,Technology,11YEl2,M,WENG,N,N,N,N,N,N,11CH
+5074,Glover; Danny,Art,11AAr1,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,English,11EEn2,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,History,11BHi1,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Science,11RSc1,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11JB
+5074,Glover; Danny,Technology,11YTx2,M,WENG,N,N,N,N,N,N,11JB
+5075,Goldberg; Whoopi,Childcare,11ACd1,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,English,11EEn5,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Info Technology,11B1It1,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,PSHE,11P8Pq,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Religious Study,11BRs1,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Science,11BSc1,F,WENG,N,N,N,N,N,N,11MOB
+5075,Goldberg; Whoopi,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11MOB
+5076,Gossard; Stone,Art,11AAr2,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,English,11EEn4,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,French,11RFr3,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,History,11BHi1,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Info Technology,11B1It1,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Info Technology,11RIt4,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Mathematics,11MMa11,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Physical Ed,11XPe5,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,PSHE,11P5Pq,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Religious Study,11BRs1,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Religious Study,11RRs4,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Science,11BSc1,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Science,11RSc2,M,WENG,P,N,N,N,N,N,11JW
+5076,Gossard; Stone,Technology,11XRM1,M,WENG,P,N,N,N,N,N,11JW
+5077,Gould; Billy,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,English,11EEn6,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,French,11R1Fr3,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,French,11RFr3,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Info Technology,11RIt4,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Physical Ed,11XPe4,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Religious Study,11RRs4,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Science,11RSc5,M,WENG,N,N,N,N,N,N,11LMK
+5077,Gould; Billy,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11LMK
+5078,Greenwood; Colin,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,English,11EEn3,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,History,11AHi3,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Physical Ed,11YPe5,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,PSHE,11P5Pq,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Science,11RSc2,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11EK
+5078,Greenwood; Colin,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11EK
+5079,Greenwood; Jonny,Business Studies,11BBs1,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,English,11EEn3,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,History,11AHi3,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,Info Technology,11B1It1,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,Mathematics,11MMa05,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,Physical Ed,11YPe6,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,PSHE,11P5Pq,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,Religious Study,11BRs1,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,Science,11BSc1,M,WENG,N,N,Y,N,Y,N,11DB
+5079,Greenwood; Jonny,Technology,11YFd2,M,WENG,N,N,Y,N,Y,N,11DB
+5080,Grohl; Dave,Art,11AAr1,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,English,11EEn7,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Info Technology,11B1It4,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Physical Ed,11XPe3,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Religious Study,11B1Rs4,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Science,11B1Sc4,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11SM
+5080,Grohl; Dave,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11SM
+5081,Hanks; Tom,Drama,11BDr1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,English,11EEn1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,French,11RFr1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,History,11AHi1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,Science,11RSc1,M,WENG,N,N,N,N,N,N,11CH
+5081,Hanks; Tom,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11CH
+5082,Hannah; Daryl,Art,11AAr1,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,English,11EEn2,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,French,11RFr1,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,History,11BHi2,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,Physical Ed,11YPe1,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,PSHE,11P2Pq,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,Science,11RSc2,F,WENG,N,N,N,N,N,N,11JB
+5082,Hannah; Daryl,Technology,11YRM2,F,WENG,N,N,N,N,N,N,11JB
+5083,Hannigan; Lisa,Business Studies,11BBs1,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,English,11EEn5,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Info Technology,11B1It2,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Mathematics,11MMa09,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Physical Ed,11YPe2,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,PSHE,11P8Pq,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Religious Study,11B1Rs2,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Science,11B1Sc2,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Sport Gcse,11ASp1,F,WENG,N,N,Y,N,Y,N,11MOB
+5083,Hannigan; Lisa,Technology,11YEl2,F,WENG,N,N,Y,N,Y,N,11MOB
+5084,Harper; Valerie,English,11EEn5,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,French,11R1Fr3,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,French,11RFr3,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,History,11AHi2,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Info Technology,11RIt4,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Religious Study,11RRs4,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Science,11RSc5,F,WENG,N,N,N,N,N,N,11JW
+5084,Harper; Valerie,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11JW
+5085,Harrison; Patrick,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,English,11EEn3,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,French,11R1Fr3,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,French,11RFr3,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,History,11BHi2,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,Info Technology,11RIt4,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,Religious Study,11RRs4,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,Science,11RSc4,M,WENG,N,N,N,N,N,N,11LMK
+5085,Harrison; Patrick,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11LMK
+5086,Harvey; Paul,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,English,11EEn1,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,History,11AHi2,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Science,11RSc2,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11EK
+5086,Harvey; Paul,Technology,11YEl2,M,WENG,N,N,N,N,N,N,11EK
+5087,Hemingway; Ernest,Art,11AAr2,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,English,11EEn5,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,History,11BHi2,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,Mathematics,11MMa08,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,Science,11BSc1,M,WENG,N,N,N,N,N,N,11DB
+5087,Hemingway; Ernest,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11DB
+5088,Hendrix; Jimi,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,English,11EEn4,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Science,11RSc2,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11SM
+5088,Hendrix; Jimi,Technology,11YEl2,M,WENG,N,N,N,N,N,N,11SM
+5089,Heron; Mark,English,11EEn3,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,French,11RFr2,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,History,11AHi2,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Info Technology,11RIt3,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Mathematics,11MMa07,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Physical Ed,11YPe1,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,PSHE,11P8Pq,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Psychology,11BPs1,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Religious Study,11R1Rs1,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Science,11RSc3,M,WENG,P,N,N,N,N,N,11CH
+5089,Heron; Mark,Technology,11YGP2,M,WENG,P,N,N,N,N,N,11CH
+5090,Hetfield; James,English,11EEn1,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,History,11AHi2,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Mathematics,11MMa04,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Music,11BMu1,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Science,11RSc3,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11JB
+5090,Hetfield; James,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11JB
+5091,Hicks; Bill,Alternative Curriculum,11GAc1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Arts Award,11GAa1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,English,11GEn1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Info Technology,11GIt1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Mathematics,11GMa1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Physical Ed,11GPe1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,PSHE,11P7Pq,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Religious Study,11GRs1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Science,11GSc1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Technology,11GTe1,M,WENG,P,N,Y,N,Y,N,11MOB
+5091,Hicks; Bill,Work Experience,11GWe1,M,WENG,P,N,Y,N,Y,N,11MOB
+5092,Hope; Bob,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,English,11EEn7,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Info Technology,11B1It2,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Mathematics,11MMa08,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Psychology,11BPs1,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Religious Study,11B1Rs2,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Science,11B1Sc2,M,WENG,N,N,N,N,N,N,11JW
+5092,Hope; Bob,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11JW
+5093,Houdini; Harry,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,English,11EEn1,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,French,11RFr2,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Science,11RSc2,M,WENG,N,N,N,N,N,N,11LMK
+5093,Houdini; Harry,Technology,11YEl2,M,WENG,N,N,N,N,N,N,11LMK
+5094,Hurley; Elizabeth,Business Studies,11BBs1,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,English,11EEn3,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,History,11AHi1,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Info Technology,11RIt5,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Mathematics,11MMa01,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Physical Ed,11YPe4,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,PSHE,11P3Pq,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Religious Study,11RRs5,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Science,11RSc2,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Spanish,11R1Es2,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Spanish,11REs2,F,WENG,P,N,N,N,N,N,11EK
+5094,Hurley; Elizabeth,Technology,11YGP2,F,WENG,P,N,N,N,N,N,11EK
+5095,Ingram; Richard,Art,11BAr1,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,CIDA,11ACi1,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,English,11EEn8,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,Info Technology,11B1It3,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,Mathematics,11MMa06,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,Physical Ed,11YPe5,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,PSHE,11P6Pq,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,Religious Study,11BRs3,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,Science,11B1Sc3,M,WENG,P,N,N,N,N,N,11DB
+5095,Ingram; Richard,Technology,11YRM2,M,WENG,P,N,N,N,N,N,11DB
+5096,Jagger; Mick,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,English,11EEn3,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,History,11BHi2,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,Info Technology,11B1It3,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,Mathematics,11MMa09,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,Physical Ed,11YPe6,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,PSHE,11P5Pq,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,Religious Study,11BRs3,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,Science,11B1Sc3,M,WENG,N,N,N,N,N,N,11SM
+5096,Jagger; Mick,Technology,11YGP2,M,WENG,N,N,N,N,N,N,11SM
+5097,James; William,Art,11BAr1,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,English,11EEn4,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,French,11RFr2,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Science,11RSc3,M,WENG,N,N,N,N,N,N,11CH
+5097,James; William,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11CH
+5098,Jennings; Peter,Business Studies,11BBs1,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,English,11EEn5,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Geography,11AGg1,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Info Technology,11RIt5,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Mathematics,11MMa05,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Physical Ed,11XPe5,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,PSHE,11P7Pq,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Religious Study,11RRs5,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Science,11RSc3,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Spanish,11R1Es2,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Spanish,11REs2,M,WENG,N,N,Y,N,Y,N,11JB
+5098,Jennings; Peter,Technology,11XRM1,M,WENG,N,N,Y,N,Y,N,11JB
+5099,Johansson; Scarlett,Childcare,11ACd1,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,English,11EEn2,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,French,11RFr2,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,History,11BHi1,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,Mathematics,11MMa07,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,Physical Ed,11YPe1,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,PSHE,11P8Pq,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,Science,11RSc5,F,WENG,N,N,N,N,N,N,11MOB
+5099,Johansson; Scarlett,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11MOB
+5100,Jolie; Angelina,CIDA,11ACi1,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,English,11EEn7,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,History,11BHi2,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,Info Technology,11B1It4,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,Mathematics,11MMa11,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,Physical Ed,11YPe4,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,PSHE,11P8Pq,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,Religious Study,11B1Rs4,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,Science,11B1Sc4,F,WENG,N,N,N,N,N,N,11JW
+5100,Jolie; Angelina,Technology,11YFd2,F,WENG,N,N,N,N,N,N,11JW
+5101,Jones; Adam,English,11EEn5,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,History,11AHi3,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Info Technology,11B1It1,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Mathematics,11MMa04,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Physical Ed,11XPe5,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,PSHE,11P8Pq,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Psychology,11BPs1,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Religious Study,11BRs1,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Science,11BSc1,M,WENG,P,N,N,N,N,N,11LMK
+5101,Jones; Adam,Technology,11XFd1,M,WENG,P,N,N,N,N,N,11LMK
+5102,Joplin; Janis,English,11EEn2,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,History,11AHi1,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Physical Ed,11YPe3,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,PSHE,11P2Pq,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Science,11RSc2,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11EK
+5102,Joplin; Janis,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11EK
+5103,Judd; Ashley,Art,11AAr2,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,English,11EEn7,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Info Technology,11B1It3,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Mathematics,11MMa09,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Physical Ed,11YPe6,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,PSHE,11P5Pq,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Psychology,11BPs1,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Religious Study,11BRs3,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Science,11B1Sc3,F,WENG,N,N,Y,N,Y,N,11DB
+5103,Judd; Ashley,Technology,11YGP2,F,WENG,N,N,Y,N,Y,N,11DB
+5104,Keenan; Maynard,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,English,11EEn4,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,History,11AHi3,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Physical Ed,11YPe5,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Science,11RSc4,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11SM
+5104,Keenan; Maynard,Technology,11YEl2,M,WENG,N,N,N,N,N,N,11SM
+5105,Keller; Helen,English,11EEn1,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,French,11RFr1,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,History,11BHi1,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Mathematics,11MMa02,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Physical Ed,11YPe3,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,PSHE,11P7Pq,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Science,11RSc1,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Sport Gcse,11ASp1,F,WENG,N,N,N,N,N,N,11CH
+5105,Keller; Helen,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11CH
+5106,Keys; Alicia,Business Studies,11BBs1,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,CIDA,11ACi2,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,English,11EEn8,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,Info Technology,11B1It4,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,Mathematics,11MMa09,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,Physical Ed,11YPe5,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,PSHE,11P7Pq,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,Religious Study,11B1Rs4,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,Science,11B1Sc4,F,WENG,P,N,N,N,N,N,11JB
+5106,Keys; Alicia,Technology,11YEl2,F,WENG,P,N,N,N,N,N,11JB
+5107,Khan; Natasha,English,11EEn1,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,History,11AHi2,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Science,11RSc1,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11MOB
+5107,Khan; Natasha,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11MOB
+5108,Kiedis; Anthony,Alternative Curriculum,11GAc1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Arts Award,11GAa1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,English,11GEn1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Info Technology,11GIt1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Mathematics,11GMa1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Physical Ed,11GPe1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Religious Study,11GRs1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Science,11GSc1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Technology,11GTe1,M,WENG,N,N,N,N,N,N,11JW
+5108,Kiedis; Anthony,Work Experience,11GWe1,M,WENG,N,N,N,N,N,N,11JW
+5109,Lambert; Ally,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,English,11EEn1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,French,11RFr1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,History,11AHi1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,Science,11RSc1,M,WENG,N,N,N,N,N,N,11LMK
+5109,Lambert; Ally,Technology,11YTx2,M,WENG,N,N,N,N,N,N,11LMK
+5110,Lennon; John,English,11EEn3,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,French,11R1Fr3,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,French,11RFr3,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,History,11BHi1,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Info Technology,11RIt4,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Religious Study,11RRs4,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Science,11RSc4,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Sport Gcse,11ASp1,M,WENG,N,N,N,N,N,N,11EK
+5110,Lennon; John,Technology,11XRM1,M,WENG,N,N,N,N,N,N,11EK
+5111,Leoni; Tea,Art,11AAr2,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,English,11EEn3,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,History,11BHi2,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,Info Technology,11B1It2,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,Mathematics,11MMa09,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,Physical Ed,11YPe5,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,PSHE,11P5Pq,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,Religious Study,11B1Rs2,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,Science,11B1Sc2,F,WENG,P,N,N,N,N,N,11DB
+5111,Leoni; Tea,Technology,11YFd2,F,WENG,P,N,N,N,N,N,11DB
+5112,Letterman; David,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,English,11EEn1,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,French,11RFr1,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,History,11AHi2,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,Physical Ed,11YPe4,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,Science,11RSc1,M,WENG,N,N,N,N,N,N,11SM
+5112,Letterman; David,Technology,11YGP2,M,WENG,N,N,N,N,N,N,11SM
+5113,Lewis; Juliette,CIDA,11BCi1,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,English,11EEn5,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,French,11RFr2,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Physical Ed,11XPe5,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Science,11RSc5,F,WENG,N,N,N,N,N,N,11CH
+5113,Lewis; Juliette,Technology,11XRM1,F,WENG,N,N,N,N,N,N,11CH
+5114,Lima; Adriana,Dance,11BDa1,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,English,11EEn2,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,History,11AHi1,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Info Technology,11RIt2,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Mathematics,11MMa01,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,PSHE,11P3Pq,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Science,11RSc2,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Spanish,11REs1,F,WENG,N,N,N,N,N,Y,11JB
+5114,Lima; Adriana,Technology,11XTx1,F,WENG,N,N,N,N,N,Y,11JB
+5115,Lincoln; Abraham,Art,11AAr2,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,English,11EEn6,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Info Technology,11B1It4,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Religious Study,11B1Rs4,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Science,11B1Sc4,M,WENG,N,N,N,N,N,N,11MOB
+5115,Lincoln; Abraham,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11MOB
+5116,Longoria; Eva,Childcare,11ACd1,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,English,11EEn6,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11JW
+5116,Longoria; Eva,Technology,11XFd1,F,WENG,N,N,N,N,N,N,11JW
+5117,Lopez; Jennifer,CIDA,11BCi1,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,English,11EEn3,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,French,11R1Fr3,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,French,11RFr3,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,History,11AHi2,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,Info Technology,11RIt4,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,Religious Study,11RRs4,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,Science,11RSc5,F,WENG,N,N,N,N,N,N,11LMK
+5117,Lopez; Jennifer,Technology,11XRM1,F,WENG,N,N,N,N,N,N,11LMK
+5118,Love; Courtney,CIDA,11ACi2,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Dance,11BDa1,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,English,11EEn7,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11EK
+5118,Love; Courtney,Technology,11XEl1,F,WENG,N,N,N,N,N,N,11EK
+5119,Lovering; David,Business Studies,11BBs1,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,English,11EEn2,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,French,11RFr2,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Geography,11AGg1,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Info Technology,11RIt3,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Mathematics,11MMa01,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Physical Ed,11XPe6,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,PSHE,11P7Pq,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Religious Study,11R1Rs3,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Science,11RSc2,M,WENG,N,N,Y,N,Y,N,11DB
+5119,Lovering; David,Technology,11XFd1,M,WENG,N,N,Y,N,Y,N,11DB
+5120,MacPherson; Elle,Business Studies,11BBs1,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,CIDA,11ACi1,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,English,11EEn5,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,Mathematics,11MMa06,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,Physical Ed,11YPe4,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11SM
+5120,MacPherson; Elle,Technology,11YEl2,F,WENG,N,N,N,N,N,N,11SM
+5121,Maines; Natalie,Business Studies,11BBs1,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,English,11EEn5,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Mathematics,11MMa11,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Physical Ed,11YPe2,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Sport Gcse,11ASp1,F,WENG,N,N,N,N,N,N,11CH
+5121,Maines; Natalie,Technology,11YEl2,F,WENG,N,N,N,N,N,N,11CH
+5122,Mancini; Henri,Drama,11BDr1,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,English,11EEn6,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Info Technology,11B1It2,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Mathematics,11MMa11,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,PSHE,11P6Pq,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Religious Study,11B1Rs2,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Science,11B1Sc3,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Sport Gcse,11ASp1,M,WENG,N,N,N,N,N,Y,11JB
+5122,Mancini; Henri,Technology,11XEl1,M,WENG,N,N,N,N,N,Y,11JB
+5123,Manson; Shirley,Art,11BAr1,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,CIDA,11ACi1,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,English,11EEn5,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,Info Technology,11B1It3,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,Mathematics,11MMa06,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,Physical Ed,11YPe5,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,Religious Study,11BRs3,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,Science,11B1Sc3,F,WENG,N,N,N,N,N,N,11MOB
+5123,Manson; Shirley,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11MOB
+5124,Martin; Jim,English,11EEn2,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,French,11RFr1,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,History,11AHi2,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Psychology,11BPs1,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Science,11RSc2,M,WENG,N,N,N,N,N,N,11JW
+5124,Martin; Jim,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11JW
+5125,Martin; Steve,English,11EEn3,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,History,11AHi3,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Info Technology,11RIt5,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Mathematics,11MMa01,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Music,11BMu1,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Physical Ed,11YPe6,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,PSHE,11P6Pq,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Religious Study,11RRs5,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Science,11RSc1,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Spanish,11R1Es2,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Spanish,11REs2,M,MWBC,N,N,Y,N,Y,N,11LMK
+5125,Martin; Steve,Technology,11YFd2,M,MWBC,N,N,Y,N,Y,N,11LMK
+5126,Mays; Willey,Art,11AAr1,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,English,11EEn1,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,French,11RFr1,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,History,11BHi1,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,Info Technology,11RIt1,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,Mathematics,11MMa05,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,Physical Ed,11YPe1,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,PSHE,11P6Pq,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,Religious Study,11R1Rs3,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,Science,11RSc2,M,MWBA,N,N,Y,N,Y,N,11EK
+5126,Mays; Willey,Technology,11YTx2,M,MWBA,N,N,Y,N,Y,N,11EK
+5127,McCartney; Paul,English,11EEn2,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,History,11AHi3,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Info Technology,11RIt5,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Mathematics,11MMa06,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Music,11BMu1,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Physical Ed,11YPe4,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,PSHE,11P6Pq,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Religious Study,11RRs5,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Science,11RSc4,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Spanish,11R1Es2,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Spanish,11REs2,M,WENG,A,N,N,N,N,N,11DB
+5127,McCartney; Paul,Technology,11YEl2,M,WENG,A,N,N,N,N,N,11DB
+5128,McReady; Mike,Art,11BAr1,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Childcare,11ACd1,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,English,11EEn5,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Info Technology,11B1It4,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Mathematics,11MMa08,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Physical Ed,11YPe6,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,PSHE,11P5Pq,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Religious Study,11B1Rs4,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Science,11B1Sc4,M,WENG,N,N,Y,N,Y,N,11SM
+5128,McReady; Mike,Technology,11YTx2,M,WENG,N,N,Y,N,Y,N,11SM
+5129,Mills; Mike,English,11EEn1,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Physical Ed,11YPe2,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Science,11RSc1,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11CH
+5129,Mills; Mike,Technology,11YRM2,M,WENG,N,N,N,N,N,N,11CH
+5130,Monroe; Marilyn,Business Studies,11BBs1,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,CIDA,11ACi1,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,English,11EEn5,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,Info Technology,11B1It1,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,Religious Study,11BRs1,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,Science,11BSc1,F,WENG,N,N,N,N,N,N,11JB
+5130,Monroe; Marilyn,Technology,11XEl1,F,WENG,N,N,N,N,N,N,11JB
+5131,Moon; Keith,English,11EEn4,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,History,11AHi1,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Mathematics,11MMa04,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Physical Ed,11XPe3,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Science,11RSc2,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11MOB
+5131,Moon; Keith,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11MOB
+5132,Moore; Demi,English,11EEn2,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,French,11R1Fr3,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,French,11RFr3,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,History,11AHi1,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Info Technology,11RIt4,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,PSHE,11P1Pq,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Religious Study,11RRs4,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Science,11RSc4,F,WENG,N,N,N,N,N,N,11JW
+5132,Moore; Demi,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11JW
+5133,Mosshart; Alison,CIDA,11ACi1,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,English,11EEn5,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Info Technology,11B1It3,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Music,11BMu1,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Physical Ed,11YPe5,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Religious Study,11BRs3,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Science,11B1Sc3,F,WENG,N,N,N,N,N,N,11LMK
+5133,Mosshart; Alison,Technology,11YEl2,F,WENG,N,N,N,N,N,N,11LMK
+5134,Mould; Bob,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,English,11EEn6,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Info Technology,11B1It3,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Religious Study,11BRs3,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Science,11B1Sc3,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11EK
+5134,Mould; Bob,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11EK
+5135,Murphy; Brittany,CIDA,11ACi2,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,English,11EEn8,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,History,11BHi2,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,Info Technology,11B1It3,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,Mathematics,11MMa03,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,Physical Ed,11YPe5,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,PSHE,11P1Pq,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,Religious Study,11BRs3,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,Science,11B1Sc3,F,WENG,P,N,N,N,N,N,11DB
+5135,Murphy; Brittany,Technology,11YRM2,F,WENG,P,N,N,N,N,N,11DB
+5136,Murphy; James,English,11EEn3,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,History,11AHi2,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Music,11BMu1,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Physical Ed,11YPe6,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Science,11RSc2,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11SM
+5136,Murphy; James,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11SM
+5137,Navarro; Dave,Art,11BAr1,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,English,11EEn7,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Mathematics,11MMa09,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Physical Ed,11XPe2,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Science,11BSc1,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Sport Gcse,11ASp1,M,WENG,N,N,N,N,N,N,11CH
+5137,Navarro; Dave,Technology,11XRM1,M,WENG,N,N,N,N,N,N,11CH
+5138,Newhart; Bob,Art,11AAr1,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,English,11EEn4,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,French,11R1Fr3,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,French,11RFr3,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,History,11BHi2,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,Info Technology,11RIt4,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,Mathematics,11MMa05,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,Physical Ed,11YPe1,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,PSHE,11P1Pq,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,Religious Study,11RRs4,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,Science,11RSc5,M,WENG,P,N,N,N,N,N,11JB
+5138,Newhart; Bob,Technology,11YTx2,M,WENG,P,N,N,N,N,N,11JB
+5139,Newton; Isaac,Alternative Curriculum,11GAc1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Arts Award,11GAa1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,English,11GEn1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Info Technology,11GIt1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Mathematics,11GMa1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Physical Ed,11GPe1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,PSHE,11P1Pq,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Religious Study,11GRs1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Science,11GSc1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Technology,11GTe1,M,WENG,P,N,Y,N,Y,N,11MOB
+5139,Newton; Isaac,Work Experience,11GWe1,M,WENG,P,N,Y,N,Y,N,11MOB
+5140,Nicholson; Jack,English,11EEn5,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,French,11RFr2,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,History,11AHi1,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Info Technology,11RIt3,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Mathematics,11MMa01,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Physical Ed,11XPe3,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,PSHE,11P5Pq,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Religious Study,11R1Rs3,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Science,11RSc5,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Sport Gcse,11BSp1,M,WENG,N,N,Y,N,Y,N,11JW
+5140,Nicholson; Jack,Technology,11XRM1,M,WENG,N,N,Y,N,Y,N,11JW
+5141,OBrien; Ed,Art,11AAr1,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,English,11EEn3,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,French,11RFr2,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,History,11BHi1,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,Physical Ed,11YPe6,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,Science,11RSc2,M,WENG,N,N,N,N,N,N,11LMK
+5141,OBrien; Ed,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11LMK
+5142,Olsen; Ashley,English,11EEn3,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,French,11R1Fr3,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,French,11RFr3,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,History,11BHi2,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Info Technology,11RIt4,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Physical Ed,11YPe2,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,PSHE,11P4Pq,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Religious Study,11RRs4,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Science,11RSc2,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Sport Gcse,11ASp1,F,WENG,N,N,N,N,N,N,11EK
+5142,Olsen; Ashley,Technology,11YFd2,F,WENG,N,N,N,N,N,N,11EK
+5143,Onasis; Jacqueline,Art,11AAr2,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,English,11EEn6,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Info Technology,11B1It1,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Mathematics,11MMa06,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Music,11BMu1,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,PSHE,11P2Pq,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Religious Study,11BRs1,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Science,11B1Sc3,F,WENG,N,N,N,N,N,N,11DB
+5143,Onasis; Jacqueline,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11DB
+5144,Osment; Emily,Art,11BAr1,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,English,11EEn5,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,History,11AHi2,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Info Technology,11RIt5,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,PSHE,11P7Pq,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Religious Study,11RRs5,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Science,11RSc5,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Spanish,11R1Es2,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Spanish,11REs2,F,WENG,N,N,N,N,N,N,11SM
+5144,Osment; Emily,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11SM
+5145,Page; Jimmy,Art,11AAr1,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,English,11EEn2,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,French,11RFr2,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,History,11BHi1,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,Science,11RSc3,F,WENG,N,N,N,N,N,N,11CH
+5145,Page; Jimmy,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11CH
+5146,Paris; Natalia,Art,11BAr1,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,English,11EEn8,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Info Technology,11B1It3,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Mathematics,11MMa09,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Physical Ed,11XPe2,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,PSHE,11P5Pq,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Religious Study,11BRs3,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Science,11B1Sc3,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Sport Gcse,11ASp1,F,WENG,N,N,Y,N,Y,N,11JB
+5146,Paris; Natalia,Technology,11XRM1,F,WENG,N,N,Y,N,Y,N,11JB
+5147,Pasteur; Louis,English,11EEn1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,History,11AHi1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Music,11BMu1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Science,11RSc1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11MOB
+5147,Pasteur; Louis,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11MOB
+5148,Patton; Mike,Drama,11BDr1,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,English,11EEn3,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,History,11AHi2,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Science,11RSc3,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11JW
+5148,Patton; Mike,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11JW
+5149,Pfeiffer; Michelle,Art,11AAr1,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,English,11EEn1,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,French,11RFr1,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,History,11BHi1,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,Physical Ed,11YPe1,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,Science,11RSc2,F,WENG,N,N,N,N,N,N,11LMK
+5149,Pfeiffer; Michelle,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11LMK
+5150,Piccaso; Pablo,Art,11AAr1,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,CIDA,11BCi1,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,English,11EEn6,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,Info Technology,11B1It3,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,Mathematics,11MMa02,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,Physical Ed,11YPe6,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,PSHE,11P1Pq,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,Religious Study,11BRs3,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,Science,11B1Sc3,M,WENG,P,N,N,N,N,N,11EK
+5150,Piccaso; Pablo,Technology,11YGP2,M,WENG,P,N,N,N,N,N,11EK
+5151,Piper; Billie,Childcare,11ACd1,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,English,11EEn5,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,History,11BHi1,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Info Technology,11RIt5,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,PSHE,11P7Pq,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Religious Study,11RRs5,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Science,11RSc5,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Spanish,11R1Es2,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Spanish,11REs2,F,WENG,N,N,N,N,N,N,11DB
+5151,Piper; Billie,Technology,11XFd1,F,WENG,N,N,N,N,N,N,11DB
+5152,Plant; Robert,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,English,11EEn4,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Info Technology,11B1It1,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Physical Ed,11YPe2,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,PSHE,11P5Pq,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Religious Study,11BRs1,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Science,11BSc1,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11SM
+5152,Plant; Robert,Technology,11YEl2,M,WENG,N,N,N,N,N,N,11SM
+5153,Polanski; Roman,Childcare,11ACd1,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,English,11EEn3,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,French,11RFr2,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,History,11BHi2,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,Info Technology,11RIt3,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,Mathematics,11MMa07,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,PSHE,11P2Pq,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,Science,11RSc3,M,WENG,N,N,N,N,N,Y,11CH
+5153,Polanski; Roman,Technology,11XGP1,M,WENG,N,N,N,N,N,Y,11CH
+5154,Portman; Natalie,English,11EEn2,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,French,11RFr1,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,History,11AHi1,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Info Technology,11RIt1,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Mathematics,11MMa05,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Physical Ed,11XPe1,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,PSHE,11P2Pq,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Psychology,11BPs1,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Religious Study,11R1Rs1,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Science,11RSc3,F,WENG,N,N,Y,N,Y,N,11JB
+5154,Portman; Natalie,Technology,11XTx1,F,WENG,N,N,Y,N,Y,N,11JB
+5155,Prior; Anna,Childcare,11ACd1,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,English,11EEn6,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Info Technology,11B1It2,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Mathematics,11MMa07,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Physical Ed,11XPe6,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,PSHE,11P5Pq,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Psychology,11BPs1,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Religious Study,11B1Rs2,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Science,11B1Sc2,F,WENG,A,N,Y,N,Y,N,11MOB
+5155,Prior; Anna,Technology,11XGP1,F,WENG,A,N,Y,N,Y,N,11MOB
+5156,Ramone; Joey,Art,11BAr1,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,English,11EEn6,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,History,11AHi2,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,Info Technology,11B1It2,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,Physical Ed,11YPe6,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,Religious Study,11B1Rs2,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,Science,11B1Sc2,M,WENG,N,N,N,N,N,N,11JW
+5156,Ramone; Joey,Technology,11YGP2,M,WENG,N,N,N,N,N,N,11JW
+5157,Regan; Ronald,CIDA,11ACi1,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,English,11EEn6,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Info Technology,11B1It3,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Mathematics,11MMa08,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Music,11BMu1,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,PSHE,11P8Pq,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Religious Study,11BRs3,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Science,11B1Sc3,M,WENG,N,N,N,N,N,N,11LMK
+5157,Regan; Ronald,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11LMK
+5158,Reid; Tara,Business Studies,11BBs1,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,CIDA,11ACi2,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,English,11EEn6,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,Info Technology,11B1It2,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,Mathematics,11MMa06,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,Physical Ed,11XPe5,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,PSHE,11P4Pq,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,Religious Study,11B1Rs2,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,Science,11B1Sc2,F,WENG,N,N,N,N,N,N,11EK
+5158,Reid; Tara,Technology,11XFd1,F,WENG,N,N,N,N,N,N,11EK
+5159,Reznor; Trent,Art,11AAr2,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,English,11EEn8,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Info Technology,11B1It4,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Religious Study,11B1Rs4,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Science,11B1Sc4,M,WENG,N,N,N,N,N,N,11DB
+5159,Reznor; Trent,Technology,11XRM1,M,WENG,N,N,N,N,N,N,11DB
+5160,Rhodes; Lou,CIDA,11ACi2,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,English,11EEn6,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Info Technology,11B1It3,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Mathematics,11MMa02,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Physical Ed,11YPe2,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,PSHE,11P2Pq,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Religious Study,11BRs3,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Science,11B1Sc3,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Sport Gcse,11BSp1,F,WENG,N,N,Y,N,Y,N,11SM
+5160,Rhodes; Lou,Technology,11YRM2,F,WENG,N,N,Y,N,Y,N,11SM
+5161,Roberts; Julia,Alternative Curriculum,11GAc1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Arts Award,11GAa1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,English,11GEn1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Info Technology,11GIt1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Mathematics,11GMa1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Physical Ed,11GPe1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,PSHE,11P2Pq,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Religious Study,11GRs1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Science,11GSc1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Technology,11GTe1,F,WENG,N,N,Y,N,Y,N,11CH
+5161,Roberts; Julia,Work Experience,11GWe1,F,WENG,N,N,Y,N,Y,N,11CH
+5162,Rockwell; Norman,English,11EEn4,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,French,11R1Fr3,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,French,11RFr3,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,History,11AHi3,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Info Technology,11RIt4,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Music,11BMu1,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Religious Study,11RRs4,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Science,11RSc2,M,WENG,N,N,N,N,N,N,11JB
+5162,Rockwell; Norman,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11JB
+5163,Rogers; Roy,Childcare,11ACd1,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,CIDA,11BCi1,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,English,11EEn6,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Info Technology,11B1It2,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Mathematics,11MMa08,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Physical Ed,11XPe6,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Religious Study,11B1Rs2,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Science,11B1Sc2,M,WENG,N,N,N,N,N,N,11MOB
+5163,Rogers; Roy,Technology,11XTx1,M,WENG,N,N,N,N,N,N,11MOB
+5164,Rooney; Andy,CIDA,11BCi1,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,English,11EEn1,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,French,11RFr1,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Geography,11AGg1,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Info Technology,11RIt1,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Mathematics,11MMa04,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Physical Ed,11YPe4,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,PSHE,11P7Pq,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Religious Study,11R1Rs2,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Science,11RSc2,M,WENG,N,N,Y,N,Y,N,11JW
+5164,Rooney; Andy,Technology,11YEl2,M,WENG,N,N,Y,N,Y,N,11JW
+5165,Rose; Axl,Drama,11BDr1,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,English,11EEn2,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Geography,11AGg1,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Physical Ed,11XPe4,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Science,11RSc3,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11LMK
+5165,Rose; Axl,Technology,11XEl1,M,WENG,N,N,N,N,N,N,11LMK
+5166,Ryan; Meg,English,11EEn2,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,PSHE,11P2Pq,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Science,11RSc1,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11EK
+5166,Ryan; Meg,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11EK
+5167,Santiago; Joey,Art,11AAr1,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,English,11EEn3,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,French,11RFr1,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,History,11BHi1,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,Info Technology,11RIt1,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,Mathematics,11MMa01,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,Physical Ed,11YPe6,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,PSHE,11P4Pq,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,Religious Study,11R1Rs2,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,Science,11RSc4,M,WENG,N,N,Y,N,Y,N,11DB
+5167,Santiago; Joey,Technology,11YTx2,M,WENG,N,N,Y,N,Y,N,11DB
+5168,Sara; Mia,Dance,11BDa1,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,English,11EEn1,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,History,11AHi2,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Mathematics,11MMa01,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Physical Ed,11YPe1,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Science,11RSc2,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11SM
+5168,Sara; Mia,Technology,11YTx2,F,WENG,N,N,N,N,N,N,11SM
+5169,Schiffer; Claudia,Art,11AAr1,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,English,11EEn3,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,French,11RFr2,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,History,11BHi2,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,Mathematics,11MMa04,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,Physical Ed,11XPe1,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,PSHE,11P3Pq,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,Science,11RSc4,F,WENG,N,N,N,N,N,N,11CH
+5169,Schiffer; Claudia,Technology,11XTx1,F,WENG,N,N,N,N,N,N,11CH
+5170,Schwarzkopf; Norman,Art,11AAr1,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,English,11EEn3,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,French,11RFr2,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,History,11BHi2,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,Mathematics,11MMa04,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,Physical Ed,11YPe6,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,Science,11RSc4,M,WENG,N,N,N,N,N,N,11JB
+5170,Schwarzkopf; Norman,Technology,11YTx2,M,WENG,N,N,N,N,N,N,11JB
+5171,Sebert; Kesha,CIDA,11ACi2,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,English,11EEn4,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,French,11RFr3,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Info Technology,11B1It1,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Info Technology,11RIt4,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Mathematics,11MMa04,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Physical Ed,11YPe2,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,PSHE,11P3Pq,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Religious Study,11R1Rs1,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Religious Study,11RRs4,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Science,11BSc1,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Science,11RSc3,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Sport Gcse,11BSp1,F,WENG,N,N,Y,N,Y,N,11MOB
+5171,Sebert; Kesha,Technology,11YRM2,F,WENG,N,N,Y,N,Y,N,11MOB
+5172,Selway; Phil,English,11EEn4,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,History,11AHi2,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Mathematics,11MMa02,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Physical Ed,11YPe3,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Science,11RSc4,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11JW
+5172,Selway; Phil,Technology,11YGP2,M,WENG,N,N,N,N,N,N,11JW
+5173,Sheppard; Ben,English,11EEn1,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,French,11RFr1,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,History,11BHi1,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Physical Ed,11YPe3,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Science,11RSc2,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Sport Gcse,11ASp1,M,WENG,N,N,N,N,N,N,11LMK
+5173,Sheppard; Ben,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11LMK
+5174,Shields; Brooke,Art,11AAr2,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,English,11EEn6,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Info Technology,11B1It4,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Mathematics,11MMa09,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Music,11BMu1,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Religious Study,11B1Rs4,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Science,11B1Sc4,F,WENG,N,N,N,N,N,N,11EK
+5174,Shields; Brooke,Technology,11XEl1,F,WENG,N,N,N,N,N,N,11EK
+5175,Silverstone; Alicia,CIDA,11ACi2,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,English,11EEn8,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,History,11BHi2,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,Info Technology,11B1It3,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,Mathematics,11MMa11,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,Physical Ed,11YPe5,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,PSHE,11P8Pq,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,Religious Study,11BRs3,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,Science,11B1Sc3,F,WENG,N,N,N,N,N,N,11DB
+5175,Silverstone; Alicia,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11DB
+5176,Simon; Paul,English,11EEn3,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,History,11AHi1,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Physical Ed,11XPe5,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Psychology,11BPs1,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Science,11RSc3,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11SM
+5176,Simon; Paul,Technology,11XRM1,M,WENG,N,N,N,N,N,N,11SM
+5177,Simpson; Ashlee,Art,11AAr1,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,English,11EEn5,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,French,11R1Fr3,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,French,11RFr3,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Info Technology,11RIt4,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Mathematics,11MMa11,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Physical Ed,11YPe6,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Psychology,11BPs1,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Religious Study,11RRs4,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Science,11RSc5,F,WENG,N,N,N,N,N,N,11CH
+5177,Simpson; Ashlee,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11CH
+5178,Simpson; Jessica,English,11EEn4,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,History,11AHi1,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Physical Ed,11XPe3,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,PSHE,11P8Pq,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Religious Study,11R1Rs1,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Science,11RSc1,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11JB
+5178,Simpson; Jessica,Technology,11XFd1,F,WENG,N,N,N,N,N,N,11JB
+5179,Sinatra; Frank,Art,11BAr1,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,English,11EEn4,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,History,11AHi2,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Info Technology,11RIt5,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Mathematics,11MMa04,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Physical Ed,11YPe1,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,PSHE,11P4Pq,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Religious Study,11RRs5,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Science,11RSc3,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Spanish,11R1Es2,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Spanish,11REs2,M,WENG,P,N,N,N,N,N,11MOB
+5179,Sinatra; Frank,Technology,11YFd2,M,WENG,P,N,N,N,N,N,11MOB
+5180,Smart; Amy,English,11EEn4,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,French,11R1Fr3,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,French,11RFr3,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Geography,11AGg1,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Info Technology,11RIt4,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Mathematics,11MMa05,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Physical Ed,11YPe4,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,PSHE,11P2Pq,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Religious Study,11RRs4,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Science,11RSc3,F,WENG,P,N,Y,N,Y,N,11JW
+5180,Smart; Amy,Technology,11YRM2,F,WENG,P,N,Y,N,Y,N,11JW
+5181,Spears; Britney,Art,11AAr1,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,English,11EEn1,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,French,11RFr1,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,History,11BHi1,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,Physical Ed,11YPe4,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,Science,11RSc1,F,WENG,N,N,N,N,N,N,11LMK
+5181,Spears; Britney,Technology,11YRM2,F,WENG,N,N,N,N,N,N,11LMK
+5182,Stanhope; Doug,Business Studies,11BBs1,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Childcare,11ACd1,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,English,11EEn8,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Info Technology,11B1It4,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Mathematics,11MMa06,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Physical Ed,11YPe6,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Religious Study,11B1Rs4,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Science,11B1Sc4,M,WENG,P,N,Y,N,Y,N,11EK
+5182,Stanhope; Doug,Technology,11YFd2,M,WENG,P,N,Y,N,Y,N,11EK
+5183,Stephens; Steve,English,11EEn1,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,French,11RFr1,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,History,11BHi2,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Info Technology,11RIt1,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Mathematics,11MMa05,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Physical Ed,11XPe3,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,PSHE,11P2Pq,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Religious Study,11R1Rs1,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Science,11RSc3,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Sport Gcse,11ASp1,F,WENG,N,N,N,N,Y,N,11DB
+5183,Stephens; Steve,Technology,11XFd1,F,WENG,N,N,N,N,Y,N,11DB
+5184,Stipe; Michael,Drama,11BDr1,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,English,11EEn2,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,History,11AHi2,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Science,11RSc3,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11SM
+5184,Stipe; Michael,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11SM
+5185,Streep; Meryl,Art,11AAr2,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,English,11EEn5,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,History,11BHi2,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,Info Technology,11B1It4,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,Mathematics,11MMa08,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,Physical Ed,11YPe6,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,PSHE,11P7Pq,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,Religious Study,11B1Rs4,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,Science,11B1Sc4,F,WENG,P,N,Y,N,Y,N,11CH
+5185,Streep; Meryl,Technology,11YFd2,F,WENG,P,N,Y,N,Y,N,11CH
+5186,Strummer; Joe,English,11EEn4,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,History,11AHi2,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Mathematics,11MMa01,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Physical Ed,11YPe2,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,PSHE,11P2Pq,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Science,11RSc2,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11JB
+5186,Strummer; Joe,Technology,11YRM2,M,WENG,N,N,N,N,N,N,11JB
+5187,Suvari; Mena,Childcare,11ACd1,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,English,11EEn4,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,French,11R1Fr3,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,French,11RFr3,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,History,11BHi1,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,Info Technology,11RIt4,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,Mathematics,11MMa11,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,Physical Ed,11YPe1,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,PSHE,11P7Pq,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,Religious Study,11RRs4,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,Science,11RSc4,F,WENG,N,N,N,N,N,Y,11MOB
+5187,Suvari; Mena,Technology,11YGP2,F,WENG,N,N,N,N,N,Y,11MOB
+5188,Taylor; James,Alternative Curriculum,11GAc1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Arts Award,11GAa1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,English,11GEn1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Info Technology,11GIt1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Mathematics,11GMa1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Physical Ed,11GPe1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,PSHE,11P6Pq,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Religious Study,11GRs1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Science,11GSc1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Technology,11GTe1,M,WENG,P,N,Y,N,Y,N,11JW
+5188,Taylor; James,Work Experience,11GWe1,M,WENG,P,N,Y,N,Y,N,11JW
+5189,Teresa; Mother,Childcare,11ACd1,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,English,11EEn6,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Info Technology,11B1It1,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Mathematics,11MMa07,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Physical Ed,11XPe1,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,PSHE,11P6Pq,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Psychology,11BPs1,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Religious Study,11BRs1,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Science,11BSc1,F,WENG,N,N,Y,N,Y,N,11LMK
+5189,Teresa; Mother,Technology,11XEl1,F,WENG,N,N,Y,N,Y,N,11LMK
+5190,Thatcher; Margaret,Dance,11BDa1,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,English,11EEn2,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,History,11AHi1,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Info Technology,11RIt2,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Mathematics,11MMa03,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Physical Ed,11YPe1,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,PSHE,11P7Pq,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Religious Study,11R1Rs3,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Science,11RSc2,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Spanish,11REs1,F,WENG,N,N,Y,N,Y,N,11EK
+5190,Thatcher; Margaret,Technology,11YTx2,F,WENG,N,N,Y,N,Y,N,11EK
+5191,Thayill; Kim,Drama,11BDr1,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,English,11EEn6,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,History,11AHi3,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,Info Technology,11B1It2,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,Mathematics,11MMa06,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,Physical Ed,11XPe5,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,PSHE,11P3Pq,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,Religious Study,11B1Rs2,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,Science,11B1Sc2,M,WENG,S,N,Y,N,Y,N,11DB
+5191,Thayill; Kim,Technology,11XRM1,M,WENG,S,N,Y,N,Y,N,11DB
+5192,Theron; Charlize,English,11EEn3,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Info Technology,11RIt2,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Physical Ed,11XPe3,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,PSHE,11P2Pq,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Science,11RSc1,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Spanish,11REs1,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11SM
+5192,Theron; Charlize,Technology,11XRM1,F,WENG,N,N,N,N,N,N,11SM
+5193,Tunstall; Kate,CIDA,11BCi1,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,English,11EEn1,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,French,11RFr1,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,History,11AHi1,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,Info Technology,11RIt1,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,Mathematics,11MMa03,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,Physical Ed,11YPe4,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,PSHE,11P4Pq,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,Religious Study,11R1Rs2,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,Science,11RSc1,F,WENG,N,N,N,N,N,N,11CH
+5193,Tunstall; Kate,Technology,11YEl2,F,WENG,N,N,N,N,N,N,11CH
+5194,Twain; Mark,English,11EEn3,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,French,11RFr2,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,History,11BHi1,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Physical Ed,11XPe3,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Science,11RSc3,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Sport Gcse,11ASp1,M,WENG,N,N,N,N,N,N,11JB
+5194,Twain; Mark,Technology,11XRM1,M,WENG,N,N,N,N,N,N,11JB
+5195,Tyson; Mike,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,English,11EEn3,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,French,11RFr2,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,History,11AHi3,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,Info Technology,11RIt3,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,Science,11RSc4,M,WENG,N,N,N,N,N,N,11MOB
+5195,Tyson; Mike,Technology,11YFd2,M,WENG,N,N,N,N,N,N,11MOB
+5196,Underwood; Carrie,Art,11AAr1,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,English,11EEn4,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,French,11RFr2,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,History,11BHi2,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,Info Technology,11RIt3,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,Physical Ed,11XPe6,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,PSHE,11P5Pq,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,Religious Study,11R1Rs3,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,Science,11RSc5,F,WENG,N,N,N,N,N,N,11JW
+5196,Underwood; Carrie,Technology,11XGP1,F,WENG,N,N,N,N,N,N,11JW
+5197,Vedder; Eddie,English,11EEn1,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,History,11AHi2,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Info Technology,11RIt2,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Mathematics,11MMa03,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Music,11BMu1,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Physical Ed,11XPe4,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,PSHE,11P2Pq,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Religious Study,11R1Rs2,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Science,11RSc1,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Spanish,11REs1,M,WENG,N,N,Y,N,Y,N,11LMK
+5197,Vedder; Eddie,Technology,11XGP1,M,WENG,N,N,Y,N,Y,N,11LMK
+5198,Vega; Suzanne,English,11EEn6,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Geography,11AGg1,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Info Technology,11RIt5,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Mathematics,11MMa05,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Physical Ed,11XPe4,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Religious Study,11RRs5,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Science,11RSc5,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Spanish,11R1Es2,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Spanish,11REs2,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11EK
+5198,Vega; Suzanne,Technology,11XRM1,F,WENG,N,N,N,N,N,N,11EK
+5199,Veirs; Laura,Art,11BAr1,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Childcare,11ACd1,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,English,11EEn5,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Info Technology,11B1It3,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Mathematics,11MMa11,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Physical Ed,11YPe6,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,PSHE,11P7Pq,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Religious Study,11BRs3,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Science,11B1Sc3,F,WENG,P,N,N,N,N,N,11DB
+5199,Veirs; Laura,Technology,11YTx2,F,WENG,P,N,N,N,N,N,11DB
+5200,Vennart; Mike,English,11EEn7,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,History,11AHi3,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Info Technology,11B1It3,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Mathematics,11MMa11,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Physical Ed,11YPe3,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,PSHE,11P7Pq,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Religious Study,11BRs3,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Science,11B1Sc3,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Sport Gcse,11BSp1,M,WENG,N,N,N,N,N,N,11SM
+5200,Vennart; Mike,Technology,11YTx2,M,WENG,N,N,N,N,N,N,11SM
+5201,Wahlberg; Mark,Dance,11BDa1,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,English,11EEn4,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,History,11AHi1,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Info Technology,11RIt5,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Mathematics,11MMa07,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,PSHE,11P1Pq,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Religious Study,11RRs5,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Science,11RSc5,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Spanish,11R1Es2,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Spanish,11REs2,M,WENG,N,N,N,N,N,N,11CH
+5201,Wahlberg; Mark,Technology,11XGP1,M,WENG,N,N,N,N,N,N,11CH
+5202,Waits; Tom,Art,11AAr1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,English,11EEn1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,French,11RFr1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,History,11BHi1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,PSHE,11P6Pq,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,Religious Study,11R1Rs2,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,Science,11RSc1,M,WENG,N,N,N,N,N,N,11JB
+5202,Waits; Tom,Technology,11XTx1,M,WENG,N,N,N,N,N,N,11JB
+5203,Wasner; Jen,English,11EEn4,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,History,11AHi2,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Info Technology,11RIt5,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Mathematics,11MMa02,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Physical Ed,11YPe3,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,PSHE,11P6Pq,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Religious Study,11RRs5,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Science,11RSc5,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Spanish,11R1Es2,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Spanish,11REs2,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Sport Gcse,11BSp1,F,WENG,N,N,N,N,N,N,11MOB
+5203,Wasner; Jen,Technology,11YGP2,F,WENG,N,N,N,N,N,N,11MOB
+5204,Weaver; Sigourney,Art,11BAr1,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,CIDA,11ACi1,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,English,11EEn5,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,Info Technology,11B1It4,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,Mathematics,11MMa09,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,Physical Ed,11YPe5,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,PSHE,11P1Pq,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,Religious Study,11B1Rs4,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,Science,11B1Sc4,F,MWBA,N,N,N,N,N,N,11JW
+5204,Weaver; Sigourney,Technology,11YTx2,F,MWBA,N,N,N,N,N,N,11JW
+5205,West; Mae,Business Studies,11BBs1,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,English,11EEn7,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Info Technology,11B1It4,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Mathematics,11MMa04,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Physical Ed,11XPe2,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,PSHE,11P6Pq,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Religious Study,11B1Rs4,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Science,11B1Sc4,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Sport Gcse,11ASp1,F,WENG,A,N,N,N,N,N,11LMK
+5205,West; Mae,Technology,11XRM1,F,WENG,A,N,N,N,N,N,11LMK
+5206,White; Jack,Art,11AAr1,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,English,11EEn2,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,French,11RFr1,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,History,11BHi2,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,Info Technology,11RIt1,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,Mathematics,11MMa05,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,Physical Ed,11YPe1,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,Religious Study,11R1Rs3,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,Science,11RSc2,M,WENG,N,N,N,N,N,N,11EK
+5206,White; Jack,Technology,11YGP2,M,WENG,N,N,N,N,N,N,11EK
+5207,Williams; Robin,Art,11BAr1,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,English,11EEn2,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,History,11AHi1,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Info Technology,11RIt5,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Mathematics,11MMa07,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Physical Ed,11XPe6,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,PSHE,11P3Pq,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Religious Study,11RRs5,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Science,11RSc4,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Spanish,11R1Es2,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Spanish,11REs2,M,WENG,N,N,Y,N,Y,N,11DB
+5207,Williams; Robin,Technology,11XFd1,M,WENG,N,N,Y,N,Y,N,11DB
+5208,Williams; Ste,English,11EEn1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,History,11AHi1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Info Technology,11RIt2,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Mathematics,11MMa03,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Music,11BMu1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Physical Ed,11XPe1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,PSHE,11P3Pq,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Religious Study,11R1Rs1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Science,11RSc1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Spanish,11REs1,M,WENG,N,N,N,N,N,N,11SM
+5208,Williams; Ste,Technology,11XFd1,M,WENG,N,N,N,N,N,N,11SM
+5209,Yeager; Chuck,CIDA,11ACi2,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,English,11EEn7,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Info Technology,11B1It2,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Mathematics,11MMa04,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Physical Ed,11YPe2,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,PSHE,11P8Pq,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Religious Study,11B1Rs2,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Science,11B1Sc2,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Sport Gcse,11BSp1,M,WENG,P,N,Y,N,Y,N,11CH
+5209,Yeager; Chuck,Technology,11YEl2,M,WENG,P,N,Y,N,Y,N,11CH
+5210,Yorke; Thom,Business Studies,11BBs1,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,CIDA,11ACi2,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,English,11EEn6,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,Info Technology,11B1It3,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,Mathematics,11MMa06,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,Physical Ed,11YPe5,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,PSHE,11P4Pq,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,Religious Study,11BRs3,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,Science,11B1Sc3,M,WENG,N,N,N,N,N,N,11JB
+5210,Yorke; Thom,Technology,11YRM2,M,WENG,N,N,N,N,N,N,11JB

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Annotations" parallel="tests" thread-count="1">
+
+    <parameter name="grid-type" value="sauce" />
+    <parameter name="grid-user" value="AsqJames" />
+    <parameter name="grid-pass" value="9c844186-465b-4728-a739-f9ca9ba935d0" />
+
+    <parameter name="platform" value="win10" />
+    <parameter name="browser" value="firefox" />
+    <parameter name="browser-version" value="44" />
+    <parameter name="record-video" value="True" />
+
+    <test name="TestB">
+        <parameter name="test-id" value="TestB" />
+        <parameter name="test-title" value="TestB" />
+        <groups>
+            <run>
+                <include name="GroupB" />
+            </run>
+        </groups>
+        <classes>
+            <class name="analytics.legacy.tests.demo.AnnotationsTest" />
+        </classes>
+    </test>
+
+    <test name="TestA">
+        <parameter name="test-id" value="TestA" />
+        <parameter name="test-title" value="TestA" />
+        <groups>
+            <run>
+                <include name="GroupA" />
+            </run>
+        </groups>
+        <classes>
+            <class name="analytics.legacy.tests.demo.AnnotationsTest" />
+        </classes>
+    </test>
+
+</suite>

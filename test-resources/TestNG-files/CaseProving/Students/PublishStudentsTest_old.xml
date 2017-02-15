@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Build 35" parallel="tests" thread-count="3">
+	<parameter name="suite-name" value="Regression Build 35" />
+	<parameter name="test-domain" value="eap" />
+	<parameter name="browser" value="firefox" />
+	<parameter name="version" value="ANY" />
+	<parameter name="grid-type" value="local" />
+	<test name="PublishStudents0001">
+		<parameter name="username" value="autoa176165" />
+		<parameter name="password" value="QpXdPdTz7" />
+		<parameter name="eap-cohort" value="17" />
+		<parameter name="publish-type" value="Local" />
+		<classes>
+			<class name="admin.data.students.PublishStudentsTest" />
+		</classes>
+	</test>
+	<test name="PublishStudents0002">
+		<parameter name="username" value="autob176166" />
+		<parameter name="password" value="XmFfYoYa2" />
+		<parameter name="eap-cohort" value="18" />
+		<parameter name="publish-type" value="Local" />
+		<classes>
+			<class name="admin.data.students.PublishStudentsTest" />
+		</classes>
+	</test>
+	<test name="PublishStudents0003">
+		<parameter name="username" value="autoc176167" />
+		<parameter name="password" value="XcJnDvZc8" />
+		<parameter name="eap-cohort" value="19" />
+		<parameter name="publish-type" value="Local" />
+		<classes>
+			<class name="admin.data.students.PublishStudentsTest" />
+		</classes>
+	</test>
+	<test name="PublishStudents0004">
+		<parameter name="username" value="autod176168" />
+		<parameter name="password" value="SgFqKgRo3" />
+		<parameter name="eap-cohort" value="20" />
+		<parameter name="publish-type" value="Local" />
+		<classes>
+			<class name="admin.data.students.PublishStudentsTest" />
+		</classes>
+	</test>
+	<test name="PublishStudents0005">
+		<parameter name="username" value="autoe176169" />
+		<parameter name="password" value="BcTdRtMs7" />
+		<parameter name="eap-cohort" value="21" />
+		<parameter name="publish-type" value="Local" />
+		<classes>
+			<class name="admin.data.students.PublishStudentsTest" />
+		</classes>
+	</test>
+</suite>

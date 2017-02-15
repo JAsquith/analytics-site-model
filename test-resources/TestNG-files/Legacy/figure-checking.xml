@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Figure Checking" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="analytics.listeners.AnalyticsSuiteListener" />
+    </listeners>
+
+    <parameter name="suite-name" value="Figure Checking" />
+    <parameter name="log-folder" value="C:/Selenium/LegacyLogs" />
+    <parameter name="grid-type" value="local" />
+
+    <parameter name="platform" value="Windows" />
+    <parameter name="browser" value="firefox" />
+    
+    <parameter name="view-options-probability" value="100" />
+    <parameter name="max-view-updates" value="2" />
+    <parameter name="views-list" value="1 random views" />
+
+    <parameter name="keystage" value="KS4" />
+	
+	
+    <test name="SISRA Checking A1-A2">
+        <parameter name="test-id" value="CheckingA" />
+
+        <parameter name="live-user" value="chesis144689" />
+        <parameter name="live-password" value="CdCqSdGc8" />
+        <parameter name="dev-user" value="chesis144693" />
+        <parameter name="dev-password" value="EkDdBxAi5" />
+
+		<parameter name="keystage" value="KS5" />
+	
+        <classes>
+            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking B1-B2">
+        <parameter name="test-id" value="CheckingB" />
+
+        <parameter name="live-user" value="wookie144699" />
+        <parameter name="live-password" value="QuHiQxVo8" />
+        <parameter name="dev-user" value="russia144702" />
+        <parameter name="dev-password" value="WeYwRaMn3" />
+
+        <classes>
+            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+	<test name="SISRA Checking C1-C2">
+        <parameter name="test-id" value="CheckingC" />
+
+        <parameter name="live-user" value="chesis144719" />
+        <parameter name="live-password" value="YmNnFwEb8" />
+        <parameter name="dev-user" value="chesis144720" />
+        <parameter name="dev-password" value="ZsZmWhFo3" />
+
+        <classes>
+            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking D1-D2">
+        <parameter name="test-id" value="CheckingD" />
+
+        <parameter name="live-user" value="chesis144722" />
+        <parameter name="live-password" value="JkTnWxHt2" />
+        <parameter name="dev-user" value="chesis144726" />
+        <parameter name="dev-password" value="HtWgMeQg6" />
+
+        <classes>
+            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>	
+    <test name="SISRA Checking E1-E2">
+        <parameter name="test-id" value="CheckingE" />
+
+        <parameter name="live-user" value="chesis144733" />
+        <parameter name="live-password" value="KkSkNeVu2" />
+        <parameter name="dev-user" value="Chesis144735" />
+        <parameter name="dev-password" value="HeMwWvTf2" />
+
+        <classes>
+            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking F1-F2">
+        <parameter name="test-id" value="CheckingF" />
+
+        <parameter name="live-user" value="chesis144742" />
+        <parameter name="live-password" value="EySyHqQe4" />
+        <parameter name="dev-user" value="chesis144743" />
+        <parameter name="dev-password" value="NnVfYeEt3" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking G1-G2">
+        <parameter name="test-id" value="CheckingG" />
+
+        <parameter name="live-user" value="chesis8787" />
+        <parameter name="live-password" value="YwYyNiDt4" />
+        <parameter name="dev-user" value="chesis8989" />
+        <parameter name="dev-password" value="HdMeAuBv7" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking I1-I2">
+        <parameter name="test-id" value="CheckingI" />
+
+        <parameter name="live-user" value="tomato144694" />
+        <parameter name="live-password" value="NwWfGmXq2" />
+        <parameter name="dev-user" value="chesis145282" />
+        <parameter name="dev-password" value="BvFsDbKf6" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking K1-K2">
+        <parameter name="test-id" value="CheckingK" />
+
+        <parameter name="live-user" value="chesis144705" />
+        <parameter name="live-password" value="MnVnJbJf2" />
+        <parameter name="dev-user" value="schche145659" />
+        <parameter name="dev-password" value="CyFpHbMq3" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking L1-L2">
+        <parameter name="test-id" value="CheckingL" />
+
+        <parameter name="live-user" value="chesis145791" />
+        <parameter name="live-password" value="VyJxUiAd8" />
+        <parameter name="dev-user" value="chesis145796" />
+        <parameter name="dev-password" value="TjVfDoUk2" />
+
+        <parameter name="keystage" value="KS5" />
+
+        <classes>
+            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+<!--
+    ***** Place schools in this section when they should not be included in a test run *****
+    <test name="SISRA Checking J1-J2">
+        <parameter name="test-id" value="CheckingJ" />
+
+        <parameter name="live-user" value="chesis144697" />
+        <parameter name="live-password" value="ZcVhMgVt5" />
+        <parameter name="dev-user" value="jtwoch145283" />
+        <parameter name="dev-password" value="RdPaTmRs3" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+
+    <test name="SISRA Checking M1-M2">
+        <parameter name="test-id" value="CheckingM" />
+
+        <parameter name="live-user" value="chesis145792" />
+        <parameter name="live-password" value="FmDpPgUc4" />
+        <parameter name="dev-user" value="chesis145793" />
+        <parameter name="dev-password" value="HjNeJiUg6" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking N1-N2">
+        <parameter name="test-id" value="CheckingN" />
+
+        <parameter name="live-user" value="chesis145787" />
+        <parameter name="live-password" value="BnNnTbHa8" />
+        <parameter name="dev-user" value="chesis145788" />
+        <parameter name="dev-password" value="VfBsKvJh4" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking O1-O2">
+        <parameter name="test-id" value="CheckingO" />
+
+        <parameter name="live-user" value="molhan145790" />
+        <parameter name="live-password" value="TdJrSpZc8" />
+        <parameter name="dev-user" value="klojur145789" />
+        <parameter name="dev-password" value="BeGiDoJe2" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+    <test name="SISRA Checking H1-H2">
+        <parameter name="test-id" value="CheckingH" />
+
+        <parameter name="live-user" value="chesis144692" />
+        <parameter name="live-password" value="GyRzDvXm6" />
+        <parameter name="dev-user" value="dickie145279" />
+        <parameter name="dev-password" value="MnXrChJq3" />
+
+        <parameter name="keystage" value="KS4" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+	
+    <test name="SISRA Checking K1-K2">
+        <parameter name="test-id" value="CheckingK" />
+
+        <parameter name="live-user" value="chesis144705" />
+        <parameter name="live-password" value="MnVnJbJf2" />
+        <parameter name="dev-user" value="schche145659" />
+        <parameter name="dev-password" value="CyFpHbMq3" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking L1-L2">
+        <parameter name="test-id" value="CheckingL" />
+
+        <parameter name="live-user" value="chesis145791" />
+        <parameter name="live-password" value="VyJxUiAd8" />
+        <parameter name="dev-user" value="chesis145796" />
+        <parameter name="dev-password" value="TjVfDoUk2" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>	
+	
+    <test name="SISRA Checking M1-M2">
+        <parameter name="test-id" value="CheckingM" />
+
+        <parameter name="live-user" value="chesis145792" />
+        <parameter name="live-password" value="FmDpPgUc4" />
+        <parameter name="dev-user" value="chesis145793" />
+        <parameter name="dev-password" value="HjNeJiUg6" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+	
+    <test name="SISRA Checking N1-N2">
+        <parameter name="test-id" value="CheckingN" />
+
+        <parameter name="live-user" value="chesis145787" />
+        <parameter name="live-password" value="BnNnTbHa8" />
+        <parameter name="dev-user" value="chesis145788" />
+        <parameter name="dev-password" value="VfBsKvJh4" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking O1-O2">
+        <parameter name="test-id" value="CheckingO" />
+
+        <parameter name="live-user" value="molhan145790" />
+        <parameter name="live-password" value="TdJrSpZc8" />
+        <parameter name="dev-user" value="klojur145789" />
+        <parameter name="dev-password" value="BeGiDoJe2" />
+
+        <parameter name="keystage" value="KS5" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+	
+    <test name="SISRA Checking P1-P2">
+        <parameter name="test-id" value="CheckingP" />
+
+        <parameter name="live-user" value="onep151686" />
+        <parameter name="live-password" value="QnAoJgSy5" />
+        <parameter name="dev-user" value="twop151687" />
+        <parameter name="dev-password" value="CpAkEnTt5" />
+
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking Q1-Q2">
+        <parameter name="test-id" value="CheckingQ" />
+
+        <parameter name="live-user" value="oneq151688" />
+        <parameter name="live-password" value="CeSgSmAk8" />
+        <parameter name="dev-user" value="twoq151689" />
+        <parameter name="dev-password" value="VpKkFdZw3" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>	
+	
+    <test name="SISRA Checking R1-R2">
+        <parameter name="test-id" value="CheckingR" />
+
+        <parameter name="live-user" value="oner151690" />
+        <parameter name="live-password" value="TeWuPaMb8" />
+        <parameter name="dev-user" value="twor151691" />
+        <parameter name="dev-password" value="YxEeNxAe2" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+	
+    <test name="SISRA Checking S1-S2">
+        <parameter name="test-id" value="CheckingS" />
+
+        <parameter name="live-user" value="ones151692" />
+        <parameter name="live-password" value="RoEvPcXg7" />
+        <parameter name="dev-user" value="twos151693" />
+        <parameter name="dev-password" value="HhTeMgYu3" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+
+    <test name="SISRA Checking T1-T2">
+        <parameter name="test-id" value="CheckingT" />
+
+        <parameter name="live-user" value="onet151697" />
+        <parameter name="live-password" value="ZyWqFfSv4" />
+        <parameter name="dev-user" value="twot151698" />
+        <parameter name="dev-password" value="NhNjKfTm8" />
+
+    <classes>
+        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        </classes>
+    </test>
+-->
+
+</suite>

@@ -1,0 +1,110 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.sisra.analytics:site-model:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building site-model 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ site-model ---
+[INFO] Deleting G:\analytics-site-model\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ site-model ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ site-model ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 28 source files to G:\analytics-site-model\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ site-model ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\analytics-site-model\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ site-model ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\analytics-site-model\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ site-model ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Test running on Host: AsqJames-PC
+Test running on Host: AsqJames-PC
+Test running on Host: AsqJames-PC
+Test running on Host: AsqJames-PC
+Test running on Host: AsqJames-PC
+Compared [Test00003] with [Test00003_act]
+The Files Match!
+Test running on Host: AsqJames-PC
+Compared [Test00001] with [Test00001_act]
+The Files Match!
+Exception setting report options
+Test running on Host: AsqJames-PC
+Exception setting report options
+Compared [Test00002] with [Test00002_act]
+The Files Match!
+Compared [Test00006] with [Test00006_act]
+The Files Match!
+Compared [Test00007] with [Test00007_act]
+The Files Match!
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 78.858 sec <<< FAILURE! - in TestSuite
+testReportFigures(reports.FigureChecking)  Time elapsed: 0.026 sec  <<< FAILURE!
+org.openqa.selenium.remote.SessionNotFoundException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
+System info: host: 'AsqJames-PC', ip: '192.168.0.10', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: RemoteWebDriver
+	at testNamedTableFigures(reports.FigureChecking.java:45)
+
+testReportFigures(reports.FigureChecking)  Time elapsed: 0.002 sec  <<< FAILURE!
+org.openqa.selenium.remote.SessionNotFoundException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
+System info: host: 'AsqJames-PC', ip: '192.168.0.10', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: driver.version: RemoteWebDriver
+	at testNamedTableFigures(reports.FigureChecking.java:45)
+
+
+Results :
+
+Failed tests: 
+testNamedTableFigures(reports.FigureChecking)
+  Run 1: PASS
+  Run 2: PASS
+  Run 3: testNamedTableFigures:45 � SessionNotFound Session ID is null. Usin...
+  Run 4: testNamedTableFigures:45 � SessionNotFound Session ID is null. Usin...
+  Run 5: PASS
+  Run 6: PASS
+  Run 7: PASS
+
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 02:19 min
+[INFO] Finished at: 2016-10-31T01:12:15+00:00
+[INFO] Final Memory: 22M/217M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project site-model: There are test failures.
+[ERROR] 
+[ERROR] Please refer to G:\analytics-site-model\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

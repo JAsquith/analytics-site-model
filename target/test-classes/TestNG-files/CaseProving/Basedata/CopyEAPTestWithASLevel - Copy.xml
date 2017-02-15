@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Build 110" parallel="tests" thread-count="3">
+
+	<parameter name="suite-name" value="Regression Build 110" />
+	<parameter name="log-folder" value="C:/Selenium/Logs" />
+	<parameter name="test-domain" value="eap" />
+	<parameter name="browser" value="firefox" />
+	<parameter name="version" value="ANY" />
+	<parameter name="grid-type" value="local" />
+
+	<test name="CopyEAPTest0017">
+		<parameter name="username" value="autoq176181" />
+		<parameter name="password" value="DuYpXrNw4" />
+		<parameter name="eap-cohort" value="18" />
+		<parameter name="name" value="AS Level" />
+		<parameter name="description" value="AS Level" />
+		<parameter name="baseline-type" value="NC Whole / Sub Levels" />
+		<parameter name="baseline" value="KS2 Maths Sub Levels" />
+		<parameter name="create-or-copy" value="Copy" />
+		<parameter name="copy-from-cohort" value="17" />
+		<parameter name="copy-from-eap" value="AS Level" />
+		<classes>
+			<class name="admin.data.basedata.CreateEAPTest" />
+		</classes>
+	</test>
+	<test name="CopyEAPTest0018">
+		<parameter name="username" value="autor176182" />
+		<parameter name="password" value="ZmHyTjQe9" />
+		<parameter name="eap-cohort" value="19" />
+		<parameter name="name" value="AS Level" />
+		<parameter name="description" value="AS Level" />
+		<parameter name="baseline-type" value="NC Whole / Sub Levels" />
+		<parameter name="baseline" value="KS2 Maths Sub Levels" />
+		<parameter name="create-or-copy" value="Copy" />
+		<parameter name="copy-from-cohort" value="17" />
+		<parameter name="copy-from-eap" value="AS Level" />
+		<classes>
+			<class name="admin.data.basedata.CreateEAPTest" />
+		</classes>
+	</test>
+	<test name="CopyEAPTest0019">
+		<parameter name="username" value="autos176183" />
+		<parameter name="password" value="ZxDvJnXu5" />
+		<parameter name="eap-cohort" value="20" />
+		<parameter name="name" value="AS Level" />
+		<parameter name="description" value="AS Level" />
+		<parameter name="baseline-type" value="NC Whole / Sub Levels" />
+		<parameter name="baseline" value="KS2 Maths Sub Levels" />
+		<parameter name="create-or-copy" value="Copy" />
+		<parameter name="copy-from-cohort" value="17" />
+		<parameter name="copy-from-eap" value="AS Level" />
+		<classes>
+			<class name="admin.data.basedata.CreateEAPTest" />
+		</classes>
+	</test>
+	<test name="CopyEAPTest0020">
+		<parameter name="username" value="autot176184" />
+		<parameter name="password" value="RzAjZhTq9" />
+		<parameter name="eap-cohort" value="21" />
+		<parameter name="name" value="AS Level" />
+		<parameter name="description" value="AS Level" />
+		<parameter name="baseline-type" value="NC Whole / Sub Levels" />
+		<parameter name="baseline" value="KS2 Maths Sub Levels" />
+		<parameter name="create-or-copy" value="Copy" />
+		<parameter name="copy-from-cohort" value="17" />
+		<parameter name="copy-from-eap" value="AS Level" />
+		<classes>
+			<class name="admin.data.basedata.CreateEAPTest" />
+		</classes>
+	</test>
+</suite>

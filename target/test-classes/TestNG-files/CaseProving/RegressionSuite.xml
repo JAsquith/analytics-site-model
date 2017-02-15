@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Setup Checking V2" parallel="tests" thread-count="3">
+
+    <suite-files>
+        <suite-file path="Config/CreateFilterTest.xml" />
+        <suite-file path="Config/ChangeStudentProfileTest.xml" />
+        <suite-file path="Config/CreateEAPGradeMethodTest.xml" />
+        <suite-file path="Students/StudentImportTest.xml" />
+        <suite-file path="Students/PublishStudentsTest.xml" />
+        <suite-file path="Basedata/UploadBaselinesTest.xml" />
+        <suite-file path="Basedata/EditBaselinesTest.xml" />
+        <suite-file path="Basedata/CreateEAPTest.xml" />
+        <suite-file path="Basedata/ImportEAPTest.xml" />
+        <suite-file path="Basedata/CopyEAPTest.xml" />
+        <suite-file path="Basedata/PublishBaseDataTest.xml" />
+        <suite-file path="Grades/CreateAssessmentCollectionTest.xml" />
+        <suite-file path="Grades/UploadsForAssessmentsTest.xml" />
+        <suite-file path="Grades/MatchingPageTest.xml" />
+        <suite-file path="Grades/PublishGradesTest.xml" />
+    </suite-files>
+
+
+</suite>

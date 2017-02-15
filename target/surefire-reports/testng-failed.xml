@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Core Tests]" parallel="tests">
+  <parameter name="log-folder" value="C:/Selenium/Logs"/>
+  <parameter name="test-domain" value="dev"/>
+  <parameter name="grid-type" value="local"/>
+  <parameter name="browser" value="firefox"/>
+  <parameter name="suite-name" value="Core Tests"/>
+  <parameter name="version" value="ANY"/>
+  <parameter name="platform" value="windows"/>
+  <test name="A8P8 Ebacc Unfiltered(failed)" parallel="tests">
+    <parameter name="area" value="A8/P8"/>
+    <parameter name="tableNames" value="EBacc"/>
+    <parameter name="password" value="UuJmFqYo9"/>
+    <parameter name="school" value="EAP Phase 3 Measure Test"/>
+    <parameter name="level" value="Students"/>
+    <parameter name="report" value="EBacc"/>
+    <parameter name="cohort" value="17"/>
+    <parameter name="dataset" value="Mocks"/>
+    <parameter name="eapYear" value="11"/>
+    <parameter name="username" value="tesaut176290"/>
+    <parameter name="dataFiles" value="2446_17_A8P8_EBacc_001.csv"/>
+    <classes>
+      <class name="reports.FigureChecking">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="tearDownSuite"/>
+          <include name="checkReportTables"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- reports.FigureChecking -->
+    </classes>
+  </test> <!-- A8P8 Ebacc Unfiltered(failed) -->
+  <test name="A8P8 Open Unfiltered(failed)" parallel="tests">
+    <parameter name="area" value="A8/P8"/>
+    <parameter name="tableNames" value="Open"/>
+    <parameter name="password" value="ThCfMnSv8"/>
+    <parameter name="school" value="EAP Phase 3 Measure Test"/>
+    <parameter name="level" value="Students"/>
+    <parameter name="report" value="Open"/>
+    <parameter name="cohort" value="17"/>
+    <parameter name="dataset" value="Mocks"/>
+    <parameter name="eapYear" value="11"/>
+    <parameter name="username" value="tesaut176291"/>
+    <parameter name="dataFiles" value="2446_17_A8P8_Open_001.csv"/>
+    <classes>
+      <class name="reports.FigureChecking">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="tearDownSuite"/>
+          <include name="checkReportTables"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- reports.FigureChecking -->
+    </classes>
+  </test> <!-- A8P8 Open Unfiltered(failed) -->
+  <test name="2527 Headlines(failed)" parallel="tests">
+    <parameter name="area" value="Headlines"/>
+    <parameter name="tableNames" value=""/>
+    <parameter name="password" value="PassMe123"/>
+    <parameter name="school" value="SISRA Graeme Regression"/>
+    <parameter name="level" value="Whole School"/>
+    <parameter name="report" value="Summary"/>
+    <parameter name="cohort" value="17"/>
+    <parameter name="dataset" value="Exams"/>
+    <parameter name="eapYear" value="11"/>
+    <parameter name="username" value="graemeregress"/>
+    <parameter name="dataFiles" value="2527_17_Headlines.csv"/>
+    <classes>
+      <class name="reports.FigureChecking">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="tearDownSuite"/>
+          <include name="checkReportTables"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- reports.FigureChecking -->
+    </classes>
+  </test> <!-- 2527 Headlines(failed) -->
+  <test name="2527 Headlines Compare(failed)" parallel="tests">
+    <parameter name="area" value="Headlines"/>
+    <parameter name="tableNames" value=""/>
+    <parameter name="password" value="Indigo123"/>
+    <parameter name="school" value="SISRA Graeme Regression"/>
+    <parameter name="level" value="Whole School"/>
+    <parameter name="report" value="Summary"/>
+    <parameter name="cohort" value="17"/>
+    <parameter name="dataset" value="Exams"/>
+    <parameter name="eapYear" value="11"/>
+    <parameter name="compWith" value="Mocks"/>
+    <parameter name="username" value="tesreg176653"/>
+    <parameter name="dataFiles" value="2527_17_HeadlinesCompare.csv"/>
+    <classes>
+      <class name="reports.FigureChecking">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="tearDownSuite"/>
+          <include name="checkReportTables"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- reports.FigureChecking -->
+    </classes>
+  </test> <!-- 2527 Headlines Compare(failed) -->
+  <test name="2527 Headlines Breakdown(failed)" parallel="tests">
+    <parameter name="area" value="Headlines"/>
+    <parameter name="tableNames" value=""/>
+    <parameter name="password" value="Plateau123"/>
+    <parameter name="school" value="SISRA Graeme Regression"/>
+    <parameter name="level" value="Whole School"/>
+    <parameter name="breakdown" value="Ethnic Code"/>
+    <parameter name="report" value="Summary"/>
+    <parameter name="cohort" value="17"/>
+    <parameter name="dataset" value="Exams"/>
+    <parameter name="eapYear" value="11"/>
+    <parameter name="username" value="tesreg176662"/>
+    <parameter name="dataFiles" value="2527_17_HeadlinesBreakdown.csv"/>
+    <classes>
+      <class name="reports.FigureChecking">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="tearDownSuite"/>
+          <include name="checkReportTables"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- reports.FigureChecking -->
+    </classes>
+  </test> <!-- 2527 Headlines Breakdown(failed) -->
+</suite> <!-- Failed suite [Core Tests] -->

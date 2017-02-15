@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="5" ignored="0" total="35" passed="30">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Setup" duration-ms="0" started-at="2017-02-10T15:05:02Z" finished-at="2017-02-10T15:05:02Z">
+    <groups>
+    </groups>
+  </suite> <!-- Regression Setup -->
+  <suite name="Tracker Tests" duration-ms="308448" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T15:04:59Z">
+    <groups>
+    </groups>
+    <test name="2525_001 Tracker Grades Overview Students 1" duration-ms="33156" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T15:00:24Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@737996a0]" name="setup" is-config="true" duration-ms="5091" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T14:59:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2d8f65a4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@737996a0]" name="checkReportTables" duration-ms="24942" started-at="2017-02-10T14:59:56Z" finished-at="2017-02-10T15:00:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@737996a0]" name="tearDown" is-config="true" duration-ms="3108" started-at="2017-02-10T15:00:21Z" finished-at="2017-02-10T15:00:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_001 Tracker Grades Overview Students 1 -->
+    <test name="2525_003 Tracker Grades Overview Students 3" duration-ms="35572" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T15:00:26Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@7ca48474]" name="setup" is-config="true" duration-ms="5060" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T14:59:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@33f88ab]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@7ca48474]" name="checkReportTables" duration-ms="27688" started-at="2017-02-10T14:59:56Z" finished-at="2017-02-10T15:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@7ca48474]" name="tearDown" is-config="true" duration-ms="2824" started-at="2017-02-10T15:00:23Z" finished-at="2017-02-10T15:00:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_003 Tracker Grades Overview Students 3 -->
+    <test name="2525_002 Tracker Grades Overview Students 2" duration-ms="36083" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T15:00:27Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@97e1986]" name="setup" is-config="true" duration-ms="5106" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T14:59:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@27a8c74e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@97e1986]" name="checkReportTables" duration-ms="28734" started-at="2017-02-10T14:59:56Z" finished-at="2017-02-10T15:00:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@97e1986]" name="tearDown" is-config="true" duration-ms="2243" started-at="2017-02-10T15:00:24Z" finished-at="2017-02-10T15:00:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_002 Tracker Grades Overview Students 2 -->
+    <test name="2525_004 Tracker Grades Overview Students 4" duration-ms="35641" started-at="2017-02-10T15:00:24Z" finished-at="2017-02-10T15:01:00Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@7946e1f4]" name="setup" is-config="true" duration-ms="4226" started-at="2017-02-10T15:00:24Z" finished-at="2017-02-10T15:00:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b68ddbd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@7946e1f4]" name="checkReportTables" duration-ms="28352" started-at="2017-02-10T15:00:29Z" finished-at="2017-02-10T15:00:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@7946e1f4]" name="tearDown" is-config="true" duration-ms="3048" started-at="2017-02-10T15:00:57Z" finished-at="2017-02-10T15:01:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_004 Tracker Grades Overview Students 4 -->
+    <test name="2525_005 Tracker Grades Overview Students 5" duration-ms="39283" started-at="2017-02-10T15:00:26Z" finished-at="2017-02-10T15:01:05Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@5056dfcb]" name="setup" is-config="true" duration-ms="6139" started-at="2017-02-10T15:00:26Z" finished-at="2017-02-10T15:00:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@646d64ab]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@5056dfcb]" name="checkReportTables" duration-ms="29777" started-at="2017-02-10T15:00:32Z" finished-at="2017-02-10T15:01:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@5056dfcb]" name="tearDown" is-config="true" duration-ms="3367" started-at="2017-02-10T15:01:02Z" finished-at="2017-02-10T15:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_005 Tracker Grades Overview Students 5 -->
+    <test name="2525_006 Tracker Grades Overview Students 6" duration-ms="43135" started-at="2017-02-10T15:00:27Z" finished-at="2017-02-10T15:01:10Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@6ea12c19]" name="setup" is-config="true" duration-ms="7070" started-at="2017-02-10T15:00:27Z" finished-at="2017-02-10T15:00:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@59e5ddf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@6ea12c19]" name="checkReportTables" duration-ms="32866" started-at="2017-02-10T15:00:34Z" finished-at="2017-02-10T15:01:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@6ea12c19]" name="tearDown" is-config="true" duration-ms="3197" started-at="2017-02-10T15:01:07Z" finished-at="2017-02-10T15:01:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_006 Tracker Grades Overview Students 6 -->
+    <test name="2525_007 Tracker Grades Overview Classes 1" duration-ms="34030" started-at="2017-02-10T15:01:00Z" finished-at="2017-02-10T15:01:34Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@3c756e4d]" name="setup" is-config="true" duration-ms="4938" started-at="2017-02-10T15:01:00Z" finished-at="2017-02-10T15:01:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@536aaa8d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@3c756e4d]" name="checkReportTables" duration-ms="26269" started-at="2017-02-10T15:01:05Z" finished-at="2017-02-10T15:01:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@3c756e4d]" name="tearDown" is-config="true" duration-ms="2823" started-at="2017-02-10T15:01:31Z" finished-at="2017-02-10T15:01:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_007 Tracker Grades Overview Classes 1 -->
+    <test name="2525_008 Tracker Grades Overview Classes 2" duration-ms="36860" started-at="2017-02-10T15:01:05Z" finished-at="2017-02-10T15:01:42Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@6d8a00e3]" name="setup" is-config="true" duration-ms="5521" started-at="2017-02-10T15:01:05Z" finished-at="2017-02-10T15:01:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@e320068]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@6d8a00e3]" name="checkReportTables" duration-ms="27279" started-at="2017-02-10T15:01:11Z" finished-at="2017-02-10T15:01:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@6d8a00e3]" name="tearDown" is-config="true" duration-ms="4060" started-at="2017-02-10T15:01:38Z" finished-at="2017-02-10T15:01:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_008 Tracker Grades Overview Classes 2 -->
+    <test name="2525_009 Tracker Grades Overview Classes 3" duration-ms="44571" started-at="2017-02-10T15:01:10Z" finished-at="2017-02-10T15:01:54Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@1810399e]" name="setup" is-config="true" duration-ms="6333" started-at="2017-02-10T15:01:10Z" finished-at="2017-02-10T15:01:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f57539]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@1810399e]" name="checkReportTables" duration-ms="34982" started-at="2017-02-10T15:01:16Z" finished-at="2017-02-10T15:01:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@1810399e]" name="tearDown" is-config="true" duration-ms="3256" started-at="2017-02-10T15:01:51Z" finished-at="2017-02-10T15:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_009 Tracker Grades Overview Classes 3 -->
+    <test name="2525_010 Tracker Grades Overview Classes 4" duration-ms="36270" started-at="2017-02-10T15:01:34Z" finished-at="2017-02-10T15:02:10Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@5d5eef3d]" name="setup" is-config="true" duration-ms="5007" started-at="2017-02-10T15:01:34Z" finished-at="2017-02-10T15:01:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@76f2b07d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@5d5eef3d]" name="checkReportTables" duration-ms="27996" started-at="2017-02-10T15:01:39Z" finished-at="2017-02-10T15:02:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@5d5eef3d]" name="tearDown" is-config="true" duration-ms="3266" started-at="2017-02-10T15:02:07Z" finished-at="2017-02-10T15:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_010 Tracker Grades Overview Classes 4 -->
+    <test name="2525_011 Tracker Grades Overview Quals 1" duration-ms="35759" started-at="2017-02-10T15:01:42Z" finished-at="2017-02-10T15:02:18Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@2ef5e5e3]" name="setup" is-config="true" duration-ms="5281" started-at="2017-02-10T15:01:42Z" finished-at="2017-02-10T15:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@704a52ec]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@2ef5e5e3]" name="checkReportTables" duration-ms="26801" started-at="2017-02-10T15:01:48Z" finished-at="2017-02-10T15:02:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@2ef5e5e3]" name="tearDown" is-config="true" duration-ms="3675" started-at="2017-02-10T15:02:14Z" finished-at="2017-02-10T15:02:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_011 Tracker Grades Overview Quals 1 -->
+    <test name="2525_012 Tracker Grades Overview Quals 2" duration-ms="31340" started-at="2017-02-10T15:01:54Z" finished-at="2017-02-10T15:02:26Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@51081592]" name="setup" is-config="true" duration-ms="5416" started-at="2017-02-10T15:01:54Z" finished-at="2017-02-10T15:02:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6ee52dcd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@51081592]" name="checkReportTables" duration-ms="22023" started-at="2017-02-10T15:02:00Z" finished-at="2017-02-10T15:02:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@51081592]" name="tearDown" is-config="true" duration-ms="3900" started-at="2017-02-10T15:02:22Z" finished-at="2017-02-10T15:02:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_012 Tracker Grades Overview Quals 2 -->
+    <test name="2525_013 Tracker Grades Overview Quals 3" duration-ms="37314" started-at="2017-02-10T15:02:11Z" finished-at="2017-02-10T15:02:48Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@4520ebad]" name="setup" is-config="true" duration-ms="5060" started-at="2017-02-10T15:02:11Z" finished-at="2017-02-10T15:02:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4493d195]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@4520ebad]" name="checkReportTables" duration-ms="29085" started-at="2017-02-10T15:02:16Z" finished-at="2017-02-10T15:02:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@4520ebad]" name="tearDown" is-config="true" duration-ms="3169" started-at="2017-02-10T15:02:45Z" finished-at="2017-02-10T15:02:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_013 Tracker Grades Overview Quals 3 -->
+    <test name="2525_014 Tracker Grades Overview Quals 4" duration-ms="32091" started-at="2017-02-10T15:02:18Z" finished-at="2017-02-10T15:02:50Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@1753acfe]" name="setup" is-config="true" duration-ms="4911" started-at="2017-02-10T15:02:18Z" finished-at="2017-02-10T15:02:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2781e022]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@1753acfe]" name="checkReportTables" duration-ms="24731" started-at="2017-02-10T15:02:23Z" finished-at="2017-02-10T15:02:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@1753acfe]" name="tearDown" is-config="true" duration-ms="2447" started-at="2017-02-10T15:02:48Z" finished-at="2017-02-10T15:02:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_014 Tracker Grades Overview Quals 4 -->
+    <test name="2525_015 Tracker Grades Overview Quals 5" duration-ms="28437" started-at="2017-02-10T15:02:26Z" finished-at="2017-02-10T15:02:54Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@28feb3fa]" name="setup" is-config="true" duration-ms="5230" started-at="2017-02-10T15:02:26Z" finished-at="2017-02-10T15:02:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@57e1b0c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@28feb3fa]" name="checkReportTables" duration-ms="19553" started-at="2017-02-10T15:02:31Z" finished-at="2017-02-10T15:02:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@28feb3fa]" name="tearDown" is-config="true" duration-ms="3653" started-at="2017-02-10T15:02:51Z" finished-at="2017-02-10T15:02:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_015 Tracker Grades Overview Quals 5 -->
+    <test name="2525_016 Tracker Grades Overview Quals 6" duration-ms="30762" started-at="2017-02-10T15:02:48Z" finished-at="2017-02-10T15:03:19Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@7823a2f9]" name="setup" is-config="true" duration-ms="4330" started-at="2017-02-10T15:02:48Z" finished-at="2017-02-10T15:02:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4232c52b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@7823a2f9]" name="checkReportTables" duration-ms="23164" started-at="2017-02-10T15:02:53Z" finished-at="2017-02-10T15:03:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@7823a2f9]" name="tearDown" is-config="true" duration-ms="3268" started-at="2017-02-10T15:03:16Z" finished-at="2017-02-10T15:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_016 Tracker Grades Overview Quals 6 -->
+    <test name="2525_018 Tracker Grades Overview Faculties 2" duration-ms="26097" started-at="2017-02-10T15:02:55Z" finished-at="2017-02-10T15:03:21Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@8bd1b6a]" name="setup" is-config="true" duration-ms="5922" started-at="2017-02-10T15:02:55Z" finished-at="2017-02-10T15:03:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@305fd85d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@8bd1b6a]" name="checkReportTables" duration-ms="17830" started-at="2017-02-10T15:03:01Z" finished-at="2017-02-10T15:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@8bd1b6a]" name="tearDown" is-config="true" duration-ms="2345" started-at="2017-02-10T15:03:19Z" finished-at="2017-02-10T15:03:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_018 Tracker Grades Overview Faculties 2 -->
+    <test name="2525_017 Tracker Grades Overview Faculties 1" duration-ms="31015" started-at="2017-02-10T15:02:50Z" finished-at="2017-02-10T15:03:21Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@4678c730]" name="setup" is-config="true" duration-ms="5627" started-at="2017-02-10T15:02:50Z" finished-at="2017-02-10T15:02:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1877ab81]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@4678c730]" name="checkReportTables" duration-ms="22768" started-at="2017-02-10T15:02:56Z" finished-at="2017-02-10T15:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@4678c730]" name="tearDown" is-config="true" duration-ms="2620" started-at="2017-02-10T15:03:19Z" finished-at="2017-02-10T15:03:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_017 Tracker Grades Overview Faculties 1 -->
+    <test name="2525_020 Tracker Grades Overview Faculties 4" duration-ms="32105" started-at="2017-02-10T15:03:21Z" finished-at="2017-02-10T15:03:53Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@d8355a8]" name="setup" is-config="true" duration-ms="5229" started-at="2017-02-10T15:03:21Z" finished-at="2017-02-10T15:03:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@11438d26]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@d8355a8]" name="checkReportTables" duration-ms="23998" started-at="2017-02-10T15:03:26Z" finished-at="2017-02-10T15:03:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@d8355a8]" name="tearDown" is-config="true" duration-ms="2878" started-at="2017-02-10T15:03:50Z" finished-at="2017-02-10T15:03:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_020 Tracker Grades Overview Faculties 4 -->
+    <test name="2525_019 Tracker Grades Overview Faculties 3" duration-ms="33698" started-at="2017-02-10T15:03:20Z" finished-at="2017-02-10T15:03:54Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@1d057a39]" name="setup" is-config="true" duration-ms="4030" started-at="2017-02-10T15:03:20Z" finished-at="2017-02-10T15:03:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@458c1321]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@1d057a39]" name="checkReportTables" duration-ms="27115" started-at="2017-02-10T15:03:24Z" finished-at="2017-02-10T15:03:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@1d057a39]" name="tearDown" is-config="true" duration-ms="2553" started-at="2017-02-10T15:03:51Z" finished-at="2017-02-10T15:03:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_019 Tracker Grades Overview Faculties 3 -->
+    <test name="2525_021 Tracker Grades Overview Filters 1" duration-ms="32588" started-at="2017-02-10T15:03:21Z" finished-at="2017-02-10T15:03:54Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@61832929]" name="setup" is-config="true" duration-ms="7091" started-at="2017-02-10T15:03:21Z" finished-at="2017-02-10T15:03:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@34cd072c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@61832929]" name="checkReportTables" duration-ms="23017" started-at="2017-02-10T15:03:28Z" finished-at="2017-02-10T15:03:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@61832929]" name="tearDown" is-config="true" duration-ms="2480" started-at="2017-02-10T15:03:51Z" finished-at="2017-02-10T15:03:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_021 Tracker Grades Overview Filters 1 -->
+    <test name="2525_022 Tracker Grades Overview Filters 2" duration-ms="28474" started-at="2017-02-10T15:03:53Z" finished-at="2017-02-10T15:04:22Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@68c4039c]" name="setup" is-config="true" duration-ms="4243" started-at="2017-02-10T15:03:53Z" finished-at="2017-02-10T15:03:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7a1ebcd8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@68c4039c]" name="checkReportTables" duration-ms="21371" started-at="2017-02-10T15:03:57Z" finished-at="2017-02-10T15:04:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@68c4039c]" name="tearDown" is-config="true" duration-ms="2860" started-at="2017-02-10T15:04:19Z" finished-at="2017-02-10T15:04:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_022 Tracker Grades Overview Filters 2 -->
+    <test name="2525_023 Tracker Grades Overview Filters 3" duration-ms="38477" started-at="2017-02-10T15:03:54Z" finished-at="2017-02-10T15:04:32Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@3e6fa38a]" name="setup" is-config="true" duration-ms="6271" started-at="2017-02-10T15:03:54Z" finished-at="2017-02-10T15:04:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5faeada1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@3e6fa38a]" name="checkReportTables" duration-ms="28823" started-at="2017-02-10T15:04:00Z" finished-at="2017-02-10T15:04:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@3e6fa38a]" name="tearDown" is-config="true" duration-ms="3381" started-at="2017-02-10T15:04:29Z" finished-at="2017-02-10T15:04:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_023 Tracker Grades Overview Filters 3 -->
+    <test name="2525_024 Tracker Grades Overview Filters 4" duration-ms="40700" started-at="2017-02-10T15:03:54Z" finished-at="2017-02-10T15:04:35Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@1bce4f0a]" name="setup" is-config="true" duration-ms="6982" started-at="2017-02-10T15:03:54Z" finished-at="2017-02-10T15:04:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@528931cf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@1bce4f0a]" name="checkReportTables" duration-ms="30752" started-at="2017-02-10T15:04:01Z" finished-at="2017-02-10T15:04:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@1bce4f0a]" name="tearDown" is-config="true" duration-ms="2965" started-at="2017-02-10T15:04:32Z" finished-at="2017-02-10T15:04:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_024 Tracker Grades Overview Filters 4 -->
+    <test name="2525_025 Tracker Grades Overview Filters 5" duration-ms="31237" started-at="2017-02-10T15:04:22Z" finished-at="2017-02-10T15:04:53Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@685cb137]" name="setup" is-config="true" duration-ms="6949" started-at="2017-02-10T15:04:22Z" finished-at="2017-02-10T15:04:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ea1a8d5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@685cb137]" name="checkReportTables" duration-ms="21667" started-at="2017-02-10T15:04:29Z" finished-at="2017-02-10T15:04:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@685cb137]" name="tearDown" is-config="true" duration-ms="2621" started-at="2017-02-10T15:04:50Z" finished-at="2017-02-10T15:04:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_025 Tracker Grades Overview Filters 5 -->
+    <test name="2525_026 Tracker Grades Overview Filters 6" duration-ms="26861" started-at="2017-02-10T15:04:32Z" finished-at="2017-02-10T15:04:59Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:reports.FigureChecking@4883b407]" name="setupSuite" is-config="true" duration-ms="0" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T14:59:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@4883b407]" name="setup" is-config="true" duration-ms="4874" started-at="2017-02-10T15:04:32Z" finished-at="2017-02-10T15:04:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1563da5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@4883b407]" name="checkReportTables" duration-ms="19877" started-at="2017-02-10T15:04:37Z" finished-at="2017-02-10T15:04:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@4883b407]" name="tearDown" is-config="true" duration-ms="2110" started-at="2017-02-10T15:04:57Z" finished-at="2017-02-10T15:04:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDownSuite()[pri:0, instance:reports.FigureChecking@4883b407]" name="tearDownSuite" is-config="true" duration-ms="0" started-at="2017-02-10T15:04:59Z" finished-at="2017-02-10T15:04:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2525_026 Tracker Grades Overview Filters 6 -->
+  </suite> <!-- Tracker Tests -->
+  <suite name="Core Tests" duration-ms="110755" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:59:51Z">
+    <groups>
+    </groups>
+    <test name="A8P8 Overview Unfiltered" duration-ms="33858" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:34Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@2c6a3f77]" name="setup" is-config="true" duration-ms="6441" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@33c7e1bb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@2c6a3f77]" name="checkReportTables" duration-ms="24201" started-at="2017-02-10T14:58:06Z" finished-at="2017-02-10T14:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@2c6a3f77]" name="tearDown" is-config="true" duration-ms="3149" started-at="2017-02-10T14:58:30Z" finished-at="2017-02-10T14:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- A8P8 Overview Unfiltered -->
+    <test name="A8P8 Overview Test Bucket = KS2" duration-ms="37467" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:37Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@1e67b872]" name="setup" is-config="true" duration-ms="7353" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2bbf4b8b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@1e67b872]" name="checkReportTables" duration-ms="27212" started-at="2017-02-10T14:58:07Z" finished-at="2017-02-10T14:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@1e67b872]" name="tearDown" is-config="true" duration-ms="2900" started-at="2017-02-10T14:58:34Z" finished-at="2017-02-10T14:58:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- A8P8 Overview Test Bucket = KS2 -->
+    <test name="2515 KS2 Core (Banding &amp; Prior)" duration-ms="38141" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:38Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@380fb434]" name="setup" is-config="true" duration-ms="8250" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30a3107a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@380fb434]" name="checkReportTables" duration-ms="27498" started-at="2017-02-10T14:58:08Z" finished-at="2017-02-10T14:58:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@380fb434]" name="tearDown" is-config="true" duration-ms="2392" started-at="2017-02-10T14:58:36Z" finished-at="2017-02-10T14:58:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2515 KS2 Core (Banding & Prior) -->
+    <test name="A8P8 EngMat Unfiltered" duration-ms="29892" started-at="2017-02-10T14:58:34Z" finished-at="2017-02-10T14:59:04Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@77b52d12]" name="setup" is-config="true" duration-ms="5054" started-at="2017-02-10T14:58:34Z" finished-at="2017-02-10T14:58:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@34c4973]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@77b52d12]" name="checkReportTables" duration-ms="21552" started-at="2017-02-10T14:58:39Z" finished-at="2017-02-10T14:59:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@77b52d12]" name="tearDown" is-config="true" duration-ms="3285" started-at="2017-02-10T14:59:00Z" finished-at="2017-02-10T14:59:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- A8P8 EngMat Unfiltered -->
+    <test name="A8P8 Ebacc Unfiltered" duration-ms="32265" started-at="2017-02-10T14:58:37Z" finished-at="2017-02-10T14:59:10Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@4157f54e]" name="setup" is-config="true" duration-ms="6082" started-at="2017-02-10T14:58:37Z" finished-at="2017-02-10T14:58:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@52feb982]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@4157f54e]" name="checkReportTables" duration-ms="23613" started-at="2017-02-10T14:58:43Z" finished-at="2017-02-10T14:59:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Rows with differences
+Expected: is <0>
+     but: was <9>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Rows with differences
+Expected: is <0>
+     but: was <9>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at reports.FigureChecking.checkNamedTableFigures(FigureChecking.java:303)
+	at reports.FigureChecking.checkReportTables(FigureChecking.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:421)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@4157f54e]" name="tearDown" is-config="true" duration-ms="2556" started-at="2017-02-10T14:59:07Z" finished-at="2017-02-10T14:59:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- A8P8 Ebacc Unfiltered -->
+    <test name="A8P8 Open Unfiltered" duration-ms="34104" started-at="2017-02-10T14:58:38Z" finished-at="2017-02-10T14:59:12Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@6615435c]" name="setup" is-config="true" duration-ms="7857" started-at="2017-02-10T14:58:38Z" finished-at="2017-02-10T14:58:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7a765367]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@6615435c]" name="checkReportTables" duration-ms="24147" started-at="2017-02-10T14:58:46Z" finished-at="2017-02-10T14:59:10Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Rows with differences
+Expected: is <0>
+     but: was <11>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Rows with differences
+Expected: is <0>
+     but: was <11>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at reports.FigureChecking.checkNamedTableFigures(FigureChecking.java:303)
+	at reports.FigureChecking.checkReportTables(FigureChecking.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:421)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@6615435c]" name="tearDown" is-config="true" duration-ms="2099" started-at="2017-02-10T14:59:10Z" finished-at="2017-02-10T14:59:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- A8P8 Open Unfiltered -->
+    <test name="2527 Headlines" duration-ms="40731" started-at="2017-02-10T14:59:04Z" finished-at="2017-02-10T14:59:44Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@67b6d4ae]" name="setup" is-config="true" duration-ms="5316" started-at="2017-02-10T14:59:04Z" finished-at="2017-02-10T14:59:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@76b0bfab]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@67b6d4ae]" name="checkReportTables" duration-ms="33605" started-at="2017-02-10T14:59:09Z" finished-at="2017-02-10T14:59:43Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'LT022', ip: '10.10.10.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: analytics.AnalyticsDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAGJ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABid0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, appBuildId=20170125094131, moz:firefoxOptions={args=[], profile=UEsDBBQACAgIAGJ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABid0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, version=51.0.1, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4568, webdriver.remote.sessionid=c0a0fbe7-bcc6-48c8-8cb6-c4a254b9841f, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt, cssSelectorsEnabled=true}]
+Session ID: c0a0fbe7-bcc6-48c8-8cb6-c4a254b9841f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'LT022', ip: '10.10.10.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: analytics.AnalyticsDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAGJ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABid0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, appBuildId=20170125094131, moz:firefoxOptions={args=[], profile=UEsDBBQACAgIAGJ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABid0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, version=51.0.1, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4568, webdriver.remote.sessionid=c0a0fbe7-bcc6-48c8-8cb6-c4a254b9841f, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt, cssSelectorsEnabled=true}]
+Session ID: c0a0fbe7-bcc6-48c8-8cb6-c4a254b9841f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at analytics.pages.reports.Report.waitForListGridDisplay(Report.java:440)
+	at analytics.pages.reports.Report.expandAreaGrid(Report.java:432)
+	at analytics.pages.reports.Report.openView(Report.java:66)
+	at reports.FigureChecking.openView(FigureChecking.java:152)
+	at reports.FigureChecking.checkReportTables(FigureChecking.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:421)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@67b6d4ae]" name="tearDown" is-config="true" duration-ms="1810" started-at="2017-02-10T14:59:43Z" finished-at="2017-02-10T14:59:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2527 Headlines -->
+    <test name="2527 Headlines Compare" duration-ms="38218" started-at="2017-02-10T14:59:10Z" finished-at="2017-02-10T14:59:48Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@7225790e]" name="setup" is-config="true" duration-ms="4789" started-at="2017-02-10T14:59:10Z" finished-at="2017-02-10T14:59:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@17d677df]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@7225790e]" name="checkReportTables" duration-ms="31661" started-at="2017-02-10T14:59:14Z" finished-at="2017-02-10T14:59:46Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'LT022', ip: '10.10.10.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: analytics.AnalyticsDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAGV3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABld0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, appBuildId=20170125094131, moz:firefoxOptions={args=[], profile=UEsDBBQACAgIAGV3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABld0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, version=51.0.1, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=3168, webdriver.remote.sessionid=5e6bf40f-93f9-4846-b144-090aa5f2520a, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt, cssSelectorsEnabled=true}]
+Session ID: 5e6bf40f-93f9-4846-b144-090aa5f2520a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'LT022', ip: '10.10.10.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: analytics.AnalyticsDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAGV3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABld0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, appBuildId=20170125094131, moz:firefoxOptions={args=[], profile=UEsDBBQACAgIAGV3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABld0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, version=51.0.1, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=3168, webdriver.remote.sessionid=5e6bf40f-93f9-4846-b144-090aa5f2520a, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt, cssSelectorsEnabled=true}]
+Session ID: 5e6bf40f-93f9-4846-b144-090aa5f2520a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at analytics.pages.reports.Report.waitForListGridDisplay(Report.java:440)
+	at analytics.pages.reports.Report.expandAreaGrid(Report.java:432)
+	at analytics.pages.reports.Report.openView(Report.java:66)
+	at reports.FigureChecking.openView(FigureChecking.java:152)
+	at reports.FigureChecking.checkReportTables(FigureChecking.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:421)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@7225790e]" name="tearDown" is-config="true" duration-ms="1768" started-at="2017-02-10T14:59:46Z" finished-at="2017-02-10T14:59:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2527 Headlines Compare -->
+    <test name="2527 Headlines Breakdown" duration-ms="38463" started-at="2017-02-10T14:59:12Z" finished-at="2017-02-10T14:59:51Z">
+      <class name="reports.FigureChecking">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:reports.FigureChecking@52af6cff]" name="setupSuite" is-config="true" duration-ms="98" started-at="2017-02-10T14:58:00Z" finished-at="2017-02-10T14:58:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:reports.FigureChecking@52af6cff]" name="setup" is-config="true" duration-ms="6210" started-at="2017-02-10T14:59:12Z" finished-at="2017-02-10T14:59:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3043fe0e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="checkReportTables()[pri:0, instance:reports.FigureChecking@52af6cff]" name="checkReportTables" duration-ms="30518" started-at="2017-02-10T14:59:18Z" finished-at="2017-02-10T14:59:49Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'LT022', ip: '10.10.10.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: analytics.AnalyticsDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAGZ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABmd0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, appBuildId=20170125094131, moz:firefoxOptions={args=[], profile=UEsDBBQACAgIAGZ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABmd0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, version=51.0.1, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4752, webdriver.remote.sessionid=c045af24-8b38-4543-9e6c-e6f175bcf432, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt, cssSelectorsEnabled=true}]
+Session ID: c045af24-8b38-4543-9e6c-e6f175bcf432]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'LT022', ip: '10.10.10.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: analytics.AnalyticsDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], profile=UEsDBBQACAgIAGZ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABmd0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, appBuildId=20170125094131, moz:firefoxOptions={args=[], profile=UEsDBBQACAgIAGZ3SkoAAAAAAAAAAAAAAAAHAAAAdXNlci5qc51WTW/bMAy971cMOW3AKqTretlOXdcBA4Z1aFDsKMgSbauRJU0fcfPvR/mjSRNHbndKbJMS+fj4yOjBUeugfLconGnxiXhWQvdf6oo0TLXMAQHNCgVi8eFtyZSH91/exJ2nYAFtrHEhudTAVKj7Z4JGG8ln/DWE1rg1qUOwxNbS19uz9Nky788U6CrU6Pjx8vK52xiwAybwR0AAHkB8l86HK4yFK0C34OJhuKbBvB4pr51pgHrupA3URU2DbJLLxXL6osAKTxAOfauvlfEwnc1oLUyrlWEC79KsSsDWpv1Tg14hWgmpaXeLQdng02W0MYKpGexhE4xRnoBzxnGjvVH7cB+n72WljUbUGmgKcKvu0edz8eC9RKtgkAsOfETcSgyUcsd8nfdVUq+JsaApPAZwmqlUzFczqExlvYt6+rIWCuHkBp8Z54DljBoz90gHysEFP4nEU6Wkt4ptQdycL1e/DDInlfbTtDG+Erf6j9RYX3++JBIvMvd3P9FjwQoTw+dCMb1eHHOuT4gypeiDRzBSnLKH/ji2RysRbrQlbS0DKOkDHvA3SneKCYkGaxnI0E0j6zC5xIUsAIphYbAB8lTzibfRkhq7xuLZtAXFUwdFl0q6OEg5VVt3rCHRYoGBaIS23N6jyat1JNrUSjfZ8IBHJ8MWmaIA/xEfnOSBGicrqak1SvJtnqoaWmw7MuSTqeazQPuTSXq5ikUju1b53b286sj4Mt2cPCab8VN3DoVJRUHLE+q160NMs+34e9yIpizRDs6YtZ4g+0xLiy0VULKowrScjLBzbwf+TEd7zIcs20Y6I/dRqYLbkl4ZO/uPc7bZo0dEbu5/XpELwnZFOk7vgW1YPyGyonpYirFH8jw6jtvBQzfEspf0NE3H5/PcQ5zFYL71SrDiSIIkOufLUxran0o1C/hIYQN6RkH3JuMtMmw2nEIZvu407UWF8sAcrwfazE3dhvTkJiI2Nls0JPmLqPiMLwYBclJMC+qRBh2Kz8X05tOL9dnYfciiEGdG8mB7QlmGFWd+t9kbnL4b67vBiQoUO6nOIpeYNR3EXuuYftJ1K9APfd1vKSeXs2Fk0U6sBMKoK5rkf4YkNeC05DXw9bder772X14/zQgTQqaI2cwgmNyZ/3dXVqaq0sthictK/14vdRlfozRitxZSJfZpWdVBnRh2e67jjf+jbHRsBNLgWtgRcZFWSQcHGO02mbR5IrFxf5xZZXZ9r0ofbb8B7JaMf1BLBwh1hce1pQMAALUMAABQSwECFAAUAAgICABmd0pKdYXHtaUDAAC1DAAABwAAAAAAAAAAAAAAAAAAAAAAdXNlci5qc1BLBQYAAAAAAQABADUAAADaAwAAAAA=}, version=51.0.1, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=4752, webdriver.remote.sessionid=c045af24-8b38-4543-9e6c-e6f175bcf432, browserVersion=51.0.1, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, javascriptEnabled=true, platformName=windows_nt, cssSelectorsEnabled=true}]
+Session ID: c045af24-8b38-4543-9e6c-e6f175bcf432
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at analytics.pages.reports.Report.waitForListGridDisplay(Report.java:440)
+	at analytics.pages.reports.Report.expandAreaGrid(Report.java:432)
+	at analytics.pages.reports.Report.openView(Report.java:66)
+	at reports.FigureChecking.openView(FigureChecking.java:152)
+	at reports.FigureChecking.checkReportTables(FigureChecking.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:421)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReportTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:reports.FigureChecking@52af6cff]" name="tearDown" is-config="true" duration-ms="1735" started-at="2017-02-10T14:59:49Z" finished-at="2017-02-10T14:59:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDownSuite()[pri:0, instance:reports.FigureChecking@52af6cff]" name="tearDownSuite" is-config="true" duration-ms="0" started-at="2017-02-10T14:59:51Z" finished-at="2017-02-10T14:59:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- reports.FigureChecking -->
+    </test> <!-- 2527 Headlines Breakdown -->
+  </suite> <!-- Core Tests -->
+</testng-results>

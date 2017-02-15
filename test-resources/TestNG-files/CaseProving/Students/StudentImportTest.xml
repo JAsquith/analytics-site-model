@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="2247 - Import Students" parallel="tests" thread-count="3">
+
+	<parameter name="suite-name" value="2247 - Import Students" />
+	<parameter name="log-folder" value="c:/selenium/logs" />
+	<parameter name="test-domain" value="dev" />
+	<parameter name="browser" value="firefox" />
+	<parameter name="version" value="ANY" />
+	<parameter name="grid-type" value="local" />
+
+	<test name="Import 16/17 Students">
+		<parameter name="username" value="autoa176165" />
+		<parameter name="password" value="QpXdPdTz7" />
+		<parameter name="eap-cohort" value="17" />
+		<parameter name="keystage" value="4" />
+		<parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
+		<classes>
+			<class name="admin.data.students.StudentImportTest" />
+		</classes>
+	</test>
+
+	<test name="Import 17/18 Students">
+		<parameter name="username" value="autob176166" />
+		<parameter name="password" value="XmFfYoYa2" />
+		<parameter name="eap-cohort" value="18" />
+		<parameter name="keystage" value="4" />
+		<parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
+		<classes>
+			<class name="admin.data.students.StudentImportTest" />
+		</classes>
+	</test>
+
+	<test name="Import 18/19 Students">
+		<parameter name="username" value="autoc176167" />
+		<parameter name="password" value="XcJnDvZc8" />
+		<parameter name="eap-cohort" value="19" />
+		<parameter name="keystage" value="3" />
+		<parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
+		<classes>
+			<class name="admin.data.students.StudentImportTest" />
+		</classes>
+	</test>
+
+	<test name="Import 19/20 Students">
+		<parameter name="username" value="autod176168" />
+		<parameter name="password" value="SgFqKgRo3" />
+		<parameter name="eap-cohort" value="20" />
+		<parameter name="keystage" value="3" />
+		<parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
+		<classes>
+			<class name="admin.data.students.StudentImportTest" />
+		</classes>
+	</test>
+
+	<test name="Import 20/21 Students">
+		<parameter name="username" value="autoe176169" />
+		<parameter name="password" value="BcTdRtMs7" />
+		<parameter name="eap-cohort" value="21" />
+		<parameter name="keystage" value="3" />
+		<parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
+		<classes>
+			<class name="admin.data.students.StudentImportTest" />
+		</classes>
+	</test>
+
+</suite>

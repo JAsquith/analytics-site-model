@@ -1,0 +1,90 @@
+Cohort Summary
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Cohort,177,177,0,100.0,100.0,0.0
+,__________,__________,__________,__________,__________,__________
+Attainment/Progress 8 Summary
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Average total Attainment 8,51.50,61.37,-9.87,,,
+A8 Avg Pts,5.15,6.14,-0.99,,,
+Average KS2 Prior Attainment,4.71,4.71,,,,
+Average Estimated A8,54.56,57.14,-2.58,,,
+Average Total Progress 8,-0.477,0.503,-0.980,,,
+P8 Upper Confidence Interval,-0.317,0.663,-0.980,,,
+P8 Lower Confidence Interval,-0.637,0.344,-0.980,,,
+Pupils Included (Progress 8 Coverage),169,169,0,95.5,95.5,0.0
+,__________,__________,__________,__________,__________,__________
+Basics Measures
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Students Achieving 9-5 in English and Maths,82,114,-32,46.3,64.4,-18.1
+Students Achieving 9-5 in English,120,138,-18,67.8,78.0,-10.2
+Students Achieving 9-5 in Maths,97,126,-29,54.8,71.2,-16.4
+Students Achieving 9-4 in English and Maths,129,148,-19,72.9,83.6,-10.7
+Students Achieving 9-4 in English,152,159,-7,85.9,89.8,-4.0
+Students Achieving 9-4 in Maths,143,156,-13,80.8,88.1,-7.3
+,__________,__________,__________,__________,__________,__________
+KS4 Results
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Students taking more than 1 Language (GCSE only),1,176,-175,0.6,99.4,-98.9
+Students taking 3 Single Sciences (GCSE only),61,176,-115,34.5,99.4,-65.0
+Pupils achieving at least 1 qualification,176,176,0,99.4,99.4,0.0
+Average Entries per Student,8.7,21.8,-13.1,,,
+Average Entries per Student (GCSE only),8.7,21.7,-13.0,,,
+,__________,__________,__________,__________,__________,__________
+EBacc Total Measure
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Students Entered For the E-BACC,59,173,-114,33.3,97.7,-64.4
+Students in COHORT Achieving the E-BACC,35,37,-2,19.8,20.9,-1.1
+,__________,__________,__________,__________,__________,__________
+EBacc Elements
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Students Entered For the English Element,174,175,-1,98.3,98.9,-0.6
+Students in COHORT Achieving the English Element,120,137,-17,67.8,77.4,-9.6
+Students Entered For the Maths Element,171,174,-3,96.6,98.3,-1.7
+Students in COHORT Achieving the Maths Element,97,126,-29,54.8,71.2,-16.4
+Students Entered For the 2 x Sciences Element,171,176,-5,96.6,99.4,-2.8
+Students ENTERED and Achieving the 2 x Sciences Element,129,98,31,72.9,55.4,17.5
+Students Entered For the Languages Element,78,176,-98,44.1,99.4,-55.4
+Students ENTERED and Achieving the Languages Element,71,128,-57,40.3,72.7,-32.4
+Students Entered For the Humanities Element,150,176,-26,84.7,99.4,-14.7
+Students ENTERED and Achieving the Humanities Element,123,119,4,69.9,67.6,2.3
+,__________,__________,__________,__________,__________,__________
+Attainment/Progress 8 - English
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Average English Attainment 8,10.10,10.80,-0.70,,,
+Average English Attainment 8 Grade,5.05,5.40,-0.35,,,
+Average English Estimated Attainment 8,11.28,11.82,-0.53,,,
+Average English Progress 8,-0.765,-0.425,-0.340,,,
+English Progress 8 Upper Confidence Limit,-0.595,-0.256,-0.340,,,
+English Progress 8 Lower Confidence Limit,-0.935,-0.595,-0.340,,,
+,__________,__________,__________,__________,__________,__________
+Attainment/Progress 8 - Maths
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Average Maths Attainment 8,10.02,10.67,-0.65,,,
+Average Maths Attainment 8 Grade,5.01,5.34,-0.32,,,
+Average Maths Estimated Attainment 8,10.89,11.40,-0.52,,,
+Average Maths Progress 8,-0.558,-0.294,-0.264,,,
+Maths Progress 8 Upper Confidence Limit,-0.372,-0.108,-0.264,,,
+Maths Progress 8 Lower Confidence Limit,-0.744,-0.480,-0.264,,,
+,__________,__________,__________,__________,__________,__________
+Attainment/Progress 8 - EBacc
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Average Ebacc Attainment 8,15.59,18.56,-2.97,,,
+Average Ebacc Attainment 8 Grade,5.20,6.19,-0.99,,,
+Average Ebacc Estimated Attainment 8,15.50,16.24,-0.73,,,
+Average Ebacc Progress 8,-0.160,0.849,-1.009,,,
+Ebacc Progress 8 Upper Confidence Limit,0.048,1.058,-1.009,,,
+Ebacc Progress 8 Lower Confidence Limit,-0.369,0.640,-1.009,,,
+Average Ebacc Slots Filled,2.77,3.00,-0.23,,,
+Average Estimated Ebacc Slots Filled,2.71,2.84,-0.13,,,
+,__________,__________,__________,__________,__________,__________
+Attainment/Progress 8 - Open
+Measure,Total,Compare Total,Total (Diff),%,Compare %,% (Diff)
+Average Open Attainment 8,15.78,21.34,-5.56,,,
+Average Open Attainment 8 Grade,5.26,7.11,-1.85,,,
+Average Open Estimated Attainment 8,16.88,17.68,-0.80,,,
+Average Open Progress 8,-0.548,1.308,-1.856,,,
+Open Progress 8 Upper Confidence Limit,-0.362,1.494,-1.856,,,
+Open Progress 8 Lower Confidence Limit,-0.733,1.123,-1.856,,,
+Average Open Slots Filled,2.86,3.00,-0.14,,,
+Average Estimated Open Slots Filled,2.81,2.95,-0.13,,,
+,__________,__________,__________,__________,__________,__________

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Setup 10" parallel="tests" thread-count="4">
+
+    <parameter name="suite-name" value="Regression Setup 10" />
+    <parameter name="log-folder" value="C:/Selenium/Logs" />
+
+    <parameter name="test-domain" value="dev" />
+    <parameter name="platform" value="Windows" />
+    <parameter name="browser" value="firefox" />
+    <parameter name="version" value="ANY" />
+
+    <!-- Use these settings when running on personal laptop grid -->
+    <parameter name="grid-type" value="local" />
+
+<!--
+-->
+    <test name="CreateFilter0001">
+
+        <parameter name="username" value="regset173955" />
+        <parameter name="password" value="MkVcGyNn3" />
+        <parameter name="filter-name" value="EAL" />
+        <parameter name="default-value" value="No" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0002">
+
+        <parameter name="username" value="regset173956" />
+        <parameter name="password" value="KmZtRrAn7" />
+        <parameter name="filter-name" value="FSM" />
+        <parameter name="default-value" value="No" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0003">
+
+        <parameter name="username" value="regset173957" />
+        <parameter name="password" value="CjEsFxEd9" />
+        <parameter name="filter-name" value="PP" />
+        <parameter name="default-value" value="No" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0004">
+
+        <parameter name="username" value="regset173958" />
+        <parameter name="password" value="AmRoMdTk9" />
+        <parameter name="filter-name" value="Tutor Group" />
+        <parameter name="default-value" value="N/A" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0005">
+
+        <parameter name="username" value="regset173959" />
+        <parameter name="password" value="FcYaKgQw5" />
+        <parameter name="filter-name" value="Mid Ability" />
+        <parameter name="default-value" value="Yes" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0006">
+
+        <parameter name="username" value="regset173961" />
+        <parameter name="password" value="HwBvQsAr8" />
+        <parameter name="filter-name" value="Attendance Group" />
+        <parameter name="default-value" value="1. 100%" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0007">
+
+        <parameter name="username" value="regset173962" />
+        <parameter name="password" value="SaDqXnWv3" />
+        <parameter name="filter-name" value="Transition" />
+        <parameter name="default-value" value="No" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0008">
+
+        <parameter name="username" value="regset173963" />
+        <parameter name="password" value="NnXjSpGx6" />
+        <parameter name="filter-name" value="House" />
+        <parameter name="default-value" value="-" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0009">
+
+        <parameter name="username" value="regset173964" />
+        <parameter name="password" value="PrJiJmJc4" />
+
+        <parameter name="val-page" value="2" />
+        <parameter name="val-messages" value="Please enter a filter name.|Please enter a default value." />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0010">
+
+        <parameter name="username" value="regset173965" />
+        <parameter name="password" value="SySzHcKz4" />
+        <parameter name="filter-name" value="a" />
+        <parameter name="default-value" value="b" />
+        <parameter name="val-page" value="2" />
+        <parameter name="val-messages" value="Filter Name must be between 2 and 25 characters." />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <test name="CreateFilter0011">
+
+        <parameter name="username" value="regset173966" />
+        <parameter name="password" value="QdEuKdTt5" />
+        <parameter name="filter-name" value="Character Character 12345" />
+        <parameter name="default-value" value="Character Character Character Characters" />
+
+        <classes>
+            <class name="admin.config.CreateFilterTest" />
+        </classes>
+    </test>
+
+    <!--
+    -->
+
+</suite>

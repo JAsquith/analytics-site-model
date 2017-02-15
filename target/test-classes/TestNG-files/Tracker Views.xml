@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tracker Tests" parallel="tests" thread-count="3">
+
+    <parameter name="suite-name" value="Tracker Tests" />
+    <parameter name="log-folder" value="C:/Selenium/Logs" />
+    <parameter name="test-domain" value="dev" />
+    <parameter name="grid-type" value="local" />
+    <parameter name="platform" value="windows" />
+    <parameter name="browser" value="firefox" />
+    <parameter name="version" value="ANY" />
+
+    <test name="2525_001 Tracker Grades Overview Students 1">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176530" />
+        <parameter name="password" value="RnCvWsYx9" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 1" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Students" />
+        <parameter name="gradeType" value="GCSE A*-G 2017" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_001.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_002 Tracker Grades Overview Students 2">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176531" />
+        <parameter name="password" value="EvRsAuZj6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 1" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Students" />
+        <parameter name="faculty" value="English" />
+        <parameter name="gradeType" value="GCSE 9-1" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_002.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_003 Tracker Grades Overview Students 3">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176532" />
+        <parameter name="password" value="MxSiWzFp2" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 2" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Students" />
+        <parameter name="faculty" value="Creative Arts" />
+        <parameter name="qual" value="Dance" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_003.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_004 Tracker Grades Overview Students 4">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176533" />
+        <parameter name="password" value="UeMkCkPz7" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 2" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Students" />
+        <parameter name="faculty" value="Creative Arts" />
+        <parameter name="qual" value="Music" />
+        <parameter name="class" value="11BMu1" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_004.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_005 Tracker Grades Overview Students 5">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176534" />
+        <parameter name="password" value="QoSdDcGo3" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 2" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Students" />
+        <parameter name="faculty" value="Maths" />
+        <parameter name="gradeType" value="GCSE 9-1" />
+        <parameter name="breakdown" value="Reg Group" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_005.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_006 Tracker Grades Overview Students 6">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176535" />
+        <parameter name="password" value="UcJnNsYt7" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 3" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="compWith" value="Tracker 2" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Students" />
+        <parameter name="faculty" value="Creative Arts" />
+        <parameter name="qual" value="BTEC Dance Double" />
+        <parameter name="gradeType" value="DMP Double" />
+        <parameter name="breakdown" value="Attendance Group" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_006.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_007 Tracker Grades Overview Classes 1">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176536" />
+        <parameter name="password" value="WdZyZqTb7" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 4" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Classes" />
+        <parameter name="faculty" value="Technology" />
+        <parameter name="qual" value="DT Graphics" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_007.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_008 Tracker Grades Overview Classes 2">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176537" />
+        <parameter name="password" value="PnChTeBd4" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 4" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Classes" />
+        <parameter name="faculty" value="English" />
+        <parameter name="qual" value="English Literature" />
+        <parameter name="gcseOrNot" value="GCSE" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_008.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_009 Tracker Grades Overview Classes 3">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176538" />
+        <parameter name="password" value="PaUeReBb2" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 4" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="compWith" value="Tracker 5" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Classes" />
+        <parameter name="faculty" value="English" />
+        <parameter name="qual" value="English Literature" />
+        <parameter name="gcseOrNot" value="GCSE" />
+        <parameter name="breakdown" value="Ethnic Code" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_009.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_010 Tracker Grades Overview Classes 4">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176539" />
+        <parameter name="password" value="HzQqVxPh4" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 5" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Classes" />
+        <parameter name="faculty" value="ICT" />
+        <parameter name="qual" value="Business Studies" />
+        <parameter name="breakdown" value="SEN" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_010.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_011 Tracker Grades Overview Quals 1">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176540" />
+        <parameter name="password" value="DoNpHiPm9" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 5" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Quals" />
+        <parameter name="faculty" value="ICT" />
+        <parameter name="gradeType" value="GCSE A*-G 2017" />
+        <parameter name="breakdown" value="SEN" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_011.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_012 Tracker Grades Overview Quals 2">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176541" />
+        <parameter name="password" value="HsSgNfVw8" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 5" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Quals" />
+        <parameter name="breakdown" value="KS2 Banding" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_012.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_013 Tracker Grades Overview Quals 3">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176542" />
+        <parameter name="password" value="FsJpWgAi5" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 5" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="compWith" value="Tracker 1" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Quals" />
+        <parameter name="breakdown" value="KS2 Banding" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_013.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_014 Tracker Grades Overview Quals 4">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176543" />
+        <parameter name="password" value="CsGdMpBo5" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 5" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Quals" />
+        <parameter name="faculty" value="MFL" />
+        <parameter name="gcseOrNot" value="GCSE" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_014.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_015 Tracker Grades Overview Quals 5">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176544" />
+        <parameter name="password" value="TaQuJkFh6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 6" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Quals" />
+        <parameter name="faculty" value="Science" />
+        <parameter name="breakdown" value="Term Of Birth" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_015.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_016 Tracker Grades Overview Quals 6">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176545" />
+        <parameter name="password" value="GnAjCzFq8" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 6" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Quals" />
+        <parameter name="gcseOrNot" value="GCSE" />
+        <parameter name="breakdown" value="KS1-2 Progress Made" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_016.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_017 Tracker Grades Overview Faculties 1">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176546" />
+        <parameter name="password" value="WvNhGbGb4" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 6" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Faculties" />
+        <parameter name="gcseOrNot" value="Non-GCSE" />
+        <parameter name="breakdown" value="Reg Group" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_017.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_018 Tracker Grades Overview Faculties 2">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176547" />
+        <parameter name="password" value="NfQmCcVq9" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 6" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Faculties" />
+        <parameter name="breakdown" value="FSM Ever 6" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_018.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_019 Tracker Grades Overview Faculties 3">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176548" />
+        <parameter name="password" value="UkVgSpRy7" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 1" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Faculties" />
+        <parameter name="gradeType" value="GCSE 9-1" />
+        <parameter name="breakdown" value="SEN Provision" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_019.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_020 Tracker Grades Overview Faculties 4">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176549" />
+        <parameter name="password" value="YoZyVmXh6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 1" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Faculties" />
+        <parameter name="gradeType" value="GCSE A*-G 2017" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_020.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_021 Tracker Grades Overview Filters 1">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176550" />
+        <parameter name="password" value="FoUhPbYa5" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 1" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Filters" />
+        <parameter name="gradeType" value="DMP Double" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_021.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_022 Tracker Grades Overview Filters 2">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176551" />
+        <parameter name="password" value="PuTqZuCb6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 6" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Filters" />
+        <parameter name="gradeType" value="GCSE 9-1" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_022.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_023 Tracker Grades Overview Filters 3">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176552" />
+        <parameter name="password" value="TbVzUeHg3" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 2" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="compWith" value="Tracker 3" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Filters" />
+        <parameter name="gradeType" value="GCSE 9-1" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_023.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_024 Tracker Grades Overview Filters 4">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176553" />
+        <parameter name="password" value="BiQbAqRq8" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 2" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="compWith" value="Tracker 3" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Filters" />
+        <parameter name="tracking" value="On Track" />
+        <parameter name="gradeType" value="GCSE A*-G 2017" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_024.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_025 Tracker Grades Overview Filters 5">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176554" />
+        <parameter name="password" value="HzThTmSj9" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 3" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Filters" />
+        <parameter name="tracking" value="On Or Above" />
+        <parameter name="qual" value="Sci Physics" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_025.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+
+    <test name="2525_026 Tracker Grades Overview Filters 6">
+        <parameter name="school" value="SISRA Mark Regression" />
+        <parameter name="username" value="regmar176530" />
+        <parameter name="password" value="RnCvWsYx9" />
+        <parameter name="cohort" value="17" />
+        <parameter name="eapYear" value="11" />
+        <parameter name="dataset" value="Tracker 4" />
+        <parameter name="tracker-column" value="Average Points" />
+        <parameter name="area" value="Grades" />
+        <parameter name="report" value="Overview" />
+        <parameter name="level" value="Filters" />
+        <parameter name="gradeType" value="DMP Double" />
+        <parameter name="tableNames" value="" />
+        <parameter name="dataFiles" value="2525_17_Grades_Overview_026.csv" />
+        <classes>
+            <class name="reports.FigureChecking" />
+        </classes>
+    </test>
+</suite>

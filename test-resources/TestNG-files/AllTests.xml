@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Setup" parallel="tests" thread-count="3">
+
+    <suite-files>
+
+        <suite-file path="Headlines and A8P8.xml" />
+        <suite-file path="Tracker Views.xml" />
+
+<!--
+
+        <suite-file path="CaseProving/RegressionSuite.xml" />
+
+        <suite-file path="CaseProving/Config/CreateFilterTest.xml" />
+        <suite-file path="CaseProving/Config/ChangeStudentProfileTest.xml" />
+        <suite-file path="CaseProving/Config/CreateEAPGradeMethodTest.xml" />
+        <suite-file path="CaseProving/Students/StudentImportTest.xml" />
+        <suite-file path="CaseProving/Students/PublishStudentsTest.xml" />
+        <suite-file path="CaseProving/Basedata/UploadBaselinesTest.xml" />
+        <suite-file path="CaseProving/Basedata/EditBaselinesTest.xml" />
+        <suite-file path="CaseProving/Basedata/CreateEAPTest.xml" />
+        <suite-file path="CaseProving/Basedata/ImportEAPTest.xml" />
+        <suite-file path="CaseProving/Basedata/CopyEAPTest.xml" />
+        <suite-file path="CaseProving/Basedata/PublishBaseDataTest.xml" />
+
+-->
+
+
+
+<!--
+
+        <suite-file path="CaseProving/Grades/CreateAssessmentCollectionTest.xml" />
+        <suite-file path="CaseProving/Grades/UploadsForAssessmentsTest.xml" />
+        <suite-file path="CaseProving/Grades/MatchingPageTest.xml" />
+        <suite-file path="CaseProving/Grades/PublishGradesTest.xml" />
+
+-->
+    </suite-files>
+
+
+</suite>

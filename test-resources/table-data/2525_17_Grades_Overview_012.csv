@@ -1,0 +1,120 @@
+DMP Double (Att8 Points)
+Name,Filter Value,Stu Count,Tracker 1 (Assessments) Avg Pts,Tracker 2 (Assessments) Avg Pts,Tracker 3 (Assessments) Avg Pts,Tracker 4 (Assessments) Avg Pts,Tracker 5 (Assessments) Avg Pts,Tracker 6 (Assessments) Avg Pts
+BTEC Dance Double,All,17,7.68,7.94,8.59,8.74,10.56,11.62
+BTEC Dance Double,Middle,10,6.70,7.00,8.10,8.85,9.95,10.85
+BTEC Dance Double,Upper/High,7,9.07,9.29,9.29,8.57,11.43,12.71
+Summary,All,17,7.68,7.94,8.59,8.74,10.56,11.62
+Summary,Middle,10,6.70,7.00,8.10,8.85,9.95,10.85
+Summary,Upper/High,7,9.07,9.29,9.29,8.57,11.43,12.71
+GCSE 9-1 (Att8 Points)
+Name,Filter Value,Stu Count,Tracker 1 (Assessments) Avg Pts,Tracker 2 (Assessments) Avg Pts,Tracker 3 (Assessments) Avg Pts,Tracker 4 (Assessments) Avg Pts,Tracker 5 (Assessments) Avg Pts,Tracker 6 (Assessments) Avg Pts
+English Language,All,210,4.62,4.69,4.79,5.02,5.36,5.77
+English Language,Lower,18,2.83,3.00,3.11,3.39,3.89,4.22
+English Language,Middle,107,4.38,4.43,4.49,4.76,5.10,5.56
+English Language,Upper/High,85,5.31,5.38,5.52,5.71,6.00,6.36
+English Literature,All,210,4.62,4.69,4.79,5.02,5.36,5.77
+English Literature,Lower,18,2.83,3.00,3.11,3.39,3.89,4.22
+English Literature,Middle,107,4.38,4.43,4.49,4.76,5.10,5.56
+English Literature,Upper/High,85,5.31,5.38,5.52,5.71,6.00,6.36
+Maths,All,198,4.62,4.67,4.72,4.99,5.29,5.69
+Maths,Lower,8,2.88,3.00,3.00,3.50,3.75,4.00
+Maths,Middle,105,4.29,4.30,4.31,4.53,4.93,5.31
+Maths,Upper/High,85,5.19,5.29,5.39,5.69,5.88,6.31
+Summary,All,210,4.62,4.68,4.77,5.01,5.34,5.74
+Summary,Lower,18,2.84,3.00,3.09,3.41,3.86,4.18
+Summary,Middle,107,4.35,4.39,4.43,4.68,5.05,5.48
+Summary,Upper/High,85,5.27,5.35,5.47,5.70,5.96,6.35
+GCSE A*-G 2017 (Att8 Points)
+Name,Filter Value,Stu Count,Tracker 1 (Assessments) Avg Pts,Tracker 2 (Assessments) Avg Pts,Tracker 3 (Assessments) Avg Pts,Tracker 4 (Assessments) Avg Pts,Tracker 5 (Assessments) Avg Pts,Tracker 6 (Assessments) Avg Pts
+Art,All,55,3.75,4.01,4.05,4.75,5.08,5.25
+Art,Lower,8,3.44,3.50,3.63,4.19,4.44,4.56
+Art,Middle,27,3.57,3.67,3.69,4.28,4.63,4.70
+Art,Upper/High,20,4.10,4.68,4.72,5.60,5.95,6.25
+Business Studies,All,23,3.54,3.61,3.78,4.52,4.87,4.91
+Business Studies,Lower,1,3.00,3.00,3.00,4.00,4.00,5.50
+Business Studies,Middle,12,3.21,3.21,3.38,4.00,4.38,4.71
+Business Studies,Upper/High,10,4.00,4.15,4.35,5.20,5.55,5.10
+Child Development,All,24,3.38,3.67,3.88,4.15,4.27,4.56
+Child Development,Middle,19,3.39,3.66,3.84,3.97,4.13,4.29
+Child Development,Upper/High,5,3.30,3.70,4.00,4.80,4.80,5.60
+Computer Science,All,49,4.09,4.14,4.26,4.41,4.90,5.14
+Computer Science,Lower,3,2.33,2.33,2.33,2.33,3.17,3.17
+Computer Science,Middle,30,4.08,4.08,4.15,4.37,4.60,4.90
+Computer Science,Upper/High,16,4.44,4.59,4.81,4.88,5.78,5.97
+Dance,All,17,3.97,3.97,3.97,4.21,4.85,5.12
+Dance,Middle,10,3.90,3.75,3.75,3.70,4.55,4.70
+Dance,Upper/High,7,4.07,4.29,4.29,4.93,5.29,5.71
+Drama,All,8,4.25,4.63,4.38,4.19,5.19,5.69
+Drama,Middle,5,4.10,4.60,3.90,3.60,4.10,4.90
+Drama,Upper/High,3,4.50,4.67,5.17,5.17,7.00,7.00
+DT Electronics,All,33,3.48,3.61,3.61,4.05,4.45,5.03
+DT Electronics,Lower,1,3.00,3.00,3.00,3.00,3.00,4.00
+DT Electronics,Middle,17,3.03,3.06,3.06,3.41,3.85,4.38
+DT Electronics,Upper/High,15,4.03,4.27,4.27,4.83,5.23,5.83
+DT Food,All,43,3.79,3.98,3.98,4.37,4.77,5.27
+DT Food,Middle,27,3.63,3.81,3.81,4.13,4.48,4.85
+DT Food,Upper/High,16,4.06,4.25,4.25,4.78,5.25,5.97
+DT Graphics,All,45,4.00,4.16,4.18,4.66,4.86,5.43
+DT Graphics,Lower,3,3.00,3.00,2.67,2.67,3.67,4.17
+DT Graphics,Middle,21,3.26,3.33,3.21,3.62,4.05,4.62
+DT Graphics,Upper/High,21,4.88,5.14,5.36,5.98,5.83,6.43
+DT Resistant Materials,All,47,3.39,3.63,3.70,3.96,4.39,5.01
+DT Resistant Materials,Lower,13,3.04,3.27,3.23,3.62,4.00,4.31
+DT Resistant Materials,Middle,21,3.38,3.55,3.64,3.76,4.29,4.86
+DT Resistant Materials,Upper/High,13,3.77,4.12,4.27,4.62,4.96,5.96
+DT Textiles,All,42,4.05,4.32,4.57,4.83,5.24,5.82
+DT Textiles,Lower,1,4.00,4.00,4.00,4.00,5.50,5.50
+DT Textiles,Middle,21,3.55,3.69,3.90,4.36,4.74,5.36
+DT Textiles,Upper/High,20,4.58,5.00,5.30,5.38,5.75,6.33
+Geography,All,24,4.25,4.56,4.88,5.04,5.88,6.38
+Geography,Middle,8,3.88,4.06,4.50,4.63,5.13,5.69
+Geography,Upper/High,16,4.44,4.81,5.06,5.25,6.25,6.72
+History,All,116,4.40,4.44,4.61,4.75,5.31,5.74
+History,Lower,2,1.50,1.50,1.75,2.00,2.00,3.00
+History,Middle,52,4.08,4.08,4.34,4.38,4.84,5.14
+History,Upper/High,62,4.76,4.85,4.93,5.15,5.82,6.32
+MFL French,All,67,3.83,4.16,4.25,4.41,5.08,5.56
+MFL French,Middle,25,3.22,3.70,3.72,3.94,4.50,4.96
+MFL French,Upper/High,42,4.19,4.43,4.57,4.69,5.43,5.92
+MFL Spanish,All,53,3.90,4.23,4.37,4.67,4.91,5.45
+MFL Spanish,Middle,21,3.69,3.90,3.98,4.07,4.24,4.79
+MFL Spanish,Upper/High,32,4.03,4.44,4.63,5.06,5.34,5.89
+Music,All,16,3.88,4.16,4.34,4.25,4.63,5.03
+Music,Lower,1,2.00,2.00,2.00,1.50,2.00,2.00
+Music,Middle,8,3.25,3.75,3.81,3.69,4.19,4.44
+Music,Upper/High,7,4.86,4.93,5.29,5.29,5.50,6.14
+PE,All,41,3.85,4.16,4.33,4.51,5.43,5.65
+PE,Middle,30,3.75,4.08,4.22,4.38,5.18,5.40
+PE,Upper/High,11,4.14,4.36,4.64,4.86,6.09,6.32
+Psychology,All,23,3.50,3.83,3.85,4.07,4.43,5.39
+Psychology,Lower,2,1.50,1.50,1.25,1.75,1.75,2.50
+Psychology,Middle,10,3.55,3.80,3.65,3.75,4.10,5.10
+Psychology,Upper/High,11,3.82,4.27,4.50,4.77,5.23,6.18
+RS,All,207,3.78,3.89,3.98,4.32,4.72,5.07
+RS,Lower,17,1.85,1.88,2.00,2.29,2.59,2.88
+RS,Middle,105,3.54,3.63,3.68,4.04,4.40,4.71
+RS,Upper/High,85,4.45,4.62,4.74,5.08,5.54,5.95
+Sci Biology,All,88,4.62,4.78,4.90,5.32,5.36,5.98
+Sci Biology,Lower,1,2.00,2.00,3.00,3.00,3.00,4.00
+Sci Biology,Middle,28,4.29,4.46,4.46,4.79,4.82,5.50
+Sci Biology,Upper/High,59,4.82,4.97,5.14,5.62,5.66,6.24
+Sci Chemistry,All,88,4.62,4.78,4.90,5.32,5.36,5.98
+Sci Chemistry,Lower,1,2.00,2.00,3.00,3.00,3.00,4.00
+Sci Chemistry,Middle,28,4.29,4.46,4.46,4.79,4.82,5.50
+Sci Chemistry,Upper/High,59,4.82,4.97,5.14,5.62,5.66,6.24
+Sci Physics,All,88,4.62,4.78,4.90,5.32,5.36,5.98
+Sci Physics,Lower,1,2.00,2.00,3.00,3.00,3.00,4.00
+Sci Physics,Middle,28,4.29,4.46,4.46,4.79,4.82,5.50
+Sci Physics,Upper/High,59,4.82,4.97,5.14,5.62,5.66,6.24
+Science Additional,All,122,3.70,3.82,3.93,4.08,4.23,4.44
+Science Additional,Lower,17,3.68,3.79,3.82,3.88,3.88,4.00
+Science Additional,Middle,79,3.70,3.79,3.92,4.09,4.17,4.37
+Science Additional,Upper/High,26,3.75,3.92,4.06,4.19,4.63,4.94
+Science Core,All,122,3.77,3.88,4.02,4.24,4.61,4.84
+Science Core,Lower,17,3.82,3.82,3.88,4.03,4.29,4.35
+Science Core,Middle,79,3.76,3.87,4.01,4.25,4.50,4.72
+Science Core,Upper/High,26,3.75,3.92,4.13,4.37,5.17,5.50
+Summary,All,210,3.99,4.15,4.27,4.57,4.92,5.34
+Summary,Lower,18,2.99,3.06,3.12,3.35,3.62,3.88
+Summary,Middle,107,3.71,3.85,3.93,4.18,4.50,4.87
+Summary,Upper/High,85,4.43,4.64,4.80,5.17,5.56,6.05
