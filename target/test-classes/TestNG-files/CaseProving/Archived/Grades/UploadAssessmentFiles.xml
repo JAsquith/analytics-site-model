@@ -28,7 +28,7 @@
         <parameter name="file-title" value="Y11 Summer Grades" />
 
         <classes>
-            <class name="admin.data.grades.UploadsForAssessmentsTest" />
+            <class name="tests.admin.data.grades.UploadsForAssessmentsTest" />
         </classes>
     </test>
 

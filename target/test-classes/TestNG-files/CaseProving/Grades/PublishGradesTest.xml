@@ -21,7 +21,7 @@
 		<parameter name="report-status" value="Checked" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.grades.PublishGradesTest" />
+			<class name="tests.admin.data.grades.PublishGradesTest" />
 		</classes>
 	</test>
 
@@ -40,7 +40,7 @@
 		<parameter name="report-status" value="Unchecked" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.grades.PublishGradesTest" />
+			<class name="tests.admin.data.grades.PublishGradesTest" />
 		</classes>
 	</test>
 

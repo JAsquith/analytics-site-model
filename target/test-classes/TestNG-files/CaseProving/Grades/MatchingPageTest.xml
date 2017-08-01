@@ -24,7 +24,7 @@
 		<parameter name="predecessor" value="None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None" />
 		<parameter name="bar-code" value=" | | | | | | | | | | | | | | | | | | | | | | | | | | | " />
 		<classes>
-			<class name="admin.data.grades.MatchingPageTest" />
+			<class name="tests.admin.data.grades.MatchingPageTest" />
 		</classes>
 	</test>
 
@@ -43,7 +43,7 @@
 		<parameter name="predecessor" value="None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None" />
 		<parameter name="bar-code" value=" | | | | | | | | | | | | | | | | | | | | | | | | | | | " />
 		<classes>
-			<class name="admin.data.grades.MatchingPageTest" />
+			<class name="tests.admin.data.grades.MatchingPageTest" />
 		</classes>
 	</test>
 
@@ -62,7 +62,7 @@
 		<parameter name="predecessor" value="None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None" />
 		<parameter name="bar-code" value=" | | | | | | | | | | | | | | | | | | | | | | | | | | | " />
 		<classes>
-			<class name="admin.data.grades.MatchingPageTest" />
+			<class name="tests.admin.data.grades.MatchingPageTest" />
 		</classes>
 	</test>
 
@@ -81,7 +81,7 @@
 		<parameter name="predecessor" value="None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None" />
 		<parameter name="bar-code" value=" | | | | | | | | | | | | | | | | | | | | | | | | | | | " />
 		<classes>
-			<class name="admin.data.grades.MatchingPageTest" />
+			<class name="tests.admin.data.grades.MatchingPageTest" />
 		</classes>
 	</test>
 
@@ -100,7 +100,7 @@
 		<parameter name="predecessor" value="None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None|None" />
 		<parameter name="bar-code" value=" | | | | | | | | | | | | | | | | | | | | | | | | | | | " />
 		<classes>
-			<class name="admin.data.grades.MatchingPageTest" />
+			<class name="tests.admin.data.grades.MatchingPageTest" />
 		</classes>
 	</test>
 

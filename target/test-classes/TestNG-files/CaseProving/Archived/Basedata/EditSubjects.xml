@@ -24,7 +24,7 @@
         <parameter name="core-noms" value="English||Maths|" />
 
         <classes>
-            <class name="admin.data.basedata.EditBaselinesTest" />
+            <class name="tests.admin.data.basedata.EditBaselinesTest" />
         </classes>
     </test>
 
@@ -39,7 +39,7 @@
         <parameter name="core-noms" value="English||Maths|" />
 
         <classes>
-            <class name="admin.data.basedata.EditBaselinesTest" />
+            <class name="tests.admin.data.basedata.EditBaselinesTest" />
         </classes>
     </test>
 
@@ -54,7 +54,7 @@
         <parameter name="core-noms" value="English||Maths|" />
 
         <classes>
-            <class name="admin.data.basedata.EditBaselinesTest" />
+            <class name="tests.admin.data.basedata.EditBaselinesTest" />
         </classes>
     </test>
 
@@ -69,7 +69,7 @@
         <parameter name="core-noms" value="English||Maths|" />
 
         <classes>
-            <class name="admin.data.basedata.EditBaselinesTest" />
+            <class name="tests.admin.data.basedata.EditBaselinesTest" />
         </classes>
     </test>
 
@@ -84,7 +84,7 @@
         <parameter name="core-noms" value="English||Maths|" />
 
         <classes>
-            <class name="admin.data.basedata.EditBaselinesTest" />
+            <class name="tests.admin.data.basedata.EditBaselinesTest" />
         </classes>
     </test>
 

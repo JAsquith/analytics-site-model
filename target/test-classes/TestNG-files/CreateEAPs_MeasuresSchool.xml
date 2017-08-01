@@ -30,7 +30,7 @@
         <parameter name="exam-assess-method" value="GCSE 9-1 (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -51,7 +51,7 @@
         <parameter name="exam-assess-method" value="GCSE 9-1 (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -72,7 +72,7 @@
         <parameter name="exam-assess-method" value="GCSE 9-1 Split (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -93,7 +93,7 @@
         <parameter name="exam-assess-method" value="GCSE 9-1 Split (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -110,7 +110,7 @@
         <parameter name="by-term-flags" value="No|No|No|No|No" />
         <parameter name="exam-assess-method" value="GCSE A*-G (subs)" />
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -131,7 +131,7 @@
         <parameter name="exam-assess-method" value="GCSE A*-G (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -152,7 +152,7 @@
         <parameter name="exam-assess-method" value="GCSE A*-G Split (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -172,7 +172,7 @@
         <parameter name="exam-assess-method" value="GCSE A*-G Split (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -193,7 +193,7 @@
         <parameter name="exam-assess-method" value="AS Level (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -212,7 +212,7 @@
         <parameter name="exam-assess-method" value="AS Level (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -232,7 +232,7 @@
         <parameter name="exam-assess-method" value="L3 FSMQ (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -252,7 +252,7 @@
         <parameter name="exam-assess-method" value="L3 FSMQ (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -273,7 +273,7 @@
         <parameter name="exam-assess-method" value="Non-GCSE Single (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -293,7 +293,7 @@
         <parameter name="exam-assess-method" value="Non-GCSE Single (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -312,7 +312,7 @@
         <parameter name="exam-assess-method" value="Non-GCSE Double (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -333,7 +333,7 @@
         <parameter name="exam-assess-method" value="Non-GCSE Double (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -354,7 +354,7 @@
         <parameter name="exam-assess-method" value="Non-GCSE Triple (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -375,7 +375,7 @@
         <parameter name="exam-assess-method" value="Non-GCSE Triple (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -394,7 +394,7 @@
         <parameter name="exam-assess-method" value="L3 Asset Lang (subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -412,7 +412,7 @@
         <parameter name="exam-assess-method" value="L3 Asset Lang (no subs)" />
 
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -428,7 +428,7 @@
         <parameter name="by-term-flags" value="No|No|No|No|No" />
         <parameter name="exam-assess-method" value="AS Level Double (subs)" />
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -444,7 +444,7 @@
         <parameter name="by-term-flags" value="No|No|No|No|No" />
         <parameter name="exam-assess-method" value="GCSE 9-1 Triple (subs)" />
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -460,7 +460,7 @@
         <parameter name="by-term-flags" value="No|No|No|No|No" />
         <parameter name="exam-assess-method" value="GCSE A*-G Triple (subs)" />
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 
@@ -476,7 +476,7 @@
         <parameter name="by-term-flags" value="No|No|No|No|No" />
         <parameter name="exam-assess-method" value="GCSE 9-1 (no subs)" />
         <classes>
-            <class name="admin.data.basedata.CreateEAPTest" />
+            <class name="tests.admin.data.basedata.CreateEAPTest" />
         </classes>
     </test>
 

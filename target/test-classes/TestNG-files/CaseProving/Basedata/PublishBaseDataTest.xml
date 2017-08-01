@@ -16,7 +16,7 @@
         <parameter name="eap-cohort" value="17" />
         <parameter name="publish-type" value="Local" />
         <classes>
-            <class name="admin.data.basedata.PublishBasedataTest" />
+            <class name="tests.admin.data.basedata.PublishBasedataTest" />
         </classes>
     </test>
     
@@ -27,7 +27,7 @@
         <parameter name="eap-cohort" value="18" />
         <parameter name="publish-type" value="Local" />
         <classes>
-            <class name="admin.data.basedata.PublishBasedataTest" />
+            <class name="tests.admin.data.basedata.PublishBasedataTest" />
         </classes>
     </test>
     
@@ -38,7 +38,7 @@
         <parameter name="eap-cohort" value="19" />
         <parameter name="publish-type" value="Local" />
         <classes>
-            <class name="admin.data.basedata.PublishBasedataTest" />
+            <class name="tests.admin.data.basedata.PublishBasedataTest" />
         </classes>
     </test>
     
@@ -49,7 +49,7 @@
         <parameter name="eap-cohort" value="20" />
         <parameter name="publish-type" value="Local" />
         <classes>
-            <class name="admin.data.basedata.PublishBasedataTest" />
+            <class name="tests.admin.data.basedata.PublishBasedataTest" />
         </classes>
     </test>
     
@@ -60,7 +60,7 @@
         <parameter name="eap-cohort" value="21" />
         <parameter name="publish-type" value="Local" />
         <classes>
-            <class name="admin.data.basedata.PublishBasedataTest" />
+            <class name="tests.admin.data.basedata.PublishBasedataTest" />
         </classes>
     </test>
     

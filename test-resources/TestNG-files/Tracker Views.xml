@@ -26,7 +26,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_001.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -46,7 +46,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_002.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -66,7 +66,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_003.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -87,7 +87,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_004.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -108,7 +108,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_005.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -131,7 +131,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_006.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -151,7 +151,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_007.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -172,7 +172,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_008.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -195,7 +195,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_009.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -216,7 +216,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_010.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -237,7 +237,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_011.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -256,7 +256,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_012.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -276,7 +276,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_013.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -296,7 +296,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_014.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -316,7 +316,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_015.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -336,7 +336,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_016.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -356,7 +356,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_017.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -375,7 +375,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_018.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -395,7 +395,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_019.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -414,7 +414,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_020.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -433,7 +433,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_021.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -452,7 +452,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_022.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -472,7 +472,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_023.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -493,7 +493,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_024.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -513,7 +513,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_025.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -532,7 +532,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2525_17_Grades_Overview_026.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 </suite>

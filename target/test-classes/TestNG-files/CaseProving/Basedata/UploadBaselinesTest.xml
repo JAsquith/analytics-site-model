@@ -16,7 +16,7 @@
 		<parameter name="file-path" value="upload-files\baselines\17_RndBaselines(47).csv" />
 		<parameter name="file-title" value="Baselines" />
 		<classes>
-			<class name="admin.data.basedata.UploadBaselinesTest" />
+			<class name="tests.admin.data.basedata.UploadBaselinesTest" />
 		</classes>
 	</test>
 
@@ -27,7 +27,7 @@
 		<parameter name="file-path" value="upload-files\baselines\18_RndBaselines(47).csv" />
 		<parameter name="file-title" value="Baselines" />
 		<classes>
-			<class name="admin.data.basedata.UploadBaselinesTest" />
+			<class name="tests.admin.data.basedata.UploadBaselinesTest" />
 		</classes>
 	</test>
 
@@ -38,7 +38,7 @@
 		<parameter name="file-path" value="upload-files\baselines\19_RndBaselines(47).csv" />
 		<parameter name="file-title" value="Baselines" />
 		<classes>
-			<class name="admin.data.basedata.UploadBaselinesTest" />
+			<class name="tests.admin.data.basedata.UploadBaselinesTest" />
 		</classes>
 	</test>
 
@@ -49,7 +49,7 @@
 		<parameter name="file-path" value="upload-files\baselines\20_RndBaselines(47).csv" />
 		<parameter name="file-title" value="Baselines" />
 		<classes>
-			<class name="admin.data.basedata.UploadBaselinesTest" />
+			<class name="tests.admin.data.basedata.UploadBaselinesTest" />
 		</classes>
 	</test>
 
@@ -60,7 +60,7 @@
 		<parameter name="file-path" value="upload-files\baselines\21_RndBaselines(47).csv" />
 		<parameter name="file-title" value="Baselines" />
 		<classes>
-			<class name="admin.data.basedata.UploadBaselinesTest" />
+			<class name="tests.admin.data.basedata.UploadBaselinesTest" />
 		</classes>
 	</test>
 

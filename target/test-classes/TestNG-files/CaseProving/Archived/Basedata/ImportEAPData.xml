@@ -25,7 +25,7 @@
         <parameter name="file-path" value="upload-files\eaps\BTEC Single EAP.csv" />
 
         <classes>
-            <class name="admin.data.basedata.ImportEAPTest" />
+            <class name="tests.admin.data.basedata.ImportEAPTest" />
         </classes>
     </test>
 
@@ -39,7 +39,7 @@
         <parameter name="file-path" value="upload-files\eaps\Eng GCSE 9-1 EAP.csv" />
 
         <classes>
-            <class name="admin.data.basedata.ImportEAPTest" />
+            <class name="tests.admin.data.basedata.ImportEAPTest" />
         </classes>
     </test>
 
@@ -52,7 +52,7 @@
         <parameter name="file-path" value="upload-files\eaps\GCSE A-G EAP.csv" />
 
         <classes>
-            <class name="admin.data.basedata.ImportEAPTest" />
+            <class name="tests.admin.data.basedata.ImportEAPTest" />
         </classes>
     </test>
 
@@ -65,7 +65,7 @@
         <parameter name="file-path" value="upload-files\eaps\Mat GCSE 9-1 EAP.csv" />
 
         <classes>
-            <class name="admin.data.basedata.ImportEAPTest" />
+            <class name="tests.admin.data.basedata.ImportEAPTest" />
         </classes>
     </test>
 

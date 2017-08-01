@@ -23,7 +23,7 @@
 		<parameter name="tableNames" value="Overview" />
 		<parameter name="dataFiles" value="2446_17_A8P8_Overview_001.csv" />
 		<classes>
-			<class name="reports.FigureChecking" />
+			<class name="tests.reports.FigureChecking" />
 		</classes>
 	</test>
 

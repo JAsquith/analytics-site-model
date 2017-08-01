@@ -23,7 +23,7 @@
 		<parameter name="valid-master-grades" value="R1|R2|R3|R4|R5|R6|R7|R8|R9" />
 		<parameter name="whole-grade-equiv" value="9=|8=|7=|6=|5=|4=|3=|2=|1=" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -41,7 +41,7 @@
 		<parameter name="valid-master-grades" value="R1|R2|R3|R4|R5|R6|R7|R8|R9C2|R10C2" />
 		<parameter name="whole-grade-equiv" value="A*=|A=|B=|C=|D=|E=|F=|G=|U=|X=" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -59,7 +59,7 @@
 		<parameter name="valid-master-grades" value="R1|R2|R3|R4|R5" />
 		<parameter name="whole-grade-equiv" value="D*=|D=|M=|P=|L1P=" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -77,7 +77,7 @@
 		<parameter name="valid-master-grades" value="R1|R2|R3|R4|R5|R6|R7|R8|R9|R10|R11|R12|R13|R14|R15|R16|R17" />
 		<parameter name="whole-grade-equiv" value="99c|98c|88c|87c|77c|76c|66c|65c|55c|54c|44c|43c|33c|32c|22c|21c|11c" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -92,7 +92,7 @@
 		<parameter name="grade-points" value="10.75|8.88|7|5.13|3.5|0|0|0" />
 		<parameter name="grade-entries" value="1|1|1|1|1|1|1|0" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -110,7 +110,7 @@
 		<parameter name="valid-master-grades" value="R1|R2|R3|R4|R5|R6|R7|R8|R9" />
 		<parameter name="whole-grade-equiv" value="AA2|AB2|BB2|BC2|CC2|CD2|DD2|DE2|EE2" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -128,7 +128,7 @@
 		<parameter name="valid-master-grades" value="R1|R2|R3|R4|R5" />
 		<parameter name="whole-grade-equiv" value="A=|B=|C=|D=|E=" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 
@@ -143,7 +143,7 @@
 		<parameter name="grade-points" value="8.5|8.5|7|0|0" />
 		<parameter name="grade-entries" value="1|1|1|1|0" />
 		<classes>
-			<class name="admin.config.CreateEAPGradeMethodTest" />
+			<class name="tests.admin.config.CreateEAPGradeMethodTest" />
 		</classes>
 	</test>
 

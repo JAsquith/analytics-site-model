@@ -17,7 +17,7 @@
         <parameter name="coll-term" value="Year 10 Term 1" />
         <parameter name="coll-description" value="Y10 Autumn" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="CreateAssessmentCollection0012">
@@ -30,7 +30,7 @@
         <parameter name="coll-term" value="Year 7 Term 2" />
         <parameter name="coll-description" value="Y7 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="CreateAssessmentCollection0017">
@@ -43,7 +43,7 @@
         <parameter name="coll-term" value="Year 9 Term 2" />
         <parameter name="coll-description" value="Y9 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="CreateAssessmentCollection0026">
@@ -56,7 +56,7 @@
         <parameter name="coll-term" value="Year 7 Term 3" />
         <parameter name="coll-description" value="Y7 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 

@@ -19,7 +19,7 @@
 		<parameter name="coll-term" value="Year 11 Term 3" />
 		<parameter name="coll-description" value="Y11 Summer" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 	<test name="16/17 - Y11 Spring">
@@ -32,7 +32,7 @@
 		<parameter name="coll-term" value="Year 11 Term 2" />
 		<parameter name="coll-description" value="Y11 Spring" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 	<test name="16/17 - Y11 Autumn">
@@ -45,7 +45,7 @@
 		<parameter name="coll-term" value="Year 11 Term 1" />
 		<parameter name="coll-description" value="Y11 Autumn" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 
@@ -59,7 +59,7 @@
         <parameter name="coll-term" value="Year 10 Term 3" />
         <parameter name="coll-description" value="Y10 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y10 Summer">
@@ -72,7 +72,7 @@
         <parameter name="coll-term" value="Year 10 Term 3" />
         <parameter name="coll-description" value="Y10 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="16/17 - Y10 Spring">
@@ -85,7 +85,7 @@
         <parameter name="coll-term" value="Year 10 Term 2" />
         <parameter name="coll-description" value="Y10 Spring" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y10 Spring">
@@ -98,7 +98,7 @@
         <parameter name="coll-term" value="Year 10 Term 2" />
         <parameter name="coll-description" value="Y10 Spring" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="16/17 - Y10 Autumn">
@@ -111,7 +111,7 @@
         <parameter name="coll-term" value="Year 10 Term 1" />
         <parameter name="coll-description" value="Y10 Autumn" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y10 Autumn">
@@ -124,7 +124,7 @@
         <parameter name="coll-term" value="Year 10 Term 1" />
         <parameter name="coll-description" value="Y10 Autumn" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 
@@ -138,7 +138,7 @@
 		<parameter name="coll-term" value="Year 9 Term 3" />
 		<parameter name="coll-description" value="Y9 Summer" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
     <test name="17/18 - Y9 End of Year">
@@ -151,7 +151,7 @@
         <parameter name="coll-term" value="Year 9 Term 3" />
         <parameter name="coll-description" value="Y9 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="18/19 - Y9 End of Year">
@@ -164,7 +164,7 @@
         <parameter name="coll-term" value="Year 9 Term 3" />
         <parameter name="coll-description" value="Y9 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 	<test name="16/17 - Y9 Mid Year">
@@ -177,7 +177,7 @@
 		<parameter name="coll-term" value="Year 9 Term 2" />
 		<parameter name="coll-description" value="Y9 Winter" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 	<test name="17/18 - Y9 Mid Year">
@@ -190,7 +190,7 @@
 		<parameter name="coll-term" value="Year 9 Term 2" />
 		<parameter name="coll-description" value="Y9 Winter" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
     <test name="18/19 - Y9 Mid Year">
@@ -203,7 +203,7 @@
         <parameter name="coll-term" value="Year 9 Term 2" />
         <parameter name="coll-description" value="Y9 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 
@@ -217,7 +217,7 @@
         <parameter name="coll-term" value="Year 8 Term 3" />
         <parameter name="coll-description" value="Y8 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y8 End of Year">
@@ -230,7 +230,7 @@
         <parameter name="coll-term" value="Year 8 Term 3" />
         <parameter name="coll-description" value="Y8 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="18/19 - Y8 End of Year">
@@ -243,7 +243,7 @@
         <parameter name="coll-term" value="Year 8 Term 3" />
         <parameter name="coll-description" value="Y8 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="19/20 - Y8 End of Year">
@@ -256,7 +256,7 @@
         <parameter name="coll-term" value="Year 8 Term 3" />
         <parameter name="coll-description" value="Y8 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="16/17 - Y8 Mid Year">
@@ -269,7 +269,7 @@
         <parameter name="coll-term" value="Year 8 Term 2" />
         <parameter name="coll-description" value="Y8 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y8 Mid Year">
@@ -282,7 +282,7 @@
         <parameter name="coll-term" value="Year 8 Term 2" />
         <parameter name="coll-description" value="Y8 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 	<test name="18/19 - Y8 Mid Year">
@@ -295,7 +295,7 @@
 		<parameter name="coll-term" value="Year 8 Term 2" />
 		<parameter name="coll-description" value="Y8 Winter" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
     <test name="19/20 - Y8 Mid Year">
@@ -308,7 +308,7 @@
         <parameter name="coll-term" value="Year 8 Term 2" />
         <parameter name="coll-description" value="Y8 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 
@@ -322,7 +322,7 @@
         <parameter name="coll-term" value="Year 7 Term 3" />
         <parameter name="coll-description" value="Y7 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y7 End of Year">
@@ -335,7 +335,7 @@
         <parameter name="coll-term" value="Year 7 Term 3" />
         <parameter name="coll-description" value="Y7 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="18/19 - Y7 End of Year">
@@ -348,7 +348,7 @@
         <parameter name="coll-term" value="Year 7 Term 3" />
         <parameter name="coll-description" value="Y7 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="19/20 - Y7 End of Year">
@@ -361,7 +361,7 @@
         <parameter name="coll-term" value="Year 7 Term 3" />
         <parameter name="coll-description" value="Y7 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="20/21 - Y7 End of Year">
@@ -374,7 +374,7 @@
         <parameter name="coll-term" value="Year 7 Term 3" />
         <parameter name="coll-description" value="Y7 Summer" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="16/17 - Y7 Mid Year">
@@ -387,7 +387,7 @@
         <parameter name="coll-term" value="Year 7 Term 2" />
         <parameter name="coll-description" value="Y7 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
     <test name="17/18 - Y7 Mid Year">
@@ -400,7 +400,7 @@
         <parameter name="coll-term" value="Year 7 Term 2" />
         <parameter name="coll-description" value="Y7 Winter" />
         <classes>
-            <class name="admin.data.grades.CreateAssessmentCollectionTest" />
+            <class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
         </classes>
     </test>
 	<test name="18/19 - Y7 Mid Year">
@@ -413,7 +413,7 @@
 		<parameter name="coll-term" value="Year 7 Term 2" />
 		<parameter name="coll-description" value="Y7 Winter" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 	<test name="19/20 - Y7 Mid Year">
@@ -426,7 +426,7 @@
 		<parameter name="coll-term" value="Year 7 Term 2" />
 		<parameter name="coll-description" value="Y7 Winter" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 	<test name="20/21 - Y7 Mid Year">
@@ -439,7 +439,7 @@
 		<parameter name="coll-term" value="Year 7 Term 2" />
 		<parameter name="coll-description" value="Y7 Winter" />
 		<classes>
-			<class name="admin.data.grades.CreateAssessmentCollectionTest" />
+			<class name="tests.admin.data.grades.CreateAssessmentCollectionTest" />
 		</classes>
 	</test>
 

@@ -25,7 +25,7 @@
         <parameter name="filter-names" value="EAL|FSM|PP|Tutor Group|Attendance Group" />
 
         <classes>
-            <class name="admin.config.ChangeStudentProfileTest" />
+            <class name="tests.admin.config.ChangeStudentProfileTest" />
         </classes>
     </test>
 
@@ -39,7 +39,7 @@
         <parameter name="val-messages" value="You have selected duplicate filters|You have selected duplicate filters" />
 
         <classes>
-            <class name="admin.config.ChangeStudentProfileTest" />
+            <class name="tests.admin.config.ChangeStudentProfileTest" />
         </classes>
     </test>
 

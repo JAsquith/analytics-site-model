@@ -7,12 +7,74 @@
     <groupId>com.sisra.analytics</groupId>
     <artifactId>site-model</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <mvn.compiler.version>3.6.1</mvn.compiler.version>
+        <mvn.surefire.version>2.20</mvn.surefire.version>
+        <mvn.allure.version>2.8</mvn.allure.version>
+
+        <testng.version>6.11</testng.version>
+        <testng.allure.version>2.0-BETA16</testng.allure.version>
+
+        <aspectj.version>1.8.10</aspectj.version>
+
+        <selenium.version>3.4.0</selenium.version>
+        <hamcrest.version>1.3</hamcrest.version>
+
+        <javax.mail.version>1.5.6</javax.mail.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${testng.allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-maven</artifactId>
+            <version>${mvn.allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${hamcrest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+        <!--  email APIs so we can send test tests.reports  -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>${javax.mail.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
+                <version>${mvn.compiler.version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -21,71 +83,21 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>${mvn.surefire.version}</version>
                 <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>test-resources/TestNG-files/AllTests.xml</suiteXmlFile>
-<!--                        <suiteXmlFile>test-resources/TestNG-files/CaseProving/RegressionSuite.xml</suiteXmlFile>-->
-                    </suiteXmlFiles>
-<!--
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>analytics.listeners.AnalyticsSuiteListener</value>
-                        </property>
-                    </properties>
--->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <!--  Selenium API & Headless HTMLUnit driver  -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>htmlunit-driver</artifactId>
-            <version>2.24</version>
-        </dependency>
-
-        <!--  Test NG & JUnit  -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.10</version>
-        </dependency>
-<!--
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
--->
-
-        <!--  Hamcrest Matchers for use in asserts  -->
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>1.3</version>
-        </dependency>
-
-        <!--  email APIs so we can send test reports  -->
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>javax.mail-api</artifactId>
-            <version>1.5.6</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.5.6</version>
-        </dependency>
-    </dependencies>
 
 </project>

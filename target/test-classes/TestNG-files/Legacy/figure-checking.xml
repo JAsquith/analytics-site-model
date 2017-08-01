@@ -3,7 +3,7 @@
 <suite name="Figure Checking" parallel="tests" thread-count="2">
 
     <listeners>
-        <listener class-name="analytics.listeners.AnalyticsSuiteListener" />
+        <listener class-name="listeners.AnalyticsSuiteListener" />
     </listeners>
 
     <parameter name="suite-name" value="Figure Checking" />
@@ -31,7 +31,7 @@
 		<parameter name="keystage" value="KS5" />
 	
         <classes>
-            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+            <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking B1-B2">
@@ -43,7 +43,7 @@
         <parameter name="dev-password" value="WeYwRaMn3" />
 
         <classes>
-            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+            <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
 	<test name="SISRA Checking C1-C2">
@@ -55,7 +55,7 @@
         <parameter name="dev-password" value="ZsZmWhFo3" />
 
         <classes>
-            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+            <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking D1-D2">
@@ -67,7 +67,7 @@
         <parameter name="dev-password" value="HtWgMeQg6" />
 
         <classes>
-            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+            <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>	
     <test name="SISRA Checking E1-E2">
@@ -79,7 +79,7 @@
         <parameter name="dev-password" value="HeMwWvTf2" />
 
         <classes>
-            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+            <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking F1-F2">
@@ -93,7 +93,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking G1-G2">
@@ -105,7 +105,7 @@
         <parameter name="dev-password" value="HdMeAuBv7" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking I1-I2">
@@ -117,7 +117,7 @@
         <parameter name="dev-password" value="BvFsDbKf6" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -130,7 +130,7 @@
         <parameter name="dev-password" value="CyFpHbMq3" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking L1-L2">
@@ -144,7 +144,7 @@
         <parameter name="keystage" value="KS5" />
 
         <classes>
-            <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+            <class name="legacy.tests.reports.FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -161,7 +161,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -175,7 +175,7 @@
         <parameter name="dev-password" value="HjNeJiUg6" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -188,7 +188,7 @@
         <parameter name="dev-password" value="VfBsKvJh4" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -201,7 +201,7 @@
         <parameter name="dev-password" value="BeGiDoJe2" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
     <test name="SISRA Checking H1-H2">
@@ -215,7 +215,7 @@
         <parameter name="keystage" value="KS4" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 	
@@ -230,7 +230,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -245,7 +245,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>	
 	
@@ -260,7 +260,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 	
@@ -275,7 +275,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -290,7 +290,7 @@
         <parameter name="keystage" value="KS5" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 	
@@ -304,7 +304,7 @@
 
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -317,7 +317,7 @@
         <parameter name="dev-password" value="VpKkFdZw3" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>	
 	
@@ -330,7 +330,7 @@
         <parameter name="dev-password" value="YxEeNxAe2" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 	
@@ -343,7 +343,7 @@
         <parameter name="dev-password" value="HhTeMgYu3" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 
@@ -356,7 +356,7 @@
         <parameter name="dev-password" value="NhNjKfTm8" />
 
     <classes>
-        <class name="analytics.legacy.tests.reports.FigureCheck_Legacy" />
+        <class name="FigureCheck_Legacy" />
         </classes>
     </test>
 -->

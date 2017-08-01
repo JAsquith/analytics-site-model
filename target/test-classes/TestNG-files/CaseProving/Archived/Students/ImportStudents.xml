@@ -26,7 +26,7 @@
         <parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
 
         <classes>
-            <class name="admin.data.students.StudentImportTest" />
+            <class name="tests.admin.data.students.StudentImportTest" />
         </classes>
     </test>
 
@@ -39,7 +39,7 @@
         <parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
 
         <classes>
-            <class name="admin.data.students.StudentImportTest" />
+            <class name="tests.admin.data.students.StudentImportTest" />
         </classes>
     </test>
 
@@ -52,7 +52,7 @@
         <parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
 
         <classes>
-            <class name="admin.data.students.StudentImportTest" />
+            <class name="tests.admin.data.students.StudentImportTest" />
         </classes>
     </test>
 
@@ -65,7 +65,7 @@
         <parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
 
         <classes>
-            <class name="admin.data.students.StudentImportTest" />
+            <class name="tests.admin.data.students.StudentImportTest" />
         </classes>
     </test>
 
@@ -78,7 +78,7 @@
         <parameter name="data-file" value="upload-files/students/Students (15 col).csv" />
 
         <classes>
-            <class name="admin.data.students.StudentImportTest" />
+            <class name="tests.admin.data.students.StudentImportTest" />
         </classes>
     </test>
 

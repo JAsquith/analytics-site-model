@@ -21,7 +21,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Mat GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="18/19 - Mat GCSE 9-1">
@@ -36,7 +36,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Mat GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="19/20 - Mat GCSE 9-1">
@@ -51,7 +51,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Mat GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="20/21 - Mat GCSE 9-1">
@@ -66,7 +66,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Mat GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 
@@ -82,7 +82,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Eng GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="18/19 - Eng GCSE 9-1">
@@ -97,7 +97,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Eng GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="19/20 - Eng GCSE 9-1">
@@ -112,7 +112,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Eng GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="20/21 - Eng GCSE 9-1">
@@ -127,7 +127,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="Eng GCSE 9-1" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 
@@ -143,7 +143,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="GCSE A*-G" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="18/19 - GCSE A*-G">
@@ -158,7 +158,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="GCSE A*-G" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="19/20 - GCSE A*-G">
@@ -173,7 +173,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="GCSE A*-G" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="20/21 - GCSE A*-G">
@@ -188,7 +188,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="GCSE A*-G" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 
@@ -204,7 +204,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="BTEC Single" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="18/19 - BTEC Single">
@@ -219,7 +219,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="BTEC Single" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="19/20 - BTEC Single">
@@ -234,7 +234,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="BTEC Single" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="20/21 - BTEC Single">
@@ -249,7 +249,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="BTEC Single" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 
@@ -265,7 +265,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Levels" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="18/19 - AS Levels">
@@ -280,7 +280,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Levels" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="19/20 - AS Levels">
@@ -295,7 +295,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Levels" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="20/21 - AS Levels">
@@ -310,7 +310,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Levels" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 

@@ -21,7 +21,7 @@
         <parameter name="username" value="tesfga167137" />
         <parameter name="password" value="PkYbUdEw8" />
         <classes>
-            <class name="admin.BlankTest" />
+            <class name="tests.admin.BlankTest" />
         </classes>
     </test>
 

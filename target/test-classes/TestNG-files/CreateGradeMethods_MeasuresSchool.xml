@@ -29,7 +29,7 @@
         <parameter name="whole-grade-equiv" value="9=|8=|7=|6=|5=|4=|3=|2=|1=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -46,7 +46,7 @@
         <parameter name="grade-entries" value="1|1|1|1|1|1|1|1|1|1|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -66,7 +66,7 @@
         <parameter name="whole-grade-equiv" value="99c|98c|88c|87c|77c|76c|66c|65c|55c|54c|44c|43c|33c|32c|22c|21c|11c" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -83,7 +83,7 @@
         <parameter name="grade-entries" value="1|1|1|1|1|1|1|1|1|1|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -103,7 +103,7 @@
         <parameter name="whole-grade-equiv" value="A*=|A=|B=|C=|D=|E=|F=|G=|U=|X=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -120,7 +120,7 @@
         <parameter name="grade-entries" value="1|1|1|1|1|1|1|1|1|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -140,7 +140,7 @@
         <parameter name="whole-grade-equiv" value="A*A*=|A*A=|AA=|AB=|BB=|BC=|CC=|CD=|DD=|DE=|EE=|EF=|FF=|FG=|GG=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -157,7 +157,7 @@
         <parameter name="grade-entries" value="1|1|1|1|1|1|1|1|1|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -177,7 +177,7 @@
         <parameter name="whole-grade-equiv" value="A=|B=|C=|D=|E=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -194,7 +194,7 @@
         <parameter name="grade-entries" value="1|1|1|1|1|1|1|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -214,7 +214,7 @@
         <parameter name="whole-grade-equiv" value="A=|B=|C=|D=|E=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -231,7 +231,7 @@
         <parameter name="grade-entries" value="0.667|0.667|0.667|0.667|0.667|0.667|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -251,7 +251,7 @@
         <parameter name="whole-grade-equiv" value="D*=|D=|M=|P=|L1P=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -268,7 +268,7 @@
         <parameter name="grade-entries" value="1|1|1|1|1|1|1|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -288,7 +288,7 @@
         <parameter name="whole-grade-equiv" value="D*=|D=|M=|P=|L1P=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -305,7 +305,7 @@
         <parameter name="grade-entries" value="2|2|2|2|2|2|2|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -325,7 +325,7 @@
         <parameter name="whole-grade-equiv" value="D*=|D=|M=|P=|L1P=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -342,7 +342,7 @@
         <parameter name="grade-entries" value="3|3|3|3|3|3|3|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -362,7 +362,7 @@
         <parameter name="whole-grade-equiv" value="12=|11=|10=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -379,7 +379,7 @@
         <parameter name="grade-entries" value="0.5|0.5|0.5|0.5|0" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -399,7 +399,7 @@
         <parameter name="whole-grade-equiv" value="A=|B=|C=|D=|E=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -419,7 +419,7 @@
         <parameter name="whole-grade-equiv" value="9=|8=|7=|6=|5=|4=|3=|2=|1=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -439,7 +439,7 @@
         <parameter name="whole-grade-equiv" value="A*=|A=|B=|C=|D=|E=|F=|G=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 
@@ -459,7 +459,7 @@
         <parameter name="whole-grade-equiv" value="A=|B=|C=|D=|E=" />
 
         <classes>
-            <class name="admin.config.CreateEAPGradeMethodTest" />
+            <class name="tests.admin.config.CreateEAPGradeMethodTest" />
         </classes>
     </test>
 

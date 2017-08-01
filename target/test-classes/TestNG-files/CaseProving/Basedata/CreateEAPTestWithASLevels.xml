@@ -20,7 +20,7 @@
 		<parameter name="by-term-flags" value="No|No|No|No|No" />
 		<parameter name="exam-assess-method" value="AS Level" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 </suite>

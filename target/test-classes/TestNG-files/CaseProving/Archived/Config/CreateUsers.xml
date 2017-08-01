@@ -25,7 +25,7 @@
         <parameter name="auth-group" value="Admin" />
 
         <classes>
-            <class name="admin.users.UsersTests">
+            <class name="tests.admin.users.UsersTests">
                 <methods>
                     <include name="createNewUserTest" />
                 </methods>
@@ -43,7 +43,7 @@
         <parameter name="auth-group" value="User" />
 
         <classes>
-            <class name="admin.users.UsersTests">
+            <class name="tests.admin.users.UsersTests">
                 <methods>
                     <include name="createNewUserTest" />
                 </methods>
@@ -59,7 +59,7 @@
         <parameter name="val-messages" value="The First Name field is required.|The Last Name field is required.|The Email Address field is required.|The Authority Group field is required." />
 
         <classes>
-            <class name="admin.users.UsersTests">
+            <class name="tests.admin.users.UsersTests">
                 <methods>
                     <include name="createNewUserTest" />
                 </methods>
@@ -80,7 +80,7 @@
         <parameter name="val-messages" value="Email appears to be invalid" />
 
         <classes>
-            <class name="admin.users.UsersTests">
+            <class name="tests.admin.users.UsersTests">
                 <methods>
                     <include name="createNewUserTest" />
                 </methods>

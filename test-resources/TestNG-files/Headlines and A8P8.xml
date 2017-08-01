@@ -26,7 +26,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2515_18_ks2bands.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -43,7 +43,7 @@
         <parameter name="tableNames" value="Overview" />
         <parameter name="dataFiles" value="2446_17_A8P8_Overview_001.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -62,7 +62,7 @@
         <parameter name="tableNames" value="Overview" />
         <parameter name="dataFiles" value="2446_17_A8P8_Overview_002.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -79,7 +79,7 @@
         <parameter name="tableNames" value="Eng/Mat" />
         <parameter name="dataFiles" value="2446_17_A8P8_EngMat_001.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -96,7 +96,7 @@
         <parameter name="tableNames" value="EBacc" />
         <parameter name="dataFiles" value="2446_17_A8P8_EBacc_001.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -113,7 +113,7 @@
         <parameter name="tableNames" value="Open" />
         <parameter name="dataFiles" value="2446_17_A8P8_Open_001.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -131,7 +131,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2527_17_Headlines.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
     <test name="2527 Headlines Compare">
@@ -148,7 +148,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2527_17_HeadlinesCompare.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 
@@ -166,7 +166,7 @@
         <parameter name="tableNames" value="" />
         <parameter name="dataFiles" value="2527_17_HeadlinesBreakdown.csv" />
         <classes>
-            <class name="reports.FigureChecking" />
+            <class name="tests.reports.FigureChecking" />
         </classes>
     </test>
 

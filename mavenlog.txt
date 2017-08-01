@@ -59,27 +59,27 @@ The Files Match!
 Compared [Test00007] with [Test00007_act]
 The Files Match!
 Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 78.858 sec <<< FAILURE! - in TestSuite
-testReportFigures(reports.FigureChecking)  Time elapsed: 0.026 sec  <<< FAILURE!
+testReportFigures(tests.reports.FigureChecking)  Time elapsed: 0.026 sec  <<< FAILURE!
 org.openqa.selenium.remote.SessionNotFoundException: 
 Session ID is null. Using WebDriver after calling quit()?
 Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
 System info: host: 'AsqJames-PC', ip: '192.168.0.10', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
 Driver info: driver.version: RemoteWebDriver
-	at testNamedTableFigures(reports.FigureChecking.java:45)
+	at testNamedTableFigures(tests.reports.FigureChecking.java:45)
 
-testReportFigures(reports.FigureChecking)  Time elapsed: 0.002 sec  <<< FAILURE!
+testReportFigures(tests.reports.FigureChecking)  Time elapsed: 0.002 sec  <<< FAILURE!
 org.openqa.selenium.remote.SessionNotFoundException: 
 Session ID is null. Using WebDriver after calling quit()?
 Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
 System info: host: 'AsqJames-PC', ip: '192.168.0.10', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
 Driver info: driver.version: RemoteWebDriver
-	at testNamedTableFigures(reports.FigureChecking.java:45)
+	at testNamedTableFigures(tests.reports.FigureChecking.java:45)
 
 
 Results :
 
 Failed tests: 
-testNamedTableFigures(reports.FigureChecking)
+testNamedTableFigures(tests.reports.FigureChecking)
   Run 1: PASS
   Run 2: PASS
   Run 3: testNamedTableFigures:45 � SessionNotFound Session ID is null. Usin...
@@ -100,7 +100,7 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project site-model: There are test failures.
 [ERROR] 
-[ERROR] Please refer to G:\analytics-site-model\target\surefire-reports for the individual test results.
+[ERROR] Please refer to G:\analytics-site-model\target\surefire-tests.reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

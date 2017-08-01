@@ -15,7 +15,7 @@
 		<parameter name="filter-nums" value="11|13|12|14|20" />
 		<parameter name="filter-names" value="EAL|FSM|PP|Tutor Group|Attendance Group" />
 		<classes>
-			<class name="admin.config.ChangeStudentProfileTest" />
+			<class name="tests.admin.config.ChangeStudentProfileTest" />
 		</classes>
 	</test>
 

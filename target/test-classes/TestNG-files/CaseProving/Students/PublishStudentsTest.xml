@@ -15,7 +15,7 @@
 		<parameter name="eap-cohort" value="17" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.students.PublishStudentsTest" />
+			<class name="tests.admin.data.students.PublishStudentsTest" />
 		</classes>
 	</test>
 	<test name="Publish 17/18 Students">
@@ -24,7 +24,7 @@
 		<parameter name="eap-cohort" value="18" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.students.PublishStudentsTest" />
+			<class name="tests.admin.data.students.PublishStudentsTest" />
 		</classes>
 	</test>
 	<test name="Publish 18/19 Students">
@@ -33,7 +33,7 @@
 		<parameter name="eap-cohort" value="19" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.students.PublishStudentsTest" />
+			<class name="tests.admin.data.students.PublishStudentsTest" />
 		</classes>
 	</test>
 	<test name="Publish 19/20 Students">
@@ -42,7 +42,7 @@
 		<parameter name="eap-cohort" value="20" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.students.PublishStudentsTest" />
+			<class name="tests.admin.data.students.PublishStudentsTest" />
 		</classes>
 	</test>
 	<test name="Publish 20/21 Students">
@@ -51,7 +51,7 @@
 		<parameter name="eap-cohort" value="21" />
 		<parameter name="publish-type" value="Local" />
 		<classes>
-			<class name="admin.data.students.PublishStudentsTest" />
+			<class name="tests.admin.data.students.PublishStudentsTest" />
 		</classes>
 	</test>
 </suite>

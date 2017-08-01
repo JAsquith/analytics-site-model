@@ -22,7 +22,7 @@
         <parameter name="file-title" value="Baselines" />
 
         <classes>
-            <class name="admin.data.basedata.UploadBaselinesTest" />
+            <class name="tests.admin.data.basedata.UploadBaselinesTest" />
         </classes>
     </test>
 
@@ -35,7 +35,7 @@
         <parameter name="file-title" value="Baselines" />
 
         <classes>
-            <class name="admin.data.basedata.UploadBaselinesTest" />
+            <class name="tests.admin.data.basedata.UploadBaselinesTest" />
         </classes>
     </test>
 
@@ -48,7 +48,7 @@
         <parameter name="file-title" value="Baselines" />
 
         <classes>
-            <class name="admin.data.basedata.UploadBaselinesTest" />
+            <class name="tests.admin.data.basedata.UploadBaselinesTest" />
         </classes>
     </test>
 
@@ -61,7 +61,7 @@
         <parameter name="file-title" value="Baselines" />
 
         <classes>
-            <class name="admin.data.basedata.UploadBaselinesTest" />
+            <class name="tests.admin.data.basedata.UploadBaselinesTest" />
         </classes>
     </test>
 
@@ -74,7 +74,7 @@
         <parameter name="file-title" value="Baselines" />
 
         <classes>
-            <class name="admin.data.basedata.UploadBaselinesTest" />
+            <class name="tests.admin.data.basedata.UploadBaselinesTest" />
         </classes>
     </test>
 

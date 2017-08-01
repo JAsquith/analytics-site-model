@@ -21,7 +21,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Level" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="CopyEAPTest0018">
@@ -36,7 +36,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Level" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="CopyEAPTest0019">
@@ -51,7 +51,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Level" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 	<test name="CopyEAPTest0020">
@@ -66,7 +66,7 @@
 		<parameter name="copy-from-cohort" value="17" />
 		<parameter name="copy-from-eap" value="AS Level" />
 		<classes>
-			<class name="admin.data.basedata.CreateEAPTest" />
+			<class name="tests.admin.data.basedata.CreateEAPTest" />
 		</classes>
 	</test>
 </suite>
