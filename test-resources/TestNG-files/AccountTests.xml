@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Account Login Tests" parallel="tests" thread-count="5">
+
+    <test name="No Details Test">
+        <parameter name="no-details-val-msg-count" value="2" />
+        <parameter name="val-msgs" value="Please enter a username.|Please enter a password." />
+
+        <groups>
+            <run>
+                <include name="no-details" />
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.admin.LoginValidationTests" />
+        </classes>
+    </test>
+
+    <test name="No Password Test">
+        <parameter name="no-password-val-msg-count" value="1" />
+        <parameter name="username" value="AsqJam" />
+        <parameter name="val-msgs" value="Please enter a password." />
+        <groups>
+            <run>
+                <include name="no-password" />
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.admin.LoginValidationTests" />
+        </classes>
+    </test>
+
+    <test name="No Username Test">
+        <parameter name="no-username-val-msg-count" value="1" />
+        <parameter name="password" value="Password1" />
+        <parameter name="val-msgs" value="The user name or password provided is incorrect." />
+        <groups>
+            <run>
+                <include name="no-username" />
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.admin.LoginValidationTests" />
+        </classes>
+    </test>
+
+</suite>

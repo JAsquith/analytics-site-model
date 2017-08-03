@@ -10,15 +10,22 @@ import org.openqa.selenium.remote.RemoteWebDriver;
  */
 public class ReportsHome_EAP extends ReportsHome {
 
-    private static final String PAGE_PATH = "/ReportsHome?selectedKS=6";
+    private static final String PAGE_PATH = "/ReportsHome";
+    private static final String PAGE_PATH_SELECT_KS = PAGE_PATH + "?selectedKS=6";
+    private static final String PAGE_PATH_SELECT_COHORT = PAGE_PATH + "?selectedCohort=";
     protected static final By COHORT_TITLE = By.cssSelector("div.rptHome>h2");
 
     public ReportsHome_EAP(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
         if (loadByUrl){
-            driver.get(getCurrentDomain() + PAGE_PATH);
+            driver.get(getCurrentDomain() + PAGE_PATH_SELECT_KS);
             waitForLoadingWrapper();
         }
+    }
+
+    public ReportsHome_EAP selectCohortByUrl(String cohort){
+        driver.get(getCurrentDomain() + PAGE_PATH_SELECT_COHORT+cohort);
+        return new ReportsHome_EAP(driver, false);
     }
 
     public String getSelectedCohortTitle(){

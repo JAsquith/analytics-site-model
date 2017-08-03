@@ -1,5 +1,6 @@
 package pages.reports.components;
 
+import io.qameta.allure.Step;
 import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -79,15 +80,21 @@ public class ReportsHome_CohortsMenu extends AnalyticsComponent {
             lvrBTNs.get(0).click();
         }
     }
+
+    @Step( "Select a random cohort" )
     public void selectRandomCohort(){
         List<WebElement> cohortButtons = getAllCohortButtons();
         cohortButtons.get(new Random().nextInt(cohortButtons.size())).click();
         waitForLoadingWrapper();
     }
+
+    @Step( "Select Cohort (url hack): ${0}" )
     public void selectCohortByYearID(String cohortYear){
         driver.get(getCurrentDomain()+"/ReportsHome?selectedCohort="+cohortYear);
         waitForLoadingWrapper();
     }
+
+    @Step( "Select Cohort (click label): ${0}" )
     public void selectCohortByLabel(String cohortLabel){
         expandLeaversDDL();
         driver.findElement(By.linkText(cohortLabel)).click();

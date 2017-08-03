@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
@@ -20,7 +21,7 @@ public class TestUtils {
     private boolean testPropsRead;
     private Properties sysProperties;
     private Set<String> sysPropNames;
-    private final String TEST_PROPERTIES_FILE = "test-config"+ File.separator+"test.properties";
+    private final String TEST_PROPERTIES_FILE = "test.properties";
 
     public TestUtils (ITestContext test){
         // Read the Test Parameters from the TestNG.xml file(s) into memory
@@ -47,7 +48,7 @@ public class TestUtils {
     public String getTestSetting(String setting) {
         return getTestSetting(setting, "");
     }
-    public String getTestSetting (String setting, String defaultVal){
+    public String getTestSetting(String setting, String defaultVal){
         if (params.containsKey(setting)) {
             return params.get(setting);
         }
@@ -60,6 +61,15 @@ public class TestUtils {
             return System.getProperty(setting);
         }
         return defaultVal;
+    }
+
+    public int getTestSetting(String setting, int defaultVal){
+        String s_value = getTestSetting(setting);
+        return Integer.parseInt(s_value);
+    }
+
+    public String[] getTestSettingAsArray(String setting){
+        return getTestSetting(setting).split("\\|");
     }
 
     public URL getGridUrl() throws MalformedURLException {
@@ -93,13 +103,13 @@ public class TestUtils {
                 caps = DesiredCapabilities.firefox();
         }
 
-        String version = getTestSetting("browser-ver",getTestSetting("version", ""));
-        if (!version.equals("") && !version.equals("ANY")) {
+        String version = getTestSetting("browser-ver",getTestSetting("version", "ANY"));
+        if (!version.equals("") && (!version.equals("ANY"))) {
             caps.setVersion(version);
         }
 
         String platform = getTestSetting("platform","ANY");
-        switch (params.get("platform").toLowerCase()){
+        switch (platform.toLowerCase()){
             case "any" : caps.setPlatform(Platform.ANY); break;
             case "xp" : caps.setPlatform(Platform.XP); break;
             case "vista" : caps.setPlatform(Platform.VISTA); break;

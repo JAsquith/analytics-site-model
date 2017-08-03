@@ -9,7 +9,7 @@ import pages.data.components.DataSideMenu;
 import pages.data.students.PublishStudents;
 import pages.reports.Report;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.Report_AddFilters;
+import pages.reports.components.Report_AddStudentFilters;
 import pages.reports.components.ReportsHome_CohortsMenu;
 import pages.reports.components.ReportsHome_YearAccordion;
 import utils.TableDataFileManager;
@@ -174,7 +174,7 @@ public class FigureChecking extends SISRATest {
         String[] groups = filterGroupsParam.split("¬");
         String[] values = filterValuesParam.split("¬");
 
-        Report_AddFilters filtersModal = reportPage.openFiltersModal();
+        Report_AddStudentFilters filtersModal = reportPage.openFiltersModal();
 
         for(int i = 0; i < groups.length; i++){
             String group = groups[i];

@@ -1,5 +1,6 @@
 package pages.reports.components;
 
+import io.qameta.allure.Step;
 import pages.AnalyticsComponent;
 import pages.reports.Report;
 import org.openqa.selenium.By;
@@ -20,7 +21,8 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     public final By TITLE_BAR = By.className("eapYearTitle");
     public final By PUBLISHED_REPORT = By.cssSelector(".eapPub");
     public final By REPORT_INFO = By.cssSelector(".eapInfo>em");
-    public final By GO_TO_REPORTS = By.cssSelector(".EAPRptBtn>a");
+    public final By GO_TO_HEADLINES = By.cssSelector(".EAPRptBtn>a:nth-of-type(1)");
+    public final By GO_TO_GRADES = By.cssSelector(".EAPRptBtn>a:nth-of-type(2)");
 
     private WebElement accordion;
     private WebElement titleBar;
@@ -36,6 +38,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         this.init(yearNumber, forTracker);
     }
 
+    @Step ( "Access Year Accordion: ${0} (forTracker = ${1})" )
     private void init(String yearNumber, String forTracker){
         waitMedium.until(ExpectedConditions.elementToBeClickable(COMPONENT));
 
@@ -61,6 +64,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     }
 
     //  - CHANGING THE STATE OF THE PAGE
+    @Step( "Expand Year Accordion" )
     public void expandYear(){
         List<WebElement> yearSubElements = accordion.findElements(PUBLISHED_REPORT);
         if (!yearSubElements.get(0).isDisplayed()){
@@ -69,6 +73,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         }
     }
 
+    @Step( "Expand Dataset Accordion: ${0}" )
     public WebElement expandPublishedReport(String datasetName){
         expandYear();
         List<WebElement> publishedReports = accordion.findElements(PUBLISHED_REPORT);
@@ -77,7 +82,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             if (repInfo.getText().trim().equals(datasetName)){
                 if (!pubReport.getAttribute("class").contains("active")){
                     pubReport.click();
-                    waitForPublishedReportExpansion(pubReport.findElement(GO_TO_REPORTS));
+                    waitForPublishedReportExpansion(pubReport.findElement(GO_TO_GRADES));
                 }
                 return pubReport;
             }
@@ -85,12 +90,22 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         return null;
     }
 
-    public Report gotoPublishedReport(String datasetName, String forTracker){
+    public Report gotoPublishedReport(String datasetName, String forTracker) {
+        return gotoPublishedReport(datasetName, forTracker, "Grades");
+    }
+
+    @Step( "Open ${2} Report for: ${0} (forTracker = ${1})" )
+    public Report gotoPublishedReport(String datasetName, String forTracker, String repCategory) {
+        By button;
+        switch (repCategory){
+            case "Headlines": button = GO_TO_HEADLINES; break;
+            default: button = GO_TO_GRADES;
+        }
 
         if(!forTracker.equals("")){
-            expandPublishedReport("Tracker").findElement(GO_TO_REPORTS).click();
+            expandPublishedReport("Tracker").findElement(button).click();
         }else{
-            expandPublishedReport(datasetName).findElement(GO_TO_REPORTS).click();
+            expandPublishedReport(datasetName).findElement(button).click();
         }
 
         waitForLoadingWrapper();
@@ -99,6 +114,16 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             reportPage = reportPage.selectDataset(datasetName);
         }
         return reportPage;
+    }
+
+    public Report gotoPublishedReport(String datasetName, boolean forTracker, String repCategory){
+        String trackerCol;
+        if (forTracker){
+            trackerCol = "[default]";
+        } else {
+            trackerCol = "";
+        }
+        return gotoPublishedReport(datasetName, trackerCol, repCategory);
     }
 
     //  - COMPONENT SPECIFIC WAITS

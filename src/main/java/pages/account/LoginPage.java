@@ -1,6 +1,7 @@
 package pages.account;
 
 import com.google.common.base.Function;
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -100,14 +101,19 @@ public class LoginPage {
      *          2 = user already logged in elsewhere (only valid if the {@code endOtherSession} param is {@code false}
      *          3 = first login for this user (use changePassword, or keepPassword methods to complete login)
      */
+    @Step( "Login using ${0} & ${1}. EndOtherSession = ${2}")
     public int loginWith(String username, String password, boolean endOtherSession){
         // Enter the given username and password and submit the form
         WebElement usernameField = getUsernameField();
         WebElement passwordField = getPasswordField();
         usernameField.clear();
-        usernameField.sendKeys(username);
+        if (!username.equals("")) {
+            usernameField.sendKeys(username);
+        }
         passwordField.clear();
-        passwordField.sendKeys(password);
+        if (!password.equals("")) {
+            passwordField.sendKeys(password);
+        }
 
         driver.findElement(ACC_LOG_IN_BUTTON).click();
 
@@ -203,6 +209,7 @@ public class LoginPage {
      * Accessor for the validation message list item elements
      * @return  A {@link List} object with entries for each &lt;li&gt; element in the validation messages &lt;ul&gt;
      */
+    @Step("Get login page validation messages")
     public List<WebElement> getValidationMessages(){
         return driver.findElements(VAL_MESSAGES);
     }
