@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import pages.reports.components.Report_FilterTabs;
 import pages.reports.components.Report_GradeFilters;
+import pages.reports.components.Report_ViewOptions;
 
 import java.util.List;
 
@@ -35,29 +36,14 @@ public class Report extends AnalyticsPage {
 
     // Locators for Filters/Measures/Residual Exclusions tabs (and the buttons within them)
     // are public in the Report_FilterTabs class
-    Report_FilterTabs filterTabs;
+    public Report_FilterTabs filterTabs;
 
     // Locators for Grade filters (On Track, Faculty, Class, Grade Type, etc)
     // are public in the Report_GradeFilters class
-    Report_GradeFilters gradeFilters;
-    public static final By ON_TRACK_MENU = By.cssSelector(".onTrack.active");
-    public static final By FACULTY_DDL = By.cssSelector("select#ReportOptions_Faculty_ID");
-    public static final By QUALIFICATION_DDL = By.cssSelector("select#ReportOptions_Qual_ID");
-    public static final By CLASS_DDL = By.cssSelector("select#ReportOptions_TchGrp_ID");
-    public static final By GRADE_TYPE_DDL = By.cssSelector("select#ReportOptions_EAPGradesMethod_ID");
-    public static final By AWARD_CLASS_DDL = By.cssSelector("select#ReportOptions_RPTQualType_ID");
-    public static final By KS2_CORE_DDL = By.cssSelector("select#ReportOptions_KS2Baseline_ID");
-    public static final By GRADE_FILTER_TYPE_DDL = By.cssSelector("select#ReportOptions_Grade_RPTOperand_ID");
-    public static final By GRADE_FILTER_WHOLE_DDL = By.cssSelector("select#ReportOptions_EAPWholeGrade_ID");
-    public static final By GRADE_FILTER_SUB_DDL = By.cssSelector("select#ReportOptions_EAPSubGrade_Order");
-
+    public Report_GradeFilters gradeFilters;
+    
     // Locators for View Options (Column Sort, Count/Percent, Standard/Cumulative, Breakdown, StuInfo, A8 Basket, Sub/Whole)
-    public static final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColName");
-    public static final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label[for='RPTColSort_Desc']");
-    public static final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
-    public static final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
-    public static final By CALC_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(3)");
-
+    public Report_ViewOptions viewOptions;
 
 // CONSTRUCTORS
     public Report(RemoteWebDriver aDriver){
@@ -65,6 +51,7 @@ public class Report extends AnalyticsPage {
         waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DDL));
         filterTabs = new Report_FilterTabs(driver);
         gradeFilters = new Report_GradeFilters(driver);
+        viewOptions = new Report_ViewOptions(driver);
     }
 
 // METHODS
@@ -111,7 +98,7 @@ public class Report extends AnalyticsPage {
     }
 
     /**
-     * Convenience method which passes through to the filterTabs property (which is a Report_FilterTabs object)
+     * Convenience method which passes through to the filterTabs property (which is a @link{Report_FilterTabs} object)
      * @return a @link{Report_AddStudentFiltersModal} object
      */
     public Report_AddStudentFilters openFiltersModal(){
@@ -147,7 +134,7 @@ public class Report extends AnalyticsPage {
     }
 
     /**
-     * Convenience method which passes through to the gradeFilters property (which is a Report_GradeFilters object)
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
      * @param trackStatus   a @link{String} identifying the type of track filtering to apply
      * @return  a (refreshed) @link{Report}
      */
@@ -156,7 +143,7 @@ public class Report extends AnalyticsPage {
     }
 
     /**
-     * Convenience method which passes through to the gradeFilters property (which is a Report_GradeFilters object)
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
      * @param optionText    a @link{String} identifying the faculty to select
      * @return  a (refreshed) @link{Report}
      */
@@ -165,7 +152,7 @@ public class Report extends AnalyticsPage {
     }
 
     /**
-     * Convenience method which passes through to the gradeFilters property (which is a Report_GradeFilters object)
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
      * @param optionText    a @link{String} identifying the qualification to select
      * @return  a (refreshed) @link{Report}
      */
@@ -173,195 +160,111 @@ public class Report extends AnalyticsPage {
         return gradeFilters.selectQualification(optionText);
     }
 
-
     /**
-     * Convenience method which passes through to the gradeFilters property (which is a Report_GradeFilters object)
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
      * @param optionText    a @link{String} identifying the class to select
      * @return  a (refreshed) @link{Report}
      */
     public Report selectClass(String optionText){
         return gradeFilters.selectClass(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
+     * @param optionText    a @link{String} identifying the grade method to select
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectGradeType(String optionText){
-        // NB. if field is 'Locked', the option will still be selected and the form submitted, but
-        //      when the page is reloaded the previous option will be the active one
-        List<WebElement> gradeTypeDDLs = driver.findElements(GRADE_TYPE_DDL);
-        if (gradeTypeDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Grade Type is not available");
-            }
-            return this; // The Grade Type DDL is not currently available
-        }
-        new Select(gradeTypeDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return gradeFilters.selectGradeType(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
+     * @param optionText    a @link{String}, either "GCSE" or "Non-GCSE"
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectAwardClass(String optionText){
-        List<WebElement> awardClassDDLs = driver.findElements(AWARD_CLASS_DDL);
-        if (awardClassDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because GCSE/Non-GCSE is not available");
-            }
-            return this; // The GCSE/Non-GCSE DDL is not currently available
-        }
-        new Select(awardClassDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return gradeFilters.selectAwardClass(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
+     * @param optionText    a @link{String} identifying the KS2Core to select
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectKS2Core(String optionText){
-        List<WebElement> ks2CoreDDLs = driver.findElements(KS2_CORE_DDL);
-        if (ks2CoreDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because KS2 Core is not available");
-            }
-            return this; // The KS2 Core DDL is not currently available
-        }
-        new Select(ks2CoreDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return gradeFilters.selectKS2Core(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
+     * @param optionText one of: "less than", "equal to", "greater or equal" or "greater than"
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectGradeFilterType(String optionText){
-
-        switch (optionText.toLowerCase()){
-            case "":
-                return this;
-            case "less than":
-                optionText = "<";
-                break;
-            case "equal to":
-                optionText = "=";
-                break;
-            case "greater or equal":
-                optionText = ">=";
-                break;
-            case "greater than":
-                optionText = ">";
-                break;
-            default:
-                throw new IllegalArgumentException("Unknown Grade Filter Type '" + optionText +
-                        "'. Expected 'less than', 'equal to', 'greater or equal' or 'greater than'.");
-        }
-
-        List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_TYPE_DDL);
-        if (targetDDLs.size() == 0) {
-            throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
-        }
-
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return gradeFilters.selectGradeFilterType(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
+     * @param optionText    a @link{String} identifying the whole grade to select
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectGradeFilterWhole(String optionText){
-        List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_WHOLE_DDL);
-        if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
-            }
-            return this; // The Grade Filter DDLs are not currently available
-        }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return gradeFilters.selectGradeFilterWhole(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
+     * @param optionText    a @link{String} identifying the sub grade to select
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectGradeFilterSub(String optionText){
-        List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_SUB_DDL);
-        if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
-            }
-            return this; // The Grade Filter DDLs are not currently available
-        }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return gradeFilters.selectGradeFilterSub(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
+     * @param optionText    a @link{String} identifying the column to sort by
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectColSort(String optionText){
-        List<WebElement> targetDDLs = driver.findElements(COL_SORT_DDL);
-        if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Column Sort is not available");
-            }
-            return this; // The Column Sort DDL is not currently available
-        }
-        if (!optionText.equals("")) {
-            new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
-            waitForLoadingWrapper();
-        }
-        return this;
+        return viewOptions.selectColSort(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
+     * @return  a (refreshed) @link{Report}
+     */
     public Report toggleColSortDirection(){
-        driver.findElement(COL_SORT_DIRECTION_TOGGLE).click();
-        return this;
+        return viewOptions.toggleColSortDirection();
     }
+
+    /**
+     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
+     * @param optionText    a @link{String} identifying the filter to select
+     * @return  a (refreshed) @link{Report}
+     */
     public Report selectBreakdown(String optionText){
-        List<WebElement> targetDDLs = driver.findElements(BREAKDOWN_DDL);
-        if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Breakdown is not available");
-            }
-            return this; // The Breakdown DDL is not currently available
-        }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
-        waitForLoadingWrapper();
-        return this;
+        return viewOptions.selectBreakdown(optionText);
     }
+
+    /**
+     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
+     * @param figType one of: "Percentage", "%", "Count", or "#"
+     * @return  a (refreshed) @link{Report}
+     */
     public Report setFigType(String figType){
-        // checks current availability and setting, clicks label if req.
-        if (figType.equals("")){
-            return this;
-        }
-        WebElement figToggle = driver.findElement(FIG_TYPE_TOGGLE);
-        if (figToggle.getAttribute("class").contains("disabled")){
-            throw new IllegalStateException("The Figure Type options are disabled");
-        }
-        String oldType = figToggle.findElement(By.tagName("div")).getText().trim();
-        String newType;
-        switch (figType){
-            case "%":case "Percentage":
-                newType = "Percentage";
-                break;
-            case "#":case "Count":
-                newType = "Count";
-                break;
-            default:
-                throw new IllegalArgumentException("Unexpected Figure Type '" + figType +
-                        "'. Expected '#', '%', 'Count' or 'Percentage'");
-        }
-        if (oldType.startsWith(newType)){
-            return this;
-        }
-        figToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
-        waitForLoadingWrapper();
-        return this;
+        return viewOptions.setFigType(figType);
     }
+
+    /**
+     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
+     * @param calcType one of: "Standard", "Std", "Cumulative", or "Cum"
+     * @return  a (refreshed) @link{Report}
+     */
     public Report setCalcType(String calcType){
-        // checks current availability and setting, clicks label if req.
-        if (calcType.equals("")){
-            return this;
-        }
-        WebElement calcToggle = driver.findElement(CALC_TYPE_TOGGLE);
-        if (calcToggle.getAttribute("class").contains("disabled")){
-            throw new IllegalStateException("The Calculation Type options are disabled");
-        }
-        String oldType = calcToggle.findElement(By.tagName("div")).getText().trim();
-        String newType;
-        switch (calcType){
-            case "Std":case "Standard":
-                newType = "Standard";
-                break;
-            case "Cum":case "Cumulative":
-                newType = "Cumulative";
-                break;
-            default:
-                throw new IllegalArgumentException("Unexpected Calculation Type '" + calcType +
-                        "'. Expected 'Std', 'Cum', 'Standard' or 'Cumulative'");
-        }
-        if (oldType.startsWith(newType)){
-            return this;
-        }
-        calcToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
-        waitForLoadingWrapper();
-        return this;
+        return viewOptions.setCalcType(calcType);
     }
 
     public String readTableData(String tableName) {
