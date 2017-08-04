@@ -57,17 +57,25 @@ public class HeadlineFiltersTests extends BaseTest {
         //Todo: tag appropriate methods in the Report Page Object with @Step annotations
     }
 
-    @Story( "The Report/View Options should be available/disabled/locked as per the spec" )
+    @Story( "The Report/View Options should be enabled/disabled/locked as per the spec" )
     @Severity( SeverityLevel.CRITICAL )
     @Test
     public void optionsAvailability(){
-        String optionAvailabilityErrors;
+        String optionAvailabilityErrors = "";
 
         // Student Filters tab is enabled
-
+        if(!testPage.filterTabs.isEnabled("filter")){
+            optionAvailabilityErrors = "Student Filters Tab should be enabled but isn't";
+        }
         // Measure Filters tab is enabled
+        if(!testPage.filterTabs.isEnabled("measure")){
+            optionAvailabilityErrors += System.lineSeparator() + "Measures Tab should be enabled but isn't";
+        }
 
         // Residual Exclusions tab is disabled
+        if(!testPage.filterTabs.isDisabled("residual")){
+            optionAvailabilityErrors += "Residual Exclusions Tab should be disabled but isn't";
+        }
 
         // On Track grade filters are disabled
 
@@ -76,7 +84,6 @@ public class HeadlineFiltersTests extends BaseTest {
         // Qualification DDL is enabled
 
         // Class DDL is not present
-
 
 
     }
