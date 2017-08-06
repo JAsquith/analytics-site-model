@@ -38,6 +38,8 @@ public abstract class BaseTest {
      * the given settings
      */
     protected void initialise(ITestContext context_TestNG) throws MalformedURLException {
+
+
         utils = new TestUtils(context_TestNG);
         try {
             driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
@@ -69,4 +71,19 @@ public abstract class BaseTest {
         LoginPage loginPage = new LoginPage(driver, true);
         loginPage.loginWith(user, pass, endOtherSession);
     }
+
+    /**
+     * Accesses a given test parameter
+     * @param name
+     * @param defaultVal
+     * @return
+     */
+    protected String getStringParam(String name, String defaultVal){
+        return utils.getTestSetting(name, defaultVal);
+    }
+
+    protected String getStringParam(String name){
+        return getStringParam(name, "");
+    }
+
 }

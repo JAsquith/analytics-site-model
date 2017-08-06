@@ -11,16 +11,16 @@ import java.util.List;
 
 public class Report_GradeFilters extends AnalyticsComponent {
 
-    public static final By ON_TRACK_MENU = By.cssSelector(".onTrack.active");
-    public static final By FACULTY_DDL = By.cssSelector("select#ReportOptions_Faculty_ID");
-    public static final By QUALIFICATION_DDL = By.cssSelector("select#ReportOptions_Qual_ID");
-    public static final By CLASS_DDL = By.cssSelector("select#ReportOptions_TchGrp_ID");
-    public static final By GRADE_TYPE_DDL = By.cssSelector("select#ReportOptions_EAPGradesMethod_ID");
-    public static final By AWARD_CLASS_DDL = By.cssSelector("select#ReportOptions_RPTQualType_ID");
-    public static final By KS2_CORE_DDL = By.cssSelector("select#ReportOptions_KS2Baseline_ID");
-    public static final By GRADE_FILTER_TYPE_DDL = By.cssSelector("select#ReportOptions_Grade_RPTOperand_ID");
-    public static final By GRADE_FILTER_WHOLE_DDL = By.cssSelector("select#ReportOptions_EAPWholeGrade_ID");
-    public static final By GRADE_FILTER_SUB_DDL = By.cssSelector("select#ReportOptions_EAPSubGrade_Order");
+    public static final By ON_TRACK_MENU = By.cssSelector(".onTrack");
+    public static final By FACULTY_DDL = By.cssSelector("#ReportOptions_Faculty_ID");
+    public static final By QUALIFICATION_DDL = By.cssSelector("#ReportOptions_Qual_ID");
+    public static final By CLASS_DDL = By.cssSelector("#ReportOptions_TchGrp_ID");
+    public static final By GRADE_TYPE_DDL = By.cssSelector("#ReportOptions_EAPGradesMethod_ID");
+    public static final By AWARD_CLASS_DDL = By.cssSelector("#ReportOptions_RPTQualType_ID");
+    public static final By KS2_CORE_DDL = By.cssSelector("#ReportOptions_KS2Baseline_ID");
+    public static final By GRADE_FILTER_TYPE_DDL = By.cssSelector("#ReportOptions_Grade_RPTOperand_ID");
+    public static final By GRADE_FILTER_WHOLE_DDL = By.cssSelector("#ReportOptions_EAPWholeGrade_ID");
+    public static final By GRADE_FILTER_SUB_DDL = By.cssSelector("#ReportOptions_EAPSubGrade_Order");
 
     public Report_GradeFilters(RemoteWebDriver aDriver){
         super(aDriver);
@@ -168,5 +168,39 @@ public class Report_GradeFilters extends AnalyticsComponent {
         return new Report(driver);
     }
 
+    public boolean isDisabled(By locator){
+
+        WebElement testElement;
+        testElement = driver.findElement(locator);
+        // If we're looking for the OnTrack menu, we can check the menu itself has the disabled class
+        if (locator != ON_TRACK_MENU) {
+            testElement = testElement.findElement(By.xpath(".."));
+        }
+        // For all others (DDLs), it's the parent div which should have the disabled class:
+        return testElement.getAttribute("class").contains("disabled");
+    }
+
+    public boolean isEnabled(By locator){
+        WebElement testElement;
+        testElement = driver.findElement(locator);
+        // If we're looking for the OnTrack menu, we can check the menu itself *DOES NOT* have the disabled class
+        if(locator == ON_TRACK_MENU){
+            return !testElement.getAttribute("class").contains("disabled");
+        }
+        // For all others (DDLs), we can just use the WebElement.isEnabled method:
+        return testElement.isEnabled();
+    }
+
+    public boolean isDisplayed(By locator){
+        WebElement testElement;
+        testElement = driver.findElement(locator);
+        // If we're looking for the OnTrack menu, we can check the menu itself isDisplayed
+        if (locator == ON_TRACK_MENU) {
+            return testElement.isDisplayed();
+        }
+        // For all others (DDLs), we need to check the parent as well (in case the select has been replaced with a span):
+        WebElement parent = testElement.findElement(By.xpath(".."));
+        return testElement.isDisplayed() || parent.isDisplayed();
+    }
 
 }

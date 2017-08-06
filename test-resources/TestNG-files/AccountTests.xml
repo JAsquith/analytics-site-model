@@ -33,7 +33,7 @@
     <test name="No Username Test">
         <parameter name="no-username-val-msg-count" value="1" />
         <parameter name="password" value="Password1" />
-        <parameter name="val-msgs" value="The user name or password provided is incorrect." />
+        <parameter name="val-msgs" value="Please enter a username." />
         <groups>
             <run>
                 <include name="no-username" />

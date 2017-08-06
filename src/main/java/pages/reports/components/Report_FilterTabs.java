@@ -35,21 +35,6 @@ public class Report_FilterTabs extends AnalyticsComponent {
         genericsFor = "";
     }
 
-    public boolean isEnabled(String tabType){
-        tabType = normaliseTabType(tabType);
-        buildGenericBys(tabType);
-
-        List<WebElement> tabs = driver.findElements(genericTabBy);
-        if(tabs.size()>0){
-            for(WebElement tab : tabs){
-                if (tab.getText().contains(tabType)){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     public boolean isDisabled(String tabType){
         tabType = normaliseTabType(tabType);
         buildGenericBys(tabType);
@@ -57,10 +42,21 @@ public class Report_FilterTabs extends AnalyticsComponent {
         List<WebElement> tabs = driver.findElements(genericDisabledTabBy);
         if(tabs.size()>0){
             for(WebElement tab : tabs){
-                if (tab.getText().contains(tabType)){
+                if (tab.getText().toLowerCase().contains(tabType)){
                     return true;
                 }
             }
+        }
+        return false;
+    }
+
+    public boolean isEnabled(String tabType){
+        tabType = normaliseTabType(tabType);
+        buildGenericBys(tabType);
+
+        List<WebElement> tabs = driver.findElements(genericTabBy);
+        if(tabs.size()>0){
+            return true;
         }
         return false;
     }
@@ -71,7 +67,7 @@ public class Report_FilterTabs extends AnalyticsComponent {
         List<WebElement> tabs = driver.findElements(genericActiveTabBy);
         if(tabs.size()>0){
             for(WebElement tab : tabs){
-                if (tab.getText().contains(tabType)){
+                if (tab.getAttribute("class").contains("active")){
                     return true;
                 }
             }

@@ -1,7 +1,6 @@
 package tests.admin;
 
 import io.qameta.allure.*;
-import org.junit.experimental.categories.Category;
 import tests.BaseTest;
 import pages.account.LoginPage;
 import org.openqa.selenium.WebElement;
@@ -41,105 +40,84 @@ public class LoginValidationTests extends BaseTest {
 
     @Story("Trying to login with no username or password should fail")
     @Severity(SeverityLevel.BLOCKER)
-    @Parameters({ "no-details-val-msg-count"})
     @Test(groups = { "no-details"})
-    public void noDetailsFails(String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-        String user = "";
-        String pass = "";
-        int loginResult = login(testPage, user, pass);
+    public void noDetailsFails(){
+        int loginResult = testPage.loginWith("","");
         assertThat("Attempted login should fail ", loginResult, is(1));
-
-        List<WebElement> actualValMsgs = testPage.getValidationMessages();
-        assertThat("Number of validation messages should be ", actualValMsgs.size(), is(expectedValMsgsCount));
-
-        checkValidationMessages(actualValMsgs, expectedValMsgs);
     }
 
-    @Story("Trying to login with no username or password should produce 2 validation messages")
+    @Story("Trying to login with no username or password gives the right number of validation messages")
     @Severity(SeverityLevel.CRITICAL)
-    @Parameters({ "no-details-val-msg-count"})
     @Test(groups = { "no-details"})
-    public void noDetailsValMsgCount(String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-        String user = "";
-        String pass = "";
-        int loginResult = login(testPage, user, pass);
-        List<WebElement> actualValMsgs = testPage.getValidationMessages();
-        assertThat("Number of validation messages should be ", actualValMsgs.size(), is(expectedValMsgsCount));
+    public void noDetailsValMsgCount(){
+        testPage.loginWith("", "");
+        assertThat("Number of validation messages should be ",
+                testPage.getValidationMessages().size(),
+                is(utils.getTestSetting("no-details-val-msg-count",-1)));
     }
 
-    @Story("Trying to login with no username or password should produce the correct validation messages")
+    @Story("Trying to login with no username or password gives the correct validation messages")
     @Severity(SeverityLevel.MINOR)
-    @Parameters({ "no-details-val-msg-count"})
     @Test(groups = { "no-details"})
-    public void noDetailsValMsgs(String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-        String user = "";
-        String pass = "";
-        int loginResult = login(testPage, user, pass);
-        List<WebElement> actualValMsgs = testPage.getValidationMessages();
-        checkValidationMessages(actualValMsgs, expectedValMsgs);
+    public void noDetailsValMsgs(){
+        testPage.loginWith("", "");
+        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("val-msgs"));
     }
 
     @Story("Trying to login with no password should fail")
     @Severity(SeverityLevel.BLOCKER)
-    @Parameters({ "username", "no-password-val-msg-count" })
+    @Parameters({ "username" })
     @Test(groups = { "no-password"})
-    public void noPasswordFails(String username, String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-
-        String pass = "";
-        int loginResult = login(testPage, username, pass);
+    public void noPasswordFails(String username){
+        int loginResult = testPage.loginWith(username, "");
         assertThat("Attempted login should fail ", loginResult, is(1));
     }
 
-    @Story("Trying to login with no password should give 2 validation messages")
+    @Story("Trying to login with no password gives the right number of validation messages")
     @Severity(SeverityLevel.CRITICAL)
-    @Parameters({ "username", "no-password-val-msg-count" })
+    @Parameters({ "username" })
     @Test(groups = { "no-password"})
-    public void noPasswordValMsgsCount(String username, String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-
-        String pass = "";
-        int loginResult = login(testPage, username, pass);
-        List<WebElement> actualValMsgs = testPage.getValidationMessages();
-        assertThat("Number of validation messages should be ", actualValMsgs.size(), is(expectedValMsgsCount));
+    public void noPasswordValMsgsCount(String username){
+        testPage.loginWith(username, "");
+        assertThat("Number of validation messages should be ",
+                testPage.getValidationMessages().size(),
+                is(utils.getTestSetting("no-password-val-msg-count", -1)));
     }
 
-    @Story("Trying to login with no password should give the correct validation message text")
+    @Story("Trying to login with no password gives the correct validation messages")
     @Severity(SeverityLevel.MINOR)
-    @Parameters({ "username", "no-password-val-msg-count" })
+    @Parameters({ "username" })
     @Test(groups = { "no-password"})
-    public void noPasswordValMsgs(String username, String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-
-        String pass = "";
-        int loginResult = login(testPage, username, pass);
-        List<WebElement> actualValMsgs = testPage.getValidationMessages();
-        checkValidationMessages(actualValMsgs, expectedValMsgs);
+    public void noPasswordValMsgs(String username){
+        login(testPage, username, "");
+        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("val-msgs"));
     }
 
     @Story("Trying to login with no username should fail")
-    @Parameters({ "password", "no-username-val-msg-count" })
+    @Parameters({ "password" })
     @Test(groups = { "no-username"})
-    public void noUsernameTest(String password, String expected_val_msg_count){
-        int expectedValMsgsCount = Integer.valueOf(expected_val_msg_count);
-        String[] expectedValMsgs = utils.getTestSettingAsArray("val-msgs");
-
-        int loginResult = testPage.loginWith("none", password);
+    public void noUsernameFails(String password){
+        int loginResult = testPage.loginWith("", password);
         assertThat("Login Result ", loginResult, is(1));
+    }
 
-        List<WebElement> actualValMsgs = testPage.getValidationMessages();
-        assertThat("Validation message count ", actualValMsgs.size(), is(expectedValMsgsCount));
+    @Story("Trying to login with no username gives the right number of validation messages")
+    @Parameters({ "password" })
+    @Test(groups = { "no-username"})
+    public void noUsernameValMsgCount(String password){
+       testPage.loginWith("", password);
+        assertThat("Validation message count ",
+                testPage.getValidationMessages().size(),
+                is(utils.getTestSetting("no-username-val-msg-count", -1)));
+    }
 
-        checkValidationMessages(actualValMsgs, expectedValMsgs);
+    @Story("Trying to login with no username gives the correct validation message text")
+    @Severity(SeverityLevel.MINOR)
+    @Parameters({ "password" })
+    @Test(groups = { "no-username"})
+    public void noUsernameValMsgs(String password){
+        login(testPage, "", password);
+        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("val-msgs"));
     }
 
     @Step("Submit Login Details")
@@ -147,6 +125,7 @@ public class LoginValidationTests extends BaseTest {
         return page.loginWith(user,pass,false);
     }
 
+    @Step( "Check displayed validation messages against test settings" )
     public void checkValidationMessages(List<WebElement> actualValMsgs, String[] expectedValMsgs){
         for (int i = 0; i < actualValMsgs.size(); i++){
             String expectedValMsg = "[does not exist!]";

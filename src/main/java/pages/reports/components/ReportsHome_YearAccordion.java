@@ -38,7 +38,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         this.init(yearNumber, forTracker);
     }
 
-    @Step ( "Access Year Accordion: ${0} (forTracker = ${1})" )
+    @Step ( "Access Year Accordion: {yearNumber} (forTracker = {forTracker})" )
     private void init(String yearNumber, String forTracker){
         waitMedium.until(ExpectedConditions.elementToBeClickable(COMPONENT));
 
@@ -73,7 +73,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         }
     }
 
-    @Step( "Expand Dataset Accordion: ${0}" )
+    @Step( "Expand Dataset Accordion: {datasetName}" )
     public WebElement expandPublishedReport(String datasetName){
         expandYear();
         List<WebElement> publishedReports = accordion.findElements(PUBLISHED_REPORT);
@@ -94,7 +94,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         return gotoPublishedReport(datasetName, forTracker, "Grades");
     }
 
-    @Step( "Open ${2} Report for: ${0} (forTracker = ${1})" )
+    @Step( "Open {repCategory} Report for: {datasetName} (forTracker = {forTracker})" )
     public Report gotoPublishedReport(String datasetName, String forTracker, String repCategory) {
         By button;
         switch (repCategory){

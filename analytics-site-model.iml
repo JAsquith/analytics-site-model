@@ -22,6 +22,8 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:jetty-repacked:7.6.1" level="project" />
     <orderEntry type="library" name="Maven: net.jcip:jcip-annotations:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.8" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-jdk14:1.8.0-alpha2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.8.0-alpha2" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-testng:2.0-BETA16" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-descriptions-javadoc:2.0-BETA16" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" level="project" />
@@ -36,7 +38,6 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:joor:0.9.6" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-maven:2.8" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-core:3.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.3.9" level="project" />

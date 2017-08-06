@@ -24,9 +24,9 @@ public class Report extends AnalyticsPage {
     // Locators for report navigation
     public static final By AREAS = By.className("area");
     public static final By AREA_BUTTONS = By.cssSelector(".area .rept");
-    public static final By AREA_LIST_GRID_LINKS = By.cssSelector(".list-grid td>a");
-    public static final By LIST_GRID_ROW_LABELS = By.cssSelector("td.title-y:nth-of-type(2)");
-    public static final By LIST_GRID_COL_LABELS = By.cssSelector("td.title-x");
+    public static final By REPORT_NAV_AREA_LINKS = By.cssSelector(".list-grid td>a");
+    public static final By REPORT_NAV_VIEW_LABELS = By.cssSelector("td.title-y:nth-of-type(2)");
+    public static final By REPORT_NAV_LEVEL_LABELS = By.cssSelector("td.title-x");
     public static final By LIST_GRID_ROWS = By.cssSelector("tr.btn");
     public static final By LIST_GRID_COLS = By.cssSelector("tr:nth-of-type(3)>td");
 
@@ -62,7 +62,7 @@ public class Report extends AnalyticsPage {
     // QUERYING THE CURRENT PAGE STATE
 
     //  - CHANGING THE STATE OF THE PAGE
-    @Step( "Open View: ${0} > ${1} > ${2}" )
+    @Step( "Open View: {areaName} > {reportName} > {levelName}" )
     public Report openView(String areaName, String reportName, String levelName){
 
         // Show the table of links to views within the given areaName
@@ -286,7 +286,7 @@ public class Report extends AnalyticsPage {
 
     private WebElement getViewLinkFromListGrid(WebElement area, String reportName, String levelName){
 
-        List<WebElement> rowLabels = area.findElements(LIST_GRID_ROW_LABELS);
+        List<WebElement> rowLabels = area.findElements(REPORT_NAV_VIEW_LABELS);
         //int rowIndex = area.findElements(LIST_GRID_ROWS).size() - rowLabels.size();
         int rowIndex = 2;
 
@@ -297,7 +297,7 @@ public class Report extends AnalyticsPage {
             }
         }
 
-        List<WebElement> colLabels = area.findElements(LIST_GRID_COL_LABELS);
+        List<WebElement> colLabels = area.findElements(REPORT_NAV_LEVEL_LABELS);
         int colIndex = area.findElements(LIST_GRID_COLS).size() - colLabels.size();
 
         for (WebElement label: colLabels){
@@ -338,7 +338,7 @@ public class Report extends AnalyticsPage {
     }
 
     private List<WebElement> waitForListGridDisplay(WebElement area){
-        return waitMedium.until(ExpectedConditions.visibilityOfAllElements(area.findElements(AREA_LIST_GRID_LINKS)));
+        return waitMedium.until(ExpectedConditions.visibilityOfAllElements(area.findElements(REPORT_NAV_AREA_LINKS)));
     }
 
     private int findNamedTableIndex(String tableName){
