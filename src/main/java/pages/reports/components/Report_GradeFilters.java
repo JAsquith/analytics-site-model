@@ -11,16 +11,17 @@ import java.util.List;
 
 public class Report_GradeFilters extends AnalyticsComponent {
 
-    public static final By ON_TRACK_MENU = By.cssSelector(".onTrack");
-    public static final By FACULTY_DDL = By.cssSelector("#ReportOptions_Faculty_ID");
-    public static final By QUALIFICATION_DDL = By.cssSelector("#ReportOptions_Qual_ID");
-    public static final By CLASS_DDL = By.cssSelector("#ReportOptions_TchGrp_ID");
-    public static final By GRADE_TYPE_DDL = By.cssSelector("#ReportOptions_EAPGradesMethod_ID");
-    public static final By AWARD_CLASS_DDL = By.cssSelector("#ReportOptions_RPTQualType_ID");
-    public static final By KS2_CORE_DDL = By.cssSelector("#ReportOptions_KS2Baseline_ID");
-    public static final By GRADE_FILTER_TYPE_DDL = By.cssSelector("#ReportOptions_Grade_RPTOperand_ID");
-    public static final By GRADE_FILTER_WHOLE_DDL = By.cssSelector("#ReportOptions_EAPWholeGrade_ID");
-    public static final By GRADE_FILTER_SUB_DDL = By.cssSelector("#ReportOptions_EAPSubGrade_Order");
+    public final By ON_TRACK_MENU = By.cssSelector(".onTrack");
+    public final By FACULTY_DDL = By.id("ReportOptions_Faculty_ID");
+    public final By QUALIFICATION_DDL = By.id("ReportOptions_Qual_ID");
+    public final By CLASS_DDL = By.id("ReportOptions_TchGrp_ID");
+    public final By GRADE_TYPE_DDL = By.id("ReportOptions_EAPGradesMethod_ID");
+    public final By AWARD_CLASS_DDL = By.id("ReportOptions_RPTQualType_ID");
+    public final By KS2_CORE_DDL = By.id("ReportOptions_KS2Baseline_ID");
+    public final By GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Grade_RPTOperand_ID");
+    public final By GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_EAPWholeGrade_ID");
+    public final By GRADE_FILTER_SUB_DDL = By.id("ReportOptions_EAPSubGrade_Order");
+    public final By STUDENT_FILTER_DDL = By.id("ReportOptions_Stu_ID");
 
     public Report_GradeFilters(RemoteWebDriver aDriver){
         super(aDriver);

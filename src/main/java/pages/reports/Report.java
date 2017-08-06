@@ -2,17 +2,13 @@ package pages.reports;
 
 import io.qameta.allure.Step;
 import pages.AnalyticsPage;
-import pages.reports.components.Report_AddStudentFilters;
+import pages.reports.components.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import pages.reports.components.Report_FilterTabs;
-import pages.reports.components.Report_GradeFilters;
-import pages.reports.components.Report_ViewOptions;
 
 import java.util.List;
 
@@ -30,9 +26,8 @@ public class Report extends AnalyticsPage {
     public static final By LIST_GRID_ROWS = By.cssSelector("tr.btn");
     public static final By LIST_GRID_COLS = By.cssSelector("tr:nth-of-type(3)>td");
 
-    // Locators for dataset DDLs
-    public static final By DATASET_DDL = By.id("actualSelect");
-    public static final By COMPARE_WITH_DDL = By.id("compareSelect");
+    // Locators for dataset DDLs are public in the Report_DatasetOptions class
+    public Report_DatasetOptions dsOptions;
 
     // Locators for Filters/Measures/Residual Exclusions tabs (and the buttons within them)
     // are public in the Report_FilterTabs class
@@ -48,10 +43,11 @@ public class Report extends AnalyticsPage {
 // CONSTRUCTORS
     public Report(RemoteWebDriver aDriver){
         super(aDriver);
-        waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DDL));
         filterTabs = new Report_FilterTabs(driver);
         gradeFilters = new Report_GradeFilters(driver);
         viewOptions = new Report_ViewOptions(driver);
+        dsOptions = new Report_DatasetOptions(driver);
+        waitMedium.until(ExpectedConditions.elementToBeClickable(dsOptions.DATASET_DDL));
     }
 
 // METHODS
@@ -74,27 +70,7 @@ public class Report extends AnalyticsPage {
         return this;
     }
     public Report selectDataset(String optionText){
-
-        WebElement select = driver.findElement(DATASET_DDL);
-        select.click();
-
-        List<WebElement> allOptions = select.findElements(By.tagName("option"));
-        WebElement choice = select.findElement(By.xpath("option[contains(text(),'"+optionText+"')]"));
-        int choiceIndex = -1;
-        for(WebElement option : allOptions){
-            if (option.getText().equals(choice.getText())){
-                choiceIndex = allOptions.indexOf(option);
-                break;
-            }
-        }
-        if (choiceIndex == -1){
-            throw new IllegalArgumentException("Could not match '"+optionText+"' to a visible Data Set option");
-        }
-
-        new Select(select).selectByIndex(choiceIndex);
-        waitForLoadingWrapper();
-        waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DDL));
-        return this;
+        return dsOptions.selectDataset(optionText);
     }
 
     /**
@@ -106,31 +82,7 @@ public class Report extends AnalyticsPage {
     }
 
     public Report selectCompareWith(String optionText){
-        List<WebElement> compWithDDLs = driver.findElements(COMPARE_WITH_DDL);
-        if (compWithDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't compare with '" + optionText + "' because Compare With is not available");
-            }
-            return this; // The Compare With DDL is not currently available
-        }
-        WebElement select = driver.findElement(COMPARE_WITH_DDL);
-        select.click();
-        List<WebElement> allOptions = select.findElements(By.tagName("option"));
-        WebElement choice = select.findElement(By.xpath("option[contains(text(),'"+optionText+"')]"));
-        int choiceIndex = -1;
-        for(WebElement option : allOptions){
-            if (option.getText().equals(choice.getText())){
-                choiceIndex = allOptions.indexOf(option);
-                break;
-            }
-        }
-        if (choiceIndex == -1){
-            throw new IllegalArgumentException("Could not match '"+optionText+"' to a visible Compare With option");
-        }
-
-        new Select(select).selectByIndex(choiceIndex);
-        waitForLoadingWrapper();
-        return this;
+        return dsOptions.selectCompareWith(optionText);
     }
 
     /**

@@ -10,17 +10,17 @@ import java.util.List;
 
 public class Report_FilterTabs extends AnalyticsComponent {
 
-    public static final By TAB_FILTERS = By.cssSelector(".tabbutton[data-tab='filter']");
-    public static final By ADD_FILTERS = By.cssSelector(".filters>*>.button.noIcon");
-    public static final By CLEAR_FILTERS = By.cssSelector(".filters>*>.button.cancel");
+    public final By TAB_FILTERS = By.cssSelector(".tabbutton[data-tab='filter']");
+    public final By ADD_FILTERS = By.cssSelector(".filters>*>.button.noIcon");
+    public final By CLEAR_FILTERS = By.cssSelector(".filters>*>.button.cancel");
 
-    public static final By TAB_MEASURES = By.cssSelector(".tabbutton[data-tab='measure']");
-    public static final By ADD_MEASURES = By.cssSelector(".measures>*>.button.noIcon");
-    public static final By CLEAR_MEASURES = By.cssSelector(".measures>*>.button.cancel");
+    public final By TAB_MEASURES = By.cssSelector(".tabbutton[data-tab='measure']");
+    public final By ADD_MEASURES = By.cssSelector(".measures>*>.button.noIcon");
+    public final By CLEAR_MEASURES = By.cssSelector(".measures>*>.button.cancel");
 
-    public static final By TAB_RESIDUALS = By.cssSelector(".tabbutton[data-tab='residual']");
-    public static final By ADD_RESIDUALS = By.cssSelector(".residuals>*>.button.noIcon");
-    public static final By CLEAR_RESIDUALS = By.cssSelector(".residuals>*>.button.cancel");
+    public final By TAB_RESIDUALS = By.cssSelector(".tabbutton[data-tab='residual']");
+    public final By ADD_RESIDUALS = By.cssSelector(".residuals>*>.button.noIcon");
+    public final By CLEAR_RESIDUALS = By.cssSelector(".residuals>*>.button.cancel");
 
     private String genericsFor;
     private By genericTabBy;

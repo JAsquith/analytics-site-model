@@ -11,11 +11,11 @@ import java.util.List;
 
 public class Report_ViewOptions extends AnalyticsComponent {
 
-    public static final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColName");
-    public static final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label[for='RPTColSort_Desc']");
-    public static final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
-    public static final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
-    public static final By CALC_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(3)");
+    public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColName");
+    public final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label[for='RPTColSort_Desc']");
+    public final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
+    public final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
+    public final By CALC_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(3)");
 
     public Report_ViewOptions(RemoteWebDriver aDriver){
         super(aDriver);
@@ -112,6 +112,10 @@ public class Report_ViewOptions extends AnalyticsComponent {
         calcToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
         waitForLoadingWrapper();
         return new Report(driver);
+    }
+
+    public boolean isDisabled(By locator){
+        return driver.findElement(locator).getAttribute("class").toLowerCase().contains("disabled");
     }
 
 
