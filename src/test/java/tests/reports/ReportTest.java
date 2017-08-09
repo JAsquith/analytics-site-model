@@ -8,6 +8,7 @@ import org.testng.annotations.Parameters;
 import pages.reports.Report;
 import pages.reports.ReportsHome_EAP;
 import tests.BaseTest;
+import static org.testng.Assert.fail;
 
 import java.net.MalformedURLException;
 
@@ -20,12 +21,19 @@ public abstract class ReportTest extends BaseTest {
     public void setup(ITestContext testContext, String user, String pass) throws MalformedURLException{
         super.initialise(testContext);
 
-        // Login, Go to reports, Open the dataset containing the test data
-        login(user,pass,true);
-        report = openTestView();
+        try {
+            // Login, Go to reports, Open the dataset containing the test data
+            login(user, pass, true);
+            report = openTestView();
 
-        // Apply any report options, filters, etc. defined in the test parameters
-        applyReportOptions();
+            // Apply any report options, filters, etc. defined in the test parameters
+            applyReportOptions();
+        } catch (Exception e){
+            if (driver!=null){
+                driver.quit();
+                fail("Test Setup Failed!");
+            }
+        }
     }
 
     @Step( "Navigate to the Headlines > Filters report for the test Cohort > Year > dataset" )
