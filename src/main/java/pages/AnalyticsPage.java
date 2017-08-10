@@ -205,9 +205,6 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
 
     // NAVIGATING TO ANOTHER PAGE
     public void clickMenuOption(String option){
-        option = option.toLowerCase();
-        String a = option.substring(0,1).toUpperCase();
-        option = a+option.substring(1);
         By optionLocator = By.xpath("//img[@alt='"+option+"']/../../..");
         driver.findElement(optionLocator).click();
         waitForLoadingWrapper();

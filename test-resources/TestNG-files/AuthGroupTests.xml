@@ -1,69 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Authority Group Tests" parallel="tests" thread-count="10">
+<suite name="Authority Group Tests" parallel="tests" thread-count="1">
 
     <test name="Auth Group - Admin">
         <parameter name="username" value="tesadm184706" />
         <parameter name="password" value="CsZeSsXg9" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|DATA|CONFIG.|USERS|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|Data|Config|User List|Reports Homepage"/>
+        <parameter name="accessible-areas" value="Home|Data|Config.|Users|Reports" />
         <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
+            <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
     <test name="Auth Group - User">
         <parameter name="username" value="tesuse184707" />
         <parameter name="password" value="VfMcTfCh3" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|Reports Homepage"/>
+        <parameter name="accessible-areas" value="Home|Reports" />
         <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
-        </classes>
-    </test>
-    <test name="Auth Group - Area Home">
-        <parameter name="username" value="viehom184708" />
-        <parameter name="password" value="JsKfYgYo8" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|Reports Homepage"/>
-        <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
+            <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
     <test name="Auth Group - Area Home Announce">
         <parameter name="username" value="annhom184709" />
         <parameter name="password" value="VjHyGoMn5" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|Reports Homepage"/>
+        <parameter name="accessible-areas" value="Home|Reports" />
         <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
+            <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
     <test name="Auth Group - Area Data">
         <parameter name="username" value="tesdat184710" />
         <parameter name="password" value="ZeDiRfHf5" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|DATA|CONFIG.|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|Data|Config|Reports Homepage"/>
+        <parameter name="accessible-areas" value="Home|Data|Config.|Reports" />
         <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
+            <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
     <test name="Auth Group - Area Users">
         <parameter name="username" value="tesuse184711" />
         <parameter name="password" value="JrEvSrKn8" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|USERS|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|User List|Reports Homepage"/>
+        <parameter name="accessible-areas" value="Home|Users|Reports" />
         <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
+            <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
-    <test name="Area Reports">
+    <test name="Report Areas - Headlines">
         <parameter name="username" value="tesrep184712" />
         <parameter name="password" value="GkJfZbDo2" />
-        <parameter name="expected-menu-options" value="LOG OUT|HOME|REPORTS" />
-        <parameter name="expected-page-titles" value="Welcome to SISRA Analytics|Reports Homepage"/>
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="expected-legacy-report-areas" value="Headlines" />
         <classes>
-            <class name="tests.account.AuthorityGroupAccessTests" />
+            <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
+
+    <!--
+    tesrep184713
+    DqJgKyHj5
+    -->
 
 </suite>

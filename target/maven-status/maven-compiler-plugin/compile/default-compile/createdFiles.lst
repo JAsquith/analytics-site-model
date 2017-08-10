@@ -2,6 +2,7 @@ pages\data\students\StudentsList.class
 pages\data\GradesFileUploadConfirm.class
 pages\users\CreateUser.class
 pages\data\students\components\ActiveStudentsTable.class
+pages\reports\components\Report_FilterTabs.class
 pages\AnalyticsComponent.class
 pages\config\GradeMethodStep2.class
 pages\data\basedata\BaselinesList.class
@@ -17,8 +18,10 @@ pages\data\basedata\UploadsForBaselinesList.class
 pages\data\students\PublishStudents.class
 pages\config\GradeMethodStep5.class
 pages\data\grades\components\CreateCollectionModal.class
+pages\reports\components\Report_ViewOptions.class
 pages\config\StudentDataProfile.class
 pages\data\basedata\KS2Baselines.class
+pages\reports\components\Report_AddStudentFilters.class
 pages\data\students\components\ClassAssignmentsModal.class
 pages\data\basedata\EAPDetail.class
 pages\config\GradeMethodStep3.class
@@ -27,9 +30,9 @@ pages\config\GradeMethodDetail.class
 pages\config\FilterManagement.class
 pages\data\basedata\components\BaselinesListRow.class
 pages\data\students\CreateNewStudent.class
-pages\reports\components\Report_AddFilters.class
 pages\data\basedata\EditEAP.class
 pages\config\GradeMethodStep6.class
+pages\reports\components\Report_GradeFilters.class
 pages\data\basedata\EAPList.class
 pages\data\grades\PublishGrades.class
 pages\home\HomePage.class
@@ -44,6 +47,7 @@ pages\users\UserList.class
 pages\data\grades\UploadsForDatasets.class
 pages\home\components\NewAnnouncement.class
 pages\data\grades\components\CollectionAccordion.class
+pages\reports\components\Report_DatasetOptions.class
 pages\data\students\components\ActiveStudentListRow.class
 pages\reports\ReportsHome.class
 pages\config\GradeMethodsList_EAP.class

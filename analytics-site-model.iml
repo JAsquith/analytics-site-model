@@ -24,6 +24,8 @@
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.8" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-jdk14:1.8.0-alpha2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.8.0-alpha2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-jdk14:1.8.0-alpha2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.8.0-alpha2" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-testng:2.0-BETA16" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-descriptions-javadoc:2.0-BETA16" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" level="project" />

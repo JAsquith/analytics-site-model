@@ -1,5 +1,7 @@
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_ViewOptions.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\config\GradeMethodStep4.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\GradesFileUploadConfirm.java
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_GradeFilters.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\basedata\components\EAPsListRow.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\CreateNewStudent.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\StudentImportComplete.java
@@ -43,8 +45,8 @@ C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\Pub
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\components\DataSideMenu.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\components\DataAdminSelect.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\ReportsHome_CohortsMenu.java
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_FilterTabs.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\ReportsHome_YearAccordion.java
-C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_AddFilters.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\config\GradeMethodEdit.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\basedata\UploadsForBaselinesList.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\StudentsList.java
@@ -56,7 +58,9 @@ C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\GradesFileUp
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\config\components\CreateFilterModal.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\config\GradeMethodStep6.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\grades\UploadsForDatasets.java
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_AddStudentFilters.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\grades\MatchingPage.java
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_DatasetOptions.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\grades\components\CollectionAccordion.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\StudentsImportFile.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\users\CreateUser.java

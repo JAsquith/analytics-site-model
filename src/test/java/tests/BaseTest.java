@@ -24,6 +24,7 @@ public abstract class BaseTest {
     public String testDomain;
 
     public String testProtocol;
+    public String applicationUrl;
 
     /**
      *
@@ -54,7 +55,8 @@ public abstract class BaseTest {
 
         testDomain = utils.getTestSetting("test.domain");
         testProtocol = utils.getTestSetting("test.protocol");
-        driver.get(testProtocol+"://"+testDomain+".sisraanalytics.co.uk/");
+        applicationUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk";
+        driver.get(applicationUrl);
     }
 
     /**
