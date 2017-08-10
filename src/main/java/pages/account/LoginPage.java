@@ -16,7 +16,7 @@ import java.util.List;
 public class LoginPage {
 
     private RemoteWebDriver driver;
-    private final String PAGE_PATH = "/Account/Login";
+    public final String PAGE_PATH = "/Account/Login";
 
     public final By ACC_USERNAME = By.id("LogIn_UserName");
     public final By ACC_PASSWORD = By.id("LogIn_Password");
@@ -70,7 +70,7 @@ public class LoginPage {
      * either "https://www.sisraanalytics.co.uk" or "http://dev.sisraanalytics.co.uk"
      * @return A String representing the site domain
      */
-    private String getCurrentDomain(){
+    public String getCurrentDomain(){
         String location = driver.getCurrentUrl();
         int domainEnd = location.indexOf("sisraanalytics.co.uk") + 20;
         return location.substring(0, domainEnd);

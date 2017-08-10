@@ -39,6 +39,7 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
     public final By LOGO = By.cssSelector("#logo>img");
 
     public final By MAIN_MENU_BUTTONS = By.cssSelector("#menuMain li");
+    public final By MAIN_MENU_LINKS = By.cssSelector("#menuMain li a");
     public final By MAIN_MENU_HOME = By.xpath("//img[@alt='Home']/../../..");
     public final By MAIN_MENU_DATA = By.xpath("//img[@alt='Data']/../../..");
     public final By MAIN_MENU_CONFIG = By.xpath("//img[@alt='Config.']/../../..");
@@ -96,6 +97,9 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
 }
     public List<WebElement> getMenuOptions(){
         return driver.findElements(MAIN_MENU_BUTTONS);
+    }
+    public List<WebElement> getMenuOptionLinks(){
+        return driver.findElements(MAIN_MENU_LINKS);
     }
     public WebElement getHelpCentreFlyout(){
         if (!driver.findElement(HELP_CENTRE_FLYOUT).isDisplayed())
@@ -200,6 +204,14 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
 
 
     // NAVIGATING TO ANOTHER PAGE
+    public void clickMenuOption(String option){
+        option = option.toLowerCase();
+        String a = option.substring(0,1).toUpperCase();
+        option = a+option.substring(1);
+        By optionLocator = By.xpath("//img[@alt='"+option+"']/../../..");
+        driver.findElement(optionLocator).click();
+        waitForLoadingWrapper();
+    }
     public void clickMenuHome(){
         driver.findElement(MAIN_MENU_HOME).click();
     }

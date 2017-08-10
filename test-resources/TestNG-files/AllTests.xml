@@ -5,6 +5,7 @@
     <suite-files>
 
         <suite-file path="AccountTests.xml" />
+        <suite-file path="AuthGroupTests.xml" />
         <suite-file path="HeadlinesTests.xml" />
 
     </suite-files>

@@ -16,7 +16,7 @@ public class AvailableOptionsTests extends ReportTest {
 
     // Tests of the DatasetOptions component
     @Story( "The Tracker tab is disabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void trackerTabDisabled(){
         Report_DatasetOptions dsOptions = report.dsOptions;
@@ -26,7 +26,7 @@ public class AvailableOptionsTests extends ReportTest {
 
     // Tests of the Filters tabs
     @Story( "The Student Filters tab should be enabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void studentFiltersEnabled(){
         assertThat("Enabled status of the Student Filters tab",
@@ -34,7 +34,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Measure Filters tab should be enabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void measureFiltersEnabled(){
         assertThat("Enabled status of the Measure Filters tab",
@@ -42,7 +42,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Residual Exclusions tab should be disabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void residualExclusionsDisabled(){
         assertThat("Enabled status of the Residual Exclusions tab",
@@ -51,7 +51,7 @@ public class AvailableOptionsTests extends ReportTest {
 
     // Tests of the elements in the Grade Filter options area
     @Story( "The On Track grade filter menu is disabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void onTrackFilterDisabled(){
         Report_GradeFilters filters = report.gradeFilters;
@@ -60,7 +60,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Faculty grade filter DDL is enabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void facultyDDLEnabled(){
         Report_GradeFilters filters = report.gradeFilters;
@@ -69,7 +69,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Qualification grade filter DDL is enabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void qualificationsDDLEnabled(){
         Report_GradeFilters filters = report.gradeFilters;
@@ -78,7 +78,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Class grade filter DDL is hidden" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void classDDLIsHidden(){
         Report_GradeFilters filters = report.gradeFilters;
@@ -87,7 +87,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Student grade filter DDL is hidden" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void studentDDLIsHidden(){
         Report_GradeFilters filters = report.gradeFilters;
@@ -97,7 +97,7 @@ public class AvailableOptionsTests extends ReportTest {
 
     // Tests of the elements in the View/Display options area
     @Story( "The Calculation type toggle (Count/%) is disabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void calcTypeIsDisabled(){
         Report_ViewOptions viewOptions = report.viewOptions;
@@ -106,7 +106,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     @Story( "The Figure type toggle (Std/Cum) is disabled" )
-    @Severity( SeverityLevel.CRITICAL )
+    @Severity( SeverityLevel.NORMAL )
     @Test
     public void figureTypeIsDisabled(){
         Report_ViewOptions viewOptions = report.viewOptions;

@@ -5,6 +5,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import pages.AnalyticsPage;
 import pages.reports.Report;
 import pages.reports.ReportsHome_EAP;
 import tests.BaseTest;
@@ -17,6 +18,7 @@ public abstract class ReportTest extends BaseTest {
     protected Report report;
 
     @BeforeTest()
+    @Step ( "Login, Open the required Report, and apply required Options " )
     @Parameters( { "username", "password" })
     public void setup(ITestContext testContext, String user, String pass) throws MalformedURLException{
         super.initialise(testContext);
@@ -30,6 +32,7 @@ public abstract class ReportTest extends BaseTest {
             applyReportOptions();
         } catch (Exception e){
             if (driver!=null){
+                new AnalyticsPage(driver).clickMenuLogout();
                 driver.quit();
                 fail("Test Setup Failed!");
             }

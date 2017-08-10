@@ -1,6 +1,7 @@
 package pages.home;
 
 import pages.AnalyticsPage;
+import pages.account.LoginPage;
 import pages.home.components.Announcement;
 import pages.home.components.NewAnnouncement;
 import org.openqa.selenium.By;
@@ -37,8 +38,12 @@ public class HomePage extends AnalyticsPage {
 // CONSTRUCTOR
     public HomePage(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
-        if (loadByUrl)
-            driver.get(getCurrentDomain()+PAGE_PATH);
+        if (loadByUrl) {
+            String url = getCurrentDomain() + PAGE_PATH;
+            if(!driver.getCurrentUrl().equals(url)){
+                driver.get(getCurrentDomain() + PAGE_PATH);
+            }
+        }
     }
 
 // METHODS

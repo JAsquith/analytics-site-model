@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
@@ -68,8 +67,12 @@ public class TestUtils {
         return Integer.parseInt(s_value);
     }
 
-    public String[] getTestSettingAsArray(String setting){
-        return getTestSetting(setting).split("\\|");
+    public String[] getTestSettingAsArray(String setting) {
+        return getTestSettingAsArray(setting, "\\|");
+    }
+
+    public String[] getTestSettingAsArray(String setting, String sep){
+        return getTestSetting(setting).split(sep);
     }
 
     public URL getGridUrl() throws MalformedURLException {

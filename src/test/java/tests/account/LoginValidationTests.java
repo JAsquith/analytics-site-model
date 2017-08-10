@@ -1,14 +1,11 @@
-package tests.admin;
+package tests.account;
 
 import io.qameta.allure.*;
+import org.testng.annotations.*;
 import tests.BaseTest;
 import pages.account.LoginPage;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import java.net.*;
 import java.util.List;
@@ -24,33 +21,42 @@ import static org.hamcrest.Matchers.is;
 public class LoginValidationTests extends BaseTest {
 
     LoginPage testPage;
+    String loginUrl;
 
-    @BeforeTest(groups = { "no-details", "no-password", "no-username" })
+    @BeforeTest
     public void setup(ITestContext testContext) throws MalformedURLException {
 
         initialise(testContext);
-
         testPage = new LoginPage(driver, true);
+        loginUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk" + testPage.PAGE_PATH;
+
     }
 
-    @AfterTest(groups = { "no-details", "no-password", "no-username" })
+    @AfterTest
     public void tearDown(){
         driver.quit();
     }
 
     @Story("Trying to login with no username or password should fail")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(groups = { "no-details"})
+    @Test
     public void noDetailsFails(){
-        int loginResult = testPage.loginWith("","");
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        int loginResult = login("","");
         assertThat("Attempted login should fail ", loginResult, is(1));
     }
 
     @Story("Trying to login with no username or password gives the right number of validation messages")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(groups = { "no-details"})
+    @Test
     public void noDetailsValMsgCount(){
-        testPage.loginWith("", "");
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        login("", "");
         assertThat("Number of validation messages should be ",
                 testPage.getValidationMessages().size(),
                 is(utils.getTestSetting("no-details-val-msg-count",-1)));
@@ -58,27 +64,39 @@ public class LoginValidationTests extends BaseTest {
 
     @Story("Trying to login with no username or password gives the correct validation messages")
     @Severity(SeverityLevel.MINOR)
-    @Test(groups = { "no-details"})
+    @Test
     public void noDetailsValMsgs(){
-        testPage.loginWith("", "");
-        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("val-msgs"));
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        login("", "");
+        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("no-details-val-msgs"));
     }
 
     @Story("Trying to login with no password should fail")
     @Severity(SeverityLevel.BLOCKER)
     @Parameters({ "username" })
-    @Test(groups = { "no-password"})
+    @Test
     public void noPasswordFails(String username){
-        int loginResult = testPage.loginWith(username, "");
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        int loginResult = login(username, "");
         assertThat("Attempted login should fail ", loginResult, is(1));
     }
 
     @Story("Trying to login with no password gives the right number of validation messages")
     @Severity(SeverityLevel.CRITICAL)
     @Parameters({ "username" })
-    @Test(groups = { "no-password"})
+    @Test
     public void noPasswordValMsgsCount(String username){
-        testPage.loginWith(username, "");
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        login(username, "");
         assertThat("Number of validation messages should be ",
                 testPage.getValidationMessages().size(),
                 is(utils.getTestSetting("no-password-val-msg-count", -1)));
@@ -87,25 +105,37 @@ public class LoginValidationTests extends BaseTest {
     @Story("Trying to login with no password gives the correct validation messages")
     @Severity(SeverityLevel.MINOR)
     @Parameters({ "username" })
-    @Test(groups = { "no-password"})
+    @Test
     public void noPasswordValMsgs(String username){
-        login(testPage, username, "");
-        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("val-msgs"));
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        login(username, "");
+        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("no-password-val-msgs"));
     }
 
     @Story("Trying to login with no username should fail")
     @Parameters({ "password" })
-    @Test(groups = { "no-username"})
+    @Test
     public void noUsernameFails(String password){
-        int loginResult = testPage.loginWith("", password);
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        int loginResult = login("", password);
         assertThat("Login Result ", loginResult, is(1));
     }
 
     @Story("Trying to login with no username gives the right number of validation messages")
     @Parameters({ "password" })
-    @Test(groups = { "no-username"})
+    @Test
     public void noUsernameValMsgCount(String password){
-       testPage.loginWith("", password);
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        login("", password);
         assertThat("Validation message count ",
                 testPage.getValidationMessages().size(),
                 is(utils.getTestSetting("no-username-val-msg-count", -1)));
@@ -114,15 +144,19 @@ public class LoginValidationTests extends BaseTest {
     @Story("Trying to login with no username gives the correct validation message text")
     @Severity(SeverityLevel.MINOR)
     @Parameters({ "password" })
-    @Test(groups = { "no-username"})
+    @Test
     public void noUsernameValMsgs(String password){
-        login(testPage, "", password);
-        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("val-msgs"));
+        if(!driver.getCurrentUrl().startsWith(loginUrl)){
+            testPage = new LoginPage(driver, true);
+        }
+        testPage = new LoginPage(driver, true);
+        login("", password);
+        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("no-username-val-msgs"));
     }
 
     @Step("Submit Login Details")
-    public int login(LoginPage page, String user, String pass){
-        return page.loginWith(user,pass,false);
+    public int login(String user, String pass){
+        return testPage.loginWith(user,pass,false);
     }
 
     @Step( "Check displayed validation messages against test settings" )

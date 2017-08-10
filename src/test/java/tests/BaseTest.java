@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import pages.account.LoginPage;
@@ -37,6 +38,7 @@ public abstract class BaseTest {
      * @throws MalformedURLException if the @link{utils.TestUtils#getGridUrl()} method can't build a valid URL from
      * the given settings
      */
+    @Step( "Create a WebDriver and navigate to Analytics" )
     protected void initialise(ITestContext context_TestNG) throws MalformedURLException {
 
 
@@ -64,6 +66,7 @@ public abstract class BaseTest {
      *                              Other Session And Login button will be clicked.  If the user is already logged in
      *                              and this argument is @code{false}, the Cancel button will be clicked.
      */
+    @Step( "Login to Analytics" )
     protected void login(String user, String pass, boolean endOtherSession){
         if (driver == null){
             throw new IllegalStateException("The RemoteWebDriver has not been instantiated");
