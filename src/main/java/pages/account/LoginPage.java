@@ -101,7 +101,6 @@ public class LoginPage {
      *          2 = user already logged in elsewhere (only valid if the {@code endOtherSession} param is {@code false}
      *          3 = first login for this user (use changePassword, or keepPassword methods to complete login)
      */
-    @Step( "Login using {username} & {password} (endOtherSession = {endOtherSession})")
     public int loginWith(String username, String password, boolean endOtherSession){
         // Enter the given username and password and submit the form
         WebElement usernameField = getUsernameField();
