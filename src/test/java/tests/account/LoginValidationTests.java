@@ -1,16 +1,18 @@
 package tests.account;
 
 import io.qameta.allure.*;
-import org.testng.annotations.*;
-import tests.BaseTest;
-import pages.account.LoginPage;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import pages.account.LoginPage;
+import tests.BaseTest;
 
-import java.net.*;
+import java.net.MalformedURLException;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 /**
@@ -25,11 +27,9 @@ public class LoginValidationTests extends BaseTest {
 
     @BeforeTest
     public void setup(ITestContext testContext) throws MalformedURLException {
-
         initialise(testContext);
         testPage = new LoginPage(driver, true);
         loginUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk" + testPage.PAGE_PATH;
-
     }
 
     @AfterTest
@@ -45,7 +45,7 @@ public class LoginValidationTests extends BaseTest {
             testPage = new LoginPage(driver, true);
         }
         int loginResult = login("","");
-        assertThat("Attempted login should fail ", loginResult, is(1));
+        assertWithScreenshot("Attempted login should fail ", loginResult, is(1));
     }
 
     @Story("Trying to login with no username or password gives the right number of validation messages")
@@ -57,7 +57,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         login("", "");
-        assertThat("Number of validation messages should be ",
+        assertWithScreenshot("Number of validation messages should be ",
                 testPage.getValidationMessages().size(),
                 is(utils.getTestSetting("no-details-val-msg-count",-1)));
     }
@@ -84,7 +84,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         int loginResult = login(username, "");
-        assertThat("Attempted login should fail ", loginResult, is(1));
+        assertWithScreenshot("Attempted login should fail ", loginResult, is(1));
     }
 
     @Story("Trying to login with no password gives the right number of validation messages")
@@ -97,7 +97,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         login(username, "");
-        assertThat("Number of validation messages should be ",
+        assertWithScreenshot("Number of validation messages should be ",
                 testPage.getValidationMessages().size(),
                 is(utils.getTestSetting("no-password-val-msg-count", -1)));
     }
@@ -124,7 +124,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         int loginResult = login("", password);
-        assertThat("Login Result ", loginResult, is(1));
+        assertWithScreenshot("Login Result ", loginResult, is(1));
     }
 
     @Story("Trying to login with no username gives the right number of validation messages")
@@ -136,7 +136,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         login("", password);
-        assertThat("Validation message count ",
+        assertWithScreenshot("Validation message count ",
                 testPage.getValidationMessages().size(),
                 is(utils.getTestSetting("no-username-val-msg-count", -1)));
     }
@@ -167,7 +167,7 @@ public class LoginValidationTests extends BaseTest {
                 expectedValMsg = expectedValMsgs[i];
             }
             String actualValMsg = actualValMsgs.get(i).getText();
-            assertThat("Text of validation message "+(i+1), actualValMsg, is(expectedValMsg));
+            assertWithScreenshot("Text of validation message "+(i+1), actualValMsg, is(expectedValMsg));
         }
     }
 

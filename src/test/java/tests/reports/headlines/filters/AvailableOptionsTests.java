@@ -7,7 +7,6 @@ import pages.reports.components.Report_GradeFilters;
 import pages.reports.components.Report_ViewOptions;
 import tests.reports.ReportTest;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 @Epic( "EAP Reports - Headline Measures" )
@@ -20,7 +19,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void trackerTabDisabled(){
         Report_DatasetOptions dsOptions = report.dsOptions;
-        assertThat("Display status of the Tracker tab",
+        assertWithScreenshot("Display status of the Tracker tab",
                 dsOptions.isDisabled(dsOptions.TRACKER_TAB), is(true));
     }
 
@@ -29,7 +28,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Severity( SeverityLevel.NORMAL )
     @Test
     public void studentFiltersEnabled(){
-        assertThat("Enabled status of the Student Filters tab",
+        assertWithScreenshot("Enabled status of the Student Filters tab",
                 report.filterTabs.isEnabled("filter"), is(true));
     }
 
@@ -37,7 +36,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Severity( SeverityLevel.NORMAL )
     @Test
     public void measureFiltersEnabled(){
-        assertThat("Enabled status of the Measure Filters tab",
+        assertWithScreenshot("Enabled status of the Measure Filters tab",
                 report.filterTabs.isEnabled("measure"), is(true));
     }
 
@@ -45,7 +44,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Severity( SeverityLevel.NORMAL )
     @Test
     public void residualExclusionsDisabled(){
-        assertThat("Enabled status of the Residual Exclusions tab",
+        assertWithScreenshot("Enabled status of the Residual Exclusions tab",
                 report.filterTabs.isDisabled("residual"), is(true));
     }
 
@@ -55,7 +54,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void onTrackFilterDisabled(){
         Report_GradeFilters filters = report.gradeFilters;
-        assertThat("Enabled status of the On/Above/Below Track Menu",
+        assertWithScreenshot("Enabled status of the On/Above/Below Track Menu",
                 filters.isDisabled(filters.ON_TRACK_MENU), is(true));
     }
 
@@ -64,7 +63,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void facultyDDLEnabled(){
         Report_GradeFilters filters = report.gradeFilters;
-        assertThat("Enabled status of the Faculty DDL",
+        assertWithScreenshot("Enabled status of the Faculty DDL",
                 filters.isEnabled(filters.FACULTY_DDL), is(true));
     }
 
@@ -73,7 +72,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void qualificationsDDLEnabled(){
         Report_GradeFilters filters = report.gradeFilters;
-        assertThat("Enabled status of the Qualification DDL",
+        assertWithScreenshot("Enabled status of the Qualification DDL",
                 filters.isEnabled(filters.QUALIFICATION_DDL), is(true));
     }
 
@@ -82,7 +81,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void classDDLIsHidden(){
         Report_GradeFilters filters = report.gradeFilters;
-        assertThat("Display status of the Class DDL",
+        assertWithScreenshot("Display status of the Class DDL",
                 filters.isDisabled(filters.CLASS_DDL), is(false));
     }
 
@@ -91,7 +90,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void studentDDLIsHidden(){
         Report_GradeFilters filters = report.gradeFilters;
-        assertThat("Display status of the Student DDL",
+        assertWithScreenshot("Display status of the Student DDL",
                 filters.isDisplayed(filters.STUDENT_FILTER_DDL), is(true));
     }
 
@@ -101,7 +100,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void calcTypeIsDisabled(){
         Report_ViewOptions viewOptions = report.viewOptions;
-        assertThat("SEnabled status of the Calc Type option (Count/%)",
+        assertWithScreenshot("SEnabled status of the Calc Type option (Count/%)",
                 viewOptions.isDisabled(viewOptions.CALC_TYPE_TOGGLE), is(true));
     }
 
@@ -110,7 +109,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test
     public void figureTypeIsDisabled(){
         Report_ViewOptions viewOptions = report.viewOptions;
-        assertThat("SEnabled status of the Figure Type option (Std/Cum)",
+        assertWithScreenshot("SEnabled status of the Figure Type option (Std/Cum)",
                 viewOptions.isDisabled(viewOptions.FIG_TYPE_TOGGLE), is(true));
     }
 

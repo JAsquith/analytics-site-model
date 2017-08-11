@@ -1,12 +1,24 @@
 package tests;
 
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import org.apache.commons.codec.binary.Base64;
+import org.hamcrest.Matcher;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
+import org.testng.annotations.AfterTest;
+import pages.AnalyticsPage;
 import pages.account.LoginPage;
 import utils.TestUtils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.MalformedURLException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * An abstract class which takes care of functions common to all/most tests, for example: launching a new browser
@@ -30,6 +42,17 @@ public abstract class BaseTest {
      *
      */
     protected TestUtils utils;
+    protected ITestContext context;
+
+    @AfterTest
+    public void tearDown(){
+        try{
+            new AnalyticsPage(driver).clickMenuLogout();
+        } catch (Throwable t){}
+        try{
+            driver.quit();
+        } catch (Throwable t){}
+    }
 
     /**
      * Initialises a new test by instantiating a new RemoteWebDriver (and some other test properties) based on
@@ -41,8 +64,7 @@ public abstract class BaseTest {
      */
     @Step( "Create a WebDriver and navigate to Analytics" )
     protected void initialise(ITestContext context_TestNG) throws MalformedURLException {
-
-
+        context = context_TestNG;
         utils = new TestUtils(context_TestNG);
         try {
             driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
@@ -91,4 +113,41 @@ public abstract class BaseTest {
         return getStringParam(name, "");
     }
 
+    protected <T> void assertWithScreenshot(String reason, T actual, Matcher<? super T> matcher) {
+        assertWithScreenshot(reason, actual, matcher, context.getName()+".png");
+    }
+
+    protected <T> void assertWithScreenshot(String reason, T actual, Matcher<? super T> matcher, String filename){
+        try{
+            assertThat(reason, actual, matcher);
+        } catch (AssertionError ae){
+            saveScreenshot(filename);
+            throw ae;
+        }
+    }
+
+    @Attachment(value = "{filename}")
+    protected byte[] saveScreenshot(String filename){
+        String base64Screenshot = driver.getScreenshotAs(OutputType.BASE64);
+        byte[] decodedScreenshot = Base64.decodeBase64(base64Screenshot.getBytes());
+
+        String dirPath = System.getProperty("user.home")+File.separator + "TestScreenshots";
+        File directory = new File(String.valueOf(dirPath));
+        directory.mkdir();
+
+        filename = filename.replaceAll("[\\/:*?\"<>|]", "");
+        filename = dirPath + File.separator + filename;
+        File file = new File(filename);
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            fos.write(decodedScreenshot);
+            fos.close();
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return decodedScreenshot;
+    }
 }

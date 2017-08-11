@@ -2,16 +2,16 @@ package tests.reports;
 
 import io.qameta.allure.Step;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import pages.AnalyticsPage;
 import pages.reports.Report;
 import pages.reports.ReportsHome_EAP;
 import tests.BaseTest;
-import static org.testng.Assert.fail;
 
 import java.net.MalformedURLException;
+
+import static org.testng.Assert.fail;
 
 public abstract class ReportTest extends BaseTest {
 
@@ -31,10 +31,11 @@ public abstract class ReportTest extends BaseTest {
             // Apply any report options, filters, etc. defined in the test parameters
             applyReportOptions();
         } catch (Exception e){
+            saveScreenshot(context.getName()+"_SetupFail.png");
             if (driver!=null){
                 new AnalyticsPage(driver).clickMenuLogout();
                 driver.quit();
-                fail("Test Setup Failed!");
+                fail("Test Setup Failed! Was the data in the Restore school copied over? Exception: "+e.getMessage());
             }
         }
     }
@@ -58,12 +59,6 @@ public abstract class ReportTest extends BaseTest {
         //Todo: Move this method to an intermediate abstract ReportTest class which subclasses BaseTest but is a superclass of any Test that takes place in a Report
         //Todo: use the TestUtils object (super.utils) to get any/all report options to be applied
         //Todo: tag appropriate methods in the Report Page Object with @Step annotations
-    }
-
-    @AfterTest
-    public void tearDown(){
-        report.clickMenuLogout();
-        driver.quit();
     }
 
 }

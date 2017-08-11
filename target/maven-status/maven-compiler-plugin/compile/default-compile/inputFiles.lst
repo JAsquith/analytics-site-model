@@ -4,6 +4,7 @@ C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\GradesFileUp
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\components\Report_GradeFilters.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\basedata\components\EAPsListRow.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\CreateNewStudent.java
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\components\AuthorityDetailsModal.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\StudentImportComplete.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\components\AssignQuals.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\AbstractAnalyticsObject.java
@@ -21,6 +22,7 @@ C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\basedata\com
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\students\components\ActiveStudentsTable.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\config\StudentDataProfile.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\grades\components\PublishAssessmentsYearRow.java
+C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\ReportsHome_Legacy.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\reports\Report.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\grades\components\MatchingQualRow.java
 C:\Atlassian\Projects\analytics-site-model\src\main\java\pages\data\basedata\ConfirmEAPImport.java

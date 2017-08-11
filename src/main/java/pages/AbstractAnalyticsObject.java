@@ -1,10 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.pagefactory.ByAll;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -123,5 +122,67 @@ public abstract class AbstractAnalyticsObject {
         int domainEnd = location.indexOf("sisraanalytics.co.uk") + 20;
         return location.substring(0, domainEnd);
     }
+
+    /**
+     * An expectation for checking if the the element that matches the given locator is at least as wide
+     * as the given width (in pixels).
+     *
+     * @param locator used to find the element
+     * @param width    the minimum width of the element to wait for
+     * @return true once the first element located by locator is at least as wide as the width
+     */
+    public static ExpectedCondition<Boolean> minimumWidthOfElementLocatedBy(final By locator,
+                                                                            final int width) {
+
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    int elementWidth = driver.findElement(locator).getSize().width;
+                    return elementWidth >= width;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return String.format("minimum width of element found by ('%s') to be %s",
+                        locator, width);
+            }
+        };
+    }
+
+    /**
+     * An expectation for checking if the left side of the element that matches the given locator is
+     * positioned to the right of the given x coordinate.
+     *
+     * @param locator used to find the element
+     * @param x_pos    the minimum left alignment of the element to wait for
+     * @return true once the first element located by locator is to the right of x_pos
+     */
+    public static ExpectedCondition<Boolean> elementToTheRightOf(final By locator,
+                                                                 final int x_pos) {
+
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    int elementX = driver.findElement(locator).getLocation().x;
+                    return elementX >= x_pos;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return String.format("minimum width of element found by ('%s') to be %s",
+                        locator, x_pos);
+            }
+        };
+    }
+
+
 
 }

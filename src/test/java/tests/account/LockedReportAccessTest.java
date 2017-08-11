@@ -5,28 +5,20 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.WebElement;
-import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.AnalyticsPage;
 import pages.reports.ReportsHome;
 import pages.reports.ReportsHome_Legacy;
-import tests.BaseTest;
 
-import java.net.MalformedURLException;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.testng.Assert.fail;
 
 @Epic("Account Security")
 @Feature("Authority Groups Control Access to Locked Report")
-public class LockedReportAccessTests extends BaseTest {
+public class LockedReportAccessTest extends AccessTest {
 
-    private ReportsHome reportsHome;
     private String reportsHomeUrl;
 
     private enum TestReport {
@@ -46,42 +38,26 @@ public class LockedReportAccessTests extends BaseTest {
         }
     }
 
-    @BeforeTest()
-    @Step( "Login" )
-    @Parameters( { "username", "password" })
-    public void setup(ITestContext testContext, String user, String pass) throws MalformedURLException {
-        super.initialise(testContext);
-
-        try {
-            // Login, Go to reports, Open the dataset containing the test data
-            login(user, pass, true);
-            reportsHome = new ReportsHome(driver, true);
-            reportsHomeUrl = driver.getCurrentUrl();
-        } catch (Exception e){
-            if (driver!=null){
-                driver.quit();
-                fail("Test Setup Failed!");
-            }
-        }
-    }
-
     @AfterTest
     public void tearDown(){
         try{
             new AnalyticsPage(driver).clickMenuLogout();
+        } catch (Throwable t){}
+        try{
             driver.quit();
-        } catch (Exception e){}
+        } catch (Throwable t){}
     }
 
     @Story( "Access to KS4 Reports with a status of 'Locked'" )
     @Test
     public void checkKS4LockedReportButtons(){
+        new ReportsHome(driver, true);
+        reportsHomeUrl = driver.getCurrentUrl();
         TestReport testReport = TestReport.KS4_LOCKED;
         String [] expectedButtons = utils.getTestSettingAsArray("report-areas");
         String [] actualButtons = getReportButtonsFor("4", testReport.cohort, testReport.dataset);
-        assertThat("Available Report Buttons",
+        assertWithScreenshot("Available Report Buttons",
                 actualButtons, is(expectedButtons));
-
     }
 
     @Step( "Select KS{ks} > Cohort {cohort} on the Reports Homepage" )

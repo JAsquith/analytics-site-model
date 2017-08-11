@@ -2,6 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Account Tests" parallel="tests" thread-count="5">
 
+
+    <test name="Intentional Test Defect">
+        <parameter name="username" value="AsqJam" />
+        <parameter name="password" value="Password1" />
+
+        <classes>
+            <class name="tests.ReportDemosFailing" />
+        </classes>
+    </test>
+
     <test name="Login Page">
         <parameter name="username" value="AsqJam" />
         <parameter name="password" value="Password1" />
