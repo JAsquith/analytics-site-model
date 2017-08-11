@@ -1,12 +1,12 @@
 package pages.reports.components;
 
 import io.qameta.allure.Step;
-import pages.AnalyticsComponent;
-import pages.reports.Report;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsComponent;
+import pages.reports.Report;
 
 import java.util.List;
 
@@ -15,6 +15,8 @@ import java.util.List;
  * Cohort and academic year on the KS3/4 Reports Home Page
  */
 public class ReportsHome_YearAccordion extends AnalyticsComponent {
+
+    public static final By REPORT_BUTTONS = By.cssSelector(".EAPRptBtn>a");
 
     public final By COHORT_HEADING = By.cssSelector(".rptHome>h2");
     public final By COMPONENT = By.className("eapYear");
@@ -82,7 +84,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             if (repInfo.getText().trim().equals(datasetName)){
                 if (!pubReport.getAttribute("class").contains("active")){
                     pubReport.click();
-                    waitForPublishedReportExpansion(pubReport.findElement(GO_TO_GRADES));
+                    waitForPublishedReportExpansion(pubReport.findElement(REPORT_BUTTONS));
                 }
                 return pubReport;
             }

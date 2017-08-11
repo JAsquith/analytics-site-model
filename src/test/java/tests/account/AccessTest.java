@@ -4,15 +4,20 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.AnalyticsPage;
 import pages.components.AuthorityDetailsModal;
+import pages.reports.ReportsHome_EAP;
+import pages.reports.ReportsHome_Legacy;
+import pages.reports.components.ReportsHome_YearAccordion;
 import tests.BaseTest;
 
 import java.net.MalformedURLException;
+import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -21,6 +26,25 @@ import static org.testng.Assert.fail;
 public abstract class AccessTest extends BaseTest {
 
     protected String[] actualCanDoList;
+    protected String reportsHomeUrl;
+
+    protected enum TestReport {
+        KS4_LOCKED("17", "", "Exams"),
+        KS4_NOT_LOCKED("17","","Targets"),
+        KS5_LOCKED("16","","Spring 2 01/03/2017"),
+        KS5_NOT_LOCKED("16","","Targets"),
+        EAP_LOCKED("17","11","Y11 Spring 1"),
+        EAP_NOT_LOCKED("17","11","Y11 Autumn 2");
+
+        String cohort;String eapYear;String dataset;
+
+        TestReport(String cohortNum, String eapYearNum, String datasetName){
+            this.cohort = cohortNum;
+            this.eapYear = eapYearNum;
+            this.dataset = datasetName;
+        }
+    }
+
 
     @BeforeTest
     @Parameters( { "username", "password" })
@@ -48,7 +72,7 @@ public abstract class AccessTest extends BaseTest {
                 getExpectedCanDoList(), is(actualCanDoList));
     }
 
-    private String[] getExpectedCanDoList(){
+    protected String[] getExpectedCanDoList(){
         String[] reportAreas = utils.getTestSettingAsArray("report-areas");
         String[] menuAreas = utils.getTestSettingAsArray("accessible-areas");
         boolean lockedAccess = utils.getTestSetting("locked-access", false);
@@ -98,7 +122,7 @@ public abstract class AccessTest extends BaseTest {
     }
 
     @Step( "Open and read the Authority Details Modal (with screenshot)" )
-    private String[] readAuthorityDetailsCanDoList(){
+    protected String[] readAuthorityDetailsCanDoList(){
         AnalyticsPage page = new AnalyticsPage(driver);
         page.waitForLoadingWrapper();
         AuthorityDetailsModal modal = page.clickAccViewAuthority();
@@ -106,6 +130,49 @@ public abstract class AccessTest extends BaseTest {
         saveScreenshot(context.getName()+"_AuthModal.png");
         modal.clickClose();
         return canDoList;
+    }
+
+    @Step( "Get Report buttons for KS{ks} > Cohort {cohort} > {dataset}" )
+    protected String[] getReportButtonsFor(String ks, String cohort, String year, String dataset){
+        driver.get(reportsHomeUrl+"?selectedKS="+ks);
+        driver.get(reportsHomeUrl+"?selectedCohort="+cohort);
+        if (Integer.parseInt(ks)<6){
+            return getLegacyButtonsFor(dataset);
+        }
+        return getEAPButtonsFor(year, dataset);
+    }
+
+    @Step( "Check visible report button labels: {actual}" )
+    protected void checkReportButtons(String[] expected, String[] actual){
+        assertWithScreenshot("Available Report Buttons",
+                actual, is(expected));
+    }
+
+    private String[] getLegacyButtonsFor(String dataset){
+        WebElement shim = new ReportsHome_Legacy(driver).showReportButtons(dataset);
+        List<WebElement> buttons = shim.findElements(ReportsHome_Legacy.BUTTONS_IN_SHIM);
+        if (buttons.size()==0){
+            return null;
+        }
+        String[] btnLabels = new String[buttons.size()];
+        for (int i = 0; i < buttons.size(); i++){
+            btnLabels[i] = buttons.get(i).getText().trim();
+        }
+        return btnLabels;
+    }
+
+    private String[] getEAPButtonsFor(String year, String dataset){
+        ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
+        WebElement pubRptInfo = reports.getYearAccordion(year).expandPublishedReport(dataset);
+        List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearAccordion.REPORT_BUTTONS);
+        if (buttons.size()==0){
+            return null;
+        }
+        String[] btnLabels = new String[buttons.size()];
+        for (int i = 0; i < buttons.size(); i++){
+            btnLabels[i] = buttons.get(i).getText().trim();
+        }
+        return btnLabels;
     }
 
 }

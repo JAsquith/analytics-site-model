@@ -1,10 +1,10 @@
 package pages.reports;
 
-import pages.AnalyticsPage;
-import pages.reports.components.ReportsHome_CohortsMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pages.AnalyticsPage;
+import pages.reports.components.ReportsHome_CohortsMenu;
 
 import java.util.List;
 import java.util.Random;
@@ -34,10 +34,13 @@ public class ReportsHome extends AnalyticsPage {
     }
     public ReportsHome(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
+        String pageUrl = getCurrentDomain() + PAGE_PATH;
         if (loadByUrl) {
-            driver.get(getCurrentDomain() + PAGE_PATH);
-            cohortsMenu = new ReportsHome_CohortsMenu(driver);
+            if (!driver.getCurrentUrl().equals(pageUrl)){
+                driver.get(pageUrl);
+            }
         }
+        cohortsMenu = new ReportsHome_CohortsMenu(driver);
     }
 
 // METHODS

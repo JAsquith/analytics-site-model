@@ -8,7 +8,7 @@
     <parameter name="keystage" value="6" />
     <parameter name="cohort" value="17" />
     <parameter name="year" value="11" />
-    <parameter name="dataset" value="Targets" />
+    <parameter name="dataset" value="Data Set 3" />
 
     <test name="Presentation Tests - No Options">
         <parameter name="username" value="AsqJamRestore" />

@@ -139,6 +139,7 @@ public abstract class AbstractAnalyticsObject {
             public Boolean apply(WebDriver driver) {
                 try {
                     int elementWidth = driver.findElement(locator).getSize().width;
+                    System.out.println("" + elementWidth + " to be >= " + width);
                     return elementWidth >= width;
                 } catch (StaleElementReferenceException e) {
                     return null;
