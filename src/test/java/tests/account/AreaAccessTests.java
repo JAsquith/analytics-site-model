@@ -8,11 +8,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.AnalyticsPage;
+import pages.components.AuthorityDetailsModal;
 import pages.home.HomePage;
 import tests.BaseTest;
 
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -90,6 +90,70 @@ public class AreaAccessTests extends BaseTest {
         } catch (Exception e){}
     }
 
+    @Story( "The 'View Authority Details' modal should provide accurate information" )
+    @Severity( SeverityLevel.MINOR )
+    @Test
+    @Step( "Compare actual and expected 'Can Do' lists" )
+    public void viewAuthoritiesModalTest(){
+        AuthorityDetailsModal modal = openAuthorityDetailsModal();
+        String[] actualCanDoList = modal.getCanDoList();
+        modal.clickClose();
+        assertThat("'Can do' list on Authority Details Modal",
+                getExpectedCanDoList(), is(actualCanDoList));
+    }
+
+    @Step( "Open the Authority Details Modal" )
+    private AuthorityDetailsModal openAuthorityDetailsModal(){
+        AnalyticsPage page = new AnalyticsPage(driver);
+        page.waitForLoadingWrapper();
+        return page.clickAccViewAuthority();
+    }
+    private String[] getExpectedCanDoList(){
+        String[] reportAreas = utils.getTestSettingAsArray("report-areas");
+        String[] menuAreas = utils.getTestSettingAsArray("accessible-areas");
+        boolean lockedAccess = utils.getTestSetting("locked-access", false);
+        boolean embargoAccess = utils.getTestSetting("embargo-access", false);
+        boolean accessUsers = false;
+        boolean accessData = false;
+        boolean announceAccess = utils.getTestSetting("announce-access", false);
+
+        int canDoIndex = reportAreas.length;
+        canDoIndex += (lockedAccess) ? 1 : 0;
+        canDoIndex += (embargoAccess) ? 1 : 0;
+        canDoIndex += (announceAccess) ? 1 : 0;
+
+        for(int i=0; i<menuAreas.length; i++){
+            if (menuAreas[i].equals("Data")) {
+                accessData = true;
+                canDoIndex++;
+            }
+            if (menuAreas[i].equals("Users")){
+                accessUsers = true;
+                canDoIndex++;
+            }
+        }
+        String[] canDoList = new String[canDoIndex];
+        canDoIndex = -1;
+        for(int i=0; i<reportAreas.length; i++){
+            if(!reportAreas[0].equals("")) {
+                canDoIndex++;
+                canDoList[i] = "View " + reportAreas[i].substring(0, reportAreas[i].length() - 1) + " Report";
+            }
+        }
+        if (lockedAccess)
+            canDoList[++canDoIndex] = "View Locked Reports";
+        if (embargoAccess)
+            canDoList[++canDoIndex] = "View Embargo Reports";
+        if (accessUsers)
+            canDoList[++canDoIndex] = "Access Users Section";
+        if (accessData)
+            canDoList[++canDoIndex] = "Access Data Section";
+        if (announceAccess)
+            canDoList[++canDoIndex] = "Create Announcement";
+
+        return canDoList;
+    }
+
     @Story( "The correct Main Menu options should be visible" )
     @Severity( SeverityLevel.BLOCKER )
     @Test
@@ -105,10 +169,10 @@ public class AreaAccessTests extends BaseTest {
     @Test
     public void menuOptionLinksTest(){
         homePage = new AnalyticsPage(driver);
-        String[] options = utils.getTestSettingAsArray("accessible-areas");
+        String[] areaNames = utils.getTestSettingAsArray("accessible-areas");
 
-        for (int i=1; i < options.length; i++){
-            checkMenuLink(options[i]);
+        for(String areaName : areaNames){
+            tryMenuLink(areaName);
         }
     }
 
@@ -126,22 +190,22 @@ public class AreaAccessTests extends BaseTest {
             if (!expAreaNames.contains(areaName)){
                 String actualPageTitle = tryUrlHack(areaName);
                 if(!actualPageTitle.equals("")) {
-                    failExpectedTitles += "[Area: "+areaName + ", Page Title: Role Error];  ";
-                    failActualTitles += "[Area: "+areaName + ", Page Title: " + actualPageTitle + "];  ";
+                    failExpectedTitles += "[Area: "+areaName + ", Page Title: Role Error];";
+                    failActualTitles += "[Area: "+areaName + ", Page Title: " + actualPageTitle + "];";
                 }
             }
         }
         if (!failExpectedTitles.equals("")){
-            assertThat("Inaccessible areas should default to the Role Error page",
+            assertThat("Blocked area(s) show the Role Error page title",
                     failActualTitles, is(failExpectedTitles));
         }
     }
 
     @Step( "Menu Option '{option}' opens the expected page" )
-    private void checkMenuLink(String option){
-        Area testArea = Area.get(option);
+    private void tryMenuLink(String areaName){
+        Area testArea = Area.get(areaName);
         homePage.clickMenuOption(testArea.menuLocatorText);
-        assertThat("The Area's default page opened (assessed by current page title)",
+        assertThat("Landing Page Title",
                 homePage.getPageTitleText(),is(testArea.defaultPageTitle));
     }
 

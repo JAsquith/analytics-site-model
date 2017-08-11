@@ -62,17 +62,31 @@ public class TestUtils {
         return defaultVal;
     }
 
-    public int getTestSetting(String setting, int defaultVal){
-        String s_value = getTestSetting(setting);
+    public boolean getTestSetting(String name, boolean boolDefault){
+        String s_value = getTestSetting(name, String.valueOf(boolDefault));
+        return Boolean.valueOf(s_value);
+    }
+
+    public boolean getTestSettingAsBoolean(String name){
+        return getTestSetting(name, false);
+    }
+
+    public int getTestSetting(String name, int intDefault){
+        String s_value = getTestSetting(name, String.valueOf(intDefault));
         return Integer.parseInt(s_value);
     }
 
-    public String[] getTestSettingAsArray(String setting) {
-        return getTestSettingAsArray(setting, "\\|");
+    public int getTestSettingAsInteger(String name){
+        return getTestSetting(name, 0);
     }
 
-    public String[] getTestSettingAsArray(String setting, String sep){
-        return getTestSetting(setting).split(sep);
+    public String[] getTestSettingAsArray(String name) {
+        return getTestSettingAsArray(name, "\\|");
+    }
+
+    public String[] getTestSettingAsArray(String name, String sep){
+        String s_value = getTestSetting(name, "");
+        return s_value.split(sep);
     }
 
     public URL getGridUrl() throws MalformedURLException {

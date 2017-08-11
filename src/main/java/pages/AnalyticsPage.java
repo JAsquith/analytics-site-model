@@ -7,9 +7,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import pages.components.AuthorityDetailsModal;
 
 import java.util.List;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 /**
  * Page Object class modelling components and elements common to all pages when logged in to Analytics<br>
@@ -163,7 +165,7 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
         driver.findElement(HELP_CENTRE_BUTTON).click();
     }
     public void clickAccountInfoDDL(){
-        driver.findElement(ACC_UPDATE_DDL).click();
+        driver.findElement(ACC_INFO).click();
     }
     public void clickAccChangeUsername(){
         if (!driver.findElement(ACC_CHANGE_USERNAME).isDisplayed())
@@ -180,10 +182,11 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
             clickAccountInfoDDL();
         new WebDriverWait(driver, SHORT_WAIT).until(elementToBeClickable(ACC_CHANGE_SETTINGS)).click();
     }
-    public void clickAccViewAuthority(){
+    public AuthorityDetailsModal clickAccViewAuthority(){
         if (!driver.findElement(ACC_VIEW_AUTH).isDisplayed())
             clickAccountInfoDDL();
         new WebDriverWait(driver, SHORT_WAIT).until(elementToBeClickable(ACC_VIEW_AUTH)).click();
+        return new AuthorityDetailsModal(driver);
     }
 
     public boolean expectSuccessBanner(boolean throwOnFailure){

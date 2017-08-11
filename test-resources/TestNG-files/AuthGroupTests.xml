@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Authority Group Tests" parallel="tests" thread-count="1">
+<suite name="Authority Group Tests" parallel="tests" thread-count="4">
 
-    <test name="Auth Group - Admin">
+    <test name="Default Group - Admin">
         <parameter name="username" value="tesadm184706" />
         <parameter name="password" value="CsZeSsXg9" />
         <parameter name="accessible-areas" value="Home|Data|Config.|Users|Reports" />
+        <parameter name="report-areas" value="Headlines|Qualifications|Students" />
+        <parameter name="locked-access" value="true" />
+        <parameter name="embargo-access" value="true" />
+        <parameter name="announce-access" value="true" />
         <classes>
             <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
-    <test name="Auth Group - User">
+    <test name="Default Group - User">
         <parameter name="username" value="tesuse184707" />
         <parameter name="password" value="VfMcTfCh3" />
         <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Headlines|Qualifications|Students" />
         <classes>
             <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
-    <test name="Auth Group - Area Home Announce">
+    <test name="Area Access - Area Home Announce">
         <parameter name="username" value="annhom184709" />
         <parameter name="password" value="VjHyGoMn5" />
         <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="announce-access" value="true" />
         <classes>
             <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
-    <test name="Auth Group - Area Data">
+    <test name="Area Access - Area Data">
         <parameter name="username" value="tesdat184710" />
         <parameter name="password" value="ZeDiRfHf5" />
         <parameter name="accessible-areas" value="Home|Data|Config.|Reports" />
@@ -34,7 +40,7 @@
             <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
-    <test name="Auth Group - Area Users">
+    <test name="Area Access - Area Users">
         <parameter name="username" value="tesuse184711" />
         <parameter name="password" value="JrEvSrKn8" />
         <parameter name="accessible-areas" value="Home|Users|Reports" />
@@ -42,7 +48,7 @@
             <class name="tests.account.AreaAccessTests" />
         </classes>
     </test>
-    <test name="Report Areas - Headlines">
+    <test name="Report Areas - (H)">
         <parameter name="username" value="tesrep184712" />
         <parameter name="password" value="GkJfZbDo2" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -52,9 +58,107 @@
         </classes>
     </test>
 
-    <!--
-    tesrep184713
-    DqJgKyHj5
-    -->
+    <test name="Report Areas - (H and Q)">
+        <parameter name="username" value="tesrep184713" />
+        <parameter name="password" value="DqJgKyHj5" />
+        <parameter name="report-areas" value="Headlines|Qualifications" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+        </classes>
+    </test>
+    <test name="Report Areas - (H and S)">
+        <parameter name="username" value="tesrep184714" />
+        <parameter name="password" value="PoZvFyAo3" />
+        <parameter name="report-areas" value="Headlines|Students" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+        </classes>
+    </test>
+    <test name="Report Areas - (Q)">
+        <parameter name="username" value="tesrep184715" />
+        <parameter name="password" value="WsKkSzNo9" />
+        <parameter name="report-areas" value="Qualifications" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+        </classes>
+    </test>
+    <test name="Report Areas - (Q and S)">
+        <parameter name="username" value="tesrep184716" />
+        <parameter name="password" value="UpUnBnWk5" />
+        <parameter name="report-areas" value="Qualifications|Students" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+        </classes>
+    </test>
+    <test name="Report Areas - (S)">
+        <parameter name="username" value="tesrep184717" />
+        <parameter name="password" value="KyXtFeJz5" />
+        <parameter name="report-areas" value="Students" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+        </classes>
+    </test>
+
+    <test name="Locked Reports - (H)">
+        <parameter name="username" value="tesloc184718" />
+        <parameter name="password" value="UhThRySm5" />
+        <parameter name="report-areas" value="Headlines" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+            <class name="tests.account.LockedReportAccessTests" />
+        </classes>
+    </test>
+
+    <test name="Locked Reports - (H and Q)">
+        <parameter name="username" value="tesloc184719" />
+        <parameter name="password" value="EtQrQwRc3" />
+        <parameter name="report-areas" value="Headlines|Qualifications" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+            <class name="tests.account.LockedReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (H and S)">
+        <parameter name="username" value="tesloc184720" />
+        <parameter name="password" value="UhJrXgHh6" />
+        <parameter name="report-areas" value="Headlines|Students" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+            <class name="tests.account.LockedReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (Q)">
+        <parameter name="username" value="tesloc184721" />
+        <parameter name="password" value="RsHrKvZy5" />
+        <parameter name="report-areas" value="Qualifications" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+            <class name="tests.account.LockedReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (Q and S)">
+        <parameter name="username" value="tesloc184722" />
+        <parameter name="password" value="VfDkHfDi7" />
+        <parameter name="report-areas" value="Qualifications|Students" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+            <class name="tests.account.LockedReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (S)">
+        <parameter name="username" value="tesloc184723" />
+        <parameter name="password" value="PiVzJyQr2" />
+        <parameter name="report-areas" value="Students" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.AreaAccessTests" />
+            <class name="tests.account.LockedReportAccessTests" />
+        </classes>
+    </test>
 
 </suite>

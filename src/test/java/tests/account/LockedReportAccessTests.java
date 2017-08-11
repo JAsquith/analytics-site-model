@@ -4,6 +4,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,7 +16,10 @@ import pages.reports.ReportsHome_Legacy;
 import tests.BaseTest;
 
 import java.net.MalformedURLException;
+import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 import static org.testng.Assert.fail;
 
 @Epic("Account Security")
@@ -52,7 +56,7 @@ public class LockedReportAccessTests extends BaseTest {
             // Login, Go to reports, Open the dataset containing the test data
             login(user, pass, true);
             reportsHome = new ReportsHome(driver, true);
-
+            reportsHomeUrl = driver.getCurrentUrl();
         } catch (Exception e){
             if (driver!=null){
                 driver.quit();
@@ -69,12 +73,14 @@ public class LockedReportAccessTests extends BaseTest {
         } catch (Exception e){}
     }
 
-    @Story( "Only authorised users should have access to KS4 Reports with a status of 'Locked'" )
+    @Story( "Access to KS4 Reports with a status of 'Locked'" )
     @Test
-    public void accessToLockedKS4Reports(){
-        reportsHomeUrl = driver.getCurrentUrl();
-        TestReport testRep = TestReport.KS4_LOCKED;
-        selectKSAndCohort("4", testRep.cohort);
+    public void checkKS4LockedReportButtons(){
+        TestReport testReport = TestReport.KS4_LOCKED;
+        String [] expectedButtons = utils.getTestSettingAsArray("report-areas");
+        String [] actualButtons = getReportButtonsFor("4", testReport.cohort, testReport.dataset);
+        assertThat("Available Report Buttons",
+                actualButtons, is(expectedButtons));
 
     }
 
@@ -82,6 +88,22 @@ public class LockedReportAccessTests extends BaseTest {
     private void selectKSAndCohort(String ks, String cohort){
         driver.get(reportsHomeUrl+"?selectedKS="+ks);
         driver.get(reportsHomeUrl+"?selectedCohort="+cohort);
+    }
+
+    @Step( "Get Report buttons for KS{ks} > Cohort {cohort} > {dataset}" )
+    private String[] getReportButtonsFor(String ks, String cohort, String dataset){
+        driver.get(reportsHomeUrl+"?selectedKS="+ks);
+        driver.get(reportsHomeUrl+"?selectedCohort="+cohort);
+        WebElement shim = new ReportsHome_Legacy(driver).showReportButtons(dataset);
+        List<WebElement> buttons = shim.findElements(ReportsHome_Legacy.BUTTONS_IN_SHIM);
+        if (buttons.size()==0){
+            return null;
+        }
+        String[] btnLabels = new String[buttons.size()];
+        for (int i = 0; i < buttons.size(); i++){
+            btnLabels[i] = buttons.get(i).getText().trim();
+        }
+        return btnLabels;
     }
 
 }
