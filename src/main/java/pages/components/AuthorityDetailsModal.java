@@ -3,6 +3,7 @@ package pages.components;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class AuthorityDetailsModal extends AnalyticsComponent {
 
     public final By MODAL_WINDOW = By.className("window");
 
-    public final By CAN_DO_LIST_ITEMS = By.cssSelector("#modalPanel .bull>li");
+    public final By CAN_DO_LIST_ITEMS = By.cssSelector(".bull>li");
     public final By CLOSE_BUTTON = By.cssSelector(".modalSubmit>.cancel");
 
     /**
@@ -28,7 +29,9 @@ public class AuthorityDetailsModal extends AnalyticsComponent {
     }
 
     public String[] getCanDoList(){
-        List<WebElement> canDoItems = driver.findElements(CAN_DO_LIST_ITEMS);
+        waitMedium.until(ExpectedConditions.numberOfElementsToBeMoreThan(CAN_DO_LIST_ITEMS,0));
+        waitForLoadingWrapper();
+        List<WebElement> canDoItems = modal.findElements(CAN_DO_LIST_ITEMS);
         String[] canDoStrings = new String[canDoItems.size()];
         for(int i = 0; i<canDoItems.size(); i++){
             canDoStrings[i] = canDoItems.get(i).getText().trim();

@@ -207,8 +207,8 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
 
 
     // NAVIGATING TO ANOTHER PAGE
-    public void clickMenuOption(String option){
-        By optionLocator = By.xpath("//img[@alt='"+option+"']/../../..");
+    public void clickMenuOption(String imgAltText){
+        By optionLocator = By.xpath("//img[@alt='"+imgAltText+"']/../../..");
         driver.findElement(optionLocator).click();
         waitForLoadingWrapper();
     }

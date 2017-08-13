@@ -32,10 +32,12 @@ public class LoginValidationTests extends BaseTest {
         loginUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk" + testPage.PAGE_PATH;
     }
 
+/*
     @AfterTest
     public void tearDown(){
         driver.quit();
     }
+*/
 
     @Story("Trying to login with no username or password should fail")
     @Severity(SeverityLevel.BLOCKER)

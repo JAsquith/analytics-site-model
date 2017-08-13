@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49e08b47-419b-4633-88f8-e3c20a1be4cc" name="Default" comment="Headlines Filters tests running well with allure reporting :)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/ReportDemosFailing.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTest.java" />
+    <list default="true" id="49e08b47-419b-4633-88f8-e3c20a1be4cc" name="Default" comment="Added tests for checking Authority Groups ave correct access">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/account/ReportAccessTests.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/AbstractAnalyticsObject.java" afterPath="$PROJECT_DIR$/src/main/java/pages/AbstractAnalyticsObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome_Legacy.java" afterPath="$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome_Legacy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java" afterPath="$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java" afterPath="$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/account/LoginValidationTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/account/LoginValidationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/reports/ReportTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/reports/ReportTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/reports/headlines/filters/AvailableOptionsTests.java" afterPath="$PROJECT_DIR$/src/test/java/tests/reports/headlines/filters/AvailableOptionsTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-resources/TestNG-files/AccountTests.xml" afterPath="$PROJECT_DIR$/test-resources/TestNG-files/AccountTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-resources/TestNG-files/AllTests.xml" afterPath="$PROJECT_DIR$/test-resources/TestNG-files/AllTests.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml" afterPath="$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-resources/TestNG-files/testng.xml" afterPath="$PROJECT_DIR$/test-resources/TestNG-files/testng.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="allure-results/" />
@@ -37,7 +33,156 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AuthGroupTests.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="89" column="15" lean-forward="false" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
+              <folding>
+                <element signature="class#TestReport#0;class#AccessTest#0" expanded="false" />
+                <element signature="method#TestReport#0;class#TestReport#0;class#AccessTest#0" expanded="false" />
+                <element signature="class#ReportArea#0;class#AccessTest#0" expanded="false" />
+                <element signature="method#ReportArea#0;class#ReportArea#0;class#AccessTest#0" expanded="false" />
+                <element signature="e#2394#2405#0" expanded="false" />
+                <element signature="method#setup#0;class#AccessTest#0" expanded="false" />
+                <element signature="e#2955#3037#0" expanded="false" />
+                <element signature="method#getExpectedCanDoList#0;class#AccessTest#0" expanded="false" />
+                <element signature="method#getReportButtonsFor#0;class#AccessTest#0" expanded="false" />
+                <element signature="method#checkReportButtons#0;class#AccessTest#0" expanded="false" />
+                <element signature="method#getLegacyButtonsFor#0;class#AccessTest#0" expanded="false" />
+                <element signature="method#getEAPButtonsFor#0;class#AccessTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorityDetailsModal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalyticsComponent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/AnalyticsComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AreaAccessTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="158" column="24" lean-forward="true" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="24" />
+              <folding>
+                <element signature="docComment;class#AreaAccessTest#0" expanded="false" />
+                <element signature="e#477#502#0" expanded="false" />
+                <element signature="class#Area#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="method#Area#0;class#Area#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="method#get#0;class#Area#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="e#1889#1902#0" expanded="false" />
+                <element signature="e#2417#2476#0" expanded="false" />
+                <element signature="method#menuOptionsDisplayedTest#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="e#2802#2869#0" expanded="false" />
+                <element signature="method#menuOptionLinksTest#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="e#3181#3255#0" expanded="false" />
+                <element signature="method#tryMenuLink#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="method#getActualMenuLabels#0;class#AreaAccessTest#0" expanded="false" />
+                <element signature="method#getExpectedMenuLabels#0;class#AreaAccessTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="119" column="23" lean-forward="false" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+              <folding>
+                <element signature="docComment;class#BaseTest#0" expanded="false" />
+                <element signature="docComment;field#driver#0;class#BaseTest#0" expanded="false" />
+                <element signature="docComment;field#testDomain#0;class#BaseTest#0" expanded="false" />
+                <element signature="docComment;field#utils#0;class#BaseTest#0" expanded="false" />
+                <element signature="method#tearDown#0;class#BaseTest#0" expanded="false" />
+                <element signature="docComment;method#initialise#0;class#BaseTest#0" expanded="false" />
+                <element signature="docComment;method#login#0;class#BaseTest#0" expanded="false" />
+                <element signature="method#login#0;class#BaseTest#0" expanded="false" />
+                <element signature="docComment;method#getStringParam#0;class#BaseTest#0" expanded="false" />
+                <element signature="method#saveScreenshot#0;class#BaseTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportAccessTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/ReportAccessTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="681">
+              <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#818#843#0" expanded="false" />
+                <element signature="e#1100#1161#0" expanded="false" />
+                <element signature="method#kS4Locked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#1484#1557#0" expanded="false" />
+                <element signature="method#ks4Locked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#1948#2026#0" expanded="false" />
+                <element signature="method#ks4Locked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#2427#2499#0" expanded="false" />
+                <element signature="method#ks4Locked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#2889#2956#0" expanded="false" />
+                <element signature="method#ks4NotLocked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#3285#3366#0" expanded="false" />
+                <element signature="method#ks4NotLocked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#3764#3850#0" expanded="false" />
+                <element signature="method#ks4NotLocked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#4258#4338#0" expanded="false" />
+                <element signature="method#ks4NotLocked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#4735#4794#0" expanded="false" />
+                <element signature="method#ks5Locked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#5116#5189#0" expanded="false" />
+                <element signature="method#ks5Locked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#5580#5658#0" expanded="false" />
+                <element signature="method#ks5Locked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#6059#6131#0" expanded="false" />
+                <element signature="method#ks5Locked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#6521#6588#0" expanded="false" />
+                <element signature="method#ks5NotLocked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#6917#6998#0" expanded="false" />
+                <element signature="method#ks5NotLocked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#7396#7482#0" expanded="false" />
+                <element signature="method#ks5NotLocked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#7890#7970#0" expanded="false" />
+                <element signature="method#ks5NotLocked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="e#8367#8426#0" expanded="false" />
+                <element signature="e#8748#8815#0" expanded="false" />
+                <element signature="method#eapNotLocked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+                <element signature="method#setupUrlAccessTest#0;class#ReportAccessTests#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,12 +208,14 @@
       <find>{option}</find>
       <find>assertTha</find>
       <find>assertThat</find>
+      <find>Access to KS4 Reports with a status of 'Locked'</find>
     </findStrings>
     <replaceStrings>
       <replace>which is a @link{Report_GradeFilters} object</replace>
       <replace>accessible-areas</replace>
       <replace>|Config.|</replace>
       <replace>assertWithScreenshot</replace>
+      <replace>Buttons for KS4 Reports with a status of 'Locked'</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -89,9 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/legacy/pages/DataTab_PublishPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/legacy/pages/Login.java" />
-        <option value="$PROJECT_DIR$/src/test/java/legacy/pages/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/test/java/legacy/pages/ReportsHome.java" />
         <option value="$PROJECT_DIR$/src/test/java/legacy/pages/ReportView.java" />
         <option value="$PROJECT_DIR$/src/test/java/legacy/pages/ReportViewOptions.java" />
@@ -119,27 +263,30 @@
         <option value="$PROJECT_DIR$/src/main/java/pages/reports/components/Report_GradeFilters.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/reports/components/Report_DatasetOptions.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/reports/components/Report_ViewOptions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/account/AuthorityGroupAccessTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/account/AuthorityGroupAreaTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/account/ReportAccessTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/AbstractAnalyticsObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome_Legacy.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTests.java" />
-        <option value="$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tests/account/AccessTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java" />
         <option value="$PROJECT_DIR$/test-resources/TestNG-files/AccountTests.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/account/LoginValidationTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java" />
         <option value="$PROJECT_DIR$/test-resources/TestNG-files/AllTests.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tests/ReportDemosFailing.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/reports/headlines/filters/AvailableOptionsTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/reports/ReportTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/HomePageTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/LoginValidationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/ReportAccessTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/ReportAccessTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java" />
+        <option value="$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml" />
       </list>
     </option>
   </component>
@@ -188,6 +335,9 @@
     <option name="width" value="1934" />
     <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -203,9 +353,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,25 +396,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="analytics-site-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="analytics-site-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -304,6 +435,15 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="analytics-site-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,17 +454,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="reports" type="462c0819:PsiDirectoryNode" />
-              <item name="headlines" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="analytics-site-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-              <item name="headlines" type="462c0819:PsiDirectoryNode" />
               <item name="filters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,50 +467,11 @@
               <item name="test-resources" type="462c0819:PsiDirectoryNode" />
               <item name="TestNG-files" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" type="70bed36:NamedLibraryElementNode" />
-              <item name="allure-java-commons-2.0-BETA16.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" type="70bed36:NamedLibraryElementNode" />
-              <item name="allure-java-commons-2.0-BETA16.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" type="70bed36:NamedLibraryElementNode" />
-              <item name="allure-java-commons-2.0-BETA16.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="qameta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analytics Site Model" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: io.qameta.allure:allure-java-commons:2.0-BETA16" type="70bed36:NamedLibraryElementNode" />
-              <item name="allure-java-commons-2.0-BETA16.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="qameta" type="462c0819:PsiDirectoryNode" />
-              <item name="allure" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,13 +506,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome_Legacy.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTests.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTests.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/utils/TestUtils.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test-resources/TestNG-files/AllTests.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -430,7 +513,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -516,6 +598,700 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome_Legacy.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTests.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTests.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/utils/TestUtils.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test-resources/TestNG-files/AllTests.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml</PATH>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java</PATH>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
       </FILE-GROUP>
     </UpdatedFiles>
   </component>
@@ -778,67 +1554,85 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 14h 02m 25s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 42m 46s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 14h 07m 50s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 45m 05s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 14h 10m 30s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 46m 05s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 14h 13m 36s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 47m 15s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 14h 15m 42s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 50m 52s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 14h 18m 24s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 51m 14s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.10 at 15h 34m 03s.xml">
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 17h 54m 38s.xml">
       <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Selenium_Projects_analytics-site-model_test-resources_TestNG-files_HeadlinesTests_xml - 2017.08.09 at 16h 26m 18s.xml">
-      <configuration name="C:/Selenium/Projects/analytics-site-model/test-resources/TestNG-files/HeadlinesTests.xml" configurationId="TestNG" />
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 18h 01m 19s.xml">
+      <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Selenium_Projects_analytics-site-model_test-resources_TestNG-files_HeadlinesTests_xml - 2017.08.09 at 16h 30m 21s.xml">
-      <configuration name="C:/Selenium/Projects/analytics-site-model/test-resources/TestNG-files/HeadlinesTests.xml" configurationId="TestNG" />
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 18h 06m 21s.xml">
+      <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Selenium_Projects_analytics-site-model_test-resources_TestNG-files_HeadlinesTests_xml - 2017.08.09 at 16h 35m 42s.xml">
-      <configuration name="C:/Selenium/Projects/analytics-site-model/test-resources/TestNG-files/HeadlinesTests.xml" configurationId="TestNG" />
+    <history-entry file="C__Atlassian_Projects_analytics-site-model_test-resources_TestNG-files_AuthGroupTests_xml - 2017.08.13 at 18h 07m 41s.xml">
+      <configuration name="C:/Atlassian/Projects/analytics-site-model/test-resources/TestNG-files/AuthGroupTests.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1058" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19296375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45717463" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2750533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42157954" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19296375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25746268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42197803" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45824176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25746268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -894,17 +1688,17 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java</url>
-          <line>153</line>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java</url>
+          <line>35</line>
           <properties />
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="32" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
@@ -913,35 +1707,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0-sources.jar!/org/openqa/selenium/SearchContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2463">
-          <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/TestUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/admin/LoginValidationTests.java" />
-    <entry file="file://$PROJECT_DIR$/mavenlog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/reports/components/Report_FilterTabs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1019,21 +1784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10-sources.jar!/org/aspectj/runtime/reflect/JoinPointImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/qameta/allure/allure-java-commons/2.0-BETA16/allure-java-commons-2.0-BETA16-sources.jar!/io/qameta/allure/aspects/StepsAspects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1041,10 +1791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#1310#1311#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,27 +1808,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/allure-results/0fa7c71f-80ce-49a6-90a0-de96ffdce56b-container.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/allure-results/1ac72367-b284-4b07-9a1b-e5739edc62af-result.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/allure-results/0fa7c71f-80ce-49a6-90a0-de96ffdce56b-container.json" />
+    <entry file="file://$PROJECT_DIR$/allure-results/1ac72367-b284-4b07-9a1b-e5739edc62af-result.json" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/qameta/allure/allure-java-commons/2.0-BETA16/allure-java-commons-2.0-BETA16-sources.jar!/io/qameta/allure/Attachment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,22 +1871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/AbstractAnalyticsObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="163" column="47" lean-forward="false" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/reports/ReportsHome_Legacy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1168,15 +1883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,109 +1894,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-resources/TestNG-files/AccountTests.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#AreaAccessTest#0" expanded="false" />
-            <element signature="e#518#543#0" expanded="false" />
-            <element signature="class#Area#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="method#Area#0;class#Area#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="method#get#0;class#Area#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="e#1926#1939#0" expanded="false" />
-            <element signature="method#setup#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="e#2633#2692#0" expanded="false" />
-            <element signature="method#menuOptionsDisplayedTest#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="e#3018#3085#0" expanded="false" />
-            <element signature="method#menuOptionLinksTest#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="e#3397#3471#0" expanded="false" />
-            <element signature="method#urlAreaAccessTest#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="method#tryMenuLink#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="method#getActualMenuLabels#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="method#getExpectedMenuLabels#0;class#AreaAccessTest#0" expanded="false" />
-            <element signature="method#tryUrlHack#0;class#AreaAccessTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/account/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="103" column="15" lean-forward="false" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/LoginValidationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="docComment;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#306#331#0" expanded="false" />
-            <element signature="e#810#876#0" expanded="false" />
-            <element signature="method#noDetailsFails#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#1211#1311#0" expanded="false" />
-            <element signature="method#noDetailsValMsgCount#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#1806#1898#0" expanded="false" />
-            <element signature="method#noDetailsValMsgs#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#2301#2355#0" expanded="false" />
-            <element signature="method#noPasswordFails#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#2793#2881#0" expanded="false" />
-            <element signature="e#3433#3513#0" expanded="false" />
-            <element signature="method#noPasswordValMsgs#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#3971#4025#0" expanded="false" />
-            <element signature="method#noUsernameFails#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#4411#4499#0" expanded="false" />
-            <element signature="method#noUsernameValMsgCount#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="e#4997#5081#0" expanded="false" />
-            <element signature="method#noUsernameValMsgs#0;class#LoginValidationTests#0" expanded="false" />
-            <element signature="method#checkValidationMessages#0;class#LoginValidationTests#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-          <folding>
-            <element signature="docComment;class#BaseTest#0" expanded="false" />
-            <element signature="docComment;field#driver#0;class#BaseTest#0" expanded="false" />
-            <element signature="docComment;field#testDomain#0;class#BaseTest#0" expanded="false" />
-            <element signature="docComment;field#utils#0;class#BaseTest#0" expanded="false" />
-            <element signature="docComment;method#initialise#0;class#BaseTest#0" expanded="false" />
-            <element signature="docComment;method#login#0;class#BaseTest#0" expanded="false" />
-            <element signature="docComment;method#getStringParam#0;class#BaseTest#0" expanded="false" />
-            <element signature="method#assertWithScreenshot#0;class#BaseTest#0" expanded="false" />
-            <element signature="method#assertWithScreenshot#1;class#BaseTest#0" expanded="false" />
-            <element signature="method#saveScreenshot#0;class#BaseTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/LockedReportAccessTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#626#651#0" expanded="false" />
-            <element signature="class#TestReport#0;class#LockedReportAccessTest#0" expanded="false" />
-            <element signature="method#TestReport#0;class#TestReport#0;class#LockedReportAccessTest#0" expanded="false" />
-            <element signature="e#1602#1661#0" expanded="false" />
-            <element signature="method#selectKSAndCohort#0;class#LockedReportAccessTest#0" expanded="false" />
-            <element signature="method#getReportButtonsFor#0;class#LockedReportAccessTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1306,7 +1914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,7 +1921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,7 +1928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1330,7 +1935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,7 +1942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,21 +1949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/reports/ReportTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#495#508#0" expanded="false" />
-            <element signature="method#openTestView#0;class#ReportTest#0" expanded="false" />
-            <element signature="e#1568#1724#0" expanded="false" />
-            <element signature="method#applyReportOptions#0;class#ReportTest#0" expanded="false" />
-            <element signature="e#2372#2528#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1369,9 +1957,36 @@
         <state relative-caret-position="578">
           <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1288#1289#0" expanded="false" />
+            <element signature="e#1336#1337#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/HomePageTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-resources/TestNG-files/AccountTests.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/reports/ReportTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="method#openTestView#0;class#ReportTest#0" expanded="false" />
+            <element signature="method#applyReportOptions#0;class#ReportTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1407,20 +2022,230 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/AnalyticsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="201" column="5" lean-forward="true" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#AnalyticsPage#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#getHelpCentreFlyout#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#getHelpHotTopics#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#getErrorMessage#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#getUserAndSchoolInfo#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#removeUnderlayForNonModals#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#clickAccChangeUsername#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#clickAccChangePassword#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#clickAccChangeSettings#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#expectSuccessBanner#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#clickHelpVideosAndGuides#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#clickHelpEmail#0;class#AnalyticsPage#0" expanded="false" />
+            <element signature="method#clickHelpChat#0;class#AnalyticsPage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/LoginValidationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding>
+            <element signature="method#noDetailsFails#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noDetailsValMsgCount#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noDetailsValMsgs#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noPasswordFails#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noPasswordValMsgs#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noUsernameFails#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noUsernameValMsgCount#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#noUsernameValMsgs#0;class#LoginValidationTests#0" expanded="false" />
+            <element signature="method#checkValidationMessages#0;class#LoginValidationTests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test-resources/TestNG-files/AllTests.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/ReportAccessTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#818#843#0" expanded="false" />
+            <element signature="e#1100#1161#0" expanded="false" />
+            <element signature="method#kS4Locked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#1484#1557#0" expanded="false" />
+            <element signature="method#ks4Locked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#1948#2026#0" expanded="false" />
+            <element signature="method#ks4Locked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#2427#2499#0" expanded="false" />
+            <element signature="method#ks4Locked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#2889#2956#0" expanded="false" />
+            <element signature="method#ks4NotLocked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#3285#3366#0" expanded="false" />
+            <element signature="method#ks4NotLocked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#3764#3850#0" expanded="false" />
+            <element signature="method#ks4NotLocked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#4258#4338#0" expanded="false" />
+            <element signature="method#ks4NotLocked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#4735#4794#0" expanded="false" />
+            <element signature="method#ks5Locked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#5116#5189#0" expanded="false" />
+            <element signature="method#ks5Locked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#5580#5658#0" expanded="false" />
+            <element signature="method#ks5Locked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#6059#6131#0" expanded="false" />
+            <element signature="method#ks5Locked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#6521#6588#0" expanded="false" />
+            <element signature="method#ks5NotLocked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#6917#6998#0" expanded="false" />
+            <element signature="method#ks5NotLocked_HeadlinesByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#7396#7482#0" expanded="false" />
+            <element signature="method#ks5NotLocked_QualificationsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#7890#7970#0" expanded="false" />
+            <element signature="method#ks5NotLocked_StudentsByUrl#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="e#8367#8426#0" expanded="false" />
+            <element signature="e#8748#8815#0" expanded="false" />
+            <element signature="method#eapNotLocked_VisibleButtons#0;class#ReportAccessTests#0" expanded="false" />
+            <element signature="method#setupUrlAccessTest#0;class#ReportAccessTests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/AnalyticsComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10-sources.jar!/org/aspectj/runtime/internal/AroundClosure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#1275#1276#0" expanded="false" />
+            <element signature="e#1306#1307#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/qameta/allure/allure-java-commons/2.0-BETA16/allure-java-commons-2.0-BETA16-sources.jar!/io/qameta/allure/aspects/StepsAspects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.11/testng-6.11-sources.jar!/org/testng/internal/Invoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="868" column="0" lean-forward="false" selection-start-line="868" selection-start-column="0" selection-end-line="868" selection-end-column="0" />
+          <folding>
+            <element signature="e#27713#27726#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/AbstractAnalyticsObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10-sources.jar!/org/aspectj/runtime/reflect/JoinPointImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="119" column="23" lean-forward="false" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+          <folding>
+            <element signature="docComment;class#BaseTest#0" expanded="false" />
+            <element signature="docComment;field#driver#0;class#BaseTest#0" expanded="false" />
+            <element signature="docComment;field#testDomain#0;class#BaseTest#0" expanded="false" />
+            <element signature="docComment;field#utils#0;class#BaseTest#0" expanded="false" />
+            <element signature="method#tearDown#0;class#BaseTest#0" expanded="false" />
+            <element signature="docComment;method#initialise#0;class#BaseTest#0" expanded="false" />
+            <element signature="docComment;method#login#0;class#BaseTest#0" expanded="false" />
+            <element signature="method#login#0;class#BaseTest#0" expanded="false" />
+            <element signature="docComment;method#getStringParam#0;class#BaseTest#0" expanded="false" />
+            <element signature="method#saveScreenshot#0;class#BaseTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-resources/TestNG-files/AuthGroupTests.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/components/AuthorityDetailsModal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/AccessTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="83">
+          <caret line="89" column="15" lean-forward="false" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
           <folding>
+            <element signature="class#TestReport#0;class#AccessTest#0" expanded="false" />
+            <element signature="method#TestReport#0;class#TestReport#0;class#AccessTest#0" expanded="false" />
+            <element signature="class#ReportArea#0;class#AccessTest#0" expanded="false" />
+            <element signature="method#ReportArea#0;class#ReportArea#0;class#AccessTest#0" expanded="false" />
+            <element signature="e#2394#2405#0" expanded="false" />
+            <element signature="method#setup#0;class#AccessTest#0" expanded="false" />
+            <element signature="e#2955#3037#0" expanded="false" />
             <element signature="method#getExpectedCanDoList#0;class#AccessTest#0" expanded="false" />
+            <element signature="method#getReportButtonsFor#0;class#AccessTest#0" expanded="false" />
+            <element signature="method#checkReportButtons#0;class#AccessTest#0" expanded="false" />
+            <element signature="method#getLegacyButtonsFor#0;class#AccessTest#0" expanded="false" />
+            <element signature="method#getEAPButtonsFor#0;class#AccessTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/account/AreaAccessTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="158" column="24" lean-forward="true" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;class#AreaAccessTest#0" expanded="false" />
+            <element signature="e#477#502#0" expanded="false" />
+            <element signature="class#Area#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="method#Area#0;class#Area#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="method#get#0;class#Area#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="e#1889#1902#0" expanded="false" />
+            <element signature="e#2417#2476#0" expanded="false" />
+            <element signature="method#menuOptionsDisplayedTest#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="e#2802#2869#0" expanded="false" />
+            <element signature="method#menuOptionLinksTest#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="e#3181#3255#0" expanded="false" />
+            <element signature="method#tryMenuLink#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="method#getActualMenuLabels#0;class#AreaAccessTest#0" expanded="false" />
+            <element signature="method#getExpectedMenuLabels#0;class#AreaAccessTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

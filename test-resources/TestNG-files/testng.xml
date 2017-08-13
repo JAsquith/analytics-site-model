@@ -11,7 +11,7 @@
 		<parameter name="locked-access" value="true" />
 		
 		<classes>
-			<class name="tests.account.LockedReportAccessTest">
+			<class name="tests.account.ReportAccessTests">
 				<methods>
 					<include name="ks4NotLocked_VisibleButtons" />
 					<include name="ks5Locked_VisibleButtons" />
@@ -28,7 +28,7 @@
 		<parameter name="accessible-eap-buttons" value="Headlines|Grades" />
 		<parameter name="locked-access" value="true" />
 		<classes>
-			<class name="tests.account.LockedReportAccessTest" />
+			<class name="tests.account.ReportAccessTests" />
 		</classes>
 	</test>
 	<test name="Locked Reports - (H and S)">
@@ -39,7 +39,7 @@
 		<parameter name="accessible-eap-buttons" value="Headlines|Grades" />
 		<parameter name="locked-access" value="true" />
 		<classes>
-			<class name="tests.account.LockedReportAccessTest" />
+			<class name="tests.account.ReportAccessTests" />
 		</classes>
 	</test>
 	<test name="Locked Reports - (Q)">
@@ -50,7 +50,7 @@
 		<parameter name="accessible-eap-buttons" value="Grades" />
 		<parameter name="locked-access" value="true" />
 		<classes>
-			<class name="tests.account.LockedReportAccessTest" />
+			<class name="tests.account.ReportAccessTests" />
 		</classes>
 	</test>
 	<test name="Locked Reports - (Q and S)">
@@ -61,7 +61,7 @@
 		<parameter name="accessible-eap-buttons" value="Grades" />
 		<parameter name="locked-access" value="true" />
 		<classes>
-			<class name="tests.account.LockedReportAccessTest" />
+			<class name="tests.account.ReportAccessTests" />
 		</classes>
 	</test>
 	<test name="Locked Reports - (S)">
@@ -72,7 +72,7 @@
 		<parameter name="accessible-eap-buttons" value="Grades" />
 		<parameter name="locked-access" value="true" />
 		<classes>
-			<class name="tests.account.LockedReportAccessTest" />
+			<class name="tests.account.ReportAccessTests" />
 		</classes>
 	</test>
 

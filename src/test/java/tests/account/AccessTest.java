@@ -29,19 +29,39 @@ public abstract class AccessTest extends BaseTest {
     protected String reportsHomeUrl;
 
     protected enum TestReport {
-        KS4_LOCKED("17", "", "Exams"),
-        KS4_NOT_LOCKED("17","","Targets"),
-        KS5_LOCKED("16","","Spring 2 01/03/2017"),
-        KS5_NOT_LOCKED("16","","Targets"),
-        EAP_LOCKED("17","11","Y11 Spring 1"),
-        EAP_NOT_LOCKED("17","11","Y11 Autumn 2");
+        KS4_LOCKED(4, "17", "", "Exams", "4780"),
+        KS4_NOT_LOCKED(4, "17","","Targets", "4779"),
+        KS5_LOCKED(5, "16","","Spring 2 01/03/2017", "4739"),
+        KS5_NOT_LOCKED(5, "16","","Targets", "4735"),
+        EAP_LOCKED(6, "17","11","Y11 Spring 1", "65/13"),
+        EAP_NOT_LOCKED(6, "17","11","Y11 Autumn 2", "65/8");
 
-        String cohort;String eapYear;String dataset;
+        int keystage; String cohort;String eapYear;String dataset;
+        String legacyPubID; String eapDatasetCollID;
 
-        TestReport(String cohortNum, String eapYearNum, String datasetName){
+        TestReport(int keystage, String cohortNum, String eapYearNum, String datasetName,
+                   String reportID){
+            this.keystage = keystage;
             this.cohort = cohortNum;
-            this.eapYear = eapYearNum;
             this.dataset = datasetName;
+            if (eapYearNum.equals("")){
+                this.legacyPubID = reportID;
+            } else {
+                this.eapYear = eapYearNum;
+                this.eapDatasetCollID = reportID;
+            }
+        }
+    }
+    protected enum ReportArea {
+        HEADLINES("Headlines", "Reports/Reports/Headlines?PublishedReport_ID="),
+        QUALIFICATIONS("Qualifications", "Reports/Reports/Qualifications?PublishedReport_ID="),
+        STUDENTS("Students", "Reports/Reports/Students?PublishedReport_ID=");
+
+        String legacyArea; String urlPart; int eapAreaID; int eapLevelID;
+
+        ReportArea(String legacyArea, String urlPart){
+            this.legacyArea = legacyArea;
+            this.urlPart = urlPart;
         }
     }
 
@@ -67,9 +87,8 @@ public abstract class AccessTest extends BaseTest {
     @Test
     @Step( "Compare actual and expected 'Can Do' lists" )
     public void viewAuthoritiesModalTest(){
-        actualCanDoList = readAuthorityDetailsCanDoList();
         assertThat("'Can do' list on Authority Details Modal",
-                getExpectedCanDoList(), is(actualCanDoList));
+                readAuthorityDetailsCanDoList(), is(getExpectedCanDoList()));
     }
 
     protected String[] getExpectedCanDoList(){
@@ -133,13 +152,13 @@ public abstract class AccessTest extends BaseTest {
     }
 
     @Step( "Get Report buttons for KS{ks} > Cohort {cohort} > {dataset}" )
-    protected String[] getReportButtonsFor(String ks, String cohort, String year, String dataset){
-        driver.get(reportsHomeUrl+"?selectedKS="+ks);
-        driver.get(reportsHomeUrl+"?selectedCohort="+cohort);
-        if (Integer.parseInt(ks)<6){
-            return getLegacyButtonsFor(dataset);
+    protected String[] getReportButtonsFor(TestReport testReport){
+        driver.get(reportsHomeUrl+"?selectedKS="+testReport.keystage);
+        driver.get(reportsHomeUrl+"?selectedCohort="+testReport.cohort);
+        if (testReport.keystage<6){
+            return getLegacyButtonsFor(testReport.dataset);
         }
-        return getEAPButtonsFor(year, dataset);
+        return getEAPButtonsFor(testReport.eapYear, testReport.dataset);
     }
 
     @Step( "Check visible report button labels: {actual}" )

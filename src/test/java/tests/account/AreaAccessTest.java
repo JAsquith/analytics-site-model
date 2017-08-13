@@ -3,7 +3,6 @@ package tests.account;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -33,17 +32,17 @@ public class AreaAccessTest extends AccessTest {
         REPORTS("Reports", "REPORTS", "/ReportsHome", "Reports Homepage");
 
         String areaName;
-        String menuLocatorText;
-        String menuVisibleText;
+        String imgAltText;
+        String menuButtonLabel;
+        String defaultPageURL;
         String defaultPageTitle;
-        String pageURL;
 
         Area(String name, String menuText, String url, String title){
             this.areaName=name;
-            this.menuLocatorText=name;
-            this.menuVisibleText=menuText;
+            this.imgAltText=name;
+            this.menuButtonLabel=menuText;
+            this.defaultPageURL=url;
             this.defaultPageTitle=title;
-            this.pageURL=url;
         }
         static Area get(String name){
             switch (name){
@@ -76,14 +75,6 @@ public class AreaAccessTest extends AccessTest {
                 fail("Test Setup Failed!");
             }
         }
-    }
-
-    @AfterTest
-    public void tearDown(){
-        try{
-            new AnalyticsPage(driver).clickMenuLogout();
-            driver.quit();
-        } catch (Exception e){}
     }
 
     @Story( "The correct Main Menu options should be visible" )
@@ -136,7 +127,7 @@ public class AreaAccessTest extends AccessTest {
     @Step( "Menu Option '{areaName}' opens the expected page" )
     private void tryMenuLink(String areaName){
         Area testArea = Area.get(areaName);
-        homePage.clickMenuOption(testArea.menuLocatorText);
+        homePage.clickMenuOption(testArea.imgAltText);
         assertWithScreenshot("Landing Page Title",
                 homePage.getPageTitleText(),is(testArea.defaultPageTitle));
     }
@@ -154,7 +145,7 @@ public class AreaAccessTest extends AccessTest {
         String[] areaNames = utils.getTestSettingAsArray("accessible-areas");
         String[] menuOptions = new String[areaNames.length];
         for(int i=0; i<areaNames.length;i++){
-            menuOptions[i]=Area.get(areaNames[i]).menuVisibleText;
+            menuOptions[i]=Area.get(areaNames[i]).menuButtonLabel;
         }
         return menuOptions;
     }
@@ -162,7 +153,7 @@ public class AreaAccessTest extends AccessTest {
     @Step ( "Try to access the default URL for {areaName}" )
     private String tryUrlHack(String areaName){
         Area area = Area.get(areaName);
-        driver.get(applicationUrl+area.pageURL);
+        driver.get(applicationUrl+area.defaultPageURL);
         String actualPageTitle = new AnalyticsPage(driver).getPageTitleText();
         if (actualPageTitle.equals("Role Error")){
             return null;
@@ -175,7 +166,6 @@ public class AreaAccessTest extends AccessTest {
 
     Types of Test:
         Universal:
-            Authority Details modal shows correct info
             Create Announcement via links
             Create Announcement via URLs
         Report Group Specific Tests:
