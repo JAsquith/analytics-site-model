@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pages.AnalyticsComponent;
-import pages.reports.Report;
+import pages.reports.EAPReport;
 
 import java.util.List;
 
@@ -27,55 +27,55 @@ public class Report_GradeFilters extends AnalyticsComponent {
         super(aDriver);
     }
 
-    public Report filterByTrack(String trackStatus){
+    public EAPReport filterByTrack(String trackStatus){
         if (trackStatus.equals("")){
             trackStatus = "All";
         }
         List<WebElement> onTrackMenus = driver.findElements(ON_TRACK_MENU);
         if (onTrackMenus.size() == 0){
-            return new Report(driver); // The Tracking menu is not currently available
+            return new EAPReport(driver); // The Tracking menu is not currently available
         }
         onTrackMenus.get(0).findElement(By.cssSelector("[title='" + trackStatus + "']")).click();
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectFaculty(String optionText){
+    public EAPReport selectFaculty(String optionText){
         List<WebElement> facultyDDLs = driver.findElements(FACULTY_DDL);
         if (facultyDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Faculty is not available");
             }
-            return new Report(driver); // The Faculty DDL is not currently available
+            return new EAPReport(driver); // The Faculty DDL is not currently available
         }
         new Select(facultyDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectQualification(String optionText){
+    public EAPReport selectQualification(String optionText){
         List<WebElement> qualificationDDLs = driver.findElements(QUALIFICATION_DDL);
         if (qualificationDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Qualification is not available");
             }
-            return new Report(driver); // The Qualification DDL is not currently available
+            return new EAPReport(driver); // The Qualification DDL is not currently available
         }
         new Select(qualificationDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectClass(String optionText){
+    public EAPReport selectClass(String optionText){
         List<WebElement> classDDLs = driver.findElements(CLASS_DDL);
         if (classDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Faculty is not available");
             }
-            return new Report(driver); // The Class DDL is not currently available
+            return new EAPReport(driver); // The Class DDL is not currently available
         }
         new Select(classDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectGradeType(String optionText){
+    public EAPReport selectGradeType(String optionText){
         // NB. if field is 'Locked', the option will still be selected and the form submitted, but
         //      when the page is reloaded the previous option will be the active one
         List<WebElement> gradeTypeDDLs = driver.findElements(GRADE_TYPE_DDL);
@@ -83,41 +83,41 @@ public class Report_GradeFilters extends AnalyticsComponent {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Grade Type is not available");
             }
-            return new Report(driver); // The Grade Type DDL is not currently available
+            return new EAPReport(driver); // The Grade Type DDL is not currently available
         }
         new Select(gradeTypeDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectAwardClass(String optionText){
+    public EAPReport selectAwardClass(String optionText){
         List<WebElement> awardClassDDLs = driver.findElements(AWARD_CLASS_DDL);
         if (awardClassDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because GCSE/Non-GCSE is not available");
             }
-            return new Report(driver); // The GCSE/Non-GCSE DDL is not currently available
+            return new EAPReport(driver); // The GCSE/Non-GCSE DDL is not currently available
         }
         new Select(awardClassDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectKS2Core(String optionText){
+    public EAPReport selectKS2Core(String optionText){
         List<WebElement> ks2CoreDDLs = driver.findElements(KS2_CORE_DDL);
         if (ks2CoreDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because KS2 Core is not available");
             }
-            return new Report(driver); // The KS2 Core DDL is not currently available
+            return new EAPReport(driver); // The KS2 Core DDL is not currently available
         }
         new Select(ks2CoreDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectGradeFilterType(String optionText){
+    public EAPReport selectGradeFilterType(String optionText){
 
         switch (optionText.toLowerCase()){
             case "":
-                return new Report(driver);
+                return new EAPReport(driver);
             case "less than":
                 optionText = "<";
                 break;
@@ -142,31 +142,31 @@ public class Report_GradeFilters extends AnalyticsComponent {
 
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectGradeFilterWhole(String optionText){
+    public EAPReport selectGradeFilterWhole(String optionText){
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_WHOLE_DDL);
         if (targetDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
             }
-            return new Report(driver); // The Grade Filter DDLs are not currently available
+            return new EAPReport(driver); // The Grade Filter DDLs are not currently available
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
-    public Report selectGradeFilterSub(String optionText){
+    public EAPReport selectGradeFilterSub(String optionText){
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_SUB_DDL);
         if (targetDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
             }
-            return new Report(driver); // The Grade Filter DDLs are not currently available
+            return new EAPReport(driver); // The Grade Filter DDLs are not currently available
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
     public boolean isDisabled(By locator){

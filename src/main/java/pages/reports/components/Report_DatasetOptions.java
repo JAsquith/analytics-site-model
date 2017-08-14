@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import pages.AnalyticsComponent;
-import pages.reports.Report;
+import pages.reports.EAPReport;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class Report_DatasetOptions extends AnalyticsComponent {
         return driver.findElement(locator).getAttribute("class").toLowerCase().contains("disabled");
     }
 
-    public Report selectDataset(String optionText){
+    public EAPReport selectDataset(String optionText){
 
         WebElement select = driver.findElement(DATASET_DDL);
         select.click();
@@ -48,16 +48,16 @@ public class Report_DatasetOptions extends AnalyticsComponent {
         new Select(select).selectByIndex(choiceIndex);
         waitForLoadingWrapper();
         waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DDL));
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
-    public Report selectCompareWith(String optionText){
+    public EAPReport selectCompareWith(String optionText){
         List<WebElement> compWithDDLs = driver.findElements(COMPARE_WITH_DDL);
         if (compWithDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't compare with '" + optionText + "' because Compare With is not available");
             }
-            return new Report(driver); // The Compare With DDL is not currently available
+            return new EAPReport(driver); // The Compare With DDL is not currently available
         }
         WebElement select = driver.findElement(COMPARE_WITH_DDL);
         select.click();
@@ -76,7 +76,7 @@ public class Report_DatasetOptions extends AnalyticsComponent {
 
         new Select(select).selectByIndex(choiceIndex);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
 }

@@ -67,21 +67,9 @@ public class TestUtils {
         return Boolean.valueOf(s_value);
     }
 
-    public boolean getTestSettingAsBoolean(String name){
-        return getTestSetting(name, false);
-    }
-
     public int getTestSetting(String name, int intDefault){
         String s_value = getTestSetting(name, String.valueOf(intDefault));
         return Integer.parseInt(s_value);
-    }
-
-    public int getTestSettingAsInteger(String name){
-        return getTestSetting(name, 0);
-    }
-
-    public String[] getTestSettingAsArray(String name) {
-        return getTestSettingAsArray(name, "\\|");
     }
 
     public String[] getTestSettingAsArray(String name, String sep){

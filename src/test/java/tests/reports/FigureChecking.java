@@ -1,22 +1,22 @@
 package tests.reports;
 
-import tests.SISRATest;
+import org.testng.ITestContext;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import pages.AnalyticsPage;
 import pages.data.DataHome;
 import pages.data.basedata.PublishBaseData;
 import pages.data.components.DataAdminSelect;
 import pages.data.components.DataSideMenu;
 import pages.data.students.PublishStudents;
-import pages.reports.Report;
+import pages.reports.EAPReport;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.Report_AddStudentFilters;
 import pages.reports.components.ReportsHome_CohortsMenu;
 import pages.reports.components.ReportsHome_YearAccordion;
+import tests.SISRATest;
 import utils.TableDataFileManager;
-import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -34,7 +34,7 @@ public class FigureChecking extends SISRATest {
         try {
             this.login();
 
-            Report reportPage = this.openReport();
+            EAPReport reportPage = this.openReport();
             reportPage = this.openView(reportPage);
             reportPage = this.applyStudentFilters(reportPage);
             reportPage = this.applyOptions(reportPage);
@@ -113,7 +113,7 @@ public class FigureChecking extends SISRATest {
         page.clickPublish(publishType);
     }
 
-    private Report openReport(){
+    private EAPReport openReport(){
         // Choose Reports > KS > Cohort > Go To Reports (dataset)
         try {
             ReportsHome_EAP reportsHome = new ReportsHome_EAP(driver, true);
@@ -132,7 +132,7 @@ public class FigureChecking extends SISRATest {
                     getTestParam("eapYear"),
                     trackerColumn);
 
-            Report report = accordion.gotoPublishedReport(
+            EAPReport report = accordion.gotoPublishedReport(
                     getTestParam("dataset"),
                     trackerColumn);
 
@@ -146,7 +146,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private Report openView(Report reportPage){
+    private EAPReport openView(EAPReport reportPage){
         // Choose the Area > Report > Level
         try {
             reportPage.openView(
@@ -162,7 +162,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private Report applyStudentFilters (Report reportPage){
+    private EAPReport applyStudentFilters (EAPReport reportPage){
 
         String filterGroupsParam = getTestParam("filterGroups");
         String filterValuesParam = getTestParam("filterValues");
@@ -184,11 +184,11 @@ public class FigureChecking extends SISRATest {
 
         filtersModal.apply();
 
-        return new Report(driver);
+        return new EAPReport(driver);
 
     }
 
-    private Report applyOptions(Report reportPage){
+    private EAPReport applyOptions(EAPReport reportPage){
         // Apply report/view options defined in test params
         try {
             if (!getTestParam("compWith").equals(""))
@@ -224,7 +224,7 @@ public class FigureChecking extends SISRATest {
             if (getTestParam("sortDir").toLowerCase().equals("desc")){
                 reportPage.toggleColSortDirection();
             }
-            return new Report (driver);
+            return new EAPReport(driver);
         }
         catch (Exception e){
             System.out.println("Exception setting report options");
@@ -232,7 +232,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private void checkMultiTableFigures(Report reportPage){
+    private void checkMultiTableFigures(EAPReport reportPage){
         int diffResult;
 
         String expectedDataFile  = getTestParam("dataFiles");
@@ -266,7 +266,7 @@ public class FigureChecking extends SISRATest {
 
     }
 
-    private void checkNamedTableFigures(Report reportPage){
+    private void checkNamedTableFigures(EAPReport reportPage){
         String[] tables = getTestParamAsStringArray("tableNames");
         String[] files = getTestParamAsStringArray("dataFiles");
 

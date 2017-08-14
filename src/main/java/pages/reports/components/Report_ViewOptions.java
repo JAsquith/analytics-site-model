@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pages.AnalyticsComponent;
-import pages.reports.Report;
+import pages.reports.EAPReport;
 
 import java.util.List;
 
@@ -21,43 +21,43 @@ public class Report_ViewOptions extends AnalyticsComponent {
         super(aDriver);
     }
 
-    public Report selectColSort(String optionText){
+    public EAPReport selectColSort(String optionText){
         List<WebElement> targetDDLs = driver.findElements(COL_SORT_DDL);
         if (targetDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Column Sort is not available");
             }
-            return new Report(driver); // The Column Sort DDL is not currently available
+            return new EAPReport(driver); // The Column Sort DDL is not currently available
         }
         if (!optionText.equals("")) {
             new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
             waitForLoadingWrapper();
         }
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
-    public Report toggleColSortDirection(){
+    public EAPReport toggleColSortDirection(){
         driver.findElement(COL_SORT_DIRECTION_TOGGLE).click();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
-    public Report selectBreakdown(String optionText){
+    public EAPReport selectBreakdown(String optionText){
         List<WebElement> targetDDLs = driver.findElements(BREAKDOWN_DDL);
         if (targetDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't select '" + optionText + "' because Breakdown is not available");
             }
-            return new Report(driver); // The Breakdown DDL is not currently available
+            return new EAPReport(driver); // The Breakdown DDL is not currently available
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
-    public Report setFigType(String figType){
+    public EAPReport setFigType(String figType){
         // checks current availability and setting, clicks label if req.
         if (figType.equals("")){
-            return new Report(driver);
+            return new EAPReport(driver);
         }
         WebElement figToggle = driver.findElement(FIG_TYPE_TOGGLE);
         if (figToggle.getAttribute("class").contains("disabled")){
@@ -77,17 +77,17 @@ public class Report_ViewOptions extends AnalyticsComponent {
                         "'. Expected '#', '%', 'Count' or 'Percentage'");
         }
         if (oldType.startsWith(newType)){
-            return new Report(driver);
+            return new EAPReport(driver);
         }
         figToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
-    public Report setCalcType(String calcType){
+    public EAPReport setCalcType(String calcType){
         // checks current availability and setting, clicks label if req.
         if (calcType.equals("")){
-            return new Report(driver);
+            return new EAPReport(driver);
         }
         WebElement calcToggle = driver.findElement(CALC_TYPE_TOGGLE);
         if (calcToggle.getAttribute("class").contains("disabled")){
@@ -107,11 +107,11 @@ public class Report_ViewOptions extends AnalyticsComponent {
                         "'. Expected 'Std', 'Cum', 'Standard' or 'Cumulative'");
         }
         if (oldType.startsWith(newType)){
-            return new Report(driver);
+            return new EAPReport(driver);
         }
         calcToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
     public boolean isDisabled(By locator){

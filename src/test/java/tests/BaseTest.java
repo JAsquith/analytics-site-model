@@ -33,9 +33,7 @@ public abstract class BaseTest {
     /**
      *
      */
-    public String testDomain;
 
-    public String testProtocol;
     public String applicationUrl;
 
     /**
@@ -75,8 +73,8 @@ public abstract class BaseTest {
         }
         //driver.manage().window().maximize();
 
-        testDomain = utils.getTestSetting("test.domain");
-        testProtocol = utils.getTestSetting("test.protocol");
+        String testDomain = getStringParam("test.domain");
+        String testProtocol = getStringParam("test.protocol");
         applicationUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk";
         driver.get(applicationUrl);
     }
@@ -100,7 +98,7 @@ public abstract class BaseTest {
     }
 
     /**
-     * Accesses a given test parameter
+     * Accesses a given test parameter and return its String value
      * @param name
      * @param defaultVal
      * @return
@@ -108,9 +106,35 @@ public abstract class BaseTest {
     protected String getStringParam(String name, String defaultVal){
         return utils.getTestSetting(name, defaultVal);
     }
-
     protected String getStringParam(String name){
         return getStringParam(name, "");
+    }
+
+    /**
+     * Accesses a given test parameter and return its String value as an array
+     * @param name
+     * @param sep
+     * @return
+     */
+    protected String[] getArrayParam(String name, String sep){
+        return utils.getTestSettingAsArray(name, sep);
+    }
+    protected String[] getArrayParam(String name){
+        return getArrayParam(name, "\\|");
+    }
+
+    protected int getIntegerParam(String name, int defaultVal){
+        return utils.getTestSetting(name, defaultVal);
+    }
+    protected int getIntegerParam(String name){
+        return getIntegerParam(name, 0);
+    }
+
+    protected boolean getBooleanParam(String name, boolean defaultVal){
+        return utils.getTestSetting(name, defaultVal);
+    }
+    protected boolean getBooleanParam(String name){
+        return getBooleanParam(name, false);
     }
 
     protected <T> void assertWithScreenshot(String reason, T actual, Matcher<? super T> matcher) {

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.AnalyticsComponent;
-import pages.reports.Report;
+import pages.reports.EAPReport;
 
 import java.util.List;
 
@@ -75,9 +75,9 @@ public class Report_FilterTabs extends AnalyticsComponent {
         return false;
     }
 
-    public Report selectTab(String tabType){
+    public EAPReport selectTab(String tabType){
         buildGenericBys(tabType);
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
     // Todo: replicate this method for AddMeasureFilters and AddResidualExclusions once those components are built
@@ -90,14 +90,14 @@ public class Report_FilterTabs extends AnalyticsComponent {
     }
 
     // Todo: replicate this method for AddMeasureFilters and AddResidualExclusions once those components are built
-    public Report clearAllFilters(){
+    public EAPReport clearAllFilters(){
         List<WebElement> clearFiltersButtons = driver.findElements(CLEAR_FILTERS);
         if (clearFiltersButtons.size()==0){
-            return new Report(driver);
+            return new EAPReport(driver);
         }
         clearFiltersButtons.get(0).click();
         waitForLoadingWrapper();
-        return new Report(driver);
+        return new EAPReport(driver);
     }
 
     private String normaliseTabType(String tabType){

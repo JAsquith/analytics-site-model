@@ -1,4 +1,4 @@
-package tests.reports.headlines.filters;
+package tests.reports.eap.headlines.filters;
 
 import io.qameta.allure.*;
 import org.testng.annotations.Test;

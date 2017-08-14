@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
-import pages.reports.Report;
+import pages.reports.EAPReport;
 
 import java.util.List;
 
@@ -92,12 +92,12 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         return null;
     }
 
-    public Report gotoPublishedReport(String datasetName, String forTracker) {
+    public EAPReport gotoPublishedReport(String datasetName, String forTracker) {
         return gotoPublishedReport(datasetName, forTracker, "Grades");
     }
 
     @Step( "Open {repCategory} Report for: {datasetName} (forTracker = {forTracker})" )
-    public Report gotoPublishedReport(String datasetName, String forTracker, String repCategory) {
+    public EAPReport gotoPublishedReport(String datasetName, String forTracker, String repCategory) {
         By button;
         switch (repCategory){
             case "Headlines": button = GO_TO_HEADLINES; break;
@@ -106,19 +106,20 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
 
         if(!forTracker.equals("")){
             expandPublishedReport("Tracker").findElement(button).click();
+            // Todo: If {forTracker} is not "[default]", select from the tracker DDL
         }else{
             expandPublishedReport(datasetName).findElement(button).click();
         }
 
         waitForLoadingWrapper();
-        Report reportPage = new Report(driver);
+        EAPReport reportPage = new EAPReport(driver);
         if (!forTracker.equals("")){
             reportPage = reportPage.selectDataset(datasetName);
         }
         return reportPage;
     }
 
-    public Report gotoPublishedReport(String datasetName, boolean forTracker, String repCategory){
+    public EAPReport gotoPublishedReport(String datasetName, boolean forTracker, String repCategory){
         String trackerCol;
         if (forTracker){
             trackerCol = "[default]";

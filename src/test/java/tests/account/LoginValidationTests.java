@@ -3,7 +3,6 @@ package tests.account;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -29,7 +28,7 @@ public class LoginValidationTests extends BaseTest {
     public void setup(ITestContext testContext) throws MalformedURLException {
         initialise(testContext);
         testPage = new LoginPage(driver, true);
-        loginUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk" + testPage.PAGE_PATH;
+        loginUrl = applicationUrl + testPage.PAGE_PATH;
     }
 
 /*
@@ -61,7 +60,7 @@ public class LoginValidationTests extends BaseTest {
         login("", "");
         assertWithScreenshot("Number of validation messages should be ",
                 testPage.getValidationMessages().size(),
-                is(utils.getTestSetting("no-details-val-msg-count",-1)));
+                is(getIntegerParam("no-details-val-msg-count",-1)));
     }
 
     @Story("Trying to login with no username or password gives the correct validation messages")
@@ -73,7 +72,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         login("", "");
-        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("no-details-val-msgs"));
+        checkValidationMessages(testPage.getValidationMessages(), getArrayParam("no-details-val-msgs"));
     }
 
     @Story("Trying to login with no password should fail")
@@ -101,7 +100,7 @@ public class LoginValidationTests extends BaseTest {
         login(username, "");
         assertWithScreenshot("Number of validation messages should be ",
                 testPage.getValidationMessages().size(),
-                is(utils.getTestSetting("no-password-val-msg-count", -1)));
+                is(getIntegerParam("no-password-val-msg-count", -1)));
     }
 
     @Story("Trying to login with no password gives the correct validation messages")
@@ -114,7 +113,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         login(username, "");
-        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("no-password-val-msgs"));
+        checkValidationMessages(testPage.getValidationMessages(), getArrayParam("no-password-val-msgs"));
     }
 
     @Story("Trying to login with no username should fail")
@@ -140,7 +139,7 @@ public class LoginValidationTests extends BaseTest {
         login("", password);
         assertWithScreenshot("Validation message count ",
                 testPage.getValidationMessages().size(),
-                is(utils.getTestSetting("no-username-val-msg-count", -1)));
+                is(getIntegerParam("no-username-val-msg-count", -1)));
     }
 
     @Story("Trying to login with no username gives the correct validation message text")
@@ -153,7 +152,7 @@ public class LoginValidationTests extends BaseTest {
         }
         testPage = new LoginPage(driver, true);
         login("", password);
-        checkValidationMessages(testPage.getValidationMessages(), utils.getTestSettingAsArray("no-username-val-msgs"));
+        checkValidationMessages(testPage.getValidationMessages(), getArrayParam("no-username-val-msgs"));
     }
 
     @Step("Submit Login Details")

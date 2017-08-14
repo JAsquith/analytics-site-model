@@ -261,16 +261,16 @@ public class ReportAccessTests extends AccessTest {
         actualButtons = getReportButtonsFor(testReport);
 
         if (testReport.keystage<6) {
-            expectedButtons = utils.getTestSettingAsArray("report-areas");
+            expectedButtons = getArrayParam("report-areas");
         } else {
-            expectedButtons = utils.getTestSettingAsArray("accessible-eap-buttons");
+            expectedButtons = getArrayParam("accessible-eap-buttons");
         }
     }
 
     @Step( "Determine the actual and expected page titles after a url access attempt by this user" )
     protected void setupUrlAccessTest(TestReport testReport, ReportArea reportArea){
-        String reportsAccess = utils.getTestSetting("report-areas");
-        boolean lockedAccess = utils.getTestSetting("locked-access", false);
+        String reportsAccess = getStringParam("report-areas");
+        boolean lockedAccess = getBooleanParam("locked-access", false);
         if (lockedAccess){
             if (testReport.keystage<6){
                 if (reportsAccess.contains(reportArea.legacyArea)){

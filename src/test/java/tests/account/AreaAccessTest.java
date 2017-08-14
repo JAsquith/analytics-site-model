@@ -92,7 +92,7 @@ public class AreaAccessTest extends AccessTest {
     @Test
     public void menuOptionLinksTest(){
         homePage = new AnalyticsPage(driver);
-        String[] areaNames = utils.getTestSettingAsArray("accessible-areas");
+        String[] areaNames = getArrayParam("accessible-areas");
 
         for(String areaName : areaNames){
             tryMenuLink(areaName);
@@ -105,7 +105,7 @@ public class AreaAccessTest extends AccessTest {
     @Step ( "Check URL access to all blocked areas" )
     public void urlAreaAccessTest(){
         String[] areaNames = Area.getAllAreaNames();
-        List<String> expAreaNames = Arrays.asList(utils.getTestSettingAsArray("accessible-areas"));
+        List<String> expAreaNames = Arrays.asList(getArrayParam("accessible-areas"));
         String failExpectedTitles = "";
         String failActualTitles = "";
 
@@ -142,7 +142,7 @@ public class AreaAccessTest extends AccessTest {
     }
 
     private String[] getExpectedMenuLabels(){
-        String[] areaNames = utils.getTestSettingAsArray("accessible-areas");
+        String[] areaNames = getArrayParam("accessible-areas");
         String[] menuOptions = new String[areaNames.length];
         for(int i=0; i<areaNames.length;i++){
             menuOptions[i]=Area.get(areaNames[i]).menuButtonLabel;

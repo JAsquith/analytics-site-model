@@ -1,21 +1,20 @@
 package pages.reports;
 
-import io.qameta.allure.Step;
-import pages.AnalyticsPage;
-import pages.reports.components.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsPage;
+import pages.reports.components.*;
 
 import java.util.List;
 
 /**
  * Represents the contents and interactive elements common to any KS3/4 Report page
  */
-public class Report extends AnalyticsPage {
+public class EAPReport extends AnalyticsPage {
 
     // Locators for report navigation
     public static final By AREAS = By.className("area");
@@ -41,7 +40,7 @@ public class Report extends AnalyticsPage {
     public Report_ViewOptions viewOptions;
 
 // CONSTRUCTORS
-    public Report(RemoteWebDriver aDriver){
+    public EAPReport(RemoteWebDriver aDriver){
         super(aDriver);
         filterTabs = new Report_FilterTabs(driver);
         gradeFilters = new Report_GradeFilters(driver);
@@ -58,8 +57,7 @@ public class Report extends AnalyticsPage {
     // QUERYING THE CURRENT PAGE STATE
 
     //  - CHANGING THE STATE OF THE PAGE
-    @Step( "Open View: {areaName} > {reportName} > {levelName}" )
-    public Report openView(String areaName, String reportName, String levelName){
+    public EAPReport openView(String areaName, String reportName, String levelName){
 
         // Show the table of links to views within the given areaName
         WebElement area = expandAreaGrid(areaName);
@@ -69,7 +67,7 @@ public class Report extends AnalyticsPage {
         waitForLoadingWrapper();
         return this;
     }
-    public Report selectDataset(String optionText){
+    public EAPReport selectDataset(String optionText){
         return dsOptions.selectDataset(optionText);
     }
 
@@ -81,7 +79,7 @@ public class Report extends AnalyticsPage {
         return filterTabs.openStudentFiltersModal();
     }
 
-    public Report selectCompareWith(String optionText){
+    public EAPReport selectCompareWith(String optionText){
         return dsOptions.selectCompareWith(optionText);
     }
 
@@ -90,7 +88,7 @@ public class Report extends AnalyticsPage {
      * @param trackStatus   a @link{String} identifying the type of track filtering to apply
      * @return  a (refreshed) @link{Report}
      */
-    public Report filterByTrack(String trackStatus){
+    public EAPReport filterByTrack(String trackStatus){
         return gradeFilters.filterByTrack(trackStatus);
     }
 
@@ -99,7 +97,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the faculty to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectFaculty(String optionText){
+    public EAPReport selectFaculty(String optionText){
         return gradeFilters.selectFaculty(optionText);
     }
 
@@ -108,7 +106,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the qualification to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectQualification(String optionText){
+    public EAPReport selectQualification(String optionText){
         return gradeFilters.selectQualification(optionText);
     }
 
@@ -117,7 +115,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the class to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectClass(String optionText){
+    public EAPReport selectClass(String optionText){
         return gradeFilters.selectClass(optionText);
     }
 
@@ -126,7 +124,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the grade method to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectGradeType(String optionText){
+    public EAPReport selectGradeType(String optionText){
         return gradeFilters.selectGradeType(optionText);
     }
 
@@ -135,7 +133,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String}, either "GCSE" or "Non-GCSE"
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectAwardClass(String optionText){
+    public EAPReport selectAwardClass(String optionText){
         return gradeFilters.selectAwardClass(optionText);
     }
 
@@ -144,7 +142,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the KS2Core to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectKS2Core(String optionText){
+    public EAPReport selectKS2Core(String optionText){
         return gradeFilters.selectKS2Core(optionText);
     }
 
@@ -153,7 +151,7 @@ public class Report extends AnalyticsPage {
      * @param optionText one of: "less than", "equal to", "greater or equal" or "greater than"
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectGradeFilterType(String optionText){
+    public EAPReport selectGradeFilterType(String optionText){
         return gradeFilters.selectGradeFilterType(optionText);
     }
 
@@ -162,7 +160,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the whole grade to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectGradeFilterWhole(String optionText){
+    public EAPReport selectGradeFilterWhole(String optionText){
         return gradeFilters.selectGradeFilterWhole(optionText);
     }
 
@@ -171,7 +169,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the sub grade to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectGradeFilterSub(String optionText){
+    public EAPReport selectGradeFilterSub(String optionText){
         return gradeFilters.selectGradeFilterSub(optionText);
     }
 
@@ -180,7 +178,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the column to sort by
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectColSort(String optionText){
+    public EAPReport selectColSort(String optionText){
         return viewOptions.selectColSort(optionText);
     }
 
@@ -188,7 +186,7 @@ public class Report extends AnalyticsPage {
      * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
      * @return  a (refreshed) @link{Report}
      */
-    public Report toggleColSortDirection(){
+    public EAPReport toggleColSortDirection(){
         return viewOptions.toggleColSortDirection();
     }
 
@@ -197,7 +195,7 @@ public class Report extends AnalyticsPage {
      * @param optionText    a @link{String} identifying the filter to select
      * @return  a (refreshed) @link{Report}
      */
-    public Report selectBreakdown(String optionText){
+    public EAPReport selectBreakdown(String optionText){
         return viewOptions.selectBreakdown(optionText);
     }
 
@@ -206,7 +204,7 @@ public class Report extends AnalyticsPage {
      * @param figType one of: "Percentage", "%", "Count", or "#"
      * @return  a (refreshed) @link{Report}
      */
-    public Report setFigType(String figType){
+    public EAPReport setFigType(String figType){
         return viewOptions.setFigType(figType);
     }
 
@@ -215,7 +213,7 @@ public class Report extends AnalyticsPage {
      * @param calcType one of: "Standard", "Std", "Cumulative", or "Cum"
      * @return  a (refreshed) @link{Report}
      */
-    public Report setCalcType(String calcType){
+    public EAPReport setCalcType(String calcType){
         return viewOptions.setCalcType(calcType);
     }
 

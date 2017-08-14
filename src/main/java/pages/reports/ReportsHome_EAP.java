@@ -1,10 +1,9 @@
 package pages.reports;
 
 
-import io.qameta.allure.Step;
-import pages.reports.components.ReportsHome_YearAccordion;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pages.reports.components.ReportsHome_YearAccordion;
 
 /**
  * Represents the contents and interactive elements on the KS3/4 Reports Home Page
@@ -24,7 +23,6 @@ public class ReportsHome_EAP extends ReportsHome {
         }
     }
 
-    @Step( "Select the {cohort} cohort" )
     public ReportsHome_EAP selectCohortByUrl(String cohort){
         driver.get(getCurrentDomain() + PAGE_PATH_SELECT_COHORT+cohort);
         return new ReportsHome_EAP(driver, false);

@@ -92,13 +92,13 @@ public abstract class AccessTest extends BaseTest {
     }
 
     protected String[] getExpectedCanDoList(){
-        String[] reportAreas = utils.getTestSettingAsArray("report-areas");
-        String[] menuAreas = utils.getTestSettingAsArray("accessible-areas");
-        boolean lockedAccess = utils.getTestSetting("locked-access", false);
-        boolean embargoAccess = utils.getTestSetting("embargo-access", false);
+        String[] reportAreas = getArrayParam("report-areas");
+        String[] menuAreas = getArrayParam("accessible-areas");
+        boolean lockedAccess = getBooleanParam("locked-access", false);
+        boolean embargoAccess = getBooleanParam("embargo-access", false);
         boolean accessUsers = false;
         boolean accessData = false;
-        boolean announceAccess = utils.getTestSetting("announce-access", false);
+        boolean announceAccess = getBooleanParam("announce-access", false);
 
         int canDoIndex = 0;
         if (!reportAreas[0].equals("")) {

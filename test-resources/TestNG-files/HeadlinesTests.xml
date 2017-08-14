@@ -15,7 +15,7 @@
         <parameter name="password" value="wsS!SRA125" />
 
         <classes>
-            <class name="tests.reports.headlines.filters.AvailableOptionsTests" />
+            <class name="tests.reports.eap.headlines.filters.AvailableOptionsTests" />
         </classes>
     </test>
 
