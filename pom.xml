@@ -22,7 +22,6 @@
 
         <javax.mail.version>1.5.6</javax.mail.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -95,6 +94,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>test-resources/TestNG-files/AllTests.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <properties>
+                        <issues.tracker>devtfs:8080/tfs/SISRA Analytics/SISRAv2/_workItems?id={}</issues.tracker>
+                    </properties>
                 </configuration>
                 <dependencies>
                     <dependency>

@@ -23,6 +23,7 @@ pages\config\StudentDataProfile.class
 pages\data\basedata\KS2Baselines.class
 pages\reports\components\Report_AddStudentFilters.class
 pages\data\students\components\ClassAssignmentsModal.class
+pages\reports\EAPReport.class
 pages\data\basedata\EAPDetail.class
 pages\config\GradeMethodStep3.class
 pages\data\basedata\ConfirmEAPImport.class
@@ -55,7 +56,6 @@ pages\reports\ReportsHome.class
 pages\config\GradeMethodsList_EAP.class
 pages\data\students\components\AssignQuals.class
 pages\data\students\StudentImportComplete.class
-pages\reports\Report.class
 pages\data\grades\components\PublishDatasetsRow.class
 pages\data\grades\components\PublishGradesModal.class
 pages\AbstractAnalyticsObject$2.class

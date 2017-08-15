@@ -292,7 +292,6 @@ public class LoginPage {
 
     /**
      * Tests for the presence of the div element displayed when a user logs in for the first time.
-     * Todo - Should we test if this is displayed after a password reset?
      * @return  {@code true} if the First Login div is found on the current page; otherwise {@code false}
      */
     public boolean firstLogin(){

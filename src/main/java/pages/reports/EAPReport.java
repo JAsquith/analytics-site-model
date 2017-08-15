@@ -24,6 +24,41 @@ public class EAPReport extends AnalyticsPage {
     public static final By REPORT_NAV_LEVEL_LABELS = By.cssSelector("td.title-x");
     public static final By LIST_GRID_ROWS = By.cssSelector("tr.btn");
     public static final By LIST_GRID_COLS = By.cssSelector("tr:nth-of-type(3)>td");
+    private static final String EXTRACT_COLUMN_JS = "oldDiv = document.querySelector('#se-table-data');" +
+            "if (oldDiv != null) {  oldDiv.parentNode.removeChild(oldDiv);}" +
+            "locator = 'table.rpt.stickyHead:nth-of-type(' + tableIndex + ')';" +
+            "tableText = '';colIndexes = [];" +
+            "tableRowElements = document.querySelectorAll(locator + ' tr');" +
+            "titles = tableRowElements[0].querySelectorAll('th');" +
+            "if (titles[0].textContent.trim() == '') {" +
+            "  colIndexes.push(0);" +
+            "  tableText = ','" +
+            "}" +
+            "for (i = 0; i < titles.length; i++) {" +
+            "  colTitle = titles[i].textContent.trim();" +
+            "  colTitle = colTitle.replace(/(\\?\\s+)/, '').trim();" +
+            "  if (colTitle == 'Name' || colTitle == columnName) {" +
+            "    colIndexes.push(i);" +
+            "    if (tableText != '' && tableText != ',') {tableText += ',';}" +
+            "    tableText += colTitle;" +
+            "  }" +
+            "}" +
+            "tableText += '<br>';" +
+            "for (i = 1; (i < tableRowElements.length); i++) {" +
+            "  rowText = '';" +
+            "  rowCellElements = tableRowElements[i].querySelectorAll('td,th');" +
+            "  if (rowCellElements.length > 0) {" +
+            "    for (j = 0; j < colIndexes.length; j++) {" +
+            "      if (j != 0) { rowText += ',';}" +
+            "      rowText += rowCellElements[colIndexes[j]].textContent.trim();" +
+            "    }" +
+            "  }" +
+            "  tableText += rowText + '<br>';" +
+            "}" +
+            "newDiv = document.createElement('DIV');" +
+            "newDiv.setAttribute('id', 'se-table-data');" +
+            "newDiv.innerHTML = tableText;" +
+            "document.querySelector('body>*:not(script)').appendChild(newDiv);";
 
     // Locators for dataset DDLs are public in the Report_DatasetOptions class
     public Report_DatasetOptions dsOptions;
@@ -233,6 +268,20 @@ public class EAPReport extends AnalyticsPage {
         return this.extractMultiTableData();
     }
 
+    public String readColumnData(String tableName, String columnName){
+        int tableIndex = this.findNamedTableIndex(tableName);
+        switch (tableIndex) {
+            case -1:
+                return "Table [" + tableName + "] not found";
+            case -2:
+                return "No tables found - check Report Options";
+            default:
+                return this.extractColumnData(tableIndex, columnName);
+        }
+    }
+    public String readColumnData(String columnName){
+        return this.extractColumnData(columnName);
+    }
 
     private WebElement getViewLinkFromListGrid(WebElement area, String reportName, String levelName){
 
@@ -316,6 +365,57 @@ public class EAPReport extends AnalyticsPage {
         }
 
         return tableIndex;
+    }
+
+    private String extractColumnData(int tableIndex, String columnTitle){
+        String csvText;
+        String js = "tableIndex = '" + tableIndex + "';"
+                + "columnName = '" + columnTitle + "';"
+                + EXTRACT_COLUMN_JS;
+        try {
+            driver.executeScript(js);
+        } catch (JavascriptException jse){
+            throw new AssertionError("Javascript Execution failure ("
+                    + jse.getMessage() + ". Script: [" + js + "]");
+        }
+        csvText = driver.findElement(By.id("se-table-data")).getText();
+        js = "var elem = document.getElementById('se-table-data');" +
+                "elem.parentNode.removeChild(elem);";
+        try {
+            driver.executeScript(js);
+        } catch (JavascriptException jse){
+            /* we've got what we want, and any action/page refresh will get rid, so we don't really care! */
+        }
+        return csvText;
+    }
+
+    private String extractColumnData(String columnTitle){
+        String csvText="";
+        List<WebElement> tableHeadings = driver.findElements(By.cssSelector(".tableTitle"));
+        for (WebElement tabHeading : tableHeadings){
+            if(!csvText.equals("")){
+                csvText += System.lineSeparator();
+            }
+            int tableIndex = findNamedTableIndex(tabHeading.getText().trim());
+            String js = "tableIndex = '" + tableIndex + "';"
+                    + "columnName = '" + columnTitle + "';"
+                    + EXTRACT_COLUMN_JS;
+            try {
+                driver.executeScript(js);
+            } catch (JavascriptException jse){
+                throw new AssertionError("Javascript Execution failure ("
+                        + jse.getMessage() + ". Script: [" + js + "]");
+            }
+            csvText += driver.findElement(By.id("se-table-data")).getText();
+            js = "var elem = document.getElementById('se-table-data');" +
+                    "elem.parentNode.removeChild(elem);";
+            try {
+                driver.executeScript(js);
+            } catch (JavascriptException jse){
+            /* we've got what we want, and any action/page refresh will get rid, so we don't really care! */
+            }
+        }
+        return csvText;
     }
 
     private String extractTableData(int tableIndex){

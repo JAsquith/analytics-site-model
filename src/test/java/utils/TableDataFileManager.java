@@ -17,6 +17,9 @@ public class TableDataFileManager {
         dirTableData = (currDir.endsWith(File.separator)) ? currDir : currDir + File.separator;
         dirTableData += "test-resources" + File.separator + "table-data" + File.separator;
     }
+    public String getFullPath(String filename){
+        return dirTableData + filename;
+    }
 
     public BufferedReader openFileForReading(String fileName) {
 
@@ -45,10 +48,7 @@ public class TableDataFileManager {
         return line;
     }
 
-    public Boolean createFileWithData(String folder, String fileName, String csvData) {
-
-        String filePath = checkDirExists(folder) + fileName;
-
+    public Boolean createFileWithData(String filePath, String csvData){
         try {
             FileOutputStream fos = new FileOutputStream(new File(filePath));
             fos.write(csvData.getBytes());
@@ -58,6 +58,10 @@ public class TableDataFileManager {
             return false;
         }
         return true;
+    }
+    public Boolean createFileWithData(String folder, String fileName, String csvData) {
+        String filePath = checkDirExists(folder) + fileName;
+        return createFileWithData(filePath, csvData);
     }
 
     private FileOutputStream createFileForOutput(String folder, String fileName){
