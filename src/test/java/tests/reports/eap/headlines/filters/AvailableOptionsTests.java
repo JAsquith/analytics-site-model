@@ -82,7 +82,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void classDDLIsHidden(){
         Report_GradeFilters filters = report.gradeFilters;
         assertWithScreenshot("Display status of the Class DDL",
-                filters.isDisabled(filters.CLASS_DDL), is(false));
+                filters.isDisplayed(filters.CLASS_DDL), is(false));
     }
 
     @Story( "The Student grade filter DDL is hidden" )

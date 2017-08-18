@@ -173,11 +173,10 @@ public class Report_GradeFilters extends AnalyticsComponent {
 
         WebElement testElement;
         testElement = driver.findElement(locator);
-        // If we're looking for the OnTrack menu, we can check the menu itself has the disabled class
+        // If we're looking for anything except the OnTrack menu, we need to check the enclosing parent element
         if (locator != ON_TRACK_MENU) {
             testElement = testElement.findElement(By.xpath(".."));
         }
-        // For all others (DDLs), it's the parent div which should have the disabled class:
         return testElement.getAttribute("class").contains("disabled");
     }
 
