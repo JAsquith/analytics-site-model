@@ -21,6 +21,9 @@ public class Report_GradeFilters extends AnalyticsComponent {
     public final By GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Grade_RPTOperand_ID");
     public final By GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_EAPWholeGrade_ID");
     public final By GRADE_FILTER_SUB_DDL = By.id("ReportOptions_EAPSubGrade_Order");
+    public final By COMP_GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Comp_Grade_RPTOperand_ID");
+    public final By COMP_GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_Comp_EAPWholeGrade_ID");
+    public final By COMP_GRADE_FILTER_SUB_DDL = By.id("ReportOptions_Comp_EAPSubGrade_Order");
     public final By STUDENT_FILTER_DDL = By.id("ReportOptions_Stu_ID");
 
     public Report_GradeFilters(RemoteWebDriver aDriver){
@@ -115,19 +118,27 @@ public class Report_GradeFilters extends AnalyticsComponent {
     }
     public EAPReport selectGradeFilterType(String optionText){
 
+        List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_TYPE_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because Grade Filters are not available");
+            }
+            return new EAPReport(driver); // The Grade Filter DDLs are not currently available
+        }
         switch (optionText.toLowerCase()){
             case "":
-                return new EAPReport(driver);
-            case "less than":
+                break;
+            case "less than": case "<":
                 optionText = "<";
                 break;
-            case "equal to":
+            case "equal to": case "=":
                 optionText = "=";
                 break;
-            case "greater or equal":
+            case "greater or equal": case ">=":
                 optionText = ">=";
                 break;
-            case "greater than":
+            case "greater than": case ">":
                 optionText = ">";
                 break;
             default:
@@ -135,7 +146,6 @@ public class Report_GradeFilters extends AnalyticsComponent {
                         "'. Expected 'less than', 'equal to', 'greater or equal' or 'greater than'.");
         }
 
-        List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_TYPE_DDL);
         if (targetDDLs.size() == 0) {
             throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
         }
@@ -148,7 +158,8 @@ public class Report_GradeFilters extends AnalyticsComponent {
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_WHOLE_DDL);
         if (targetDDLs.size() == 0) {
             if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because Grade Filters are not available");
             }
             return new EAPReport(driver); // The Grade Filter DDLs are not currently available
         }
@@ -160,9 +171,87 @@ public class Report_GradeFilters extends AnalyticsComponent {
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_SUB_DDL);
         if (targetDDLs.size() == 0) {
             if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because Grade Filters are not available");
             }
             return new EAPReport(driver); // The Grade Filter DDLs are not currently available
+        }
+        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+    public EAPReport selectCompGradeFilterType(String optionText){
+
+        List<WebElement> targetDDLs = driver.findElements(COMP_GRADE_FILTER_TYPE_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because Compare Grade Filters are not available");
+            }
+            return new EAPReport(driver); // The Compare Grade Filter DDLs are not currently available
+        }
+        switch (optionText.toLowerCase()){
+            case "":
+                return new EAPReport(driver);
+            case "less than": case "<":
+                optionText = "<";
+                break;
+            case "equal to": case "=":
+                optionText = "=";
+                break;
+            case "greater or equal": case ">=":
+                optionText = ">=";
+                break;
+            case "greater than": case ">":
+                optionText = ">";
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Grade Filter Type '" + optionText +
+                        "'. Expected 'less than', 'equal to', 'greater or equal' or 'greater than'.");
+        }
+
+        if (targetDDLs.size() == 0) {
+            throw new IllegalStateException("Can't select '" + optionText + "' because Grade Filters are not available");
+        }
+
+        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+    public EAPReport selectCompGradeFilterWhole(String optionText){
+        List<WebElement> targetDDLs = driver.findElements(COMP_GRADE_FILTER_WHOLE_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because Compare Grade Filters are not available");
+            }
+            return new EAPReport(driver); // The Grade Filter DDLs are not currently available
+        }
+        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+    public EAPReport selectCompGradeFilterSub(String optionText){
+        List<WebElement> targetDDLs = driver.findElements(COMP_GRADE_FILTER_SUB_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because Compare Grade Filters are not available");
+            }
+            return new EAPReport(driver); // The Compare Grade Filter DDLs are not currently available
+        }
+        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+    public EAPReport selectStudent(String optionText){
+        List<WebElement> targetDDLs = driver.findElements(STUDENT_FILTER_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because the Student Filter is not available");
+            }
+            return new EAPReport(driver); // The Student Filter DDL is not currently available
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();

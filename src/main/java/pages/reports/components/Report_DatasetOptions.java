@@ -79,4 +79,14 @@ public class Report_DatasetOptions extends AnalyticsComponent {
         return new EAPReport(driver);
     }
 
+    public EAPReport switchTab(String newTab){
+        By tabLocator = (newTab.equals("Dataset")) ? DATASET_TAB : TRACKER_TAB;
+        WebElement tab = driver.findElement(tabLocator);
+        String classAttr = tab.getAttribute("class");
+        if (classAttr.indexOf("active") == 0){
+            tab.click();
+        }
+        return new EAPReport(driver);
+    }
+
 }

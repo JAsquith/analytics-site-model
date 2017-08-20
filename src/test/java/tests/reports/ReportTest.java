@@ -66,9 +66,139 @@ public abstract class ReportTest extends BaseTest {
     public EAPReport openTestView(EAPReport report, String area, String view, String level){
         return report.openView(area,view,level);
     }
+
     @Step( "Apply report options" )
     public void applyReportOptions(){
-        //Todo: use the super.getStringParam to get any/all report options to be applied
+        String field; String value; int sepPos;
+
+        String[] datasetOptions = getArrayParam("dataset-options");
+        for (String datasetOption : datasetOptions){
+            sepPos = datasetOption.indexOf("=");
+            field = datasetOption.substring(0,sepPos-1);
+            value = datasetOption.substring(sepPos+1);
+            if (!field.equals("")) {
+                applyReportDatasetOption(field, value);
+            }
+        }
+
+        String[] gradeFilterOptions = getArrayParam("grade-filter-options");
+        for (String gradeFilterOption : gradeFilterOptions){
+            sepPos = gradeFilterOption.indexOf("=");
+            field = gradeFilterOption.substring(0,sepPos-1);
+            value = gradeFilterOption.substring(sepPos+1);
+            if (!field.equals("")) {
+                applyGradeFilterOptions(field, value);
+            }
+        }
+
+        String[] viewOptions = getArrayParam("view-options");
+        for (String viewOption : viewOptions){
+            sepPos = viewOption.indexOf("=");
+            field = viewOption.substring(0,sepPos-1);
+            value = viewOption.substring(sepPos+1);
+            if (!field.equals("")) {
+                applyViewOptions(field, value);
+            }
+        }
     }
 
+    @Step( "Apply Dataset option '{field}' = '{value}'" )
+    public void applyReportDatasetOption(String field, String value){
+        switch (field){
+            case "Tab":
+                report = report.dsOptions.switchTab(value);
+                break;
+            case "Actual":
+                report = report.dsOptions.selectDataset(value);
+                break;
+            case "Compare":
+                report = report.dsOptions.selectCompareWith(value);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");
+        }
+
+    }
+
+    @Step( "Apply Grade Filter option '{field}' = '{value}'" )
+    private void applyGradeFilterOptions(String field, String value){
+        switch (field){
+            case "OnTrack":
+                report = report.gradeFilters.filterByTrack(value);
+                break;
+            case "Faculty":
+                report = report.gradeFilters.selectFaculty(value);
+                break;
+            case "Qualification":
+                report = report.gradeFilters.selectQualification(value);
+                break;
+            case "Class":
+                report = report.gradeFilters.selectClass(value);
+                break;
+            case "Grade Type":
+                report = report.gradeFilters.selectGradeType(value);
+                break;
+            case "GCSE/Non-GCSE":
+                report = report.gradeFilters.selectAwardClass(value);
+                break;
+            case "KS2 Core":
+                report = report.gradeFilters.selectKS2Core(value);
+                break;
+            case "Actual Grade Operator":
+                report = report.gradeFilters.selectGradeFilterType(value);
+                break;
+            case "Actual Grade Grade":
+                report = report.gradeFilters.selectGradeFilterWhole(value);
+                break;
+            case "Actual Grade Subgrade":
+                report = report.gradeFilters.selectGradeFilterSub(value);
+                break;
+            case "Compare Grade Operator":
+                report = report.gradeFilters.selectCompGradeFilterType(value);
+                break;
+            case "Compare Grade Grade":
+                report = report.gradeFilters.selectCompGradeFilterWhole(value);
+                break;
+            case "Compare Grade Subgrade":
+                report = report.gradeFilters.selectCompGradeFilterSub(value);
+                break;
+            case "Student":
+                report = report.gradeFilters.selectStudent(value);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Grade Filter Option '"+field+"'");
+        }
+    }
+
+    @Step( "Apply View option '{field}' = '{value}'" )
+    private void applyViewOptions(String field, String value){
+        switch (field){
+            case "Column Sort":
+                report = report.viewOptions.selectColSort(value);
+                break;
+            case "Column Sort Direction":
+                // Todo report = report.viewOptions.setColSortDirection(value);
+                break;
+            case "FigureType":
+                report = report.viewOptions.setFigType(value);
+                break;
+            case "StdCum":
+                report = report.viewOptions.setCalcType(value);
+                break;
+            case "Breakdown":
+                report = report.viewOptions.selectBreakdown(value);
+                break;
+            case "Student Info":
+                // Todo report = report.viewOptions.setStudentInfo(value);
+                break;
+            case "In A8 Basket":
+                // Todo report = report.viewOptions.selectInA8Basket(value);
+                break;
+            case "Sub Whole":
+                // Todo report = report.viewOptions.setSubWhole(value);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown View Option '"+field+"'");
+        }
+    }
 }
