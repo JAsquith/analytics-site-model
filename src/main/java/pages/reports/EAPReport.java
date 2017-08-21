@@ -98,7 +98,14 @@ public class EAPReport extends AnalyticsPage {
         WebElement area = expandAreaGrid(areaName);
 
         // Find the link to the given level of the given report
-        getViewLinkFromListGrid(area, reportName, levelName).click();
+        WebElement button = getViewLinkFromListGrid(area, reportName, levelName);
+        if (button.getText().trim().equals("Active")){
+            // The requested view is already active, close the area grid and exit
+            area.click();
+            return this;
+        }
+        // The requested view is not currently active, click the button and wait for the reload
+        button.click();
         waitForLoadingWrapper();
         return this;
     }

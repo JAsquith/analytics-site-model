@@ -48,6 +48,7 @@ public abstract class ReportTest extends BaseTest {
             if (driver!=null){
                 new AnalyticsPage(driver).clickMenuLogout();
                 driver.quit();
+                e.printStackTrace();
                 fail("Test Setup Failed! Was the data in the Restore school copied over? Exception: "+e.getMessage());
             }
         }
@@ -72,31 +73,31 @@ public abstract class ReportTest extends BaseTest {
         String field; String value; int sepPos;
 
         String[] datasetOptions = getArrayParam("dataset-options");
-        for (String datasetOption : datasetOptions){
-            sepPos = datasetOption.indexOf("=");
-            field = datasetOption.substring(0,sepPos-1);
-            value = datasetOption.substring(sepPos+1);
-            if (!field.equals("")) {
+        if (!datasetOptions[0].equals("")) {
+            for (String datasetOption : datasetOptions) {
+                sepPos = datasetOption.indexOf("=");
+                field = datasetOption.substring(0, sepPos - 1);
+                value = datasetOption.substring(sepPos + 1);
                 applyReportDatasetOption(field, value);
             }
         }
 
         String[] gradeFilterOptions = getArrayParam("grade-filter-options");
-        for (String gradeFilterOption : gradeFilterOptions){
-            sepPos = gradeFilterOption.indexOf("=");
-            field = gradeFilterOption.substring(0,sepPos-1);
-            value = gradeFilterOption.substring(sepPos+1);
-            if (!field.equals("")) {
+        if (!gradeFilterOptions[0].equals("")) {
+            for (String gradeFilterOption : gradeFilterOptions){
+                sepPos = gradeFilterOption.indexOf("=");
+                field = gradeFilterOption.substring(0,sepPos-1);
+                value = gradeFilterOption.substring(sepPos+1);
                 applyGradeFilterOptions(field, value);
             }
         }
 
         String[] viewOptions = getArrayParam("view-options");
-        for (String viewOption : viewOptions){
-            sepPos = viewOption.indexOf("=");
-            field = viewOption.substring(0,sepPos-1);
-            value = viewOption.substring(sepPos+1);
-            if (!field.equals("")) {
+        if (!viewOptions[0].equals("")) {
+            for (String viewOption : viewOptions){
+                sepPos = viewOption.indexOf("=");
+                field = viewOption.substring(0,sepPos-1);
+                value = viewOption.substring(sepPos+1);
                 applyViewOptions(field, value);
             }
         }

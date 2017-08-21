@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Dev Tests" parallel="tests" thread-count="5">
+
+
+    <test name="Dev Test">
+        <parameter name="username" value="AsqJamRestore" />
+        <parameter name="password" value="wsS!SRA125" />
+        <parameter name="report-area" value="Grades" />
+        <parameter name="report-view" value="Overview" />
+        <parameter name="report-level" value="Quals" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="18" />
+        <parameter name="year" value="10" />
+        <parameter name="dataset" value="Y10 T2" />
+
+        <classes>
+            <class name="tests.DevTest" />
+        </classes>
+    </test>
+
+</suite>

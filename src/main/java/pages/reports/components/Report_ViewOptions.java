@@ -12,7 +12,7 @@ import java.util.List;
 public class Report_ViewOptions extends AnalyticsComponent {
 
     public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColName");
-    public final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label[for='RPTColSort_Desc']");
+    public final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label.icon.sortDir");
     public final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
     public final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
     public final By CALC_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(3)");
@@ -32,6 +32,17 @@ public class Report_ViewOptions extends AnalyticsComponent {
         if (!optionText.equals("")) {
             new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
             waitForLoadingWrapper();
+        }
+        return new EAPReport(driver);
+    }
+
+    public EAPReport setColSortDirection(String sortOrder){
+        WebElement sortIcon = driver.findElement(COL_SORT_DIRECTION_TOGGLE);
+        String bgPosition = sortIcon.getCssValue("background-position");
+        boolean sortedAscending = bgPosition.endsWith("-60px");
+        boolean sortAsc = sortOrder.toLowerCase().equals("ascending");
+        if (sortedAscending != sortAsc){
+            sortIcon.click();
         }
         return new EAPReport(driver);
     }
