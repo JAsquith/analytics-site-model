@@ -178,7 +178,7 @@ public abstract class ReportTest extends BaseTest {
                 report = report.viewOptions.selectColSort(value);
                 break;
             case "Column Sort Direction":
-                // Todo report = report.viewOptions.setColSortDirection(value);
+                report = report.viewOptions.setColSortDirection(value);
                 break;
             case "FigureType":
                 report = report.viewOptions.setFigType(value);
