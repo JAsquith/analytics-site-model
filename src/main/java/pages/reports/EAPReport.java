@@ -7,7 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsPage;
-import pages.reports.components.*;
+import pages.reports.components.Report_DatasetOptions;
+import pages.reports.components.Report_FilterTabs;
+import pages.reports.components.Report_GradeFilters;
+import pages.reports.components.Report_ViewOptions;
 
 import java.util.List;
 
@@ -85,12 +88,6 @@ public class EAPReport extends AnalyticsPage {
     }
 
 // METHODS
-    /*
-     * List of Methods to code:
-     * ToDo - Possibly a method for addOrRemoveFilters; is this any different from the openStudentFiltersModal method?
-     */
-    // QUERYING THE CURRENT PAGE STATE
-
     //  - CHANGING THE STATE OF THE PAGE
     public EAPReport openView(String areaName, String reportName, String levelName){
 
@@ -109,156 +106,8 @@ public class EAPReport extends AnalyticsPage {
         waitForLoadingWrapper();
         return this;
     }
-    public EAPReport selectDataset(String optionText){
-        return dsOptions.selectDataset(optionText);
-    }
 
-    /**
-     * Convenience method which passes through to the filterTabs property (which is a @link{Report_FilterTabs} object)
-     * @return a @link{Report_AddStudentFiltersModal} object
-     */
-    public Report_AddStudentFilters openFiltersModal(){
-        return filterTabs.openStudentFiltersModal();
-    }
-
-    public EAPReport selectCompareWith(String optionText){
-        return dsOptions.selectCompareWith(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param trackStatus   a @link{String} identifying the type of track filtering to apply
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport filterByTrack(String trackStatus){
-        return gradeFilters.filterByTrack(trackStatus);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the faculty to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectFaculty(String optionText){
-        return gradeFilters.selectFaculty(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the qualification to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectQualification(String optionText){
-        return gradeFilters.selectQualification(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the class to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectClass(String optionText){
-        return gradeFilters.selectClass(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the grade method to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectGradeType(String optionText){
-        return gradeFilters.selectGradeType(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String}, either "GCSE" or "Non-GCSE"
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectAwardClass(String optionText){
-        return gradeFilters.selectAwardClass(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the KS2Core to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectKS2Core(String optionText){
-        return gradeFilters.selectKS2Core(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText one of: "less than", "equal to", "greater or equal" or "greater than"
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectGradeFilterType(String optionText){
-        return gradeFilters.selectGradeFilterType(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the whole grade to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectGradeFilterWhole(String optionText){
-        return gradeFilters.selectGradeFilterWhole(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the gradeFilters property (which is a @link{Report_GradeFilters} object)
-     * @param optionText    a @link{String} identifying the sub grade to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectGradeFilterSub(String optionText){
-        return gradeFilters.selectGradeFilterSub(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
-     * @param optionText    a @link{String} identifying the column to sort by
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectColSort(String optionText){
-        return viewOptions.selectColSort(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport toggleColSortDirection(){
-        return viewOptions.toggleColSortDirection();
-    }
-
-    /**
-     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
-     * @param optionText    a @link{String} identifying the filter to select
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport selectBreakdown(String optionText){
-        return viewOptions.selectBreakdown(optionText);
-    }
-
-    /**
-     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
-     * @param figType one of: "Percentage", "%", "Count", or "#"
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport setFigType(String figType){
-        return viewOptions.setFigType(figType);
-    }
-
-    /**
-     * Convenience method which passes through to the viewOptions property (which is a @link{Report_ViewOptions} object)
-     * @param calcType one of: "Standard", "Std", "Cumulative", or "Cum"
-     * @return  a (refreshed) @link{Report}
-     */
-    public EAPReport setCalcType(String calcType){
-        return viewOptions.setCalcType(calcType);
-    }
-
+    // QUERYING THE CURRENT PAGE STATE
     public String readTableData(String tableName) {
         int tableIndex = this.findNamedTableIndex(tableName);
         switch (tableIndex){
@@ -290,6 +139,7 @@ public class EAPReport extends AnalyticsPage {
         return this.extractColumnData(columnName);
     }
 
+    // PRIVATE HELPER METHODS FOR THE ABOVE PUBLIC METHODS
     private WebElement getViewLinkFromListGrid(WebElement area, String reportName, String levelName){
 
         List<WebElement> rowLabels = area.findElements(REPORT_NAV_VIEW_LABELS);

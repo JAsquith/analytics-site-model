@@ -174,7 +174,7 @@ public class FigureChecking extends SISRATest {
         String[] groups = filterGroupsParam.split("¬");
         String[] values = filterValuesParam.split("¬");
 
-        Report_AddStudentFilters filtersModal = reportPage.openFiltersModal();
+        Report_AddStudentFilters filtersModal = reportPage.filterTabs.openStudentFiltersModal();
 
         for(int i = 0; i < groups.length; i++){
             String group = groups[i];
@@ -192,37 +192,37 @@ public class FigureChecking extends SISRATest {
         // Apply report/view options defined in test params
         try {
             if (!getTestParam("compWith").equals(""))
-                reportPage.selectCompareWith(getTestParam("compWith"));
+                reportPage.dsOptions.selectCompareWith(getTestParam("compWith"));
             if(!getTestParam("faculty").equals(""))
-                reportPage.selectFaculty(getTestParam("faculty"));
+                reportPage.gradeFilters.selectFaculty(getTestParam("faculty"));
             if(!getTestParam("qual").equals(""))
-                reportPage.selectQualification(getTestParam("qual"));
+                reportPage.gradeFilters.selectQualification(getTestParam("qual"));
             if(!getTestParam("class").equals(""))
-                reportPage.selectClass(getTestParam("class"));
+                reportPage.gradeFilters.selectClass(getTestParam("class"));
             if(!getTestParam("tracking").equals(""))
-                reportPage.filterByTrack(getTestParam("tracking"));
+                reportPage.gradeFilters.filterByTrack(getTestParam("tracking"));
             if(!getTestParam("gradeType").equals(""))
-                reportPage.selectGradeType(getTestParam("gradeType"));
+                reportPage.gradeFilters.selectGradeType(getTestParam("gradeType"));
             if(!getTestParam("gcseOrNot").equals(""))
-                reportPage.selectAwardClass(getTestParam("gcseOrNot"));
+                reportPage.gradeFilters.selectAwardClass(getTestParam("gcseOrNot"));
             if(!getTestParam("ks2Core").equals(""))
-                reportPage.selectKS2Core(getTestParam("ks2Core"));
+                reportPage.gradeFilters.selectKS2Core(getTestParam("ks2Core"));
             if(!getTestParam("gradeSearchType").equals(""))
-                reportPage.selectGradeFilterType(getTestParam("gradeSearchType"));
+                reportPage.gradeFilters.selectGradeFilterType(getTestParam("gradeSearchType"));
             if(!getTestParam("gradeSearchWhole").equals(""))
-                reportPage.selectGradeFilterWhole(getTestParam("gradeSearchWhole"));
+                reportPage.gradeFilters.selectGradeFilterWhole(getTestParam("gradeSearchWhole"));
             if(!getTestParam("gradeSearchSub").equals(""))
-                reportPage.selectGradeFilterSub(getTestParam("gradeSearchSub"));
+                reportPage.gradeFilters.selectGradeFilterSub(getTestParam("gradeSearchSub"));
             if(!getTestParam("colSort").equals(""))
-                reportPage.selectColSort(getTestParam("colSort"));
+                reportPage.viewOptions.selectColSort(getTestParam("colSort"));
             if(!getTestParam("figType").equals(""))
-                reportPage.setFigType(getTestParam("figType"));
+                reportPage.viewOptions.setFigType(getTestParam("figType"));
             if(!getTestParam("calcType").equals(""))
-                reportPage.setCalcType(getTestParam("calcType"));
+                reportPage.viewOptions.setCalcType(getTestParam("calcType"));
             if(!getTestParam("breakdown").equals(""))
-                reportPage.selectBreakdown(getTestParam("breakdown"));
+                reportPage.viewOptions.selectBreakdown(getTestParam("breakdown"));
             if (getTestParam("sortDir").toLowerCase().equals("desc")){
-                reportPage.toggleColSortDirection();
+                reportPage.viewOptions.toggleColSortDirection();
             }
             return new EAPReport(driver);
         }

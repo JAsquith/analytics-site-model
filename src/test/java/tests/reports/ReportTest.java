@@ -102,7 +102,10 @@ public abstract class ReportTest extends BaseTest {
             }
         }
 
-
+        String[] filters = getArrayParam("filters");
+        if(!filters[0].equals("")){
+            
+        }
 
     }
 

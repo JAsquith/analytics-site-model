@@ -114,7 +114,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         waitForLoadingWrapper();
         EAPReport reportPage = new EAPReport(driver);
         if (!forTracker.equals("")){
-            reportPage = reportPage.selectDataset(datasetName);
+            reportPage = reportPage.dsOptions.selectDataset(datasetName);
         }
         return reportPage;
     }
