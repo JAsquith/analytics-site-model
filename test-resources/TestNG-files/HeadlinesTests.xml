@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Headlines Filters Tests" parallel="tests" thread-count="5">
 
-    <parameter name="report-area" value="Headlines" />
-    <parameter name="report-view" value="Filters" />
-    <parameter name="report-level" value="Whole School" />
     <parameter name="keystage" value="6" />
     <parameter name="cohort" value="17" />
     <parameter name="year" value="11" />
     <parameter name="dataset" value="Data Set 3" />
+    <parameter name="report-area" value="Headlines" />
+    <parameter name="report-view" value="Filters" />
+    <parameter name="report-level" value="Whole School" />
 
     <test name="Presentation Tests - No Options">
         <parameter name="username" value="AsqJamRestore" />
