@@ -16,6 +16,10 @@ public class Report_ViewOptions extends AnalyticsComponent {
     public final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
     public final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
     public final By CALC_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(3)");
+    public final By STUDENT_INFO_DDL = By.cssSelector("#ReportOptions_RPTFilterTagDisplay");
+    public final By IN_A8_BASKET_DDL = By.cssSelector("#ReportOptions_RPTInA8Basket_ID");
+    public final By SUB_WHOLE_TOGGLE_SUB = By.cssSelector(".chgOptFmSub.icon.sub");
+    public final By SUB_WHOLE_TOGGLE_WHOLE = By.cssSelector(".chgOptFmSub.icon.whole");
 
     public Report_ViewOptions(RemoteWebDriver aDriver){
         super(aDriver);
@@ -122,6 +126,51 @@ public class Report_ViewOptions extends AnalyticsComponent {
         }
         calcToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
         waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+
+    public EAPReport selectStudentInfo(String optionText){
+        List<WebElement> targetDDLs = driver.findElements(STUDENT_INFO_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText + "' because Student Info is not available");
+            }
+            return new EAPReport(driver); // The Student Info DDL is not currently available
+        }
+        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+
+    public EAPReport selectInA8Basket(String optionText){
+        List<WebElement> targetDDLs = driver.findElements(IN_A8_BASKET_DDL);
+        if (targetDDLs.size() == 0) {
+            if (!optionText.equals("")){
+                throw new IllegalStateException("Can't select '" + optionText +
+                        "' because In A8 Basket is not available");
+            }
+            return new EAPReport(driver); // The In A8 Basket DDL is not currently available
+        }
+        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        waitForLoadingWrapper();
+        return new EAPReport(driver);
+    }
+
+    public EAPReport setSubWhole(String subOrWhole){
+        WebElement icon;
+        switch (subOrWhole.toLowerCase()){
+            case "sub":
+                icon = driver.findElement(SUB_WHOLE_TOGGLE_SUB);
+                break;
+            case "whole":
+                icon = driver.findElement(SUB_WHOLE_TOGGLE_WHOLE);
+                break;
+            default:
+                throw new IllegalArgumentException("Argument must be either 'sub' or 'whole'");
+        }
+        if (icon.getCssValue("cursor").equals("pointer")){
+            icon.click();
+        }
         return new EAPReport(driver);
     }
 

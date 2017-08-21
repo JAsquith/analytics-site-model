@@ -70,14 +70,14 @@ public abstract class ReportTest extends BaseTest {
 
     @Step( "Apply report options" )
     public void applyReportOptions(){
-        String field; String value; int sepPos;
+        String field; String value; int delimIndex;
 
         String[] datasetOptions = getArrayParam("dataset-options");
         if (!datasetOptions[0].equals("")) {
             for (String datasetOption : datasetOptions) {
-                sepPos = datasetOption.indexOf("=");
-                field = datasetOption.substring(0, sepPos - 1);
-                value = datasetOption.substring(sepPos + 1);
+                delimIndex = datasetOption.indexOf("=");
+                field = datasetOption.substring(0, delimIndex - 1);
+                value = datasetOption.substring(delimIndex + 1);
                 applyReportDatasetOption(field, value);
             }
         }
@@ -85,9 +85,9 @@ public abstract class ReportTest extends BaseTest {
         String[] gradeFilterOptions = getArrayParam("grade-filter-options");
         if (!gradeFilterOptions[0].equals("")) {
             for (String gradeFilterOption : gradeFilterOptions){
-                sepPos = gradeFilterOption.indexOf("=");
-                field = gradeFilterOption.substring(0,sepPos-1);
-                value = gradeFilterOption.substring(sepPos+1);
+                delimIndex = gradeFilterOption.indexOf("=");
+                field = gradeFilterOption.substring(0,delimIndex-1);
+                value = gradeFilterOption.substring(delimIndex+1);
                 applyGradeFilterOptions(field, value);
             }
         }
@@ -95,12 +95,15 @@ public abstract class ReportTest extends BaseTest {
         String[] viewOptions = getArrayParam("view-options");
         if (!viewOptions[0].equals("")) {
             for (String viewOption : viewOptions){
-                sepPos = viewOption.indexOf("=");
-                field = viewOption.substring(0,sepPos-1);
-                value = viewOption.substring(sepPos+1);
+                delimIndex = viewOption.indexOf("=");
+                field = viewOption.substring(0,delimIndex-1);
+                value = viewOption.substring(delimIndex+1);
                 applyViewOptions(field, value);
             }
         }
+
+
+
     }
 
     @Step( "Apply Dataset option '{field}' = '{value}'" )
@@ -190,13 +193,13 @@ public abstract class ReportTest extends BaseTest {
                 report = report.viewOptions.selectBreakdown(value);
                 break;
             case "Student Info":
-                // Todo report = report.viewOptions.setStudentInfo(value);
+                report = report.viewOptions.selectStudentInfo(value);
                 break;
             case "In A8 Basket":
-                // Todo report = report.viewOptions.selectInA8Basket(value);
+                report = report.viewOptions.selectInA8Basket(value);
                 break;
             case "Sub Whole":
-                // Todo report = report.viewOptions.setSubWhole(value);
+                report = report.viewOptions.setSubWhole(value);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown View Option '"+field+"'");
