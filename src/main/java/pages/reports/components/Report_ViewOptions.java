@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Report_ViewOptions extends AnalyticsComponent {
 
-    public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColName");
+    public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColNameType");
     public final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label.icon.sortDir");
     public final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
     public final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
@@ -28,10 +28,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
     public EAPReport selectColSort(String optionText){
         List<WebElement> targetDDLs = driver.findElements(COL_SORT_DDL);
         if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Column Sort is not available");
-            }
-            return new EAPReport(driver); // The Column Sort DDL is not currently available
+            throw new IllegalStateException("Can't select '" + optionText + "' because Column Sort is not available");
         }
         if (!optionText.equals("")) {
             new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
@@ -59,10 +56,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
     public EAPReport selectBreakdown(String optionText){
         List<WebElement> targetDDLs = driver.findElements(BREAKDOWN_DDL);
         if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Breakdown is not available");
-            }
-            return new EAPReport(driver); // The Breakdown DDL is not currently available
+            throw new IllegalStateException("Can't select '" + optionText + "' because Breakdown is not available");
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
@@ -132,10 +126,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
     public EAPReport selectStudentInfo(String optionText){
         List<WebElement> targetDDLs = driver.findElements(STUDENT_INFO_DDL);
         if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText + "' because Student Info is not available");
-            }
-            return new EAPReport(driver); // The Student Info DDL is not currently available
+            throw new IllegalStateException("Can't select '" + optionText + "' because Student Info is not available");
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
@@ -145,11 +136,8 @@ public class Report_ViewOptions extends AnalyticsComponent {
     public EAPReport selectInA8Basket(String optionText){
         List<WebElement> targetDDLs = driver.findElements(IN_A8_BASKET_DDL);
         if (targetDDLs.size() == 0) {
-            if (!optionText.equals("")){
-                throw new IllegalStateException("Can't select '" + optionText +
-                        "' because In A8 Basket is not available");
-            }
-            return new EAPReport(driver); // The In A8 Basket DDL is not currently available
+            throw new IllegalStateException("Can't select '" + optionText +
+                    "' because In A8 Basket is not available");
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();

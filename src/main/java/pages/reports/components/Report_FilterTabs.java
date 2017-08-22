@@ -77,10 +77,10 @@ public class Report_FilterTabs extends AnalyticsComponent {
 
     public EAPReport selectTab(String tabType){
         buildGenericBys(tabType);
+        driver.findElement(genericTabBy).click();
         return new EAPReport(driver);
     }
 
-    // Todo: replicate this method for AddResidualExclusions once that components is built
     public Report_AddStudentFilters openStudentFiltersModal(){
         if (!isActive("filter")){
             selectTab("filter");

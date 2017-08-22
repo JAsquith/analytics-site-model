@@ -33,14 +33,14 @@ public class Report_AddMeasureFilters extends AnalyticsComponent {
         switch (measureOption){
             case "Include": measureOptionIndex = 1; break;
             case "Exclude": measureOptionIndex = 2; break;
-            case "CompareEnclude": measureOptionIndex = 3; break;
+            case "CompareInclude": measureOptionIndex = 3; break;
             case "CompareExclude": measureOptionIndex = 4; break;
             default:
-                throw new IllegalArgumentException("measureOption must be one of: " +
+                throw new IllegalArgumentException("measureOption ("+measureOption+") must be one of: " +
                 "'Include', 'Exclude', 'CompareInclude', 'CompareExclude'");
         }
 
-        String cssNamesLocator = ".measureTbl tr:not(:nth-of-type(1))>td:nth-of-type(1):not([colspan=\'3\'])";
+        String cssNamesLocator = ".measureTbl tr:not(:nth-of-type(1))>td:nth-of-type(1):not([colspan=\\'3\\'])";
         String cssCBLocator = "td:nth-of-type("+(measureOptionIndex+1)+")>input";
         String js = "var measureName = '"+measureName+"';";
         js += "var cbIndex = "+measureOptionIndex+";";
@@ -55,11 +55,11 @@ public class Report_AddMeasureFilters extends AnalyticsComponent {
         js += "    cbElement = parent.querySelector('"+cssCBLocator+"');";
         js += "  }";
         js += "}";
+        js += "cbElement.scrollIntoView(true);";
         js += "return cbElement";
 
         try {
             WebElement label = (WebElement) driver.executeScript(js);
-            driver.executeScript("arguments[0].scrollIntoView(true);", label);
             label.click();
         } catch (Exception e){
             System.err.println("Check Box for Measure [" + measureName + " > " + measureOption + "] not found");

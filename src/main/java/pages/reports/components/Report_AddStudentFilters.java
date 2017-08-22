@@ -30,15 +30,15 @@ public class Report_AddStudentFilters extends AnalyticsComponent {
 
         //System.out.println("Selecting Student Filter [" + filterTitle + " > " + filterValue + "]");
 
-        String js = "filterTitle = '" + filterTitle + "';";
-        js += "filterValue = '" + filterValue + "';";
-        js += "titles = document.querySelectorAll('li.title.addFilter');";
-        js += "found = false;";
-        js += "labelElement;";
-        js += "liElement;";
+        String js = "var filterTitle = '" + filterTitle + "';";
+        js += "var filterValue = '" + filterValue + "';";
+        js += "var titles = document.querySelectorAll('li.title.addFilter');";
+        js += "var found = false;";
+        js += "var labelElement;";
+        js += "var liElement;";
         js += "for (var i=0; i<titles.length; i++){";
-        js += "  titleBarText = titles[i].textContent.replace('Check All','');";
-        js += "  titleBarText = titleBarText.replace('Uncheck All','');";
+        js += "  var titleBarText = titles[i].textContent.replace('Check All','');";
+        js += "  var titleBarText = titleBarText.replace('Uncheck All','');";
         js += "  if (titleBarText.trim() == filterTitle) {";
         js += "    liElement = titles[i].nextElementSibling;";
         js += "    while (found == false){";

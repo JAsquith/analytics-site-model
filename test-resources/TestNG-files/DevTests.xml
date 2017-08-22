@@ -4,16 +4,24 @@
 
 
     <test name="Dev Test">
-        <parameter name="username" value="AsqJamRestore" />
-        <parameter name="password" value="wsS!SRA125" />
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Quals" />
+        <parameter name="username" value="demtes185072" />
+        <parameter name="password" value="DsBjFrGy2" />
         <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="18" />
-        <parameter name="year" value="10" />
-        <parameter name="dataset" value="Y10 T2" />
-
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Targets" />
+        <parameter name="report-area" value="Grades" />
+        <parameter name="report-view" value="Totals" />
+        <parameter name="report-level" value="Quals" />
+        <parameter name="column-name" value="Average Points" />
+        <parameter name="dataset-options" value="Compare=Predicted" />
+        <!--
+                <parameter name="grade-filter-options" value="Faculty=Science|Grade Type=All A8 Quals" />
+                <parameter name="view-options" value="Column Sort=Total Grades|Column Sort Direction=Ascending" />
+        <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High" />
+        -->
+        <parameter name="measures" value="Entered for EBacc=Include|Achieving 9-5 in English and Maths=¬Include" />
+        <parameter name="residuals" value="Art|Drama" />
         <classes>
             <class name="tests.DevTest" />
         </classes>

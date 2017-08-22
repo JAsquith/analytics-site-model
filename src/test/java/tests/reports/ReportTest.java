@@ -79,7 +79,7 @@ public abstract class ReportTest extends BaseTest {
         if (!datasetOptions[0].equals("")) {
             for (String datasetOption : datasetOptions) {
                 delimIndex = datasetOption.indexOf("=");
-                field = datasetOption.substring(0, delimIndex - 1);
+                field = datasetOption.substring(0, delimIndex);
                 value = datasetOption.substring(delimIndex + 1);
                 applyReportDatasetOption(field, value);
             }
@@ -89,7 +89,7 @@ public abstract class ReportTest extends BaseTest {
         if (!gradeFilterOptions[0].equals("")) {
             for (String gradeFilterOption : gradeFilterOptions){
                 delimIndex = gradeFilterOption.indexOf("=");
-                field = gradeFilterOption.substring(0,delimIndex-1);
+                field = gradeFilterOption.substring(0,delimIndex);
                 value = gradeFilterOption.substring(delimIndex+1);
                 applyGradeFilterOptions(field, value);
             }
@@ -99,7 +99,7 @@ public abstract class ReportTest extends BaseTest {
         if (!viewOptions[0].equals("")) {
             for (String viewOption : viewOptions){
                 delimIndex = viewOption.indexOf("=");
-                field = viewOption.substring(0,delimIndex-1);
+                field = viewOption.substring(0,delimIndex);
                 value = viewOption.substring(delimIndex+1);
                 applyViewOptions(field, value);
             }
@@ -110,30 +110,34 @@ public abstract class ReportTest extends BaseTest {
             Report_AddStudentFilters stuFiltersModal = report.filterTabs.openStudentFiltersModal();
             for (String filter : filters){
                 delimIndex = filter.indexOf("=");
-                field = filter.substring(0,delimIndex-1);
+                field = filter.substring(0,delimIndex);
                 value = filter.substring(delimIndex+1);
                 stuFiltersModal = stuFiltersModal.toggleFilterValue(field, value);
             }
+            stuFiltersModal.apply();
         }
 
         String[] measures = getArrayParam("measures");
-        if(!filters[0].equals("")){
+        if(!measures[0].equals("")){
             Report_AddMeasureFilters measFiltersModal = report.filterTabs.openMeasureFiltersModal();
             for (String measure : measures){
                 delimIndex = measure.indexOf("=");
-                field = measure.substring(0,delimIndex-1);
+                field = measure.substring(0,delimIndex);
                 value = measure.substring(delimIndex+1);
                 int compDelimIndex = value.indexOf("¬");
                 String actualValue; String compValue;
                 if(compDelimIndex > -1){
-                    actualValue = value.substring(0,compDelimIndex-1);
+                    actualValue = value.substring(0,compDelimIndex);
                     compValue = "Compare"+value.substring(compDelimIndex+1);
                     measFiltersModal = measFiltersModal.toggleFilterValue(field, compValue);
                 } else {
                     actualValue = value;
                 }
-                measFiltersModal.toggleFilterValue(field, actualValue);
+                if (!actualValue.equals("")) {
+                    measFiltersModal.toggleFilterValue(field, actualValue);
+                }
             }
+            measFiltersModal.apply();
         }
 
         String[] residuals = getArrayParam("residuals");
@@ -142,6 +146,7 @@ public abstract class ReportTest extends BaseTest {
             for(String residual : residuals){
                 exclusionsModal.toggleQualExclusion(residual);
             }
+            exclusionsModal.apply();
         }
     }
 
