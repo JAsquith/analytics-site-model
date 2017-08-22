@@ -7,6 +7,9 @@ import org.testng.annotations.Parameters;
 import pages.AnalyticsPage;
 import pages.reports.EAPReport;
 import pages.reports.ReportsHome_EAP;
+import pages.reports.components.Report_AddMeasureFilters;
+import pages.reports.components.Report_AddResidualExclusions;
+import pages.reports.components.Report_AddStudentFilters;
 import tests.BaseTest;
 
 import java.net.MalformedURLException;
@@ -104,9 +107,42 @@ public abstract class ReportTest extends BaseTest {
 
         String[] filters = getArrayParam("filters");
         if(!filters[0].equals("")){
-            
+            Report_AddStudentFilters stuFiltersModal = report.filterTabs.openStudentFiltersModal();
+            for (String filter : filters){
+                delimIndex = filter.indexOf("=");
+                field = filter.substring(0,delimIndex-1);
+                value = filter.substring(delimIndex+1);
+                stuFiltersModal = stuFiltersModal.toggleFilterValue(field, value);
+            }
         }
 
+        String[] measures = getArrayParam("measures");
+        if(!filters[0].equals("")){
+            Report_AddMeasureFilters measFiltersModal = report.filterTabs.openMeasureFiltersModal();
+            for (String measure : measures){
+                delimIndex = measure.indexOf("=");
+                field = measure.substring(0,delimIndex-1);
+                value = measure.substring(delimIndex+1);
+                int compDelimIndex = value.indexOf("¬");
+                String actualValue; String compValue;
+                if(compDelimIndex > -1){
+                    actualValue = value.substring(0,compDelimIndex-1);
+                    compValue = "Compare"+value.substring(compDelimIndex+1);
+                    measFiltersModal = measFiltersModal.toggleFilterValue(field, compValue);
+                } else {
+                    actualValue = value;
+                }
+                measFiltersModal.toggleFilterValue(field, actualValue);
+            }
+        }
+
+        String[] residuals = getArrayParam("residuals");
+        if(!residuals[0].equals("")){
+            Report_AddResidualExclusions exclusionsModal = report.filterTabs.openResidualExclusionsModal();
+            for(String residual : residuals){
+                exclusionsModal.toggleQualExclusion(residual);
+            }
+        }
     }
 
     @Step( "Apply Dataset option '{field}' = '{value}'" )

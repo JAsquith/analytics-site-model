@@ -80,7 +80,7 @@ public class Report_FilterTabs extends AnalyticsComponent {
         return new EAPReport(driver);
     }
 
-    // Todo: replicate this method for AddMeasureFilters and AddResidualExclusions once those components are built
+    // Todo: replicate this method for AddResidualExclusions once that components is built
     public Report_AddStudentFilters openStudentFiltersModal(){
         if (!isActive("filter")){
             selectTab("filter");
@@ -89,13 +89,44 @@ public class Report_FilterTabs extends AnalyticsComponent {
         return new Report_AddStudentFilters(driver);
     }
 
-    // Todo: replicate this method for AddMeasureFilters and AddResidualExclusions once those components are built
+    public Report_AddMeasureFilters openMeasureFiltersModal(){
+        if (!isActive("measure")){
+            selectTab("measure");
+        }
+        driver.findElement(ADD_MEASURES).click();
+        return new Report_AddMeasureFilters(driver);
+    }
+
+    public Report_AddResidualExclusions openResidualExclusionsModal(){
+        if (!isActive("residual")){
+            selectTab("residual");
+        }
+        driver.findElement(ADD_RESIDUALS).click();
+        return new Report_AddResidualExclusions(driver);
+    }
+
     public EAPReport clearAllFilters(){
-        List<WebElement> clearFiltersButtons = driver.findElements(CLEAR_FILTERS);
-        if (clearFiltersButtons.size()==0){
+        return clearAll("filter");
+    }
+
+    public EAPReport clearAllMeasures(){
+        return clearAll("measure");
+    }
+
+    public EAPReport clearAllResiduals(){
+        return clearAll("residual");
+    }
+
+    public EAPReport clearAll(String tabType){
+        buildGenericBys(tabType);
+        if(!isActive(tabType)){
+            selectTab(tabType);
+        }
+        List<WebElement> clearButtons = driver.findElements(genericClearBy);
+        if (clearButtons.size()==0){
             return new EAPReport(driver);
         }
-        clearFiltersButtons.get(0).click();
+        clearButtons.get(0).click();
         waitForLoadingWrapper();
         return new EAPReport(driver);
     }

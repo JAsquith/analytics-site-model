@@ -1,11 +1,11 @@
 package pages.reports.components;
 
-import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AnalyticsComponent;
 
 
 /**
@@ -30,14 +30,14 @@ public class Report_AddStudentFilters extends AnalyticsComponent {
 
         //System.out.println("Selecting Student Filter [" + filterTitle + " > " + filterValue + "]");
 
-        String js = "var filterTitle = '" + filterTitle + "';";
-        js += "var filterValue = '" + filterValue + "';";
-        js += "var titles = document.querySelectorAll('li.title.addFilter');";
-        js += "var found = false;";
-        js += "var labelElement;";
-        js += "var liElement;";
+        String js = "filterTitle = '" + filterTitle + "';";
+        js += "filterValue = '" + filterValue + "';";
+        js += "titles = document.querySelectorAll('li.title.addFilter');";
+        js += "found = false;";
+        js += "labelElement;";
+        js += "liElement;";
         js += "for (var i=0; i<titles.length; i++){";
-        js += "  var titleBarText = titles[i].textContent.replace('Check All','');";
+        js += "  titleBarText = titles[i].textContent.replace('Check All','');";
         js += "  titleBarText = titleBarText.replace('Uncheck All','');";
         js += "  if (titleBarText.trim() == filterTitle) {";
         js += "    liElement = titles[i].nextElementSibling;";
@@ -72,7 +72,7 @@ public class Report_AddStudentFilters extends AnalyticsComponent {
         driver.findElement(CANCEL_BUTTON).click();
         waitForLoadingWrapper();
     }
-    public Report_AddStudentFilters uncheckAllButtons(){
+    public Report_AddStudentFilters uncheckAll(){
         driver.findElement(UNCHECK_ALL_BUTTON).click();
         waitForLoadingWrapper();
         return this;
