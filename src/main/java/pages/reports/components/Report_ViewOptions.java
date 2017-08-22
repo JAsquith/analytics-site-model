@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pages.AnalyticsComponent;
-import pages.reports.EAPReport;
+import pages.reports.EAPListView;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
         super(aDriver);
     }
 
-    public EAPReport selectColSort(String optionText){
+    public EAPListView selectColSort(String optionText){
         List<WebElement> targetDDLs = driver.findElements(COL_SORT_DDL);
         if (targetDDLs.size() == 0) {
             throw new IllegalStateException("Can't select '" + optionText + "' because Column Sort is not available");
@@ -34,10 +34,10 @@ public class Report_ViewOptions extends AnalyticsComponent {
             new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
             waitForLoadingWrapper();
         }
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport setColSortDirection(String sortOrder){
+    public EAPListView setColSortDirection(String sortOrder){
         WebElement sortIcon = driver.findElement(COL_SORT_DIRECTION_TOGGLE);
         String bgPosition = sortIcon.getCssValue("background-position");
         boolean sortedAscending = bgPosition.endsWith("-60px");
@@ -45,28 +45,28 @@ public class Report_ViewOptions extends AnalyticsComponent {
         if (sortedAscending != sortAsc){
             sortIcon.click();
         }
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport toggleColSortDirection(){
+    public EAPListView toggleColSortDirection(){
         driver.findElement(COL_SORT_DIRECTION_TOGGLE).click();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport selectBreakdown(String optionText){
+    public EAPListView selectBreakdown(String optionText){
         List<WebElement> targetDDLs = driver.findElements(BREAKDOWN_DDL);
         if (targetDDLs.size() == 0) {
             throw new IllegalStateException("Can't select '" + optionText + "' because Breakdown is not available");
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport setFigType(String figType){
+    public EAPListView setFigType(String figType){
         // checks current availability and setting, clicks label if req.
         if (figType.equals("")){
-            return new EAPReport(driver);
+            return new EAPListView(driver);
         }
         WebElement figToggle = driver.findElement(FIG_TYPE_TOGGLE);
         if (figToggle.getAttribute("class").contains("disabled")){
@@ -86,17 +86,17 @@ public class Report_ViewOptions extends AnalyticsComponent {
                         "'. Expected '#', '%', 'Count' or 'Percentage'");
         }
         if (oldType.startsWith(newType)){
-            return new EAPReport(driver);
+            return new EAPListView(driver);
         }
         figToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport setCalcType(String calcType){
+    public EAPListView setCalcType(String calcType){
         // checks current availability and setting, clicks label if req.
         if (calcType.equals("")){
-            return new EAPReport(driver);
+            return new EAPListView(driver);
         }
         WebElement calcToggle = driver.findElement(CALC_TYPE_TOGGLE);
         if (calcToggle.getAttribute("class").contains("disabled")){
@@ -116,24 +116,24 @@ public class Report_ViewOptions extends AnalyticsComponent {
                         "'. Expected 'Std', 'Cum', 'Standard' or 'Cumulative'");
         }
         if (oldType.startsWith(newType)){
-            return new EAPReport(driver);
+            return new EAPListView(driver);
         }
         calcToggle.findElement(By.cssSelector("label[title='" + newType + "']")).click();
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport selectStudentInfo(String optionText){
+    public EAPListView selectStudentInfo(String optionText){
         List<WebElement> targetDDLs = driver.findElements(STUDENT_INFO_DDL);
         if (targetDDLs.size() == 0) {
             throw new IllegalStateException("Can't select '" + optionText + "' because Student Info is not available");
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport selectInA8Basket(String optionText){
+    public EAPListView selectInA8Basket(String optionText){
         List<WebElement> targetDDLs = driver.findElements(IN_A8_BASKET_DDL);
         if (targetDDLs.size() == 0) {
             throw new IllegalStateException("Can't select '" + optionText +
@@ -141,10 +141,10 @@ public class Report_ViewOptions extends AnalyticsComponent {
         }
         new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport setSubWhole(String subOrWhole){
+    public EAPListView setSubWhole(String subOrWhole){
         WebElement icon;
         switch (subOrWhole.toLowerCase()){
             case "sub":
@@ -159,7 +159,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
         if (icon.getCssValue("cursor").equals("pointer")){
             icon.click();
         }
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
     public boolean isDisabled(By locator){

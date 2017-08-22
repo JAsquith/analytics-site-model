@@ -183,7 +183,7 @@ public abstract class AccessTest extends BaseTest {
     private String[] getEAPButtonsFor(String year, String dataset){
         ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
         WebElement pubRptInfo = reports.getYearAccordion(year).expandPublishedReport(dataset);
-        List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearAccordion.REPORT_BUTTONS);
+        List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearAccordion.REPORT_AREA_BUTTONS);
         if (buttons.size()==0){
             return null;
         }

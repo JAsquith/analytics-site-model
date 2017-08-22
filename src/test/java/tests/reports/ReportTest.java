@@ -5,7 +5,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import pages.AnalyticsPage;
-import pages.reports.EAPReport;
+import pages.reports.EAPListView;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.Report_AddMeasureFilters;
 import pages.reports.components.Report_AddResidualExclusions;
@@ -18,7 +18,7 @@ import static org.testng.Assert.fail;
 
 public abstract class ReportTest extends BaseTest {
 
-    protected EAPReport report;
+    protected EAPListView report;
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
@@ -58,7 +58,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step( "Open the {cohort} > {year} > {dataset} > {button} report" )
-    public EAPReport openTestDataset(String cohort, String year, String dataset, String button){
+    public EAPListView openTestDataset(String cohort, String year, String dataset, String button){
         ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
         return reports.
                 selectCohortByUrl(cohort).
@@ -67,7 +67,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step( "Switch to the {area} > {view} report at {level} Level" )
-    public EAPReport openTestView(EAPReport report, String area, String view, String level){
+    public EAPListView openTestView(EAPListView report, String area, String view, String level){
         return report.openView(area,view,level);
     }
 

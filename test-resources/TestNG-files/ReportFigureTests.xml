@@ -16,7 +16,7 @@
         <parameter name="column-name" value="Average Grade" />
         <parameter name="expected-report-figures-file" value="GradesOverviewQualsAvgGrade.csv" />
         <classes>
-            <class name="tests.reports.eap.students.FigureTests" />
+            <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>
     </test>
 

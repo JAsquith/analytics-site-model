@@ -1,4 +1,4 @@
-package tests.reports;
+package tests.reports.legacy;
 
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
@@ -10,7 +10,7 @@ import pages.data.basedata.PublishBaseData;
 import pages.data.components.DataAdminSelect;
 import pages.data.components.DataSideMenu;
 import pages.data.students.PublishStudents;
-import pages.reports.EAPReport;
+import pages.reports.EAPListView;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.Report_AddStudentFilters;
 import pages.reports.components.ReportsHome_CohortsMenu;
@@ -34,7 +34,7 @@ public class FigureChecking extends SISRATest {
         try {
             this.login();
 
-            EAPReport reportPage = this.openReport();
+            EAPListView reportPage = this.openReport();
             reportPage = this.openView(reportPage);
             reportPage = this.applyStudentFilters(reportPage);
             reportPage = this.applyOptions(reportPage);
@@ -113,7 +113,7 @@ public class FigureChecking extends SISRATest {
         page.clickPublish(publishType);
     }
 
-    private EAPReport openReport(){
+    private EAPListView openReport(){
         // Choose Reports > KS > Cohort > Go To Reports (dataset)
         try {
             ReportsHome_EAP reportsHome = new ReportsHome_EAP(driver, true);
@@ -132,7 +132,7 @@ public class FigureChecking extends SISRATest {
                     getTestParam("eapYear"),
                     trackerColumn);
 
-            EAPReport report = accordion.gotoPublishedReport(
+            EAPListView report = accordion.gotoPublishedReport(
                     getTestParam("dataset"),
                     trackerColumn);
 
@@ -146,7 +146,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private EAPReport openView(EAPReport reportPage){
+    private EAPListView openView(EAPListView reportPage){
         // Choose the Area > Report > Level
         try {
             reportPage.openView(
@@ -162,7 +162,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private EAPReport applyStudentFilters (EAPReport reportPage){
+    private EAPListView applyStudentFilters (EAPListView reportPage){
 
         String filterGroupsParam = getTestParam("filterGroups");
         String filterValuesParam = getTestParam("filterValues");
@@ -184,11 +184,11 @@ public class FigureChecking extends SISRATest {
 
         filtersModal.apply();
 
-        return new EAPReport(driver);
+        return new EAPListView(driver);
 
     }
 
-    private EAPReport applyOptions(EAPReport reportPage){
+    private EAPListView applyOptions(EAPListView reportPage){
         // Apply report/view options defined in test params
         try {
             if (!getTestParam("compWith").equals(""))
@@ -224,7 +224,7 @@ public class FigureChecking extends SISRATest {
             if (getTestParam("sortDir").toLowerCase().equals("desc")){
                 reportPage.viewOptions.toggleColSortDirection();
             }
-            return new EAPReport(driver);
+            return new EAPListView(driver);
         }
         catch (Exception e){
             System.out.println("Exception setting report options");
@@ -232,7 +232,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private void checkMultiTableFigures(EAPReport reportPage){
+    private void checkMultiTableFigures(EAPListView reportPage){
         int diffResult;
 
         String expectedDataFile  = getTestParam("dataFiles");
@@ -266,7 +266,7 @@ public class FigureChecking extends SISRATest {
 
     }
 
-    private void checkNamedTableFigures(EAPReport reportPage){
+    private void checkNamedTableFigures(EAPListView reportPage){
         String[] tables = getTestParamAsStringArray("tableNames");
         String[] files = getTestParamAsStringArray("dataFiles");
 

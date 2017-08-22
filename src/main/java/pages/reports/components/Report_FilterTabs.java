@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.AnalyticsComponent;
-import pages.reports.EAPReport;
+import pages.reports.EAPListView;
 
 import java.util.List;
 
@@ -75,10 +75,10 @@ public class Report_FilterTabs extends AnalyticsComponent {
         return false;
     }
 
-    public EAPReport selectTab(String tabType){
+    public EAPListView selectTab(String tabType){
         buildGenericBys(tabType);
         driver.findElement(genericTabBy).click();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
     public Report_AddStudentFilters openStudentFiltersModal(){
@@ -105,30 +105,30 @@ public class Report_FilterTabs extends AnalyticsComponent {
         return new Report_AddResidualExclusions(driver);
     }
 
-    public EAPReport clearAllFilters(){
+    public EAPListView clearAllFilters(){
         return clearAll("filter");
     }
 
-    public EAPReport clearAllMeasures(){
+    public EAPListView clearAllMeasures(){
         return clearAll("measure");
     }
 
-    public EAPReport clearAllResiduals(){
+    public EAPListView clearAllResiduals(){
         return clearAll("residual");
     }
 
-    public EAPReport clearAll(String tabType){
+    public EAPListView clearAll(String tabType){
         buildGenericBys(tabType);
         if(!isActive(tabType)){
             selectTab(tabType);
         }
         List<WebElement> clearButtons = driver.findElements(genericClearBy);
         if (clearButtons.size()==0){
-            return new EAPReport(driver);
+            return new EAPListView(driver);
         }
         clearButtons.get(0).click();
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
     private String normaliseTabType(String tabType){

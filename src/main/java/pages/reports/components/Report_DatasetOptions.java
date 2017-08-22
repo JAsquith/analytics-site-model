@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import pages.AnalyticsComponent;
-import pages.reports.EAPReport;
+import pages.reports.EAPListView;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class Report_DatasetOptions extends AnalyticsComponent {
         return driver.findElement(locator).getAttribute("class").toLowerCase().contains("disabled");
     }
 
-    public EAPReport selectDataset(String optionText){
+    public EAPListView selectDataset(String optionText){
 
         WebElement select = driver.findElement(DATASET_DDL);
         select.click();
@@ -48,16 +48,16 @@ public class Report_DatasetOptions extends AnalyticsComponent {
         new Select(select).selectByIndex(choiceIndex);
         waitForLoadingWrapper();
         waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DDL));
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport selectCompareWith(String optionText){
+    public EAPListView selectCompareWith(String optionText){
         List<WebElement> compWithDDLs = driver.findElements(COMPARE_WITH_DDL);
         if (compWithDDLs.size() == 0) {
             if (!optionText.equals("")){
                 throw new IllegalStateException("Can't compare with '" + optionText + "' because Compare With is not available");
             }
-            return new EAPReport(driver); // The Compare With DDL is not currently available
+            return new EAPListView(driver); // The Compare With DDL is not currently available
         }
         WebElement select = driver.findElement(COMPARE_WITH_DDL);
         select.click();
@@ -76,17 +76,17 @@ public class Report_DatasetOptions extends AnalyticsComponent {
 
         new Select(select).selectByIndex(choiceIndex);
         waitForLoadingWrapper();
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
-    public EAPReport switchTab(String newTab){
+    public EAPListView switchTab(String newTab){
         By tabLocator = (newTab.equals("Dataset")) ? DATASET_TAB : TRACKER_TAB;
         WebElement tab = driver.findElement(tabLocator);
         String classAttr = tab.getAttribute("class");
         if (classAttr.indexOf("active") == 0){
             tab.click();
         }
-        return new EAPReport(driver);
+        return new EAPListView(driver);
     }
 
 }

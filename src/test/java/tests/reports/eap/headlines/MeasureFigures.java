@@ -1,12 +1,14 @@
-package tests.reports.eap.students;
+package tests.reports.eap.headlines;
 
-import io.qameta.allure.*;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pages.reports.EAPReport;
+import pages.reports.EAPHeadlineView;
 import tests.reports.ReportTest;
 import utils.FileManager;
 import utils.TableDataFileManager;
@@ -23,19 +25,19 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 @Epic( "EAP Reports - Column Figures" )
-@Feature( "Figures in a specific view and column should be calculated correctly" )
-public class FigureTests extends ReportTest{
+@Feature( "Figures in a specific view and section should be calculated correctly" )
+public class MeasureFigures extends ReportTest{
 
     private String actualFiguresFile;
     private String expectedFiguresFile;
-    private String column;
+    private String section;
 
     @Test
-    @Step( "Save the figures in the {columnName} column to a csv file" )
-    @Parameters( {"column-name", "expected-report-figures-file"} )
-    public void extractReportFigures(String columnName, String expectedFiguresFileName){
+    @Step( "Save the figures in the {sectionName} section to a csv file" )
+    @Parameters( {"section-name", "expected-report-figures-file"} )
+    public void extractReportFigures(String sectionName, String expectedFiguresFileName){
 
-        column = columnName;
+        section = sectionName;
 
         try {
             TableDataFileManager fileMgr = new TableDataFileManager();
@@ -43,17 +45,15 @@ public class FigureTests extends ReportTest{
             actualFiguresFile = fileMgr.getFullPath("actual" + File.separator + expectedFiguresFileName);
 
             // Extract the actual report figures to a csv file in the same folder as the expected report figures
-            EAPReport reportPage = new EAPReport(driver);
-            fileMgr.createFileWithData(actualFiguresFile, reportPage.readColumnData(columnName));
+            EAPHeadlineView reportPage = new EAPHeadlineView(driver);
+            fileMgr.createFileWithData(actualFiguresFile, reportPage.readSectionData(sectionName));
         } catch (Exception e){
-            String failMsg = "Error setting up table data files for: "+getColumnDescriptor()+"..." + System.lineSeparator();
+            String failMsg = "Error setting up table data files for: "+ getSectionDescriptor()+"..." + System.lineSeparator();
             assertWithScreenshot(failMsg, e.getMessage(), is(""));
         }
     }
 
     @Test( dependsOnMethods = "extractReportFigures")
-    @Owner( "<a href='emailto:masquith@sisra.com'>Milton</a>" )
-    @Issue( "15605" )
     @Step( "Check the expected and actual report figures files have the same number of rows" )
     public void checkFileLengths(){
         int expectedLines = 0;
@@ -73,12 +73,10 @@ public class FigureTests extends ReportTest{
     }
 
     @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
-    @Owner( "Milton" )
-    @Issue( "15605" )
     @Step( "Check a row ({actual}) in the actual report figures file against its expected equivalent ({expected})" )
     public void checkReportFigures(ITestContext testContext, String expected, String actual){
         try {
-            assertThat("Displayed values in "+getColumnDescriptor(), actual, is(expected));
+            assertThat("Row in "+ getSectionDescriptor(), actual, is(expected));
         } catch (Throwable t){
             saveScreenshot(testContext.getName()+".png");
             throw t;
@@ -107,11 +105,11 @@ public class FigureTests extends ReportTest{
         return testCases.iterator();
     }
 
-    private String getColumnDescriptor(){
+    private String getSectionDescriptor(){
         return getStringParam("report-area")+
                 ">" + getStringParam("report-view")+
                 ">" + getStringParam("report-level")+
-                ">" + column;
+                ">" + section;
     }
 
 }

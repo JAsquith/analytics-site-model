@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
-import pages.reports.EAPReport;
+import pages.reports.EAPListView;
 
 import java.util.List;
 
@@ -16,15 +16,13 @@ import java.util.List;
  */
 public class ReportsHome_YearAccordion extends AnalyticsComponent {
 
-    public static final By REPORT_BUTTONS = By.cssSelector(".EAPRptBtn>a");
+    public static final By REPORT_AREA_BUTTONS = By.cssSelector(".EAPRptBtn>a");
 
     public final By COHORT_HEADING = By.cssSelector(".rptHome>h2");
     public final By COMPONENT = By.className("eapYear");
     public final By TITLE_BAR = By.className("eapYearTitle");
     public final By PUBLISHED_REPORT = By.cssSelector(".eapPub");
     public final By REPORT_INFO = By.cssSelector(".eapInfo>em");
-    public final By GO_TO_HEADLINES = By.cssSelector(".EAPRptBtn>a:nth-of-type(1)");
-    public final By GO_TO_GRADES = By.cssSelector(".EAPRptBtn>a:nth-of-type(2)");
 
     private WebElement accordion;
     private WebElement titleBar;
@@ -84,7 +82,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             if (repInfo.getText().trim().equals(datasetName)){
                 if (!pubReport.getAttribute("class").contains("active")){
                     pubReport.click();
-                    waitForPublishedReportExpansion(pubReport.findElement(REPORT_BUTTONS));
+                    waitForPublishedReportExpansion(pubReport.findElement(REPORT_AREA_BUTTONS));
                 }
                 return pubReport;
             }
@@ -92,34 +90,36 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         return null;
     }
 
-    public EAPReport gotoPublishedReport(String datasetName, String forTracker) {
+    public EAPListView gotoPublishedReport(String datasetName, String forTracker) {
         return gotoPublishedReport(datasetName, forTracker, "Grades");
     }
 
-    @Step( "Open {repCategory} Report for: {datasetName} (forTracker = {forTracker})" )
-    public EAPReport gotoPublishedReport(String datasetName, String forTracker, String repCategory) {
-        By button;
-        switch (repCategory){
-            case "Headlines": button = GO_TO_HEADLINES; break;
-            default: button = GO_TO_GRADES;
-        }
-
+    @Step( "Open {repArea} Report for: {datasetName} (forTracker = {forTracker})" )
+    public EAPListView gotoPublishedReport(String datasetName, String forTracker, String repArea) {
+        WebElement button;
         if(!forTracker.equals("")){
-            expandPublishedReport("Tracker").findElement(button).click();
-            // Todo: If {forTracker} is not "[default]", select from the tracker DDL
+            expandPublishedReport("Tracker");
+            button = getReportButtonFor(repArea);
         }else{
-            expandPublishedReport(datasetName).findElement(button).click();
+            expandPublishedReport(datasetName);
+            button = getReportButtonFor(repArea);
         }
+        if (button == null){
+            String msg = "A button to access the "+repArea+" Reports for the "+datasetName+" "+
+                    ((forTracker.equals("")) ? "" : "("+forTracker+")") + " dataset could not be found";
+            throw new IllegalArgumentException(msg);
+        }
+        button.click();
 
         waitForLoadingWrapper();
-        EAPReport reportPage = new EAPReport(driver);
+        EAPListView reportPage = new EAPListView(driver);
         if (!forTracker.equals("")){
             reportPage = reportPage.dsOptions.selectDataset(datasetName);
         }
         return reportPage;
     }
 
-    public EAPReport gotoPublishedReport(String datasetName, boolean forTracker, String repCategory){
+    public EAPListView gotoPublishedReport(String datasetName, boolean forTracker, String repCategory){
         String trackerCol;
         if (forTracker){
             trackerCol = "[default]";
@@ -135,6 +135,18 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     }
     private WebElement waitForPublishedReportExpansion(WebElement button){
         return waitMedium.until(ExpectedConditions.visibilityOf(button));
+    }
+    private WebElement getReportButtonFor(String repArea){
+        List<WebElement> repButtons = driver.findElements(REPORT_AREA_BUTTONS);
+        if (repButtons.size()==0){
+            return null;
+        }
+        for (WebElement button : repButtons){
+            if(button.getText().toLowerCase().trim().equals(repArea.toLowerCase())){
+                return button;
+            }
+        }
+        return null;
     }
 
 }
