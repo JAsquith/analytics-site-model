@@ -96,13 +96,14 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
 
     @Step( "Open {repArea} Report for: {datasetName} (forTracker = {forTracker})" )
     public EAPListView gotoPublishedReport(String datasetName, String forTracker, String repArea) {
+        WebElement pubReport;
         WebElement button;
         if(!forTracker.equals("")){
-            expandPublishedReport("Tracker");
-            button = getReportButtonFor(repArea);
+            pubReport = expandPublishedReport("Tracker");
+            button = getReportButtonFor(pubReport, repArea);
         }else{
-            expandPublishedReport(datasetName);
-            button = getReportButtonFor(repArea);
+            pubReport = expandPublishedReport(datasetName);
+            button = getReportButtonFor(pubReport, repArea);
         }
         if (button == null){
             String msg = "A button to access the "+repArea+" Reports for the "+datasetName+" "+
@@ -136,8 +137,8 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     private WebElement waitForPublishedReportExpansion(WebElement button){
         return waitMedium.until(ExpectedConditions.visibilityOf(button));
     }
-    private WebElement getReportButtonFor(String repArea){
-        List<WebElement> repButtons = driver.findElements(REPORT_AREA_BUTTONS);
+    private WebElement getReportButtonFor(WebElement pubReport, String repArea){
+        List<WebElement> repButtons = pubReport.findElements(REPORT_AREA_BUTTONS);
         if (repButtons.size()==0){
             return null;
         }

@@ -14,6 +14,7 @@
         <parameter name="report-view" value="Summary" />
         <parameter name="report-level" value="Whole School" />
         <parameter name="section-name" value="Attainment/Progress 8 Summary" />
+        <parameter name="expected-report-figures-file" value="something.csv" />
         <!--
         <parameter name="grade-filter-options" value="Faculty=Science|Grade Type=All A8 Quals" />
         <parameter name="view-options" value="Column Sort=Total Grades|Column Sort Direction=Ascending" />
