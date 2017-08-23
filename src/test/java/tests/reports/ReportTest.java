@@ -53,7 +53,7 @@ public abstract class ReportTest extends BaseTest {
                 new AnalyticsPage(driver).clickMenuLogout();
                 driver.quit();
                 e.printStackTrace();
-                fail("Test Setup Failed! Was the data in the Restore school copied over? Exception: "+e.getMessage());
+                fail("Test Setup Failed! Exception: "+e.getMessage());
             }
         }
     }
@@ -266,15 +266,15 @@ public abstract class ReportTest extends BaseTest {
             delimIndex = measure.indexOf("=");
             measureName = measure.substring(0,delimIndex);
             measureValue = measure.substring(delimIndex+1);
-            int compDelimIndex = measureValue.indexOf("¬");
-            String actualValue; String compValue = "";
-            if(compDelimIndex > -1){
-                actualValue = measureValue.substring(0,compDelimIndex);
-                compValue = "Compare"+measureValue.substring(compDelimIndex+1);
+            String[] actCompValues = {"",""};
+
+            if (measureValue.contains("+")){
+                actCompValues = measureValue.split("\\+");
+                actCompValues[1] = "Compare"+actCompValues[1];
             } else {
-                actualValue = measureValue;
+                actCompValues[0] = measureValue;
             }
-            applyMeasureFilter(measFiltersModal, measureName, actualValue, compValue);
+            applyMeasureFilter(measFiltersModal, measureName, actCompValues[0], actCompValues[1]);
         }
         measFiltersModal.apply();
     }

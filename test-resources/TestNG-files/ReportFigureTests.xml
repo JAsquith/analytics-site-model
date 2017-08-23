@@ -37,7 +37,7 @@
         <parameter name="grade-filter-options" value="Faculty=Humanities|Qualification=History|Actual Grade Operator=greater or equal|Actual Grade Grade=D|Compare Grade Operator=less than|Compare Grade Grade=A*" />
         <parameter name="view-options" value="Column Sort=Eng P8 (Diff)|Column Sort Direction=Descending|In A8 Basket=In A8 Basket|Sub Whole=Whole" />
         <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High|KS2 Banding=Lower|Pupil Premium=Not PP" />
-        <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=¬Include" />
+        <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=+Include" />
         <parameter name="expected-report-figures-file" value="Andy - 1 - A8P8OverviewFilters - P8.csv" />
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
@@ -155,7 +155,7 @@
         <parameter name="password" value="AtSxEaNn8" />
         <parameter name="keystage" value="6" />
         <parameter name="cohort" value="17" />
-        <parameter name="year" value="7" />
+        <parameter name="year" value="11" />
         <parameter name="dataset" value="Targets" />
         <parameter name="report-area" value="A8/P8" />
         <parameter name="report-view" value="Overview" />
@@ -185,7 +185,7 @@
         <parameter name="grade-filter-options" value="Faculty=Maths|Qualification=Maths|OnTrack=On Or Above|Actual Grade Operator=Greater Than|Actual Grade Grade=3|Actual Grade Subgrade=-" />
         <parameter name="view-options" value="Column Sort=KS2 Eng|Column Sort Direction=Ascending|Figure Type=#|Sub Whole=Sub" />
         <parameter name="filters" value="EAL=N|Ethnic Code=WENG|Gender=F|Gender=M" />
-        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include|Pupils achieving a Positive Progress 8 score=Include|Pupils Included (Progress 8 Coverage)=¬Include|Pupils achieving a Positive Progress 8 score=¬Include" />
+        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include|Pupils achieving a Positive Progress 8 score=Include|Pupils Included (Progress 8 Coverage)=+Include|Pupils achieving a Positive Progress 8 score=CompareInclude" />
         <parameter name="expected-report-figures-file" value="Mark - 3 - BasicsContributionFilters - KS2 Eng.csv" />
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />

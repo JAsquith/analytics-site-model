@@ -33,8 +33,8 @@ public class Report_AddMeasureFilters extends AnalyticsComponent {
         switch (measureOption){
             case "Include": measureOptionIndex = 1; break;
             case "Exclude": measureOptionIndex = 2; break;
-            case "CompareInclude": case "¬Include": measureOptionIndex = 3; break;
-            case "CompareExclude": case "¬Exclude": measureOptionIndex = 4; break;
+            case "CompareInclude": measureOptionIndex = 3; break;
+            case "CompareExclude": measureOptionIndex = 4; break;
             default:
                 throw new IllegalArgumentException("measureOption ("+measureOption+") must be one of: " +
                 "'Include', 'Exclude', 'CompareInclude', 'CompareExclude'");

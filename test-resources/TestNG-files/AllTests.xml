@@ -6,10 +6,10 @@
 
         <!--
         <suite-file path="DevTests.xml" />
-        -->
         <suite-file path="AccountTests.xml" />
         <suite-file path="HeadlinesTests.xml" />
         <suite-file path="AuthGroupTests.xml" />
+        -->
         <suite-file path="ReportFigureTests.xml" />
 
 
