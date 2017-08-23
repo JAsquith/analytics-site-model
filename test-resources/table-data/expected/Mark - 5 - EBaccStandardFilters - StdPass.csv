@@ -1,0 +1,40 @@
+Name,Filter Value,EBacc Standard Pass
+Armed Forces,N,27
+Armed Forces,Y,1
+Attendance Group,1. Below 85%,0
+Attendance Group,2. 85% - 90%,1
+Attendance Group,3. 90% - 95%,6
+Attendance Group,4. Above 95%,21
+EAL,N,25
+EAL,Y,3
+Ethnic Code,WENG,28
+FSM Ever 6,N,24
+FSM Ever 6,Y,4
+Gender,F,8
+Gender,M,20
+Gifted Talented,N,28
+KS1-2 Progress Made,N,1
+KS1-2 Progress Made,Y,27
+KS2 Banding,Middle,21
+KS2 Banding,Upper/High,7
+Looked After,N,28
+Pupil Premium,N,24
+Pupil Premium,Y,4
+Reg Group,11CH,3
+Reg Group,11DB,1
+Reg Group,11EK,3
+Reg Group,11JB,7
+Reg Group,11JW,2
+Reg Group,11LMK,4
+Reg Group,11MOB,3
+Reg Group,11SM,5
+SEN,A,0
+SEN,N,26
+SEN,P,2
+SEN Provision,K,2
+SEN Provision,N,26
+Term Of Birth,1,13
+Term Of Birth,2,9
+Term Of Birth,3,6
+Traveller,N,28
+Summary,,28
