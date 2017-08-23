@@ -25,7 +25,7 @@ public class Report_AddMeasureFilters extends AnalyticsComponent {
         waitForLoadingWrapper();
     }
 
-    public Report_AddMeasureFilters toggleFilterValue(String measureName, String measureOption){
+    public Report_AddMeasureFilters clickMeasureFilterOption(String measureName, String measureOption){
 
         //System.out.println("Selecting Measure Filter [" + measureName + " > " + measureOption + "]");
         int measureOptionIndex;

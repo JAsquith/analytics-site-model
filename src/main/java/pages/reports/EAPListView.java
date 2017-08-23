@@ -170,6 +170,47 @@ public class EAPListView extends EAPReportView {
     }
 
     private String getExtractColumnJs(int tableIndex, String columnTitle){
+
+/*
+
+oldDiv = document.querySelector('#se-table-data');
+if (oldDiv != null) {  oldDiv.parentNode.removeChild(oldDiv);}
+locator = 'table.rpt.stickyHead:nth-of-type(' + tableIndex + ')';
+tableText = '';colIndexes = [];
+tableRowElements = document.querySelectorAll(locator + ' tr');
+titles = tableRowElements[0].querySelectorAll('th');
+if (titles[0].textContent.trim() == '') {
+  colIndexes.push(0);
+  tableText = ','
+}
+for (i = 0; i < titles.length; i++) {
+  colTitle = titles[i].textContent.trim();
+  colTitle = colTitle.replace(/(\?\s+)/, '').trim();
+  if (colTitle == 'Name' || colTitle == columnName || colTitle == 'Filter Value') {
+    colIndexes.push(i);
+    if (tableText != '' && tableText != ',') {tableText += ',';}
+    tableText += colTitle;
+  }
+}
+tableText += '<br>';
+for (i = 1; (i < tableRowElements.length); i++) {
+  rowText = '';
+  rowCellElements = tableRowElements[i].querySelectorAll('td,th');
+  if (rowCellElements.length > 0) {
+    for (j = 0; j < colIndexes.length; j++) {
+      if (j != 0) { rowText += ',';}
+      rowText += rowCellElements[colIndexes[j]].textContent.trim();
+    }
+  }
+  tableText += rowText + '<br>';
+}
+newDiv = document.createElement('DIV');
+newDiv.setAttribute('id', 'se-table-data');
+newDiv.innerHTML = tableText;
+document.querySelector('body>*:not(script)').appendChild(newDiv);
+
+*/
+
         String mainJS = "oldDiv = document.querySelector('#se-table-data');";
         mainJS += "if (oldDiv != null) {  oldDiv.parentNode.removeChild(oldDiv);}";
         mainJS += "locator = 'table.rpt.stickyHead:nth-of-type(' + tableIndex + ')';";
@@ -181,7 +222,7 @@ public class EAPListView extends EAPReportView {
         mainJS += "for (i = 0; i < titles.length; i++) {";
         mainJS += "colTitle = titles[i].textContent.trim();";
         mainJS += "colTitle = colTitle.replace(/(\\?\\s+)/, '').trim();";
-        mainJS += "if (colTitle == 'Name' || colTitle == columnName) {";
+        mainJS += "if (colTitle == 'Name' || colTitle == columnName || colTitle == 'Filter Value') {";
         mainJS += "colIndexes.push(i);";
         mainJS += "if (tableText != '' && tableText != ',') {tableText += ',';}";
         mainJS += "tableText += colTitle;}}";
