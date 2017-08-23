@@ -53,9 +53,9 @@ public abstract class AccessTest extends BaseTest {
         }
     }
     protected enum ReportArea {
-        HEADLINES("Headlines", "Reports/Reports/Headlines?PublishedReport_ID="),
-        QUALIFICATIONS("Qualifications", "Reports/Reports/Qualifications?PublishedReport_ID="),
-        STUDENTS("Students", "Reports/Reports/Students?PublishedReport_ID=");
+        HEADLINES("Headlines", "/Reports/Reports/Headlines?PublishedReport_ID="),
+        QUALIFICATIONS("Qualifications", "/Reports/Reports/Qualifications?PublishedReport_ID="),
+        STUDENTS("Students", "/Reports/Reports/Students?PublishedReport_ID=");
 
         String legacyArea; String urlPart; int eapAreaID; int eapLevelID;
 

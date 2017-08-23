@@ -139,7 +139,38 @@ public abstract class AbstractAnalyticsObject {
             public Boolean apply(WebDriver driver) {
                 try {
                     int elementWidth = driver.findElement(locator).getSize().width;
-                    System.out.println("" + elementWidth + " to be >= " + width);
+                    //System.out.println("" + elementWidth + " to be >= " + width);
+                    return elementWidth >= width;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return String.format("minimum width of element found by ('%s') to be %s",
+                        locator, width);
+            }
+        };
+    }
+
+    /**
+     * An expectation for checking if the the element that matches the given locator is at least as wide
+     * as the given width (in pixels).
+     *
+     * @param locator used to find the element
+     * @param width    the minimum width of the element to wait for
+     * @return true once the first element located by locator is at least as wide as the width
+     */
+    public static ExpectedCondition<Boolean> minimumWidthOfInnerElementLocatedBy(
+            WebElement element, final By locator, final int width) {
+
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    int elementWidth = element.findElement(locator).getSize().width;
+                    //System.out.println("" + elementWidth + " to be >= " + width);
                     return elementWidth >= width;
                 } catch (StaleElementReferenceException e) {
                     return null;

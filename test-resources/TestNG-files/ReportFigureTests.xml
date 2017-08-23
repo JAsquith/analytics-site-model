@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Headlines Figure Tests" parallel="tests" thread-count="5">
+<suite name="List View Figure Tests" parallel="tests" thread-count="5">
 
 <!--
     <test name="Grades - Overview - Quals - Average - Grade">
@@ -140,7 +140,7 @@
         <parameter name="dataset" value="Exams" />
         <parameter name="report-area" value="Grades" />
         <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Students" />
+        <parameter name="report-level" value="Quals" />
         <parameter name="column-name" value="Average Points" />
         <parameter name="grade-filter-options" value="OnTrack=Above Track|Grade Type=All A8 Quals" />
         <parameter name="view-options" value="Figure Type=%|StdCum=Std|Breakdown=Armed Forces|In A8 Basket=In A8 Basket|Sub Whole=Sub" />
@@ -247,7 +247,7 @@
         <parameter name="report-level" value="Students" />
         <parameter name="column-name" value="KS2 Banding" />
         <parameter name="grade-filter-options" value="Qualification=English Language|OnTrack=All" />
-        <parameter name="view-options" value="Column Sort=Name|Column Sort Direction=Descending|Breakdown=KS2 Banding|Sub Whole=Sub" />
+        <parameter name="view-options" value="Breakdown=KS2 Banding|Sub Whole=Sub" />
         <parameter name="expected-report-figures-file" value="Mark - 6 - GradesGradeListStudents - KS2 Banding.csv" />
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />

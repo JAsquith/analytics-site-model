@@ -281,15 +281,12 @@ public class Report_GradeFilters extends AnalyticsComponent {
     }
 
     public boolean isDisplayed(By locator){
+/*
         WebElement testElement;
         testElement = driver.findElement(locator);
-        // If we're looking for the OnTrack menu, we can check the menu itself isDisplayed
-        if (locator == ON_TRACK_MENU) {
-            return testElement.isDisplayed();
-        }
-        // For all others (DDLs), we need to check the parent as well (in case the select has been replaced with a span):
-        WebElement parent = testElement.findElement(By.xpath(".."));
-        return testElement.isDisplayed() || parent.isDisplayed();
+        return testElement.isDisplayed();
+*/
+        return driver.findElement(locator).isDisplayed();
     }
 
 }

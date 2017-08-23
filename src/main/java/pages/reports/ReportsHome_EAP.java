@@ -13,7 +13,7 @@ public class ReportsHome_EAP extends ReportsHome {
 
     private static final String PAGE_PATH = "/ReportsHome";
     private static final By KS_BUTTON_SELECTED = By.cssSelector(".ksTabs .ks.selected");
-    private static final By YEAR_BUTTON_SELECTED = By.cssSelector(".yearTabs .year.selected");
+    private static final By YEAR_BUTTON_SELECTED = By.cssSelector(".yearTabs .year.selected:not(.lvrBTN)");
     private static final String PAGE_PATH_SELECT_KS = PAGE_PATH + "?selectedKS=6";
     private static final String PAGE_PATH_SELECT_COHORT = PAGE_PATH + "?selectedCohort=";
     protected static final By COHORT_TITLE = By.cssSelector("div.rptHome>h2");

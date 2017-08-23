@@ -2,21 +2,37 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Headlines Filters Tests" parallel="tests" thread-count="5">
 
-    <parameter name="keystage" value="6" />
-    <parameter name="cohort" value="17" />
-    <parameter name="year" value="11" />
-    <parameter name="dataset" value="Data Set 3" />
-    <parameter name="report-area" value="Headlines" />
-    <parameter name="report-view" value="Filters" />
-    <parameter name="report-level" value="Whole School" />
-
     <test name="Presentation Tests - No Options">
-        <parameter name="username" value="AsqJamRestore" />
-        <parameter name="password" value="wsS!SRA125" />
+        <parameter name="username" value="tesreg185422" />
+        <parameter name="password" value="BzZpEoZg7" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Targets" />
+        <parameter name="report-area" value="Headlines" />
+        <parameter name="report-view" value="Filters" />
+        <parameter name="report-level" value="Whole School" />
 
         <classes>
             <class name="tests.reports.eap.headlines.filters.AvailableOptionsTests" />
         </classes>
     </test>
 
+    <test name="Milton #1 - Headlines Summary - Attainment/Progress 8 Summary">
+        <parameter name="username" value="demtes185072" />
+        <parameter name="password" value="DsBjFrGy2" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Exams" />
+        <parameter name="report-area" value="Headlines" />
+        <parameter name="report-view" value="Summary" />
+        <parameter name="report-level" value="Whole School" />
+        <parameter name="section-name" value="Attainment/Progress 8 Summary" />
+        <parameter name="expected-report-figures-file" value="something.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.headlines.MeasureFigures" />
+        </classes>
+    </test>
 </suite>

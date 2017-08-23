@@ -24,8 +24,8 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-@Epic( "EAP Reports - Column Figures" )
-@Feature( "Figures in a specific view and section should be calculated correctly" )
+@Epic( "EAP Reports - Headline Measures" )
+@Feature( "Figures in a specific section of the Headlines Summary report should be calculated correctly" )
 public class MeasureFigures extends ReportTest{
 
     private String actualFiguresFile;

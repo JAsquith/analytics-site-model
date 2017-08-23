@@ -2,7 +2,6 @@ package tests.reports.eap.general;
 
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Issue;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -57,7 +56,6 @@ public class ListViewFigures extends ReportTest{
     }
 
     @Test( dependsOnMethods = "extractReportFigures")
-    @Issue( "15605" )
     @Step( "Check the expected and actual report figures files have the same number of rows" )
     public void checkFileLengths(){
         int expectedLines = 0;
@@ -77,8 +75,7 @@ public class ListViewFigures extends ReportTest{
     }
 
     @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
-    @Issue( "15605" )
-    @Step( "Check a row ({actual}) in the actual report figures file against its expected equivalent ({expected})" )
+    @Step( "Check a row in the actual report figures file against its expected equivalent ([{actual}] vs [{expected})]" )
     public void checkReportFigures(ITestContext testContext, String expected, String actual){
         try {
             assertThat("Displayed values in "+getColumnDescriptor(), actual, is(expected));

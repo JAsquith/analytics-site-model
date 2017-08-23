@@ -32,7 +32,7 @@ public class ReportsHome_Legacy extends ReportsHome {
 
     public void waitForShimInsideReportBox(WebElement td){
         int targetWidth = td.getSize().width - 20;
-        waitMedium.until(minimumWidthOfElementLocatedBy(BUTTONS_SHIM, targetWidth));
+        waitMedium.until(minimumWidthOfInnerElementLocatedBy(td, BUTTONS_SHIM, targetWidth));
      //   waitMedium.until(elementToTheRightOf(BUTTONS_SHIM, targetWidth));
     }
 
