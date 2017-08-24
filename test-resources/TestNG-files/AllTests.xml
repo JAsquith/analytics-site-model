@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Regression Setup" parallel="tests" thread-count="5">
+<suite name="Regression Setup" parallel="tests" thread-count="4">
 
     <suite-files>
 
         <!--
         <suite-file path="DevTests.xml" />
+        -->
         <suite-file path="AccountTests.xml" />
         <suite-file path="HeadlinesTests.xml" />
         <suite-file path="AuthGroupTests.xml" />
-        -->
         <suite-file path="ReportFigureTests.xml" />
 
 

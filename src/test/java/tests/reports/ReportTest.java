@@ -13,8 +13,6 @@ import pages.reports.components.Report_AddResidualExclusions;
 import pages.reports.components.Report_AddStudentFilters;
 import tests.BaseTest;
 
-import java.net.MalformedURLException;
-
 import static org.testng.Assert.fail;
 
 public abstract class ReportTest extends BaseTest {
@@ -24,11 +22,12 @@ public abstract class ReportTest extends BaseTest {
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
     @Parameters( { "username", "password" })
-    public void setup(ITestContext testContext, String user, String pass)
-            throws MalformedURLException{
-        super.initialise(testContext);
+    public void setup(ITestContext testContext, String user, String pass){
 
         try {
+            // Creates the browser session and initialises some global test properties
+            super.initialise(testContext);
+
             // Login
             login(user, pass, true);
 
@@ -74,8 +73,6 @@ public abstract class ReportTest extends BaseTest {
 
     @Step( "Apply report options" )
     public void applyReportOptions(){
-        String field; String value; int delimIndex;
-
         String[] datasetOptions = getArrayParam("dataset-options");
         if (!datasetOptions[0].equals("")) {
             applyAllDatasetOptions(datasetOptions);
@@ -83,31 +80,61 @@ public abstract class ReportTest extends BaseTest {
 
         String[] gradeFilterOptions = getArrayParam("grade-filter-options");
         if (!gradeFilterOptions[0].equals("")) {
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_GradeFilters.png");
+            }
             applyAllGradeFilterOptions(gradeFilterOptions);
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_GradeFilters.png");
+            }
         }
 
         String[] viewOptions = getArrayParam("view-options");
         if (!viewOptions[0].equals("")) {
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_ViewOptions.png");
+            }
             applyAllViewOptions(viewOptions);
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_ViewOptions.png");
+            }
         }
 
         String[] filters = getArrayParam("filters");
         if(!filters[0].equals("")){
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_StuFilters.png");
+            }
             applyAllStudentFilters(filters);
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_StuFilters.png");
+            }
         }
 
         String[] measures = getArrayParam("measures");
         if(!measures[0].equals("")){
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_MeasFilters.png");
+            }
             applyAllMeasureFilters(measures);
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_MeasFilters.png");
+            }
         }
 
         String[] residuals = getArrayParam("residuals");
         if(!residuals[0].equals("")){
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_ResidExcl.png");
+            }
             Report_AddResidualExclusions exclusionsModal = report.filterTabs.openResidualExclusionsModal();
             for(String residual : residuals){
                 toggleResidualExclusion(exclusionsModal, residual);
             }
             exclusionsModal.apply();
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_ResidExcl.png");
+            }
         }
     }
 
@@ -205,18 +232,23 @@ public abstract class ReportTest extends BaseTest {
             delimIndex = viewOption.indexOf("=");
             field = viewOption.substring(0,delimIndex);
             value = viewOption.substring(delimIndex+1);
-            applyViewOptions(field, value);
+            applyViewOption(field, value);
         }
     }
 
     @Step( "Apply View option '{field}' = '{value}'" )
-    private void applyViewOptions(String field, String value){
+    private void applyViewOption(String field, String value){
+        if (debugMode) {
+            saveScreenshot(context.getName()+"-Pre-apply_"+field+"["+value+"].png");
+        }
         switch (field){
             case "Column Sort":
                 report = report.viewOptions.selectColSort(value);
                 break;
             case "Column Sort Direction":
                 report = report.viewOptions.setColSortDirection(value);
+                report = report.viewOptions.toggleColSortDirection();
+                report = report.viewOptions.toggleColSortDirection();
                 break;
             case "FigureType": case "Figure Type":
                 report = report.viewOptions.setFigType(value);
@@ -238,6 +270,9 @@ public abstract class ReportTest extends BaseTest {
                 break;
             default:
                 throw new IllegalArgumentException("Unknown View Option '"+field+"'");
+        }
+        if (debugMode) {
+            saveScreenshot(context.getName()+"-Post-apply_"+field+"["+value+"].png");
         }
     }
 

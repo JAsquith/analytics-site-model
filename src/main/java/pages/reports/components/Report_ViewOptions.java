@@ -3,6 +3,7 @@ package pages.reports.components;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import pages.AnalyticsComponent;
 import pages.reports.EAPListView;
@@ -12,6 +13,7 @@ import java.util.List;
 public class Report_ViewOptions extends AnalyticsComponent {
 
     public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColNameType");
+    private final By COL_SORT_DDL_OPTIONS = By.tagName("select#ReportOptions_RPTColSort_ColNameType>option");
     public final By COL_SORT_DIRECTION_TOGGLE = By.cssSelector("label.icon.sortDir");
     public final By BREAKDOWN_DDL = By.cssSelector("select#ReportOptions_Filter_ID");
     public final By FIG_TYPE_TOGGLE = By.cssSelector("#sortWrapper>div:nth-of-type(2)");
@@ -25,6 +27,12 @@ public class Report_ViewOptions extends AnalyticsComponent {
         super(aDriver);
     }
 
+    private void waitForColResort(){
+        waitShort.until(ExpectedConditions.elementToBeClickable(COL_SORT_DDL));
+        waitShort.until(ExpectedConditions.elementToBeClickable(COL_SORT_DIRECTION_TOGGLE));
+        waitShort.until(ExpectedConditions.numberOfElementsToBeMoreThan(COL_SORT_DDL_OPTIONS,0));
+    }
+
     public EAPListView selectColSort(String optionText){
         List<WebElement> targetDDLs = driver.findElements(COL_SORT_DDL);
         if (targetDDLs.size() == 0) {
@@ -33,6 +41,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
         if (!optionText.equals("")) {
             new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
             waitForLoadingWrapper();
+            //waitForColResort();
         }
         return new EAPListView(driver);
     }
@@ -44,12 +53,15 @@ public class Report_ViewOptions extends AnalyticsComponent {
         boolean sortAsc = sortOrder.toLowerCase().equals("ascending");
         if (sortedAscending != sortAsc){
             sortIcon.click();
+            waitForLoadingWrapper();
+            //waitForColResort();
         }
         return new EAPListView(driver);
     }
 
     public EAPListView toggleColSortDirection(){
         driver.findElement(COL_SORT_DIRECTION_TOGGLE).click();
+        waitForLoadingWrapper();
         return new EAPListView(driver);
     }
 
@@ -159,6 +171,7 @@ public class Report_ViewOptions extends AnalyticsComponent {
         if (icon.getCssValue("cursor").equals("pointer")){
             icon.click();
         }
+        waitForLoadingWrapper();
         return new EAPListView(driver);
     }
 

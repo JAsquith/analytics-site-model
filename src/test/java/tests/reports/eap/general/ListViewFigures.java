@@ -2,7 +2,7 @@ package tests.reports.eap.general;
 
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
@@ -34,8 +34,8 @@ public class ListViewFigures extends ReportTest{
     private String table;
 
     @Test
-    @Step( "Save the figures in the {columnName} column to a csv file" )
     @Parameters( {"column-name", "expected-report-figures-file"} )
+    @Story( "Extract column {columnName} to actual/{expectedFiguresFileName}" )
     public void extractReportFigures(String columnName, String expectedFiguresFileName){
 
         column = columnName;
@@ -56,8 +56,9 @@ public class ListViewFigures extends ReportTest{
     }
 
     @Test( dependsOnMethods = "extractReportFigures")
-    @Step( "Check the expected and actual report figures files have the same number of rows" )
-    public void checkFileLengths(){
+    @Parameters( {"report-area", "report-view", "report-level"} )
+    @Story( "Expected number of rows were found ({area} > {view} > {level})" )
+    public void checkFileLengths(String area, String view, String level){
         int expectedLines = 0;
         int actualLines = -1;
         try {
@@ -75,10 +76,10 @@ public class ListViewFigures extends ReportTest{
     }
 
     @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
-    @Step( "Check a row in the actual report figures file against its expected equivalent ([{actual}] vs [{expected})]" )
-    public void checkReportFigures(ITestContext testContext, String expected, String actual){
+    @Story( "{actual} = {expected} in {viewColDesc}" )
+    public void checkReportFigures(ITestContext testContext, String viewColDesc, String expected, String actual){
         try {
-            assertThat("Displayed values in "+getColumnDescriptor(), actual, is(expected));
+            assertThat("Row data from "+viewColDesc, actual, is(expected));
         } catch (Throwable t){
             saveScreenshot(testContext.getName()+".png");
             throw t;
@@ -101,7 +102,7 @@ public class ListViewFigures extends ReportTest{
         while ((expectedLine = expectedBr.readLine()) != null &&
                 (actualLine = actualBr.readLine()) != null){
 
-            data = (expectedLine+"~"+actualLine).split("~");
+            data = (getColumnDescriptor()+"~"+expectedLine+"~"+actualLine).split("~");
             testCases.add(data);
         }
         return testCases.iterator();
@@ -111,8 +112,8 @@ public class ListViewFigures extends ReportTest{
         return getStringParam("report-area")+
                 ">" + getStringParam("report-view")+
                 ">" + getStringParam("report-level")+
-                ">" + table+
-                ">" + column;
+                " (" + table+
+                "[" + column+"])";
     }
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Headlines Filters Tests" parallel="tests" thread-count="5">
+<suite name="Headlines Tests" parallel="tests" thread-count="4">
 
     <test name="Presentation Tests - No Options">
         <parameter name="username" value="tesreg185422" />

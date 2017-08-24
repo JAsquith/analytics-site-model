@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="List View Figure Tests" parallel="tests" thread-count="5">
+<suite name="List View Figure Tests" parallel="tests" thread-count="4">
 
 <!--
     <test name="Grades - Overview - Quals - Average - Grade">
@@ -20,7 +20,7 @@
         </classes>
     </test>
 -->
-
+    <parameter name="debug" value="false" />
 
     <test name="Andy #1 - A8P8 Overview Filters - P8">
         <parameter name="username" value="roand171650" />
@@ -34,7 +34,8 @@
         <parameter name="report-level" value="Filters" />
         <parameter name="column-name" value="P8" />
         <parameter name="dataset-options" value="Compare=Data Set 4" />
-        <parameter name="grade-filter-options" value="Faculty=Humanities|Qualification=History|Actual Grade Operator=greater or equal|Actual Grade Grade=D|Compare Grade Operator=less than|Compare Grade Grade=A*" />
+        <parameter name="grade-filter-options"
+                   value="Faculty=Humanities|Qualification=History|Actual Grade Operator=greater or equal|Actual Grade Grade=D|Compare Grade Operator=less than|Compare Grade Grade=A*" />
         <parameter name="view-options" value="Column Sort=Eng P8 (Diff)|Column Sort Direction=Descending|In A8 Basket=In A8 Basket|Sub Whole=Whole" />
         <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High|KS2 Banding=Lower|Pupil Premium=Not PP" />
         <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=+Include" />
@@ -151,6 +152,8 @@
     </test>
 
     <test name="Mark #2 - A8/P8 Overview Students - KS2 Prior">
+        <parameter name="debug" value="true" />
+
         <parameter name="username" value="tesmar185343" />
         <parameter name="password" value="AtSxEaNn8" />
         <parameter name="keystage" value="6" />
@@ -161,8 +164,8 @@
         <parameter name="report-view" value="Overview" />
         <parameter name="report-level" value="Students" />
         <parameter name="column-name" value="KS2 Prior" />
-        <parameter name="grade-filter-options" value="Faculty=English|Qualification=English Language|OnTrack=All" />
-        <parameter name="view-options" value="Column Sort=KS2 Prior|Column Sort Direction=Descending|Breakdown=Ethnic Code|Sub Whole=Sub" />
+        <parameter name="grade-filter-options" value="Faculty=English|Qualification=English Language" />
+        <parameter name="view-options" value="Column Sort=KS2 Prior|Breakdown=Ethnic Code" />
         <parameter name="filters" value="Armed Forces=N|Armed Forces=Y|Gender=F|Gender=M" />
         <parameter name="expected-report-figures-file" value="Mark - 2 - A8P8OverviewStudents - KS2 Prior.csv" />
         <classes>
@@ -171,6 +174,8 @@
     </test>
 
     <test name="Mark #3 - Basics Contribution Filters - KS2 Eng">
+        <parameter name="debug" value="true" />
+
         <parameter name="username" value="tesmar185344" />
         <parameter name="password" value="WbJuRuTu9" />
         <parameter name="keystage" value="6" />
@@ -183,9 +188,9 @@
         <parameter name="column-name" value="KS2 Eng" />
         <parameter name="dataset-options" value="Compare=Exams" />
         <parameter name="grade-filter-options" value="Faculty=Maths|Qualification=Maths|OnTrack=On Or Above|Actual Grade Operator=Greater Than|Actual Grade Grade=3|Actual Grade Subgrade=-" />
-        <parameter name="view-options" value="Column Sort=KS2 Eng|Column Sort Direction=Ascending|Figure Type=#|Sub Whole=Sub" />
+        <parameter name="view-options" value="Column Sort=KS2 Eng|Column Sort Direction=Ascending" />
         <parameter name="filters" value="EAL=N|Ethnic Code=WENG|Gender=F|Gender=M" />
-        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include|Pupils achieving a Positive Progress 8 score=Include|Pupils Included (Progress 8 Coverage)=+Include|Pupils achieving a Positive Progress 8 score=CompareInclude" />
+        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include+Include|Pupils achieving a Positive Progress 8 score=Include+Include" />
         <parameter name="expected-report-figures-file" value="Mark - 3 - BasicsContributionFilters - KS2 Eng.csv" />
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
@@ -204,7 +209,7 @@
         <parameter name="report-level" value="Students" />
         <parameter name="column-name" value="Sci VA" />
         <parameter name="grade-filter-options" value="Faculty=Science" />
-        <parameter name="view-options" value="Column Sort=Sci VA|Column Sort Direction=Descending|Breakdown=Gender" />
+        <parameter name="view-options" value="Column Sort=Sci VA|Breakdown=Gender" />
         <parameter name="filters" value="Ethnic Code=MWBA|Ethnic Code=WENG|Gender=F|Gender=M" />
         <parameter name="measures" value="Achieving 9-5 in English=Include|Achieving 9-5 in Maths=Exclude" />
         <parameter name="expected-report-figures-file" value="Mark - 4 - VAOverviewStudents - Sci VA.csv" />
@@ -224,9 +229,8 @@
         <parameter name="report-view" value="Standard Pass" />
         <parameter name="report-level" value="Filters" />
         <parameter name="column-name" value="EBacc Standard Pass" />
-        <parameter name="dataset-options" value="Tab=Dataset|Actual=Targets" />
         <parameter name="grade-filter-options" value="Faculty=Humanities|Qualification=RS|OnTrack=On Or Above" />
-        <parameter name="view-options" value="Column Sort=Name|Column Sort Direction=Descending|Figure Type=#|Sub Whole=Sub" />
+        <parameter name="view-options" value="Figure Type=#|Sub Whole=Sub" />
         <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High" />
         <parameter name="measures" value="Achieving 9-4 in English and Maths=Include" />
         <parameter name="expected-report-figures-file" value="Mark - 5 - EBaccStandardFilters - StdPass.csv" />

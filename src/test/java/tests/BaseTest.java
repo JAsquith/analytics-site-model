@@ -35,6 +35,7 @@ public abstract class BaseTest {
      */
 
     public String applicationUrl;
+    protected boolean debugMode;
 
     /**
      *
@@ -64,6 +65,7 @@ public abstract class BaseTest {
     protected void initialise(ITestContext context_TestNG) throws MalformedURLException {
         context = context_TestNG;
         utils = new TestUtils(context_TestNG);
+        debugMode = getBooleanParam("debug", false);
         try {
             driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
         } catch (MalformedURLException e) {
@@ -71,6 +73,7 @@ public abstract class BaseTest {
             e.printStackTrace();
             throw new MalformedURLException(e.getMessage());
         }
+
         //driver.manage().window().maximize();
 
         String testDomain = getStringParam("test.domain");
