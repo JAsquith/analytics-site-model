@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Headlines Tests" parallel="tests" thread-count="4">
 
+<!--
     <test name="Presentation Tests - No Options">
         <parameter name="username" value="tesreg185422" />
         <parameter name="password" value="BzZpEoZg7" />
@@ -17,6 +18,7 @@
             <class name="tests.reports.eap.headlines.filters.AvailableOptionsTests" />
         </classes>
     </test>
+-->
 
     <test name="Milton #1 - Headlines Summary - Attainment/Progress 8 Summary">
         <parameter name="username" value="demtes185072" />
@@ -35,4 +37,6 @@
             <class name="tests.reports.eap.headlines.MeasureFigures" />
         </classes>
     </test>
+
+
 </suite>

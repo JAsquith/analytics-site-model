@@ -14,10 +14,7 @@ import static org.testng.Assert.fail;
 
 @Epic( "This is an Epic!" )
 @Feature ( "This is a Feature" )
-public class TestClass extends BaseTest {
-
-
-
+public class BrowserActiveTests extends BaseTest {
 
     @BeforeTest()
     @Step( "Login" )
@@ -37,12 +34,6 @@ public class TestClass extends BaseTest {
         }
     }
 
-
-
-
-
-
-
     @Test( description = "This is a description which overrides the method name" )
     @Description ( "This is a Description" )
     @Owner ( "Owner" )
@@ -55,11 +46,6 @@ public class TestClass extends BaseTest {
         testStep("value", username);
     }
 
-
-
-
-
-
     @Test( description = "This is Test method 2" )
     @Description ( "Story: Nothing happens. The End." )
     @Owner ( "Another Owner" )
@@ -70,42 +56,25 @@ public class TestClass extends BaseTest {
         attachmentAndStep();
     }
 
-
-
-
     @Test( description = "Test without @Story or @Description" )
     @Severity ( SeverityLevel.MINOR )
     public void mainTestMethod3(){
         System.out.println("Nothing much happens here");
     }
 
-
-
-
-
     @Test
     @Story ( "A test fails if one of its assertions is not true " )
     @Description ( "Every test should contain at least (and ideally only) one assertion" )
     public void testMethodWithNoDescription(){
         assertThat("This is an assertion: \"actual\" is the same as \"expected\"",
-                "actual", is("expected"));
+                12, is(13));
     }
-
-
-
-
-
 
     @Step( "Test step where param = '{param}' and a screenshot called {username} is attached" )
     private void testStep(String param, String username){
         saveScreenshot(username+".png");
         System.out.println("This is a test step with a parameter ("+param+")");
     }
-
-
-
-
-
 
     @Step ( "A step that attaches a text file" )
     @Attachment
@@ -117,11 +86,6 @@ public class TestClass extends BaseTest {
         return text;
     }
 
-
-
-
-
-
     @Test(  dependsOnMethods = "testMethodWithNoDescription",
             description = "Description of a skipped test")
     @Description ("This is the Allure description, which is slightly different")
@@ -132,16 +96,10 @@ public class TestClass extends BaseTest {
         }
     }
 
-
-
-
-
     @Feature ( "Different Feature within the same class" )
     @Test( description = "A Test that produces a 'Test Defect'" )
     @Story ( "If a test method errors before an assertion is false, it is a 'Test Defect'" )
     public void testDefect(){
         throw new IllegalArgumentException ("Your code is bad and you should feel bad!");
     }
-
-
 }

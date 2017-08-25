@@ -45,7 +45,7 @@
         </classes>
     </test>
 
-    <test name="Ian #1 - Headline Filters - Positive P8">
+    <test name="000153 - Ian #1 - Headline Filters - Positive P8">
         <parameter name="username" value="oneaut185180" />
         <parameter name="password" value="KcZiGnGh6" />
         <parameter name="keystage" value="6" />

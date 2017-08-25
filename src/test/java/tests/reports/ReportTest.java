@@ -24,6 +24,8 @@ public abstract class ReportTest extends BaseTest {
     @Parameters( { "username", "password" })
     public void setup(ITestContext testContext, String user, String pass){
 
+        // Check against list
+        // fail("Skipped test - " + testContext.getName() + " your name's not down you're not coming in")
         try {
             // Creates the browser session and initialises some global test properties
             super.initialise(testContext);

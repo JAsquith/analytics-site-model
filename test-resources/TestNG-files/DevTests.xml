@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="This is a Suite Name" parallel="tests">
+<suite name="Development Suite" parallel="tests">
 
     <parameter name="debug" value="true" />
 
+<!--
     <test name="This is a Test Name">
         <parameter name="username" value="tesreg185422"/>
         <parameter name="password" value="BzZpEoZg7"/>
+        <parameter name="republish-type" value="Test:152468"/>
+
         <classes>
-            <class name="tests.TestClass" />
+            <class name="tests.BrowserActiveTests" />
         </classes>
     </test>
-    <test name="Test Names Must Be Unique (within a suite)">
-        <classes>
-            <class name="tests.TestClass2" />
-        </classes>
-    </test>
+
     <test name="Same Test Class (and thus methods), different parameters">
         <parameter name="username" value="demtes185072"/>
         <parameter name="password" value="DsBjFrGy2"/>
         <classes>
-            <class name="tests.TestClass" />
+            <class name="tests.BrowserActiveTests" />
+        </classes>
+    </test>
+-->
+
+    <test name="Non Browser Tests">
+        <classes>
+            <class name="tests.NonBrowserTests" />
         </classes>
     </test>
 

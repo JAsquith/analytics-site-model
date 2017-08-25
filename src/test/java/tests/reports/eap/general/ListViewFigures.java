@@ -77,7 +77,7 @@ public class ListViewFigures extends ReportTest{
                 actualLines, is(expectedLines));
     }
 
-    @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "createData")
+    @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
     @Story( "Values match expected data for one row" )
     @Step( "{viewColDesc} row ({actual}) matches expected ({expected})" )
     public void checkReportFigures(ITestContext testContext, String viewColDesc, String expected, String actual){
