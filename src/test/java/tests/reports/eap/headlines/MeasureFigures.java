@@ -1,9 +1,6 @@
 package tests.reports.eap.headlines;
 
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Step;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
@@ -34,8 +31,10 @@ public class MeasureFigures extends ReportTest{
     private String section;
 
     @Test
+    @Severity( SeverityLevel.CRITICAL )
     @Parameters( {"section-name", "expected-report-figures-file"} )
-    @Story( "Extract column {sectionName} to actual/{expectedFiguresFileName}" )
+    @Story( "Extract column data to text file" )
+    @Step ( "Saving Name and {sectionName} values to actual/{expectedFiguresFileName}" )
     public void extractReportFigures(String sectionName, String expectedFiguresFileName){
 
         section = sectionName;
@@ -55,9 +54,10 @@ public class MeasureFigures extends ReportTest{
     }
 
     @Test( dependsOnMethods = "extractReportFigures")
-    @Parameters( {"report-area", "report-view", "report-level"} )
-    @Story( "Expected number of rows were found ({area} > {view} > {level})" )
-    public void checkFileLengths(String area, String view, String level){
+    @Severity( SeverityLevel.CRITICAL )
+    @Story( "Section contains the expected number of rows" )
+    @Step ( "actual/{expectedFiguresFileName} & expected/{expectedFiguresFileName} have the same number of lines" )
+    public void checkFileLengths(){
         int expectedLines = 0;
         int actualLines = -1;
         try {
@@ -75,8 +75,9 @@ public class MeasureFigures extends ReportTest{
     }
 
     @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
-    @Story( "{actual} = {expected} in {sectionDesc}" )
-    @Step( "Check a row ({actual}) in the actual report figures file against its expected equivalent ({expected})" )
+    @Severity( SeverityLevel.CRITICAL )
+    @Story( "Values match expected data for one row" )
+    @Step( "{sectionDesc} row ({actual}) matches expected ({expected})" )
     public void checkReportFigures(ITestContext testContext, String sectionDesc, String expected, String actual){
         try {
             assertThat("Row in "+ sectionDesc, actual, is(expected));

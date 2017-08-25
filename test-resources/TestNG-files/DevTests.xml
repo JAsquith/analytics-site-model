@@ -1,99 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Dev Tests" parallel="tests" thread-count="5">
+<suite name="This is a Suite Name" parallel="tests">
 
     <parameter name="debug" value="true" />
 
-    <test name="Andy #1 - A8P8 Overview Filters - P8">
-        <parameter name="username" value="roand171650" />
-        <parameter name="password" value="Funkad3lic" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Y11 Autumn" />
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="P8" />
-        <parameter name="dataset-options" value="Compare=Data Set 4" />
-        <parameter name="grade-filter-options"
-                   value="Faculty=Humanities|Qualification=History|Actual Grade Operator=greater or equal|Actual Grade Grade=D|Compare Grade Operator=less than|Compare Grade Grade=A*" />
-        <parameter name="view-options" value="Column Sort=Eng P8 (Diff)|Column Sort Direction=Descending|In A8 Basket=In A8 Basket|Sub Whole=Whole" />
-        <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High|KS2 Banding=Lower|Pupil Premium=Not PP" />
-        <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=+Include" />
-        <parameter name="expected-report-figures-file" value="Andy - 1 - A8P8OverviewFilters - P8.csv" />
+    <test name="This is a Test Name">
+        <parameter name="username" value="tesreg185422"/>
+        <parameter name="password" value="BzZpEoZg7"/>
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.TestClass" />
         </classes>
     </test>
-
-    <test name="Mark #2 - A8/P8 Overview Students - KS2 Prior">
-        <parameter name="username" value="tesmar185343" />
-        <parameter name="password" value="AtSxEaNn8" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Students" />
-        <parameter name="column-name" value="KS2 Prior" />
-        <parameter name="grade-filter-options" value="Faculty=English|Qualification=English Language" />
-        <parameter name="view-options" value="Column Sort=KS2 Prior|Breakdown=Ethnic Code" />
-        <parameter name="filters" value="Armed Forces=N|Armed Forces=Y|Gender=F|Gender=M" />
-        <parameter name="expected-report-figures-file" value="Mark - 2 - A8P8OverviewStudents - KS2 Prior.csv" />
+    <test name="Test Names Must Be Unique (within a suite)">
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.TestClass2" />
         </classes>
     </test>
-
-    <test name="Mark #3 - Basics Contribution Filters - KS2 Eng">
-        <parameter name="username" value="tesmar185344" />
-        <parameter name="password" value="WbJuRuTu9" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="report-area" value="Basics" />
-        <parameter name="report-view" value="Contribution" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="KS2 Eng" />
-        <parameter name="dataset-options" value="Compare=Exams" />
-        <parameter name="grade-filter-options" value="Faculty=Maths|Qualification=Maths|OnTrack=On Or Above|Actual Grade Operator=Greater Than|Actual Grade Grade=3|Actual Grade Subgrade=-" />
-        <parameter name="view-options" value="Column Sort=KS2 Eng|Column Sort Direction=Ascending" />
-        <parameter name="filters" value="EAL=N|Ethnic Code=WENG|Gender=F|Gender=M" />
-        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include+Include|Pupils achieving a Positive Progress 8 score=Include+Include" />
-        <parameter name="expected-report-figures-file" value="Mark - 3 - BasicsContributionFilters - KS2 Eng.csv" />
+    <test name="Same Test Class (and thus methods), different parameters">
+        <parameter name="username" value="demtes185072"/>
+        <parameter name="password" value="DsBjFrGy2"/>
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.TestClass" />
         </classes>
     </test>
-
-
-    <!--
-        <test name="Dev Test">
-            <parameter name="username" value="demtes185072" />
-            <parameter name="password" value="DsBjFrGy2" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Exams" />
-            <parameter name="report-area" value="Headlines" />
-            <parameter name="report-view" value="Summary" />
-            <parameter name="report-level" value="Whole School" />
-            <parameter name="section-name" value="Attainment/Progress 8 Summary" />
-            <parameter name="expected-report-figures-file" value="something.csv" />
-            &lt;!&ndash;
-            <parameter name="grade-filter-options" value="Faculty=Science|Grade Type=All A8 Quals" />
-            <parameter name="view-options" value="Column Sort=Total Grades|Column Sort Direction=Ascending" />
-            <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High" />
-            <parameter name="measures" value="Entered for EBacc=Include|Achieving 9-5 in English and Maths=¬Include" />
-            <parameter name="residuals" value="Art|Drama" />
-            &ndash;&gt;
-            <classes>
-                <class name="tests.reports.eap.headlines.MeasureFigures" />
-            </classes>
-        </test>
-    -->
 
 </suite>

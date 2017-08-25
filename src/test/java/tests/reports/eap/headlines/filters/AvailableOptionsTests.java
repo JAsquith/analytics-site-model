@@ -24,7 +24,7 @@ public class AvailableOptionsTests extends ReportTest {
     }
 
     // Tests of the Filters tabs
-    @Story( "The Student Filters tab should be enabled" )
+    @Story( "The Student Filters tab is enabled" )
     @Severity( SeverityLevel.NORMAL )
     @Test
     public void studentFiltersEnabled(){
@@ -32,7 +32,7 @@ public class AvailableOptionsTests extends ReportTest {
                 report.filterTabs.isEnabled("filter"), is(true));
     }
 
-    @Story( "The Measure Filters tab should be enabled" )
+    @Story( "The Measure Filters tab is enabled" )
     @Severity( SeverityLevel.NORMAL )
     @Test
     public void measureFiltersEnabled(){
@@ -40,7 +40,7 @@ public class AvailableOptionsTests extends ReportTest {
                 report.filterTabs.isEnabled("measure"), is(true));
     }
 
-    @Story( "The Residual Exclusions tab should be disabled" )
+    @Story( "The Residual Exclusions tab is disabled" )
     @Severity( SeverityLevel.NORMAL )
     @Test
     public void residualExclusionsDisabled(){
