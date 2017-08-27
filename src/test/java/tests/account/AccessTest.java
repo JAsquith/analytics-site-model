@@ -3,7 +3,6 @@ package tests.account;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
-import io.qameta.allure.Story;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
@@ -19,13 +18,11 @@ import tests.BaseTest;
 import java.net.MalformedURLException;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.testng.Assert.fail;
 
 public abstract class AccessTest extends BaseTest {
 
-    protected String[] actualCanDoList;
     protected String reportsHomeUrl;
 
     protected enum TestReport {
@@ -82,12 +79,11 @@ public abstract class AccessTest extends BaseTest {
         }
     }
 
-    @Story( "The 'View Authority Details' modal should provide accurate information" )
+    @Test( description = "View Authority Details Modal: Correct Permissions" )
     @Severity( SeverityLevel.MINOR )
-    @Test
     @Step( "Compare actual and expected 'Can Do' lists" )
     public void viewAuthoritiesModalTest(){
-        assertThat("'Can do' list on Authority Details Modal",
+        assertWithScreenshot("'Can do' list on Authority Details Modal",
                 readAuthorityDetailsCanDoList(), is(getExpectedCanDoList()));
     }
 

@@ -13,16 +13,48 @@
         <mvn.allure.version>2.8</mvn.allure.version>
 
         <testng.version>6.11</testng.version>
-        <testng.allure.version>2.0-BETA16</testng.allure.version>
-
-        <aspectj.version>1.8.10</aspectj.version>
-        <slf4j.version>1.8.0-alpha2</slf4j.version>
-        <selenium.version>3.4.0</selenium.version>
         <hamcrest.version>1.3</hamcrest.version>
 
+        <selenium.version>3.4.0</selenium.version>
+
+        <testng.allure.version>2.0-BETA16</testng.allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <slf4j.version>1.8.0-alpha2</slf4j.version>
+
+        <opencsv.version>4.0</opencsv.version>
         <javax.mail.version>1.5.6</javax.mail.version>
     </properties>
+
     <dependencies>
+        <!-- TestNG (for test control) -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+
+        <!-- Hamcrest (for asserts and matchers) -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${hamcrest.version}</version>
+        </dependency>
+
+        <!-- Selenium (for web browsing) -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- OpenCSV (for parsing a csv file) -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>${opencsv.version}</version>
+        </dependency>
+
+        <!-- Allure and associated dependencies (for test reports) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jdk14</artifactId>
@@ -43,22 +75,8 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>${hamcrest.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
-        </dependency>
-        <!--  email APIs so we can send test tests.reports  -->
+
+        <!--  JavaX mail (for email alerts) -->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>javax.mail-api</artifactId>
@@ -71,9 +89,9 @@
         </dependency>
     </dependencies>
 
-
     <build>
         <plugins>
+            <!-- Maven Compiler (Build tool) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -83,20 +101,8 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.8</version>
-                <configuration>
-                    <reportDirectory>target/allure-report</reportDirectory>
-                <properties>
-                    <allure.results.directory>allure-results</allure.results.directory>
-                    <allure.link.mylink.pattern>http://example.org/mylink/{}</allure.link.mylink.pattern>
-                    <allure.link.issue.pattern>http://example.org/issue/{}</allure.link.issue.pattern>
-                    <allure.link.tms.pattern>http://example.org/tms/{}</allure.link.tms.pattern>
-                </properties>
-                </configuration>
-            </plugin>
+
+            <!-- Maven Surefire (for TestNG and Allure Reports) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -119,6 +125,22 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <!-- Allure (for overriding default allure properties - if I ever get that part working!) -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <reportDirectory>target/allure-report</reportDirectory>
+                <properties>
+                    <allure.results.directory>allure-results</allure.results.directory>
+                    <allure.link.mylink.pattern>http://example.org/mylink/{}</allure.link.mylink.pattern>
+                    <allure.link.issue.pattern>http://example.org/issue/{}</allure.link.issue.pattern>
+                    <allure.link.tms.pattern>http://example.org/tms/{}</allure.link.tms.pattern>
+                </properties>
+                </configuration>
             </plugin>
         </plugins>
     </build>

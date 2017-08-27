@@ -1,9 +1,6 @@
 package tests.account;
 
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Step;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import pages.AnalyticsPage;
 import pages.reports.ReportsHome;
@@ -20,7 +17,8 @@ import static org.hamcrest.CoreMatchers.is;
  * Access is tested via Reports Homepage links/buttons and url hacks.
  */
 @Epic("Account Security")
-@Feature("Authority Groups Control Access to Report")
+@Feature("Authority Groups Permissions")
+@Story( "Access to Reports & Report Areas is controlled by Authority Group Roles" )
 public class ReportAccessTests extends AccessTest {
 
     private String[] expectedButtons;
@@ -28,8 +26,8 @@ public class ReportAccessTests extends AccessTest {
     private String expectedTitle;
     private String actualPageTitle;
 
-    @Story( "Buttons for KS4 Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "Visibility of Links to Locked KS4 Reports")
+    @Severity( SeverityLevel.NORMAL )
     public void kS4Locked_VisibleButtons(){
         try {
             setupButtonsTest(TestReport.KS4_LOCKED);
@@ -40,8 +38,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS4 Headlines Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Locked KS4 Headlines Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks4Locked_HeadlinesByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS4_LOCKED, ReportArea.HEADLINES);
@@ -52,8 +50,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS4 Qualifications Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Locked KS4 Quals Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks4Locked_QualificationsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS4_LOCKED, ReportArea.QUALIFICATIONS);
@@ -64,8 +62,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS4 Students Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Locked KS4 Students Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks4Locked_StudentsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS4_LOCKED, ReportArea.STUDENTS);
@@ -76,9 +74,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-
-    @Story( "Access to KS4 Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "Visibility of Links to Unlocked KS4 Reports" )
+    @Severity( SeverityLevel.NORMAL )
     public void ks4NotLocked_VisibleButtons(){
         try{
             setupButtonsTest(TestReport.KS4_NOT_LOCKED);
@@ -89,8 +86,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS4 Headlines Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Unlocked KS4 Headlines Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks4NotLocked_HeadlinesByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS4_NOT_LOCKED, ReportArea.HEADLINES);
@@ -101,8 +98,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS4 Qualifications Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Unlocked KS4 Quals Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks4NotLocked_QualificationsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS4_NOT_LOCKED, ReportArea.QUALIFICATIONS);
@@ -113,8 +110,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS4 Students Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Unlocked KS4 Students Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks4NotLocked_StudentsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS4_NOT_LOCKED, ReportArea.STUDENTS);
@@ -126,8 +123,8 @@ public class ReportAccessTests extends AccessTest {
     }
 
 
-    @Story( "Access to KS5 Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "Visibility of Links to Locked KS5 Reports" )
+    @Severity( SeverityLevel.NORMAL )
     public void ks5Locked_VisibleButtons(){
         try{
             setupButtonsTest(TestReport.KS5_LOCKED);
@@ -138,8 +135,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS5 Headlines Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Locked KS5 Headlines Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks5Locked_HeadlinesByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS5_LOCKED, ReportArea.HEADLINES);
@@ -150,8 +147,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS5 Qualifications Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Locked KS5 Quals Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks5Locked_QualificationsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS5_LOCKED, ReportArea.QUALIFICATIONS);
@@ -162,8 +159,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS5 Students Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Locked KS5 Students Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks5Locked_StudentsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS5_LOCKED, ReportArea.STUDENTS);
@@ -175,8 +172,8 @@ public class ReportAccessTests extends AccessTest {
     }
 
 
-    @Story( "Access to KS5 Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "Visibility of Links to Unlocked KS5 Reports" )
+    @Severity( SeverityLevel.NORMAL )
     public void ks5NotLocked_VisibleButtons(){
         try{
             setupButtonsTest(TestReport.KS5_NOT_LOCKED);
@@ -187,8 +184,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS5 Headlines Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Unlocked KS5 Headlines Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks5NotLocked_HeadlinesByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS5_NOT_LOCKED, ReportArea.HEADLINES);
@@ -199,8 +196,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS5 Qualifications Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Unlocked KS5 Quals Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks5NotLocked_QualificationsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS5_NOT_LOCKED, ReportArea.QUALIFICATIONS);
@@ -211,8 +208,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "URL access to KS5 Students Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "URL Accessibility of Unlocked KS5 Students Report" )
+    @Severity( SeverityLevel.CRITICAL )
     public void ks5NotLocked_StudentsByUrl(){
         try{
             setupUrlAccessTest(TestReport.KS5_NOT_LOCKED, ReportArea.STUDENTS);
@@ -224,8 +221,8 @@ public class ReportAccessTests extends AccessTest {
     }
 
 
-    @Story( "Access to EAP Reports with a status of 'Locked'" )
-    @Test
+    @Test( description = "Visibility of Links to Locked EAP Reports" )
+    @Severity( SeverityLevel.NORMAL )
     public void eapLocked_VisibleButtons(){
         try{
             setupButtonsTest(TestReport.EAP_LOCKED);
@@ -236,8 +233,8 @@ public class ReportAccessTests extends AccessTest {
         }
     }
 
-    @Story( "Access to EAP Reports with a status other than 'Locked'" )
-    @Test
+    @Test( description = "Visibility of Links to Unocked EAP Reports" )
+    @Severity( SeverityLevel.NORMAL )
     public void eapNotLocked_VisibleButtons(){
         try{
             setupButtonsTest(TestReport.EAP_NOT_LOCKED);

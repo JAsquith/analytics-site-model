@@ -75,79 +75,38 @@ public abstract class ReportTest extends BaseTest {
 
     @Step( "Apply report options" )
     public void applyReportOptions(){
-        String[] datasetOptions = getArrayParam("dataset-options");
-        if (!datasetOptions[0].equals("")) {
-            applyAllDatasetOptions(datasetOptions);
-        }
+        // Actions in the Dataset/Tracker tabs
+        applyAllDatasetOptions();
 
-        String[] gradeFilterOptions = getArrayParam("grade-filter-options");
-        if (!gradeFilterOptions[0].equals("")) {
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_GradeFilters.png");
-            }
-            applyAllGradeFilterOptions(gradeFilterOptions);
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Post-apply_GradeFilters.png");
-            }
-        }
+        // Actions in the Student Filters tab
+        applyAllStudentFilters();
 
-        String[] viewOptions = getArrayParam("view-options");
-        if (!viewOptions[0].equals("")) {
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_ViewOptions.png");
-            }
-            applyAllViewOptions(viewOptions);
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Post-apply_ViewOptions.png");
-            }
-        }
+        // Actions in the Measure Filters tab
+        applyAllMeasureFilters();
 
-        String[] filters = getArrayParam("filters");
-        if(!filters[0].equals("")){
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_StuFilters.png");
-            }
-            applyAllStudentFilters(filters);
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Post-apply_StuFilters.png");
-            }
-        }
+        // Actions in the Residual Exclusions tab
+        applyAllResidualExclusions();
 
-        String[] measures = getArrayParam("measures");
-        if(!measures[0].equals("")){
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_MeasFilters.png");
-            }
-            applyAllMeasureFilters(measures);
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Post-apply_MeasFilters.png");
-            }
-        }
+        // Actions in the Grade Filters area
+        applyAllGradeFilterOptions();
 
-        String[] residuals = getArrayParam("residuals");
-        if(!residuals[0].equals("")){
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_ResidExcl.png");
-            }
-            Report_AddResidualExclusions exclusionsModal = report.filterTabs.openResidualExclusionsModal();
-            for(String residual : residuals){
-                toggleResidualExclusion(exclusionsModal, residual);
-            }
-            exclusionsModal.apply();
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Post-apply_ResidExcl.png");
-            }
-        }
+        // Actions in the View Display Options area
+        applyAllViewOptions();
+
     }
 
-    public void applyAllDatasetOptions(String[] datasetOptions){
-        String field; String value; int delimIndex;
-        for (String datasetOption : datasetOptions) {
-            delimIndex = datasetOption.indexOf("=");
-            field = datasetOption.substring(0, delimIndex);
-            value = datasetOption.substring(delimIndex + 1);
-            applyReportDatasetOption(field, value);
+
+    public void applyAllDatasetOptions(){
+        String[] datasetOptions = getArrayParam("dataset-options");
+        if (!datasetOptions[0].equals("")) {
+            for (String datasetOption : datasetOptions) {
+                int delimIndex = datasetOption.indexOf("=");
+                String field = datasetOption.substring(0, delimIndex);
+                String value = datasetOption.substring(delimIndex + 1);
+                applyReportDatasetOption(field, value);
+            }
         }
+
     }
 
     @Step( "Apply Dataset option '{field}' = '{value}'" )
@@ -168,13 +127,111 @@ public abstract class ReportTest extends BaseTest {
 
     }
 
-    public void applyAllGradeFilterOptions(String[] gradeFilterOptions){
-        String field; String value; int delimIndex;
-        for (String gradeFilterOption : gradeFilterOptions){
-            delimIndex = gradeFilterOption.indexOf("=");
-            field = gradeFilterOption.substring(0,delimIndex);
-            value = gradeFilterOption.substring(delimIndex+1);
-            applyGradeFilterOptions(field, value);
+
+    public void applyAllStudentFilters(){
+        String[] filters = getArrayParam("filters");
+        if(!filters[0].equals("")){
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_StuFilters.png");
+            }
+            Report_AddStudentFilters stuFiltersModal = report.filterTabs.openStudentFiltersModal();
+            for (String filter : filters){
+                int delimIndex = filter.indexOf("=");
+                String filterName = filter.substring(0,delimIndex);
+                String filterValue = filter.substring(delimIndex+1);
+                toggleStudentFilter(stuFiltersModal, filterName, filterValue);
+            }
+            stuFiltersModal.apply();
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_StuFilters.png");
+            }
+        }
+    }
+
+    @Step( "Toggle Student Filter {filterName}[{filterVal}]" )
+    public void toggleStudentFilter(Report_AddStudentFilters stuFiltersModal, String filterName, String filterVal){
+        stuFiltersModal.toggleFilterValue(filterName, filterVal);
+    }
+
+
+    public void applyAllMeasureFilters(){
+        String[] measures = getArrayParam("measures");
+        if(!measures[0].equals("")){
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_MeasFilters.png");
+            }
+
+            Report_AddMeasureFilters measFiltersModal = report.filterTabs.openMeasureFiltersModal();
+            for (String measure : measures){
+                int delimIndex = measure.indexOf("=");
+                String measureName = measure.substring(0,delimIndex);
+                String measureValue = measure.substring(delimIndex+1);
+                String[] actCompValues = {"",""};
+
+                if (measureValue.contains("+")){
+                    actCompValues = measureValue.split("\\+");
+                    actCompValues[1] = "Compare"+actCompValues[1];
+                } else {
+                    actCompValues[0] = measureValue;
+                }
+                applyMeasureFilter(measFiltersModal, measureName, actCompValues[0], actCompValues[1]);
+            }
+            measFiltersModal.apply();
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_MeasFilters.png");
+            }
+        }
+    }
+
+    @Step ( "Click {actualValue}|{compValue} Measure Filter Options for {measureName}" )
+    public void applyMeasureFilter(Report_AddMeasureFilters measFiltersModal, String measureName, String actualValue, String compValue){
+        if (!actualValue.equals("")){
+            measFiltersModal.clickMeasureFilterOption(measureName, actualValue);
+        }
+        if (!compValue.equals("")){
+            measFiltersModal.clickMeasureFilterOption(measureName, compValue);
+        }
+    }
+
+
+    public void applyAllResidualExclusions(){
+        String[] residuals = getArrayParam("residuals");
+        if(!residuals[0].equals("")){
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_ResidExcl.png");
+            }
+            Report_AddResidualExclusions exclusionsModal = report.filterTabs.openResidualExclusionsModal();
+            for(String residual : residuals){
+                toggleResidualExclusion(exclusionsModal, residual);
+            }
+            exclusionsModal.apply();
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_ResidExcl.png");
+            }
+        }
+    }
+
+    @Step( "Toggle the residual exclusion setting for {qualName}" )
+    public void toggleResidualExclusion(Report_AddResidualExclusions exclusionsModal, String qualName){
+        exclusionsModal.toggleQualExclusion(qualName);
+    }
+
+
+    public void applyAllGradeFilterOptions(){
+        String[] gradeFilterOptions = getArrayParam("grade-filter-options");
+        if (!gradeFilterOptions[0].equals("")) {
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_GradeFilters.png");
+            }
+            for (String gradeFilterOption : gradeFilterOptions){
+                int delimIndex = gradeFilterOption.indexOf("=");
+                String field = gradeFilterOption.substring(0,delimIndex);
+                String value = gradeFilterOption.substring(delimIndex+1);
+                applyGradeFilterOptions(field, value);
+            }
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_GradeFilters.png");
+            }
         }
     }
 
@@ -228,13 +285,22 @@ public abstract class ReportTest extends BaseTest {
         }
     }
 
-    public void applyAllViewOptions(String[] viewOptions){
-        String field; String value; int delimIndex;
-        for (String viewOption : viewOptions){
-            delimIndex = viewOption.indexOf("=");
-            field = viewOption.substring(0,delimIndex);
-            value = viewOption.substring(delimIndex+1);
-            applyViewOption(field, value);
+
+    public void applyAllViewOptions(){
+        String[] viewOptions = getArrayParam("view-options");
+        if (!viewOptions[0].equals("")) {
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Pre-apply_ViewOptions.png");
+            }
+            for (String viewOption : viewOptions){
+                int delimIndex = viewOption.indexOf("=");
+                String field = viewOption.substring(0,delimIndex);
+                String value = viewOption.substring(delimIndex+1);
+                applyViewOption(field, value);
+            }
+            if (debugMode) {
+                saveScreenshot(context.getName()+"-Post-apply_ViewOptions.png");
+            }
         }
     }
 
@@ -278,56 +344,4 @@ public abstract class ReportTest extends BaseTest {
         }
     }
 
-    public void applyAllStudentFilters(String[] filters){
-        String filterName; String filterValue; int delimIndex;
-        Report_AddStudentFilters stuFiltersModal = report.filterTabs.openStudentFiltersModal();
-        for (String filter : filters){
-            delimIndex = filter.indexOf("=");
-            filterName = filter.substring(0,delimIndex);
-            filterValue = filter.substring(delimIndex+1);
-            toggleStudentFilter(stuFiltersModal, filterName, filterValue);
-        }
-        stuFiltersModal.apply();
-    }
-
-    @Step( "Toggle Student Filter {filterName}[{filterVal}]" )
-    public void toggleStudentFilter(Report_AddStudentFilters stuFiltersModal, String filterName, String filterVal){
-        stuFiltersModal.toggleFilterValue(filterName, filterVal);
-    }
-
-    public void applyAllMeasureFilters(String[] measures){
-        String measureName; String measureValue; int delimIndex;
-
-        Report_AddMeasureFilters measFiltersModal = report.filterTabs.openMeasureFiltersModal();
-        for (String measure : measures){
-            delimIndex = measure.indexOf("=");
-            measureName = measure.substring(0,delimIndex);
-            measureValue = measure.substring(delimIndex+1);
-            String[] actCompValues = {"",""};
-
-            if (measureValue.contains("+")){
-                actCompValues = measureValue.split("\\+");
-                actCompValues[1] = "Compare"+actCompValues[1];
-            } else {
-                actCompValues[0] = measureValue;
-            }
-            applyMeasureFilter(measFiltersModal, measureName, actCompValues[0], actCompValues[1]);
-        }
-        measFiltersModal.apply();
-    }
-
-    @Step ( "Click {actualValue}|{compValue} Measure Filter Options for {measureName}" )
-    public void applyMeasureFilter(Report_AddMeasureFilters measFiltersModal, String measureName, String actualValue, String compValue){
-        if (!actualValue.equals("")){
-            measFiltersModal.clickMeasureFilterOption(measureName, actualValue);
-        }
-        if (!compValue.equals("")){
-            measFiltersModal.clickMeasureFilterOption(measureName, compValue);
-        }
-    }
-
-    @Step( "Toggle the residual exclusion setting for {qualName}" )
-    public void toggleResidualExclusion(Report_AddResidualExclusions exclusionsModal, String qualName){
-        exclusionsModal.toggleQualExclusion(qualName);
-    }
 }

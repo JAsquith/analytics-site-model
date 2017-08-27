@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.fail;
+
 
 /**
  * An abstract class which takes care of functions common to all/most tests, for example: launching a new browser
@@ -43,16 +45,6 @@ public abstract class BaseTest {
     protected TestUtils utils;
     protected ITestContext context;
 
-    @AfterTest
-    public void tearDown(){
-        try{
-            new AnalyticsPage(driver).clickMenuLogout();
-        } catch (Throwable t){}
-        try{
-            driver.quit();
-        } catch (Throwable t){}
-    }
-
     /**
      * Initialises a new test by instantiating a new RemoteWebDriver (and some other test properties) based on
      * the settings found in the TestNG xml suite file and the test.properties file.
@@ -63,23 +55,38 @@ public abstract class BaseTest {
      */
     @Step( "Create a WebDriver and navigate to Analytics" )
     protected void initialise(ITestContext context_TestNG) throws MalformedURLException {
-        context = context_TestNG;
-        utils = new TestUtils(context_TestNG);
-        debugMode = getBooleanParam("debug", false);
-        try {
-            driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
-        } catch (MalformedURLException e) {
-            System.out.println("Exception starting web browser");
-            e.printStackTrace();
-            throw new MalformedURLException(e.getMessage());
+        initTestVariables(context_TestNG);
+
+        if(utils.runTest==false){
+            fail("Test is not listed in " + utils.TESTS_LIST_FILE);
+        }else{
+            context.getCurrentXmlTest().addParameter("depends-on-test-id", utils.getDependsOnTestId());
         }
+
+        driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
 
         //driver.manage().window().maximize();
 
-        String testDomain = getStringParam("test.domain");
-        String testProtocol = getStringParam("test.protocol");
-        applicationUrl = testProtocol+"://"+testDomain+".sisraanalytics.co.uk";
         driver.get(applicationUrl);
+    }
+
+    @AfterTest
+    public void tearDown(){
+        try{
+            new AnalyticsPage(driver).clickMenuLogout();
+        } catch (Throwable t){}
+        try{
+            driver.quit();
+        } catch (Throwable t){}
+    }
+
+    private void initTestVariables(ITestContext context_TestNG){
+        context = context_TestNG;
+        utils = new TestUtils(context_TestNG);
+        debugMode = getBooleanParam("debug", false);
+
+        applicationUrl = getStringParam("test.protocol")+"://"+
+                getStringParam("test.domain") + ".sisraanalytics.co.uk";
     }
 
     /**
@@ -148,9 +155,16 @@ public abstract class BaseTest {
         try{
             assertThat(reason, actual, matcher);
         } catch (AssertionError ae){
+            filename = filename.replaceAll("[\\/:*?\"<>|]", "");
+            saveCurrentURL(filename.replace(".png",".url"));
             saveScreenshot(filename);
             throw ae;
         }
+    }
+
+    @Attachment(value = "{filename}")
+    protected String saveCurrentURL(String filename){
+        return driver.getCurrentUrl();
     }
 
     @Attachment(value = "{filename}")
@@ -162,7 +176,6 @@ public abstract class BaseTest {
         File directory = new File(String.valueOf(dirPath));
         directory.mkdir();
 
-        filename = filename.replaceAll("[\\/:*?\"<>|]", "");
         filename = dirPath + File.separator + filename;
         File file = new File(filename);
         try {

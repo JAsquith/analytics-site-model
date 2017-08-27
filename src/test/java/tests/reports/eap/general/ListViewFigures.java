@@ -1,8 +1,10 @@
 package tests.reports.eap.general;
 
-import io.qameta.allure.*;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -19,11 +21,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-@Epic( "EAP Reports - Column Figures" )
-@Feature( "Figures in a specific view and column should be calculated correctly" )
+@Epic( "EAP Reports" )
+@Feature( "List View Column Figures" )
+@Story( "Check a Column in a List View Report" )
 public class ListViewFigures extends ReportTest{
 
     private String actualFiguresFile;
@@ -31,10 +33,8 @@ public class ListViewFigures extends ReportTest{
     private String column;
     private String table;
 
-    @Test
-    @Severity( SeverityLevel.CRITICAL )
+    @Test ( description = "1. Read the Report View" )
     @Parameters( {"column-name", "expected-report-figures-file"} )
-    @Story( "Extract column data to text file" )
     @Step ( "Saving Name and {columnName} values to actual/{expectedFiguresFileName}" )
     public void extractReportFigures(String columnName, String expectedFiguresFileName){
 
@@ -55,10 +55,9 @@ public class ListViewFigures extends ReportTest{
         }
     }
 
-    @Test( dependsOnMethods = "extractReportFigures")
-    @Severity( SeverityLevel.CRITICAL )
+    @Test( description = "2. Check Number of Rows",
+            dependsOnMethods = "extractReportFigures")
     @Parameters( {"expected-report-figures-file"} )
-    @Story( "View contained the expected number of rows" )
     @Step ( "actual/{expectedFiguresFileName} & expected/{expectedFiguresFileName} have the same number of lines" )
     public void checkFileLengths(String expectedFiguresFileName){
         int expectedLines = 0;
@@ -77,16 +76,11 @@ public class ListViewFigures extends ReportTest{
                 actualLines, is(expectedLines));
     }
 
-    @Test( dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
-    @Story( "Values match expected data for one row" )
-    @Step( "{viewColDesc} row ({actual}) matches expected ({expected})" )
-    public void checkReportFigures(ITestContext testContext, String viewColDesc, String expected, String actual){
-        try {
-            assertThat("Row data from "+viewColDesc, actual, is(expected));
-        } catch (Throwable t){
-            saveScreenshot(testContext.getName()+".png");
-            throw t;
-        }
+    @Test( description = "3. Check Row Details",
+            dependsOnMethods = {"extractReportFigures"}, dataProvider = "reportFigures")
+    @Step( "Row {lineNum}; ({actual}) matches ({expected})" )
+    public void checkReportFigures(String lineNum, String expected, String actual){
+        assertWithScreenshot("Row "+ lineNum + " in "+ getColumnDescriptor(), actual, is(expected));
     }
 
     /**
@@ -102,11 +96,11 @@ public class ListViewFigures extends ReportTest{
         BufferedReader expectedBr = new BufferedReader(new FileReader(expectedFiguresFile));
         BufferedReader actualBr = new BufferedReader(new FileReader(actualFiguresFile));
         String expectedLine; String actualLine;
-
+        int rowNum = 0;
         while ((expectedLine = expectedBr.readLine()) != null &&
                 (actualLine = actualBr.readLine()) != null){
-
-            data = (getColumnDescriptor()+"~"+expectedLine+"~"+actualLine).split("~");
+            rowNum++;
+            data = (rowNum+"~"+expectedLine+"~"+actualLine).split("~");
             testCases.add(data);
         }
         return testCases.iterator();

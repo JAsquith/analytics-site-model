@@ -1,10 +1,12 @@
 package utils;
 
+import com.opencsv.CSVReader;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -15,12 +17,19 @@ import java.util.Set;
 
 public class TestUtils {
     private Map<String, String> params;
+
+    private final String TEST_PROPERTIES_FILENAME = "test.properties";
+    private boolean testPropsRead;
     private Properties testProperties;
     private Set<String> testPropNames;
-    private boolean testPropsRead;
+
     private Properties sysProperties;
     private Set<String> sysPropNames;
-    private final String TEST_PROPERTIES_FILE = "test.properties";
+
+    public final String TESTS_LIST_FILE = "TestsList.csv";
+    private boolean testListExists;
+    public boolean runTest;
+    private String[] testListLine;
 
     public TestUtils (ITestContext test){
         // Read the Test Parameters from the TestNG.xml file(s) into memory
@@ -32,7 +41,7 @@ public class TestUtils {
 
         // Read the Test Properties file into memory
         testPropsRead = false;
-        File f_Props = new File(TEST_PROPERTIES_FILE);
+        File f_Props = new File(TEST_PROPERTIES_FILENAME);
         try {
             FileReader r_Props = new FileReader(f_Props);
             testProperties = new Properties();
@@ -42,7 +51,45 @@ public class TestUtils {
         }
         testPropNames = testProperties.stringPropertyNames();
         testPropsRead = true;
+
+        // Read this test's line from the Test List file (if it exists)
+        runTest = false;
+        testListExists = readTestListCSV();
     }
+
+    public boolean readTestListCSV(){
+        CSVReader reader;
+        try{
+            reader = new CSVReader(new FileReader(TESTS_LIST_FILE));
+            String testId = String.valueOf(getTestSetting("test-id",0));
+            while ((testListLine = reader.readNext()) != null){
+                if(testListLine[0].equals(testId)){
+                    runTest = true;
+                    break;
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            System.err.println(TESTS_LIST_FILE + " does not exist");
+            e.printStackTrace();
+            runTest = true;
+            return false;
+        } catch (IOException e) {
+            System.err.println(TESTS_LIST_FILE + " may be corrupted");
+            e.printStackTrace();
+            runTest = false;
+            return false;
+        }
+        return true;
+    }
+
+    public String getDependsOnTestId(){
+        if (testListExists){
+            return testListLine[1];
+        }
+        return "";
+    }
+
 
     public String getTestSetting(String setting) {
         return getTestSetting(setting, "");

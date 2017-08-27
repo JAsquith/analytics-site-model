@@ -20,7 +20,8 @@ import static org.testng.Assert.fail;
  *
  */
 @Epic("Account Security")
-@Feature("Authority Groups Control Access to Main Menu Areas")
+@Feature("Authority Groups Permissions")
+@Story( "Access to Main Menu Areas is controlled by Authority Group Roles" )
 public class AreaAccessTest extends AccessTest {
 
     protected AnalyticsPage homePage;
@@ -77,19 +78,16 @@ public class AreaAccessTest extends AccessTest {
         }
     }
 
-    @Story( "The correct Main Menu options should be visible" )
-    @Severity( SeverityLevel.BLOCKER )
-    @Test
-    @Step( "Check the visible Main Menu labels" )
+    @Severity( SeverityLevel.CRITICAL )
+    @Test( description = "Check the visible Main Menu labels")
     public void menuOptionsDisplayedTest(){
         homePage = new HomePage(driver, true);
         assertWithScreenshot("Available Menu Options",
                 getActualMenuLabels(), is(getExpectedMenuLabels()));
     }
 
-    @Story( "The visible Main Menu options link to the correct pages" )
     @Severity( SeverityLevel.BLOCKER )
-    @Test
+    @Test( description = "Check the Main Menu button links" )
     public void menuOptionLinksTest(){
         homePage = new AnalyticsPage(driver);
         String[] areaNames = getArrayParam("accessible-areas");
@@ -99,10 +97,8 @@ public class AreaAccessTest extends AccessTest {
         }
     }
 
-    @Story( "Role Error page blocks access to Areas the user should not see" )
     @Severity( SeverityLevel.BLOCKER )
-    @Test
-    @Step ( "Check URL access to all blocked areas" )
+    @Test( description = "Check URL access to all blocked areas" )
     public void urlAreaAccessTest(){
         String[] areaNames = Area.getAllAreaNames();
         List<String> expAreaNames = Arrays.asList(getArrayParam("accessible-areas"));

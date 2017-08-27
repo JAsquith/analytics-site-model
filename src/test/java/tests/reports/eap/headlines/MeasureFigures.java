@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 @Epic( "EAP Reports" )
@@ -79,12 +78,7 @@ public class MeasureFigures extends ReportTest{
     @Severity( SeverityLevel.CRITICAL )
     @Step( "Row {lineNum}: ({actual}) matches ({expected})" )
     public void checkReportFigures(String lineNum, String expected, String actual){
-        try {
-            assertThat("Row in "+ getSectionDescriptor(), actual, is(expected));
-        } catch (Throwable t){
-            saveScreenshot(context.getName()+".png");
-            throw t;
-        }
+        assertWithScreenshot("Row "+ lineNum + " in "+ getSectionDescriptor(), actual, is(expected));
     }
 
     /**
