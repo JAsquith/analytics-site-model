@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Authority Group Tests" parallel="tests" thread-count="4">
+<suite name="Security Tests" parallel="tests" thread-count="4">
+
+    <!-- Login Page Tests -->
+    <test name="Invalid credentials should fail login">
+        <parameter name="test-id" value="000001" />
+        <parameter name="username" value="AsqJam" />
+        <parameter name="password" value="Password1" />
+
+        <parameter name="no-details-val-msg-count" value="2" />
+        <parameter name="no-password-val-msg-count" value="1" />
+        <parameter name="no-username-val-msg-count" value="1" />
+
+        <parameter name="no-details-val-msgs" value="Please enter a username.|Please enter a password." />
+        <parameter name="no-password-val-msgs" value="Please enter a password." />
+        <parameter name="no-username-val-msgs" value="Please enter a username." />
+
+        <classes>
+            <class name="tests.account.LoginValidationTests" />
+        </classes>
+    </test>
 
     <!-- Users in the SISRA Default Auth groups -->
     <test name="Default Group - Admin">
+        <parameter name="test-id" value="000002" />
         <parameter name="username" value="tesadm184706" />
         <parameter name="password" value="CsZeSsXg9" />
         <parameter name="auth-group" value="Admin" />
@@ -17,6 +37,7 @@
         </classes>
     </test>
     <test name="Default Group - User">
+        <parameter name="test-id" value="000003" />
         <parameter name="username" value="tesuse184707" />
         <parameter name="password" value="VfMcTfCh3" />
         <parameter name="auth-group" value="User" />
@@ -29,6 +50,7 @@
 
     <!-- Users with access to different areas -->
     <test name="Area Access - Area Home Announce">
+        <parameter name="test-id" value="000004" />
         <parameter name="username" value="annhom184709" />
         <parameter name="password" value="VjHyGoMn5" />
         <parameter name="auth-group" value="Area Home Announce" />
@@ -39,6 +61,7 @@
         </classes>
     </test>
     <test name="Area Access - Area Data">
+        <parameter name="test-id" value="000005" />
         <parameter name="username" value="tesdat184710" />
         <parameter name="password" value="ZeDiRfHf5" />
         <parameter name="auth-group" value="Area Data" />
@@ -48,6 +71,7 @@
         </classes>
     </test>
     <test name="Area Access - Area Users">
+        <parameter name="test-id" value="000006" />
         <parameter name="username" value="tesuse184711" />
         <parameter name="password" value="JrEvSrKn8" />
         <parameter name="auth-group" value="Area Users" />
@@ -59,6 +83,7 @@
 
     <!-- Users with Reports access -->
     <test name="Report Areas - (H)">
+        <parameter name="test-id" value="000007" />
         <parameter name="username" value="tesrep184712" />
         <parameter name="password" value="GkJfZbDo2" />
         <parameter name="auth-group" value="Reports (H)" />
@@ -70,6 +95,7 @@
         </classes>
     </test>
     <test name="Report Areas - (H and Q)">
+        <parameter name="test-id" value="000008" />
         <parameter name="username" value="tesrep184713" />
         <parameter name="password" value="DqJgKyHj5" />
         <parameter name="auth-group" value="Reports (H and Q)" />
@@ -80,6 +106,7 @@
         </classes>
     </test>
     <test name="Report Areas - (H and S)">
+        <parameter name="test-id" value="000009" />
         <parameter name="username" value="tesrep184714" />
         <parameter name="password" value="PoZvFyAo3" />
         <parameter name="auth-group" value="Reports (H and S)" />
@@ -90,6 +117,7 @@
         </classes>
     </test>
     <test name="Report Areas - (Q)">
+        <parameter name="test-id" value="000010" />
         <parameter name="username" value="tesrep184715" />
         <parameter name="password" value="WsKkSzNo9" />
         <parameter name="auth-group" value="Reports (Q)" />
@@ -100,6 +128,7 @@
         </classes>
     </test>
     <test name="Report Areas - (Q and S)">
+        <parameter name="test-id" value="000011" />
         <parameter name="username" value="tesrep184716" />
         <parameter name="password" value="UpUnBnWk5" />
         <parameter name="auth-group" value="Reports (Q and S)" />
@@ -110,6 +139,7 @@
         </classes>
     </test>
     <test name="Report Areas - (S)">
+        <parameter name="test-id" value="000012" />
         <parameter name="username" value="tesrep184717" />
         <parameter name="password" value="KyXtFeJz5" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -121,6 +151,7 @@
 
     <!-- Users with access to Locked Reports -->
     <test name="Locked Reports - (H)">
+        <parameter name="test-id" value="000013" />
         <parameter name="username" value="tesloc184718" />
         <parameter name="password" value="UhThRySm5" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -132,6 +163,7 @@
         </classes>
     </test>
     <test name="Locked Reports - (H and Q)">
+        <parameter name="test-id" value="000014" />
         <parameter name="username" value="tesloc184719" />
         <parameter name="password" value="EtQrQwRc3" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -143,6 +175,7 @@
         </classes>
     </test>
     <test name="Locked Reports - (H and S)">
+        <parameter name="test-id" value="000015" />
         <parameter name="username" value="tesloc184720" />
         <parameter name="password" value="UhJrXgHh6" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -154,6 +187,7 @@
         </classes>
     </test>
     <test name="Locked Reports - (Q)">
+        <parameter name="test-id" value="000016" />
         <parameter name="username" value="tesloc184721" />
         <parameter name="password" value="RsHrKvZy5" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -165,6 +199,7 @@
         </classes>
     </test>
     <test name="Locked Reports - (Q and S)">
+        <parameter name="test-id" value="000017" />
         <parameter name="username" value="tesloc184722" />
         <parameter name="password" value="VfDkHfDi7" />
         <parameter name="accessible-areas" value="Home|Reports" />
@@ -176,6 +211,7 @@
         </classes>
     </test>
     <test name="Locked Reports - (S)">
+        <parameter name="test-id" value="000018" />
         <parameter name="username" value="tesloc184723" />
         <parameter name="password" value="PiVzJyQr2" />
         <parameter name="accessible-areas" value="Home|Reports" />
