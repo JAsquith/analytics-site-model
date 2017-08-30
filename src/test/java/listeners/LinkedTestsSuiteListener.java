@@ -1,13 +1,31 @@
 package listeners;
 
 import org.testng.*;
+import utils.FileManager;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public class LinkedTestsSuiteListener implements ISuiteListener {
 
-    Map<String,String> processed;
+    private SimpleDateFormat stampFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+
+    class ResultSummary {
+        String testId; String startTime; String endTime;
+        int setupFails; int passCount; int failCount; int skipCount;
+        String setupFailReason;
+
+        public String toString(){
+            return testId+","+startTime+","+endTime+","+
+                    setupFails+","+passCount+","+failCount+","+skipCount+","+
+                    setupFailReason;
+        }
+    }
 
     @Override
     public void onStart(ISuite suite) {
@@ -17,51 +35,114 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
     public void onFinish(ISuite suite) {
         Map<String, ISuiteResult> tests = suite.getResults();
         Set<Map.Entry<String, ISuiteResult>> set = tests.entrySet();
+
+        /*
+        This method should produce two csv files.
+        The first is a summary of the Suite Results with:
+          - one line per XML Test node with the following fields:
+        +---------+-------+-----+-------------+--------+-------+-------+-------------------+
+        | Test ID | Start | End | Setup Fails | Passes | Fails | Skips | Setup Fail Reason |
+        +---------+-------+-----+-------------+--------+-------+-------+-------------------+
+        The second file is a simple list of all the tests where *all* the test methods passed,
+        containing the test-id for each
+         */
+
+        ResultSummary summary;
+        List<String> fullPassesList = new ArrayList<String>();
+        int noIDCount = 0;
+        FileManager fm = new FileManager();
+        FileOutputStream fos = fm.createFileForOutput("sisra-results", suite.getName()+"_summary.csv");
+
+        // Loop through the ISuiteResults (one result for each <test> element in the testng.xml file)
         for (Map.Entry<String, ISuiteResult> entry : set) {
+            summary = new ResultSummary();
+            // First get the result for the current test, and from that the testId ("test-id" parameter)
             ISuiteResult suiteResult = entry.getValue();
             ITestContext context = suiteResult.getTestContext();
-            String testId = context.getCurrentXmlTest().getAllParameters().get("test-id");
+            Map<String, String> allParams = context.getCurrentXmlTest().getAllParameters();
 
+            if (allParams.containsKey("test-id")) {
+                summary.testId = allParams.get("test-id");
+            } else {
+                // Need to deal with this
+                noIDCount++;
+                summary.testId = "Null ID "+noIDCount;
+            }
+
+            // Get the start and end times
+            summary.startTime = stampFormat.format(context.getStartDate());
+            summary.endTime = stampFormat.format(context.getEndDate());
+
+            // Log any config/setup failures
             IResultMap failedConfigs = context.getFailedConfigurations();
-            if (failedConfigs.size()>0){
-                Set<ITestResult> failedConfigTests = failedConfigs.getAllResults();
-                String msg = "No message";
-                for (ITestResult result : failedConfigTests){
-                    if(result.getThrowable()!=null){
-                        msg = result.getThrowable().getMessage();
-                        break;
+            summary.setupFails=failedConfigs.size();
+            summary.setupFailReason = "";
+            if (summary.setupFails>0){
+
+                // Look for a setup failure reason:
+                //  - first check for a "setup-fail-reason" having been added to the test params
+                if (allParams.containsKey("setup-fail-reason")){
+                    summary.setupFailReason = allParams.get("setup-fail-reason");
+                } else {
+                    // - see if any (there should only be one) of the failedConfigs have a throwable we can get
+                    Set<ITestResult> failedConfigTests = failedConfigs.getAllResults();
+                    String msg = "No reason found";
+                    for (ITestResult result : failedConfigTests){
+                        if(result.getThrowable()!=null){
+                            msg = result.getThrowable().getMessage();
+                            break;
+                        }
+                    }
+                    summary.setupFailReason = msg;
+                }
+            }
+
+            // Log any test method that failed
+            summary.failCount = context.getFailedTests().size();
+
+            // Log any test methods that were skipped
+            summary.skipCount = context.getSkippedTests().size();
+
+            // Log any test methods that passed
+            summary.passCount = context.getPassedTests().size();
+
+            // If there were no failures or skips, add this test to the fullPassesList
+            if (summary.passCount>0){
+                if (summary.setupFails == 0 && summary.failCount == 0 && summary.skipCount == 0){
+                    if (!fullPassesList.contains(summary.testId)){
+                        fullPassesList.add(summary.testId);
                     }
                 }
-                if (processed.containsKey(testId)){
-                    processed.replace(testId,context.getName()+","+"setup"+" - "+msg);
-                } else {
-                    processed.put(testId,context.getName()+","+"setup"+" - "+msg);
-                }
             }
 
-            IResultMap failedTests = context.getFailedTests();
-            if (failedTests.size()>0){
-                if (processed.containsKey(testId)){
-                }else {
+            writeResultSummary(fos, summary.toString());
+        }
 
-                }
-                writeResult(testId, context.getName()+","+"failed:"+failedTests.size());
-            }
+        writePassesList(suite.getName(), fullPassesList);
 
-            IResultMap skippedTests = context.getSkippedTests();
-            if (skippedTests.size()>0){
-                writeResult(testId, context.getName()+","+"skipped:"+skippedTests.size());
-            }
+    }
 
-            IResultMap passedTests = context.getPassedTests();
-            if (passedTests.size()>0){
-                writeResult(testId, context.getName()+","+"passed:"+passedTests.size());
-            }
-            writeResult(testId, processed.get(testId));
+    private void writeResultSummary(FileOutputStream fos, String result){
+        try {
+            fos.write(result.getBytes());
+            fos.write(System.lineSeparator().getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    private void writeResult(String testID, String result){
-        System.out.println(testID + "," + result);
+    private void writePassesList(String suiteName, List<String> passesList){
+        // Todo: change this to 1) update a single file, 2) these results files should be in the target folder
+        System.out.println("Create File: " + suiteName);
+        FileOutputStream fos = new FileManager().createFileForOutput("sisra-results", suiteName+"_passes.csv");
+        for (String testId : passesList) {
+            try {
+                fos.write(testId.getBytes());
+                fos.write(System.lineSeparator().getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println(testId);
+        }
     }
 }

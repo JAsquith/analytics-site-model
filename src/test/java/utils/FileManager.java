@@ -1,52 +1,157 @@
 package utils;
 
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 
-/**
- * A helper class for manipulating files uploaded/downloaded by Analytcs tests.
- */
-public class FileManager implements FilenameFilter {
+public class FileManager {
 
-    private String dataType = "";
+    static final String NEW_LINE = System.getProperty("line.separator");
 
-    public File[] getUploadFiles(String forKeyStage, String forAdminYear, String uploadType)
-            throws URISyntaxException{
-        dataType = uploadType.toLowerCase();
-        String resourceDir = "Uploads/KS"+forKeyStage+"/Cohort"+forAdminYear+"/" + uploadType;
-        URL uploadFileURL = this.getClass().getClassLoader().getResource(resourceDir);
-        URI uploadFileURI = uploadFileURL.toURI();
-        return new File(uploadFileURI).listFiles(this);
+    public String getDirTableData() {
+        return dirTableData;
     }
 
-    public String getViewListJSONFileAsString(String fileName){
-        String resourceDir = "ViewLists/";
-        InputStream is = this.getClass().getClassLoader().getResourceAsStream(resourceDir+fileName);
+    private String dirTableData;
 
-        String result = "";
+    public FileManager(){
+        String currDir = System.getProperty("user.dir");
+        dirTableData = (currDir.endsWith(File.separator)) ? currDir : currDir + File.separator;
+        dirTableData += "test-resources" + File.separator + "table-data" + File.separator;
+    }
+    public String getFullPath(String filename){
+        return dirTableData + filename;
+    }
+
+    public BufferedReader openFileForReading(String fileName) {
+
+        BufferedReader br;
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-            while (line != null) {
-                sb.append(line);
-                line = br.readLine();
+            if(!fileName.startsWith(dirTableData)){
+                fileName = dirTableData + fileName;
             }
-            result = sb.toString();
-        } catch(Exception e) {
+            br = new BufferedReader(new FileReader(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return br;
+    }
+
+    public String readNextLine(BufferedReader br){
+
+        String line;
+        try {
+            line = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return line;
+    }
+
+    public Boolean createFileWithData(String filePath, String csvData){
+        try {
+            FileOutputStream fos = new FileOutputStream(new File(filePath));
+            fos.write(csvData.getBytes());
+            fos.close();
+        } catch (IOException e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    public Boolean createFileWithData(String folder, String fileName, String csvData) {
+        String filePath = checkDirExists(folder) + fileName;
+        return createFileWithData(filePath, csvData);
+    }
+
+    public FileOutputStream createFileForOutput(String folder, String fileName){
+        String filePath = checkDirExists(folder) + fileName;
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(new File(filePath));
+        } catch (IOException e){
+            e.printStackTrace();
+            return null;
+        }
+        return fos;
+    }
+
+    public int findFileDifference(String expectedFileName, String actSubDir, String diffSubDir){
+
+        if(!actSubDir.endsWith(File.separator)){
+            actSubDir += File.separator;
+        }
+
+        String actFileName = checkDirExists(actSubDir) + expectedFileName;
+
+        BufferedReader brExpected;
+        BufferedReader brActual;
+
+        brExpected = openFileForReading(expectedFileName);
+        brActual = openFileForReading(actFileName);
+
+        FileOutputStream fosDifferences = null;
+
+        int lineNum = 1;
+        int diffLines = 0;
+
+        String lineExpected = readNextLine(brExpected);
+        String lineActual = readNextLine(brActual);
+        while (lineExpected != null && lineActual != null){
+
+            String difference = compareLines(lineNum, expectedFileName, actFileName, lineExpected, lineActual);
+
+            if (!difference.equals("")){
+                if (diffLines == 0) {
+                    fosDifferences = createFileForOutput(diffSubDir, expectedFileName);
+                    writeCompareHeader(fosDifferences, expectedFileName, actFileName);
+                }
+                diffLines++;
+                updateDiffFile(fosDifferences, difference);
+            }
+
+            lineExpected = readNextLine(brExpected);
+            lineActual = readNextLine(brActual);
+            lineNum++;
+        }
+
+        if (lineExpected != null){
+            if (diffLines == 0) {
+                fosDifferences = createFileForOutput(diffSubDir, expectedFileName);
+                writeCompareHeader(fosDifferences, expectedFileName, actFileName);
+            }
+            lineActual = "ERROR - Beyond Last Expected Row!";
+            while (lineExpected != null){
+                String difference = compareLines(lineNum, expectedFileName, actFileName, lineExpected, lineActual);
+                diffLines++;
+                updateDiffFile(fosDifferences, difference);
+                lineExpected = readNextLine(brExpected);
+            }
+        }
+
+        if (lineActual != null){
+            if (diffLines == 0) {
+                fosDifferences = createFileForOutput(diffSubDir, expectedFileName);
+                writeCompareHeader(fosDifferences, expectedFileName, actFileName);
+            }
+            lineExpected = "ERROR - Beyond Last Actual Row!";
+            while (lineActual != null){
+                String difference = compareLines(lineNum, expectedFileName, actFileName, lineExpected, lineActual);
+                diffLines++;
+                updateDiffFile(fosDifferences, difference);
+                lineActual = readNextLine(brActual);
+            }
+        }
+
+        try {
+            if (diffLines > 0) {
+                fosDifferences.close();
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        return result;
-    }
 
-    @Override
-    public boolean accept(File dir, String name) {
-        if (dataType.equals("")) {
-            return name.toLowerCase().endsWith(".csv");
-        }
-        return name.toLowerCase().contains(dataType) && name.toLowerCase().endsWith(".csv");
+        return diffLines;
     }
 
     public static int countLines(String filename) throws IOException {
@@ -70,6 +175,51 @@ public class FileManager implements FilenameFilter {
         } finally {
             is.close();
         }
+    }
+
+    private void updateDiffFile(FileOutputStream fosDifferences, String difference){
+        try {
+            fosDifferences.write(difference.getBytes());
+            fosDifferences.flush();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    private String compareLines(int lineNum, String expFileName, String actFileName,
+                                String lineExpected, String lineActual){
+        String difference = "";
+        if (!lineExpected.equals(lineActual)){
+            difference = lineNum + ",Expected (" + expFileName + ")," + lineExpected + NEW_LINE;
+            difference += lineNum + ",Actual" + "," + lineActual + NEW_LINE;
+        }
+        return difference;
+    }
+
+    private void writeCompareHeader(FileOutputStream out, String fileName_Expected, String fileName_Actual){
+        String line = "Comparing Lines in Expected and Actual files." + NEW_LINE;
+        line += "'=============================================" + NEW_LINE;
+        line += "Expected: " + fileName_Expected + NEW_LINE;
+        line += "Actual: " + fileName_Actual + NEW_LINE;
+        line += "'=============================================" + NEW_LINE;
+        line += "line,Expected/Actual,line data --->" + NEW_LINE;
+        try {
+            out.write(line.getBytes());
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    private String checkDirExists(String folder){
+        String dirPath = dirTableData + folder;
+        File directory = new File(String.valueOf(dirPath));
+        directory.mkdir();
+
+        if(dirPath.length()>0 && !dirPath.endsWith(File.separator)){
+            dirPath += File.separator;
+        }
+        return dirPath;
     }
 
 }

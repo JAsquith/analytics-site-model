@@ -27,7 +27,6 @@ import static org.testng.Assert.fail;
  * session, logging in to Analytics, error reporting, etc.
  */
 public abstract class BaseTest {
-    // SISRATest Instance Variables
     /**
      *
      */
@@ -39,9 +38,6 @@ public abstract class BaseTest {
     public String applicationUrl;
     protected boolean debugMode;
 
-    /**
-     *
-     */
     protected TestUtils utils;
     protected ITestContext context;
 
@@ -58,8 +54,11 @@ public abstract class BaseTest {
         initTestVariables(context_TestNG);
 
         if(utils.runTest==false){
-            fail("Test is not listed in " + utils.TESTS_LIST_FILE);
+            String failMsg = "Test is not listed in " + utils.TESTS_LIST_FILE;
+            context.getCurrentXmlTest().addParameter("setup-fail-reason",failMsg);
+            fail(failMsg);
         }else{
+
             context.getCurrentXmlTest().addParameter("depends-on-test-id", utils.getDependsOnTestId());
         }
 

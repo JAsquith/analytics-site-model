@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import pages.reports.EAPHeadlineView;
 import tests.reports.ReportTest;
 import utils.FileManager;
-import utils.TableDataFileManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -38,7 +37,7 @@ public class MeasureFigures extends ReportTest{
         section = sectionName;
 
         try {
-            TableDataFileManager fileMgr = new TableDataFileManager();
+            FileManager fileMgr = new FileManager();
             expectedFiguresFile = fileMgr.getFullPath("expected" + File.separator + expectedFiguresFileName);
             actualFiguresFile = fileMgr.getFullPath("actual" + File.separator + expectedFiguresFileName);
 
