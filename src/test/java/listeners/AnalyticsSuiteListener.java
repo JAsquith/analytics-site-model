@@ -18,8 +18,6 @@ import java.util.Set;
 
 /**
  * A Listener class which sends an email containing test results.
- * This class can be specified in a TestNG.xml suite property as follows:
- * Todo - add xml example
  */
 public class AnalyticsSuiteListener implements ISuiteListener, FilenameFilter {
 

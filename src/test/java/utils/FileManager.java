@@ -6,49 +6,31 @@ public class FileManager {
 
     static final String NEW_LINE = System.getProperty("line.separator");
 
-    public String getDirTableData() {
-        return dirTableData;
-    }
+    private String dirProject;
 
     private String dirTableData;
-
+    private String dirTarget;
     public FileManager(){
         String currDir = System.getProperty("user.dir");
-        dirTableData = (currDir.endsWith(File.separator)) ? currDir : currDir + File.separator;
-        dirTableData += "test-resources" + File.separator + "table-data" + File.separator;
+        dirProject = (currDir.endsWith(File.separator)) ? currDir : currDir + File.separator;
+        dirTarget = dirProject + File.separator + "target" + File.separator;
+        dirTableData = dirProject + "test-resources" + File.separator + "table-data" + File.separator;
     }
-    public String getFullPath(String filename){
+
+    // Getters & Setters for private data members
+    public String getTableDataDirectory() {
+        return dirTableData;
+    }
+    public String getTargetDirectory(){
+        return dirTarget;
+    }
+
+
+    // Used in new tests (classes that extend BaseTest)
+    public String getFullTableDataPath(String filename){
         return dirTableData + filename;
     }
-
-    public BufferedReader openFileForReading(String fileName) {
-
-        BufferedReader br;
-        try {
-            if(!fileName.startsWith(dirTableData)){
-                fileName = dirTableData + fileName;
-            }
-            br = new BufferedReader(new FileReader(fileName));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-        return br;
-    }
-
-    public String readNextLine(BufferedReader br){
-
-        String line;
-        try {
-            line = br.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-        return line;
-    }
-
-    public Boolean createFileWithData(String filePath, String csvData){
+    public Boolean createTableDataFileWithData(String filePath, String csvData){
         try {
             FileOutputStream fos = new FileOutputStream(new File(filePath));
             fos.write(csvData.getBytes());
@@ -59,36 +41,50 @@ public class FileManager {
         }
         return true;
     }
-    public Boolean createFileWithData(String folder, String fileName, String csvData) {
-        String filePath = checkDirExists(folder) + fileName;
-        return createFileWithData(filePath, csvData);
+    public FileOutputStream createTargetFileForOutput(String folder, String fileName){
+        return createFileForOutput(dirTarget+folder, fileName);
     }
-
-    public FileOutputStream createFileForOutput(String folder, String fileName){
-        String filePath = checkDirExists(folder) + fileName;
-        FileOutputStream fos;
+    public static int countLines(String filename) throws IOException {
+        InputStream is = new BufferedInputStream(new FileInputStream(filename));
         try {
-            fos = new FileOutputStream(new File(filePath));
-        } catch (IOException e){
-            e.printStackTrace();
-            return null;
+            byte[] c = new byte[1024];
+            int count = 0;
+            int readChars = 0;
+            boolean endsWithoutNewLine = false;
+            while ((readChars = is.read(c)) != -1) {
+                for (int i = 0; i < readChars; ++i) {
+                    if (c[i] == '\n')
+                        ++count;
+                }
+                endsWithoutNewLine = (c[readChars - 1] != '\n');
+            }
+            if(endsWithoutNewLine) {
+                ++count;
+            }
+            return count;
+        } finally {
+            is.close();
         }
-        return fos;
     }
 
+    // Used in old tests (classes that extend SISRATest)
+    public Boolean createTableDataFileWithData(String folder, String fileName, String csvData) {
+        String filePath = checkTableDataDirExists(folder) + fileName;
+        return createTableDataFileWithData(filePath, csvData);
+    }
     public int findFileDifference(String expectedFileName, String actSubDir, String diffSubDir){
 
         if(!actSubDir.endsWith(File.separator)){
             actSubDir += File.separator;
         }
 
-        String actFileName = checkDirExists(actSubDir) + expectedFileName;
+        String actFileName = checkTableDataDirExists(actSubDir) + expectedFileName;
 
         BufferedReader brExpected;
         BufferedReader brActual;
 
-        brExpected = openFileForReading(expectedFileName);
-        brActual = openFileForReading(actFileName);
+        brExpected = openTableDataFileForReading(expectedFileName);
+        brActual = openTableDataFileForReading(actFileName);
 
         FileOutputStream fosDifferences = null;
 
@@ -154,28 +150,54 @@ public class FileManager {
         return diffLines;
     }
 
-    public static int countLines(String filename) throws IOException {
-        InputStream is = new BufferedInputStream(new FileInputStream(filename));
-        try {
-            byte[] c = new byte[1024];
-            int count = 0;
-            int readChars = 0;
-            boolean endsWithoutNewLine = false;
-            while ((readChars = is.read(c)) != -1) {
-                for (int i = 0; i < readChars; ++i) {
-                    if (c[i] == '\n')
-                        ++count;
-                }
-                endsWithoutNewLine = (c[readChars - 1] != '\n');
-            }
-            if(endsWithoutNewLine) {
-                ++count;
-            }
-            return count;
-        } finally {
-            is.close();
+
+
+    // Private Methods
+    private FileOutputStream createFileForOutput(String folder, String fileName){
+        if (!folder.endsWith(File.separator)){
+            folder += File.separator;
         }
+        String filePath = checkTableDataDirExists(folder) + fileName;
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(new File(filePath));
+        } catch (IOException e){
+            e.printStackTrace();
+            return null;
+        }
+        return fos;
     }
+    private String readNextLine(BufferedReader br){
+
+        String line;
+        try {
+            line = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return line;
+    }
+
+    private BufferedReader openFileForReading(String fileName, String parentDir) {
+
+        BufferedReader br;
+        try {
+            if(!fileName.startsWith(parentDir)){
+                fileName = parentDir + fileName;
+            }
+            br = new BufferedReader(new FileReader(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return br;
+    }
+
+    private BufferedReader openTableDataFileForReading(String fileName) {
+        return openFileForReading(fileName, dirTableData);
+    }
+
 
     private void updateDiffFile(FileOutputStream fosDifferences, String difference){
         try {
@@ -211,8 +233,12 @@ public class FileManager {
         }
     }
 
-    private String checkDirExists(String folder){
-        String dirPath = dirTableData + folder;
+    private String checkTableDataDirExists(String folder) {
+        return checkDirExists(folder, dirTableData);
+    }
+
+    private String checkDirExists(String folder, String parentDir){
+        String dirPath = parentDir + folder;
         File directory = new File(String.valueOf(dirPath));
         directory.mkdir();
 

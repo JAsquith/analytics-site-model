@@ -42,12 +42,12 @@ public class ListViewFigures extends ReportTest{
 
         try {
             FileManager fileMgr = new FileManager();
-            expectedFiguresFile = fileMgr.getFullPath("expected" + File.separator + expectedFiguresFileName);
-            actualFiguresFile = fileMgr.getFullPath("actual" + File.separator + expectedFiguresFileName);
+            expectedFiguresFile = fileMgr.getFullTableDataPath("expected" + File.separator + expectedFiguresFileName);
+            actualFiguresFile = fileMgr.getFullTableDataPath("actual" + File.separator + expectedFiguresFileName);
 
             // Extract the actual report figures to a csv file in the same folder as the expected report figures
             EAPListView reportPage = new EAPListView(driver);
-            fileMgr.createFileWithData(actualFiguresFile, reportPage.readColumnData(table, columnName));
+            fileMgr.createTableDataFileWithData(actualFiguresFile, reportPage.readColumnData(table, columnName));
         } catch (Exception e){
             String failMsg = "Error setting up table data files for: "+getColumnDescriptor()+"..." + System.lineSeparator();
             assertWithScreenshot(failMsg, e.getMessage(), is(""));

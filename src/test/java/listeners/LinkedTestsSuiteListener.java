@@ -51,50 +51,26 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
         List<String> fullPassesList = new ArrayList<String>();
         int noIDCount = 0;
         FileManager fm = new FileManager();
-        FileOutputStream fos = fm.createFileForOutput("sisra-results", suite.getName()+"_summary.csv");
+        FileOutputStream fos = fm.createTargetFileForOutput(
+                fm.getTargetDirectory()+"sisra-results", suite.getName()+"_summary.csv");
 
         // Loop through the ISuiteResults (one result for each <test> element in the testng.xml file)
         for (Map.Entry<String, ISuiteResult> entry : set) {
             summary = new ResultSummary();
-            // First get the result for the current test, and from that the testId ("test-id" parameter)
+
             ISuiteResult suiteResult = entry.getValue();
             ITestContext context = suiteResult.getTestContext();
             Map<String, String> allParams = context.getCurrentXmlTest().getAllParameters();
 
-            if (allParams.containsKey("test-id")) {
-                summary.testId = allParams.get("test-id");
-            } else {
-                // Need to deal with this
-                noIDCount++;
-                summary.testId = "Null ID "+noIDCount;
-            }
-
-            // Get the start and end times
+            summary.testId = getTestId(allParams, noIDCount);
             summary.startTime = stampFormat.format(context.getStartDate());
             summary.endTime = stampFormat.format(context.getEndDate());
 
-            // Log any config/setup failures
             IResultMap failedConfigs = context.getFailedConfigurations();
             summary.setupFails=failedConfigs.size();
             summary.setupFailReason = "";
             if (summary.setupFails>0){
-
-                // Look for a setup failure reason:
-                //  - first check for a "setup-fail-reason" having been added to the test params
-                if (allParams.containsKey("setup-fail-reason")){
-                    summary.setupFailReason = allParams.get("setup-fail-reason");
-                } else {
-                    // - see if any (there should only be one) of the failedConfigs have a throwable we can get
-                    Set<ITestResult> failedConfigTests = failedConfigs.getAllResults();
-                    String msg = "No reason found";
-                    for (ITestResult result : failedConfigTests){
-                        if(result.getThrowable()!=null){
-                            msg = result.getThrowable().getMessage();
-                            break;
-                        }
-                    }
-                    summary.setupFailReason = msg;
-                }
+                summary.setupFailReason = getSetupFailMessage(allParams, failedConfigs);
             }
 
             // Log any test method that failed
@@ -122,6 +98,37 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
 
     }
 
+    private String getTestId(Map<String, String> allParams, int noIDCount){
+        if (allParams.containsKey("test-id")) {
+            return allParams.get("test-id");
+        } else {
+            // Need to deal with this
+            noIDCount++;
+            return "Null ID "+noIDCount;
+        }
+
+    }
+
+    private String getSetupFailMessage(Map<String, String> allParams, IResultMap failedConfigs){
+
+        // Look for a setup failure reason:
+        //  - first check for a "setup-fail-reason" having been added to the test params
+        if (allParams.containsKey("setup-fail-reason")){
+            return allParams.get("setup-fail-reason");
+        } else {
+            // - see if any (there should only be one) of the failedConfigs have a throwable we can get
+            Set<ITestResult> failedConfigTests = failedConfigs.getAllResults();
+            String msg = "No reason found";
+            for (ITestResult result : failedConfigTests){
+                if(result.getThrowable()!=null){
+                    msg = result.getThrowable().getMessage();
+                    break;
+                }
+            }
+            return msg;
+        }
+    }
+
     private void writeResultSummary(FileOutputStream fos, String result){
         try {
             fos.write(result.getBytes());
@@ -134,7 +141,7 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
     private void writePassesList(String suiteName, List<String> passesList){
         // Todo: change this to 1) update a single file, 2) these results files should be in the target folder
         System.out.println("Create File: " + suiteName);
-        FileOutputStream fos = new FileManager().createFileForOutput("sisra-results", suiteName+"_passes.csv");
+        FileOutputStream fos = new FileManager().createTargetFileForOutput("sisra-results", suiteName+"_passes.csv");
         for (String testId : passesList) {
             try {
                 fos.write(testId.getBytes());

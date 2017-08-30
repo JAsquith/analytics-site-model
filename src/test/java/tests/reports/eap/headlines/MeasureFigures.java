@@ -38,12 +38,12 @@ public class MeasureFigures extends ReportTest{
 
         try {
             FileManager fileMgr = new FileManager();
-            expectedFiguresFile = fileMgr.getFullPath("expected" + File.separator + expectedFiguresFileName);
-            actualFiguresFile = fileMgr.getFullPath("actual" + File.separator + expectedFiguresFileName);
+            expectedFiguresFile = fileMgr.getFullTableDataPath("expected" + File.separator + expectedFiguresFileName);
+            actualFiguresFile = fileMgr.getFullTableDataPath("actual" + File.separator + expectedFiguresFileName);
 
             // Extract the actual report figures to a csv file in the same folder as the expected report figures
             EAPHeadlineView reportPage = new EAPHeadlineView(driver);
-            fileMgr.createFileWithData(actualFiguresFile, reportPage.readSectionData(sectionName));
+            fileMgr.createTableDataFileWithData(actualFiguresFile, reportPage.readSectionData(sectionName));
         } catch (Exception e){
             String failMsg = "Error setting up table data files for: "+ getSectionDescriptor()+"..." + System.lineSeparator();
             assertWithScreenshot(failMsg, e.getMessage(), is(""));

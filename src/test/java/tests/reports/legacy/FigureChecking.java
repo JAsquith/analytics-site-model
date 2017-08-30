@@ -238,7 +238,7 @@ public class FigureChecking extends SISRATest {
         String expectedDataFile  = getTestParam("dataFiles");
 
         FileManager fileMgr = new FileManager();
-        fileMgr.createFileWithData("Found", expectedDataFile, reportPage.readTableData());
+        fileMgr.createTableDataFileWithData("Found", expectedDataFile, reportPage.readTableData());
 
         diffResult = fileMgr.findFileDifference(expectedDataFile, "Found", "Diff");
 
@@ -257,7 +257,7 @@ public class FigureChecking extends SISRATest {
             default:
                 System.out.println(">>>>> " + diffResult + " rows are different between expected and actual table data");
                 System.out.println("Differences can be examined in [" +
-                        fileMgr.getDirTableData() + File.separator +"Diff" + File.separator + "]");
+                        fileMgr.getTableDataDirectory() + File.separator +"Diff" + File.separator + "]");
         }
 
         assertThat("Rows with differences",
@@ -279,7 +279,7 @@ public class FigureChecking extends SISRATest {
             String expectedDataFile = expectedDataFiles.get(tableNames.indexOf(tableName));
 
             FileManager fileMgr = new FileManager();
-            fileMgr.createFileWithData("Found", expectedDataFile, reportPage.readTableData(tableName));
+            fileMgr.createTableDataFileWithData("Found", expectedDataFile, reportPage.readTableData(tableName));
 
             diffResult = fileMgr.findFileDifference(expectedDataFile, "Found", "Diff");
             System.out.println("Compared [" + expectedDataFile + "] with [Extracted Report Data]");
@@ -296,7 +296,7 @@ public class FigureChecking extends SISRATest {
                 default:
                     System.out.println(">>>>> " + diffResult + " rows are different between expected and actual table data");
                     System.out.println("Differences can be examined in [" +
-                            fileMgr.getDirTableData() + File.separator +"Diff" + File.separator + "]");
+                            fileMgr.getTableDataDirectory() + File.separator +"Diff" + File.separator + "]");
             }
         }
 
