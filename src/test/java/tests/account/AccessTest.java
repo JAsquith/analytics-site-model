@@ -15,7 +15,6 @@ import pages.reports.ReportsHome_Legacy;
 import pages.reports.components.ReportsHome_YearAccordion;
 import tests.BaseTest;
 
-import java.net.MalformedURLException;
 import java.util.List;
 
 import static org.hamcrest.Matchers.is;
@@ -65,8 +64,11 @@ public abstract class AccessTest extends BaseTest {
 
     @BeforeTest
     @Parameters( { "username", "password" })
-    public void setup(ITestContext testContext, String user, String pass) throws MalformedURLException {
-        initialise(testContext);
+    public void setup(ITestContext testContext, String user, String pass) {
+        String initResult = initialise(testContext);
+        if (!initResult.equals("")){
+            fail(initResult);
+        }
         try {
             // Login, Go to reports, Open the dataset containing the test data
             login(user, pass, true);

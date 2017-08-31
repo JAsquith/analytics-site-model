@@ -8,6 +8,8 @@
     <artifactId>site-model</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <mvn.compiler.version>3.6.1</mvn.compiler.version>
         <mvn.surefire.version>2.20</mvn.surefire.version>
         <mvn.allure.version>2.8</mvn.allure.version>

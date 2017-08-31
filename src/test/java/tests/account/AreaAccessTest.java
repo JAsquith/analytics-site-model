@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import pages.AnalyticsPage;
 import pages.home.HomePage;
 
-import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -63,8 +62,11 @@ public class AreaAccessTest extends AccessTest {
     @BeforeTest()
     @Step( "Login" )
     @Parameters( { "username", "password" })
-    public void setup(ITestContext testContext, String user, String pass) throws MalformedURLException {
-        super.initialise(testContext);
+    public void setup(ITestContext testContext, String user, String pass) {
+        String initResult = super.initialise(testContext);
+        if (!initResult.equals("")){
+            fail(initResult);
+        }
 
         try {
             // Login, Go to reports, Open the dataset containing the test data

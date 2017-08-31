@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import pages.account.LoginPage;
 import tests.BaseTest;
 
-import java.net.MalformedURLException;
 import java.util.List;
 
 import static org.hamcrest.Matchers.is;
+import static org.testng.Assert.fail;
 
 /**
  *
@@ -25,8 +25,11 @@ public class LoginValidationTests extends BaseTest {
     String loginUrl;
 
     @BeforeTest
-    public void setup(ITestContext testContext) throws MalformedURLException {
-        initialise(testContext);
+    public void setup(ITestContext testContext) {
+        String initResult = super.initialise(testContext);
+        if (!initResult.equals("")){
+            fail(initResult);
+        }
         testPage = new LoginPage(driver, true);
         loginUrl = applicationUrl + testPage.PAGE_PATH;
     }

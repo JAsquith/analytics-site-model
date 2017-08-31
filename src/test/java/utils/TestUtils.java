@@ -29,6 +29,7 @@ public class TestUtils {
     public final String TESTS_LIST_FILE = "TestsList.csv";
     private boolean testListExists;
     public boolean runTest;
+    public String testId;
     private String[] testListLine;
 
     public TestUtils (ITestContext test){
@@ -53,11 +54,12 @@ public class TestUtils {
         testPropsRead = true;
 
         // Read this test's line from the Test List file (if it exists)
-        runTest = false;
+        testId = getTestSetting("test-id");
         testListExists = readTestListCSV();
     }
 
     public boolean readTestListCSV(){
+        runTest = false;
         CSVReader reader;
         try{
             reader = new CSVReader(new FileReader(TESTS_LIST_FILE));
@@ -84,6 +86,10 @@ public class TestUtils {
     }
 
     public String getDependsOnTestId(){
+        String dependsOnTestId = getTestSetting("depends-on-test-id","");
+        if (!dependsOnTestId.equals("")){
+            return dependsOnTestId;
+        }
         if (testListExists){
             return testListLine[1];
         }

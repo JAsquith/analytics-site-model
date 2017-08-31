@@ -6,8 +6,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.testng.Assert.fail;
@@ -19,8 +17,11 @@ public class BrowserActiveTests extends BaseTest {
     @BeforeTest()
     @Step( "Login" )
     @Parameters( { "username", "password" })
-    public void setupMethod(ITestContext testContext, String user, String pass) throws MalformedURLException {
-        super.initialise(testContext);
+    public void setupMethod(ITestContext testContext, String user, String pass) {
+        String initResult = super.initialise(testContext);
+        if (!initResult.equals("")){
+            fail(initResult);
+        }
 
         try {
             // Login, Go to reports, Open the dataset containing the test data

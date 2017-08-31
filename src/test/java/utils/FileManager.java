@@ -49,10 +49,6 @@ public class FileManager {
         }
     }
 
-    protected FileOutputStream openFileForOutput(String folder, String fileName, String parentDir) {
-        return openFileForOutput(folder, fileName, parentDir, false);
-    }
-
     protected FileOutputStream openFileForOutput(String folder, String fileName, String parentDir, boolean append){
         String filePath = checkDirExists(folder, parentDir) + fileName;
         FileOutputStream fos;

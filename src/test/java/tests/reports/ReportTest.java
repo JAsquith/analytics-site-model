@@ -26,10 +26,13 @@ public abstract class ReportTest extends BaseTest {
 
         // Check against list
         // fail("Skipped test - " + testContext.getName() + " your name's not down you're not coming in")
-        try {
-            // Creates the browser session and initialises some global test properties
-            super.initialise(testContext);
+        // Creates the browser session and initialises some global test properties
+        String initResult = super.initialise(testContext);
+        if (!initResult.equals("")){
+            fail(initResult);
+        }
 
+        try {
             // Login
             login(user, pass, true);
 

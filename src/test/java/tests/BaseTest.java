@@ -10,6 +10,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import pages.AnalyticsPage;
 import pages.account.LoginPage;
+import utils.TargetFileManager;
 import utils.TestUtils;
 
 import java.io.File;
@@ -19,7 +20,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.testng.Assert.fail;
 
 
 /**
@@ -50,23 +50,38 @@ public abstract class BaseTest {
      * the given settings
      */
     @Step( "Create a WebDriver and navigate to Analytics" )
-    protected void initialise(ITestContext context_TestNG) throws MalformedURLException {
+    protected String initialise(ITestContext context_TestNG) {
         initTestVariables(context_TestNG);
 
-        if(utils.runTest==false){
-            String failMsg = "Test is not listed in " + utils.TESTS_LIST_FILE;
-            context.getCurrentXmlTest().addParameter("setup-fail-reason",failMsg);
-            fail(failMsg);
+        String failMsg;
+        if(!utils.runTest){
+            failMsg = "Test is not listed in " + utils.TESTS_LIST_FILE;
+            System.out.println(failMsg);
+            return failMsg;
         }else{
-
-            context.getCurrentXmlTest().addParameter("depends-on-test-id", utils.getDependsOnTestId());
+            String dependsOnTestId = utils.getDependsOnTestId();
+            if (!dependsOnTestId.equals("")) {
+                System.out.println(utils.testId + " Depends On Test ID: " + dependsOnTestId);
+                TargetFileManager fm = new TargetFileManager();
+                if (!fm.testPassed(dependsOnTestId)) {
+                    failMsg = "Previous test ("+dependsOnTestId+") did not pass";
+                    System.out.println(failMsg);
+                    return failMsg;
+                }
+            }
         }
 
-        driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
+        try {
+            driver = new RemoteWebDriver(utils.getGridUrl(), utils.getCapabilities());
+        } catch (MalformedURLException e){
+            e.printStackTrace();
+            return "Failed to initialise RemoteWebDriver ["+e.getMessage()+"]";
+        }
 
         //driver.manage().window().maximize();
 
         driver.get(applicationUrl);
+        return "";
     }
 
     @AfterTest

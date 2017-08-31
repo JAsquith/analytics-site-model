@@ -42,7 +42,10 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
         int noIDCount = 0;
         TargetFileManager fm = new TargetFileManager();
 
-        firstSuite = !(fm.fileExistsInTargetDir("sisra-results", "Results_Summary.csv"));
+        firstSuite = true;
+        if (fm.fileExistsInTargetDir("sisra-results", "Results_Summary.csv")) {
+            firstSuite = false;
+        }
 
         FileOutputStream fos = fm.openTargetFileForOutput(
                 "sisra-results", "Results_Summary.csv");
