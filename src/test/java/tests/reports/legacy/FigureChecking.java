@@ -16,7 +16,7 @@ import pages.reports.components.Report_AddStudentFilters;
 import pages.reports.components.ReportsHome_CohortsMenu;
 import pages.reports.components.ReportsHome_YearAccordion;
 import tests.SISRATest;
-import utils.FileManager;
+import utils.ViewDataFileManager;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -237,7 +237,7 @@ public class FigureChecking extends SISRATest {
 
         String expectedDataFile  = getTestParam("dataFiles");
 
-        FileManager fileMgr = new FileManager();
+        ViewDataFileManager fileMgr = new ViewDataFileManager();
         fileMgr.createTableDataFileWithData("Found", expectedDataFile, reportPage.readTableData());
 
         diffResult = fileMgr.findFileDifference(expectedDataFile, "Found", "Diff");
@@ -278,7 +278,7 @@ public class FigureChecking extends SISRATest {
         for (String tableName: tableNames){
             String expectedDataFile = expectedDataFiles.get(tableNames.indexOf(tableName));
 
-            FileManager fileMgr = new FileManager();
+            ViewDataFileManager fileMgr = new ViewDataFileManager();
             fileMgr.createTableDataFileWithData("Found", expectedDataFile, reportPage.readTableData(tableName));
 
             diffResult = fileMgr.findFileDifference(expectedDataFile, "Found", "Diff");

@@ -61,7 +61,7 @@ public class TestUtils {
         CSVReader reader;
         try{
             reader = new CSVReader(new FileReader(TESTS_LIST_FILE));
-            String testId = String.valueOf(getTestSetting("test-id",0));
+            String testId = getTestSetting("test-id");
             while ((testListLine = reader.readNext()) != null){
                 if(testListLine[0].equals(testId)){
                     runTest = true;

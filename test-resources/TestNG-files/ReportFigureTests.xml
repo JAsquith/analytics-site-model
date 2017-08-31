@@ -12,9 +12,6 @@
         <parameter name="cohort" value="17" />
         <parameter name="year" value="11" />
         <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="Headlines" />
-        <parameter name="report-view" value="Summary" />
-        <parameter name="report-level" value="Whole School" />
         <parameter name="section-name" value="Attainment/Progress 8 Summary" />
         <parameter name="expected-report-figures-file" value="something.csv" />
 

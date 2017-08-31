@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.reports.EAPListView;
 import tests.reports.ReportTest;
-import utils.FileManager;
+import utils.ViewDataFileManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -27,8 +27,8 @@ import static org.hamcrest.Matchers.is;
 @Story( "Check a Column in a List View Report" )
 public class ListViewFigures extends ReportTest{
 
-    private String actualFiguresFile;
-    private String expectedFiguresFile;
+    private String actualFiguresFilePath;
+    private String expectedFiguresFilePath;
     private String column;
     private String table;
 
@@ -41,13 +41,13 @@ public class ListViewFigures extends ReportTest{
         table = getStringParam("table-name");
 
         try {
-            FileManager fileMgr = new FileManager();
-            expectedFiguresFile = fileMgr.getFullTableDataPath("expected" + File.separator + expectedFiguresFileName);
-            actualFiguresFile = fileMgr.getFullTableDataPath("actual" + File.separator + expectedFiguresFileName);
+            ViewDataFileManager fileMgr = new ViewDataFileManager();
+            expectedFiguresFilePath = fileMgr.getFullTableDataPath("expected" + File.separator + expectedFiguresFileName);
+            actualFiguresFilePath = fileMgr.getFullTableDataPath("actual" + File.separator + expectedFiguresFileName);
 
             // Extract the actual report figures to a csv file in the same folder as the expected report figures
             EAPListView reportPage = new EAPListView(driver);
-            fileMgr.createTableDataFileWithData(actualFiguresFile, reportPage.readColumnData(table, columnName));
+            fileMgr.createTableDataFileWithData("actual", expectedFiguresFileName, reportPage.readColumnData(table, columnName));
         } catch (Exception e){
             String failMsg = "Error setting up table data files for: "+getColumnDescriptor()+"..." + System.lineSeparator();
             assertWithScreenshot(failMsg, e.getMessage(), is(""));
@@ -62,14 +62,14 @@ public class ListViewFigures extends ReportTest{
         int expectedLines = 0;
         int actualLines = -1;
         try {
-            expectedLines = FileManager.countLines(expectedFiguresFile);
+            expectedLines = ViewDataFileManager.countLines(expectedFiguresFilePath);
         } catch (Exception e){
-            Assert.fail("Exception while counting lines in file '"+expectedFiguresFile+"'", e);
+            Assert.fail("Exception while counting lines in file '"+ expectedFiguresFilePath +"'", e);
         }
         try {
-            actualLines = FileManager.countLines(actualFiguresFile);
+            actualLines = ViewDataFileManager.countLines(actualFiguresFilePath);
         } catch (Exception e){
-            Assert.fail("Exception while counting lines in file '"+actualFiguresFile+"'", e);
+            Assert.fail("Exception while counting lines in file '"+ actualFiguresFilePath +"'", e);
         }
         assertWithScreenshot("Number of report rows exported",
                 actualLines, is(expectedLines));
@@ -92,8 +92,8 @@ public class ListViewFigures extends ReportTest{
         List<Object []> testCases = new ArrayList<>();
         String[] data;
 
-        BufferedReader expectedBr = new BufferedReader(new FileReader(expectedFiguresFile));
-        BufferedReader actualBr = new BufferedReader(new FileReader(actualFiguresFile));
+        BufferedReader expectedBr = new BufferedReader(new FileReader(expectedFiguresFilePath));
+        BufferedReader actualBr = new BufferedReader(new FileReader(actualFiguresFilePath));
         String expectedLine; String actualLine;
         int rowNum = 0;
         while ((expectedLine = expectedBr.readLine()) != null &&

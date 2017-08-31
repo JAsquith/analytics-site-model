@@ -1,7 +1,7 @@
 package listeners;
 
 import org.testng.*;
-import utils.FileManager;
+import utils.TargetFileManager;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,6 +13,7 @@ import java.util.Set;
 
 public class LinkedTestsSuiteListener implements ISuiteListener {
 
+    boolean firstSuite;
     private SimpleDateFormat stampFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
 
     class ResultSummary {
@@ -36,23 +37,23 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
         Map<String, ISuiteResult> tests = suite.getResults();
         Set<Map.Entry<String, ISuiteResult>> set = tests.entrySet();
 
-        /*
-        This method should produce two csv files.
-        The first is a summary of the Suite Results with:
-          - one line per XML Test node with the following fields:
-        +---------+-------+-----+-------------+--------+-------+-------+-------------------+
-        | Test ID | Start | End | Setup Fails | Passes | Fails | Skips | Setup Fail Reason |
-        +---------+-------+-----+-------------+--------+-------+-------+-------------------+
-        The second file is a simple list of all the tests where *all* the test methods passed,
-        containing the test-id for each
-         */
-
         ResultSummary summary;
         List<String> fullPassesList = new ArrayList<String>();
         int noIDCount = 0;
-        FileManager fm = new FileManager();
-        FileOutputStream fos = fm.createTargetFileForOutput(
-                fm.getTargetDirectory()+"sisra-results", suite.getName()+"_summary.csv");
+        TargetFileManager fm = new TargetFileManager();
+
+        firstSuite = !(fm.fileExistsInTargetDir("sisra-results", "Results_Summary.csv"));
+
+        FileOutputStream fos = fm.openTargetFileForOutput(
+                "sisra-results", "Results_Summary.csv");
+        if (firstSuite) {
+            try {
+                fos.write(("Test ID,Start,End,Setup Fails,Passes,Fails,Skips,Setup Fail Reason" + System.lineSeparator()).getBytes());
+            } catch (IOException e) {
+                System.err.println("Error writing column headers to Suite Summary (Results_Summary.csv)");
+                e.printStackTrace();
+            }
+        }
 
         // Loop through the ISuiteResults (one result for each <test> element in the testng.xml file)
         for (Map.Entry<String, ISuiteResult> entry : set) {
@@ -92,6 +93,14 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
             }
 
             writeResultSummary(fos, summary.toString());
+        }
+
+        try {
+            fos.flush();
+            fos.close();
+        } catch (IOException e) {
+            System.err.println("Error flushing/closing Suite Summary (Results_Summary.csv)");
+            e.printStackTrace();
         }
 
         writePassesList(suite.getName(), fullPassesList);
@@ -134,22 +143,31 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
             fos.write(result.getBytes());
             fos.write(System.lineSeparator().getBytes());
         } catch (IOException e) {
+            System.err.println("Error writing result to Suite Summary ("+ result +")");
             e.printStackTrace();
         }
     }
 
     private void writePassesList(String suiteName, List<String> passesList){
-        // Todo: change this to 1) update a single file, 2) these results files should be in the target folder
-        System.out.println("Create File: " + suiteName);
-        FileOutputStream fos = new FileManager().createTargetFileForOutput("sisra-results", suiteName+"_passes.csv");
+        // Todo: change this to 1) update a single file
+        FileOutputStream fos = new TargetFileManager().openTargetFileForOutput("sisra-results", "All_Passes.csv");
         for (String testId : passesList) {
             try {
                 fos.write(testId.getBytes());
                 fos.write(System.lineSeparator().getBytes());
             } catch (IOException e) {
+                System.err.println("Error writing to passes list ("+ testId + ", " + "All_Passes.csv)");
                 e.printStackTrace();
             }
-            System.out.println(testId);
         }
+
+        try {
+            fos.flush();
+            fos.close();
+        } catch (IOException e) {
+            System.err.println("Error flusing/closing passes list (" + "All_Passes.csv)");
+            e.printStackTrace();
+        }
+
     }
 }
