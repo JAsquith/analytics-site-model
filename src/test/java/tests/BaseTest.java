@@ -46,8 +46,7 @@ public abstract class BaseTest {
      * the settings found in the TestNG xml suite file and the test.properties file.
      *
      * @param context_TestNG an object of a class that implements the @link{org.testng.ITestContext} interface
-     * @throws MalformedURLException if the @link{utils.TestUtils#getGridUrl()} method can't build a valid URL from
-     * the given settings
+     *
      */
     @Step( "Create a WebDriver and navigate to Analytics" )
     protected String initialise(ITestContext context_TestNG) {
@@ -56,7 +55,7 @@ public abstract class BaseTest {
         String failMsg;
         if(!utils.runTest){
             failMsg = "Test is not listed in " + utils.TESTS_LIST_FILE;
-            System.out.println(failMsg);
+            System.out.println(utils.testId+failMsg);
             return failMsg;
         }else{
             String dependsOnTestId = utils.getDependsOnTestId();
@@ -64,8 +63,8 @@ public abstract class BaseTest {
                 System.out.println(utils.testId + " Depends On Test ID: " + dependsOnTestId);
                 TargetFileManager fm = new TargetFileManager();
                 if (!fm.testPassed(dependsOnTestId)) {
-                    failMsg = "Previous test ("+dependsOnTestId+") did not pass";
-                    System.out.println(failMsg);
+                    failMsg = "Predecessor test ("+dependsOnTestId+") either did not run, or ran but did not pass";
+                    System.out.println(utils.testId+failMsg);
                     return failMsg;
                 }
             }

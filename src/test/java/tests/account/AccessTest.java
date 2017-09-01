@@ -47,6 +47,10 @@ public abstract class AccessTest extends BaseTest {
                 this.eapDatasetCollID = reportID;
             }
         }
+        public String toString(){
+            return this.keystage+">>"+this.cohort+">>"+this.dataset+">>"+
+                    (this.eapYear.equals("")?this.legacyPubID:this.eapYear+">>"+this.eapDatasetCollID);
+        }
     }
     protected enum ReportArea {
         HEADLINES("Headlines", "/Reports/Reports/Headlines?PublishedReport_ID="),
@@ -149,7 +153,7 @@ public abstract class AccessTest extends BaseTest {
         return canDoList;
     }
 
-    @Step( "Get Report buttons for KS{ks} > Cohort {cohort} > {dataset}" )
+    @Step( "Get Report buttons for {testReport}" )
     protected String[] getReportButtonsFor(TestReport testReport){
         driver.get(reportsHomeUrl+"?selectedKS="+testReport.keystage);
         driver.get(reportsHomeUrl+"?selectedCohort="+testReport.cohort);
@@ -166,28 +170,42 @@ public abstract class AccessTest extends BaseTest {
     }
 
     private String[] getLegacyButtonsFor(String dataset){
-        WebElement shim = new ReportsHome_Legacy(driver).showReportButtons(dataset);
-        List<WebElement> buttons = shim.findElements(ReportsHome_Legacy.BUTTONS_IN_SHIM);
-        if (buttons.size()==0){
-            return null;
-        }
-        String[] btnLabels = new String[buttons.size()];
-        for (int i = 0; i < buttons.size(); i++){
-            btnLabels[i] = buttons.get(i).getText().trim();
+        String[] btnLabels;
+        try {
+            WebElement shim = new ReportsHome_Legacy(driver).showReportButtons(dataset);
+            List<WebElement> buttons = shim.findElements(ReportsHome_Legacy.BUTTONS_IN_SHIM);
+            if (buttons.size() == 0) {
+                return null;
+            }
+            btnLabels = new String[buttons.size()];
+            for (int i = 0; i < buttons.size(); i++) {
+                btnLabels[i] = buttons.get(i).getText().trim();
+            }
+        } catch (Exception e){
+            btnLabels = new String[0];
+            btnLabels[0] = "Exception getting visible buttons";
+            fail("Exception getting visible buttons",e);
         }
         return btnLabels;
     }
 
     private String[] getEAPButtonsFor(String year, String dataset){
-        ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
-        WebElement pubRptInfo = reports.getYearAccordion(year).expandPublishedReport(dataset);
-        List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearAccordion.REPORT_AREA_BUTTONS);
-        if (buttons.size()==0){
-            return null;
-        }
-        String[] btnLabels = new String[buttons.size()];
-        for (int i = 0; i < buttons.size(); i++){
-            btnLabels[i] = buttons.get(i).getText().trim();
+        String[] btnLabels;
+        try {
+            ReportsHome_EAP reports = new ReportsHome_EAP(driver, true);
+            WebElement pubRptInfo = reports.getYearAccordion(year).expandPublishedReport(dataset);
+            List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearAccordion.REPORT_AREA_BUTTONS);
+            if (buttons.size() == 0) {
+                return null;
+            }
+            btnLabels = new String[buttons.size()];
+            for (int i = 0; i < buttons.size(); i++) {
+                btnLabels[i] = buttons.get(i).getText().trim();
+            }
+        } catch (Exception e){
+            btnLabels = new String[0];
+            btnLabels[0] = "Exception getting visible buttons";
+            fail("Exception getting visible buttons",e);
         }
         return btnLabels;
     }

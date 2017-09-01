@@ -106,7 +106,7 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
             e.printStackTrace();
         }
 
-        writePassesList(suite.getName(), fullPassesList);
+        writePassesList(fullPassesList);
 
     }
 
@@ -151,8 +151,7 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
         }
     }
 
-    private void writePassesList(String suiteName, List<String> passesList){
-        // Todo: change this to 1) update a single file
+    private void writePassesList(List<String> passesList){
         FileOutputStream fos = new TargetFileManager().openTargetFileForOutput("sisra-results", "All_Passes.csv");
         for (String testId : passesList) {
             try {
