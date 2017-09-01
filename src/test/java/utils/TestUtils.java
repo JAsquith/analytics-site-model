@@ -15,10 +15,12 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import static utils.TestConstants.TESTS_TO_RUN_FILE_NAME;
+import static utils.TestConstants.TEST_PROPERTIES_FILENAME;
+
 public class TestUtils {
     private Map<String, String> params;
 
-    private final String TEST_PROPERTIES_FILENAME = "test.properties";
     private boolean testPropsRead;
     private Properties testProperties;
     private Set<String> testPropNames;
@@ -26,7 +28,6 @@ public class TestUtils {
     private Properties sysProperties;
     private Set<String> sysPropNames;
 
-    public final String TESTS_LIST_FILE = "TestsList.csv";
     private boolean testListExists;
     public boolean runTest;
     public String testId;
@@ -62,7 +63,7 @@ public class TestUtils {
         runTest = false;
         CSVReader reader;
         try{
-            reader = new CSVReader(new FileReader(TESTS_LIST_FILE));
+            reader = new CSVReader(new FileReader(TESTS_TO_RUN_FILE_NAME));
             String testId = getTestSetting("test-id");
             while ((testListLine = reader.readNext()) != null){
                 if(testListLine[0].equals(testId)){
@@ -72,12 +73,12 @@ public class TestUtils {
             }
 
         } catch (FileNotFoundException e) {
-            System.err.println(TESTS_LIST_FILE + " does not exist");
+            System.err.println(TESTS_TO_RUN_FILE_NAME + " does not exist");
             e.printStackTrace();
             runTest = true;
             return false;
         } catch (IOException e) {
-            System.err.println(TESTS_LIST_FILE + " may be corrupted");
+            System.err.println(TESTS_TO_RUN_FILE_NAME + " may be corrupted");
             e.printStackTrace();
             runTest = false;
             return false;

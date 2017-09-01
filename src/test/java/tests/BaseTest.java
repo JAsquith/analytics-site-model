@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static utils.TestConstants.TESTS_TO_RUN_FILE_NAME;
 
 
 /**
@@ -54,7 +55,7 @@ public abstract class BaseTest {
 
         String failMsg;
         if(!utils.runTest){
-            failMsg = "Test is not listed in " + utils.TESTS_LIST_FILE;
+            failMsg = "Test is not listed in " + TESTS_TO_RUN_FILE_NAME;
             System.out.println(utils.testId+failMsg);
             return failMsg;
         }else{
