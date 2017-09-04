@@ -87,7 +87,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
                 return pubReport;
             }
         }
-        return null;
+        throw new IllegalArgumentException(datasetName + " is not a dataset in the current cohort");
     }
 
     public EAPListView gotoPublishedReport(String datasetName, String forTracker) {

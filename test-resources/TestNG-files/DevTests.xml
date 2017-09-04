@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Development Suite" parallel="tests">
+<suite name="Development Suite" parallel="tests" thread-count="4">
 
     <parameter name="debug" value="true" />
 
@@ -22,11 +22,84 @@
             <class name="tests.BrowserActiveTests" />
         </classes>
     </test>
--->
 
     <test name="Non Browser Tests">
         <classes>
             <class name="tests.NonBrowserTests" />
+        </classes>
+    </test>
+-->
+
+    <test name="Locked Reports - (H)">
+        <parameter name="test-id" value="000013" />
+        <parameter name="username" value="tesloc184718" />
+        <parameter name="password" value="UhThRySm5" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="accessible-eap-buttons" value="Headlines" />
+        <parameter name="report-areas" value="Headlines" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.ReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (H and Q)">
+        <parameter name="test-id" value="000014" />
+        <parameter name="username" value="tesloc184719" />
+        <parameter name="password" value="EtQrQwRc3" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Headlines|Qualifications" />
+        <parameter name="accessible-eap-buttons" value="Headlines|Grades" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.ReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (H and S)">
+        <parameter name="test-id" value="000015" />
+        <parameter name="username" value="tesloc184720" />
+        <parameter name="password" value="UhJrXgHh6" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Headlines|Students" />
+        <parameter name="accessible-eap-buttons" value="Headlines|Grades" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.ReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (Q)">
+        <parameter name="test-id" value="000016" />
+        <parameter name="username" value="tesloc184721" />
+        <parameter name="password" value="RsHrKvZy5" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Qualifications" />
+        <parameter name="accessible-eap-buttons" value="Grades" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.ReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (Q and S)">
+        <parameter name="test-id" value="000017" />
+        <parameter name="username" value="tesloc184722" />
+        <parameter name="password" value="VfDkHfDi7" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Qualifications|Students" />
+        <parameter name="accessible-eap-buttons" value="Grades" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.ReportAccessTests" />
+        </classes>
+    </test>
+    <test name="Locked Reports - (S)">
+        <parameter name="test-id" value="000018" />
+        <parameter name="username" value="tesloc184723" />
+        <parameter name="password" value="PiVzJyQr2" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Students" />
+        <parameter name="accessible-eap-buttons" value="Grades" />
+        <parameter name="locked-access" value="true" />
+        <classes>
+            <class name="tests.account.ReportAccessTests" />
         </classes>
     </test>
 

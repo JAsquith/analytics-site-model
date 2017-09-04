@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Security Tests" parallel="tests" thread-count="4">
 
+    <parameter name="debug" value="true" />
+
     <!-- Login Page Tests -->
     <test name="Invalid credentials should fail login">
         <parameter name="test-id" value="000001" />
@@ -22,7 +24,19 @@
     </test>
 
     <!-- Users in the SISRA Default Auth groups -->
+    <test name="Default Group - User">
+        <parameter name="test-id" value="000003" />
+        <parameter name="username" value="tesuse184707" />
+        <parameter name="password" value="VfMcTfCh3" />
+        <parameter name="auth-group" value="User" />
+        <parameter name="accessible-areas" value="Home|Reports" />
+        <parameter name="report-areas" value="Headlines|Qualifications|Students" />
+        <classes>
+            <class name="tests.account.AreaAccessTest" />
+        </classes>
+    </test>
     <test name="Default Group - Admin">
+
         <parameter name="test-id" value="000002" />
         <parameter name="username" value="tesadm184706" />
         <parameter name="password" value="CsZeSsXg9" />
@@ -32,17 +46,6 @@
         <parameter name="locked-access" value="true" />
         <parameter name="embargo-access" value="true" />
         <parameter name="announce-access" value="true" />
-        <classes>
-            <class name="tests.account.AreaAccessTest" />
-        </classes>
-    </test>
-    <test name="Default Group - User">
-        <parameter name="test-id" value="000003" />
-        <parameter name="username" value="tesuse184707" />
-        <parameter name="password" value="VfMcTfCh3" />
-        <parameter name="auth-group" value="User" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="report-areas" value="Headlines|Qualifications|Students" />
         <classes>
             <class name="tests.account.AreaAccessTest" />
         </classes>

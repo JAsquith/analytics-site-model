@@ -22,9 +22,9 @@ public class LinkedTestsSuiteListener implements ISuiteListener {
         String setupFailReason;
 
         public String toString(){
-            return testId+","+startTime+","+endTime+","+
-                    setupFails+","+passCount+","+failCount+","+skipCount+","+
-                    setupFailReason;
+            return "\""+testId+"\","+startTime+","+endTime+","+
+                    setupFails+","+passCount+","+failCount+","+skipCount+",\""+
+                    setupFailReason+"\"";
         }
     }
 

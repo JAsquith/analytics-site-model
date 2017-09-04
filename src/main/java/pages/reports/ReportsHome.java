@@ -45,6 +45,9 @@ public class ReportsHome extends AnalyticsPage {
 
 // METHODS
     // QUERYING THE CURRENT PAGE STATE
+    public String getPagePath(){
+        return getCurrentDomain()+PAGE_PATH;
+    }
     //  - ACCESSORS FOR ELEMENTS/COMPONENTS
     public ReportsHome_CohortsMenu getCohortsMenu(){
         cohortsMenu = new ReportsHome_CohortsMenu(driver);

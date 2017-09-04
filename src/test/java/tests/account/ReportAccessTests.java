@@ -249,12 +249,13 @@ public class ReportAccessTests extends AccessTest {
 
     @Step( "Determine the actual and expected button labels visible to this user" )
     private void setupButtonsTest(TestReport testReport){
+        ReportsHome reportsHomePage;
         if(testReport.keystage<6){
-            new ReportsHome(driver, true);
+            reportsHomePage = new ReportsHome(driver, true);
         }else{
-            new ReportsHome_EAP(driver, true);
+            reportsHomePage = new ReportsHome_EAP(driver, true);
         }
-        reportsHomeUrl = driver.getCurrentUrl();
+        reportsHomeUrl = reportsHomePage.getPagePath();
         actualButtons = getReportButtonsFor(testReport);
 
         if (testReport.keystage<6) {

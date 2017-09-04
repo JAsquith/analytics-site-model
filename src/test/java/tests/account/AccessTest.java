@@ -49,7 +49,7 @@ public abstract class AccessTest extends BaseTest {
         }
         public String toString(){
             return this.keystage+">>"+this.cohort+">>"+this.dataset+">>"+
-                    (this.eapYear.equals("")?this.legacyPubID:this.eapYear+">>"+this.eapDatasetCollID);
+                    (this.eapYear==null ? this.legacyPubID:this.eapYear+">>"+this.eapDatasetCollID);
         }
     }
     protected enum ReportArea {
@@ -182,9 +182,8 @@ public abstract class AccessTest extends BaseTest {
                 btnLabels[i] = buttons.get(i).getText().trim();
             }
         } catch (Exception e){
-            btnLabels = new String[0];
-            btnLabels[0] = "Exception getting visible buttons";
-            fail("Exception getting visible buttons",e);
+            btnLabels = new String[1];
+            btnLabels[0] = "Exception reading Legacy Report buttons: "+e.getMessage();
         }
         return btnLabels;
     }
@@ -203,9 +202,8 @@ public abstract class AccessTest extends BaseTest {
                 btnLabels[i] = buttons.get(i).getText().trim();
             }
         } catch (Exception e){
-            btnLabels = new String[0];
-            btnLabels[0] = "Exception getting visible buttons";
-            fail("Exception getting visible buttons",e);
+            btnLabels = new String[1];
+            btnLabels[0] = "Exception reading EAP Report buttons: "+e.getMessage();
         }
         return btnLabels;
     }

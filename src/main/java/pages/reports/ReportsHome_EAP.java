@@ -29,7 +29,9 @@ public class ReportsHome_EAP extends ReportsHome {
     public ReportsHome_EAP selectCohortByUrl(String cohort){
         openIfNotAlready();
         selectKSIfNotAlready();
+        String debugStr = getCurrentCohort();
         if(!cohort.equals(getCurrentCohort())) {
+            debugStr = getCurrentDomain();
             driver.get(getCurrentDomain() + PAGE_PATH_SELECT_COHORT + cohort);
         }
         return new ReportsHome_EAP(driver, false);

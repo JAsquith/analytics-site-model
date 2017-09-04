@@ -1,7 +1,6 @@
 package pages.account;
 
 import com.google.common.base.Function;
-import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -208,7 +207,6 @@ public class LoginPage {
      * Accessor for the validation message list item elements
      * @return  A {@link List} object with entries for each &lt;li&gt; element in the validation messages &lt;ul&gt;
      */
-    @Step("Get login page validation messages")
     public List<WebElement> getValidationMessages(){
         return driver.findElements(VAL_MESSAGES);
     }
