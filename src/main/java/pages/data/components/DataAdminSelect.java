@@ -1,10 +1,12 @@
 package pages.data.components;
 
-import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AnalyticsComponent;
 
 import java.util.Calendar;
 import java.util.List;
@@ -105,12 +107,16 @@ public class DataAdminSelect extends AnalyticsComponent {
         hideProfiler();
         switch (newMode){
             case "EAP":
-                driver.findElement(MODE_EAP_LABEL).click();
-                waitMedium.until(ExpectedConditions.urlContains(MODE_EAP_URL));
+                if (!driver.getCurrentUrl().contains(MODE_EAP_URL)){
+                    driver.findElement(MODE_EAP_LABEL).click();
+                    waitMedium.until(ExpectedConditions.urlContains(MODE_EAP_URL));
+                }
                 break;
             case "Legacy":
-                driver.findElement(MODE_LEGACY_LABEL).click();
-                waitMedium.until(ExpectedConditions.urlContains(MODE_LEGACY_URL));
+                if (!driver.getCurrentUrl().contains(MODE_LEGACY_URL)) {
+                    driver.findElement(MODE_LEGACY_LABEL).click();
+                    waitMedium.until(ExpectedConditions.urlContains(MODE_LEGACY_URL));
+                }
                 break;
             default:
                 throw new IllegalArgumentException("Unknown mode requested ("+newMode+")");

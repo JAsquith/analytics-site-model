@@ -1,18 +1,17 @@
 package tests.admin.data.students;
 
-import tests.SISRATest;
-import pages.AnalyticsPage;
-import pages.data.students.PublishStudents;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.startsWith;
+import pages.AnalyticsPage;
+import pages.data.students.PublishStudents;
+import tests.SISRATest;
 
 import java.net.MalformedURLException;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.startsWith;
 
 /**
  * Add Javadoc comments here!
@@ -60,7 +59,7 @@ public class PublishStudentsTest extends SISRATest {
         if(getTestParam("publish-type").toLowerCase().equals("local")){
             publishType = 1;
         }
-        page.clickPublish(publishType);
+        page.clickPublishAndWait(publishType);
         return page;
     }
 

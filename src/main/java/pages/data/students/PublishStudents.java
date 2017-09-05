@@ -1,14 +1,14 @@
 package pages.data.students;
 
-import pages.AnalyticsPage;
-import pages.data.DataHome;
-import pages.data.components.DataAdminSelect;
-import pages.data.components.DataSideMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AnalyticsPage;
+import pages.data.DataHome;
+import pages.data.components.DataAdminSelect;
+import pages.data.components.DataSideMenu;
 
 import java.util.List;
 
@@ -37,8 +37,8 @@ public class PublishStudents extends AnalyticsPage {
      * Waits up to {@code PUBLISH_WAIT} seconds for the Publish progress modal to show the Close button;
      * Clicks the Close button
      */
-    public void clickPublish() {
-        clickPublish(0);
+    public void clickPublishAndWait() {
+        clickPublishAndWait(0);
     }
 
     /**
@@ -46,6 +46,26 @@ public class PublishStudents extends AnalyticsPage {
      *
      * @param publishTypeID {@code 0} = normal publish; {@code 1} = local publish (dev only - no check made to ensure button is present)
      */
+    public void clickPublishAndWait(int publishTypeID) {
+        // Uses a switch to future-proof for other publishing methods
+        switch (publishTypeID) {
+            case 0:
+                driver.findElement(PUBLISH_BUTTON).click();
+                WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
+                wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON)).click();
+                return;
+            case 1:
+                driver.findElement(LOCAL_PUBLISH_BUTTON).click();
+                waitForLoadingWrapper(PUBLISH_WAIT);
+                return;
+            default:
+                throw new IllegalArgumentException("publishTypeID must be 0 or 1");
+        }
+    }
+
+    public void clickPublish(){
+        clickPublish(0);
+    }
     public void clickPublish(int publishTypeID) {
         // Uses a switch to future-proof for other publishing methods
         switch (publishTypeID) {

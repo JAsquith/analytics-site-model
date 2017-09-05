@@ -4,7 +4,6 @@ import io.qameta.allure.Step;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import pages.AnalyticsPage;
 import pages.reports.EAPListView;
 import pages.reports.EAPReportView;
 import pages.reports.ReportsHome_EAP;
@@ -54,11 +53,10 @@ public abstract class ReportTest extends BaseTest {
         } catch (Exception e){
             saveScreenshot(context.getName()+"_SetupFail.png");
             if (driver!=null){
-                new AnalyticsPage(driver).clickMenuLogout();
                 driver.quit();
-                e.printStackTrace();
-                fail("Test Setup Failed! Exception: "+e.getMessage());
             }
+            e.printStackTrace();
+            fail("Test Setup Failed! Exception: "+e.getMessage());
         }
     }
 

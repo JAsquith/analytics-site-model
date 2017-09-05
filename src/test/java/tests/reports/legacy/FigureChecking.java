@@ -94,7 +94,7 @@ public class FigureChecking extends SISRATest {
         if(getTestParam("publish-type").toLowerCase().equals("local")){
             publishType = 1;
         }
-        page.clickPublish(publishType);
+        page.clickPublishAndWait(publishType);
         page.clickClose();
     }
 
