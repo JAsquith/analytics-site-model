@@ -37,8 +37,8 @@ public class PublishStudents extends AnalyticsPage {
      * Waits up to {@code PUBLISH_WAIT} seconds for the Publish progress modal to show the Close button;
      * Clicks the Close button
      */
-    public void clickPublishAndWait() {
-        clickPublishAndWait(0);
+    public PublishStudents clickPublishWaitAndClose() {
+        return clickPublishWaitAndClose(0);
     }
 
     /**
@@ -46,48 +46,44 @@ public class PublishStudents extends AnalyticsPage {
      *
      * @param publishTypeID {@code 0} = normal publish; {@code 1} = local publish (dev only - no check made to ensure button is present)
      */
-    public void clickPublishAndWait(int publishTypeID) {
+    public PublishStudents clickPublishWaitAndClose(int publishTypeID) {
+        clickPublishAndWait(publishTypeID);
+        switch (publishTypeID){
+            case 0:
+                driver.findElement(CLOSE_PUB_PROG_MODAL_BUTTON).click();
+                waitForLoadingWrapper();
+                break;
+            case 1:
+                // Shouldn't need to do anything - page should have reloaded
+        }
+        return this;
+    }
+
+    public PublishStudents clickPublishAndWait(){
+        return clickPublishAndWait(0);
+    }
+    public PublishStudents clickPublishAndWait(int publishTypeID) {
         // Uses a switch to future-proof for other publishing methods
         switch (publishTypeID) {
             case 0:
                 driver.findElement(PUBLISH_BUTTON).click();
                 WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
-                wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON)).click();
-                return;
+                wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON));
+                return this;
             case 1:
                 driver.findElement(LOCAL_PUBLISH_BUTTON).click();
-                waitForLoadingWrapper(PUBLISH_WAIT);
-                return;
+                return this;
             default:
-                throw new IllegalArgumentException("publishTypeID must be 0 or 1");
+                throw new IllegalArgumentException("publishTypeID ("+publishTypeID+") must be 0 or 1");
         }
     }
 
-    public void clickPublish(){
-        clickPublish(0);
-    }
-    public void clickPublish(int publishTypeID) {
-        // Uses a switch to future-proof for other publishing methods
-        switch (publishTypeID) {
-            case 0:
-                driver.findElement(PUBLISH_BUTTON).click();
-                WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
-                wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON)).click();
-                return;
-            case 1:
-                driver.findElement(LOCAL_PUBLISH_BUTTON).click();
-                waitForLoadingWrapper(PUBLISH_WAIT);
-                return;
-            default:
-                throw new IllegalArgumentException("publishTypeID must be 0 or 1");
-        }
-    }
-
-    public void clickClose(){
+    public PublishStudents closeModal(){
         List<WebElement> closeButtons = driver.findElements(CLOSE_PUB_PROG_MODAL_BUTTON);
         if (closeButtons.size()>0){
             closeButtons.get(0).click();
         }
+        return this;
     }
 
     public String getLastPublishedInfo() {

@@ -1,14 +1,13 @@
 package pages.data.grades.components;
 
-import pages.AbstractAnalyticsObject;
-import pages.AnalyticsComponent;
-import pages.data.grades.PublishGrades;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AnalyticsComponent;
+import pages.data.grades.PublishGrades;
 
 /**
  * A component object representing the content and actions within a Publish Grades modal
@@ -85,14 +84,14 @@ public class PublishGradesModal extends AnalyticsComponent{
     public void clickCancel(){
         modal.findElement(CANCEL_BUTTON).click();
     }
-    public AbstractAnalyticsObject clickPublish(){
+    public PublishGrades clickPublish(){
         return clickPublish(0);
     }
-    public AbstractAnalyticsObject clickLocal(){
+    public PublishGrades clickLocal(){
         return clickPublish(1);
     }
 
-    public AbstractAnalyticsObject clickPublish(int publishTypeID){
+    public PublishGrades clickPublish(int publishTypeID){
         // Uses a switch to future-proof for other publishing methods
         switch (publishTypeID){
             case 0:
@@ -100,15 +99,14 @@ public class PublishGradesModal extends AnalyticsComponent{
                 waitForLoadingWrapper(LONG_WAIT);
                 WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
                 wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON)).click();
-                return this;
+                return new PublishGrades(driver);
             case 1:
                 driver.findElement(LOCAL_PUBLISH_BUTTON).click();
                 waitForLoadingWrapper(PUBLISH_WAIT);
                 return new PublishGrades(driver);
             default:
-                // todo Handle bad TypeID (possible IllegalArgumentException)
+                throw new IllegalArgumentException("publishTypeID ("+publishTypeID+") must be 0 or 1");
         }
-        return this;
     }
 
 }

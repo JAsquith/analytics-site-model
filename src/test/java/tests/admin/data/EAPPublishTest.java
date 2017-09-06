@@ -1,5 +1,6 @@
 package tests.admin.data;
 
+import io.qameta.allure.Epic;
 import io.qameta.allure.Step;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
@@ -11,6 +12,7 @@ import tests.BaseTest;
 
 import static org.testng.Assert.fail;
 
+@Epic( "EAP Publishing" )
 public class EAPPublishTest extends BaseTest{
 
     @BeforeTest()
@@ -45,16 +47,21 @@ public class EAPPublishTest extends BaseTest{
     private void openPublishPage(String cohort, String pubType){
         switch (pubType.toLowerCase()){
             case "students":
-                PublishStudents studentsPub = new PublishStudents(driver);
-                studentsPub.load(cohort, true);
+                PublishStudents studentsPub = new PublishStudents(driver).
+                        load(cohort, true);
                 break;
             case "ks2/eap":
-                PublishBaseData basedataPub = new PublishBaseData(driver);
-                basedataPub.load(cohort, true);
+                PublishBaseData basedataPub = new PublishBaseData(driver).
+                        load(cohort, true);
                 break;
             case "grades":
-                PublishGrades gradesPub = new PublishGrades(driver);
-                gradesPub.load(cohort, true);
+                PublishGrades gradesPub = new PublishGrades(driver).
+                        load(cohort, true);
+                break;
+            default:
+                throw new IllegalArgumentException("pubType (" + pubType + ") must be one of " +
+                        "{'Students', 'KS2/EAP', 'grades'}");
+
         }
     }
 

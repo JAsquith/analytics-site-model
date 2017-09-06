@@ -1,5 +1,8 @@
 package pages.data.grades;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.AnalyticsPage;
 import pages.data.DataHome;
 import pages.data.components.DataAdminSelect;
@@ -7,19 +10,60 @@ import pages.data.components.DataSideMenu;
 import pages.data.grades.components.PublishAssessmentsYearRow;
 import pages.data.grades.components.PublishDatasetsRow;
 import pages.data.grades.components.PublishGradesModal;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.List;
-
 
 /**
  * Represents the components and actions on the Publish Grades page.
 */
 public class PublishGrades extends AnalyticsPage {
 
+    public enum MainTab {
+        REPORTS(1), TRACKER(2), FLIGHT_PATHS(3);
+
+        private final String parentCss = "#page>.pageTab";
+        private final int tabIndex;
+
+        MainTab(int tabIndex){
+            this.tabIndex = tabIndex;
+        }
+
+        public String getName(){
+            switch (tabIndex){
+                case 1:
+                    return "Reports";
+                case 2:
+                    return "Tracker";
+                case 3:
+                    return "Flight Paths";
+            }
+            return "";
+        }
+        public String getTitleText(){
+            switch (tabIndex){
+                case 1:
+                    return "Publish Individual Reports";
+                case 2:
+                    return "Generate Tracker";
+                case 3:
+                    return "Generate Flight Paths";
+            }
+            return "";
+        }
+
+        public By getTabSelector(){
+            return By.cssSelector(parentCss+">*:nth-child("+tabIndex+")");
+        }
+        public By getActiveTabSelector(){
+            return By.cssSelector(parentCss+">span:nth-child("+tabIndex+")");
+        }
+        public By getInactiveTabSelector(){
+            return By.cssSelector(parentCss+">a:nth-child("+tabIndex+")");
+        }
+    }
+
     public final String PAGE_URL = "/EAPAdmin/Publish/Grades";
+
     public final By DATA_SETS_TAB = By.cssSelector(".pageTabContainer>.pageTab>a,.pageTabContainer>.pageTab>span");
     public final By ASSESSMENTS_YEAR_TABS = By.cssSelector(".pageTab>div>span,.pageTab>div>a");
 
@@ -75,12 +119,23 @@ public class PublishGrades extends AnalyticsPage {
 
         return this;
     }
+
+    // Methods to select a specified Main Tab (i.e. Reports/Trackers/Flight Paths)
+    public PublishGrades clickMainTab(MainTab tabType){
+        WebElement tab = driver.findElement(tabType.getTabSelector());
+        if (tab.getTagName().equals("a")){
+            tab.click();
+            waitForLoadingWrapper();
+        }
+        return this;
+    }
+
+    // Methods to show the Grades Publish Modal for a given set of grades
     public PublishGradesModal clickPublishFor(String datasetName){
         selectDatasetsTab();
         PublishDatasetsRow row = new PublishDatasetsRow(driver, datasetName);
         return row.clickPublish();
     }
-
     public PublishGradesModal clickPublishFor(int year, int term, int slot){
         selectYearTab(year);
         PublishAssessmentsYearRow row = new PublishAssessmentsYearRow(driver, term, slot);

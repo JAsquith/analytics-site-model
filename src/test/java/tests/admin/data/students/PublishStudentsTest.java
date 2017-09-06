@@ -1,102 +1,32 @@
 package tests.admin.data.students;
 
-import org.testng.ITestContext;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import pages.AnalyticsPage;
 import pages.data.students.PublishStudents;
-import tests.SISRATest;
+import tests.admin.data.EAPPublishTest;
 
-import java.net.MalformedURLException;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.startsWith;
+import static org.hamcrest.Matchers.endsWith;
+import static org.hamcrest.Matchers.not;
 
 /**
  * Add Javadoc comments here!
  */
 
-public class PublishStudentsTest extends SISRATest {
+@Story( "Publishing EAP Student Data" )
+public class PublishStudentsTest extends EAPPublishTest {
 
+    @Test( description = "Publish Student Data" )
+    @Step( "Publish Student Data for {cohort}>{year}" )
+    public void publishStudents(String cohort, String year){
+        PublishStudents publishPage = new PublishStudents(driver);
 
-    @Test
-    public void publishStudentData() {
-        try {
-            this.login();                   // In SISRATest
+        String publishInfo = publishPage.
+                clickPublishAndWait().
+                closeModal().
+                getLastPublishedInfo();
 
-            PublishStudents page = this.gotoPage1();               // Gets us to the Publish Students Page
-
-            page = this.page1Actions(page);   // No check for validation messages
-
-            this.successCriteria_ValidationPassed(page);    // Per-test Asserts in here
-
-
-        } catch (AssertionError assertFail) {
-            this.saveScreenshots();
-            throw assertFail;
-
-        } catch (Exception other) {
-            this.saveScreenshots();
-            throw other;
-
-        }
+        assertWithScreenshot("Last Publish Info does not end with 'Failed'", publishInfo, not(endsWith("Failed")));
     }
 
-    private PublishStudents gotoPage1(){
-        String cohort = getTestParam("eap-cohort");
-        if (cohort.length() > 2){
-            cohort = cohort.substring(cohort.length()-2);
-        }
-
-        PublishStudents page = new PublishStudents(driver).load(cohort, true);
-        currentPage++;
-        return page;
-    }
-
-    public PublishStudents page1Actions(PublishStudents page){
-        int publishType = 0;
-        if(getTestParam("publish-type").toLowerCase().equals("local")){
-            publishType = 1;
-        }
-        page.clickPublishAndWait(publishType);
-        return page;
-    }
-
-    protected void successCriteria_ValidationPassed(PublishStudents page) {
-        assertThat("Publish Info shows \"Last Published:\"",
-                page.getLastPublishedInfo(),
-                startsWith("Last Published:"));
-    }
-
-    @BeforeTest
-    public void setup(ITestContext testContext) {
-        // The initialise method of the SISRATest superclass:
-        //      - Copies the test parameters from the context to the Map<String, String> field testParams
-        //      - Creates a new AnalyticsDriver (starting a browser session)
-        try {
-            this.initialise(testContext);
-        } catch (MalformedURLException e) {
-            return;
-        }
-    }
-
-    @AfterTest
-    public void tearDown() {
-        try {
-            if (driver.getSessionId() != null) {
-                AnalyticsPage page = new AnalyticsPage(driver);
-                page.waitForLoadingWrapper();
-                if (page.getMenuOptions().size() > 0) {
-                    page.clickMenuHome();
-                    page.waitForLoadingWrapper();
-                    page.clickMenuLogout();
-                    page.waitForLoadingWrapper();
-                }
-                driver.quit();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -94,8 +94,7 @@ public class FigureChecking extends SISRATest {
         if(getTestParam("publish-type").toLowerCase().equals("local")){
             publishType = 1;
         }
-        page.clickPublishAndWait(publishType);
-        page.clickClose();
+        page.clickPublishWaitAndClose(publishType);
     }
 
     private void publishBasedata(){
@@ -110,7 +109,7 @@ public class FigureChecking extends SISRATest {
         if(getTestParam("publish-type").toLowerCase().equals("local")){
             publishType = 1;
         }
-        page.clickPublish(publishType);
+        page.clickPublishWaitAndClose(publishType);
     }
 
     private EAPListView openReport(){
