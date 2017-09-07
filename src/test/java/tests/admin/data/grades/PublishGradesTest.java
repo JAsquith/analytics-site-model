@@ -45,16 +45,16 @@ public class PublishGradesTest extends EAPPublishTest {
     private PublishGrades selectMainTab(String gradePublishType){
 
         MainTab mainTab = null;
-
+        String msg = "Grade Publishing Type (" + gradePublishType + ") must be one of: {";
         for (MainTab tab : MainTab.values()){
+            msg += "'"+tab.getName()+"', ";
             if (tab.getName().toLowerCase().equals(gradePublishType)){
                 mainTab = tab;
                 break;
             }
         }
+        msg = msg.substring(0, msg.length()-2)+"}";
         if (mainTab==null) {
-            String msg = "Grade Publishing Type (" + gradePublishType + ") must be one of: " +
-                    "{'Reports', 'Tracker', 'Flight Paths'}";
             throw new IllegalArgumentException(msg);
         }
 
@@ -62,18 +62,11 @@ public class PublishGradesTest extends EAPPublishTest {
         return new PublishGrades(driver);
     }
 
-    @Step( "Select the Year {eapYear} tab" )
-    private PublishGrades selectSubTab(int eapYear){
-        if (eapYear == 0){
-            return new PublishGrades(driver).selectDatasetsTab();
-        }
-        return new PublishGrades(driver).selectYearTab(eapYear);
-    }
-
     // TEST BODY STEPS
+    @Step( "Open the publish modal (if required)" )
     private void openPublishModal(String gradesPublishType){
         switch (gradesPublishType.toLowerCase()){
-            case "report": case "dataset":
+            case "report":
                 String dataset = getStringParam("dataset");
                 int year = getIntegerParam("year");
                 int term = getIntegerParam("term");
@@ -92,7 +85,7 @@ public class PublishGradesTest extends EAPPublishTest {
                 break;
             default:
                 String msg = "grades-publish-type ("+gradesPublishType+") must be one of " +
-                        "{'report', 'dataset', 'tracker', 'flight paths'}";
+                        "{'report', 'tracker', 'flight paths'}";
                 throw new IllegalArgumentException(msg);
         }
     }
