@@ -19,7 +19,7 @@
 
         <selenium.version>3.4.0</selenium.version>
 
-        <testng.allure.version>2.0-BETA16</testng.allure.version>
+        <testng.allure.version>2.0-BETA18</testng.allure.version>
         <aspectj.version>1.8.10</aspectj.version>
         <slf4j.version>1.8.0-alpha2</slf4j.version>
 
