@@ -30,76 +30,22 @@
     </test>
 -->
 
-    <test name="Locked Reports - (H)">
-        <parameter name="test-id" value="000013" />
-        <parameter name="username" value="tesloc184718" />
-        <parameter name="password" value="UhThRySm5" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="accessible-eap-buttons" value="Headlines" />
-        <parameter name="report-areas" value="Headlines" />
-        <parameter name="locked-access" value="true" />
+    <test name="Ian #2 - EBacc Strong Pass Filters - EBacc Standard Pass">
+        <parameter name="test-id" value="000022" />
+        <parameter name="username" value="twoaut185182" />
+        <parameter name="password" value="AbDoWnHq9" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="19" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Exams" />
+        <parameter name="report-area" value="EBacc" />
+        <parameter name="report-view" value="Strong Pass" />
+        <parameter name="report-level" value="Filters" />
+        <parameter name="column-name" value="EBacc Standard Pass" />
+        <parameter name="dataset-options" value="Compare=Compare With Set" />
+        <parameter name="expected-report-figures-file" value="Ian - 2 - EBaccStrongPass - StdPass.csv" />
         <classes>
-            <class name="tests.account.ReportAccessTests" />
-        </classes>
-    </test>
-    <test name="Locked Reports - (H and Q)">
-        <parameter name="test-id" value="000014" />
-        <parameter name="username" value="tesloc184719" />
-        <parameter name="password" value="EtQrQwRc3" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="report-areas" value="Headlines|Qualifications" />
-        <parameter name="accessible-eap-buttons" value="Headlines|Grades" />
-        <parameter name="locked-access" value="true" />
-        <classes>
-            <class name="tests.account.ReportAccessTests" />
-        </classes>
-    </test>
-    <test name="Locked Reports - (H and S)">
-        <parameter name="test-id" value="000015" />
-        <parameter name="username" value="tesloc184720" />
-        <parameter name="password" value="UhJrXgHh6" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="report-areas" value="Headlines|Students" />
-        <parameter name="accessible-eap-buttons" value="Headlines|Grades" />
-        <parameter name="locked-access" value="true" />
-        <classes>
-            <class name="tests.account.ReportAccessTests" />
-        </classes>
-    </test>
-    <test name="Locked Reports - (Q)">
-        <parameter name="test-id" value="000016" />
-        <parameter name="username" value="tesloc184721" />
-        <parameter name="password" value="RsHrKvZy5" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="report-areas" value="Qualifications" />
-        <parameter name="accessible-eap-buttons" value="Grades" />
-        <parameter name="locked-access" value="true" />
-        <classes>
-            <class name="tests.account.ReportAccessTests" />
-        </classes>
-    </test>
-    <test name="Locked Reports - (Q and S)">
-        <parameter name="test-id" value="000017" />
-        <parameter name="username" value="tesloc184722" />
-        <parameter name="password" value="VfDkHfDi7" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="report-areas" value="Qualifications|Students" />
-        <parameter name="accessible-eap-buttons" value="Grades" />
-        <parameter name="locked-access" value="true" />
-        <classes>
-            <class name="tests.account.ReportAccessTests" />
-        </classes>
-    </test>
-    <test name="Locked Reports - (S)">
-        <parameter name="test-id" value="000018" />
-        <parameter name="username" value="tesloc184723" />
-        <parameter name="password" value="PiVzJyQr2" />
-        <parameter name="accessible-areas" value="Home|Reports" />
-        <parameter name="report-areas" value="Students" />
-        <parameter name="accessible-eap-buttons" value="Grades" />
-        <parameter name="locked-access" value="true" />
-        <classes>
-            <class name="tests.account.ReportAccessTests" />
+            <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>
     </test>
 

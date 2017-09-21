@@ -8,9 +8,7 @@
 
     <suite-files>
 
-        <suite-file path="AuthGroupTests.xml" />
-
-        <suite-file path="ReportFigureTests.xml" />
+        <suite-file path="DevTests.xml" />
 
         <!--
         <suite-file path="DevTests.xml" />

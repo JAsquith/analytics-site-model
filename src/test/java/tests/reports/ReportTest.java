@@ -38,8 +38,9 @@ public abstract class ReportTest extends BaseTest {
             // Open the reports for the correct dataset
             report = openTestDataset(getStringParam("cohort"),
                     getStringParam("year"),
+                    getStringParam("trackerCol"),
                     getStringParam("dataset"),
-                    getStringParam("button", "Grades"));
+                    getStringParam("report-area"));
 
             // Open the test view at the right level
             report = openTestView(report,
@@ -60,13 +61,18 @@ public abstract class ReportTest extends BaseTest {
         }
     }
 
+    @Step( "Open the {cohort} > {year} > {dataset} > {repArea} report" )
+    public EAPListView openTestDataset(String cohort, String year, String dataset, String repArea) {
+        return openTestDataset(cohort, year, "", dataset, repArea);
+    }
+
     @Step( "Open the {cohort} > {year} > {dataset} > {button} report" )
-    public EAPListView openTestDataset(String cohort, String year, String dataset, String button){
+    public EAPListView openTestDataset(String cohort, String year, String forTracker, String dataset, String button){
         ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
         return reports.
                 selectCohortByUrl(cohort).
-                getYearAccordion(year).
-                gotoPublishedReport(dataset, false, button);
+                getYearAccordion(year, forTracker).
+                gotoPublishedReport(dataset, forTracker, button);
     }
 
     @Step( "Switch to the {area} > {view} report at {level} Level" )

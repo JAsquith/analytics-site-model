@@ -20,30 +20,14 @@ public class LoginPage {
     public final By ACC_USERNAME = By.id("LogIn_UserName");
     public final By ACC_PASSWORD = By.id("LogIn_Password");
     public final By ACC_LOG_IN_BUTTON = By.cssSelector("form#fm_LogIn button.green");
-    public final By ACC_FORGOT_LOGIN = By.linkText("Forgotten your login details?");
 
-    public final By VAL_MESSAGE_LIST = By.cssSelector("div.validation-summary-errors>ul");
     public final By VAL_MESSAGES = By.cssSelector("div.validation-summary-errors>ul>li");
 
-    public final By LOGOUT_MESSAGE = By.cssSelector("div.logOutMessage");
-
-    public final By OTHER_SESSION_END_AND_LOGIN = By.cssSelector("form#fm_LogIn>div>button.button.green.noIcon");
-    public final By OTHER_SESSION_CANCEL_LOGIN = By.cssSelector("form#fm_LogIn>div>a.button.cancel.noIcon");
-
-    public final By LOST_PASSWORD_EMAIL = By.id("Email");
-    public final By LOST_PASSWORD_CANCEL = By.cssSelector("#fm_lostPassword a.contains('Cancel')");
-    public final By LOST_PASSWORD_OK = By.cssSelector("button:contains('OK')");
+    public final By OTHER_SESSION_END_AND_LOGIN = By.cssSelector("form#fm_LogIn button.green");
+    public final By OTHER_SESSION_CANCEL_LOGIN = By.cssSelector("form#fm_LogIn a.cancel");
 
     public final By FIRST_LOGIN = By.cssSelector("div.firstLogin");
-    public final By FIRST_LOGIN_PASSWORD_CHANGE = By.cssSelector("div.firstLogin>a:nth-of-type(1)");
     public final By FIRST_LOGIN_PASSWORD_KEEP = By.cssSelector("div.firstLogin>a:nth-of-type(2)");
-    public final By FIRST_LOGIN_PASSWORD_NEW = By.id("NewPassword");
-    public final By FIRST_LOGIN_PASSWORD_NEW_CONFIRM = By.id("NewPassword2");
-    public final By FIRST_LOGIN_PASSWORD_SUBMIT = By.cssSelector("#fm_changePassword>button.button.green.noIcon");
-    public final By FIRST_LOGIN_PASSWORD_CANCEL = By.cssSelector("#fm_changePassword>a.button.cancel.noIcon");
-
-    public final By COMMERCIAL_SITE_LINK = By.cssSelector(".sisraLink>a");
-
     private final By MAIN_MENU_BUTTONS = By.cssSelector("#header>#headerUpper>#menuMain li");
 
     private WebDriverWait wait;

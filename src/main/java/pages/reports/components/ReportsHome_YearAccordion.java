@@ -1,6 +1,5 @@
 package pages.reports.components;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -17,14 +16,20 @@ import java.util.List;
 public class ReportsHome_YearAccordion extends AnalyticsComponent {
 
     public static final By REPORT_AREA_BUTTONS = By.cssSelector(".EAPRptBtn>a");
+    public static final By REPORT_STATUS_TEXT = By.cssSelector(".eapPub>.eapStat>span");
+    public static final By REPORT_SETS_WITHIN_YEAR = By.cssSelector(".eapPub");
+    public static final By REPORT_NAME_FAKE_LINK = By.cssSelector("em.fakea");
 
-    public final By COHORT_HEADING = By.cssSelector(".rptHome>h2");
+    public final By COHORT_HEADING = By.cssSelector(".CohortFriendlyName");
     public final By COMPONENT = By.className("eapYear");
     public final By TITLE_BAR = By.className("eapYearTitle");
     public final By PUBLISHED_REPORT = By.cssSelector(".eapPub");
     public final By REPORT_INFO = By.cssSelector(".eapInfo>em");
 
-    private WebElement accordion;
+    private By yearGroupSelector;
+    private By pubGroupSelector;
+    private WebElement yearGroup;
+    private WebElement pubGroups;
     private WebElement titleBar;
 
     // CONSTRUCTOR
@@ -38,73 +43,53 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         this.init(yearNumber, forTracker);
     }
 
-    @Step ( "Access Year Accordion: {yearNumber} (forTracker = {forTracker})" )
     private void init(String yearNumber, String forTracker){
+        // Wait for one or more Year groups to be clickable
         waitMedium.until(ExpectedConditions.elementToBeClickable(COMPONENT));
 
-        String cohortHeading = driver.findElement(COHORT_HEADING).getText();
-        cohortHeading = cohortHeading.substring(cohortHeading.indexOf('(')+1, cohortHeading.indexOf(')'));
+        String selectorSuffix = (forTracker.equals("")) ? yearNumber : "trk";
+        yearGroupSelector = By.cssSelector(".eapYear[data-year='" + selectorSuffix + "']");
+        pubGroupSelector = By.cssSelector(".pubGrp_"+ selectorSuffix);
 
-        String accTitle;
-
-        if (forTracker != ""){
-            accTitle = "Tracker DataSets for " + cohortHeading;
-        }else {
-            accTitle = "Year " + yearNumber + " data for " + cohortHeading;
-        }
-
-        List<WebElement> accordions = driver.findElements(COMPONENT);
-        for (WebElement accordion : accordions) {
-            if (accordion.findElement(By.tagName("em")).getText().equals(accTitle)) {
-                this.accordion = accordion;
-                titleBar = accordion.findElement(TITLE_BAR);
-                break;
-            }
-        }
+        refreshElements();
+    }
+    private void refreshElements(){
+        this.yearGroup = driver.findElement(yearGroupSelector);
+        this.pubGroups = driver.findElement(pubGroupSelector);
+        titleBar = yearGroup.findElement(TITLE_BAR);
     }
 
     //  - CHANGING THE STATE OF THE PAGE
-    @Step( "Expand Year Accordion" )
     public void expandYear(){
-        List<WebElement> yearSubElements = accordion.findElements(PUBLISHED_REPORT);
-        if (!yearSubElements.get(0).isDisplayed()){
-            titleBar.click();
-            waitForAccordionExpansion();
+        if (yearGroup.getAttribute("class").contains("open")){
+            return;
         }
+        yearGroup.click();
+        waitForAccordionExpansion();
+        this.refreshElements();
     }
 
-    @Step( "Expand Dataset Accordion: {datasetName}" )
     public WebElement expandPublishedReport(String datasetName){
         expandYear();
-        List<WebElement> publishedReports = accordion.findElements(PUBLISHED_REPORT);
-        for (WebElement pubReport: publishedReports) {
-            WebElement repInfo = pubReport.findElement(REPORT_INFO);
-            if (repInfo.getText().trim().equals(datasetName)){
-                if (!pubReport.getAttribute("class").contains("active")){
-                    pubReport.click();
-                    waitForPublishedReportExpansion(pubReport.findElement(REPORT_AREA_BUTTONS));
-                }
-                return pubReport;
+        List<WebElement> reportSets = pubGroups.findElements(REPORT_SETS_WITHIN_YEAR);
+        for(WebElement reportSet : reportSets){
+            WebElement reportNameLink = reportSet.findElement(REPORT_NAME_FAKE_LINK);
+            if (reportNameLink.getText().trim().equals(datasetName)){
+                reportNameLink.click();
+                waitForPublishedReportExpansion(pubGroups.findElement(REPORT_AREA_BUTTONS));
+                return reportSet;
             }
         }
-        throw new IllegalArgumentException(datasetName + " is not a dataset in the current cohort");
+        throw new IllegalArgumentException("A Report named " + datasetName + " was not found!");
     }
 
     public EAPListView gotoPublishedReport(String datasetName, String forTracker) {
         return gotoPublishedReport(datasetName, forTracker, "Grades");
     }
 
-    @Step( "Open {repArea} Report for: {datasetName} (forTracker = {forTracker})" )
     public EAPListView gotoPublishedReport(String datasetName, String forTracker, String repArea) {
-        WebElement pubReport;
-        WebElement button;
-        if(!forTracker.equals("")){
-            pubReport = expandPublishedReport("Tracker");
-            button = getReportButtonFor(pubReport, repArea);
-        }else{
-            pubReport = expandPublishedReport(datasetName);
-            button = getReportButtonFor(pubReport, repArea);
-        }
+        expandPublishedReport(datasetName);
+        WebElement button = getReportButtonFor(repArea);
         if (button == null){
             String msg = "A button to access the "+repArea+" Reports for the "+datasetName+" "+
                     ((forTracker.equals("")) ? "" : "("+forTracker+")") + " dataset could not be found";
@@ -120,25 +105,16 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
         return reportPage;
     }
 
-    public EAPListView gotoPublishedReport(String datasetName, boolean forTracker, String repCategory){
-        String trackerCol;
-        if (forTracker){
-            trackerCol = "[default]";
-        } else {
-            trackerCol = "";
-        }
-        return gotoPublishedReport(datasetName, trackerCol, repCategory);
-    }
-
     //  - COMPONENT SPECIFIC WAITS
     private List<WebElement> waitForAccordionExpansion(){
-        return waitShort.until(ExpectedConditions.numberOfElementsToBeMoreThan(PUBLISHED_REPORT, 0));
+        waitShort.until(ExpectedConditions.elementToBeClickable(REPORT_STATUS_TEXT));
+        return driver.findElements(REPORT_STATUS_TEXT);
     }
     private WebElement waitForPublishedReportExpansion(WebElement button){
-        return waitMedium.until(ExpectedConditions.visibilityOf(button));
+        return waitMedium.until(ExpectedConditions.elementToBeClickable(button));
     }
-    private WebElement getReportButtonFor(WebElement pubReport, String repArea){
-        List<WebElement> repButtons = pubReport.findElements(REPORT_AREA_BUTTONS);
+    private WebElement getReportButtonFor(String repArea){
+        List<WebElement> repButtons = pubGroups.findElements(REPORT_AREA_BUTTONS);
         if (repButtons.size()==0){
             return null;
         }
