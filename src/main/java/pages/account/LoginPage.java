@@ -19,7 +19,7 @@ public class LoginPage {
 
     public final By ACC_USERNAME = By.id("LogIn_UserName");
     public final By ACC_PASSWORD = By.id("LogIn_Password");
-    public final By ACC_LOG_IN_BUTTON = By.cssSelector("form#fm_LogIn>div>div>button.button.green.noIcon");
+    public final By ACC_LOG_IN_BUTTON = By.cssSelector("form#fm_LogIn button.green");
     public final By ACC_FORGOT_LOGIN = By.linkText("Forgotten your login details?");
 
     public final By VAL_MESSAGE_LIST = By.cssSelector("div.validation-summary-errors>ul");
@@ -76,17 +76,6 @@ public class LoginPage {
     }
 
     /**
-     * Calls {@link #loginWith(String, String, boolean)} passing {@code false} as the third parameter
-     * @param username  the text to be entered in the Username field
-     * @param password  the text to be entered in the Password field
-     * @return  {@code true} if the login succeeded;
-     *          {@code false} if validation fails or the user is logged in elsewhere
-     */
-    public int loginWith(String username, String password){
-        return loginWith(username, password, false);
-    }
-
-    /**
      * Enters the given account details and submits the login form.
      * The int returned by this method indicates the result of the login attempt. If none of the anticipated
      * results is detected within {@link #LOGIN_TIMEOUT} seconds, a {@link TimeoutException} is thrown
@@ -138,37 +127,10 @@ public class LoginPage {
     }
 
     /**
-     * Clicks the Change Password button on the First Login form, waits for the Change Password form,
-     * sets the new & confirmed password fields and submits the Change Password form.
-     * @param password
-     * @param passwordConfirm
-     */
-    public void changePassword(String password, String passwordConfirm){
-        driver.findElement(FIRST_LOGIN_PASSWORD_CHANGE).click();
-        wait.until(ExpectedConditions.elementToBeClickable(FIRST_LOGIN_PASSWORD_NEW));
-        WebElement field = driver.findElement(FIRST_LOGIN_PASSWORD_NEW);
-        field.clear();
-        field.sendKeys(password);
-
-        field = driver.findElement(FIRST_LOGIN_PASSWORD_NEW_CONFIRM);
-        field.clear();
-        field.sendKeys(passwordConfirm);
-
-        field.submit();
-    }
-
-    /**
-     * Clicks the Keep Password button on the First Login form
-     */
-    public void keepPassword(){
-        driver.findElement(FIRST_LOGIN_PASSWORD_KEEP).click();
-    }
-
-    /**
      * Simple accessor for the Username input element
      * @return  A {@link WebElement} object representing the username input element
      */
-    public WebElement getUsernameField(){
+    private WebElement getUsernameField(){
         return driver.findElement(ACC_USERNAME);
     }
 
@@ -176,32 +138,8 @@ public class LoginPage {
      * Simple accessor for the Password input element
      * @return  A {@link WebElement} object representing the password input element
      */
-    public WebElement getPasswordField() {
+    private WebElement getPasswordField() {
         return driver.findElement(ACC_PASSWORD);
-    }
-
-    /**
-     * Simple accessor for the Log In button element
-     * @return  A {link WebElement} object representing the Log In button element
-     */
-    public WebElement getLogInButton(){
-        return driver.findElement(ACC_LOG_IN_BUTTON);
-    }
-
-    /**
-     * Simple accessor for the Forgotten Login Details link (&lt;a&gt;) element
-     * @return  A {@link WebElement} object representing the Forgotten Login Details link (&lt;a&gt;) element
-     */
-    public WebElement getForgottenDetailsLink(){
-        return driver.findElement(ACC_FORGOT_LOGIN);
-    }
-
-    /**
-     * Simple accessor for the validation messages list element
-     * @return  A {@link WebElement} object representing the &lt;ul&gt; element showing any validaation messages
-     */
-    public WebElement getValidationMsgList(){
-        return driver.findElement(VAL_MESSAGE_LIST);
     }
 
     /**
@@ -213,62 +151,18 @@ public class LoginPage {
     }
 
     /**
-     * Simple accessor for the log out message div element.
-     * Should contain one of three strings indicating:
-     *  - Manual log out
-     *  - Session timeout due to inactivity
-     *  - Same user logged in on another session
-     * @return  A {@link WebElement} object representing the &lt;div&gt; element containing the log out message
-     */
-    public WebElement getLogoutMessage(){
-        return driver.findElement(LOGOUT_MESSAGE);
-    }
-
-    /**
-     * Simple accessor for the Registered Email Address input element on the Lost Password form
-     * @return  A {@link WebElement} object representing the &lt;input&gt; element
-     */
-    public WebElement getLostPawdEmailField(){
-        return driver.findElement(LOST_PASSWORD_EMAIL);
-    }
-
-    /**
-     * Simple accessor for the Cancel button (a link element) on the Lost Password form
-     * @return  A {@link WebElement} object representing the &lt;a&gt; element
-     */
-    public WebElement getLostPwdCancelButton(){
-        return driver.findElement(LOST_PASSWORD_CANCEL);
-    }
-
-    /**
-     * Simple accessor for the OK button on the Lost Password form
-     * @return  A {@link WebElement} object representing the &lt;button&gt; element
-     */
-    public WebElement getLostPwdOKButton(){
-        return driver.findElement(LOST_PASSWORD_OK);
-    }
-
-    /**
      * Simple accessor for the End Other Sesssion And Log In button on the Already Logged In form
      * @return  A {@link WebElement} object representing the &lt;button&gt; element
      */
-    public WebElement getOtherSessEndAndLoginButton(){
+    private WebElement getOtherSessEndAndLoginButton(){
         return driver.findElement(OTHER_SESSION_END_AND_LOGIN);
-    }
-
-    /**
-     * Simple accessor for the Cancel button (a link element) on the Already Logged In form
-     * @return  A {@link WebElement} object representing the &lt;a&gt; element
-     */
-    public WebElement getOtherSessCancelLoginButton() {
-        return driver.findElement(OTHER_SESSION_CANCEL_LOGIN);
     }
 
     /**
      * Tests for the presence of the Analytics Main Menu as a proxy for a successful login attempt
      * @return  {@code true} if the Analytics Main Menu is found on the current page; otherwise {@code false}
      */
-    public boolean loginSucceeded(){
+    private boolean loginSucceeded(){
         return driver.findElements(MAIN_MENU_BUTTONS).size() > 0;
     }
 
@@ -277,7 +171,7 @@ public class LoginPage {
      * @return  {@code true} if there is at least one &lt;li&gt; item in the validation messages list;
      *          {@code false} if the list is not present or contains no items
      */
-    public boolean validationFailed(){
+    private boolean validationFailed(){
         return getValidationMessages().size() > 0;
     }
 
@@ -285,7 +179,7 @@ public class LoginPage {
      * Tests for the presence of the Cancel button on the Already Logged In form
      * @return  {@code true} if the Cancel button is found on the current page; otherwise {@code false}
      */
-    public boolean otherActiveSession(){
+    private boolean otherActiveSession(){
         return driver.findElements(OTHER_SESSION_CANCEL_LOGIN).size() > 0;
     }
 
@@ -293,7 +187,7 @@ public class LoginPage {
      * Tests for the presence of the div element displayed when a user logs in for the first time.
      * @return  {@code true} if the First Login div is found on the current page; otherwise {@code false}
      */
-    public boolean firstLogin(){
+    private boolean firstLogin(){
         return driver.findElements(FIRST_LOGIN).size() > 0;
     }
 
@@ -304,18 +198,7 @@ public class LoginPage {
      *          2 = user already logged in elsewhere (only valid if the {@code endOtherSession} param is {@code false}
      *          3 = first login for this user (use changePassword, or keepPassword methods to complete login)
      */
-    public int loginResult(boolean ignoreOtherSession) {
-        return loginResult(ignoreOtherSession, false);
-    }
-
-    /**
-     * Checks the outcome of a login attempt.
-     * @return  0 = success (the browser is displaying an Analytics page with Main Menu buttons)
-     *          1 = validation fail (still on login screen)
-     *          2 = user already logged in elsewhere (only valid if the {@code endOtherSession} param is {@code false}
-     *          3 = first login for this user (use changePassword, or keepPassword methods to complete login)
-     */
-    public int loginResult(boolean ignoreOtherSession, boolean checkForFirst){
+    private int loginResult(boolean ignoreOtherSession, boolean checkForFirst){
         if(loginSucceeded()){
             return 0;
         }
@@ -334,7 +217,7 @@ public class LoginPage {
         throw new NoSuchElementException("");
     }
 
-    public int waitForLoginResult(boolean ignoreOtherSession, boolean checkForFirst) {
+    private int waitForLoginResult(boolean ignoreOtherSession, boolean checkForFirst) {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
