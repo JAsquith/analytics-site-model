@@ -28,21 +28,21 @@ public class AvailableOptionsTests extends ReportTest {
     @Severity( SeverityLevel.NORMAL )
     public void studentFiltersEnabled(){
         assertWithScreenshot("Enabled status of the Student Filters tab",
-                report.filterTabs.isEnabled("filter"), is(true));
+                report.reportTabs.isEnabled("filter"), is(true));
     }
 
     @Test( description = "Measure Filters tab: enabled" )
     @Severity( SeverityLevel.NORMAL )
     public void measureFiltersEnabled(){
         assertWithScreenshot("Enabled status of the Measure Filters tab",
-                report.filterTabs.isEnabled("measure"), is(true));
+                report.reportTabs.isEnabled("measure"), is(true));
     }
 
     @Test( description = "Residual Exclusions tab: disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void residualExclusionsDisabled(){
         assertWithScreenshot("Enabled status of the Residual Exclusions tab",
-                report.filterTabs.isDisabled("residual"), is(true));
+                report.reportTabs.isDisabled("residual"), is(true));
     }
 
     // Tests of the elements in the Grade Filter options area

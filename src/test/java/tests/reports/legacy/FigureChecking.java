@@ -173,7 +173,7 @@ public class FigureChecking extends SISRATest {
         String[] groups = filterGroupsParam.split("¬");
         String[] values = filterValuesParam.split("¬");
 
-        Report_AddStudentFilters filtersModal = reportPage.filterTabs.openStudentFiltersModal();
+        Report_AddStudentFilters filtersModal = reportPage.reportTabs.openStudentFiltersModal();
 
         for(int i = 0; i < groups.length; i++){
             String group = groups[i];

@@ -123,7 +123,7 @@ public abstract class ReportTest extends BaseTest {
                 report = report.dsOptions.switchTab(value);
                 break;
             case "Actual":
-                report = report.dsOptions.selectDataset(value);
+                report = report.dsOptions.selectMainFocus(value);
                 break;
             case "Compare":
                 report = report.dsOptions.selectCompareWith(value);
@@ -141,7 +141,7 @@ public abstract class ReportTest extends BaseTest {
             if (debugMode) {
                 saveScreenshot(context.getName()+"-Pre-apply_StuFilters.png");
             }
-            Report_AddStudentFilters stuFiltersModal = report.filterTabs.openStudentFiltersModal();
+            Report_AddStudentFilters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
             for (String filter : filters){
                 int delimIndex = filter.indexOf("=");
                 String filterName = filter.substring(0,delimIndex);
@@ -168,7 +168,7 @@ public abstract class ReportTest extends BaseTest {
                 saveScreenshot(context.getName()+"-Pre-apply_MeasFilters.png");
             }
 
-            Report_AddMeasureFilters measFiltersModal = report.filterTabs.openMeasureFiltersModal();
+            Report_AddMeasureFilters measFiltersModal = report.reportTabs.openMeasureFiltersModal();
             for (String measure : measures){
                 int delimIndex = measure.indexOf("=");
                 String measureName = measure.substring(0,delimIndex);
@@ -207,7 +207,7 @@ public abstract class ReportTest extends BaseTest {
             if (debugMode) {
                 saveScreenshot(context.getName()+"-Pre-apply_ResidExcl.png");
             }
-            Report_AddResidualExclusions exclusionsModal = report.filterTabs.openResidualExclusionsModal();
+            Report_AddResidualExclusions exclusionsModal = report.reportTabs.openResidualExclusionsModal();
             for(String residual : residuals){
                 toggleResidualExclusion(exclusionsModal, residual);
             }

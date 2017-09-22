@@ -27,7 +27,9 @@ public class Report_DatasetOptions extends AnalyticsComponent {
         return driver.findElement(locator).getAttribute("class").toLowerCase().contains("disabled");
     }
 
-    public EAPListView selectDataset(String optionText){
+    public EAPListView selectMainFocus(String optionText){
+
+        
 
         WebElement select = driver.findElement(DATASET_DDL);
         select.click();

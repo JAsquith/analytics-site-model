@@ -3,34 +3,25 @@ package pages.reports.components;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
 import pages.reports.EAPListView;
 
 import java.util.List;
 
-public class Report_FilterTabs extends AnalyticsComponent {
-
-    public final By TAB_FILTERS = By.cssSelector(".tabbutton[data-tab='filter']");
-    public final By ADD_FILTERS = By.cssSelector(".filters>*>.button.noIcon");
-    public final By CLEAR_FILTERS = By.cssSelector(".filters>*>.button.cancel");
-
-    public final By TAB_MEASURES = By.cssSelector(".tabbutton[data-tab='measure']");
-    public final By ADD_MEASURES = By.cssSelector(".measures>*>.button.noIcon");
-    public final By CLEAR_MEASURES = By.cssSelector(".measures>*>.button.cancel");
-
-    public final By TAB_RESIDUALS = By.cssSelector(".tabbutton[data-tab='residual']");
-    public final By ADD_RESIDUALS = By.cssSelector(".residuals>*>.button.noIcon");
-    public final By CLEAR_RESIDUALS = By.cssSelector(".residuals>*>.button.cancel");
+public class Report_Tabs extends AnalyticsComponent {
 
     private String genericsFor;
     private By genericTabBy;
     private By genericAddBy;
-    private By genericClearBy;
+    private static By RESET_ICON = By.cssSelector(".im12_Reset");
+    private static By RESET_YES = By.cssSelector(".resetPop a");
+    private static By RESET_NO = By.cssSelector(".resetPop em");
     private By genericActiveTabBy;
     private By genericDisabledTabBy;
 
     // CONSTRUCTOR
-    public Report_FilterTabs(RemoteWebDriver aDriver){
+    public Report_Tabs(RemoteWebDriver aDriver){
         super(aDriver);
         genericsFor = "";
     }
@@ -75,9 +66,16 @@ public class Report_FilterTabs extends AnalyticsComponent {
         return false;
     }
 
+    public WebElement getTab(String tabType){
+        return driver.findElement(genericTabBy);
+    }
+
     public EAPListView selectTab(String tabType){
         buildGenericBys(tabType);
-        driver.findElement(genericTabBy).click();
+        WebElement tab = driver.findElement(genericTabBy);
+        if (!tab.getAttribute("class").contains("active")){
+            tab.click();
+        }
         return new EAPListView(driver);
     }
 
@@ -85,7 +83,7 @@ public class Report_FilterTabs extends AnalyticsComponent {
         if (!isActive("filter")){
             selectTab("filter");
         }
-        driver.findElement(ADD_FILTERS).click();
+        driver.findElement(genericAddBy).click();
         return new Report_AddStudentFilters(driver);
     }
 
@@ -93,7 +91,7 @@ public class Report_FilterTabs extends AnalyticsComponent {
         if (!isActive("measure")){
             selectTab("measure");
         }
-        driver.findElement(ADD_MEASURES).click();
+        driver.findElement(genericAddBy).click();
         return new Report_AddMeasureFilters(driver);
     }
 
@@ -101,32 +99,49 @@ public class Report_FilterTabs extends AnalyticsComponent {
         if (!isActive("residual")){
             selectTab("residual");
         }
-        driver.findElement(ADD_RESIDUALS).click();
+        driver.findElement(genericAddBy).click();
         return new Report_AddResidualExclusions(driver);
     }
 
-    public EAPListView clearAllFilters(){
-        return clearAll("filter");
+    public EAPListView resetStudentFilters(){
+        return resetTab("filter");
     }
 
-    public EAPListView clearAllMeasures(){
-        return clearAll("measure");
+    public EAPListView resetMeasureFilters(){
+        return resetTab("measure");
     }
 
-    public EAPListView clearAllResiduals(){
-        return clearAll("residual");
+    public EAPListView resetResidualExceptions(){
+        return resetTab("residual");
     }
 
-    public EAPListView clearAll(String tabType){
+    public EAPListView resetOptions() {
+        return resetTab("option");
+    }
+
+    public EAPListView resetTab(String tabType) {
+        return resetTab(tabType, true);
+    }
+
+    public EAPListView resetTab(String tabType, boolean confirm){
+        // Refresh the generic locators
         buildGenericBys(tabType);
-        if(!isActive(tabType)){
-            selectTab(tabType);
-        }
-        List<WebElement> clearButtons = driver.findElements(genericClearBy);
-        if (clearButtons.size()==0){
+
+        // Look for a reset button on the relevant tab
+        WebElement tab = getTab(tabType);
+        List<WebElement> resetButtons = tab.findElements(RESET_ICON);
+        if (resetButtons.size()==0){
+            // No reset button, so nothing needs doing
             return new EAPListView(driver);
         }
-        clearButtons.get(0).click();
+
+        // Click the reset button
+        resetButtons.get(0).click();
+        waitShort.until(ExpectedConditions.elementToBeClickable(tab.findElement(RESET_YES)));
+
+        // Confirm by clicking the yes link
+        tab.findElement(RESET_YES).click();
+
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
@@ -149,7 +164,6 @@ public class Report_FilterTabs extends AnalyticsComponent {
 
         genericTabBy = By.cssSelector(".tabbutton[data-tab='"+ tabType +"']");
         genericAddBy = By.cssSelector("."+classTabType+">*>.button.noIcon");
-        genericClearBy = By.cssSelector("."+classTabType+">*>.button.cancel");
         genericActiveTabBy = By.cssSelector(".tabbutton.active[data-tab='"+ tabType +"']");
         genericDisabledTabBy = By.cssSelector(".tabbutton.disabled");
         genericsFor = tabType;

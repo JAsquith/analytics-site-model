@@ -1,34 +1,38 @@
 package pages.reports;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsPage;
 import pages.reports.components.Report_DatasetOptions;
-import pages.reports.components.Report_FilterTabs;
 import pages.reports.components.Report_GradeFilters;
+import pages.reports.components.Report_Tabs;
 import pages.reports.components.Report_ViewOptions;
 
 import java.util.List;
 
 public class EAPReportView extends AnalyticsPage{
 
+    private static final By KEY_CHARACTERISTICS_ICON = By.cssSelector(".icoEAP.act_key");
+
+
     public static final By AREAS = By.className("area");
+
     public static final By AREA_BUTTONS = By.cssSelector(".area .rept");
     public static final By REPORT_NAV_AREA_LINKS = By.cssSelector(".list-grid td>a");
     public static final By REPORT_NAV_VIEW_LABELS = By.cssSelector("td.title-y:nth-of-type(2)");
     public static final By REPORT_NAV_LEVEL_LABELS = By.cssSelector("td.title-x");
     public static final By LIST_GRID_ROWS = By.cssSelector("tr.btn");
     public static final By LIST_GRID_COLS = By.cssSelector("tr:nth-of-type(3)>td");
+    private static final By REPORT_GROUPS = By.cssSelector(".rptGroup");
 
     // Locators for dataset DDLs are public in the Report_DatasetOptions class
     public Report_DatasetOptions dsOptions;
 
     // Locators for Filters/Measures/Residual Exclusions tabs (and the buttons within them)
-    // are public in the Report_FilterTabs class
-    public Report_FilterTabs filterTabs;
+    // are public in the Report_Tabs class
+    public Report_Tabs reportTabs;
 
     // Locators for Grade filters (On Track, Faculty, Class, Grade Type, etc)
     // are public in the Report_GradeFilters class
@@ -40,15 +44,35 @@ public class EAPReportView extends AnalyticsPage{
     // CONSTRUCTORS
     public EAPReportView(RemoteWebDriver aDriver){
         super(aDriver);
-        filterTabs = new Report_FilterTabs(driver);
-        gradeFilters = new Report_GradeFilters(driver);
-        viewOptions = new Report_ViewOptions(driver);
-        dsOptions = new Report_DatasetOptions(driver);
-        waitMedium.until(ExpectedConditions.elementToBeClickable(dsOptions.DATASET_DDL));
+        try {
+            waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
+        } catch (TimeoutException e){
+            throw new IllegalStateException("Timeout waiting for Key Characteristics icon to be clickable on EAPReportView");
+        }
     }
 
 // METHODS
     //  - CHANGING THE STATE OF THE PAGE
+    public EAPReportView selectArea(String areaName){
+        try {
+            WebElement area = driver.findElement(By.cssSelector(".area[data-name='" + areaName + "']")); //NoSuchElementException
+            if (!area.getAttribute("class").contains("selected")){
+                area.click();
+                waitShort.until(clickableReportGroupsFor(area));// TimeoutException
+            }
+        } catch (NoSuchElementException e){
+            throw new WebDriverException("NSEE trying to select Area '"+areaName+"'; "+e.getMessage());
+        } catch (TimeoutException e){
+            throw new WebDriverException("Exception");
+        }
+        return new EAPReportView(driver);
+    }
+
+    private ExpectedCondition<WebElement> clickableReportGroupsFor(WebElement area) {
+        return ExpectedConditions.elementToBeClickable(area.findElement(REPORT_GROUPS));
+    }
+
+
     public EAPReportView openView(String areaName, String reportName, String levelName){
 
         // Show the table of links to views within the given areaName
@@ -67,7 +91,9 @@ public class EAPReportView extends AnalyticsPage{
         return this;
     }
 
-
+    public EAPReportView selectTab(String tabType){
+        return reportTabs.selectTab(tabType);
+    }
 
 
     // PRIVATE HELPER METHODS FOR THE PUBLIC METHODS
