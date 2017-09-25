@@ -10,7 +10,7 @@ import pages.reports.EAPListView;
 
 import java.util.List;
 
-public class ReportDisplayOptions extends AnalyticsComponent {
+public class Report_DisplayOptions extends AnalyticsComponent {
 
     public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColNameType");
     private final By COL_SORT_DDL_OPTIONS = By.tagName("select#ReportOptions_RPTColSort_ColNameType>option");
@@ -23,7 +23,7 @@ public class ReportDisplayOptions extends AnalyticsComponent {
     public final By SUB_WHOLE_TOGGLE_SUB = By.cssSelector(".chgOptFmSub.icon.sub");
     public final By SUB_WHOLE_TOGGLE_WHOLE = By.cssSelector(".chgOptFmSub.icon.whole");
 
-    public ReportDisplayOptions(RemoteWebDriver aDriver){
+    public Report_DisplayOptions(RemoteWebDriver aDriver){
         super(aDriver);
     }
 

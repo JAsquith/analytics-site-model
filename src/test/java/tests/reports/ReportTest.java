@@ -113,7 +113,9 @@ public abstract class ReportTest extends BaseTest {
                 applyReportDatasetOption(field, value);
             }
         }
-
+        if(debugMode){
+            saveScreenshot(context.getName()+"-Post-apply_DatasetOptions.png");
+        }
     }
 
     @Step( "Apply Dataset option '{field}' = '{value}'" )
@@ -138,9 +140,6 @@ public abstract class ReportTest extends BaseTest {
     public void applyAllStudentFilters(){
         String[] filters = getArrayParam("filters");
         if(!filters[0].equals("")){
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_StuFilters.png");
-            }
             ReportViewModal_StudentFilters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
             for (String filter : filters){
                 int delimIndex = filter.indexOf("=");
@@ -150,6 +149,7 @@ public abstract class ReportTest extends BaseTest {
             }
             stuFiltersModal.apply();
             if (debugMode) {
+                report.reportTabs.expandStudentFiltersTab();
                 saveScreenshot(context.getName()+"-Post-apply_StuFilters.png");
             }
         }
@@ -164,10 +164,6 @@ public abstract class ReportTest extends BaseTest {
     public void applyAllMeasureFilters(){
         String[] measures = getArrayParam("measures");
         if(!measures[0].equals("")){
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_MeasFilters.png");
-            }
-
             ReportViewModal_MeasureFilters measFiltersModal = report.reportTabs.openMeasureFiltersModal();
             for (String measure : measures){
                 int delimIndex = measure.indexOf("=");
@@ -185,6 +181,7 @@ public abstract class ReportTest extends BaseTest {
             }
             measFiltersModal.apply();
             if (debugMode) {
+                report.reportTabs.expandMeasureFiltersTab();
                 saveScreenshot(context.getName()+"-Post-apply_MeasFilters.png");
             }
         }
@@ -204,15 +201,13 @@ public abstract class ReportTest extends BaseTest {
     public void applyAllResidualExclusions(){
         String[] residuals = getArrayParam("residuals");
         if(!residuals[0].equals("")){
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_ResidExcl.png");
-            }
             ReportViewModal_ResidualExclusions exclusionsModal = report.reportTabs.openResidualExclusionsModal();
             for(String residual : residuals){
                 toggleResidualExclusion(exclusionsModal, residual);
             }
             exclusionsModal.apply();
             if (debugMode) {
+                report.reportTabs.expandResidualExclusionsTab();
                 saveScreenshot(context.getName()+"-Post-apply_ResidExcl.png");
             }
         }
@@ -227,9 +222,6 @@ public abstract class ReportTest extends BaseTest {
     public void applyAllGradeFilterOptions(){
         String[] gradeFilterOptions = getArrayParam("grade-filter-options");
         if (!gradeFilterOptions[0].equals("")) {
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_GradeFilters.png");
-            }
             for (String gradeFilterOption : gradeFilterOptions){
                 int delimIndex = gradeFilterOption.indexOf("=");
                 String field = gradeFilterOption.substring(0,delimIndex);
@@ -237,6 +229,7 @@ public abstract class ReportTest extends BaseTest {
                 applyGradeFilterOptions(field, value);
             }
             if (debugMode) {
+                report.gradeFilters.expandMe();
                 saveScreenshot(context.getName()+"-Post-apply_GradeFilters.png");
             }
         }
@@ -296,9 +289,6 @@ public abstract class ReportTest extends BaseTest {
     public void applyAllViewOptions(){
         String[] viewOptions = getArrayParam("view-options");
         if (!viewOptions[0].equals("")) {
-            if (debugMode) {
-                saveScreenshot(context.getName()+"-Pre-apply_ViewOptions.png");
-            }
             for (String viewOption : viewOptions){
                 int delimIndex = viewOption.indexOf("=");
                 String field = viewOption.substring(0,delimIndex);

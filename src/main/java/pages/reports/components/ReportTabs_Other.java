@@ -96,9 +96,13 @@ public class ReportTabs_Other extends AnalyticsComponent {
         return new EAPView(driver);
     }
 
-    public void expand(String tabType){
+    void expand(String tabType){
         buildGenericBys(tabType);
-        WebElement expandButton = driver.findElement(tabExpandBtn);
+        List<WebElement> expandButtons = driver.findElements(tabExpandBtn);
+        if (expandButtons.size()==0){
+            return;
+        }
+        WebElement expandButton = expandButtons.get(0);
         WebElement tabContentDiv = driver.findElement(tabContent);
         String contentsClassAttr = tabContentDiv.getAttribute("class");
         if (!expandButton.isDisplayed() || contentsClassAttr.contains("open")){
@@ -108,7 +112,7 @@ public class ReportTabs_Other extends AnalyticsComponent {
         waitShort.until(isExpanded(tabContentDiv));
     }
 
-    public void collapse(String tabType){
+    void collapse(String tabType){
         buildGenericBys(tabType);
         WebElement tabContentDiv = driver.findElement(tabContent);
         String contentsClassAttr = tabContentDiv.getAttribute("class");
@@ -126,6 +130,12 @@ public class ReportTabs_Other extends AnalyticsComponent {
         return ExpectedConditions.attributeContains(tabContentDiv, "style", "height: 88px");
     }
 
+    public void expandStudentFiltersTab(){
+        expand("filter");
+    }
+    public void expandMeasureFiltersTab() { expand("measure"); }
+    public void expandResidualExclusionsTab() {expand("residual");}
+
     public ReportViewModal_StudentFilters openStudentFiltersModal(){
         if (isEnabled("filter")) {
             selectTab("filter");
@@ -136,12 +146,14 @@ public class ReportTabs_Other extends AnalyticsComponent {
     }
 
     public ReportViewModal_MeasureFilters openMeasureFiltersModal(){
-        if (!isEnabled("measure")){
-            selectTab("measure");
-            driver.findElement(addFiltersBtn).click();
-            return new ReportViewModal_MeasureFilters(driver);
+        if(!isEnabled("measure")){
+            throw new IllegalStateException("The Measure Filters tab is not enabled");
         }
-        throw new IllegalStateException("The Measure Filters tab is not enabled");
+        if (!isActive("measure")){
+            selectTab("measure");
+        }
+        driver.findElement(addFiltersBtn).click();
+        return new ReportViewModal_MeasureFilters(driver);
     }
 
     public ReportViewModal_ResidualExclusions openResidualExclusionsModal(){

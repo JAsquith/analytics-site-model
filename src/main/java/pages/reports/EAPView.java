@@ -5,10 +5,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsPage;
-import pages.reports.components.ReportDisplayOptions;
 import pages.reports.components.ReportTab_Dataset;
 import pages.reports.components.ReportTab_Options;
 import pages.reports.components.ReportTabs_Other;
+import pages.reports.components.Report_DisplayOptions;
 
 import java.util.List;
 
@@ -38,12 +38,15 @@ public class EAPView extends AnalyticsPage{
     public ReportTab_Options gradeFilters;
 
     // Locators for View Options (Column Sort, Count/Percent, Standard/Cumulative, Breakdown, StuInfo, A8 Basket, Sub/Whole)
-    public ReportDisplayOptions viewOptions;
+    public Report_DisplayOptions viewOptions;
 
     // CONSTRUCTORS
     public EAPView(RemoteWebDriver aDriver){
         super(aDriver);
         dsOptions = new ReportTab_Dataset(driver);
+        gradeFilters = new ReportTab_Options(driver);
+        reportTabs = new ReportTabs_Other(driver);
+        viewOptions = new Report_DisplayOptions(driver);
         try {
             waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
         } catch (TimeoutException e){
@@ -80,6 +83,10 @@ public class EAPView extends AnalyticsPage{
 
     private EAPView selectReport(WebElement selectedArea, String reportName){
         try{
+            String currentReport = driver.findElement(REPORT_GRP_ACTIVE).getText();
+            if (reportName.equals(currentReport)){
+                return this;
+            }
             WebElement reportLink = selectedArea.findElement(By.linkText(reportName));
             reportLink.click();
             waitForLoadingWrapper();

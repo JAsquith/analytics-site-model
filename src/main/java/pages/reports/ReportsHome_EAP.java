@@ -4,7 +4,7 @@ package pages.reports;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.reports.components.ReportsHome_YearAccordion;
+import pages.reports.components.ReportsHome_YearGroup;
 
 /**
  * Represents the contents and interactive elements on the KS3/4 Reports Home Page
@@ -41,12 +41,12 @@ public class ReportsHome_EAP extends ReportsHome {
         return driver.findElement(COHORT_TITLE).getText();
     }
 
-    public ReportsHome_YearAccordion getYearAccordion(String yearNumber) {
+    public ReportsHome_YearGroup getYearAccordion(String yearNumber) {
         return getYearAccordion(yearNumber, "");
     }
 
-    public ReportsHome_YearAccordion getYearAccordion(String yearNumber, String forTracker){
-        return new ReportsHome_YearAccordion(driver, yearNumber, forTracker);
+    public ReportsHome_YearGroup getYearAccordion(String yearNumber, String forTracker){
+        return new ReportsHome_YearGroup(driver, yearNumber, forTracker);
     }
 
     private void openIfNotAlready(){

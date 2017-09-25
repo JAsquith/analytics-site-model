@@ -1,88 +1,70 @@
 Name,Filter Value,P8
-Armed Forces,Y,-0.241
-Data Set 4 >,,-1.616
-Difference >,,1.375
-SEN,A,0.488
-Data Set 4 >,,0.594
-Difference >,,-0.106
-Term of Birth,3,0.565
-Data Set 4 >,,1.053
-Difference >,,-0.487
-SEN Provision,K,0.204
-Data Set 4 >,,0.779
-Difference >,,-0.575
-Attendance Group,2. 85% - 90%,0.165
-Data Set 4 >,,0.812
-Difference >,,-0.647
-EAL,Y,-0.025
-Data Set 4 >,,0.533
-Difference >,,-0.558
-KS2 Banding,Middle,0.560
-Data Set 4 >,,1.115
-Difference >,,-0.555
-Attendance Group,3. 90% - 95%,0.074
-Data Set 4 >,,0.639
-Difference >,,-0.566
-KS1 - 2 Progress?,Y,-0.049
-Data Set 4 >,,0.591
-Difference >,,-0.640
-Gender,Boys,0.122
-Data Set 4 >,,0.708
-Difference >,,-0.587
-Ethnic Code,WENG,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
-FSM Ever 6,N,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
-Gender,Girls,-0.194
-Data Set 4 >,,0.514
-Difference >,,-0.708
-Gifted Talented,N,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
-Looked After,Yay,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
-Pupil Premium,Not PP,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
-Traveller,N,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
-EAL,N,-0.013
-Data Set 4 >,,0.631
-Difference >,,-0.644
-KS1 - 2 Progress?,N,0.385
-Data Set 4 >,,1.010
-Difference >,,-0.625
-KS2 Banding,Upper/High,-0.778
-Data Set 4 >,,-0.028
-Difference >,,-0.750
-SEN,N,-0.062
-Data Set 4 >,,0.591
-Difference >,,-0.653
-SEN Provision,N,-0.062
-Data Set 4 >,,0.591
-Difference >,,-0.653
-Term of Birth,1,-0.041
-Data Set 4 >,,0.624
-Difference >,,-0.665
-Term of Birth,2,-0.292
-Data Set 4 >,,0.384
-Difference >,,-0.675
-SEN,P,-0.022
-Data Set 4 >,,0.928
-Difference >,,-0.950
-Attendance Group,4. Above 95%,-0.188
-Data Set 4 >,,0.487
-Difference >,,-0.675
-Armed Forces,N,-0.009
-Data Set 4 >,,0.672
-Difference >,,-0.681
-Attendance Group,1. Below 85%,0.565
-Data Set 4 >,,1.765
-Difference >,,-1.200
-Summary,,-0.013
-Data Set 4 >,,0.625
-Difference >,,-0.639
+KS1 - 2 Progress?,N,-0.668
+KS4 Targets >,,0.094
+Difference >,,-0.762
+Term of Birth,3,-0.668
+KS4 Targets >,,0.094
+Difference >,,-0.762
+Attendance Group,3. 90% - 95%,-1.756
+KS4 Targets >,,-0.656
+Difference >,,-1.100
+KS2 Banding,Middle,1.459
+KS4 Targets >,,2.081
+Difference >,,-0.622
+Term of Birth,2,1.459
+KS4 Targets >,,2.081
+Difference >,,-0.622
+Gender,Girls,-1.618
+KS4 Targets >,,-0.239
+Difference >,,-1.379
+Armed Forces,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+EAL,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+Ethnic Code,WENG,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+FSM Ever 6,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+Gifted Talented,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+Looked After,Yay,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+Pupil Premium,Not PP,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+SEN,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+SEN Provision,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+Traveller,N,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283
+KS2 Banding,Upper/High,-1.180
+KS4 Targets >,,0.214
+Difference >,,-1.394
+Attendance Group,4. Above 95%,-0.015
+KS4 Targets >,,1.180
+Difference >,,-1.195
+KS1 - 2 Progress?,Y,-0.825
+KS4 Targets >,,0.545
+Difference >,,-1.370
+Gender,Boys,-0.191
+KS4 Targets >,,1.021
+Difference >,,-1.212
+Term of Birth,1,-1.282
+KS4 Targets >,,0.238
+Difference >,,-1.520
+Attendance Group,2. 85% - 90%,-1.031
+KS4 Targets >,,0.569
+Difference >,,-1.600
+Summary,,-0.803
+KS4 Targets >,,0.481
+Difference >,,-1.283

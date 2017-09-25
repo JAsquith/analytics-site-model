@@ -30,20 +30,25 @@
     </test>
 -->
 
-    <test name="Ian #2 - EBacc Strong Pass Filters - EBacc Standard Pass">
-        <parameter name="test-id" value="000022" />
-        <parameter name="username" value="twoaut185182" />
-        <parameter name="password" value="AbDoWnHq9" />
+    <test name="Andy #1 - A8P8 Overview Filters - P8">
+        <parameter name="test-id" value="000020" />
+        <parameter name="username" value="AsqJamRestore" />
+        <parameter name="password" value="wsS!SRA125" />
         <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="19" />
+        <parameter name="cohort" value="17" />
         <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="EBacc" />
-        <parameter name="report-view" value="Strong Pass" />
+        <parameter name="dataset" value="Y11 Autumn" />
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Overview" />
         <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="EBacc Standard Pass" />
-        <parameter name="dataset-options" value="Compare=Compare With Set" />
-        <parameter name="expected-report-figures-file" value="Ian - 2 - EBaccStrongPass - StdPass.csv" />
+        <parameter name="column-name" value="P8" />
+        <parameter name="dataset-options" value="Compare=KS4 Targets" />
+        <parameter name="grade-filter-options"
+                   value="Faculty=Humanities|Qualification=History|Actual Grade Operator=greater or equal|Actual Grade Grade=D|Compare Grade Operator=greater or equal|Compare Grade Grade=A*" />
+        <parameter name="view-options" value="Column Sort=Eng P8 (Diff)|Column Sort Direction=Descending|In A8 Basket=In A8 Basket|Sub Whole=Whole" />
+        <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High|KS2 Banding=Lower|Pupil Premium=Not PP" />
+        <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=+Include" />
+        <parameter name="expected-report-figures-file" value="Andy - 1 - A8P8OverviewFilters - P8.csv" />
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>

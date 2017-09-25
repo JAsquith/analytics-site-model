@@ -90,6 +90,7 @@ public class ReportTab_Dataset extends ReportTab {
             if (currentText.equals(optionText) || currentText.equals(optionText+" (Assessments)")){
                 option.click();
                 found = true;
+                break;
             }
         }
 

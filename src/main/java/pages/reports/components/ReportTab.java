@@ -18,7 +18,7 @@ public class ReportTab extends AnalyticsComponent {
         return allTabs.selectTab(tabName);
     }
 
-    protected void expandMe(){
+    public void expandMe(){
         allTabs.expand(tabName);
     }
 

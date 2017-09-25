@@ -2,9 +2,9 @@ package tests.reports.eap.headlines.filters;
 
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
-import pages.reports.components.ReportDisplayOptions;
 import pages.reports.components.ReportTab_Dataset;
 import pages.reports.components.ReportTab_Options;
+import pages.reports.components.Report_DisplayOptions;
 import tests.reports.ReportTest;
 
 import static org.hamcrest.Matchers.is;
@@ -90,7 +90,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test(description = "CalcType (#/%): disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void calcTypeIsDisabled(){
-        ReportDisplayOptions viewOptions = report.viewOptions;
+        Report_DisplayOptions viewOptions = report.viewOptions;
         assertWithScreenshot("SEnabled status of the Calc Type option (Count/%)",
                 viewOptions.isDisabled(viewOptions.CALC_TYPE_TOGGLE), is(true));
     }
@@ -98,7 +98,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "FigType (Std/Cum): disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void figureTypeIsDisabled(){
-        ReportDisplayOptions viewOptions = report.viewOptions;
+        Report_DisplayOptions viewOptions = report.viewOptions;
         assertWithScreenshot("SEnabled status of the Figure Type option (Std/Cum)",
                 viewOptions.isDisabled(viewOptions.FIG_TYPE_TOGGLE), is(true));
     }

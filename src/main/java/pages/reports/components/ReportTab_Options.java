@@ -1,6 +1,7 @@
 package pages.reports.components;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -181,7 +182,11 @@ public class ReportTab_Options extends ReportTab {
             throw new IllegalStateException("Can't select '" + optionText +
                     "' because Grade Filters are not available");
         }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        try {
+            new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        } catch (NoSuchElementException e){
+            throw new IllegalArgumentException("'"+optionText+"' is not a grade in the Focus Dataset!");
+        }
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
@@ -195,10 +200,15 @@ public class ReportTab_Options extends ReportTab {
             throw new IllegalStateException("Can't select '" + optionText +
                     "' because Grade Filters are not available");
         }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        try {
+            new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        } catch (NoSuchElementException e){
+            throw new IllegalArgumentException("'"+optionText+"' is not a sub grade in the Focus Dataset!");
+        }
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
+
     public EAPListView selectCompGradeFilterType(String optionText){
         // Switch to the Options tab & expand it if required
         selectMe();
@@ -248,7 +258,12 @@ public class ReportTab_Options extends ReportTab {
             throw new IllegalStateException("Can't select '" + optionText +
                     "' because Compare Grade Filters are not available");
         }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+
+        try {
+            new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        } catch (NoSuchElementException e){
+            throw new IllegalArgumentException("'"+optionText+"' is not a grade in the Compare Dataset!");
+        }
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
@@ -262,7 +277,11 @@ public class ReportTab_Options extends ReportTab {
             throw new IllegalStateException("Can't select '" + optionText +
                     "' because Compare Grade Filters are not available");
         }
-        new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        try {
+            new Select(targetDDLs.get(0)).selectByVisibleText(optionText);
+        } catch (NoSuchElementException e){
+            throw new IllegalArgumentException("'"+optionText+"' is not a sub grade in the Compare Dataset!");
+        }
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }

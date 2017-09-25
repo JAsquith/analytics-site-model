@@ -12,7 +12,7 @@ import pages.AnalyticsPage;
 import pages.components.AuthorityDetailsModal;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.ReportsHome_Legacy;
-import pages.reports.components.ReportsHome_YearAccordion;
+import pages.reports.components.ReportsHome_YearGroup;
 import tests.BaseTest;
 
 import java.util.List;
@@ -193,7 +193,7 @@ public abstract class AccessTest extends BaseTest {
         try {
             ReportsHome_EAP reports = new ReportsHome_EAP(driver, true);
             WebElement pubRptInfo = reports.getYearAccordion(year).expandPublishedReport(dataset);
-            List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearAccordion.REPORT_AREA_BUTTONS);
+            List<WebElement> buttons = pubRptInfo.findElements(ReportsHome_YearGroup.REPORT_AREA_BUTTONS);
             if (buttons.size() == 0) {
                 return null;
             }

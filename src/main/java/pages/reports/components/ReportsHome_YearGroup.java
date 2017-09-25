@@ -14,7 +14,7 @@ import java.util.List;
  * Represents the contents and interactive elements within an 'accordion' for a given
  * Cohort and academic year on the KS3/4 Reports Home Page
  */
-public class ReportsHome_YearAccordion extends AnalyticsComponent {
+public class ReportsHome_YearGroup extends AnalyticsComponent {
 
     public static final By REPORT_AREA_BUTTONS = By.cssSelector(".EAPRptBtn>a");
     public static final By REPORT_STATUS_TEXT = By.cssSelector(".eapPub>.eapStat>span:not(.icon)");
@@ -31,15 +31,16 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     private By pubGroupSelector;
     private WebElement yearGroup;
     private WebElement pubGroups;
+    private WebElement pubReportSet;
     private WebElement titleBar;
 
     // CONSTRUCTOR
-    public ReportsHome_YearAccordion(RemoteWebDriver aDriver, String yearNumber){
+    public ReportsHome_YearGroup(RemoteWebDriver aDriver, String yearNumber){
         super(aDriver);
         this.init(yearNumber, "");
     }
 
-    public ReportsHome_YearAccordion(RemoteWebDriver aDriver, String yearNumber, String forTracker){
+    public ReportsHome_YearGroup(RemoteWebDriver aDriver, String yearNumber, String forTracker){
         super(aDriver);
         this.init(yearNumber, forTracker);
     }
@@ -66,7 +67,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             return;
         }
         yearGroup.click();
-        waitShort.until(pubGroupDisplayed());
+        waitShort.until(pubGroupDisplayed(yearGroup));
         this.refreshElements();
     }
 
@@ -77,7 +78,8 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             WebElement reportNameLink = reportSet.findElement(REPORT_NAME_FAKE_LINK);
             if (reportNameLink.getText().trim().equals(datasetName)){
                 reportNameLink.click();
-                waitForPublishedReportExpansion(pubGroups.findElement(REPORT_AREA_BUTTONS));
+                waitForPublishedReportExpansion(reportSet.findElement(REPORT_AREA_BUTTONS));
+                pubReportSet = reportSet;
                 return reportSet;
             }
         }
@@ -110,12 +112,12 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     private WebElement waitForPublishedReportExpansion(WebElement button){
         return waitMedium.until(ExpectedConditions.elementToBeClickable(button));
     }
-    private ExpectedCondition<Boolean> pubGroupDisplayed() {
-        return ExpectedConditions.attributeToBe(pubGroupSelector, "style", "display: block");
+    private ExpectedCondition<Boolean> pubGroupDisplayed(WebElement yearGroup) {
+        return ExpectedConditions.attributeContains(yearGroup, "class", "open");
     }
 
     private WebElement getReportButtonFor(String repArea){
-        List<WebElement> repButtons = pubGroups.findElements(REPORT_AREA_BUTTONS);
+        List<WebElement> repButtons = pubReportSet.findElements(REPORT_AREA_BUTTONS);
         if (repButtons.size()==0){
             return null;
         }
