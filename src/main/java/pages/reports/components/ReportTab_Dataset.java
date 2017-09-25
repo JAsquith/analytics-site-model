@@ -9,7 +9,7 @@ import pages.reports.EAPListView;
 
 import java.util.List;
 
-public class Report_DatasetOptions extends Report_OptionsTab {
+public class ReportTab_Dataset extends ReportTab {
 
     public static final By VIEW_TRACK_PROJECT = By.cssSelector(".vtp");
     public static final By VTP_VIEW = By.cssSelector(".canView");
@@ -25,9 +25,9 @@ public class Report_DatasetOptions extends Report_OptionsTab {
     private final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div>span.datasetList");
     private final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
 
-    public Report_DatasetOptions(RemoteWebDriver aDriver){
+    public ReportTab_Dataset(RemoteWebDriver aDriver){
         super(aDriver);
-        tabName = "Dataset";
+        tabName = "dataset";
     }
 
     public boolean isDisabled(String optionName){
@@ -47,8 +47,9 @@ public class Report_DatasetOptions extends Report_OptionsTab {
 
     public EAPListView selectMainFocus(String optionText){
 
-        // Switch to the Dataset tab
-        allTabs.selectTab(tabName);
+        // Switch to the Dataset tab & expand it if required
+        selectMe();
+        expandMe();
 
         WebElement select = driver.findElement(DATASET_DROPDOWN);
         select.click();
@@ -73,8 +74,9 @@ public class Report_DatasetOptions extends Report_OptionsTab {
     }
 
     public EAPListView selectCompareWith(String optionText){
-        // Switch to the Dataset tab
-        allTabs.selectTab(tabName);
+        // Switch to the Dataset tab & expand it if required
+        selectMe();
+        expandMe();
 
         WebElement select = driver.findElement(COMPARE_DROPDOWN);
         select.click();
@@ -101,6 +103,9 @@ public class Report_DatasetOptions extends Report_OptionsTab {
     }
 
     public EAPListView showFocusAs(String reportType){
+        // Switch to the Dataset tab & expand it if required
+        selectMe();
+        expandMe();
 
         WebElement vtp = driver.findElements(VIEW_TRACK_PROJECT).get(0);
         getVTPButton(vtp, reportType).click();
@@ -108,6 +113,9 @@ public class Report_DatasetOptions extends Report_OptionsTab {
         return new EAPListView(driver);
     }
     public EAPListView showCompareAs(String reportType){
+        // Switch to the Dataset tab & expand it if required
+        selectMe();
+        expandMe();
 
         WebElement vtp = driver.findElements(VIEW_TRACK_PROJECT).get(1);
         getVTPButton(vtp, reportType).click();

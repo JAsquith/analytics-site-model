@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 /**
  * Represents the contents and interactive elements common to any KS3/4 Report page
  */
-public class EAPHeadlineView extends EAPReportView {
+public class EAPHeadlineView extends EAPView {
 
     // CONSTRUCTORS
     public EAPHeadlineView(RemoteWebDriver aDriver){

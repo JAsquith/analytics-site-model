@@ -11,21 +11,21 @@ import pages.AnalyticsComponent;
 /**
  * Represents the contents and interactive elements on the Add/Remove Residual Exclusions modal
  */
-public class Report_AddResidualExclusions extends AnalyticsComponent {
+public class ReportViewModal_ResidualExclusions extends AnalyticsComponent {
 
     protected static final By QUAL_NAMES = By.cssSelector(".measureTbl td:nth-of-type(1)");
     protected static final By CANCEL_BUTTON = By.cssSelector(".modalClose.button.cancel");
     protected static final By APPLY_BUTTON = By.cssSelector(".button.green");
 
     // CONSTRUCTOR
-    public Report_AddResidualExclusions(RemoteWebDriver aDriver){
+    public ReportViewModal_ResidualExclusions(RemoteWebDriver aDriver){
         super(aDriver);
         WebDriverWait driverWait = new WebDriverWait(driver, SHORT_WAIT);
         driverWait.until(ExpectedConditions.visibilityOfElementLocated(QUAL_NAMES));
         waitForLoadingWrapper();
     }
 
-    public Report_AddResidualExclusions toggleQualExclusion(String qualName){
+    public ReportViewModal_ResidualExclusions toggleQualExclusion(String qualName){
 
         //System.out.println("Toggling Residual Exclusion for [" + qualName + "]");
         String cssNamesLocator = ".measureTbl td:nth-of-type(1)";

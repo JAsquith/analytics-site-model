@@ -5,18 +5,18 @@ import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import pages.reports.EAPListView;
-import pages.reports.EAPReportView;
+import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.Report_AddMeasureFilters;
-import pages.reports.components.Report_AddResidualExclusions;
-import pages.reports.components.Report_AddStudentFilters;
+import pages.reports.components.ReportViewModal_MeasureFilters;
+import pages.reports.components.ReportViewModal_ResidualExclusions;
+import pages.reports.components.ReportViewModal_StudentFilters;
 import tests.BaseTest;
 
 import static org.testng.Assert.fail;
 
 public abstract class ReportTest extends BaseTest {
 
-    protected EAPReportView report;
+    protected EAPView report;
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
@@ -76,7 +76,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step( "Switch to the {area} > {view} report at {level} Level" )
-    public EAPReportView openTestView(EAPReportView report, String area, String view, String level){
+    public EAPView openTestView(EAPView report, String area, String view, String level){
         return report.openView(area,view,level);
     }
 
@@ -141,7 +141,7 @@ public abstract class ReportTest extends BaseTest {
             if (debugMode) {
                 saveScreenshot(context.getName()+"-Pre-apply_StuFilters.png");
             }
-            Report_AddStudentFilters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
+            ReportViewModal_StudentFilters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
             for (String filter : filters){
                 int delimIndex = filter.indexOf("=");
                 String filterName = filter.substring(0,delimIndex);
@@ -156,7 +156,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step( "Toggle Student Filter {filterName}[{filterVal}]" )
-    public void toggleStudentFilter(Report_AddStudentFilters stuFiltersModal, String filterName, String filterVal){
+    public void toggleStudentFilter(ReportViewModal_StudentFilters stuFiltersModal, String filterName, String filterVal){
         stuFiltersModal.toggleFilterValue(filterName, filterVal);
     }
 
@@ -168,7 +168,7 @@ public abstract class ReportTest extends BaseTest {
                 saveScreenshot(context.getName()+"-Pre-apply_MeasFilters.png");
             }
 
-            Report_AddMeasureFilters measFiltersModal = report.reportTabs.openMeasureFiltersModal();
+            ReportViewModal_MeasureFilters measFiltersModal = report.reportTabs.openMeasureFiltersModal();
             for (String measure : measures){
                 int delimIndex = measure.indexOf("=");
                 String measureName = measure.substring(0,delimIndex);
@@ -191,7 +191,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step ( "Click {actualValue}|{compValue} Measure Filter Options for {measureName}" )
-    public void applyMeasureFilter(Report_AddMeasureFilters measFiltersModal, String measureName, String actualValue, String compValue){
+    public void applyMeasureFilter(ReportViewModal_MeasureFilters measFiltersModal, String measureName, String actualValue, String compValue){
         if (!actualValue.equals("")){
             measFiltersModal.clickMeasureFilterOption(measureName, actualValue);
         }
@@ -207,7 +207,7 @@ public abstract class ReportTest extends BaseTest {
             if (debugMode) {
                 saveScreenshot(context.getName()+"-Pre-apply_ResidExcl.png");
             }
-            Report_AddResidualExclusions exclusionsModal = report.reportTabs.openResidualExclusionsModal();
+            ReportViewModal_ResidualExclusions exclusionsModal = report.reportTabs.openResidualExclusionsModal();
             for(String residual : residuals){
                 toggleResidualExclusion(exclusionsModal, residual);
             }
@@ -219,7 +219,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step( "Toggle the residual exclusion setting for {qualName}" )
-    public void toggleResidualExclusion(Report_AddResidualExclusions exclusionsModal, String qualName){
+    public void toggleResidualExclusion(ReportViewModal_ResidualExclusions exclusionsModal, String qualName){
         exclusionsModal.toggleQualExclusion(qualName);
     }
 

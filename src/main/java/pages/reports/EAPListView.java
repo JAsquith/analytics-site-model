@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Represents the contents and interactive elements common to any KS3/4 Report page
  */
-public class EAPListView extends EAPReportView {
+public class EAPListView extends EAPView {
 
     // CONSTRUCTORS
     public EAPListView(RemoteWebDriver aDriver){

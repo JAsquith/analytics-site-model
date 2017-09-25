@@ -5,14 +5,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsPage;
-import pages.reports.components.Report_DatasetOptions;
-import pages.reports.components.Report_GradeFilters;
-import pages.reports.components.Report_Tabs;
-import pages.reports.components.Report_ViewOptions;
+import pages.reports.components.ReportDisplayOptions;
+import pages.reports.components.ReportTab_Dataset;
+import pages.reports.components.ReportTab_Options;
+import pages.reports.components.ReportTabs_Other;
 
 import java.util.List;
 
-public class EAPReportView extends AnalyticsPage{
+public class EAPView extends AnalyticsPage{
 
     private static final By KEY_CHARACTERISTICS_ICON = By.cssSelector(".icoEAP.act_key");
 
@@ -26,28 +26,28 @@ public class EAPReportView extends AnalyticsPage{
 
     private static final By LEVELS_VISIBLE = By.cssSelector(".lvls[style*='display: block']");
 
-    // Locators for dataset DDLs are public in the Report_DatasetOptions class
-    public Report_DatasetOptions dsOptions;
+    // Locators for dataset DDLs are public in the ReportTab_Dataset class
+    public ReportTab_Dataset dsOptions;
 
     // Locators for Filters/Measures/Residual Exclusions tabs (and the buttons within them)
-    // are public in the Report_Tabs class
-    public Report_Tabs reportTabs;
+    // are public in the ReportTabs_Other class
+    public ReportTabs_Other reportTabs;
 
     // Locators for Grade filters (On Track, Faculty, Class, Grade Type, etc)
-    // are public in the Report_GradeFilters class
-    public Report_GradeFilters gradeFilters;
+    // are public in the ReportTab_Options class
+    public ReportTab_Options gradeFilters;
 
     // Locators for View Options (Column Sort, Count/Percent, Standard/Cumulative, Breakdown, StuInfo, A8 Basket, Sub/Whole)
-    public Report_ViewOptions viewOptions;
+    public ReportDisplayOptions viewOptions;
 
     // CONSTRUCTORS
-    public EAPReportView(RemoteWebDriver aDriver){
+    public EAPView(RemoteWebDriver aDriver){
         super(aDriver);
-        dsOptions = new Report_DatasetOptions(driver);
+        dsOptions = new ReportTab_Dataset(driver);
         try {
             waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
         } catch (TimeoutException e){
-            throw new IllegalStateException("Timeout waiting for Key Characteristics icon to be clickable on EAPReportView");
+            throw new IllegalStateException("Timeout waiting for Key Characteristics icon to be clickable on EAPView");
         }
     }
 
@@ -68,7 +68,7 @@ public class EAPReportView extends AnalyticsPage{
         }
     }
 
-    public EAPReportView selectReport(String reportName){
+    public EAPView selectReport(String reportName){
         WebElement selectedArea;
         try{
             selectedArea = driver.findElement(AREA_SELECTED);
@@ -78,7 +78,7 @@ public class EAPReportView extends AnalyticsPage{
         return selectReport(selectedArea, reportName);
     }
 
-    private EAPReportView selectReport(WebElement selectedArea, String reportName){
+    private EAPView selectReport(WebElement selectedArea, String reportName){
         try{
             WebElement reportLink = selectedArea.findElement(By.linkText(reportName));
             reportLink.click();
@@ -89,7 +89,7 @@ public class EAPReportView extends AnalyticsPage{
         }
     }
 
-    public EAPReportView selectLevel(String levelName){
+    public EAPView selectLevel(String levelName){
         WebElement activeAreaDiv; WebElement selectedAreaDiv;
         try {
             activeAreaDiv = driver.findElement(AREA_ACTIVE);
@@ -116,7 +116,7 @@ public class EAPReportView extends AnalyticsPage{
         }
     }
 
-    public EAPReportView openView(String areaName, String reportName, String levelName){
+    public EAPView openView(String areaName, String reportName, String levelName){
 
         // Show the table of links to views within the given areaName
         WebElement area = selectArea(areaName);
@@ -124,7 +124,7 @@ public class EAPReportView extends AnalyticsPage{
                 selectLevel(levelName);
 
         waitForLoadingWrapper();
-        return new EAPReportView(driver);
+        return new EAPView(driver);
     }
 
     // Methods used in subclasses

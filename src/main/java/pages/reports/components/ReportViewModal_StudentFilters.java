@@ -11,7 +11,7 @@ import pages.AnalyticsComponent;
 /**
  * Represents the contents and interactive elements on the Add/Remove Filters modal
  */
-public class Report_AddStudentFilters extends AnalyticsComponent {
+public class ReportViewModal_StudentFilters extends AnalyticsComponent {
 
     protected static final By FILTER_TITLES = By.cssSelector(".title.addFilter");
     protected static final By CANCEL_BUTTON = By.cssSelector(".modalClose.button.cancel");
@@ -19,14 +19,14 @@ public class Report_AddStudentFilters extends AnalyticsComponent {
     protected static final By APPLY_BUTTON = By.cssSelector(".button.green");
 
     // CONSTRUCTOR
-    public Report_AddStudentFilters(RemoteWebDriver aDriver){
+    public ReportViewModal_StudentFilters(RemoteWebDriver aDriver){
         super(aDriver);
         WebDriverWait driverWait = new WebDriverWait(driver, SHORT_WAIT);
         driverWait.until(ExpectedConditions.visibilityOfElementLocated(FILTER_TITLES));
         waitForLoadingWrapper();
     }
 
-    public Report_AddStudentFilters toggleFilterValue(String filterTitle, String filterValue){
+    public ReportViewModal_StudentFilters toggleFilterValue(String filterTitle, String filterValue){
 
         //System.out.println("Selecting Student Filter [" + filterTitle + " > " + filterValue + "]");
 
@@ -72,7 +72,7 @@ public class Report_AddStudentFilters extends AnalyticsComponent {
         driver.findElement(CANCEL_BUTTON).click();
         waitForLoadingWrapper();
     }
-    public Report_AddStudentFilters uncheckAll(){
+    public ReportViewModal_StudentFilters uncheckAll(){
         driver.findElement(UNCHECK_ALL_BUTTON).click();
         waitForLoadingWrapper();
         return this;

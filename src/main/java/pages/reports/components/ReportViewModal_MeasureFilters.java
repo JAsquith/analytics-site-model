@@ -11,21 +11,21 @@ import pages.AnalyticsComponent;
 /**
  * Represents the contents and interactive elements on the Add/Remove Measures modal
  */
-public class Report_AddMeasureFilters extends AnalyticsComponent {
+public class ReportViewModal_MeasureFilters extends AnalyticsComponent {
 
     protected static final By GROUP_HEADINGS = By.cssSelector(".measureTbl tr:not(:nth-of-type(1))>th:nth-of-type(1)");
     protected static final By CANCEL_BUTTON = By.cssSelector(".modalClose.button.cancel");
     protected static final By APPLY_BUTTON = By.cssSelector(".button.green");
 
     // CONSTRUCTOR
-    public Report_AddMeasureFilters(RemoteWebDriver aDriver){
+    public ReportViewModal_MeasureFilters(RemoteWebDriver aDriver){
         super(aDriver);
         WebDriverWait driverWait = new WebDriverWait(driver, SHORT_WAIT);
         driverWait.until(ExpectedConditions.visibilityOfElementLocated(GROUP_HEADINGS));
         waitForLoadingWrapper();
     }
 
-    public Report_AddMeasureFilters clickMeasureFilterOption(String measureName, String measureOption){
+    public ReportViewModal_MeasureFilters clickMeasureFilterOption(String measureName, String measureOption){
 
         //System.out.println("Selecting Measure Filter [" + measureName + " > " + measureOption + "]");
         int measureOptionIndex;

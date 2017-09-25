@@ -12,7 +12,7 @@ import pages.data.components.DataSideMenu;
 import pages.data.students.PublishStudents;
 import pages.reports.EAPListView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.Report_AddStudentFilters;
+import pages.reports.components.ReportViewModal_StudentFilters;
 import pages.reports.components.ReportsHome_CohortsMenu;
 import pages.reports.components.ReportsHome_YearAccordion;
 import tests.SISRATest;
@@ -173,7 +173,7 @@ public class FigureChecking extends SISRATest {
         String[] groups = filterGroupsParam.split("¬");
         String[] values = filterValuesParam.split("¬");
 
-        Report_AddStudentFilters filtersModal = reportPage.reportTabs.openStudentFiltersModal();
+        ReportViewModal_StudentFilters filtersModal = reportPage.reportTabs.openStudentFiltersModal();
 
         for(int i = 0; i < groups.length; i++){
             String group = groups[i];
