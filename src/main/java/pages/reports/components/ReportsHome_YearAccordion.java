@@ -3,6 +3,7 @@ package pages.reports.components;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
 import pages.reports.EAPListView;
@@ -16,7 +17,7 @@ import java.util.List;
 public class ReportsHome_YearAccordion extends AnalyticsComponent {
 
     public static final By REPORT_AREA_BUTTONS = By.cssSelector(".EAPRptBtn>a");
-    public static final By REPORT_STATUS_TEXT = By.cssSelector(".eapPub>.eapStat>span");
+    public static final By REPORT_STATUS_TEXT = By.cssSelector(".eapPub>.eapStat>span:not(.icon)");
     public static final By REPORT_SETS_WITHIN_YEAR = By.cssSelector(".eapPub");
     public static final By REPORT_NAME_FAKE_LINK = By.cssSelector("em.fakea");
 
@@ -65,7 +66,7 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
             return;
         }
         yearGroup.click();
-        waitForAccordionExpansion();
+        waitShort.until(pubGroupDisplayed());
         this.refreshElements();
     }
 
@@ -106,13 +107,13 @@ public class ReportsHome_YearAccordion extends AnalyticsComponent {
     }
 
     //  - COMPONENT SPECIFIC WAITS
-    private List<WebElement> waitForAccordionExpansion(){
-        waitShort.until(ExpectedConditions.elementToBeClickable(REPORT_STATUS_TEXT));
-        return driver.findElements(REPORT_STATUS_TEXT);
-    }
     private WebElement waitForPublishedReportExpansion(WebElement button){
         return waitMedium.until(ExpectedConditions.elementToBeClickable(button));
     }
+    private ExpectedCondition<Boolean> pubGroupDisplayed() {
+        return ExpectedConditions.attributeToBe(pubGroupSelector, "style", "display: block");
+    }
+
     private WebElement getReportButtonFor(String repArea){
         List<WebElement> repButtons = pubGroups.findElements(REPORT_AREA_BUTTONS);
         if (repButtons.size()==0){

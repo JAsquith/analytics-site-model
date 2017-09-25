@@ -338,7 +338,8 @@ public abstract class ReportTest extends BaseTest {
                 report = report.viewOptions.selectStudentInfo(value);
                 break;
             case "In A8 Basket":
-                report = report.viewOptions.selectInA8Basket(value);
+                // ToDo: Investigate breaking the config to move setting this into the #applyGradeFilterOptions method
+                report = report.gradeFilters.selectInA8Basket(value);
                 break;
             case "Sub Whole":
                 report = report.viewOptions.setSubWhole(value);
