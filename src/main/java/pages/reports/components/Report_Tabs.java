@@ -27,7 +27,6 @@ public class Report_Tabs extends AnalyticsComponent {
     }
 
     public boolean isDisabled(String tabType){
-        tabType = normaliseTabType(tabType);
         buildGenericBys(tabType);
 
         List<WebElement> tabs = driver.findElements(genericDisabledTabBy);
@@ -42,18 +41,13 @@ public class Report_Tabs extends AnalyticsComponent {
     }
 
     public boolean isEnabled(String tabType){
-        tabType = normaliseTabType(tabType);
         buildGenericBys(tabType);
 
         List<WebElement> tabs = driver.findElements(genericTabBy);
-        if(tabs.size()>0){
-            return true;
-        }
-        return false;
+        return tabs.size() > 0;
     }
 
     public boolean isActive(String tabType){
-        tabType = normaliseTabType(tabType);
         buildGenericBys(tabType);
         List<WebElement> tabs = driver.findElements(genericActiveTabBy);
         if(tabs.size()>0){
@@ -67,7 +61,13 @@ public class Report_Tabs extends AnalyticsComponent {
     }
 
     public WebElement getTab(String tabType){
-        return driver.findElement(genericTabBy);
+        buildGenericBys(tabType);
+        List<WebElement> tabsFound = driver.findElements(genericTabBy);
+        if(tabsFound.size()>0){
+            return tabsFound.get(0);
+        } else {
+            return null;
+        }
     }
 
     public EAPListView selectTab(String tabType){
@@ -80,27 +80,30 @@ public class Report_Tabs extends AnalyticsComponent {
     }
 
     public Report_AddStudentFilters openStudentFiltersModal(){
-        if (!isActive("filter")){
+        if (isEnabled("filter")) {
             selectTab("filter");
+            driver.findElement(genericAddBy).click();
+            return new Report_AddStudentFilters(driver);
         }
-        driver.findElement(genericAddBy).click();
-        return new Report_AddStudentFilters(driver);
+        throw new IllegalStateException("The Student Filters tab is not enabled");
     }
 
     public Report_AddMeasureFilters openMeasureFiltersModal(){
-        if (!isActive("measure")){
+        if (!isEnabled("measure")){
             selectTab("measure");
+            driver.findElement(genericAddBy).click();
+            return new Report_AddMeasureFilters(driver);
         }
-        driver.findElement(genericAddBy).click();
-        return new Report_AddMeasureFilters(driver);
+        throw new IllegalStateException("The Measure Filters tab is not enabled");
     }
 
     public Report_AddResidualExclusions openResidualExclusionsModal(){
-        if (!isActive("residual")){
+        if (!isEnabled("residual")){
             selectTab("residual");
+            driver.findElement(genericAddBy).click();
+            return new Report_AddResidualExclusions(driver);
         }
-        driver.findElement(genericAddBy).click();
-        return new Report_AddResidualExclusions(driver);
+        throw new IllegalStateException("The Residual Exclusions tab is not enabled");
     }
 
     public EAPListView resetStudentFilters(){
@@ -124,11 +127,11 @@ public class Report_Tabs extends AnalyticsComponent {
     }
 
     public EAPListView resetTab(String tabType, boolean confirm){
-        // Refresh the generic locators
-        buildGenericBys(tabType);
-
         // Look for a reset button on the relevant tab
         WebElement tab = getTab(tabType);
+        if (tab == null){
+            throw new IllegalStateException("The '" + tabType + "' tab is not available");
+        }
         List<WebElement> resetButtons = tab.findElements(RESET_ICON);
         if (resetButtons.size()==0){
             // No reset button, so nothing needs doing
@@ -156,7 +159,7 @@ public class Report_Tabs extends AnalyticsComponent {
     }
 
     private void buildGenericBys(String tabType){
-
+        tabType = normaliseTabType(tabType);
         if (genericsFor.equals(tabType))
             return;
 

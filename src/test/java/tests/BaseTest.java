@@ -78,7 +78,7 @@ public abstract class BaseTest {
             return "Failed to initialise RemoteWebDriver ["+e.getMessage()+"]";
         }
 
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
         driver.get(applicationUrl);
         return "";

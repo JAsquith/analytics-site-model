@@ -120,7 +120,7 @@ public abstract class ReportTest extends BaseTest {
     public void applyReportDatasetOption(String field, String value){
         switch (field){
             case "Tab":
-                report = report.dsOptions.switchTab(value);
+                report = report.dsOptions.showFocusAs(value);
                 break;
             case "Actual":
                 report = report.dsOptions.selectMainFocus(value);

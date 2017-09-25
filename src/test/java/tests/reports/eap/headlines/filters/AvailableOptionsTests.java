@@ -20,7 +20,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void trackerTabDisabled(){
         Report_DatasetOptions dsOptions = report.dsOptions;
         assertWithScreenshot("Display status of the Tracker tab",
-                dsOptions.isDisabled(dsOptions.TRACKER_TAB), is(true));
+                dsOptions.isDisabled("Tracker"), is(true));
     }
 
     // Tests of the Filters tabs

@@ -238,7 +238,7 @@ document.querySelector('body>*:not(script)').appendChild(newDiv);
         mainJS += "newDiv = document.createElement('DIV');";
         mainJS += "newDiv.setAttribute('id', 'se-table-data');";
         mainJS += "newDiv.innerHTML = tableText;";
-        mainJS += "document.querySelector('body>*:not(script)').appendChild(newDiv);";
+        mainJS += "document.querySelector('body').appendChild(newDiv);";
 
         return "tableIndex = '" + tableIndex + "';" +
                 "columnName = '" + columnTitle + "';" +

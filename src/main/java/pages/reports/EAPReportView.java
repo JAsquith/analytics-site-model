@@ -17,15 +17,14 @@ public class EAPReportView extends AnalyticsPage{
     private static final By KEY_CHARACTERISTICS_ICON = By.cssSelector(".icoEAP.act_key");
 
 
-    public static final By AREAS = By.className("area");
+    private static final By AREAS = By.cssSelector(".area");
+    private static final By AREA_ACTIVE = By.cssSelector(".area.active");
+    private static final By AREA_SELECTED = By.cssSelector(".area.selected");
 
-    public static final By AREA_BUTTONS = By.cssSelector(".area .rept");
-    public static final By REPORT_NAV_AREA_LINKS = By.cssSelector(".list-grid td>a");
-    public static final By REPORT_NAV_VIEW_LABELS = By.cssSelector("td.title-y:nth-of-type(2)");
-    public static final By REPORT_NAV_LEVEL_LABELS = By.cssSelector("td.title-x");
-    public static final By LIST_GRID_ROWS = By.cssSelector("tr.btn");
-    public static final By LIST_GRID_COLS = By.cssSelector("tr:nth-of-type(3)>td");
     private static final By REPORT_GROUPS = By.cssSelector(".rptGroup");
+    private static final By REPORT_GRP_ACTIVE = By.cssSelector(".rptGroup.active");
+
+    private static final By LEVELS_VISIBLE = By.cssSelector(".lvls[style*='display: block']");
 
     // Locators for dataset DDLs are public in the Report_DatasetOptions class
     public Report_DatasetOptions dsOptions;
@@ -44,6 +43,7 @@ public class EAPReportView extends AnalyticsPage{
     // CONSTRUCTORS
     public EAPReportView(RemoteWebDriver aDriver){
         super(aDriver);
+        dsOptions = new Report_DatasetOptions(driver);
         try {
             waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
         } catch (TimeoutException e){
@@ -53,107 +53,81 @@ public class EAPReportView extends AnalyticsPage{
 
 // METHODS
     //  - CHANGING THE STATE OF THE PAGE
-    public EAPReportView selectArea(String areaName){
+    public WebElement selectArea(String areaName){
         try {
-            WebElement area = driver.findElement(By.cssSelector(".area[data-name='" + areaName + "']")); //NoSuchElementException
+            WebElement area = driver.findElement(getAreaDivSelector(areaName));
             if (!area.getAttribute("class").contains("selected")){
                 area.click();
-                waitShort.until(clickableReportGroupsFor(area));// TimeoutException
+                waitShort.until(reportGroupsDisplayedFor(area));// TimeoutException
             }
+            return area;
         } catch (NoSuchElementException e){
             throw new WebDriverException("NSEE trying to select Area '"+areaName+"'; "+e.getMessage());
         } catch (TimeoutException e){
-            throw new WebDriverException("Exception");
+            throw new WebDriverException("Timeout Exception waiting for ReportGroups");
         }
-        return new EAPReportView(driver);
     }
 
-    private ExpectedCondition<WebElement> clickableReportGroupsFor(WebElement area) {
-        return ExpectedConditions.elementToBeClickable(area.findElement(REPORT_GROUPS));
+    public EAPReportView selectReport(String reportName){
+        WebElement selectedArea;
+        try{
+            selectedArea = driver.findElement(AREA_SELECTED);
+        } catch (NoSuchElementException e){
+            throw new IllegalStateException("Can't select a Report because no Area is selected");
+        }
+        return selectReport(selectedArea, reportName);
     }
 
+    private EAPReportView selectReport(WebElement selectedArea, String reportName){
+        try{
+            WebElement reportLink = selectedArea.findElement(By.linkText(reportName));
+            reportLink.click();
+            waitForLoadingWrapper();
+            return this;
+        } catch (NoSuchElementException e){
+            throw new IllegalArgumentException("Report '"+reportName+"' could not be found in the currently selected area");
+        }
+    }
+
+    public EAPReportView selectLevel(String levelName){
+        WebElement activeAreaDiv; WebElement selectedAreaDiv;
+        try {
+            activeAreaDiv = driver.findElement(AREA_ACTIVE);
+            selectedAreaDiv = driver.findElement(AREA_SELECTED);
+            String activeAreaName = activeAreaDiv.getAttribute("data-name");
+            String selectedAreaName = selectedAreaDiv.getAttribute("data-name");
+            if (!activeAreaName.equals(selectedAreaName)){
+                throw new IllegalStateException(
+                        "Can't select a Level - the active Area '" + activeAreaName +
+                                "' is not the selected Area '" + selectedAreaName +"'");
+            }
+        } catch (NoSuchElementException e){
+            throw new IllegalStateException("Can't select a Level - either no Area is active or no Area is selected");
+        }
+        try{
+            WebElement levelLinks = driver.findElement(LEVELS_VISIBLE);
+            WebElement levelLink = levelLinks.findElement(By.partialLinkText(levelName));
+            levelLink.click();
+            waitForLoadingWrapper();
+            return this;
+        } catch (NoSuchElementException e){
+            throw new IllegalArgumentException("Can't select Level '" + levelName +
+                    "' - no link with that text could be found");
+        }
+    }
 
     public EAPReportView openView(String areaName, String reportName, String levelName){
 
         // Show the table of links to views within the given areaName
-        WebElement area = expandAreaGrid(areaName);
+        WebElement area = selectArea(areaName);
+        selectReport(area, reportName).
+                selectLevel(levelName);
 
-        // Find the link to the given level of the given report
-        WebElement button = getViewLinkFromListGrid(area, reportName, levelName);
-        if (button.getText().trim().equals("Active")){
-            // The requested view is already active, close the area grid and exit
-            area.click();
-            return this;
-        }
-        // The requested view is not currently active, click the button and wait for the reload
-        button.click();
         waitForLoadingWrapper();
-        return this;
+        return new EAPReportView(driver);
     }
 
-    public EAPReportView selectTab(String tabType){
-        return reportTabs.selectTab(tabType);
-    }
-
-
-    // PRIVATE HELPER METHODS FOR THE PUBLIC METHODS
-    protected WebElement getViewLinkFromListGrid(WebElement area, String reportName, String levelName){
-
-        List<WebElement> rowLabels = area.findElements(REPORT_NAV_VIEW_LABELS);
-        //int rowIndex = area.findElements(LIST_GRID_ROWS).size() - rowLabels.size();
-        int rowIndex = 2;
-
-        for (WebElement label: rowLabels){
-            if (label.getText().trim().equals(reportName)){
-                rowIndex += rowLabels.indexOf(label) + 1;
-                break;
-            }
-        }
-
-        List<WebElement> colLabels = area.findElements(REPORT_NAV_LEVEL_LABELS);
-        int colIndex = area.findElements(LIST_GRID_COLS).size() - colLabels.size();
-
-        for (WebElement label: colLabels){
-            if (label.getText().trim().equals(levelName)){
-                colIndex += colLabels.indexOf(label) + 1;
-                break;
-            }
-        }
-        String cssString = "tr:nth-of-type(" + rowIndex + ")>td:nth-of-type(" + colIndex + ")>a";
-        WebElement link;
-        try {
-            link = area.findElement(By.cssSelector(cssString));
-        } catch (NoSuchElementException nsee) {
-            // Temporary logging for updated grid layout
-            String activeArea = area.findElement(By.tagName("span")).getText();
-            System.out.println("Active Area: " + activeArea);
-            System.out.println("CSS Selector: " + cssString);
-            throw new IllegalArgumentException("A link to report '" + reportName +
-                    "' at level '" + levelName + "' could not be found.");
-        }
-        return link;
-    }
-
-    protected WebElement expandAreaGrid(String areaName){
-        // Given an area name (like "Grades", "Matrix", "Student Detail", etc) click the button which
-        // expands the 'list-grid' of views in that area
-        List<WebElement> areas = driver.findElements(AREAS);
-        List<WebElement> areaButtons = driver.findElements(AREA_BUTTONS);
-        for (WebElement button: areaButtons){
-            if (button.getText().trim().toUpperCase().equals(areaName.toUpperCase())){
-                WebElement area = areas.get(areaButtons.indexOf(button));
-                button.click();
-                waitForListGridDisplay(area);
-                return area;
-            }
-        }
-        throw new IllegalArgumentException("A Report Area named '" + areaName + "' was not found");
-    }
-
-    protected List<WebElement> waitForListGridDisplay(WebElement area){
-        return waitMedium.until(ExpectedConditions.visibilityOfAllElements(area.findElements(REPORT_NAV_AREA_LINKS)));
-    }
-
+    // Methods used in subclasses
     protected int findNamedTableIndex(String tableName){
 
         List<WebElement> tableTitleElements = driver.findElements(By.className("tableTitle"));
@@ -187,5 +161,14 @@ public class EAPReportView extends AnalyticsPage{
         return tableIndex;
     }
 
+    // PRIVATE HELPER METHODS FOR THE PUBLIC METHODS
+    private By getAreaDivSelector(String areaDataName){
+        return By.cssSelector(".area[data-name='" + areaDataName + "']");
+    }
+
+    private ExpectedCondition<Boolean> reportGroupsDisplayedFor(WebElement area) {
+        WebElement rptGroup = area.findElement(REPORT_GROUPS);
+        return ExpectedConditions.attributeContains(rptGroup, "style", "display: block");
+    }
 
 }
