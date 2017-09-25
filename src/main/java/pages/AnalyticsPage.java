@@ -5,8 +5,10 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.account.LoginPage;
 import pages.components.AuthorityDetailsModal;
 
 import java.util.List;
@@ -47,7 +49,7 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
     public final By MAIN_MENU_CONFIG = By.xpath("//img[@alt='Config.']/../../..");
     public final By MAIN_MENU_USERS = By.xpath("//img[@alt='Users']/../../..");
     public final By MAIN_MENU_REPORTS = By.xpath("//img[@alt='Reports']/../../..");
-    public final By MAIN_MENU_LOGOUT = By.className("logOut");
+    public final By MAIN_MENU_LOGOUT = By.cssSelector(".logOutTab");
 
     public final By HELP_CENTRE_BUTTON = By.cssSelector("#menuSide .helpCentre");
     public final By HELP_CENTRE_FLYOUT = By.id("supportFlyOut");
@@ -166,6 +168,7 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
     }
     public void clickAccountInfoDDL(){
         driver.findElement(ACC_INFO).click();
+        waitShort.until(accountDropDownDisplayed());
     }
     public void clickAccChangeUsername(){
         if (!driver.findElement(ACC_CHANGE_USERNAME).isDisplayed())
@@ -228,7 +231,10 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
         driver.findElement(MAIN_MENU_REPORTS).click();
     }
     public void clickMenuLogout(){
-        driver.findElement(MAIN_MENU_LOGOUT).click();
+        clickAccountInfoDDL();
+        WebElement logoutButton = driver.findElement(MAIN_MENU_LOGOUT);
+        logoutButton.click();
+        new LoginPage(driver, false);
     }
 
     public void clickHelpVideosAndGuides(){
@@ -247,4 +253,7 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
         new WebDriverWait(driver, SHORT_WAIT).until(elementToBeClickable(HELP_CHAT)).click();
     }
 
+    private ExpectedCondition<Boolean> accountDropDownDisplayed(){
+        return ExpectedConditions.attributeContains(ACC_UPDATE_DDL,"style","display: block");
+    }
 }
