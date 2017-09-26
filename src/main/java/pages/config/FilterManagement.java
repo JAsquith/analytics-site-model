@@ -1,10 +1,10 @@
 package pages.config;
 
-import pages.AnalyticsPage;
-import pages.config.components.CreateFilterModal;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsPage;
+import pages.config.components.CreateFilterModal;
 
 /**
  * Provides locators and methods interact with the Student Data Profile page
@@ -18,7 +18,7 @@ public class FilterManagement extends AnalyticsPage {
     public FilterManagement(RemoteWebDriver aDriver, boolean loadByUrl) {
         super(aDriver);
         if (loadByUrl) {
-            driver.get(getCurrentDomain() + PAGE_PATH);
+            driver.get(getSiteBaseUrl() + PAGE_PATH);
         }
         waitForLoadingWrapper();
         waitMedium.until(ExpectedConditions.elementToBeClickable(CREATE_FILTER_BUTTON));

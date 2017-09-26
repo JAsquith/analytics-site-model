@@ -1,10 +1,10 @@
 package pages.users;
 
-import pages.AnalyticsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
+import pages.AnalyticsPage;
 
 /**
  * Provides access to the contents and interactive elements of the Create New User page
@@ -27,7 +27,7 @@ public class CreateUser extends AnalyticsPage {
     public CreateUser(RemoteWebDriver aDriver, boolean loadByUrl) {
         super(aDriver);
         if (loadByUrl) {
-            driver.get(getCurrentDomain() + PAGE_PATH);
+            driver.get(getSiteBaseUrl() + PAGE_PATH);
         } else {
             waitForLoadingWrapper(LONG_WAIT);
         }

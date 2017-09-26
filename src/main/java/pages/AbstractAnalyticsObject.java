@@ -117,7 +117,7 @@ public abstract class AbstractAnalyticsObject {
      * either "https://www.sisraanalytics.co.uk" or "http://dev.sisraanalytics.co.uk"
      * @return A String representing the site domain
      */
-    protected String getCurrentDomain(){
+    protected String getSiteBaseUrl(){
         String location = driver.getCurrentUrl();
         int domainEnd = location.indexOf("sisraanalytics.co.uk") + 20;
         return location.substring(0, domainEnd);

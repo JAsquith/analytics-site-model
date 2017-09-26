@@ -68,9 +68,9 @@ public class DataHome extends AnalyticsPage {
 
     private void openByUrl(){
         boolean pageAlreadyOpen = driver.getCurrentUrl().
-                startsWith(getCurrentDomain()+PAGE_PATH);
+                startsWith(getSiteBaseUrl()+PAGE_PATH);
         if (!pageAlreadyOpen){
-            driver.get(getCurrentDomain() + PAGE_PATH);
+            driver.get(getSiteBaseUrl() + PAGE_PATH);
             waitForLoadingWrapper();
         }
     }

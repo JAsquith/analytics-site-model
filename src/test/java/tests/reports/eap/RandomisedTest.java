@@ -14,9 +14,10 @@ import tests.BaseTest;
 
 import static org.testng.Assert.fail;
 
-public abstract class ReportTest extends BaseTest {
+public abstract class RandomisedTest extends BaseTest {
 
     protected EAPView report;
+    protected ReportsHome_EAP reports;
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
@@ -60,6 +61,18 @@ public abstract class ReportTest extends BaseTest {
             fail("Test Setup Failed! Exception: "+e.getMessage());
         }
     }
+
+    @Step( "Go to the EAP Reports Home page" )
+    private void gotoReportsHome(){
+        reports = new ReportsHome_EAP(driver,true);
+    }
+
+    @Step( "Select ${cohort}" )
+    private void selectReportsCohort(String cohort) {
+        reports.selectCohortByUserAction(cohort);
+    }
+
+
 
     @Step( "Open the {cohort} > {year} > {dataset} > {button} report" )
     public EAPListView openTestDataset(String cohort, String year, String forTracker, String dataset, String button){

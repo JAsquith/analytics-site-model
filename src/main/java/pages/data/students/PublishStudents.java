@@ -103,7 +103,7 @@ public class PublishStudents extends AnalyticsPage {
             sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
         }
         if (loadByUrl){
-            driver.get(getCurrentDomain()+PAGE_URL);
+            driver.get(getSiteBaseUrl()+PAGE_URL);
         } else {
             if(sideMenu == null){
                 sideMenu = new DataSideMenu(driver);

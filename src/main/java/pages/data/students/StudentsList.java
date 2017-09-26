@@ -1,10 +1,10 @@
 package pages.data.students;
 
-import pages.AnalyticsPage;
-import pages.data.students.components.ActiveStudentListRow;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pages.AnalyticsPage;
+import pages.data.students.components.ActiveStudentListRow;
 
 /**
  * Represents the contents and interactive elements on the Students list page in EAP mode
@@ -37,7 +37,7 @@ public class StudentsList extends AnalyticsPage {
     public StudentsList(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
         if (loadByUrl){
-            driver.get(getCurrentDomain()+PAGE_PATH);
+            driver.get(getSiteBaseUrl()+PAGE_PATH);
         }
     }
 

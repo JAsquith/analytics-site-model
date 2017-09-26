@@ -1,9 +1,9 @@
 package pages.config;
 
-import pages.AnalyticsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsPage;
 
 /**
  * Provides locators and methods interact with the Student Data Profile page
@@ -22,7 +22,7 @@ public class StudentDataProfile extends AnalyticsPage {
     public StudentDataProfile(RemoteWebDriver aDriver, boolean loadByUrl) {
         super(aDriver);
         if (loadByUrl) {
-            driver.get(getCurrentDomain() + PAGE_PATH);
+            driver.get(getSiteBaseUrl() + PAGE_PATH);
             waitLong.until(ExpectedConditions.elementToBeClickable(this.MAIN_MENU_CONFIG));
         }
         waitForLoadingWrapper();

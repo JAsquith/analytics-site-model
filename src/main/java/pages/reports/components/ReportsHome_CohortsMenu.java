@@ -1,12 +1,12 @@
 package pages.reports.components;
 
 import io.qameta.allure.Step;
-import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AnalyticsComponent;
 
 import java.util.List;
 import java.util.Random;
@@ -90,7 +90,7 @@ public class ReportsHome_CohortsMenu extends AnalyticsComponent {
 
     @Step( "Select Cohort (url hack): ${0}" )
     public void selectCohortByYearID(String cohortYear){
-        driver.get(getCurrentDomain()+"/ReportsHome?selectedCohort="+cohortYear);
+        driver.get(getSiteBaseUrl()+"/ReportsHome?selectedCohort="+cohortYear);
         waitForLoadingWrapper();
     }
 

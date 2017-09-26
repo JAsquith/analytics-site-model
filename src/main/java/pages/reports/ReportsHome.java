@@ -34,7 +34,7 @@ public class ReportsHome extends AnalyticsPage {
     }
     public ReportsHome(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
-        String pageUrl = getCurrentDomain() + PAGE_PATH;
+        String pageUrl = getSiteBaseUrl() + PAGE_PATH;
         if (loadByUrl) {
             if (!driver.getCurrentUrl().equals(pageUrl)){
                 driver.get(pageUrl);
@@ -46,7 +46,7 @@ public class ReportsHome extends AnalyticsPage {
 // METHODS
     // QUERYING THE CURRENT PAGE STATE
     public String getPagePath(){
-        return getCurrentDomain()+PAGE_PATH;
+        return getSiteBaseUrl()+PAGE_PATH;
     }
     //  - ACCESSORS FOR ELEMENTS/COMPONENTS
     public ReportsHome_CohortsMenu getCohortsMenu(){
@@ -68,7 +68,7 @@ public class ReportsHome extends AnalyticsPage {
         waitForLoadingWrapper();
     }
     public void selectKeyStageByID(String keyStageID){
-        driver.get(getCurrentDomain()+"/ReportsHome?selectedKS="+keyStageID);
+        driver.get(getSiteBaseUrl()+"/ReportsHome?selectedKS="+keyStageID);
         waitForLoadingWrapper();
     }
     public void selectKeyStageByLabel(String label){

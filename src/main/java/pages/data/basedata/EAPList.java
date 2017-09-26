@@ -1,10 +1,10 @@
 package pages.data.basedata;
 
-import pages.AnalyticsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsPage;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class EAPList extends AnalyticsPage{
     public EAPList(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
         if(loadByUrl){
-            driver.get(getCurrentDomain()+PAGE_URL);
+            driver.get(getSiteBaseUrl()+PAGE_URL);
         }
         waitMedium.until(ExpectedConditions.and(
                 ExpectedConditions.urlContains(PAGE_URL),

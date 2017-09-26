@@ -1,9 +1,9 @@
 package pages.users;
 
-import pages.AnalyticsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pages.AnalyticsPage;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class UserList extends AnalyticsPage {
     public UserList (RemoteWebDriver aDriver, boolean loadByUrl) {
         super(aDriver);
         if (loadByUrl) {
-            driver.get(getCurrentDomain() + PAGE_PATH);
+            driver.get(getSiteBaseUrl() + PAGE_PATH);
         }
         waitForLoadingWrapper(LONG_WAIT);
     }
