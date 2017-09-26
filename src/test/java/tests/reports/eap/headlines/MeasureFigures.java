@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.reports.EAPHeadlineView;
-import tests.reports.ReportTest;
+import tests.reports.eap.ReportTest;
 import utils.ViewDataFileManager;
 
 import java.io.BufferedReader;

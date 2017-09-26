@@ -1,4 +1,4 @@
-package tests.reports;
+package tests.reports.eap;
 
 import io.qameta.allure.Step;
 import org.testng.ITestContext;

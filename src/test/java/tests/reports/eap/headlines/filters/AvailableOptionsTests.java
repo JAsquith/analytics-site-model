@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pages.reports.components.ReportTab_Dataset;
 import pages.reports.components.ReportTab_Options;
 import pages.reports.components.Report_DisplayOptions;
-import tests.reports.ReportTest;
+import tests.reports.eap.ReportTest;
 
 import static org.hamcrest.Matchers.is;
 
