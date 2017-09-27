@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import pages.reports.components.ReportsHome_YearGroup;
+import pages.reports.components.ReportsHome_EAPYearGroup;
 
 import java.util.List;
 
@@ -63,12 +63,20 @@ public class ReportsHome_EAP extends ReportsHome {
         return driver.findElement(COHORT_TITLE).getText();
     }
 
-    public ReportsHome_YearGroup getYearAccordion(String yearNumber) {
-        return getYearAccordion(yearNumber, "");
+    public ReportsHome_EAPYearGroup getEAPYearGroup(String yearNumber) {
+        return new ReportsHome_EAPYearGroup(driver, yearNumber);
     }
 
-    public ReportsHome_YearGroup getYearAccordion(String yearNumber, String forTracker){
-        return new ReportsHome_YearGroup(driver, yearNumber, forTracker);
+    public ReportsHome_EAPYearGroup getEAPYearGroup(String yearNumber, String forTracker){
+        String dataYear = yearNumber;
+        if (!forTracker.equals("")){
+            dataYear = "trk";
+        }
+        return new ReportsHome_EAPYearGroup(driver, dataYear);
+    }
+
+    public List<WebElement> countEAPYearGroups(){
+        return ReportsHome_EAPYearGroup.getEAPYearGroups(driver);
     }
 
     private void openIfNotAlready(){

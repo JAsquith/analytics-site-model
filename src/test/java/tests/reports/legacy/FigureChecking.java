@@ -14,7 +14,7 @@ import pages.reports.EAPListView;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.ReportViewModal_StudentFilters;
 import pages.reports.components.ReportsHome_CohortsMenu;
-import pages.reports.components.ReportsHome_YearGroup;
+import pages.reports.components.ReportsHome_EAPYearGroup;
 import tests.SISRATest;
 import utils.ViewDataFileManager;
 
@@ -127,7 +127,7 @@ public class FigureChecking extends SISRATest {
             String trackerColumn = getTestParam("tracker-column");
 
 
-            ReportsHome_YearGroup accordion = reportsHome.getYearAccordion(
+            ReportsHome_EAPYearGroup accordion = reportsHome.getEAPYearGroup(
                     getTestParam("eapYear"),
                     trackerColumn);
 

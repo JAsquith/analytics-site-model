@@ -1,23 +1,31 @@
 package tests.reports.eap;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import pages.reports.EAPListView;
+import org.testng.annotations.Test;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.ReportViewModal_MeasureFilters;
 import pages.reports.components.ReportViewModal_ResidualExclusions;
 import pages.reports.components.ReportViewModal_StudentFilters;
+import pages.reports.components.ReportsHome_EAPYearGroup;
 import tests.BaseTest;
+
+import java.util.List;
+import java.util.Random;
 
 import static org.testng.Assert.fail;
 
 public abstract class RandomisedTest extends BaseTest {
 
     protected EAPView report;
-    protected ReportsHome_EAP reports;
+    private ReportsHome_EAP reportsHome;
+    private ReportsHome_EAPYearGroup yearDataGroup;
+    private WebElement reportSet;
+    private EAPView reportView;
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
@@ -35,23 +43,6 @@ public abstract class RandomisedTest extends BaseTest {
         try {
             // Login
             login(user, pass, true);
-
-            // Open the reports for the correct dataset
-            report = openTestDataset(getStringParam("cohort"),
-                    getStringParam("year"),
-                    getStringParam("trackerCol"),
-                    getStringParam("dataset"),
-                    getStringParam("report-area"));
-
-            // Open the test view at the right level
-            report = openTestView(report,
-                    getStringParam("report-area"),
-                    getStringParam("report-view"),
-                    getStringParam("report-level"));
-
-            // Apply any report options, filters, etc. defined in the test parameters
-            applyReportOptions();
-
         } catch (Exception e){
             saveScreenshot(context.getName()+"_SetupFail.png");
             if (driver!=null){
@@ -62,31 +53,105 @@ public abstract class RandomisedTest extends BaseTest {
         }
     }
 
+    @Test
+    @Parameters( { "cohort", "maxLoops" } )
+    public void testRandomReportActions(String cohort, int maxLoops){
+        try {
+            gotoReportsHome();
+            selectReportsCohort(cohort);
+            expandEAPYearGroup(selectRandomEAPYearGroup());
+            expandReportSet(selectRandomReportSet());
+            WebElement reportAreaButton = selectRandomReportButton();
+            reportView = openReport(reportAreaButton, reportAreaButton.getText());
+        } catch (Exception e){
+            saveScreenshot(context.getName()+"_InitialReportOpen.png");
+            throw e;
+        }
+        for (int loopIndex = 1; loopIndex <= maxLoops; loopIndex++){
+            /*
+            The following actionGroups are always available:
+                - ViewSwitchActions
+                - DatasetTabActions
+                - OptionsTabActions
+                - DisplayRowActions
+
+            The following actionGroups are available depending on context:
+                - FilterTabActions
+                - MeasureTabActions
+                - ResidualExclTabActions
+                - DrillDownActions
+             */
+        }
+
+    }
+
     @Step( "Go to the EAP Reports Home page" )
     private void gotoReportsHome(){
-        reports = new ReportsHome_EAP(driver,true);
+        reportsHome = new ReportsHome_EAP(driver,true);
     }
 
     @Step( "Select ${cohort}" )
     private void selectReportsCohort(String cohort) {
-        reports.selectCohortByUserAction(cohort);
+        reportsHome.selectCohortByUserAction(cohort);
+    }
+
+    private String selectRandomEAPYearGroup(){
+        List<WebElement> yearGroups = reportsHome.countEAPYearGroups();
+        int yearGroupIndex = new Random().nextInt(yearGroups.size());
+        return yearGroups.get(yearGroupIndex).getAttribute("data-year");
+    }
+
+    @Step( "Click Year Group ${year}" )
+    private void expandEAPYearGroup(String year){
+        yearDataGroup = new ReportsHome_EAPYearGroup(driver, year);
+        yearDataGroup.expandYear();
+    }
+
+    private String selectRandomReportSet(){
+        List<WebElement> reportSets = yearDataGroup.getPublishedReportSets();
+        int pubReportIndex = new Random().nextInt(reportSets.size());
+        reportSet = reportSets.get(pubReportIndex);
+        return yearDataGroup.getReportSetName(reportSet);
+    }
+
+    @Step( "Expand Report Set ${datasetName}" )
+    private void expandReportSet(String datasetName){
+        yearDataGroup.expandPublishedReport(datasetName);
+    }
+
+    private WebElement selectRandomReportButton(){
+        List<WebElement> buttons = yearDataGroup.getReportButtons(reportSet);
+        int buttonIndex = new Random().nextInt(buttons.size());
+        return buttons.get(buttonIndex);
+    }
+
+    @Step( "Open Report Area ${areaName}" )
+    private EAPView openReport(WebElement button, String areaName){
+        button.click();
+        return new EAPView(driver);
     }
 
 
+/*
+    @DataProvider(name = "reportFigures")
+    public Iterator<Object[]> createData() throws IOException {
+        List<Object []> testCases = new ArrayList<>();
+        String[] data;
 
-    @Step( "Open the {cohort} > {year} > {dataset} > {button} report" )
-    public EAPListView openTestDataset(String cohort, String year, String forTracker, String dataset, String button){
-        ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
-        return reports.
-                selectCohortByUrl(cohort).
-                getYearAccordion(year, forTracker).
-                gotoPublishedReport(dataset, forTracker, button);
+        BufferedReader expectedBr = new BufferedReader(new FileReader(expectedFiguresFilePath));
+        BufferedReader actualBr = new BufferedReader(new FileReader(actualFiguresFilePath));
+        String expectedLine; String actualLine;
+        int rowNum = 0;
+        while ((expectedLine = expectedBr.readLine()) != null &&
+                (actualLine = actualBr.readLine()) != null){
+            rowNum++;
+            data = (rowNum+"~"+expectedLine+"~"+actualLine).split("~");
+            testCases.add(data);
+        }
+        return testCases.iterator();
     }
+*/
 
-    @Step( "Switch to the {area} > {view} report at {level} Level" )
-    public EAPView openTestView(EAPView report, String area, String view, String level){
-        return report.openView(area,view,level);
-    }
 
     @Step( "Apply report options" )
     public void applyReportOptions(){

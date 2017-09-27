@@ -66,7 +66,7 @@ public abstract class ReportTest extends BaseTest {
         ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
         return reports.
                 selectCohortByUrl(cohort).
-                getYearAccordion(year, forTracker).
+                getEAPYearGroup(year, forTracker).
                 gotoPublishedReport(dataset, forTracker, button);
     }
 
