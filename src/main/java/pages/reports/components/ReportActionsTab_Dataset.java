@@ -1,5 +1,6 @@
 package pages.reports.components;
 
+import enums.DatasetAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -7,14 +8,22 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.reports.EAPListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ReportTab_Dataset extends ReportTab {
+public class ReportActionsTab_Dataset extends ReportActionsTab {
 
-    public static final By VIEW_TRACK_PROJECT = By.cssSelector(".vtp");
-    public static final By VTP_VIEW = By.cssSelector(".canView");
-    public static final By VTP_TRACK = By.cssSelector(".avail.IsTracker");
-    public static final By VTP_PROJECT = By.cssSelector(".avail.HasSBP");
+    private static final String TAB_NAME = "dataset";
+    private static final String TAB_CLASS = "datasets";
+
+    private static final By TAB_BUTTON = By.cssSelector(".tabbutton[data-tab='"+ TAB_NAME +"']");
+    private static final By CONTENTS_DIV = By.cssSelector("."+TAB_CLASS+".pan");
+
+    private static final By VIEW_TRACK_PROJECT = By.cssSelector(".vtp");
+    private static final By VTP_VIEW = By.cssSelector(".canView");
+    private static final By VTP_TRACK = By.cssSelector(".IsTracker");
+    private static final By VTP_PROJECT = By.cssSelector(".HasSBP");
+    private static final By VTP_ALL_AVAIL = By.cssSelector(".avail");
 
     private final By TRACKER_TAB = By.cssSelector(".dsTabs>div:nth-of-type(2)");
 
@@ -25,31 +34,19 @@ public class ReportTab_Dataset extends ReportTab {
     private final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div>span.datasetList");
     private final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
 
-    public ReportTab_Dataset(RemoteWebDriver aDriver){
+    public ReportActionsTab_Dataset(RemoteWebDriver aDriver){
         super(aDriver);
-        tabName = "dataset";
+        tabName = TAB_NAME;
+        tabClass = TAB_CLASS;
+        tabButtonBy = TAB_BUTTON;
+        tabContentsBy = CONTENTS_DIV;
     }
 
-    public boolean isDisabled(String optionName){
-
-        WebElement toTest;
-        switch (optionName){
-            case "Tracker":
-                WebElement vtp = driver.findElements(VIEW_TRACK_PROJECT).get(0);
-                toTest = vtp.findElement(VTP_TRACK);
-                break;
-            default:
-                toTest = driver.findElement(DATASET_DROPDOWN);
-        }
-
-        return toTest.getAttribute("class").toLowerCase().contains("disabled");
-    }
-
-    public EAPListView selectMainFocus(String optionText){
+    public EAPListView selectFocusDataset(String optionText){
 
         // Switch to the Dataset tab & expand it if required
-        selectMe();
-        expandMe();
+        selectTab();
+        expandTab();
 
         WebElement select = driver.findElement(DATASET_DROPDOWN);
         select.click();
@@ -73,10 +70,10 @@ public class ReportTab_Dataset extends ReportTab {
         return new EAPListView(driver);
     }
 
-    public EAPListView selectCompareWith(String optionText){
+    public EAPListView selectCompareDataset(String optionText){
         // Switch to the Dataset tab & expand it if required
-        selectMe();
-        expandMe();
+        selectTab();
+        expandTab();
 
         WebElement select = driver.findElement(COMPARE_DROPDOWN);
         select.click();
@@ -103,25 +100,70 @@ public class ReportTab_Dataset extends ReportTab {
         return new EAPListView(driver);
     }
 
-    public EAPListView showFocusAs(String reportType){
+    public EAPListView showFocusDataAs(String reportType){
         // Switch to the Dataset tab & expand it if required
-        selectMe();
-        expandMe();
+        selectTab();
+        expandTab();
 
-        WebElement vtp = driver.findElements(VIEW_TRACK_PROJECT).get(0);
+        WebElement vtp = getViewTrackProject();
         getVTPButton(vtp, reportType).click();
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView showCompareAs(String reportType){
+
+    public EAPListView showCompareDataAs(String reportType){
         // Switch to the Dataset tab & expand it if required
-        selectMe();
-        expandMe();
+        selectTab();
+        expandTab();
 
         WebElement vtp = driver.findElements(VIEW_TRACK_PROJECT).get(1);
         getVTPButton(vtp, reportType).click();
         waitForLoadingWrapper();
         return new EAPListView(driver);
+    }
+
+    private WebElement getViewTrackProject() {
+        return getViewTrackProject(false);
+    }
+
+    private WebElement getViewTrackProject(boolean forCompare) {
+        int dsType = forCompare ? 1 : 0;
+        return driver.findElements(VIEW_TRACK_PROJECT).get(dsType);
+    }
+
+    public List<String> getRandomActionName() {
+        selectTab();
+        expandTab();
+        List<String> actions = new ArrayList();
+        actions.add(DatasetAction.CHANGE_FOCUS.name);
+        WebElement vtp = getViewTrackProject();
+        if (vtp.findElements(VTP_ALL_AVAIL).size()>0){
+            actions.add(DatasetAction.FOCUS_VTP.name);
+        }
+        if (driver.findElements(COMPARE_DROPDOWN).size()>0){
+            actions.add(DatasetAction.CHANGE_COMPARE.name);
+            vtp = getViewTrackProject(true);
+            if (vtp.findElements(VTP_ALL_AVAIL).size()>0){
+                actions.add(DatasetAction.COMPARE_VTP.name);
+            }
+        }
+        return actions;
+    }
+
+    public String getRandomOptionFor(String actionName) {
+        return null;
+    }
+
+    public boolean applyActionOption(String actionName, String option) {
+        return false;
+    }
+
+    private void selectAndExpand(){
+        super.selectTab();
+        if (super.canExpand()){
+            super.expandTab();
+        }
+
     }
 
     private WebElement getVTPButton(WebElement vtp, String reportType){

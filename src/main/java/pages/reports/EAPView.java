@@ -5,10 +5,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsPage;
-import pages.reports.components.ReportTab_Dataset;
-import pages.reports.components.ReportTab_Options;
+import pages.reports.components.ReportActionsTab_Dataset;
+import pages.reports.components.ReportActionsTab_Options;
+import pages.reports.components.ReportActions_DisplayOptions;
 import pages.reports.components.ReportTabs_Other;
-import pages.reports.components.Report_DisplayOptions;
 
 import java.util.List;
 
@@ -26,27 +26,27 @@ public class EAPView extends AnalyticsPage{
 
     private static final By LEVELS_VISIBLE = By.cssSelector(".lvls[style*='display: block']");
 
-    // Locators for dataset DDLs are public in the ReportTab_Dataset class
-    public ReportTab_Dataset dsOptions;
+    // Locators for dataset DDLs are public in the ReportActionsTab_Dataset class
+    public ReportActionsTab_Dataset dsOptions;
+
+    // Locators for Grade filters (On Track, Faculty, Class, Grade Type, etc)
+    // are public in the ReportActionsTab_Options class
+    public ReportActionsTab_Options gradeFilters;
 
     // Locators for Filters/Measures/Residual Exclusions tabs (and the buttons within them)
     // are public in the ReportTabs_Other class
     public ReportTabs_Other reportTabs;
 
-    // Locators for Grade filters (On Track, Faculty, Class, Grade Type, etc)
-    // are public in the ReportTab_Options class
-    public ReportTab_Options gradeFilters;
-
     // Locators for View Options (Column Sort, Count/Percent, Standard/Cumulative, Breakdown, StuInfo, A8 Basket, Sub/Whole)
-    public Report_DisplayOptions viewOptions;
+    public ReportActions_DisplayOptions viewOptions;
 
     // CONSTRUCTORS
     public EAPView(RemoteWebDriver aDriver){
         super(aDriver);
-        dsOptions = new ReportTab_Dataset(driver);
-        gradeFilters = new ReportTab_Options(driver);
+        dsOptions = new ReportActionsTab_Dataset(driver);
+        gradeFilters = new ReportActionsTab_Options(driver);
         reportTabs = new ReportTabs_Other(driver);
-        viewOptions = new Report_DisplayOptions(driver);
+        viewOptions = new ReportActions_DisplayOptions(driver);
         try {
             waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
         } catch (TimeoutException e){

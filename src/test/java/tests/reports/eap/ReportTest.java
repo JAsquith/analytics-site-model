@@ -117,13 +117,13 @@ public abstract class ReportTest extends BaseTest {
     public void applyReportDatasetOption(String field, String value){
         switch (field){
             case "Tab":
-                report = report.dsOptions.showFocusAs(value);
+                report = report.dsOptions.showFocusDataAs(value);
                 break;
             case "Actual":
-                report = report.dsOptions.selectMainFocus(value);
+                report = report.dsOptions.selectFocusDataset(value);
                 break;
             case "Compare":
-                report = report.dsOptions.selectCompareWith(value);
+                report = report.dsOptions.selectCompareDataset(value);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");

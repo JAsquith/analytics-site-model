@@ -191,7 +191,7 @@ public class FigureChecking extends SISRATest {
         // Apply report/view options defined in test params
         try {
             if (!getTestParam("compWith").equals(""))
-                reportPage.dsOptions.selectCompareWith(getTestParam("compWith"));
+                reportPage.dsOptions.selectCompareDataset(getTestParam("compWith"));
             if(!getTestParam("faculty").equals(""))
                 reportPage.gradeFilters.selectFaculty(getTestParam("faculty"));
             if(!getTestParam("qual").equals(""))

@@ -4,12 +4,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import pages.AnalyticsComponent;
 import pages.reports.EAPListView;
 
 import java.util.List;
 
-public class ReportTab_Options extends ReportTab {
+public class ReportActionsTab_Options extends AnalyticsComponent
+{
+    private static final String TAB_NAME = "option";
+    private static final String TAB_CLASS = "options";
+
+    private static final By TAB_BUTTON = By.cssSelector(".tabbutton[data-tab='"+ TAB_NAME +"']");
+    private static final By CONTENTS_DIV = By.cssSelector("."+TAB_CLASS+".pan");
+    private static final By CONTENTS_EXPAND_BUTTON = By.cssSelector("."+TAB_CLASS+".pan .showMore");
 
     public final By ON_TRACK_MENU = By.cssSelector(".onTrack");
 
@@ -28,13 +38,12 @@ public class ReportTab_Options extends ReportTab {
     public final By IN_A8_BASKET_DDL = By.id("ReportOptions_RPTInA8Basket_ID");
     public final By STUDENT_FILTER_DDL = By.id("ReportOptions_Stu_ID");
 
-    public ReportTab_Options(RemoteWebDriver aDriver){
+    public ReportActionsTab_Options(RemoteWebDriver aDriver){
         super(aDriver);
-        tabName = "option";
     }
 
     public EAPListView filterByTrack(String trackStatus){
-        // NB - The filter tracking options are outside the tabs so we don't need to use #selectMe() & expandMe() combo
+        // NB - The filter tracking options are outside the tabs so we don't need to use #selectTab() & expandTab() combo
         //      If the tracking options are moved into the tab simply add calls to those methods at the start of this method
         if (trackStatus.equals("")){
             trackStatus = "All";
@@ -316,40 +325,6 @@ public class ReportTab_Options extends ReportTab {
         return new EAPListView(driver);
     }
 
-    public String getElementStatus(String elementLabel){
-        return "";
-    }
-
-    private By getLocatorForNamedElement(String elementName){
-        switch (elementName){
-            case "On Track":
-                return ON_TRACK_MENU;
-            case "Faculty":
-                return FACULTY_DDL;
-            case "Qualification":
-                return QUALIFICATION_DDL;
-            case "Class":
-                return CLASS_DDL;
-            case "Grade Type":
-                return GRADE_TYPE_DDL;
-            case "GCSE/Non-GCSE":
-                return AWARD_CLASS_DDL;
-            case "KS2 Core":
-                return KS2_CORE_DDL;
-            case "Focus Grade":
-                return GRADE_FILTER_SUB_DDL;
-            case "Compare Grade":
-                return COMP_GRADE_FILTER_SUB_DDL;
-            case "Student":
-                return STUDENT_FILTER_DDL;
-            case "In A8 Basket":
-                return IN_A8_BASKET_DDL;
-            default:
-                throw new IllegalArgumentException("elementName '"+elementName+
-                        "' is not a recognised element in the 'Grade Filters' Reports Options Tab");
-        }
-    }
-
     public boolean isDisabled(By locator){
 
         WebElement testElement;
@@ -381,4 +356,31 @@ public class ReportTab_Options extends ReportTab {
         return driver.findElement(locator).isDisplayed();
     }
 
+    public ReportActionsTab_Options selectMe(){
+        WebElement tab = driver.findElement(TAB_BUTTON);
+        if (!tab.getAttribute("class").contains("active")){
+            tab.click();
+        }
+        return this;
+
+    }
+    public ReportActionsTab_Options expandMe(){
+        List<WebElement> expandButtons = driver.findElements(CONTENTS_EXPAND_BUTTON);
+        if (expandButtons.size()==0){
+            return this;
+        }
+        WebElement expandButton = expandButtons.get(0);
+        WebElement tabContentDiv = driver.findElement(CONTENTS_DIV);
+        String contentsClassAttr = tabContentDiv.getAttribute("class");
+        if (!expandButton.isDisplayed() || contentsClassAttr.contains("open")){
+            return this;
+        }
+        expandButton.click();
+        waitShort.until(isExpanded(tabContentDiv));
+        return this;
+    }
+
+    private ExpectedCondition<Boolean> isExpanded(WebElement tabContentDiv) {
+        return ExpectedConditions.attributeContains(tabContentDiv, "class", "open");
+    }
 }

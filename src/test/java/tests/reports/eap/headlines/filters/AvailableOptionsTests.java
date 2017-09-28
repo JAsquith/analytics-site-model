@@ -2,9 +2,8 @@ package tests.reports.eap.headlines.filters;
 
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
-import pages.reports.components.ReportTab_Dataset;
-import pages.reports.components.ReportTab_Options;
-import pages.reports.components.Report_DisplayOptions;
+import pages.reports.components.ReportActionsTab_Options;
+import pages.reports.components.ReportActions_DisplayOptions;
 import tests.reports.eap.ReportTest;
 
 import static org.hamcrest.Matchers.is;
@@ -15,13 +14,15 @@ import static org.hamcrest.Matchers.is;
 public class AvailableOptionsTests extends ReportTest {
 
     // Tests of the DatasetOptions component
+/*
     @Test( description = "Tracker Tab: disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void trackerTabDisabled(){
-        ReportTab_Dataset dsOptions = report.dsOptions;
+        ReportActionsTab_Dataset dsOptions = report.dsOptions;
         assertWithScreenshot("Display status of the Tracker tab",
-                dsOptions.isDisabled("Tracker"), is(true));
+                dsOptions.isOptionDisabled("Tracker"), is(true));
     }
+*/
 
     // Tests of the Filters tabs
     @Test( description = "Student Filters tab: enabled" )
@@ -49,7 +50,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "Tracking filter: disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void onTrackFilterDisabled(){
-        ReportTab_Options filters = report.gradeFilters;
+        ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Disabled status of the On/Above/Below Track Menu",
                 filters.isDisabled(filters.ON_TRACK_MENU), is(true));
     }
@@ -57,7 +58,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "Faculty filter: enabled" )
     @Severity( SeverityLevel.NORMAL )
     public void facultyDDLEnabled(){
-        ReportTab_Options filters = report.gradeFilters;
+        ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Enabled status of the Faculty DDL",
                 filters.isEnabled(filters.FACULTY_DDL), is(true));
     }
@@ -65,7 +66,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "Qualification filter: enabled" )
     @Severity( SeverityLevel.NORMAL )
     public void qualificationsDDLEnabled(){
-        ReportTab_Options filters = report.gradeFilters;
+        ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Enabled status of the Qualification DDL",
                 filters.isEnabled(filters.QUALIFICATION_DDL), is(true));
     }
@@ -73,7 +74,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "Class filter: hidden")
     @Severity( SeverityLevel.NORMAL )
     public void classDDLIsHidden(){
-        ReportTab_Options filters = report.gradeFilters;
+        ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Display status of the Class DDL",
                 filters.isDisplayed(filters.CLASS_DDL), is(false));
     }
@@ -81,7 +82,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "Student filter: hidden" )
     @Severity( SeverityLevel.NORMAL )
     public void studentDDLIsHidden(){
-        ReportTab_Options filters = report.gradeFilters;
+        ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Display status of the Student DDL",
                 filters.isDisplayed(filters.STUDENT_FILTER_DDL), is(true));
     }
@@ -90,7 +91,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test(description = "CalcType (#/%): disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void calcTypeIsDisabled(){
-        Report_DisplayOptions viewOptions = report.viewOptions;
+        ReportActions_DisplayOptions viewOptions = report.viewOptions;
         assertWithScreenshot("SEnabled status of the Calc Type option (Count/%)",
                 viewOptions.isDisabled(viewOptions.CALC_TYPE_TOGGLE), is(true));
     }
@@ -98,7 +99,7 @@ public class AvailableOptionsTests extends ReportTest {
     @Test( description = "FigType (Std/Cum): disabled" )
     @Severity( SeverityLevel.NORMAL )
     public void figureTypeIsDisabled(){
-        Report_DisplayOptions viewOptions = report.viewOptions;
+        ReportActions_DisplayOptions viewOptions = report.viewOptions;
         assertWithScreenshot("SEnabled status of the Figure Type option (Std/Cum)",
                 viewOptions.isDisabled(viewOptions.FIG_TYPE_TOGGLE), is(true));
     }

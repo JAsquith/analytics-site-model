@@ -10,7 +10,9 @@ import pages.reports.EAPListView;
 
 import java.util.List;
 
-public class Report_DisplayOptions extends AnalyticsComponent {
+public class ReportActions_DisplayOptions
+        extends AnalyticsComponent
+        {
 
     public final By COL_SORT_DDL = By.cssSelector("select#ReportOptions_RPTColSort_ColNameType");
     private final By COL_SORT_DDL_OPTIONS = By.tagName("select#ReportOptions_RPTColSort_ColNameType>option");
@@ -23,7 +25,9 @@ public class Report_DisplayOptions extends AnalyticsComponent {
     public final By SUB_WHOLE_TOGGLE_SUB = By.cssSelector(".chgOptFmSub.icon.sub");
     public final By SUB_WHOLE_TOGGLE_WHOLE = By.cssSelector(".chgOptFmSub.icon.whole");
 
-    public Report_DisplayOptions(RemoteWebDriver aDriver){
+    private final By ENABLED_FIELDS = By.cssSelector(".sort-toggle:not(.disabled) input,.sort-toggle:not(.disabled) select");
+
+    public ReportActions_DisplayOptions(RemoteWebDriver aDriver){
         super(aDriver);
     }
 
@@ -179,6 +183,8 @@ public class Report_DisplayOptions extends AnalyticsComponent {
         return driver.findElement(locator).getAttribute("class").toLowerCase().contains("disabled");
     }
 
-
+    public boolean isEnabled(){
+        return driver.findElements(ENABLED_FIELDS).size() > 0;
+    }
 
 }

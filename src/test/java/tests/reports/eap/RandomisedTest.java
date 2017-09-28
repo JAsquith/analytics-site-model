@@ -14,6 +14,7 @@ import pages.reports.components.ReportViewModal_StudentFilters;
 import pages.reports.components.ReportsHome_EAPYearGroup;
 import tests.BaseTest;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -68,19 +69,6 @@ public abstract class RandomisedTest extends BaseTest {
             throw e;
         }
         for (int loopIndex = 1; loopIndex <= maxLoops; loopIndex++){
-            /*
-            The following actionGroups are always available:
-                - ViewSwitchActions
-                - DatasetTabActions
-                - OptionsTabActions
-                - DisplayRowActions
-
-            The following actionGroups are available depending on context:
-                - FilterTabActions
-                - MeasureTabActions
-                - ResidualExclTabActions
-                - DrillDownActions
-             */
         }
 
     }
@@ -131,6 +119,26 @@ public abstract class RandomisedTest extends BaseTest {
         return new EAPView(driver);
     }
 
+    private void selectRandomActionGroup(){
+        /*
+        The following actionGroups are always available:
+            - ViewSwitchActions
+            - DatasetTabActions
+            - OptionsTabActions
+            - DisplayRowActions
+        */
+        List<Object> actionGroups = new ArrayList();
+
+
+        /*
+        The following actionGroups are available depending on context:
+            - FilterTabActions
+            - MeasureTabActions
+            - ResidualExclTabActions
+            - DrillDownActions
+        */
+
+    }
 
 /*
     @DataProvider(name = "reportFigures")
@@ -195,13 +203,13 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyReportDatasetOption(String field, String value){
         switch (field){
             case "Tab":
-                report = report.dsOptions.showFocusAs(value);
+                report = report.dsOptions.showFocusDataAs(value);
                 break;
             case "Actual":
-                report = report.dsOptions.selectMainFocus(value);
+                report = report.dsOptions.selectFocusDataset(value);
                 break;
             case "Compare":
-                report = report.dsOptions.selectCompareWith(value);
+                report = report.dsOptions.selectCompareDataset(value);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");

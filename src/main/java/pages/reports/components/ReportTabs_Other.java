@@ -11,7 +11,9 @@ import pages.reports.EAPView;
 
 import java.util.List;
 
-public class ReportTabs_Other extends AnalyticsComponent {
+public class ReportTabs_Other
+        extends AnalyticsComponent
+        {
 
     private String genericsFor;
 
@@ -206,6 +208,10 @@ public class ReportTabs_Other extends AnalyticsComponent {
 
         waitForLoadingWrapper();
         return new EAPListView(driver);
+    }
+
+    public boolean isEnabled(){
+        return true;
     }
 
     private String normaliseTabType(String tabType){

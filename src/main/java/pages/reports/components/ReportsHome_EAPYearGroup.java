@@ -105,7 +105,7 @@ public class ReportsHome_EAPYearGroup extends AnalyticsComponent {
         waitForLoadingWrapper();
         EAPListView reportPage = new EAPListView(driver);
         if (!forTracker.equals("")){
-            reportPage = reportPage.dsOptions.selectMainFocus(datasetName);
+            reportPage = reportPage.dsOptions.selectFocusDataset(datasetName);
         }
         return reportPage;
     }
