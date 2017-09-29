@@ -52,7 +52,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void onTrackFilterDisabled(){
         ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Disabled status of the On/Above/Below Track Menu",
-                filters.isDisabled(filters.ON_TRACK_MENU), is(true));
+                filters.optionIsDisabled(filters.ON_TRACK_MENU), is(true));
     }
 
     @Test( description = "Faculty filter: enabled" )
@@ -60,7 +60,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void facultyDDLEnabled(){
         ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Enabled status of the Faculty DDL",
-                filters.isEnabled(filters.FACULTY_DDL), is(true));
+                filters.optionIsEnabled(filters.FACULTY_DDL), is(true));
     }
 
     @Test( description = "Qualification filter: enabled" )
@@ -68,7 +68,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void qualificationsDDLEnabled(){
         ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Enabled status of the Qualification DDL",
-                filters.isEnabled(filters.QUALIFICATION_DDL), is(true));
+                filters.optionIsEnabled(filters.QUALIFICATION_DDL), is(true));
     }
 
     @Test( description = "Class filter: hidden")
@@ -76,7 +76,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void classDDLIsHidden(){
         ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Display status of the Class DDL",
-                filters.isDisplayed(filters.CLASS_DDL), is(false));
+                filters.optionIsDisplayed(filters.CLASS_DDL), is(false));
     }
 
     @Test( description = "Student filter: hidden" )
@@ -84,7 +84,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void studentDDLIsHidden(){
         ReportActionsTab_Options filters = report.gradeFilters;
         assertWithScreenshot("Display status of the Student DDL",
-                filters.isDisplayed(filters.STUDENT_FILTER_DDL), is(true));
+                filters.optionIsDisplayed(filters.STUDENT_FILTER_DDL), is(true));
     }
 
     // Tests of the elements in the View/Display options area

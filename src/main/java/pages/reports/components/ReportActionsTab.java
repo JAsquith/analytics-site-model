@@ -2,6 +2,7 @@ package pages.reports.components;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -53,7 +54,7 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
     public boolean canExpand(){
         if(isInactive()){
-            throw new IllegalStateException("Tab '" + tabName + "' can't be explanded as it is not currently selected");
+            throw new IllegalStateException("Tab '" + tabName + "' is not currently active");
         }
         List<WebElement> expandButtons = getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON);
         return (expandButtons.size() > 0 && !isExpanded());
@@ -62,24 +63,17 @@ public class ReportActionsTab extends AnalyticsComponent {
     public ReportActionsTab selectTab(){
         if (!getTabButton().getAttribute("class").contains("active")){
             tabButton.click();
+            waitShort.until(tabSwitchComplete());
         }
         return this;
     }
 
     public ReportActionsTab expandTab(){
-        if(isInactive()){
-            throw new IllegalStateException("Tab '" + tabName + "' can't be explanded as it is not currently selected");
+        if(canExpand()){
+            List<WebElement> expandButtons = getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON);
+            expandButtons.get(0).click();
+            waitShort.until(resizeComplete());
         }
-        List<WebElement> expandButtons = getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON);
-        if (expandButtons.size()==0){
-            return this;
-        }
-        WebElement expandButton = expandButtons.get(0);
-        if (!expandButton.isDisplayed()){
-            return this;
-        }
-        expandButton.click();
-        waitShort.until(expansionComplete());
         return this;
     }
     public ReportActionsTab collapseTab(){
@@ -95,8 +89,17 @@ public class ReportActionsTab extends AnalyticsComponent {
             return this;
         }
         expandButton.click();
-        waitShort.until(expansionComplete());
+        waitShort.until(resizeComplete());
         return this;
+    }
+
+    public void selectAndExpandTab(){
+        selectTab();
+        expandTab();
+    }
+
+    public void resetTab(){
+        resetTab(true);
     }
 
     public void resetTab(boolean confirm){
@@ -154,17 +157,45 @@ public class ReportActionsTab extends AnalyticsComponent {
         return tabContentsDiv;
     }
 
-    private ExpectedCondition<Boolean> tabSwitchComplete() {
-        List<WebElement> expandHideButtons = getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON);
-        if (expandHideButtons.size()==0){
-            return ExpectedConditions.attributeContains(getTabButton(), "class", "active");
-        } else {
-            return ExpectedConditions.textToBePresentInElement(expandHideButtons.get(0), "Hide");
-        }
+    public ExpectedCondition<Boolean> tabSwitchComplete() {
+
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    if (!tabButton.getAttribute("class").contains("active")) return null;
+                    return true;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "The Tab's button has the 'open' class";
+            }
+        };
     }
 
-    private ExpectedCondition<Boolean> expansionComplete() {
-        return ExpectedConditions.attributeContains(getTabContentsDiv(), "class", "open");
+    private ExpectedCondition<Boolean> resizeComplete() {
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    if (tabContentsDiv.findElements(CONTENTS_EXPAND_BUTTON).size()>0){
+                        if (tabContentsDiv.getAttribute("style").contains("overflow")) return null;
+                    }
+                    return true;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "The Tab's 'pan' div doesn't have the overflow css attribute";
+            }
+        };
     }
 
     private ExpectedCondition<WebElement> resetPopupDisplayed() {

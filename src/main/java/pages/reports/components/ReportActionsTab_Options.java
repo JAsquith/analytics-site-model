@@ -1,19 +1,19 @@
 package pages.reports.components;
 
+import enums.ReportAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import pages.AnalyticsComponent;
 import pages.reports.EAPListView;
+import pages.reports.EAPView;
+import pages.reports.interfaces.IReportActionGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ReportActionsTab_Options extends AnalyticsComponent
-{
+public class ReportActionsTab_Options extends ReportActionsTab implements IReportActionGroup {
     private static final String TAB_NAME = "option";
     private static final String TAB_CLASS = "options";
 
@@ -38,10 +38,14 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     public final By IN_A8_BASKET_DDL = By.id("ReportOptions_RPTInA8Basket_ID");
     public final By STUDENT_FILTER_DDL = By.id("ReportOptions_Stu_ID");
 
+    /* Constructor method
+    * ToDo: Javadoc */
     public ReportActionsTab_Options(RemoteWebDriver aDriver){
         super(aDriver);
     }
 
+    /* Actions available within this component
+    * ToDo: Javadoc */
     public EAPListView filterByTrack(String trackStatus){
         // NB - The filter tracking options are outside the tabs so we don't need to use #selectTab() & expandTab() combo
         //      If the tracking options are moved into the tab simply add calls to those methods at the start of this method
@@ -59,8 +63,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
 
     public EAPListView selectFaculty(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> facultyDDLs = driver.findElements(FACULTY_DDL);
         if (facultyDDLs.size() == 0) {
@@ -72,8 +75,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectQualification(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> qualificationDDLs = driver.findElements(QUALIFICATION_DDL);
         if (qualificationDDLs.size() == 0) {
@@ -85,8 +87,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectClass(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> classDDLs = driver.findElements(CLASS_DDL);
         if (classDDLs.size() == 0) {
@@ -103,8 +104,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
         // MJA 25/09/2017: I doubt the veracity of the previous comment made by my past self
 
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> gradeTypeDDLs = driver.findElements(GRADE_TYPE_DDL);
         if (gradeTypeDDLs.size() == 0) {
@@ -116,8 +116,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectAwardClass(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> awardClassDDLs = driver.findElements(AWARD_CLASS_DDL);
         if (awardClassDDLs.size() == 0) {
@@ -130,8 +129,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
 
     public EAPListView selectKS2Core(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> ks2CoreDDLs = driver.findElements(KS2_CORE_DDL);
         if (ks2CoreDDLs.size() == 0) {
@@ -144,8 +142,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
 
     public EAPListView selectGradeFilterType(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
 
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_TYPE_DDL);
@@ -183,8 +180,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectGradeFilterWhole(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_WHOLE_DDL);
         if (targetDDLs.size() == 0) {
@@ -201,8 +197,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectGradeFilterSub(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> targetDDLs = driver.findElements(GRADE_FILTER_SUB_DDL);
         if (targetDDLs.size() == 0) {
@@ -220,8 +215,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
 
     public EAPListView selectCompGradeFilterType(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
 
         List<WebElement> targetDDLs = driver.findElements(COMP_GRADE_FILTER_TYPE_DDL);
@@ -259,8 +253,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectCompGradeFilterWhole(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> targetDDLs = driver.findElements(COMP_GRADE_FILTER_WHOLE_DDL);
         if (targetDDLs.size() == 0) {
@@ -278,8 +271,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
     }
     public EAPListView selectCompGradeFilterSub(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> targetDDLs = driver.findElements(COMP_GRADE_FILTER_SUB_DDL);
         if (targetDDLs.size() == 0) {
@@ -297,8 +289,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
 
     public EAPListView selectInA8Basket(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> targetDDLs = driver.findElements(IN_A8_BASKET_DDL);
         if (targetDDLs.size() == 0) {
@@ -312,8 +303,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
 
     public EAPListView selectStudent(String optionText){
         // Switch to the Options tab & expand it if required
-        selectMe();
-        expandMe();
+        super.selectAndExpandTab();
 
         List<WebElement> targetDDLs = driver.findElements(STUDENT_FILTER_DDL);
         if (targetDDLs.size() == 0) {
@@ -325,7 +315,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
         return new EAPListView(driver);
     }
 
-    public boolean isDisabled(By locator){
+    public boolean optionIsDisabled(By locator){
 
         WebElement testElement;
         testElement = driver.findElement(locator);
@@ -336,7 +326,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
         return testElement.getAttribute("class").contains("disabled");
     }
 
-    public boolean isEnabled(By locator){
+    public boolean optionIsEnabled(By locator){
         WebElement testElement;
         testElement = driver.findElement(locator);
         // If we're looking for the OnTrack menu, we can check the menu itself *DOES NOT* have the disabled class
@@ -347,7 +337,7 @@ public class ReportActionsTab_Options extends AnalyticsComponent
         return testElement.isEnabled();
     }
 
-    public boolean isDisplayed(By locator){
+    public boolean optionIsDisplayed(By locator){
 /*
         WebElement testElement;
         testElement = driver.findElement(locator);
@@ -356,31 +346,122 @@ public class ReportActionsTab_Options extends AnalyticsComponent
         return driver.findElement(locator).isDisplayed();
     }
 
-    public ReportActionsTab_Options selectMe(){
-        WebElement tab = driver.findElement(TAB_BUTTON);
-        if (!tab.getAttribute("class").contains("active")){
-            tab.click();
-        }
-        return this;
-
-    }
-    public ReportActionsTab_Options expandMe(){
-        List<WebElement> expandButtons = driver.findElements(CONTENTS_EXPAND_BUTTON);
-        if (expandButtons.size()==0){
-            return this;
-        }
-        WebElement expandButton = expandButtons.get(0);
-        WebElement tabContentDiv = driver.findElement(CONTENTS_DIV);
-        String contentsClassAttr = tabContentDiv.getAttribute("class");
-        if (!expandButton.isDisplayed() || contentsClassAttr.contains("open")){
-            return this;
-        }
-        expandButton.click();
-        waitShort.until(isExpanded(tabContentDiv));
-        return this;
+    /* These component actions implement the IReportActionGroup interface
+    * ToDo: Javadoc */
+    public List<ReportAction> getValidActionsList() {
+        selectAndExpandTab();
+        List<ReportAction> actions = new ArrayList<ReportAction>();
+        if(optionIsEnabled(ON_TRACK_MENU)) actions.add(ReportAction.EAP_TRACKING);
+        if(optionIsEnabled(QUALIFICATION_DDL)) actions.add(ReportAction.QUALIFICATION);
+        if(optionIsEnabled(CLASS_DDL)) actions.add(ReportAction.CLASS);
+        if(optionIsEnabled(GRADE_TYPE_DDL)) actions.add(ReportAction.GRADE_TYPE);
+        if(optionIsEnabled(AWARD_CLASS_DDL)) actions.add(ReportAction.AWARD_CLASS);
+        if(optionIsEnabled(KS2_CORE_DDL)) actions.add(ReportAction.KS2_CORE);
+        if(optionIsEnabled(GRADE_FILTER_TYPE_DDL)) actions.add(ReportAction.FOCUS_GRADE_OPERATOR);
+        if(optionIsEnabled(GRADE_FILTER_WHOLE_DDL)) actions.add(ReportAction.FOCUS_GRADE);
+        if(optionIsEnabled(GRADE_FILTER_SUB_DDL)) actions.add(ReportAction.FOCUS_SUB_GRADE);
+        if(optionIsEnabled(COMP_GRADE_FILTER_TYPE_DDL)) actions.add(ReportAction.COMPARE_GRADE_OPERATOR);
+        if(optionIsEnabled(COMP_GRADE_FILTER_WHOLE_DDL)) actions.add(ReportAction.COMPARE_GRADE);
+        if(optionIsEnabled(COMP_GRADE_FILTER_SUB_DDL)) actions.add(ReportAction.COMPARE_SUB_GRADE);
+        if(optionIsEnabled(IN_A8_BASKET_DDL)) actions.add(ReportAction.IN_A8_BASKET);
+        if(optionIsEnabled(STUDENT_FILTER_DDL)) actions.add(ReportAction.STUDENT);
+        return actions;
     }
 
-    private ExpectedCondition<Boolean> isExpanded(WebElement tabContentDiv) {
-        return ExpectedConditions.attributeContains(tabContentDiv, "class", "open");
+    public List<String> getOptionsForAction(ReportAction action) {
+        super.selectAndExpandTab();
+        switch(action){
+            case EAP_TRACKING:
+                return getEAPTrackingOptions();
+            case FACULTY:
+            case QUALIFICATION:
+            case CLASS:
+            case GRADE_TYPE:
+            case AWARD_CLASS:
+            case KS2_CORE:
+            case FOCUS_GRADE_OPERATOR:
+            case FOCUS_GRADE:
+            case FOCUS_SUB_GRADE:
+            case COMPARE_GRADE_OPERATOR:
+            case COMPARE_GRADE:
+            case COMPARE_SUB_GRADE:
+            case IN_A8_BASKET:
+            case STUDENT:
+                return getDDLOptions(action);
+            default:
+                throw new IllegalArgumentException(action.name()+" is not a valid action on the Options tab");
+        }
     }
+
+    public EAPView applyActionOption(ReportAction action, String option) {
+        super.selectAndExpandTab();
+        if(action.equals(ReportAction.EAP_TRACKING)){
+            filterByTrack(option);
+        } else {
+            WebElement targetDDL = driver.findElement(getLocatorForDDLAction(action));
+            new Select(targetDDL).selectByVisibleText(option);
+            waitForLoadingWrapper();
+        }
+        return new EAPListView(driver);
+    }
+
+    private List<String> getEAPTrackingOptions(){
+        List<String> options = new ArrayList<String>();
+        WebElement menu = driver.findElement(ON_TRACK_MENU);
+        List<WebElement> inputs = menu.findElements(By.tagName("input"));
+        for(WebElement input : inputs){
+            if(!input.isSelected()){
+                options.add(menu.findElement(By.id(input.getAttribute("for"))).getText());
+            }
+        }
+        return options;
+    }
+
+    private List<String> getDDLOptions(ReportAction action){
+        List<String> optionNames = new ArrayList<String>();
+        WebElement select = driver.findElement(getLocatorForDDLAction(action));
+        List<WebElement> options = select.findElements(By.tagName("option"));
+        for(WebElement option : options){
+            if(!option.getAttribute("class").contains("disabled")){
+                optionNames.add(option.getText());
+            }
+        }
+        return optionNames;
+    }
+
+    private By getLocatorForDDLAction(ReportAction action){
+        switch(action){
+            case FACULTY:
+                return FACULTY_DDL;
+            case QUALIFICATION:
+                return QUALIFICATION_DDL;
+            case CLASS:
+                return CLASS_DDL;
+            case GRADE_TYPE:
+                return GRADE_TYPE_DDL;
+            case AWARD_CLASS:
+                return AWARD_CLASS_DDL;
+            case KS2_CORE:
+                return KS2_CORE_DDL;
+            case FOCUS_GRADE_OPERATOR:
+                return GRADE_FILTER_TYPE_DDL;
+            case FOCUS_GRADE:
+                return GRADE_FILTER_WHOLE_DDL;
+            case FOCUS_SUB_GRADE:
+                return GRADE_FILTER_SUB_DDL;
+            case COMPARE_GRADE_OPERATOR:
+                return COMP_GRADE_FILTER_TYPE_DDL;
+            case COMPARE_GRADE:
+                return COMP_GRADE_FILTER_WHOLE_DDL;
+            case COMPARE_SUB_GRADE:
+                return COMP_GRADE_FILTER_SUB_DDL;
+            case IN_A8_BASKET:
+                return IN_A8_BASKET_DDL;
+            case STUDENT:
+                return STUDENT_FILTER_DDL;
+            default:
+                throw new IllegalArgumentException(action.name()+" is not a valid action on the Options tab");
+        }
+    }
+
 }

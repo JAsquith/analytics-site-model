@@ -8,10 +8,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.ReportViewModal_MeasureFilters;
-import pages.reports.components.ReportViewModal_ResidualExclusions;
-import pages.reports.components.ReportViewModal_StudentFilters;
+import pages.reports.components.ReportViewModal_Filters;
+import pages.reports.components.ReportViewModal_Measures;
+import pages.reports.components.ReportViewModal_Residuals;
 import pages.reports.components.ReportsHome_EAPYearGroup;
+import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
 
 import java.util.ArrayList;
@@ -127,8 +128,9 @@ public abstract class RandomisedTest extends BaseTest {
             - OptionsTabActions
             - DisplayRowActions
         */
-        List<Object> actionGroups = new ArrayList();
-
+        List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
+        actionGroups.add(report.dsOptions);
+        actionGroups.add(report.gradeFilters);
 
         /*
         The following actionGroups are available depending on context:
@@ -221,7 +223,7 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyAllStudentFilters(){
         String[] filters = getArrayParam("filters");
         if(!filters[0].equals("")){
-            ReportViewModal_StudentFilters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
+            ReportViewModal_Filters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
             for (String filter : filters){
                 int delimIndex = filter.indexOf("=");
                 String filterName = filter.substring(0,delimIndex);
@@ -237,7 +239,7 @@ public abstract class RandomisedTest extends BaseTest {
     }
 
     @Step( "Toggle Student Filter {filterName}[{filterVal}]" )
-    public void toggleStudentFilter(ReportViewModal_StudentFilters stuFiltersModal, String filterName, String filterVal){
+    public void toggleStudentFilter(ReportViewModal_Filters stuFiltersModal, String filterName, String filterVal){
         stuFiltersModal.toggleFilterValue(filterName, filterVal);
     }
 
@@ -245,7 +247,7 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyAllMeasureFilters(){
         String[] measures = getArrayParam("measures");
         if(!measures[0].equals("")){
-            ReportViewModal_MeasureFilters measFiltersModal = report.reportTabs.openMeasureFiltersModal();
+            ReportViewModal_Measures measFiltersModal = report.reportTabs.openMeasureFiltersModal();
             for (String measure : measures){
                 int delimIndex = measure.indexOf("=");
                 String measureName = measure.substring(0,delimIndex);
@@ -269,7 +271,7 @@ public abstract class RandomisedTest extends BaseTest {
     }
 
     @Step ( "Click {actualValue}|{compValue} Measure Filter Options for {measureName}" )
-    public void applyMeasureFilter(ReportViewModal_MeasureFilters measFiltersModal, String measureName, String actualValue, String compValue){
+    public void applyMeasureFilter(ReportViewModal_Measures measFiltersModal, String measureName, String actualValue, String compValue){
         if (!actualValue.equals("")){
             measFiltersModal.clickMeasureFilterOption(measureName, actualValue);
         }
@@ -282,7 +284,7 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyAllResidualExclusions(){
         String[] residuals = getArrayParam("residuals");
         if(!residuals[0].equals("")){
-            ReportViewModal_ResidualExclusions exclusionsModal = report.reportTabs.openResidualExclusionsModal();
+            ReportViewModal_Residuals exclusionsModal = report.reportTabs.openResidualExclusionsModal();
             for(String residual : residuals){
                 toggleResidualExclusion(exclusionsModal, residual);
             }
@@ -295,7 +297,7 @@ public abstract class RandomisedTest extends BaseTest {
     }
 
     @Step( "Toggle the residual exclusion setting for {qualName}" )
-    public void toggleResidualExclusion(ReportViewModal_ResidualExclusions exclusionsModal, String qualName){
+    public void toggleResidualExclusion(ReportViewModal_Residuals exclusionsModal, String qualName){
         exclusionsModal.toggleQualExclusion(qualName);
     }
 
@@ -310,7 +312,7 @@ public abstract class RandomisedTest extends BaseTest {
                 applyGradeFilterOptions(field, value);
             }
             if (debugMode) {
-                report.gradeFilters.expandMe();
+                report.gradeFilters.selectAndExpandTab();
                 saveScreenshot(context.getName()+"-Post-apply_GradeFilters.png");
             }
         }

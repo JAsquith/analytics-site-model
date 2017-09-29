@@ -138,16 +138,16 @@ public class ReportTabs_Other
     public void expandMeasureFiltersTab() { expand("measure"); }
     public void expandResidualExclusionsTab() {expand("residual");}
 
-    public ReportViewModal_StudentFilters openStudentFiltersModal(){
+    public ReportViewModal_Filters openStudentFiltersModal(){
         if (isEnabled("filter")) {
             selectTab("filter");
             driver.findElement(addFiltersBtn).click();
-            return new ReportViewModal_StudentFilters(driver);
+            return new ReportViewModal_Filters(driver);
         }
         throw new IllegalStateException("The Student Filters tab is not enabled");
     }
 
-    public ReportViewModal_MeasureFilters openMeasureFiltersModal(){
+    public ReportViewModal_Measures openMeasureFiltersModal(){
         if(!isEnabled("measure")){
             throw new IllegalStateException("The Measure Filters tab is not enabled");
         }
@@ -155,14 +155,14 @@ public class ReportTabs_Other
             selectTab("measure");
         }
         driver.findElement(addFiltersBtn).click();
-        return new ReportViewModal_MeasureFilters(driver);
+        return new ReportViewModal_Measures(driver);
     }
 
-    public ReportViewModal_ResidualExclusions openResidualExclusionsModal(){
+    public ReportViewModal_Residuals openResidualExclusionsModal(){
         if (!isEnabled("residual")){
             selectTab("residual");
             driver.findElement(addFiltersBtn).click();
-            return new ReportViewModal_ResidualExclusions(driver);
+            return new ReportViewModal_Residuals(driver);
         }
         throw new IllegalStateException("The Residual Exclusions tab is not enabled");
     }
