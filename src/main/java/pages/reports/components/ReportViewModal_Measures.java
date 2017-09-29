@@ -3,26 +3,21 @@ package pages.reports.components;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.AnalyticsComponent;
+import pages.reports.interfaces.IReportModal;
+
+import java.util.List;
 
 
 /**
  * Represents the contents and interactive elements on the Add/Remove Measures modal
  */
-public class ReportViewModal_Measures extends AnalyticsComponent {
+public class ReportViewModal_Measures extends ReportViewModal implements IReportModal {
 
     protected static final By GROUP_HEADINGS = By.cssSelector(".measureTbl tr:not(:nth-of-type(1))>th:nth-of-type(1)");
-    protected static final By CANCEL_BUTTON = By.cssSelector(".modalClose.button.cancel");
-    protected static final By APPLY_BUTTON = By.cssSelector(".button.green");
 
     // CONSTRUCTOR
     public ReportViewModal_Measures(RemoteWebDriver aDriver){
         super(aDriver);
-        WebDriverWait driverWait = new WebDriverWait(driver, SHORT_WAIT);
-        driverWait.until(ExpectedConditions.visibilityOfElementLocated(GROUP_HEADINGS));
-        waitForLoadingWrapper();
     }
 
     public ReportViewModal_Measures clickMeasureFilterOption(String measureName, String measureOption){
@@ -69,13 +64,12 @@ public class ReportViewModal_Measures extends AnalyticsComponent {
         return this;
     }
 
-    public void apply(){
-        driver.findElement(APPLY_BUTTON).click();
-        waitForLoadingWrapper();
+    public List<String> getGroupsList() {
+        return null;
     }
-    public void cancel(){
-        driver.findElement(CANCEL_BUTTON).click();
-        waitForLoadingWrapper();
+
+    public List<String> getOptionsListForGroup(String group) {
+        return null;
     }
 
 }

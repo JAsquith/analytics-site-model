@@ -1,9 +1,9 @@
 package pages.config.components;
 
-import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pages.AnalyticsComponent;
 
 
 /**
@@ -16,7 +16,7 @@ public class CreateFilterModal extends AnalyticsComponent{
     private final By FILTER_NAME_FIELD = By.id("FilterGlobalCreate_Filter_Name");
     private final By DEFAULT_VALUE_FIELD = By.id("FilterGlobalCreate_Filter_DefaultVal");
 
-    private final By CANCEL_BUTTON = By.cssSelector(".modalSubmit>.cancel");
+    private final By CANCEL_BUTTON = By.cssSelector(".modalSubmit>.cancelChanges");
     private final By CREATE_BUTTON = By.cssSelector(".modalSubmit>.green");
 
     /**

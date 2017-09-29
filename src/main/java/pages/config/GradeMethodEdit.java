@@ -1,9 +1,9 @@
 package pages.config;
 
-import pages.AnalyticsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsPage;
 
 import java.util.NoSuchElementException;
 
@@ -14,8 +14,8 @@ import java.util.NoSuchElementException;
  */
 public class GradeMethodEdit extends AnalyticsPage {
 
-    public static final By CANCEL_BUTTON = By.cssSelector(".submitButtons>a.button.cancel");
-    public static final By PREVIOUS_BUTTON = By.cssSelector(".submitButtons>a.button:not(.cancel)");
+    public static final By CANCEL_BUTTON = By.cssSelector(".submitButtons>a.button.cancelChanges");
+    public static final By PREVIOUS_BUTTON = By.cssSelector(".submitButtons>a.button:not(.cancelChanges)");
     public static final By NEXT_BUTTON = By.cssSelector(".submitButtons>button");
     public static final By PAGE_LEGEND = By.cssSelector("span.legend:nth-of-type(1)");
 

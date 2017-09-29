@@ -11,20 +11,20 @@ import pages.reports.interfaces.IReportActionGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReportActionsTab_Filters extends ReportActionsTab implements IReportActionGroup{
+public class ReportActionsTab_Residuals extends ReportActionsTab implements IReportActionGroup{
 
-    private static final String TAB_NAME = "filter";
-    private static final String TAB_CLASS = "filters";
+    private static final String TAB_NAME = "residual";
+    private static final String TAB_CLASS = "residuals";
 
     private static final By TAB_BUTTON = By.cssSelector(".tabbutton[data-tab='"+ TAB_NAME +"']");
     private static final By CONTENTS_DIV = By.cssSelector("."+TAB_CLASS+".pan");
-    private static final By ADD_FILTER_BUTTON = By.cssSelector("."+TAB_CLASS+" .button.noIcon");
+    private static final By ADD_EXCLUSION_BUTTON = By.cssSelector("."+TAB_CLASS+" .button.noIcon");
 
-    private WebElement addFilterButton;
+    private WebElement addExclusionButton;
 
     /* Constructor method
     * ToDo: Javadoc */
-    public ReportActionsTab_Filters(RemoteWebDriver aDriver){
+    public ReportActionsTab_Residuals(RemoteWebDriver aDriver){
         super(aDriver);
         tabName = TAB_NAME;
         tabClass = TAB_CLASS;
@@ -32,29 +32,26 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
         tabContentsBy = CONTENTS_DIV;
     }
 
-    public ReportViewModal_Filters openModal(){
-        getAddFilterButton().click();
-        return new ReportViewModal_Filters(driver);
-    }
-
     /* Actions available within this component
     * ToDo: Javadoc */
+    public ReportViewModal_Residuals openModal(){
+        getAddExclusionButton().click();
+        return new ReportViewModal_Residuals(driver);
+    }
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
-        actions.add(ReportAction.TOGGLE_FILTER);
+        actions.add(ReportAction.TOGGLE_EXCLUSION);
         return actions;
     }
 
     public List<String> getOptionsForAction(ReportAction action) {
-        selectAndExpandTab();
-
-        // Todo: assign the return value of openModel to the IReportModal interface (once the class implements it)
-        openModal();
-
         List<String> options = new ArrayList<String>();
+
+        // Todo: make all ReportViewModal_xxx classes implement IReportModal & change from using the Class to the Interface
+        openModal();
 
         return options;
     }
@@ -64,14 +61,14 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
     }
 
     /*Actions/state queries used within more than one public method */
-    WebElement getAddFilterButton(){
+    WebElement getAddExclusionButton(){
         try{
-            addFilterButton.isDisplayed();
+            addExclusionButton.isDisplayed();
         }
         catch (StaleElementReferenceException | NullPointerException e){
-            addFilterButton = driver.findElement(ADD_FILTER_BUTTON);
+            addExclusionButton = driver.findElement(ADD_EXCLUSION_BUTTON);
         }
-        return addFilterButton;
+        return addExclusionButton;
     }
 
     /* Expected conditions specific to this component */

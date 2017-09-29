@@ -17,7 +17,7 @@ public class CreateUser extends AnalyticsPage {
     private static final By EMAIL_ADDRESS_FIELD = By.id("UserCreate_SchUser_Email");
     private static final By AUTH_GROUP_DDL = By.id("UserCreate_AuthGrp_ID");
     private static final By CREATE_NEW_USER_BUTTON = By.cssSelector(".submitButtons>.green");
-    private static final By CANCEL_BUTTON = By.cssSelector(".submitButtons>.cancel");
+    private static final By CANCEL_BUTTON = By.cssSelector(".submitButtons>.cancelChanges");
 
     /**
      * Simple constructor

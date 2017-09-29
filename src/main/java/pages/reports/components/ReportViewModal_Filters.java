@@ -3,33 +3,109 @@ package pages.reports.components;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.AnalyticsComponent;
+import pages.reports.interfaces.IReportModal;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Represents the contents and interactive elements on the Add/Remove Filters modal
  */
-public class ReportViewModal_Filters extends AnalyticsComponent {
+public class ReportViewModal_Filters extends ReportViewModal implements IReportModal {
 
     protected static final By FILTER_TITLES = By.cssSelector(".title.addFilter");
-    protected static final By CANCEL_BUTTON = By.cssSelector(".modalClose.button.cancel");
+    protected static final By FILTER_GROUP_BUTTONS_SPAN = By.tagName("span");
     protected static final By UNCHECK_ALL_BUTTON = By.id("checkClear");
-    protected static final By APPLY_BUTTON = By.cssSelector(".button.green");
+    private static final By FILTER_CHECK_ALL = By.cssSelector("span.all");
+    private static final By FILTER_UNCHECK_ALL = By.cssSelector("span.none");
 
     // CONSTRUCTOR
     public ReportViewModal_Filters(RemoteWebDriver aDriver){
         super(aDriver);
-        WebDriverWait driverWait = new WebDriverWait(driver, SHORT_WAIT);
-        driverWait.until(ExpectedConditions.visibilityOfElementLocated(FILTER_TITLES));
-        waitForLoadingWrapper();
     }
 
     public ReportViewModal_Filters toggleFilterValue(String filterTitle, String filterValue){
 
-        //System.out.println("Selecting Student Filter [" + filterTitle + " > " + filterValue + "]");
+        try {
+            WebElement label = getFilterValueElement(filterTitle, filterValue);
+            driver.executeScript("arguments[0].scrollIntoView(true);", label);
+            label.click();
+        } catch (Exception e){
+            System.err.println("Filter [" + filterTitle + " > " + filterValue + "] not found");
+            System.err.println(e.getMessage());
+            //this.cancel();
+        }
+        return this;
+    }
 
+    public ReportViewModal_Filters uncheckAll(){
+        driver.findElement(UNCHECK_ALL_BUTTON).click();
+        waitForLoadingWrapper();
+        return this;
+    }
+
+    public ReportViewModal_Filters checkAllForGroup(String filterTitle){
+        WebElement filterGroup = getFilterGrpElement(filterTitle);
+        driver.executeScript("arguments[0].scrollIntoView(true);", filterGroup);
+
+        filterGroup.findElement(FILTER_CHECK_ALL).click();
+        return this;
+    }
+    public ReportViewModal_Filters uncheckAllForGroup(String filterTitle){
+        WebElement filterGroup = getFilterGrpElement(filterTitle);
+        driver.executeScript("arguments[0].scrollIntoView(true);", filterGroup);
+
+        filterGroup.findElement(FILTER_UNCHECK_ALL).click();
+        return this;
+    }
+
+    public List<String> getGroupsList() {
+        List<String> groups = new ArrayList<String>();
+        for (WebElement listItem : driver.findElements(FILTER_TITLES)){
+            WebElement buttonsSpan = listItem.findElement(FILTER_GROUP_BUTTONS_SPAN);
+            String titleText = listItem.getText().replace(buttonsSpan.getText(),"");
+            groups.add(titleText.trim());
+        }
+        return groups;
+    }
+
+    public List<String> getOptionsListForGroup(String filterTitle) {
+
+        WebElement filterGroup = getFilterGrpElement(filterTitle);
+        driver.executeScript("arguments[0].scrollIntoView(true);", filterGroup);
+
+        List<String> options = new ArrayList<String>();
+        By valuesLocator = By.cssSelector(
+                "."+filterGroup.getAttribute("data-grp")+" label"
+        );
+
+        for (WebElement valueLabel : filterGroup.findElements(valuesLocator)){
+            options.add(valueLabel.getText());
+        }
+
+        options.add("Check All");
+        options.add("Uncheck All");
+        return options;
+    }
+
+    private String getJSForFilterLocator(String filterTitle){
+        String js = "var filterTitle = '" + filterTitle + "';";
+        js += "var titles = document.querySelectorAll('li.title.addFilter');";
+        js += "var found = false;";
+        js += "var liElement;";
+        js += "for (var i=0; i<titles.length; i++){";
+        js += "  var titleBarText = titles[i].textContent.replace('Check All','');";
+        js += "  var titleBarText = titleBarText.replace('Uncheck All','');";
+        js += "  if (titleBarText.trim() == filterTitle) {";
+        js += "    liElement = titles[i];";
+        js += "        found = true;";
+        js += "  }";
+        js += "}";
+        js += "return liElement";
+        return js;
+    }
+    private String getJSForFilterValueLocator(String filterTitle, String filterValue){
         String js = "var filterTitle = '" + filterTitle + "';";
         js += "var filterValue = '" + filterValue + "';";
         js += "var titles = document.querySelectorAll('li.title.addFilter');";
@@ -51,31 +127,16 @@ public class ReportViewModal_Filters extends AnalyticsComponent {
         js += "  }";
         js += "}";
         js += "return labelElement";
-
-        try {
-            WebElement label = (WebElement) driver.executeScript(js);
-            driver.executeScript("arguments[0].scrollIntoView(true);", label);
-            label.click();
-        } catch (Exception e){
-            System.err.println("Filter [" + filterTitle + " > " + filterValue + "] not found");
-            System.err.println(e.getMessage());
-            //this.cancel();
-        }
-        return this;
+        return js;
     }
 
-    public void apply(){
-        driver.findElement(APPLY_BUTTON).click();
-        waitForLoadingWrapper();
+    private WebElement getFilterGrpElement(String filterTitle){
+        String js = getJSForFilterLocator(filterTitle);
+        return (WebElement) driver.executeScript(js);
     }
-    public void cancel(){
-        driver.findElement(CANCEL_BUTTON).click();
-        waitForLoadingWrapper();
-    }
-    public ReportViewModal_Filters uncheckAll(){
-        driver.findElement(UNCHECK_ALL_BUTTON).click();
-        waitForLoadingWrapper();
-        return this;
+    private WebElement getFilterValueElement(String filterTitle, String filterValue){
+        String js = getJSForFilterValueLocator(filterTitle, filterValue);
+        return (WebElement) driver.executeScript(js);
     }
 
 }

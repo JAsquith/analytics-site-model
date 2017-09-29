@@ -16,7 +16,7 @@ public class AuthorityDetailsModal extends AnalyticsComponent {
     public final By MODAL_WINDOW = By.className("window");
 
     public final By CAN_DO_LIST_ITEMS = By.cssSelector(".bull>li");
-    public final By CLOSE_BUTTON = By.cssSelector(".modalSubmit>.cancel");
+    public final By CLOSE_BUTTON = By.cssSelector(".modalSubmit>.cancelChanges");
 
     /**
      * Creates a Component object for the Authority Details modal and waits for the modal window to be clickable.

@@ -1,9 +1,9 @@
 package pages.data.basedata;
 
-import pages.AnalyticsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.AnalyticsPage;
 
 /**
  * Represents the components and actions on an Edit EAP page
@@ -18,7 +18,7 @@ public class EditEAP extends AnalyticsPage {
     public final By KS2_BASELINE_SELECT = By.id("EAP_EAPBaseline_ID");
     public final By FINAL_EXAM_GRADES_SELECT = By.id("TermList_15__EAPGradesMethod_ID");
 
-    public final By CANCEL_BUTTON = By.cssSelector(".submitButtons>a.button.cancel");
+    public final By CANCEL_BUTTON = By.cssSelector(".submitButtons>a.button.cancelChanges");
     public final By SAVE_BUTTON = By.cssSelector(".submitButtons>button");
 
     /**

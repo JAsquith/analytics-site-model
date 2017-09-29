@@ -14,7 +14,7 @@ public class StudentDataProfile extends AnalyticsPage {
     public final By FILTER_11_SELECT = By.id("FilterList_10__Filter_ID");
 
     public final By SAVE_BUTTON = By.cssSelector(".button.green.submit");
-    public final By CANCEL_BUTTON = By.cssSelector(".button.cancel");
+    public final By CANCEL_BUTTON = By.cssSelector(".button.cancelChanges");
 
     public final String PAGE_PATH = "/Config/Filters/StudentDataDefaults";
     public final String PAGE_TITLE_TEXT = "Student Data Profile";

@@ -25,7 +25,7 @@ public class PublishGradesModal extends AnalyticsComponent{
     private final By A8_ESTIMATES_SELECT = By.id("a8EstimatesDDL");
     private final By REPORT_NOTE_FIELD = By.id("CurrentPublishItem_PublishedReport_Note");
     private final By REPORT_STATUS_SELECT = By.id("CurrentPublishItem_Stat_ID");
-    private final By CANCEL_BUTTON = By.cssSelector(".cancel.modalClose");
+    private final By CANCEL_BUTTON = By.cssSelector(".cancelChanges.modalClose");
     private final By PUBLISH_BUTTON = By.id("smtBtQue");
     private final By LOCAL_PUBLISH_BUTTON = By.id("smtBt");
     private final By CLOSE_PUB_PROG_MODAL_BUTTON = By.cssSelector(".pubFinished");

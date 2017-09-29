@@ -36,14 +36,14 @@ public class ReportActionsTab extends AnalyticsComponent {
         return getTabButton()!=null;
     }
     public boolean isDisabled(){
-        return !isEnabled();
+        return getTabButton()==null;
     }
 
     public boolean isActive(){
         return getTabContentsDiv()!=null;
     }
     public boolean isInactive() {
-        return !isActive();
+        return getTabContentsDiv()==null;
     }
 
     public boolean isExpanded(){
@@ -62,7 +62,7 @@ public class ReportActionsTab extends AnalyticsComponent {
 
     public ReportActionsTab selectTab(){
         if (!getTabButton().getAttribute("class").contains("active")){
-            tabButton.click();
+            getTabButton().click();
             waitShort.until(tabSwitchComplete());
         }
         return this;
@@ -106,7 +106,7 @@ public class ReportActionsTab extends AnalyticsComponent {
         if(isDisabled()){
             throw new IllegalStateException("Tab '" + tabName + "' cannot be reset because it is disabled");
         }
-        List<WebElement> resetButtons = tabButton.findElements(RESET_ICON);
+        List<WebElement> resetButtons = getTabButton().findElements(RESET_ICON);
         if(resetButtons.size()==0){
             throw new IllegalStateException("There are no applied options to be reset on Tab '"+tabName+"'");
         }
@@ -120,18 +120,9 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
 
     protected WebElement getTabButton(){
-        boolean refresh = false;
-        if (tabButton==null){
-            refresh = true;
-        } else {
-            try {
-                // Calling any method forces a staleness check
-                tabButton.isEnabled();
-            } catch (StaleElementReferenceException expected) {
-                refresh = true;
-            }
-        }
-        if (refresh) {
+        try {
+            tabButton.isEnabled();
+        } catch (StaleElementReferenceException | NullPointerException e) {
             List<WebElement> tabButtons = driver.findElements(tabButtonBy);
             tabButton = tabButtons.size() > 0 ? tabButtons.get(0) : null;
         }
@@ -139,18 +130,10 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
 
     protected WebElement getTabContentsDiv(){
-        boolean refresh = false;
-        if (tabContentsDiv==null){
-            refresh = true;
-        } else {
-            try {
-                // Calling any method forces a staleness check
-                tabContentsDiv.isEnabled();
-            } catch (StaleElementReferenceException expected) {
-                refresh = true;
-            }
-        }
-        if (refresh) {
+        try {
+            // Calling any method forces a staleness check
+            tabContentsDiv.isEnabled();
+        } catch (StaleElementReferenceException | NullPointerException e) {
             List<WebElement> tabContentDivs = driver.findElements(tabContentsBy);
             tabContentsDiv = tabContentDivs.size()>0 ? tabContentDivs.get(0) : null;
         }

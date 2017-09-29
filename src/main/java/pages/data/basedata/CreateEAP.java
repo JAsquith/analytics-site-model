@@ -31,7 +31,7 @@ public class CreateEAP extends EditEAP {
     public final By COPY_FROM_EAP_OPTIONS = By.cssSelector("#eapDDL>option");
 
     public final By CREATE_BUTTON = By.cssSelector(".submitButtons>button");
-    public final By CANCEL_BUTTON = By.cssSelector(".submitButtons>a.button.cancel");
+    public final By CANCEL_BUTTON = By.cssSelector(".submitButtons>a.button.cancelChanges");
 
     public CreateEAP (RemoteWebDriver aDriver){
         super(aDriver);
@@ -50,10 +50,7 @@ public class CreateEAP extends EditEAP {
     }
 
     public boolean isFirstEAP(){
-        if(driver.findElement(EAP_TYPE_CREATED).getAttribute("type").equals("radio")){
-            return false;
-        }
-        return true;
+        return !driver.findElement(EAP_TYPE_CREATED).getAttribute("type").equals("radio");
     }
 
     public CreateEAP chooseCreateNewEAP(){

@@ -1,11 +1,11 @@
 package pages.data.students.components;
 
-import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AnalyticsComponent;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class ClassAssignmentsModal extends AnalyticsComponent {
 
     private final By COMPONENT = By.id("fm_EditClassAssignments");
     private final By QUAL_CHECKBOX_LABELS = By.cssSelector(".inp_50pc>label");
-    private final By CANCEL_BUTTON = By.cssSelector(".modalClose.cancel");
+    private final By CANCEL_BUTTON = By.cssSelector(".modalClose.cancelChanges");
     private final By SAVE_BUTTON = By.cssSelector(".modalSubmit>button.green");
 
     /**

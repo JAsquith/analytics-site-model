@@ -1,11 +1,11 @@
 package pages.data.grades.components;
 
-import pages.AnalyticsComponent;
-import pages.data.grades.UploadsForAssessments;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
+import pages.AnalyticsComponent;
+import pages.data.grades.UploadsForAssessments;
 
 
 /**
@@ -20,7 +20,7 @@ public class CreateCollectionModal extends AnalyticsComponent{
     private final By COLL_TERM_SELECT = By.id("CollectionCreate_EAPTerm_ID");
     private final By COLL_DESC_FIELD = By.id("CollectionCreate_Coll_Desc");
 
-    private final By CANCEL_BUTTON = By.cssSelector(".modalSubmit>.cancel");
+    private final By CANCEL_BUTTON = By.cssSelector(".modalSubmit>.cancelChanges");
     private final By CREATE_BUTTON = By.cssSelector(".modalSubmit>.green");
 
     /**

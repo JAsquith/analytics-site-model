@@ -129,8 +129,8 @@ public abstract class RandomisedTest extends BaseTest {
             - DisplayRowActions
         */
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
-        actionGroups.add(report.dsOptions);
-        actionGroups.add(report.gradeFilters);
+        actionGroups.add(report.datasetsTab);
+        actionGroups.add(report.optionsTab);
 
         /*
         The following actionGroups are available depending on context:
@@ -205,13 +205,13 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyReportDatasetOption(String field, String value){
         switch (field){
             case "Tab":
-                report = report.dsOptions.showFocusDataAs(value);
+                report = report.datasetsTab.showFocusDataAs(value);
                 break;
             case "Actual":
-                report = report.dsOptions.selectFocusDataset(value);
+                report = report.datasetsTab.selectFocusDataset(value);
                 break;
             case "Compare":
-                report = report.dsOptions.selectCompareDataset(value);
+                report = report.datasetsTab.selectCompareDataset(value);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");
@@ -223,16 +223,16 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyAllStudentFilters(){
         String[] filters = getArrayParam("filters");
         if(!filters[0].equals("")){
-            ReportViewModal_Filters stuFiltersModal = report.reportTabs.openStudentFiltersModal();
+            ReportViewModal_Filters stuFiltersModal = report.filtersTab.openModal();
             for (String filter : filters){
                 int delimIndex = filter.indexOf("=");
                 String filterName = filter.substring(0,delimIndex);
                 String filterValue = filter.substring(delimIndex+1);
                 toggleStudentFilter(stuFiltersModal, filterName, filterValue);
             }
-            stuFiltersModal.apply();
+            stuFiltersModal.applyChanges();
             if (debugMode) {
-                report.reportTabs.expandStudentFiltersTab();
+                report.filtersTab.selectAndExpandTab();
                 saveScreenshot(context.getName()+"-Post-apply_StuFilters.png");
             }
         }
@@ -247,7 +247,7 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyAllMeasureFilters(){
         String[] measures = getArrayParam("measures");
         if(!measures[0].equals("")){
-            ReportViewModal_Measures measFiltersModal = report.reportTabs.openMeasureFiltersModal();
+            ReportViewModal_Measures measFiltersModal = report.measuresTab.openModal();
             for (String measure : measures){
                 int delimIndex = measure.indexOf("=");
                 String measureName = measure.substring(0,delimIndex);
@@ -262,9 +262,9 @@ public abstract class RandomisedTest extends BaseTest {
                 }
                 applyMeasureFilter(measFiltersModal, measureName, actCompValues[0], actCompValues[1]);
             }
-            measFiltersModal.apply();
+            measFiltersModal.applyChanges();
             if (debugMode) {
-                report.reportTabs.expandMeasureFiltersTab();
+                report.filtersTab.selectAndExpandTab();
                 saveScreenshot(context.getName()+"-Post-apply_MeasFilters.png");
             }
         }
@@ -284,13 +284,13 @@ public abstract class RandomisedTest extends BaseTest {
     public void applyAllResidualExclusions(){
         String[] residuals = getArrayParam("residuals");
         if(!residuals[0].equals("")){
-            ReportViewModal_Residuals exclusionsModal = report.reportTabs.openResidualExclusionsModal();
+            ReportViewModal_Residuals exclusionsModal = report.residualsTab.openModal();
             for(String residual : residuals){
                 toggleResidualExclusion(exclusionsModal, residual);
             }
-            exclusionsModal.apply();
+            exclusionsModal.applyChanges();
             if (debugMode) {
-                report.reportTabs.expandResidualExclusionsTab();
+                report.residualsTab.selectAndExpandTab();
                 saveScreenshot(context.getName()+"-Post-apply_ResidExcl.png");
             }
         }
@@ -312,7 +312,7 @@ public abstract class RandomisedTest extends BaseTest {
                 applyGradeFilterOptions(field, value);
             }
             if (debugMode) {
-                report.gradeFilters.selectAndExpandTab();
+                report.optionsTab.selectAndExpandTab();
                 saveScreenshot(context.getName()+"-Post-apply_GradeFilters.png");
             }
         }
@@ -322,46 +322,46 @@ public abstract class RandomisedTest extends BaseTest {
     private void applyGradeFilterOptions(String field, String value){
         switch (field){
             case "OnTrack":
-                report = report.gradeFilters.filterByTrack(value);
+                report = report.optionsTab.filterByTrack(value);
                 break;
             case "Faculty":
-                report = report.gradeFilters.selectFaculty(value);
+                report = report.optionsTab.selectFaculty(value);
                 break;
             case "Qualification":
-                report = report.gradeFilters.selectQualification(value);
+                report = report.optionsTab.selectQualification(value);
                 break;
             case "Class":
-                report = report.gradeFilters.selectClass(value);
+                report = report.optionsTab.selectClass(value);
                 break;
             case "Grade Type":
-                report = report.gradeFilters.selectGradeType(value);
+                report = report.optionsTab.selectGradeType(value);
                 break;
             case "GCSE/Non-GCSE":
-                report = report.gradeFilters.selectAwardClass(value);
+                report = report.optionsTab.selectAwardClass(value);
                 break;
             case "KS2 Core":
-                report = report.gradeFilters.selectKS2Core(value);
+                report = report.optionsTab.selectKS2Core(value);
                 break;
             case "Actual Grade Operator":
-                report = report.gradeFilters.selectGradeFilterType(value);
+                report = report.optionsTab.selectGradeFilterType(value);
                 break;
             case "Actual Grade Grade":
-                report = report.gradeFilters.selectGradeFilterWhole(value);
+                report = report.optionsTab.selectGradeFilterWhole(value);
                 break;
             case "Actual Grade Subgrade":
-                report = report.gradeFilters.selectGradeFilterSub(value);
+                report = report.optionsTab.selectGradeFilterSub(value);
                 break;
             case "Compare Grade Operator":
-                report = report.gradeFilters.selectCompGradeFilterType(value);
+                report = report.optionsTab.selectCompGradeFilterType(value);
                 break;
             case "Compare Grade Grade":
-                report = report.gradeFilters.selectCompGradeFilterWhole(value);
+                report = report.optionsTab.selectCompGradeFilterWhole(value);
                 break;
             case "Compare Grade Subgrade":
-                report = report.gradeFilters.selectCompGradeFilterSub(value);
+                report = report.optionsTab.selectCompGradeFilterSub(value);
                 break;
             case "Student":
-                report = report.gradeFilters.selectStudent(value);
+                report = report.optionsTab.selectStudent(value);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown Grade Filter Option '"+field+"'");
@@ -412,7 +412,7 @@ public abstract class RandomisedTest extends BaseTest {
                 break;
             case "In A8 Basket":
                 // ToDo: Investigate breaking the config to move setting this into the #applyGradeFilterOptions method
-                report = report.gradeFilters.selectInA8Basket(value);
+                report = report.optionsTab.selectInA8Basket(value);
                 break;
             case "Sub Whole":
                 report = report.viewOptions.setSubWhole(value);
