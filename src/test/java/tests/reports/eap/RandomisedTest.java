@@ -4,9 +4,7 @@ import enums.ReportAction;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.ReportsHome_EAPYearGroup;
@@ -14,22 +12,30 @@ import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.testng.Assert.fail;
 
 public class RandomisedTest extends BaseTest {
 
+    public static final String NO_ENTRIES_BANNER_TEXT = "There are no entries to display for this selection";
     protected EAPView report;
     private ReportsHome_EAP reportsHome;
     private ReportsHome_EAPYearGroup yearDataGroup;
     private WebElement reportSet;
+    private IReportActionGroup group;
+    private ReportAction action;
+    private String option;
+    private int zeroCohortCount = 0;
+    private int zeroEntriesCount = 0;
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
-    @Parameters( { "username", "password" })
-    public void setup(ITestContext testContext, String user, String pass){
+    @Parameters( { "username", "password", "cohort" })
+    public void setup(ITestContext testContext, String user, String pass, String cohort){
 
         // Check against list
         // fail("Skipped test - " + testContext.getName() + " your name's not down you're not coming in")
@@ -39,48 +45,61 @@ public class RandomisedTest extends BaseTest {
             fail(initResult);
         }
 
+        login(user, pass, true);
+        openAReport(cohort);
+    }
+
+    @Test( description = "Random Report Actions", dataProvider = "randomLoops")
+    @Parameters( { "maxLoops" } )
+    public void testRandomReportActions(String loopIndex, String maxLoops){
+
+        Random rnd = new Random();
         try {
-            // Login
-            login(user, pass, true);
+            report = randomReportAction(rnd);
+            assertWithScreenshot("Applying a Report Option/Action should not error",
+                    report.getErrorMessage(), isEmptyOrNullString());
         } catch (Exception e){
-            saveScreenshot(context.getName()+"_SetupFail.png");
-            if (driver!=null){
-                driver.quit();
-            }
+            saveScreenshot(context.getName()+"_ErrorPage_"+loopIndex+" of "+maxLoops+".png");
             e.printStackTrace();
-            fail("Test Setup Failed! Exception: "+e.getMessage());
+            throw e;
         }
     }
 
-    @Test
-    @Parameters( { "cohort", "maxLoops" } )
-    public void testRandomReportActions(String cohort, int maxLoops){
+    @AfterMethod
+    public void postActionChecks(){
 
-        Random rnd = new Random();
-
-        try {
-            gotoReportsHome();
-            selectReportsCohort(cohort);
-            expandEAPYearGroup(selectRandomEAPYearGroup());
-            expandReportSet(selectRandomReportSet());
-            WebElement reportAreaButton = selectRandomReportButton();
-
-            report = openReport(reportAreaButton, reportAreaButton.getText());
-
-        } catch (Exception e){
-            saveScreenshot(context.getName()+"_InitialReportOpen.png");
-            throw e;
+        // If we hit an error page, go back to ReportsHome and re-open a new report
+        if(!report.getErrorMessage().equals("")){
+            restartFromReportsHome();
         }
-        for (int loopIndex = 1; loopIndex <= maxLoops; loopIndex++){
-            try {
-                report = randomReportAction(rnd);
-            } catch (Exception e){
-                saveScreenshot(context.getName()+"_ErrorPage_"+loopIndex+".png");
-                e.printStackTrace();
-                throw e;
-            }
+        if (report.getCohortCount()==0) zeroCohortCount++;
+        if (report.getNotificationText().equals(NO_ENTRIES_BANNER_TEXT)) zeroEntriesCount++;
+        if (zeroCohortCount>2 || zeroEntriesCount>2){
+            resetAll();
         }
+    }
 
+    @Step( "Reset All Options (after three actions with no students/entries)" )
+    private void resetAll(){
+        report = report.resetAllOptions();
+        zeroCohortCount = 0;
+        zeroEntriesCount = 0;
+    }
+    @Step( "Restarting from Reports Home Page after an Error" )
+    private void restartFromReportsHome(){
+        openAReport(getStringParam("cohort"));
+    }
+
+    /* Setup Steps*/
+    private void openAReport(String cohort){
+        gotoReportsHome();
+        selectReportsCohort(cohort);
+        expandEAPYearGroup(selectRandomEAPYearGroup());
+        expandReportSet(selectRandomReportSet());
+        String reportArea = selectRandomReportButton();
+        report = clickReportAreaButton(reportArea);
+        assertWithScreenshot("Opening a Report View should not error",
+                report.getErrorMessage(), isEmptyOrNullString());
     }
 
     @Step( "Go to the EAP Reports Home page" )
@@ -117,30 +136,37 @@ public class RandomisedTest extends BaseTest {
         yearDataGroup.expandPublishedReport(datasetName);
     }
 
-    private WebElement selectRandomReportButton(){
+    /* Test Steps*/
+    private String selectRandomReportButton(){
         List<WebElement> buttons = yearDataGroup.getReportButtons(reportSet);
         int buttonIndex = new Random().nextInt(buttons.size());
-        return buttons.get(buttonIndex);
+        return buttons.get(buttonIndex).getText();
     }
 
     @Step( "Open Report Area {areaName}" )
-    private EAPView openReport(WebElement button, String areaName){
-        button.click();
-        return new EAPView(driver);
+    private EAPView clickReportAreaButton(String areaName){
+        for(WebElement button : yearDataGroup.getReportButtons(reportSet)){
+            if(button.getText().equals(areaName)) {
+                button.click();
+                return new EAPView(driver);
+            }
+        }
+        throw new IllegalArgumentException("The Report Button for '"+areaName+"' could not be found");
     }
 
     private List<IReportActionGroup> getActionGroupList(){
-        /* Todo: The following 'always-on' actionGroups need to be added:
-            - ViewSwitchActions  */
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
+        actionGroups.add(report.navMenu);
         actionGroups.add(report.datasetsTab);
         actionGroups.add(report.optionsTab);
 
         /* Todo: The following 'contingent' actionGroups need to be added:
             - DrillDownActions */
+/*
         if (report.filtersTab.isEnabled()) {
             actionGroups.add(report.filtersTab);
         }
+*/
         if (report.measuresTab.isEnabled()) {
             actionGroups.add(report.measuresTab);
         }
@@ -151,17 +177,47 @@ public class RandomisedTest extends BaseTest {
         return actionGroups;
     }
 
+    private List<String> buildAction(Random rnd){
+        group = report.navMenu;
+        action = ReportAction.NULL;
+        option = "Null";
+        List<String> actionOptions;
+        try{
+            List<IReportActionGroup> actionGroups = getActionGroupList();
+            group = actionGroups.get(rnd.nextInt(actionGroups.size()));
+            List<ReportAction> actions = group.getValidActionsList();
+            action = actions.get(rnd.nextInt(actions.size()));
+            actionOptions = group.getOptionsForAction(action);
+        } catch (Exception e){
+            System.err.println("Exception building random ReportAction:");
+            System.err.println("Group: "+group.getClass().getName());
+            System.err.println("Action: "+action.name);
+            System.err.println("Option: "+option);
+            throw e;
+        }
+        return actionOptions;
+    }
+
     private EAPView randomReportAction(Random rnd){
 
-        List<IReportActionGroup> actionGroups = getActionGroupList();
-        IReportActionGroup group = actionGroups.get(rnd.nextInt(actionGroups.size()));
-        List<ReportAction> actions = group.getValidActionsList();
-        ReportAction action = actions.get(rnd.nextInt(actions.size()));
-        List<String> actionOptions = group.getOptionsForAction(action);
-        String option = actionOptions.get(rnd.nextInt(actionOptions.size()));
-        applyRandomAction(group, action, option);
-
-        return new EAPView(driver);
+        group = report.navMenu;
+        action = ReportAction.NULL;
+        option = "Null";
+        List<String> actionOptions = buildAction(rnd);
+        while(actionOptions.size()==0){
+            actionOptions = buildAction(rnd);
+        }
+        try {
+            option = actionOptions.get(rnd.nextInt(actionOptions.size()));
+            return applyRandomAction(group, action, option);
+        } catch (Exception e){
+            System.err.println("Exception applying ReportAction:");
+            System.err.println("Group: "+group.getClass().getName());
+            System.err.println("Action: "+action.name);
+            System.err.println("Option: "+option);
+            System.err.println(action + " > " + option);
+            throw e;
+        }
     }
 
     @Step( "{action} > {option}" )
@@ -169,24 +225,19 @@ public class RandomisedTest extends BaseTest {
         return group.applyActionOption(action, option);
     }
 
-/*
-    @DataProvider(name = "reportFigures")
-    public Iterator<Object[]> createData() throws IOException {
+    @DataProvider(name = "randomLoops")
+    public Iterator<Object[]> createTestLoops(){
         List<Object []> testCases = new ArrayList<>();
         String[] data;
 
-        BufferedReader expectedBr = new BufferedReader(new FileReader(expectedFiguresFilePath));
-        BufferedReader actualBr = new BufferedReader(new FileReader(actualFiguresFilePath));
-        String expectedLine; String actualLine;
-        int rowNum = 0;
-        while ((expectedLine = expectedBr.readLine()) != null &&
-                (actualLine = actualBr.readLine()) != null){
-            rowNum++;
-            data = (rowNum+"~"+expectedLine+"~"+actualLine).split("~");
+        int maxLoops = getIntegerParam("maxLoops", 25);
+        for (int loopIndex = 1; loopIndex <= maxLoops; loopIndex++){
+            data = (loopIndex+"~"+maxLoops).split("~");
             testCases.add(data);
         }
         return testCases.iterator();
     }
+/*
 */
 
 

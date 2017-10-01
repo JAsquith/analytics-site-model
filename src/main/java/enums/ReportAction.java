@@ -1,11 +1,15 @@
 package enums;
 
 public enum ReportAction {
+    // Dummy Null Action
+    NULL("Null"),
+
     // Actions on the Datasets tab
     CHANGE_FOCUS("Change Focus"),
     FOCUS_VTP("Show Focus As"),
     CHANGE_COMPARE("Change Compare"),
     COMPARE_VTP("Show Compare As"),
+    TRACKER_COLUMN("Change Tracker Column"),
 
     // Actions on the Options tab
     EAP_TRACKING("Filter By Track Status"),
@@ -31,6 +35,11 @@ public enum ReportAction {
     TOGGLE_MEASURE("Toggle Measure"),
     // Actions on the Residual Exclusions tab
     TOGGLE_EXCLUSION("Toggle Qualification Exclusion"),
+
+    // Actions in the View Navigation menu
+    NEW_AREA("Navigate to a new Area & Report (same/default Grouping)"),
+    NEW_REPORT("Navigate to a new Report (same/default Area & Grouping)"),
+    NEW_GROUPING("Navigate to a new Grouping (same/default Grouping)"),
 
     // Actions in the Display options Row
     SORT_COLUMN("Select Sort Column"),

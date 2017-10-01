@@ -1,6 +1,9 @@
 package pages.reports;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,133 +11,100 @@ import pages.AnalyticsPage;
 import pages.reports.components.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class EAPView extends AnalyticsPage{
 
     private static final By KEY_CHARACTERISTICS_ICON = By.cssSelector(".icoEAP.act_key");
+    private static final By COHORT_COUNT_BADGE = By.cssSelector(".cohCount.badge");
+    private static final By NOTIFICATION_BANNER = By.cssSelector(".notif.Perm.Information");
+    private static final By RESET_ALL = By.cssSelector(".resetAll");
+    protected static By RESET_YES = By.cssSelector(".resetPop a");
+    protected static By RESET_NO = By.cssSelector(".resetPop em");
 
-
-    private static final By AREAS = By.cssSelector(".area");
-    private static final By AREA_ACTIVE = By.cssSelector(".area.active");
-    private static final By AREA_SELECTED = By.cssSelector(".area.selected");
-
-    private static final By REPORT_GROUPS = By.cssSelector(".rptGroup");
-    private static final By REPORT_GRP_ACTIVE = By.cssSelector(".rptGroup.active");
-
-    private static final By LEVELS_VISIBLE = By.cssSelector(".lvls[style*='display: block']");
-
-    // Locators for dataset DDLs are public in the ReportActionsTab_Dataset class
+    // Components on an EAPView Report page
+    public ReportActions_NavMenu navMenu;
     public ReportActionsTab_Dataset datasetsTab;
-
-    // Locators for Grade filters (On Track, Faculty, Class, Grade Type, etc)
-    // are public in the ReportActionsTab_Options class
     public ReportActionsTab_Options optionsTab;
-
     public ReportActionsTab_Filters filtersTab;
     public ReportActionsTab_Measures measuresTab;
     public ReportActionsTab_Residuals residualsTab;
-
-    // Locators for View Options (Column Sort, Count/Percent, Standard/Cumulative, Breakdown, StuInfo, A8 Basket, Sub/Whole)
     public ReportActions_DisplayOptions viewOptions;
 
     // CONSTRUCTORS
     public EAPView(RemoteWebDriver aDriver){
         super(aDriver);
-        datasetsTab = new ReportActionsTab_Dataset(driver);
-        optionsTab = new ReportActionsTab_Options(driver);
-        filtersTab = new ReportActionsTab_Filters(driver);
-        measuresTab = new ReportActionsTab_Measures(driver);
-        residualsTab = new ReportActionsTab_Residuals(driver);
+        if (getErrorMessage()=="") {
+            navMenu = new ReportActions_NavMenu(driver);
+            datasetsTab = new ReportActionsTab_Dataset(driver);
+            optionsTab = new ReportActionsTab_Options(driver);
+            filtersTab = new ReportActionsTab_Filters(driver);
+            measuresTab = new ReportActionsTab_Measures(driver);
+            residualsTab = new ReportActionsTab_Residuals(driver);
 
-        viewOptions = new ReportActions_DisplayOptions(driver);
-        try {
-            waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
-        } catch (TimeoutException e){
-            throw new IllegalStateException("Timeout waiting for Key Characteristics icon to be clickable on EAPView");
+            viewOptions = new ReportActions_DisplayOptions(driver);
+            try {
+                waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
+            } catch (TimeoutException e) {
+                throw new IllegalStateException("Timeout waiting for Key Characteristics icon to be clickable on EAPView");
+            }
         }
     }
 
 // METHODS
     //  - CHANGING THE STATE OF THE PAGE
-    public WebElement selectArea(String areaName){
-        try {
-            WebElement area = driver.findElement(getAreaDivSelector(areaName));
-            if (!area.getAttribute("class").contains("selected")){
-                area.click();
-                waitShort.until(reportGroupsDisplayedFor(area));// TimeoutException
-            }
-            return area;
-        } catch (NoSuchElementException e){
-            throw new WebDriverException("NSEE trying to select Area '"+areaName+"'; "+e.getMessage());
-        } catch (TimeoutException e){
-            throw new WebDriverException("Timeout Exception waiting for ReportGroups");
-        }
-    }
-
-    public EAPView selectReport(String reportName){
-        WebElement selectedArea;
-        try{
-            selectedArea = driver.findElement(AREA_SELECTED);
-        } catch (NoSuchElementException e){
-            throw new IllegalStateException("Can't select a Report because no Area is selected");
-        }
-        return selectReport(selectedArea, reportName);
-    }
-
-    private EAPView selectReport(WebElement selectedArea, String reportName){
-        try{
-            String currentReport = driver.findElement(REPORT_GRP_ACTIVE).getText();
-            if (reportName.equals(currentReport)){
-                return this;
-            }
-            WebElement reportLink = selectedArea.findElement(By.linkText(reportName));
-            reportLink.click();
-            waitForLoadingWrapper();
-            return this;
-        } catch (NoSuchElementException e){
-            throw new IllegalArgumentException("Report '"+reportName+"' could not be found in the currently selected area");
-        }
-    }
-
-    public EAPView selectLevel(String levelName){
-        WebElement activeAreaDiv; WebElement selectedAreaDiv;
-        try {
-            activeAreaDiv = driver.findElement(AREA_ACTIVE);
-            selectedAreaDiv = driver.findElement(AREA_SELECTED);
-            String activeAreaName = activeAreaDiv.getAttribute("data-name");
-            String selectedAreaName = selectedAreaDiv.getAttribute("data-name");
-            if (!activeAreaName.equals(selectedAreaName)){
-                throw new IllegalStateException(
-                        "Can't select a Level - the active Area '" + activeAreaName +
-                                "' is not the selected Area '" + selectedAreaName +"'");
-            }
-        } catch (NoSuchElementException e){
-            throw new IllegalStateException("Can't select a Level - either no Area is active or no Area is selected");
-        }
-        try{
-            WebElement levelLinks = driver.findElement(LEVELS_VISIBLE);
-            WebElement levelLink = levelLinks.findElement(By.partialLinkText(levelName));
-            levelLink.click();
-            waitForLoadingWrapper();
-            return this;
-        } catch (NoSuchElementException e){
-            throw new IllegalArgumentException("Can't select Level '" + levelName +
-                    "' - no link with that text could be found");
-        }
-    }
-
     public EAPView openView(String areaName, String reportName, String levelName){
 
         // Show the table of links to views within the given areaName
-        WebElement area = selectArea(areaName);
-        selectReport(area, reportName).
-                selectLevel(levelName);
+        WebElement area = navMenu.selectArea(areaName);
+        navMenu.selectReport(area, reportName).
+                navMenu.selectLevel(levelName);
 
         waitForLoadingWrapper();
         return new EAPView(driver);
     }
 
-    // Methods used in subclasses
+    public EAPView resetAllOptions(){
+        WebElement resetAll = driver.findElement(RESET_ALL);
+        resetAll.click();
+        waitShort.until(resetPopupDisplayed(resetAll)).click();
+        return new EAPView(driver);
+    }
+    private ExpectedCondition<WebElement> resetPopupDisplayed(WebElement resetButton) {
+
+        return new ExpectedCondition<WebElement>() {
+            @Override
+            public WebElement apply(WebDriver driver) {
+                try {
+                    return resetButton.findElement(RESET_YES);
+                } catch (NoSuchElementException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "The Reset All confirmation buttons are displayed";
+            }
+        };
+    }
+
+    //  - QUERYING THE STATE OF THE PAGE
+    public int getCohortCount(){
+        List<WebElement> cohortCountBadges = driver.findElements(COHORT_COUNT_BADGE);
+        if (cohortCountBadges.size()==0){
+            return 0;
+        }
+        String cohortCount = cohortCountBadges.get(0).getText();
+        return Integer.valueOf(cohortCount);
+    }
+
+    public String getNotificationText(){
+        List<WebElement> notifBanners = driver.findElements(NOTIFICATION_BANNER);
+        if (notifBanners.size()==0) return "";
+        return notifBanners.get(0).getText().trim();
+    }
+
     protected int findNamedTableIndex(String tableName){
 
         List<WebElement> tableTitleElements = driver.findElements(By.className("tableTitle"));
@@ -169,13 +139,4 @@ public class EAPView extends AnalyticsPage{
     }
 
     // PRIVATE HELPER METHODS FOR THE PUBLIC METHODS
-    private By getAreaDivSelector(String areaDataName){
-        return By.cssSelector(".area[data-name='" + areaDataName + "']");
-    }
-
-    private ExpectedCondition<Boolean> reportGroupsDisplayedFor(WebElement area) {
-        WebElement rptGroup = area.findElement(REPORT_GROUPS);
-        return ExpectedConditions.attributeContains(rptGroup, "style", "display: block");
-    }
-
 }

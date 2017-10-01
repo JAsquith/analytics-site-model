@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import pages.reports.EAPListView;
 import pages.reports.EAPView;
 import pages.reports.interfaces.IReportActionGroup;
@@ -26,12 +26,14 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     private static final By VIEW_TRACK_PROJECT = By.cssSelector(".vtp");
     private static final By VTP_ALL_AVAIL = By.cssSelector(".avail");
 
-    private final By DATASET_DROPDOWN = By.cssSelector(".tabcontent>span.datasetList");
-    private final By DATASET_OPTIONS_DIV = By.cssSelector(".list.ds");
-    private final By DATASET_OPTIONS = By.tagName("li");
+    private static final By DATASET_DROPDOWN = By.cssSelector(".tabcontent>span.datasetList");
+    private static final By DATASET_OPTIONS_DIV = By.cssSelector(".list.ds");
+    private static final By DATASET_OPTIONS = By.tagName("li");
 
-    private final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div>span.datasetList");
-    private final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
+    private static final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div>span.datasetList");
+    private static final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
+
+    private static final By TRACKER_COL_DDL = By.id("TrackerColDDL");
 
     /* Constructor method
     * ToDo: Javadoc */
@@ -56,6 +58,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
             if (option.getText().equals(optionText)){
                 option.click();
                 found = true;
+                break;
             }
         }
 
@@ -64,7 +67,6 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
 
         waitForLoadingWrapper();
-        waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DROPDOWN));
         return new EAPListView(driver);
     }
 
@@ -89,7 +91,6 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
 
         waitForLoadingWrapper();
-        waitMedium.until(ExpectedConditions.elementToBeClickable(DATASET_DROPDOWN));
         return new EAPListView(driver);
     }
 
@@ -129,6 +130,12 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
+    public EAPView selectTrackerColumn(String optionText){
+        Select trackerDDL = (Select)driver.findElement(TRACKER_COL_DDL);
+        trackerDDL.selectByVisibleText(optionText);
+        return new EAPView(driver);
+    }
+
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
     public List<ReportAction> getValidActionsList() {
@@ -147,6 +154,10 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 actions.add(ReportAction.COMPARE_VTP);
             }
         }
+        List<WebElement> trackerColDDLs = driver.findElements(TRACKER_COL_DDL);
+        if(trackerColDDLs.size()>0){
+            if(trackerColDDLs.get(0).isDisplayed()) actions.add(ReportAction.TRACKER_COLUMN);
+        }
         return actions;
     }
 
@@ -160,6 +171,8 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 return getVTPOptions(false);
             case COMPARE_VTP:
                 return getVTPOptions(true);
+            case TRACKER_COLUMN:
+                return getTrackerColumns();
             default:
                 throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Datasets tab");
         }
@@ -175,6 +188,8 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 return showFocusDataAs(option);
             case COMPARE_VTP:
                 return showCompareDataAs(option);
+            case TRACKER_COLUMN:
+                selectTrackerColumn(option);
             default:
                 throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Datasets tab");
         }
@@ -188,14 +203,14 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
         WebElement select = driver.findElement(DATASET_DROPDOWN);
         select.click();
-        waitShort.until(datasetListDisplayed());
+        waitShort.until(psuedoOptionsDisplayed(DATASET_OPTIONS_DIV));
     }
     private void collapseFocusPsuedoSelect(){
         WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
             WebElement select = driver.findElement(DATASET_DROPDOWN);
             select.click();
-            waitShort.until(datasetListHidden());
+            waitShort.until(psuedoOptionsHidden(DATASET_OPTIONS_DIV));
         }
     }
     private List<WebElement> getFocusPsuedoOptions(){
@@ -210,14 +225,14 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
         WebElement select = driver.findElement(COMPARE_DROPDOWN);
         select.click();
-        waitShort.until(compareListDisplayed());
+        waitShort.until(psuedoOptionsDisplayed(COMPARE_OPTIONS_DIV));
     }
     private void collapseComparePsuedoSelect(){
         WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
             WebElement select = driver.findElement(COMPARE_DROPDOWN);
             select.click();
-            waitShort.until(compareListHidden());
+            waitShort.until(psuedoOptionsHidden(COMPARE_OPTIONS_DIV));
         }
     }
     private List<WebElement> getComparePsuedoOptions(){
@@ -273,15 +288,24 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
         return vtpOptions;
     }
+    private List<String> getTrackerColumns(){
+        WebElement trackerDDL = driver.findElement(TRACKER_COL_DDL);
+        List<String> optionNames = new ArrayList<String>();
+        for (WebElement option : trackerDDL.findElements(By.tagName("option"))){
+            optionNames.add(option.getText());
+        }
+        return optionNames;
+    }
 
     /* Expected conditions specific to this component */
-    private ExpectedCondition<Boolean>datasetListDisplayed(){
+    private ExpectedCondition<Boolean> psuedoOptionsDisplayed(By optionsLocator){
         return new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
                 try {
-                    WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+                    WebElement optionsDiv = driver.findElement(optionsLocator);
                     if (optionsDiv.getAttribute("style").contains("overflow")) return null;
+                    if (optionsDiv.getAttribute("style").contains("display: none")) return null;
                     return true;
                 } catch (StaleElementReferenceException e) {
                     return null;
@@ -290,25 +314,29 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
             @Override
             public String toString() {
-                return "The Facous dataset's list of options doesn't have the overflow css attribute";
+                return "Psuedo-options located by " + optionsLocator + " to be displayed";
             }
         };
-/*
-        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
-        return ExpectedConditions.attributeContains(optionsDiv, "style", "display: block");
-*/
     }
-    private ExpectedCondition<Boolean>datasetListHidden(){
-        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
-        return ExpectedConditions.attributeContains(optionsDiv, "style", "display: none");
-    }
-    private ExpectedCondition<Boolean>compareListDisplayed(){
-        WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
-        return ExpectedConditions.attributeToBe(optionsDiv, "style", "display: block");
-    }
-    private ExpectedCondition<Boolean>compareListHidden(){
-        WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
-        return ExpectedConditions.attributeToBe(optionsDiv, "style", "display: none");
+    private ExpectedCondition<Boolean> psuedoOptionsHidden(By optionsLocator){
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    WebElement optionsDiv = driver.findElement(optionsLocator);
+                    if (optionsDiv.getAttribute("style").contains("overflow")) return null;
+                    if (optionsDiv.getAttribute("style").contains("display: block")) return null;
+                    return true;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "Psuedo-options located by " + optionsLocator + " to be hidden";
+            }
+        };
     }
 
 }

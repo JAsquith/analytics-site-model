@@ -40,6 +40,12 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
         return new ReportViewModal_Measures(driver);
     }
 
+    @Override
+    public boolean isEnabled(){
+        selectTab();
+        return !getAddMeasureButton().getAttribute("class").contains("disabled");
+    }
+
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
     public List<ReportAction> getValidActionsList() {

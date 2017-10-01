@@ -338,7 +338,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
             return !testElement.getAttribute("class").contains("disabled");
         }
         // For all others (DDLs), we can just use the WebElement.isEnabled method:
-        return testElement.isEnabled();
+        return testElement.isEnabled() && testElement.isDisplayed();
     }
 
     public boolean optionIsDisplayed(By locator){

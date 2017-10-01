@@ -19,6 +19,7 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
     protected static final By UNCHECK_ALL_BUTTON = By.id("checkClear");
     private static final By FILTER_CHECK_ALL = By.cssSelector("span.all");
     private static final By FILTER_UNCHECK_ALL = By.cssSelector("span.none");
+    private List<String> filters = null;
 
     // CONSTRUCTOR
     public ReportViewModal_Filters(RemoteWebDriver aDriver){
@@ -60,26 +61,28 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
     }
 
     public List<String> getGroupsList() {
-        List<String> groups = new ArrayList<String>();
-        for (WebElement listItem : driver.findElements(FILTER_TITLES)){
-            WebElement buttonsSpan = listItem.findElement(FILTER_GROUP_BUTTONS_SPAN);
-            String titleText = listItem.getText().replace(buttonsSpan.getText(),"");
-            groups.add(titleText.trim());
+        if(filters==null) {
+            filters = new ArrayList<String>();
+            for (WebElement listItem : driver.findElements(FILTER_TITLES)) {
+                WebElement buttonsSpan = listItem.findElement(FILTER_GROUP_BUTTONS_SPAN);
+                String titleText = listItem.getText().replace(buttonsSpan.getText(), "");
+                filters.add(titleText.trim());
+            }
         }
-        return groups;
+        return filters;
     }
 
     public List<String> getValuesForGroup(String filterTitle) {
 
         WebElement filterGroup = getFilterGrpElement(filterTitle);
-        driver.executeScript("arguments[0].scrollIntoView(true);", filterGroup);
+        //driver.executeScript("arguments[0].scrollIntoView(true);", filterGroup);
 
         List<String> options = new ArrayList<String>();
         By valuesLocator = By.cssSelector(
                 "."+filterGroup.getAttribute("data-grp")+" label"
         );
 
-        for (WebElement valueLabel : filterGroup.findElements(valuesLocator)){
+        for (WebElement valueLabel : driver.findElements(valuesLocator)){
             options.add(valueLabel.getText());
         }
 

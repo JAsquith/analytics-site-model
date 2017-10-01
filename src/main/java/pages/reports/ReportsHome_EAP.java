@@ -19,7 +19,7 @@ public class ReportsHome_EAP extends ReportsHome {
     private static final By YEAR_BUTTON_SELECTED = By.cssSelector(".yearTabs .year.selected:not(.lvrBTN)");
     private static final String PAGE_PATH_SELECT_KS = PAGE_PATH + "?selectedKS=6";
     private static final String PAGE_PATH_SELECT_COHORT = PAGE_PATH + "?selectedCohort=";
-    protected static final By COHORT_TITLE = By.cssSelector("CohortFriendlyName");
+    private static final By COHORT_TITLE = By.cssSelector("CohortFriendlyName");
 
     public ReportsHome_EAP(RemoteWebDriver aDriver, boolean loadByUrl){
         super(aDriver);
@@ -42,11 +42,18 @@ public class ReportsHome_EAP extends ReportsHome {
         openIfNotAlready();
         selectKSIfNotAlready();
 
+        WebElement selectedCohortTab = driver.findElement(YEAR_BUTTON_SELECTED);
+        String linkURL = selectedCohortTab.findElement(By.tagName("a")).getAttribute("href");
+        String currYearID = linkURL.substring(linkURL.indexOf("=")+1);
+        if (currYearID.equals(cohort)){
+            return this;
+        }
+
         List<WebElement> yearButtons = driver.findElements(By.cssSelector(".year:not(.lvrBTN)"));
 
         for (WebElement yearButton : yearButtons){
-            String linkURL = yearButton.findElement(By.tagName("a")).getAttribute("href");
-            String currYearID = linkURL.substring(linkURL.indexOf("=")+1);
+            linkURL = yearButton.findElement(By.tagName("a")).getAttribute("href");
+            currYearID = linkURL.substring(linkURL.indexOf("=")+1);
             if(currYearID.equals(cohort)){
                 if (!yearButton.isDisplayed()){
                     driver.findElement(By.cssSelector(".lvrBTN")).click();

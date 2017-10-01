@@ -1,6 +1,7 @@
 package pages.reports.components;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.reports.interfaces.IReportModal;
@@ -14,8 +15,11 @@ import java.util.List;
  */
 public class ReportViewModal_Measures extends ReportViewModal implements IReportModal {
 
-    protected static final By MEASURE_LABELS =
-            By.cssSelector(".measureTbl tr:not(:nth-of-type(1))>td:nth-of-type(1):not([colspan='3'])");
+    protected static final String MEASURE_LABELS_CSS =
+            ".measureTbl tr:not(:nth-of-type(1))>td:nth-of-type(1):not([colspan=\"3\"])";
+    protected static final By MEASURE_LABELS = By.cssSelector(MEASURE_LABELS_CSS);
+
+    private List<String> measures = null;
 
     // CONSTRUCTOR
     public ReportViewModal_Measures(RemoteWebDriver aDriver){
@@ -37,11 +41,16 @@ public class ReportViewModal_Measures extends ReportViewModal implements IReport
     }
 
     public List<String> getGroupsList() {
-        List<String> groups = new ArrayList<String>();
-        for (WebElement listItem : driver.findElements(MEASURE_LABELS)){
-            groups.add(listItem.getText().trim());
+        if(measures==null) {
+            measures = new ArrayList<String>();
+            for (WebElement listItem : driver.findElements(MEASURE_LABELS)) {
+                String groupName = listItem.getText().trim();
+                if (!groupName.equals("")) {
+                    measures.add(groupName);
+                }
+            }
         }
-        return groups;
+        return measures;
     }
 
     public List<String> getValuesForGroup(String group) {
@@ -80,7 +89,7 @@ public class ReportViewModal_Measures extends ReportViewModal implements IReport
         String cssCBLocator = "td:nth-of-type("+(measureOptionIndex+1)+")>input";
         String js = "var measureName = '"+measureName+"';";
         js += "var cbIndex = "+measureOptionIndex+";";
-        js += "var names = document.querySelectorAll('"+MEASURE_LABELS+"');";
+        js += "var names = document.querySelectorAll('"+MEASURE_LABELS_CSS+"');";
         js += "var cbElement;";
         js += "var tdElement; var parent;";
         js += "for (i = 0; i < names.length; i++) {";
@@ -98,8 +107,8 @@ public class ReportViewModal_Measures extends ReportViewModal implements IReport
 
     private String getOptionsIDFor(String measureName){
         String js = "var measureName = '"+measureName+"';";
-        js += "var names = document.querySelectorAll('"+MEASURE_LABELS+"');";
-        js += "var inputElement";
+        js += "var names = document.querySelectorAll('"+MEASURE_LABELS_CSS+"');";
+        js += "var inputElement;";
         js += "for (i = 0; i < names.length; i++) {";
         js += "  var nameText = names[i].textContent.trim();";
         js += "  if (nameText == measureName) {";
@@ -108,8 +117,29 @@ public class ReportViewModal_Measures extends ReportViewModal implements IReport
         js += "  }";
         js += "}";
         js += "return inputElement";
-        WebElement measureInput = (WebElement) driver.executeScript(js);
-        String inputID = measureInput.getAttribute("id");
-        return "id_" + inputID.split("_")[1];
+        WebElement measureInput = null;
+        try {
+            measureInput = (WebElement) driver.executeScript(js);
+        } catch (JavascriptException e){
+            System.err.println("measureName: " + measureName);
+            System.err.println("Exception running javascript:");
+            System.err.println(js);
+        }
+        String inputID = "";
+        try {
+            inputID = measureInput.getAttribute("id");
+        } catch (NullPointerException e){
+            System.err.println("measureName: " + measureName);
+            System.err.println("Javascript did not return an element:");
+            System.err.println(js);
+        }
+        try {
+            inputID = "id_" + inputID.split("_")[1];
+        } catch (Exception e){
+            System.err.println("measureName: " + measureName);
+            System.err.println("inputID = " + inputID + "after javascript execution:");
+            System.err.println(js);
+        }
+        return inputID;
     }
 }
