@@ -2,6 +2,8 @@ package pages.reports.components;
 
 import enums.ReportAction;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -43,7 +45,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* Actions available within this component
     * ToDo: Javadoc */
-    public EAPListView selectFocusDataset(String optionText){
+    public EAPView selectFocusDataset(String optionText){
 
         // Switch to the Dataset tab & expand it if required
         selectAndExpandTab();
@@ -66,7 +68,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectCompareDataset(String optionText){
+    public EAPView selectCompareDataset(String optionText){
         // Switch to the Dataset tab & expand it if required
         selectAndExpandTab();
 
@@ -91,7 +93,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView showFocusDataAs(String reportType){
+    public EAPView showFocusDataAs(String reportType){
         // Switch to the Dataset tab & expand it if required
         selectAndExpandTab();
 
@@ -109,7 +111,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView showCompareDataAs(String reportType){
+    public EAPView showCompareDataAs(String reportType){
         // Switch to the Dataset tab & expand it if required
         selectAndExpandTab();
 
@@ -180,9 +182,21 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /*Actions/state queries used within more than one public method */
     private void expandFocusPsuedoSelect(){
+        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+        if (optionsDiv.isDisplayed()){
+            return;
+        }
         WebElement select = driver.findElement(DATASET_DROPDOWN);
         select.click();
         waitShort.until(datasetListDisplayed());
+    }
+    private void collapseFocusPsuedoSelect(){
+        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+        if (optionsDiv.isDisplayed()){
+            WebElement select = driver.findElement(DATASET_DROPDOWN);
+            select.click();
+            waitShort.until(datasetListHidden());
+        }
     }
     private List<WebElement> getFocusPsuedoOptions(){
         WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
@@ -190,9 +204,21 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     }
 
     private void expandComparePsuedoSelect(){
+        WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
+        if (optionsDiv.isDisplayed()){
+            return;
+        }
         WebElement select = driver.findElement(COMPARE_DROPDOWN);
         select.click();
         waitShort.until(compareListDisplayed());
+    }
+    private void collapseComparePsuedoSelect(){
+        WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
+        if (optionsDiv.isDisplayed()){
+            WebElement select = driver.findElement(COMPARE_DROPDOWN);
+            select.click();
+            waitShort.until(compareListHidden());
+        }
     }
     private List<WebElement> getComparePsuedoOptions(){
         WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
@@ -226,6 +252,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 optionNames.add(option.getText());
             }
         }
+        collapseFocusPsuedoSelect();
         return optionNames;
     }
     private List<String> getCompareDatasetNames(){
@@ -236,6 +263,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 optionNames.add(option.getText());
             }
         }
+        collapseComparePsuedoSelect();
         return optionNames;
     }
     private List<String> getVTPOptions(boolean forCompare){
@@ -248,12 +276,39 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* Expected conditions specific to this component */
     private ExpectedCondition<Boolean>datasetListDisplayed(){
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+                    if (optionsDiv.getAttribute("style").contains("overflow")) return null;
+                    return true;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "The Facous dataset's list of options doesn't have the overflow css attribute";
+            }
+        };
+/*
         WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
         return ExpectedConditions.attributeContains(optionsDiv, "style", "display: block");
+*/
+    }
+    private ExpectedCondition<Boolean>datasetListHidden(){
+        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+        return ExpectedConditions.attributeContains(optionsDiv, "style", "display: none");
     }
     private ExpectedCondition<Boolean>compareListDisplayed(){
         WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
-        return ExpectedConditions.attributeToBe(optionsDiv, "style", "");
+        return ExpectedConditions.attributeToBe(optionsDiv, "style", "display: block");
+    }
+    private ExpectedCondition<Boolean>compareListHidden(){
+        WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
+        return ExpectedConditions.attributeToBe(optionsDiv, "style", "display: none");
     }
 
 }

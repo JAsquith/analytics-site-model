@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.reports.interfaces.IReportModal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,21 +21,9 @@ public class ReportViewModal_Residuals extends ReportViewModal implements IRepor
         super(aDriver);
     }
 
-    public ReportViewModal_Residuals toggleQualExclusion(String qualName){
+    public ReportViewModal_Residuals toggleOption(String qualName, String optionName){
 
-        //System.out.println("Toggling Residual Exclusion for [" + qualName + "]");
-        String cssNamesLocator = ".measureTbl td:nth-of-type(1)";
-        String js = "var names = document.querySelectorAll('"+cssNamesLocator+"');";
-        js += "var cbElement;";
-        js += "var parent;";
-        js += "for (i = 0; i < names.length; i++) {";
-        js += "  var nameText = names[i].textContent.trim();";
-        js += "  if (nameText == '"+qualName+"') {";
-        js += "    parent = names[i].parentElement;";
-        js += "    cbElement = parent.querySelector('td:nth-of-type(2)>input');";
-        js += "  }";
-        js += "}";
-        js += "return cbElement";
+        String js = getJSForCheckBox(qualName, optionName);
 
         try {
             WebElement label = (WebElement) driver.executeScript(js);
@@ -43,17 +32,40 @@ public class ReportViewModal_Residuals extends ReportViewModal implements IRepor
         } catch (Exception e){
             System.err.println("Qualification [" + qualName + "] not found");
             System.err.println(e.getMessage());
-            //this.cancel();
         }
         return this;
     }
 
     public List<String> getGroupsList() {
-        return null;
+        List<String> qualNames = new ArrayList<String>();
+        List<WebElement> qualNameElements = driver.findElements(QUAL_NAMES);
+        for(WebElement qualNameElement : qualNameElements){
+            qualNames.add(qualNameElement.getText().trim());
+        }
+        return qualNames;
     }
 
-    public List<String> getOptionsListForGroup(String group) {
-        return null;
+    public List<String> getValuesForGroup(String group) {
+        List<String> options = new ArrayList<String>();
+        options.add("Include");
+        options.add("Exclude");
+        return options;
+    }
+
+    private String getJSForCheckBox(String qualName, String checkBox){
+        String js = "var names = document.querySelectorAll('"+QUAL_NAMES+"');";
+        js += "var cbElement;";
+        js += "var parent;";
+        js += "var optionType = " + ((checkBox == "Exclude") ? 3 : 2);
+        js += "for (i = 0; i < names.length; i++) {";
+        js += "  var nameText = names[i].textContent.trim();";
+        js += "  if (nameText == '"+qualName+"') {";
+        js += "    parent = names[i].parentElement;";
+        js += "    cbElement = parent.querySelector('td:nth-of-type('+optionType+')>input');";
+        js += "  }";
+        js += "}";
+        js += "return cbElement";
+        return js;
     }
 
 }

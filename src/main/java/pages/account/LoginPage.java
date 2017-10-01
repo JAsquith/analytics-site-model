@@ -24,7 +24,7 @@ public class LoginPage {
     public final By VAL_MESSAGES = By.cssSelector("div.validation-summary-errors>ul>li");
 
     public final By OTHER_SESSION_END_AND_LOGIN = By.cssSelector("form#fm_LogIn button.green");
-    public final By OTHER_SESSION_CANCEL_LOGIN = By.cssSelector("form#fm_LogIn a.cancelChanges");
+    public final By OTHER_SESSION_CANCEL_LOGIN = By.cssSelector("form#fm_LogIn a.cancel");
 
     public final By FIRST_LOGIN = By.cssSelector("div.firstLogin");
     public final By FIRST_LOGIN_PASSWORD_KEEP = By.cssSelector("div.firstLogin>a:nth-of-type(2)");

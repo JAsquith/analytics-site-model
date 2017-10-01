@@ -57,7 +57,13 @@ public class ReportActionsTab extends AnalyticsComponent {
             throw new IllegalStateException("Tab '" + tabName + "' is not currently active");
         }
         List<WebElement> expandButtons = getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON);
-        return (expandButtons.size() > 0 && !isExpanded());
+        if(expandButtons.size()==0){
+            return false;
+        }
+        if(!expandButtons.get(0).isDisplayed()){
+            return false;
+        }
+        return isExpanded();
     }
 
     public ReportActionsTab selectTab(){
@@ -140,7 +146,7 @@ public class ReportActionsTab extends AnalyticsComponent {
         return tabContentsDiv;
     }
 
-    public ExpectedCondition<Boolean> tabSwitchComplete() {
+    protected ExpectedCondition<Boolean> tabSwitchComplete() {
 
         return new ExpectedCondition<Boolean>() {
             @Override

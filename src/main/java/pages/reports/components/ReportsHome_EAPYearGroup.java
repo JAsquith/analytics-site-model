@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
-import pages.reports.EAPListView;
+import pages.reports.EAPView;
 
 import java.util.List;
 
@@ -88,11 +88,11 @@ public class ReportsHome_EAPYearGroup extends AnalyticsComponent {
         throw new IllegalArgumentException("A Report named " + datasetName + " was not found!");
     }
 
-    public EAPListView gotoPublishedReport(String datasetName, String forTracker) {
+    public EAPView gotoPublishedReport(String datasetName, String forTracker) {
         return gotoPublishedReport(datasetName, forTracker, "Grades");
     }
 
-    public EAPListView gotoPublishedReport(String datasetName, String forTracker, String repArea) {
+    public EAPView gotoPublishedReport(String datasetName, String forTracker, String repArea) {
         expandPublishedReport(datasetName);
         WebElement button = getReportButtonFor(repArea);
         if (button == null){
@@ -103,7 +103,7 @@ public class ReportsHome_EAPYearGroup extends AnalyticsComponent {
         button.click();
 
         waitForLoadingWrapper();
-        EAPListView reportPage = new EAPListView(driver);
+        EAPView reportPage = new EAPView(driver);
         if (!forTracker.equals("")){
             reportPage = reportPage.datasetsTab.selectFocusDataset(datasetName);
         }

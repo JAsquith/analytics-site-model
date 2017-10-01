@@ -42,6 +42,10 @@ public class EAPView extends AnalyticsPage{
         super(aDriver);
         datasetsTab = new ReportActionsTab_Dataset(driver);
         optionsTab = new ReportActionsTab_Options(driver);
+        filtersTab = new ReportActionsTab_Filters(driver);
+        measuresTab = new ReportActionsTab_Measures(driver);
+        residualsTab = new ReportActionsTab_Residuals(driver);
+
         viewOptions = new ReportActions_DisplayOptions(driver);
         try {
             waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));

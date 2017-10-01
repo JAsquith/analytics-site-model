@@ -9,7 +9,8 @@ import java.util.List;
 public interface IReportModal {
     ExpectedCondition<WebElement> modalDisplayed();
     List<String> getGroupsList();
-    List<String> getOptionsListForGroup(String group);
+    List<String> getValuesForGroup(String group);
+    IReportModal toggleOption(String optionLabel, String option);
     EAPView cancelChanges();
     EAPView applyChanges();
 }

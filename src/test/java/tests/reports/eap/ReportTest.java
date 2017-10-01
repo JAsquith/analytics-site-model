@@ -4,12 +4,10 @@ import io.qameta.allure.Step;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import pages.reports.EAPListView;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.ReportViewModal_Filters;
 import pages.reports.components.ReportViewModal_Measures;
-import pages.reports.components.ReportViewModal_Residuals;
+import pages.reports.interfaces.IReportModal;
 import tests.BaseTest;
 
 import static org.testng.Assert.fail;
@@ -62,7 +60,7 @@ public abstract class ReportTest extends BaseTest {
     }
 
     @Step( "Open the {cohort} > {year} > {dataset} > {button} report" )
-    public EAPListView openTestDataset(String cohort, String year, String forTracker, String dataset, String button){
+    public EAPView openTestDataset(String cohort, String year, String forTracker, String dataset, String button){
         ReportsHome_EAP reports = new ReportsHome_EAP(driver,true);
         return reports.
                 selectCohortByUrl(cohort).
@@ -96,7 +94,6 @@ public abstract class ReportTest extends BaseTest {
         applyAllViewOptions();
 
     }
-
 
     public void applyAllDatasetOptions(){
         String[] datasetOptions = getArrayParam("dataset-options");
@@ -135,12 +132,12 @@ public abstract class ReportTest extends BaseTest {
     public void applyAllStudentFilters(){
         String[] filters = getArrayParam("filters");
         if(!filters[0].equals("")){
-            ReportViewModal_Filters stuFiltersModal = report.filtersTab.openModal();
+            IReportModal stuFiltersModal = report.filtersTab.openModal();
             for (String filter : filters){
                 int delimIndex = filter.indexOf("=");
                 String filterName = filter.substring(0,delimIndex);
                 String filterValue = filter.substring(delimIndex+1);
-                toggleStudentFilter(stuFiltersModal, filterName, filterValue);
+                toggleModalOption(stuFiltersModal, filterName, filterValue);
             }
             stuFiltersModal.applyChanges();
             if (debugMode) {
@@ -149,12 +146,6 @@ public abstract class ReportTest extends BaseTest {
             }
         }
     }
-
-    @Step( "Toggle Student Filter {filterName}[{filterVal}]" )
-    public void toggleStudentFilter(ReportViewModal_Filters stuFiltersModal, String filterName, String filterVal){
-        stuFiltersModal.toggleFilterValue(filterName, filterVal);
-    }
-
 
     public void applyAllMeasureFilters(){
         String[] measures = getArrayParam("measures");
@@ -182,23 +173,12 @@ public abstract class ReportTest extends BaseTest {
         }
     }
 
-    @Step ( "Click {actualValue}|{compValue} Measure Filter Options for {measureName}" )
-    public void applyMeasureFilter(ReportViewModal_Measures measFiltersModal, String measureName, String actualValue, String compValue){
-        if (!actualValue.equals("")){
-            measFiltersModal.clickMeasureFilterOption(measureName, actualValue);
-        }
-        if (!compValue.equals("")){
-            measFiltersModal.clickMeasureFilterOption(measureName, compValue);
-        }
-    }
-
-
     public void applyAllResidualExclusions(){
         String[] residuals = getArrayParam("residuals");
         if(!residuals[0].equals("")){
-            ReportViewModal_Residuals exclusionsModal = report.residualsTab.openModal();
+            IReportModal exclusionsModal = report.residualsTab.openModal();
             for(String residual : residuals){
-                toggleResidualExclusion(exclusionsModal, residual);
+                toggleModalOption(exclusionsModal, residual, "");
             }
             exclusionsModal.applyChanges();
             if (debugMode) {
@@ -208,11 +188,20 @@ public abstract class ReportTest extends BaseTest {
         }
     }
 
-    @Step( "Toggle the residual exclusion setting for {qualName}" )
-    public void toggleResidualExclusion(ReportViewModal_Residuals exclusionsModal, String qualName){
-        exclusionsModal.toggleQualExclusion(qualName);
+    @Step( "Toggle Modal Option: {optionName}[{optionValue}]" )
+    public void toggleModalOption(IReportModal modal, String optionName, String optionValue){
+        modal.toggleOption(optionName, optionValue);
     }
 
+    @Step ( "Click {actualValue}|{compValue} Measure Filter Options for {measureName}" )
+    public void applyMeasureFilter(ReportViewModal_Measures measFiltersModal, String measureName, String actualValue, String compValue){
+        if (!actualValue.equals("")){
+            measFiltersModal.toggleOption(measureName, actualValue);
+        }
+        if (!compValue.equals("")){
+            measFiltersModal.toggleOption(measureName, compValue);
+        }
+    }
 
     public void applyAllGradeFilterOptions(){
         String[] gradeFilterOptions = getArrayParam("grade-filter-options");

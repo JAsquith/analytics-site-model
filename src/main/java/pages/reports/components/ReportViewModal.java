@@ -7,8 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.AnalyticsComponent;
 import pages.reports.EAPView;
+import pages.reports.interfaces.IReportModal;
 
-public class ReportViewModal extends AnalyticsComponent {
+public abstract class ReportViewModal extends AnalyticsComponent implements IReportModal {
     protected static final By CANCEL_BUTTON = By.cssSelector(".modalClose.button.cancelChanges");
     protected static final By APPLY_BUTTON = By.cssSelector(".button.green");
 

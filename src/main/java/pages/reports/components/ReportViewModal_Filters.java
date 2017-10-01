@@ -25,7 +25,7 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
         super(aDriver);
     }
 
-    public ReportViewModal_Filters toggleFilterValue(String filterTitle, String filterValue){
+    public ReportViewModal_Filters toggleOption(String filterTitle, String filterValue){
 
         try {
             WebElement label = getFilterValueElement(filterTitle, filterValue);
@@ -34,7 +34,6 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
         } catch (Exception e){
             System.err.println("Filter [" + filterTitle + " > " + filterValue + "] not found");
             System.err.println(e.getMessage());
-            //this.cancel();
         }
         return this;
     }
@@ -70,7 +69,7 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
         return groups;
     }
 
-    public List<String> getOptionsListForGroup(String filterTitle) {
+    public List<String> getValuesForGroup(String filterTitle) {
 
         WebElement filterGroup = getFilterGrpElement(filterTitle);
         driver.executeScript("arguments[0].scrollIntoView(true);", filterGroup);
@@ -84,8 +83,6 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
             options.add(valueLabel.getText());
         }
 
-        options.add("Check All");
-        options.add("Uncheck All");
         return options;
     }
 

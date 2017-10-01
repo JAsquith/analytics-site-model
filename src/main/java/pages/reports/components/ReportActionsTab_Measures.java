@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.reports.EAPView;
 import pages.reports.interfaces.IReportActionGroup;
+import pages.reports.interfaces.IReportModal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,16 +49,34 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
     }
 
     public List<String> getOptionsForAction(ReportAction action) {
+        selectAndExpandTab();
+
         List<String> options = new ArrayList<String>();
 
-        // Todo: make all ReportViewModal_xxx classes implement IReportModal & change from using the Class to the Interface
-        openModal();
+        IReportModal modal = openModal();
+
+        for (String optionGroup : modal.getGroupsList()){
+            List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
+            for(String value : optionGroupValues){
+                options.add(optionGroup+"["+value+"]");
+            }
+        }
 
         return options;
     }
 
     public EAPView applyActionOption(ReportAction action, String option) {
-        return null;
+
+        if(action == ReportAction.TOGGLE_MEASURE){
+            IReportModal modal = new ReportViewModal_Measures(driver);
+            String[] splitOption = option.split("\\[");
+            String modalLabel = splitOption[0];
+            String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+            modal.toggleOption(modalLabel, modalOption);
+            return modal.applyChanges();
+        } else {
+            throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Measures tab");
+        }
     }
 
     /*Actions/state queries used within more than one public method */

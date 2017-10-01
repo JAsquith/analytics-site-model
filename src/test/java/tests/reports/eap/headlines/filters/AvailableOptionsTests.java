@@ -93,7 +93,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void calcTypeIsDisabled(){
         ReportActions_DisplayOptions viewOptions = report.viewOptions;
         assertWithScreenshot("SEnabled status of the Calc Type option (Count/%)",
-                viewOptions.isDisabled(viewOptions.CALC_TYPE_TOGGLE), is(true));
+                viewOptions.isOptionDisabled(viewOptions.CALC_TYPE_TOGGLE), is(true));
     }
 
     @Test( description = "FigType (Std/Cum): disabled" )
@@ -101,7 +101,7 @@ public class AvailableOptionsTests extends ReportTest {
     public void figureTypeIsDisabled(){
         ReportActions_DisplayOptions viewOptions = report.viewOptions;
         assertWithScreenshot("SEnabled status of the Figure Type option (Std/Cum)",
-                viewOptions.isDisabled(viewOptions.FIG_TYPE_TOGGLE), is(true));
+                viewOptions.isOptionDisabled(viewOptions.FIG_TYPE_TOGGLE), is(true));
     }
 
 }

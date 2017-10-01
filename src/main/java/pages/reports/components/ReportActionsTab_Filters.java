@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.reports.EAPView;
 import pages.reports.interfaces.IReportActionGroup;
+import pages.reports.interfaces.IReportModal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,16 +52,31 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
     public List<String> getOptionsForAction(ReportAction action) {
         selectAndExpandTab();
 
-        // Todo: assign the return value of openModel to the IReportModal interface (once the class implements it)
-        openModal();
-
         List<String> options = new ArrayList<String>();
+
+        IReportModal modal = openModal();
+
+        for (String optionGroup : modal.getGroupsList()){
+            List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
+            for(String value : optionGroupValues){
+                options.add(optionGroup+"["+value+"]");
+            }
+        }
 
         return options;
     }
 
     public EAPView applyActionOption(ReportAction action, String option) {
-        return null;
+        if(action == ReportAction.TOGGLE_FILTER){
+            IReportModal filters = new ReportViewModal_Filters(driver);
+            String[] splitOption = option.split("\\[");
+            String modalLabel = splitOption[0];
+            String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+            filters.toggleOption(modalLabel, modalOption);
+            return filters.applyChanges();
+        } else {
+            throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Filters tab");
+        }
     }
 
     /*Actions/state queries used within more than one public method */

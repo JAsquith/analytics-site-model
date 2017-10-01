@@ -11,10 +11,11 @@ import pages.data.components.DataAdminSelect;
 import pages.data.components.DataSideMenu;
 import pages.data.students.PublishStudents;
 import pages.reports.EAPListView;
+import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.ReportViewModal_Filters;
 import pages.reports.components.ReportsHome_CohortsMenu;
 import pages.reports.components.ReportsHome_EAPYearGroup;
+import pages.reports.interfaces.IReportModal;
 import tests.SISRATest;
 import utils.ViewDataFileManager;
 
@@ -34,7 +35,7 @@ public class FigureChecking extends SISRATest {
         try {
             this.login();
 
-            EAPListView reportPage = this.openReport();
+            EAPView reportPage = this.openReport();
             reportPage = this.openView(reportPage);
             reportPage = this.applyStudentFilters(reportPage);
             reportPage = this.applyOptions(reportPage);
@@ -112,7 +113,7 @@ public class FigureChecking extends SISRATest {
         page.clickPublishWaitAndClose(publishType);
     }
 
-    private EAPListView openReport(){
+    private EAPView openReport(){
         // Choose Reports > KS > Cohort > Go To Reports (dataset)
         try {
             ReportsHome_EAP reportsHome = new ReportsHome_EAP(driver, true);
@@ -131,7 +132,7 @@ public class FigureChecking extends SISRATest {
                     getTestParam("eapYear"),
                     trackerColumn);
 
-            EAPListView report = accordion.gotoPublishedReport(
+            EAPView report = accordion.gotoPublishedReport(
                     getTestParam("dataset"),
                     trackerColumn);
 
@@ -145,7 +146,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private EAPListView openView(EAPListView reportPage){
+    private EAPView openView(EAPView reportPage){
         // Choose the Area > Report > Level
         try {
             reportPage.openView(
@@ -161,7 +162,7 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private EAPListView applyStudentFilters (EAPListView reportPage){
+    private EAPView applyStudentFilters (EAPView reportPage){
 
         String filterGroupsParam = getTestParam("filterGroups");
         String filterValuesParam = getTestParam("filterValues");
@@ -173,12 +174,12 @@ public class FigureChecking extends SISRATest {
         String[] groups = filterGroupsParam.split("¬");
         String[] values = filterValuesParam.split("¬");
 
-        ReportViewModal_Filters filtersModal = reportPage.filtersTab.openModal();
+        IReportModal filtersModal = reportPage.filtersTab.openModal();
 
         for(int i = 0; i < groups.length; i++){
             String group = groups[i];
             String value = values[i];
-            filtersModal.toggleFilterValue(group, value);
+            filtersModal.toggleOption(group, value);
         }
 
         filtersModal.applyChanges();
@@ -187,7 +188,7 @@ public class FigureChecking extends SISRATest {
 
     }
 
-    private EAPListView applyOptions(EAPListView reportPage){
+    private EAPView applyOptions(EAPView reportPage){
         // Apply report/view options defined in test params
         try {
             if (!getTestParam("compWith").equals(""))
@@ -231,13 +232,14 @@ public class FigureChecking extends SISRATest {
         }
     }
 
-    private void checkMultiTableFigures(EAPListView reportPage){
+    private void checkMultiTableFigures(EAPView reportPage){
         int diffResult;
 
         String expectedDataFile  = getTestParam("dataFiles");
 
         ViewDataFileManager fileMgr = new ViewDataFileManager();
-        fileMgr.createTableDataFileWithData("Found", expectedDataFile, reportPage.readTableData());
+        EAPListView report = (EAPListView)reportPage;
+        fileMgr.createTableDataFileWithData("Found", expectedDataFile, report.readTableData());
 
         diffResult = fileMgr.findFileDifference(expectedDataFile, "Found", "Diff");
 
@@ -265,7 +267,7 @@ public class FigureChecking extends SISRATest {
 
     }
 
-    private void checkNamedTableFigures(EAPListView reportPage){
+    private void checkNamedTableFigures(EAPView reportPage){
         String[] tables = getTestParamAsStringArray("tableNames");
         String[] files = getTestParamAsStringArray("dataFiles");
 
@@ -278,7 +280,8 @@ public class FigureChecking extends SISRATest {
             String expectedDataFile = expectedDataFiles.get(tableNames.indexOf(tableName));
 
             ViewDataFileManager fileMgr = new ViewDataFileManager();
-            fileMgr.createTableDataFileWithData("Found", expectedDataFile, reportPage.readTableData(tableName));
+            EAPListView report = (EAPListView)reportPage;
+            fileMgr.createTableDataFileWithData("Found", expectedDataFile, report.readTableData(tableName));
 
             diffResult = fileMgr.findFileDifference(expectedDataFile, "Found", "Diff");
             System.out.println("Compared [" + expectedDataFile + "] with [Extracted Report Data]");

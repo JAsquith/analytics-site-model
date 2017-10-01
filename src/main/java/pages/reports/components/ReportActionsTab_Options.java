@@ -42,11 +42,15 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
     * ToDo: Javadoc */
     public ReportActionsTab_Options(RemoteWebDriver aDriver){
         super(aDriver);
+        tabName = TAB_NAME;
+        tabClass = TAB_CLASS;
+        tabButtonBy = TAB_BUTTON;
+        tabContentsBy = CONTENTS_DIV;
     }
 
     /* Actions available within this component
     * ToDo: Javadoc */
-    public EAPListView filterByTrack(String trackStatus){
+    public EAPView filterByTrack(String trackStatus){
         // NB - The filter tracking options are outside the tabs so we don't need to use #selectTab() & expandTab() combo
         //      If the tracking options are moved into the tab simply add calls to those methods at the start of this method
         if (trackStatus.equals("")){
@@ -61,7 +65,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectFaculty(String optionText){
+    public EAPView selectFaculty(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -73,7 +77,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectQualification(String optionText){
+    public EAPView selectQualification(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -85,7 +89,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectClass(String optionText){
+    public EAPView selectClass(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -98,7 +102,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectGradeType(String optionText){
+    public EAPView selectGradeType(String optionText){
         // NB. if field is 'Locked', the option will still be selected and the form submitted, but
         //      when the page is reloaded the previous option will be the active one
         // MJA 25/09/2017: I doubt the veracity of the previous comment made by my past self
@@ -114,7 +118,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectAwardClass(String optionText){
+    public EAPView selectAwardClass(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -127,7 +131,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectKS2Core(String optionText){
+    public EAPView selectKS2Core(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -140,7 +144,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectGradeFilterType(String optionText){
+    public EAPView selectGradeFilterType(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -178,7 +182,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectGradeFilterWhole(String optionText){
+    public EAPView selectGradeFilterWhole(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -195,7 +199,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectGradeFilterSub(String optionText){
+    public EAPView selectGradeFilterSub(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -213,7 +217,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectCompGradeFilterType(String optionText){
+    public EAPView selectCompGradeFilterType(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -251,7 +255,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectCompGradeFilterWhole(String optionText){
+    public EAPView selectCompGradeFilterWhole(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -269,7 +273,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         waitForLoadingWrapper();
         return new EAPListView(driver);
     }
-    public EAPListView selectCompGradeFilterSub(String optionText){
+    public EAPView selectCompGradeFilterSub(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -287,7 +291,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectInA8Basket(String optionText){
+    public EAPView selectInA8Basket(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
@@ -301,7 +305,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
-    public EAPListView selectStudent(String optionText){
+    public EAPView selectStudent(String optionText){
         // Switch to the Options tab & expand it if required
         super.selectAndExpandTab();
 
