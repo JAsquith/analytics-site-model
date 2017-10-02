@@ -30,6 +30,10 @@ public abstract class ReportViewModal extends AnalyticsComponent implements IRep
         return new EAPView(driver);
     }
 
+    public static boolean isModalOpen(RemoteWebDriver driver){
+        return driver.findElements(APPLY_BUTTON).size() > 0;
+    }
+
     public ExpectedCondition<WebElement> modalDisplayed() {
         return ExpectedConditions.elementToBeClickable(APPLY_BUTTON);
     }

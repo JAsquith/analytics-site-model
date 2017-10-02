@@ -11,17 +11,13 @@ import pages.reports.components.ReportsHome_EAPYearGroup;
 import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.testng.Assert.fail;
 
 public class RandomisedTest extends BaseTest {
 
-    public static final String NO_ENTRIES_BANNER_TEXT = "There are no entries to display for this selection";
     protected EAPView report;
     private ReportsHome_EAP reportsHome;
     private ReportsHome_EAPYearGroup yearDataGroup;
@@ -32,6 +28,8 @@ public class RandomisedTest extends BaseTest {
     private int zeroCohortCount = 0;
     private int zeroEntriesCount = 0;
     private int requiredFieldsCount = 0;
+    private Map<ReportAction, List<String>> staticOptionsForAction = new HashMap<>();
+    private Map<String, List<ReportAction>> actionOptionsToResetOn = new HashMap<>();
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
@@ -47,21 +45,27 @@ public class RandomisedTest extends BaseTest {
         }
 
         login(user, pass, true);
-        openAReport(cohort);
+        setupNewReport(cohort);
     }
 
     @Test( description = "Random Report Actions", dataProvider = "randomLoops")
-    @Parameters( { "maxLoops" } )
     public void testRandomReportActions(String loopIndex, String maxLoops){
 
         Random rnd = new Random();
         try {
-            report = randomReportAction(rnd);
-            assertWithScreenshot("Applying a Report Option/Action should not error",
-                    report.getErrorMessage(), isEmptyOrNullString());
+            // logToAllure(++logCount, String.format("Test %s of %s",loopIndex, maxLoops));
+
+            resetActionOptions();
+
+            buildAction(rnd);
+
+            report = applyRandomAction(group, action, option, action.name());
+
         } catch (Exception e){
-            saveScreenshot(context.getName()+"_ErrorPage_"+loopIndex+" of "+maxLoops+".png");
-            e.printStackTrace();
+            saveScreenshot(context.getName()+"4_testException.png");
+            logToAllure(++logCount, "Exception during Test Method: "+e.getClass().getName());
+            logToAllure(++logCount, "Exception message: "+e.getMessage());
+            logToAllure(++logCount, "Stack trace: "+getStackTraceAsString(e));
             throw e;
         }
     }
@@ -74,10 +78,13 @@ public class RandomisedTest extends BaseTest {
             restartFromReportsHome();
         }
 
-        if (report.getCohortCount()==0) zeroCohortCount++;
+        // If there are no Students (and we're not on a Student Detail report, or no entries
+        // we may need to clear the options
+        if (report.isStudentDetailReport() || report.getCohortCount()==0)
+            zeroCohortCount++;
 
-        String notificationText = report.getNotificationText();
-        if (notificationText.equals(NO_ENTRIES_BANNER_TEXT)) zeroEntriesCount++;
+        if (report.isZeroEntriesReport())
+            zeroEntriesCount++;
 
         boolean compareDSRequired = report.datasetsTab.compareRequired();
         int requiredOptionFieldsCount = report.optionsTab.requiredFields().size();
@@ -123,7 +130,7 @@ public class RandomisedTest extends BaseTest {
 */
     @Step( "Restarting from Reports Home Page after an Error" )
     private void restartFromReportsHome(){
-        openAReport(getStringParam("cohort"));
+        setupNewReport(getStringParam("cohort"));
     }
     @Step( "Reset All Options (after three actions with no students/entries)" )
     private void resetAll(){
@@ -131,19 +138,17 @@ public class RandomisedTest extends BaseTest {
         zeroCohortCount = 0;
         zeroEntriesCount = 0;
     }
-    @Step( "" )
-    private void selectRequiredField(){
-
-    }
 
     /* Setup Steps*/
-    private void openAReport(String cohort){
+    @Step( "Setup new report" )
+    private void setupNewReport(String cohort){
         gotoReportsHome();
         selectReportsCohort(cohort);
         expandEAPYearGroup(selectRandomEAPYearGroup());
         expandReportSet(selectRandomReportSet());
         String reportArea = selectRandomReportButton();
         report = clickReportAreaButton(reportArea);
+
         assertWithScreenshot("Opening a Report View should not error",
                 report.getErrorMessage(), isEmptyOrNullString());
     }
@@ -200,6 +205,88 @@ public class RandomisedTest extends BaseTest {
         throw new IllegalArgumentException("The Report Button for '"+areaName+"' could not be found");
     }
 
+    @Step( "Build a new TestAction" )
+    private void buildAction(Random rnd){
+        saveScreenshot(context.getName()+"1_beforeBuild.png");
+        group = report.navMenu;
+        action = ReportAction.NULL;
+        option = "Null";
+
+        chooseActionGroup(rnd);
+        chooseAction(rnd);
+        chooseActionOption(rnd);
+    }
+
+    private void chooseActionGroup(Random rnd) {
+        try {
+            List<IReportActionGroup> actionGroups = getActionGroupList();
+            group = actionGroups.get(rnd.nextInt(actionGroups.size()));
+            logToAllure(++logCount, "Chosen Group: " + group.getName());
+        } catch (Exception e) {
+            logToAllure(++logCount,"Exception getting valid Action Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
+            throw e;
+        }
+    }
+
+    private void chooseAction(Random rnd) {
+        try {
+            List<ReportAction> actions = new ArrayList<ReportAction>();
+            actions = group.getValidActionsList();
+            logToAllure(++logCount, "GroupActions: " + actions);
+            action = actions.get(rnd.nextInt(actions.size()));
+            logToAllure(++logCount, "Chosen Actions: " + action);
+        } catch (Exception e) {
+            logToAllure(++logCount,"Exception getting valid Test Action for Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
+            throw e;
+        }
+        // Check whether we have any stored lists of actionOptions for actions which may change due to this current action:
+        if(actionOptionsToResetOn.containsKey(action.name)){
+            // We do!  Clear them out so if those actions are re-run the options list is re-built:
+            for(ReportAction actionToReset : actionOptionsToResetOn.get(action.name)){
+                staticOptionsForAction.remove(actionToReset);
+            }
+            actionOptionsToResetOn.remove(action.name);
+        }
+    }
+
+    private void chooseActionOption(Random rnd) {
+        try {
+            List<String> actionOptions;
+            if (action.optionsStatic){
+                // The options for this action may be stored for re-use
+                // Check if we have a copy of them from a previous test
+                if (staticOptionsForAction.containsKey(action)) {
+                    // We do :)! Use these
+                    actionOptions = staticOptionsForAction.get(action);
+                } else {
+                    // We don't :(! Compile a list
+                    actionOptions = group.getOptionsForAction(action);
+                    // Store the list for any future tests of this action
+                    staticOptionsForAction.put(action, actionOptions);
+
+                    // Add this action to the list of those that will have their options list cleared if a certain
+                    // other action ever happens:
+                    List<ReportAction> actionOptionsToResetOnOld;
+                    if(actionOptionsToResetOn.containsKey(action.staticUntil)){
+                        actionOptionsToResetOnOld = actionOptionsToResetOn.get(action.staticUntil);
+                    } else {
+                        actionOptionsToResetOnOld = new ArrayList<>();
+                    }
+                    actionOptionsToResetOnOld.add(action);
+                    actionOptionsToResetOn.put(action.staticUntil, actionOptionsToResetOnOld);
+                }
+            } else {
+                actionOptions = group.getOptionsForAction(action);
+            }
+            logToAllure(++logCount, "TestActionOptions: " + actionOptions);
+            option = actionOptions.get(rnd.nextInt(actionOptions.size()));
+            logToAllure(++logCount, "Chosen Option: " + option);
+        } catch (Exception e){
+            logToAllure(++logCount,"Exception getting options for TestAction: "+e.getClass().getName()+System.lineSeparator()+ "Exception message: "+e.getMessage());
+            throw e;
+        }
+    }
+
     private List<IReportActionGroup> getActionGroupList(){
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
         actionGroups.add(report.navMenu);
@@ -218,58 +305,31 @@ public class RandomisedTest extends BaseTest {
             actionGroups.add(report.residualsTab);
         }
 
+        String groupsDesc = "[";
+        for(IReportActionGroup group : actionGroups){
+            groupsDesc += group.getName()+",";
+        }
+        groupsDesc += "]";
+        logToAllure(++logCount, "Valid ActionGroups: " + groupsDesc);
+
         return actionGroups;
-    }
-
-    private List<String> buildAction(Random rnd){
-        group = report.navMenu;
-        action = ReportAction.NULL;
-        option = "Null";
-        List<String> actionOptions;
-        try{
-            List<IReportActionGroup> actionGroups = getActionGroupList();
-            group = actionGroups.get(rnd.nextInt(actionGroups.size()));
-            List<ReportAction> actions = group.getValidActionsList();
-            action = actions.get(rnd.nextInt(actions.size()));
-            actionOptions = group.getOptionsForAction(action);
-        } catch (Exception e){
-            System.err.println("Exception building random ReportAction:");
-            System.err.println("Group: "+group.getClass().getName());
-            System.err.println("Action: "+action.name);
-            System.err.println("Option: "+option);
-            throw e;
-        }
-        return actionOptions;
-    }
-
-    private EAPView randomReportAction(Random rnd){
-
-        group = report.navMenu;
-        action = ReportAction.NULL;
-        option = "Null";
-        List<String> actionOptions = buildAction(rnd);
-        while(actionOptions.size()==0){
-            actionOptions = buildAction(rnd);
-        }
-        try {
-            option = actionOptions.get(rnd.nextInt(actionOptions.size()));
-            return applyRandomAction(group, action, option, action.name());
-        } catch (Exception e){
-            System.err.println("Exception applying ReportAction:");
-            System.err.println("Group: "+group.getClass().getName());
-            System.err.println("Action: "+action.name);
-            System.err.println("Option: "+option);
-            System.err.println(action + " > " + option);
-            throw e;
-        }
     }
 
     @Step( "{actionName} > {option}" )
     private EAPView applyRandomAction(IReportActionGroup group, ReportAction action, String option, String actionName){
-        saveScreenshot("preAction.png");
+        saveScreenshot(context.getName()+"2_beforeApply.png");
         EAPView newView = group.applyActionOption(action, option);
-        saveScreenshot("postAction.png");
+        assertWithScreenshot("Applying a Report Option/Action should not error",
+                report.getErrorMessage(), isEmptyOrNullString());
+        saveScreenshot(context.getName()+"3_success.png");
         return newView;
+    }
+
+    @Step( "Reset TestAction elements" )
+    private void resetActionOptions(){
+        group = report.navMenu;
+        action = ReportAction.NULL;
+        option = "Null";
     }
 
     @DataProvider(name = "randomLoops")
@@ -284,8 +344,5 @@ public class RandomisedTest extends BaseTest {
         }
         return testCases.iterator();
     }
-/*
-*/
-
 
 }

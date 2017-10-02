@@ -251,6 +251,11 @@ public class ReportActions_DisplayOptions extends AnalyticsComponent implements 
         }
     }
 
+    @Override
+    public String getName() {
+        return "displayOptions";
+    }
+
     /*Actions/state queries used within more than one public method */
     private List<String> getDDLOptions(By ddlLocator){
         List<String> options = new ArrayList<String>();

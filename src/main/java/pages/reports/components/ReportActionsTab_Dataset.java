@@ -209,6 +209,11 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
     }
 
+    @Override
+    public String getName() {
+        return "datasetTab";
+    }
+
     /* Actions/state queries used within more than one public method */
     private void expandFocusPsuedoSelect(){
         WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);

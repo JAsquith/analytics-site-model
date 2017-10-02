@@ -22,6 +22,9 @@ public class EAPView extends AnalyticsPage{
     protected static By RESET_YES = By.cssSelector(".resetPop a");
     protected static By RESET_NO = By.cssSelector(".resetPop em");
 
+    private static final String NO_ENTRIES_BANNER_TEXT = "There are no entries to display for this selection";
+    private static final String STUDENT_DETAIL_KEY_CHARS_TITLE = "Key Characteristics are not available on the Student Detail view.";
+
     // Components on an EAPView Report page
     public ReportActions_NavMenu navMenu;
     public ReportActionsTab_Dataset datasetsTab;
@@ -103,6 +106,18 @@ public class EAPView extends AnalyticsPage{
         List<WebElement> notifBanners = driver.findElements(NOTIFICATION_BANNER);
         if (notifBanners.size()==0) return "";
         return notifBanners.get(0).getText().trim();
+    }
+
+    public boolean isZeroEntriesReport(){
+        return getNotificationText().equals(NO_ENTRIES_BANNER_TEXT);
+    }
+
+    public String getKeyCharacteristicsTitle(){
+        return driver.findElement(KEY_CHARACTERISTICS_ICON).getAttribute("title");
+    }
+
+    public boolean isStudentDetailReport(){
+        return getKeyCharacteristicsTitle().equals(STUDENT_DETAIL_KEY_CHARS_TITLE);
     }
 
     protected int findNamedTableIndex(String tableName){

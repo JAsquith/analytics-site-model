@@ -13,10 +13,7 @@ import pages.account.LoginPage;
 import utils.TargetFileManager;
 import utils.TestUtils;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.MalformedURLException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -41,6 +38,7 @@ public abstract class BaseTest {
 
     protected TestUtils utils;
     protected ITestContext context;
+    protected int logCount = 0;
 
     /**
      * Initialises a new test by instantiating a new RemoteWebDriver (and some other test properties) based on
@@ -181,6 +179,13 @@ public abstract class BaseTest {
         return driver.getCurrentUrl();
     }
 
+    @Attachment(value = "Log Message [{logIndex}]")
+    protected String logToAllure(int logIndex, String msg){
+        System.out.println(msg);
+        logCount = logIndex;
+        return msg;
+    }
+
     @Attachment(value = "{filename}")
     protected byte[] saveScreenshot(String filename){
         String base64Screenshot = driver.getScreenshotAs(OutputType.BASE64);
@@ -204,4 +209,12 @@ public abstract class BaseTest {
 
         return decodedScreenshot;
     }
+
+    protected String getStackTraceAsString(Throwable t){
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        t.printStackTrace(pw);
+        return sw.toString();
+    }
+
 }

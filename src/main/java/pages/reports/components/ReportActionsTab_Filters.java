@@ -34,6 +34,7 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
     }
 
     public ReportViewModal_Filters openModal(){
+        selectTab();
         getAddFilterButton().click();
         return new ReportViewModal_Filters(driver);
     }
@@ -71,15 +72,25 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         if(action == ReportAction.TOGGLE_FILTER){
-            IReportModal filters = new ReportViewModal_Filters(driver);
+            IReportModal modal;
+            if (ReportViewModal.isModalOpen(driver))
+                modal = new ReportViewModal_Filters(driver);
+            else
+                modal = openModal();
+
             String[] splitOption = option.split("\\[");
             String modalLabel = splitOption[0];
             String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
-            filters.toggleOption(modalLabel, modalOption);
-            return filters.applyChanges();
+            modal.toggleOption(modalLabel, modalOption);
+            return modal.applyChanges();
         } else {
             throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Filters tab");
         }
+    }
+
+    @Override
+    public String getName() {
+        return "filtersTab";
     }
 
     /*Actions/state queries used within more than one public method */

@@ -365,11 +365,6 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
     }
 
     public boolean optionIsDisplayed(By locator){
-/*
-        WebElement testElement;
-        testElement = driver.findElement(locator);
-        return testElement.isDisplayed();
-*/
         return driver.findElement(locator).isDisplayed();
     }
 
@@ -433,6 +428,11 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
             waitForLoadingWrapper();
         }
         return new EAPListView(driver);
+    }
+
+    @Override
+    public String getName() {
+        return "optionsTab";
     }
 
     /*  */

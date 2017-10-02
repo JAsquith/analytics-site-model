@@ -36,6 +36,7 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
     /* Actions available within this component
     * ToDo: Javadoc */
     public ReportViewModal_Residuals openModal(){
+        selectTab();
         getAddExclusionButton().click();
         return new ReportViewModal_Residuals(driver);
     }
@@ -70,7 +71,12 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         if(action == ReportAction.TOGGLE_EXCLUSION){
-            IReportModal modal = new ReportViewModal_Measures(driver);
+            IReportModal modal;
+            if (ReportViewModal.isModalOpen(driver))
+                modal = new ReportViewModal_Filters(driver);
+            else
+                modal = openModal();
+
             String[] splitOption = option.split("\\[");
             String modalLabel = splitOption[0];
             String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
@@ -79,6 +85,11 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
         } else {
             throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Residuals tab");
         }
+    }
+
+    @Override
+    public String getName() {
+        return "residualsTab";
     }
 
     /*Actions/state queries used within more than one public method */

@@ -105,9 +105,15 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
     @Override
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
-        actions.add(ReportAction.NEW_AREA_AND_REPORT);
+
+        if (driver.findElements(AREAS_INACTIVE).size()>0)
+            actions.add(ReportAction.NEW_AREA_AND_REPORT);
+
         actions.add(ReportAction.NEW_REPORT);
-        actions.add(ReportAction.NEW_GROUPING);
+
+        if (driver.findElements(LEVELS_VISIBLE_LINKS).size()>0)
+            actions.add(ReportAction.NEW_GROUPING);
+
         return actions;
     }
 
@@ -140,6 +146,11 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
                 return selectLevel(option);
         }
         return null;
+    }
+
+    @Override
+    public String getName() {
+        return "navMenu";
     }
 
     private WebElement selectArea(WebElement area){

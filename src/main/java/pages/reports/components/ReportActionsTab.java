@@ -75,6 +75,7 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
 
     public ReportActionsTab expandTab(){
+        waitShort.until(resizeComplete());
         if(canExpand()){
             List<WebElement> expandButtons = getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON);
             expandButtons.get(0).click();
@@ -171,8 +172,8 @@ public class ReportActionsTab extends AnalyticsComponent {
             @Override
             public Boolean apply(WebDriver driver) {
                 try {
-                    if (tabContentsDiv.findElements(CONTENTS_EXPAND_BUTTON).size()>0){
-                        if (tabContentsDiv.getAttribute("style").contains("overflow")) return null;
+                    if (getTabContentsDiv().findElements(CONTENTS_EXPAND_BUTTON).size()>0){
+                        if (getTabContentsDiv().getAttribute("style").contains("overflow")) return null;
                     }
                     return true;
                 } catch (StaleElementReferenceException e) {

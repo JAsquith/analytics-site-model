@@ -10,4 +10,5 @@ public interface IReportActionGroup {
     List<ReportAction> getValidActionsList();
     List<String> getOptionsForAction(ReportAction action);
     EAPView applyActionOption(ReportAction action, String option);
+    String getName();
 }
