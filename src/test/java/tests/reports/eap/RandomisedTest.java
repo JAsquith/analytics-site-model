@@ -31,6 +31,7 @@ public class RandomisedTest extends BaseTest {
     private String option;
     private int zeroCohortCount = 0;
     private int zeroEntriesCount = 0;
+    private int requiredFieldsCount = 0;
 
     @BeforeTest()
     @Step ( "Login, Open the required Report, and apply required Options " )
@@ -72,22 +73,67 @@ public class RandomisedTest extends BaseTest {
         if(!report.getErrorMessage().equals("")){
             restartFromReportsHome();
         }
+
         if (report.getCohortCount()==0) zeroCohortCount++;
-        if (report.getNotificationText().equals(NO_ENTRIES_BANNER_TEXT)) zeroEntriesCount++;
+
+        String notificationText = report.getNotificationText();
+        if (notificationText.equals(NO_ENTRIES_BANNER_TEXT)) zeroEntriesCount++;
+
+        boolean compareDSRequired = report.datasetsTab.compareRequired();
+        int requiredOptionFieldsCount = report.optionsTab.requiredFields().size();
+
+        if (compareDSRequired || requiredOptionFieldsCount>0)
+            requiredFieldsCount++;
+
+        // If we've gone more than 1 round with required options blank, set them
+        if (requiredFieldsCount>1) {
+            Random rnd = new Random();
+            while (compareDSRequired || requiredOptionFieldsCount > 0) {
+                if (compareDSRequired) {
+                    group = report.datasetsTab;
+                    action = ReportAction.CHANGE_COMPARE;
+                    List<String> options = group.getOptionsForAction(action);
+                    option = options.get(rnd.nextInt(options.size() - 1) + 1);
+                    report = applyRandomAction(group, action, option, action.name());
+                    requiredFieldsCount--;
+                    compareDSRequired=false;
+                } else {
+                    group = report.optionsTab;
+                    action = report.optionsTab.getRequiredAction();
+                    List<String> options = group.getOptionsForAction(action);
+                    option = options.get(rnd.nextInt(options.size() - 1) + 1);
+                    report = applyRandomAction(group, action, option, action.name());
+                    requiredFieldsCount--;
+                    requiredOptionFieldsCount--;
+                }
+            }
+        }
+
+        // If We've gone more than two rounds with zero students/grades, reset everything
         if (zeroCohortCount>2 || zeroEntriesCount>2){
             resetAll();
         }
     }
 
+/*
+    @Step( "Choosing random value from required field '{fieldLabel}'" )
+    private EAPView setRequiredField(WebElement reqField, String fieldLabel){
+        return report.optionsTab.setRequiredField(reqField);
+    }
+*/
+    @Step( "Restarting from Reports Home Page after an Error" )
+    private void restartFromReportsHome(){
+        openAReport(getStringParam("cohort"));
+    }
     @Step( "Reset All Options (after three actions with no students/entries)" )
     private void resetAll(){
         report = report.resetAllOptions();
         zeroCohortCount = 0;
         zeroEntriesCount = 0;
     }
-    @Step( "Restarting from Reports Home Page after an Error" )
-    private void restartFromReportsHome(){
-        openAReport(getStringParam("cohort"));
+    @Step( "" )
+    private void selectRequiredField(){
+
     }
 
     /* Setup Steps*/
@@ -162,11 +208,9 @@ public class RandomisedTest extends BaseTest {
 
         /* Todo: The following 'contingent' actionGroups need to be added:
             - DrillDownActions */
-/*
         if (report.filtersTab.isEnabled()) {
             actionGroups.add(report.filtersTab);
         }
-*/
         if (report.measuresTab.isEnabled()) {
             actionGroups.add(report.measuresTab);
         }
@@ -209,7 +253,7 @@ public class RandomisedTest extends BaseTest {
         }
         try {
             option = actionOptions.get(rnd.nextInt(actionOptions.size()));
-            return applyRandomAction(group, action, option);
+            return applyRandomAction(group, action, option, action.name());
         } catch (Exception e){
             System.err.println("Exception applying ReportAction:");
             System.err.println("Group: "+group.getClass().getName());
@@ -220,9 +264,12 @@ public class RandomisedTest extends BaseTest {
         }
     }
 
-    @Step( "{action} > {option}" )
-    private EAPView applyRandomAction(IReportActionGroup group, ReportAction action, String option){
-        return group.applyActionOption(action, option);
+    @Step( "{actionName} > {option}" )
+    private EAPView applyRandomAction(IReportActionGroup group, ReportAction action, String option, String actionName){
+        saveScreenshot("preAction.png");
+        EAPView newView = group.applyActionOption(action, option);
+        saveScreenshot("postAction.png");
+        return newView;
     }
 
     @DataProvider(name = "randomLoops")

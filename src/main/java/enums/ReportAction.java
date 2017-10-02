@@ -37,7 +37,7 @@ public enum ReportAction {
     TOGGLE_EXCLUSION("Toggle Qualification Exclusion"),
 
     // Actions in the View Navigation menu
-    NEW_AREA("Navigate to a new Area & Report (same/default Grouping)"),
+    NEW_AREA_AND_REPORT("Navigate to a new Area & Report (same/default Grouping)"),
     NEW_REPORT("Navigate to a new Report (same/default Area & Grouping)"),
     NEW_GROUPING("Navigate to a new Grouping (same/default Grouping)"),
 

@@ -26,7 +26,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
     private static final By LEVELS_VISIBLE_LINKS = By.cssSelector("a.lvls[style*='display: block']");
 
     private static final By REPORT_GROUP_FOR_AREA = By.cssSelector(".rptGroup");
-    private static final By REPORT_LINKS_FOR_AREA = By.cssSelector(".lvls>a");
+    private static final By REPORT_LINKS_FOR_AREA = By.cssSelector(".rptBtn>a");
 
     public ReportActions_NavMenu(RemoteWebDriver aDriver){
         super(aDriver);
@@ -97,21 +97,24 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         }
     }
 
+    @Override
     public boolean isEnabled() {
         return true;
     }
 
+    @Override
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
-        actions.add(ReportAction.NEW_AREA);
+        actions.add(ReportAction.NEW_AREA_AND_REPORT);
         actions.add(ReportAction.NEW_REPORT);
         actions.add(ReportAction.NEW_GROUPING);
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         switch(action){
-            case NEW_AREA:
+            case NEW_AREA_AND_REPORT:
                 return getAreaChangeOptions();
             case NEW_REPORT:
                 return getReportsForArea(driver.findElement(AREA_ACTIVE));
@@ -122,9 +125,10 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         }
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         switch(action){
-            case NEW_AREA:
+            case NEW_AREA_AND_REPORT:
                 String areaName = option.split("\\[")[0];
                 String reportName = option.split("\\[")[1];
                 reportName = reportName.substring(0, reportName.length()-1);
@@ -142,7 +146,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         try {
             if (!area.getAttribute("class").contains("selected")){
                 area.click();
-                waitShort.until(reportGroupDisplayed(area));// TimeoutException
+                waitTiny.until(reportGroupDisplayed(area));// TimeoutException
             }
             return area;
         } catch (NoSuchElementException e){
@@ -173,7 +177,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     private List<String> getCurrentReportLevels(WebElement area){
         area.click();
-        waitShort.until(reportGroupDisplayed(area));
+        waitTiny.until(reportGroupDisplayed(area));
 
         List<String> levelNames = new ArrayList<String>();
         for(WebElement levelButton : area.findElements(LEVELS_VISIBLE_LINKS)){
@@ -189,8 +193,10 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
             public Boolean apply(WebDriver driver) {
                 try {
                     WebElement reportGroup = area.findElement(REPORT_GROUP_FOR_AREA);
-                    if (reportGroup.getAttribute("style").equals("")) return true;
-                    if (!reportGroup.getAttribute("style").contains("scroll")) return null;
+                    String style = reportGroup.getAttribute("style");
+                    if (style.equals("")) return true;
+                    if (style.equals("display: block;")) return true;
+                    if (!style.contains("scroll")) return null;
                     return true;
                 } catch (StaleElementReferenceException e) {
                     return null;

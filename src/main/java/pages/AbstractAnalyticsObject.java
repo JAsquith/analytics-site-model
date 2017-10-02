@@ -23,7 +23,7 @@ public abstract class AbstractAnalyticsObject {
     protected WebDriverWait waitMedium;
     protected WebDriverWait waitLong;
 
-    public final int TINY_WAIT = 1;
+    public final int TINY_WAIT = 2;
     public final int SHORT_WAIT = 10;
     public final int MEDIUM_WAIT = 20;
     public final int LONG_WAIT = 30;

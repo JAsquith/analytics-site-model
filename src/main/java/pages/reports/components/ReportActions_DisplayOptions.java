@@ -173,10 +173,12 @@ public class ReportActions_DisplayOptions extends AnalyticsComponent implements 
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+    @Override
     public boolean isEnabled(){
         return driver.findElements(ENABLED_FIELDS).size() > 0;
     }
 
+    @Override
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         if (isOptionEnabled(COL_SORT_DDL)){
@@ -203,6 +205,7 @@ public class ReportActions_DisplayOptions extends AnalyticsComponent implements 
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         List<String> options = new ArrayList<String>();
         switch(action){
@@ -224,6 +227,7 @@ public class ReportActions_DisplayOptions extends AnalyticsComponent implements 
         }
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         switch(action){
             case SORT_COLUMN:

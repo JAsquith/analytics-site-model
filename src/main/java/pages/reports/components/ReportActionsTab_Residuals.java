@@ -42,12 +42,14 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+    @Override
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         actions.add(ReportAction.TOGGLE_EXCLUSION);
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         selectAndExpandTab();
 
@@ -65,6 +67,7 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
         return options;
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         if(action == ReportAction.TOGGLE_EXCLUSION){
             IReportModal modal = new ReportViewModal_Measures(driver);

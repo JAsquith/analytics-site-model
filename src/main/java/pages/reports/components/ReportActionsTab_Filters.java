@@ -43,12 +43,14 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+    @Override
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         actions.add(ReportAction.TOGGLE_FILTER);
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         selectAndExpandTab();
 
@@ -66,6 +68,7 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
         return options;
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         if(action == ReportAction.TOGGLE_FILTER){
             IReportModal filters = new ReportViewModal_Filters(driver);

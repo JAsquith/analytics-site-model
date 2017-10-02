@@ -9,7 +9,7 @@
         <parameter name="username" value="AsqJamRestore" />
         <parameter name="password" value="wsS!SRA125" />
         <parameter name="cohort" value="17" />
-        <parameter name="maxLoops" value="20" />
+        <parameter name="maxLoops" value="500" />
         <classes>
             <class name="tests.reports.eap.RandomisedTest" />
         </classes>

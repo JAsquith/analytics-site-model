@@ -45,6 +45,17 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         tabContentsBy = CONTENTS_DIV;
     }
 
+    /* Querying the state of the page */
+    public boolean compareRequired(){
+        WebElement compareDDL = driver.findElement(COMPARE_DROPDOWN);
+        if (compareDDL.getAttribute("class").contains("error")){
+            System.out.println("Compare Required");
+            return true;
+        }
+        return false;
+    }
+
+
     /* Actions available within this component
     * ToDo: Javadoc */
     public EAPView selectFocusDataset(String optionText){
@@ -138,6 +149,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+    @Override
     public List<ReportAction> getValidActionsList() {
         selectAndExpandTab();
 
@@ -161,6 +173,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         switch(action){
             case CHANGE_FOCUS:
@@ -178,6 +191,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         switch(action){
             case CHANGE_FOCUS:
@@ -195,7 +209,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
     }
 
-    /*Actions/state queries used within more than one public method */
+    /* Actions/state queries used within more than one public method */
     private void expandFocusPsuedoSelect(){
         WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){

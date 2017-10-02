@@ -26,17 +26,19 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
     public final By FACULTY_DDL = By.id("ReportOptions_Faculty_ID");
     public final By QUALIFICATION_DDL = By.id("ReportOptions_Qual_ID");
     public final By CLASS_DDL = By.id("ReportOptions_TchGrp_ID");
-    public final By GRADE_TYPE_DDL = By.id("ReportOptions_EAPGradesMethod_ID");
-    public final By AWARD_CLASS_DDL = By.id("ReportOptions_RPTQualType_ID");
-    public final By KS2_CORE_DDL = By.id("ReportOptions_KS2Baseline_ID");
-    public final By GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Grade_RPTOperand_ID");
-    public final By GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_EAPWholeGrade_ID");
-    public final By GRADE_FILTER_SUB_DDL = By.id("ReportOptions_EAPSubGrade_Order");
-    public final By COMP_GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Comp_Grade_RPTOperand_ID");
-    public final By COMP_GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_Comp_EAPWholeGrade_ID");
-    public final By COMP_GRADE_FILTER_SUB_DDL = By.id("ReportOptions_Comp_EAPSubGrade_Order");
-    public final By IN_A8_BASKET_DDL = By.id("ReportOptions_RPTInA8Basket_ID");
+    private static final By GRADE_TYPE_DDL = By.id("ReportOptions_EAPGradesMethod_ID");
+    private static final By AWARD_CLASS_DDL = By.id("ReportOptions_RPTQualType_ID");
+    private static final By KS2_CORE_DDL = By.id("ReportOptions_KS2Baseline_ID");
+    private static final By GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Grade_RPTOperand_ID");
+    private static final By GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_EAPWholeGrade_ID");
+    private static final By GRADE_FILTER_SUB_DDL = By.id("ReportOptions_EAPSubGrade_Order");
+    private static final By COMP_GRADE_FILTER_TYPE_DDL = By.id("ReportOptions_Comp_Grade_RPTOperand_ID");
+    private static final By COMP_GRADE_FILTER_WHOLE_DDL = By.id("ReportOptions_Comp_EAPWholeGrade_ID");
+    private static final By COMP_GRADE_FILTER_SUB_DDL = By.id("ReportOptions_Comp_EAPSubGrade_Order");
+    private static final By IN_A8_BASKET_DDL = By.id("ReportOptions_RPTInA8Basket_ID");
     public final By STUDENT_FILTER_DDL = By.id("ReportOptions_Stu_ID");
+
+    private static final By REQUIRED_FIELD = By.cssSelector(".switch-toggle.error");
 
     /* Constructor method
     * ToDo: Javadoc */
@@ -319,6 +321,27 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
+    /* Querying the state of the component */
+    public List<WebElement> requiredFields(){
+        return driver.findElements(REQUIRED_FIELD);
+    }
+
+    public ReportAction getRequiredAction(){
+        WebElement fieldWrapperDiv = driver.findElement(REQUIRED_FIELD);
+        WebElement fieldLabelDiv = fieldWrapperDiv.findElement(By.tagName("div"));
+
+        switch(fieldLabelDiv.getText().trim()){
+            case "Qualification":
+                return ReportAction.QUALIFICATION;
+            case "Grade type":
+                return ReportAction.GRADE_TYPE;
+            case "Student":
+                return ReportAction.STUDENT;
+            default:
+                throw new IllegalStateException("Unknown Required Field on the Options Tab");
+        }
+    }
+
     public boolean optionIsDisabled(By locator){
 
         WebElement testElement;
@@ -352,6 +375,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+    @Override
     public List<ReportAction> getValidActionsList() {
         selectAndExpandTab();
         List<ReportAction> actions = new ArrayList<ReportAction>();
@@ -372,6 +396,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         super.selectAndExpandTab();
         switch(action){
@@ -397,6 +422,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         }
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
         super.selectAndExpandTab();
         if(action.equals(ReportAction.EAP_TRACKING)){
@@ -409,6 +435,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         return new EAPListView(driver);
     }
 
+    /*  */
     private List<String> getEAPTrackingOptions(){
         List<String> options = new ArrayList<String>();
         WebElement menu = driver.findElement(ON_TRACK_MENU);

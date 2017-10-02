@@ -48,12 +48,14 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+    @Override
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         actions.add(ReportAction.TOGGLE_MEASURE);
         return actions;
     }
 
+    @Override
     public List<String> getOptionsForAction(ReportAction action) {
         selectAndExpandTab();
 
@@ -71,6 +73,7 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
         return options;
     }
 
+    @Override
     public EAPView applyActionOption(ReportAction action, String option) {
 
         if(action == ReportAction.TOGGLE_MEASURE){
