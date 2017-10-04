@@ -13,7 +13,7 @@
         <parameter name="username" value="Phase6" />
         <parameter name="password" value="wsS!SRA125" />
         <parameter name="cohort" value="17" />
-        <parameter name="maxLoops" value="100" />
+        <parameter name="maxLoops" value="25" />
         <classes>
             <class name="tests.reports.eap.RandomisedTest" />
         </classes>

@@ -328,17 +328,16 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
 
     public ReportAction getRequiredAction(){
         WebElement fieldWrapperDiv = driver.findElement(REQUIRED_FIELD);
-        WebElement fieldLabelDiv = fieldWrapperDiv.findElement(By.tagName("div"));
-
-        switch(fieldLabelDiv.getText().trim()){
+        String fieldLabel = fieldWrapperDiv.findElement(By.tagName("div")).getText().trim();
+        switch(fieldLabel){
             case "Qualification":
                 return ReportAction.QUALIFICATION;
-            case "Grade type":
+            case "Grade Type":
                 return ReportAction.GRADE_TYPE;
             case "Student":
                 return ReportAction.STUDENT;
             default:
-                throw new IllegalStateException("Unknown Required Field on the Options Tab");
+                throw new IllegalStateException("Unknown Required Field ("+fieldLabel+") the Options Tab");
         }
     }
 
@@ -439,10 +438,11 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
     private List<String> getEAPTrackingOptions(){
         List<String> options = new ArrayList<String>();
         WebElement menu = driver.findElement(ON_TRACK_MENU);
-        List<WebElement> inputs = menu.findElements(By.tagName("input"));
-        for(WebElement input : inputs){
+        List<WebElement> labels = menu.findElements(By.cssSelector("label[for]"));
+        for(WebElement label : labels){
+            WebElement input = menu.findElement(By.id(label.getAttribute("for")));
             if(!input.isSelected()){
-                options.add(menu.findElement(By.id(input.getAttribute("for"))).getText());
+                options.add(label.getText());
             }
         }
         return options;

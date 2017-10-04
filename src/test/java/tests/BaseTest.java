@@ -179,11 +179,16 @@ public abstract class BaseTest {
         return driver.getCurrentUrl();
     }
 
-    @Attachment(value = "Log Message [{logIndex}]")
-    protected String logToAllure(int logIndex, String msg){
-        System.out.println(msg);
+    @Attachment(value = "[{logIndex}] Log Message")
+    private String actualLogToAllure(int logIndex, String msg){
+        System.out.println("["+logIndex+"] "+msg);
         logCount = logIndex;
         return msg;
+    }
+
+    protected String logToAllure(int logIndex, String msg){
+        if (debugMode) return actualLogToAllure(logIndex, msg);
+        return "";
     }
 
     @Attachment(value = "{filename}")
