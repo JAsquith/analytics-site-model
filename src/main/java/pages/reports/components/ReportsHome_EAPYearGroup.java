@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class ReportsHome_EAPYearGroup extends AnalyticsComponent {
 
-    public static final By REPORT_AREA_BUTTONS = By.cssSelector(".EAPRptBtn>a");
+    public static final By REPORT_AREA_BUTTONS = By.cssSelector(".EAPRptBtn a");
     public static final By REPORT_STATUS_TEXT = By.cssSelector(".eapPub>.eapStat>span:not(.icon)");
     public static final By REPORT_SETS_WITHIN_YEAR = By.cssSelector(".eapPub");
     public static final By REPORT_NAME_FAKE_LINK = By.cssSelector("em.fakea");
@@ -80,6 +80,7 @@ public class ReportsHome_EAPYearGroup extends AnalyticsComponent {
             WebElement reportNameLink = reportSet.findElement(REPORT_NAME_FAKE_LINK);
             if (reportNameLink.getText().trim().equals(datasetName)){
                 reportNameLink.click();
+                List<WebElement> buttons = reportSet.findElements(REPORT_AREA_BUTTONS);
                 waitForPublishedReportExpansion(reportSet.findElement(REPORT_AREA_BUTTONS));
                 pubReportSet = reportSet;
                 return reportSet;

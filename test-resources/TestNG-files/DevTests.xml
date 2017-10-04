@@ -2,14 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Development Suite" parallel="tests" thread-count="4">
 
+    <listeners>
+        <listener class-name="listeners.LinkedTestsSuiteListener"/>
+    </listeners>
+
     <parameter name="debug" value="true" />
 
     <test name="Andy #1 - A8P8 Overview Filters - P8">
         <parameter name="test-id" value="000020" />
-        <parameter name="username" value="AsqJamRestore" />
+        <parameter name="username" value="Phase6" />
         <parameter name="password" value="wsS!SRA125" />
         <parameter name="cohort" value="17" />
-        <parameter name="maxLoops" value="25" />
+        <parameter name="maxLoops" value="100" />
         <classes>
             <class name="tests.reports.eap.RandomisedTest" />
         </classes>

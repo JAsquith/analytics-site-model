@@ -80,7 +80,7 @@ public class RandomisedTest extends BaseTest {
 
         // If there are no Students (and we're not on a Student Detail report, or no entries
         // we may need to clear the options
-        if (report.isStudentDetailReport() || report.getCohortCount()==0)
+        if (!report.isStudentDetailReport() && report.getCohortCount()==0)
             zeroCohortCount++;
 
         if (report.isZeroEntriesReport())
@@ -228,9 +228,37 @@ public class RandomisedTest extends BaseTest {
         }
     }
 
+    private List<IReportActionGroup> getActionGroupList(){
+        List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
+        actionGroups.add(report.navMenu);
+        actionGroups.add(report.datasetsTab);
+        actionGroups.add(report.optionsTab);
+
+        /* Todo: The following 'contingent' actionGroups need to be added:
+            - DrillDownActions */
+        if (report.filtersTab.isEnabled()) {
+            actionGroups.add(report.filtersTab);
+        }
+        if (report.measuresTab.isEnabled()) {
+            actionGroups.add(report.measuresTab);
+        }
+        if (report.residualsTab.isEnabled()) {
+            actionGroups.add(report.residualsTab);
+        }
+
+        String groupsDesc = "[";
+        for(IReportActionGroup group : actionGroups){
+            groupsDesc += group.getName()+",";
+        }
+        groupsDesc += "]";
+        logToAllure(++logCount, "Valid ActionGroups: " + groupsDesc);
+
+        return actionGroups;
+    }
+
     private void chooseAction(Random rnd) {
         try {
-            List<ReportAction> actions = new ArrayList<ReportAction>();
+            List<ReportAction> actions;
             actions = group.getValidActionsList();
             logToAllure(++logCount, "GroupActions: " + actions);
             action = actions.get(rnd.nextInt(actions.size()));
@@ -285,34 +313,6 @@ public class RandomisedTest extends BaseTest {
             logToAllure(++logCount,"Exception getting options for TestAction: "+e.getClass().getName()+System.lineSeparator()+ "Exception message: "+e.getMessage());
             throw e;
         }
-    }
-
-    private List<IReportActionGroup> getActionGroupList(){
-        List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
-        actionGroups.add(report.navMenu);
-        actionGroups.add(report.datasetsTab);
-        actionGroups.add(report.optionsTab);
-
-        /* Todo: The following 'contingent' actionGroups need to be added:
-            - DrillDownActions */
-        if (report.filtersTab.isEnabled()) {
-            actionGroups.add(report.filtersTab);
-        }
-        if (report.measuresTab.isEnabled()) {
-            actionGroups.add(report.measuresTab);
-        }
-        if (report.residualsTab.isEnabled()) {
-            actionGroups.add(report.residualsTab);
-        }
-
-        String groupsDesc = "[";
-        for(IReportActionGroup group : actionGroups){
-            groupsDesc += group.getName()+",";
-        }
-        groupsDesc += "]";
-        logToAllure(++logCount, "Valid ActionGroups: " + groupsDesc);
-
-        return actionGroups;
     }
 
     @Step( "{actionName} > {option}" )

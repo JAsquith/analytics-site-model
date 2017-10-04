@@ -33,10 +33,11 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
 
     public boolean isEnabled(){
-        return getTabButton()!=null;
+        return !isDisabled();
     }
     public boolean isDisabled(){
-        return getTabButton()==null;
+        if (getTabButton()==null) return false;
+        return tabButton.getAttribute("class").contains("disabled");
     }
 
     public boolean isActive(){
@@ -102,7 +103,7 @@ public class ReportActionsTab extends AnalyticsComponent {
 
     public void selectAndExpandTab(){
         selectTab();
-        expandTab();
+        //expandTab();
     }
 
     public void resetTab(){

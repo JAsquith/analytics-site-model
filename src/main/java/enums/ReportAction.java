@@ -2,13 +2,16 @@ package enums;
 
 public enum ReportAction {
     // Dummy Null Action
+    //  - Description,
+    //  - Static options (don't change from action to action unless...),
+    //  - Action after which options should be updated
     NULL("Null", false, ""),
 
     // Actions on the Datasets tab
     CHANGE_FOCUS("Change Focus", false, ""),
-    FOCUS_VTP("Show Focus As", true, CHANGE_FOCUS.name),
+    FOCUS_VTP("Show Focus As", false, ""),
     CHANGE_COMPARE("Change Compare", false, ""),
-    COMPARE_VTP("Show Compare As", true, CHANGE_COMPARE.name),
+    COMPARE_VTP("Show Compare As", false, ""),
     TRACKER_COLUMN("Change Tracker Column", false, ""),
 
     // Actions on the Options tab
