@@ -97,7 +97,7 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
 
     @Override
     public String getName() {
-        return "methodsTab";
+        return "measuresTab";
     }
 
     /*Actions/state queries used within more than one public method */

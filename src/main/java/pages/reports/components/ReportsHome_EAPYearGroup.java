@@ -137,7 +137,7 @@ public class ReportsHome_EAPYearGroup extends AnalyticsComponent {
                 return button;
             }
         }
-        return null;
+        return repButtons.get(0);
     }
 
 }

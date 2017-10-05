@@ -451,7 +451,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
     private List<String> getDDLOptions(ReportAction action){
         List<String> optionNames = new ArrayList<String>();
         WebElement select = driver.findElement(getLocatorForDDLAction(action));
-        List<WebElement> options = select.findElements(By.tagName("option"));
+        List<WebElement> options = select.findElements(By.cssSelector("option:not([disabled='disabled']"));
         for(WebElement option : options){
             if(!option.getAttribute("class").contains("disabled")){
                 optionNames.add(option.getText());

@@ -50,7 +50,11 @@ public enum ReportAction {
     FIGURE_TYPE("Toggle Count/Percent", false, ""),
     CALCULATION_TYPE("Toggle Standard/Cumulative", false, ""),
     SUB_WHOLE("Toggle Sub Whole", false, ""),
-    BREAKDOWN("Select Breakdown Filter", true, CHANGE_FOCUS.name);
+    BREAKDOWN("Select Breakdown Filter", true, CHANGE_FOCUS.name),
+
+    // Actions in the Report Tables
+    DRILL_DOWN("Drill into a report link", false, null)
+    ;
 
     public String name; public boolean optionsStatic; public String staticUntil;
 

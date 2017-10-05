@@ -13,28 +13,44 @@ import java.util.List;
 
 public class ReportActions_NavMenu extends AnalyticsComponent implements IReportActionGroup {
 
+    /*
+     Each Area wraps an Area_Name and a Report_Group
+     */
     private static final By AREAS = By.cssSelector(".area");
     private static final By AREAS_INACTIVE = By.cssSelector(".area:not(.active)");
     private static final By AREA_ACTIVE = By.cssSelector(".area.active");
     private static final By AREA_SELECTED = By.cssSelector(".area.selected");
+
     private static final By AREA_NAME = By.cssSelector(".areaName");
 
+    /*
+     Each Report_Group wraps:
+          - one or more REPORT_BUTTONS
+          - the _same number_ of GROUPING_SETS
+     */
     private static final By REPORT_GROUPS = By.cssSelector(".rptGroup");
-    private static final By REPORT_GRP_ACTIVE = By.cssSelector(".rptGroup.active");
+    private static final By REPORT_GROUP_ACTIVE = By.cssSelector(".rptGroup.active");
 
-    private static final By LEVELS_VISIBLE = By.cssSelector(".lvls[style*='display: block']");
-    private static final By LEVELS_VISIBLE_LINKS = By.cssSelector("a.lvls[style*='display: block']");
-
-    private static final By REPORT_GROUP_FOR_AREA = By.cssSelector(".rptGroup");
+    private static final By REPORT_BUTTONS_FOR_ACTIVE_REPORT = By.cssSelector(".rptGroup.active.selected .rptBtn");
+    private static final By REPORT_BUTTON_ACTIVE = By.cssSelector(".rptBtn.active.selected");
     private static final By REPORT_LINKS_FOR_AREA = By.cssSelector(".rptBtn>a");
+
+    /*
+     Each Grouping_Set wraps:
+          - one or more Grouping_Buttons
+     */
+    private static final By GROUPING_SETS = By.cssSelector(".lvls");
+    private static final By GROUPING_SET_FOR_ACTIVE_REPORT = By.cssSelector(".rptGroup.active.selected .lvls");
+    private static final By GROUPING_SET_VISIBLE = By.cssSelector(".lvls[style*='display: block']");
+
+    private static final By GROUPING_SELECTED = By.cssSelector(".lvls[style*='display: block'] span");
+    private static final By GROUPINGS_AVAILABLE = By.cssSelector(".lvls[style*='display: block'] a");
+
 
     public ReportActions_NavMenu(RemoteWebDriver aDriver){
         super(aDriver);
     }
 
-    private By getAreaDivSelector(String areaDataName){
-        return By.cssSelector(".area[data-name='" + areaDataName + "']");
-    }
     public WebElement selectArea(String areaName){
         try {
             WebElement area = driver.findElement(getAreaDivSelector(areaName));
@@ -58,7 +74,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     public EAPView selectReport(WebElement selectedArea, String reportName){
         try{
-            String currentReport = driver.findElement(REPORT_GRP_ACTIVE).getText().trim();
+            String currentReport = selectedArea.findElement(REPORT_BUTTON_ACTIVE).getText().trim();
             if (reportName.equals(currentReport)){
                 return new EAPView(driver);
             }
@@ -70,33 +86,35 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         }
     }
 
-    public EAPView selectLevel(String levelName){
-        WebElement activeAreaDiv; WebElement selectedAreaDiv;
+    public EAPView selectGrouping(String targetGrouping){
+        WebElement selectedAreaDiv;
         try {
-            activeAreaDiv = driver.findElement(AREA_ACTIVE);
             selectedAreaDiv = driver.findElement(AREA_SELECTED);
-            String activeAreaName = activeAreaDiv.getAttribute("data-name");
-            String selectedAreaName = selectedAreaDiv.getAttribute("data-name");
-            if (!activeAreaName.equals(selectedAreaName)){
+            if (!areasAreEqual(driver.findElement(AREA_ACTIVE), selectedAreaDiv)){
                 throw new IllegalStateException(
-                        "Can't select a Level - the active Area '" + activeAreaName +
-                                "' is not the selected Area '" + selectedAreaName +"'");
+                        "Can't select a Level - the active and selected Areas are not the same");
             }
         } catch (NoSuchElementException e){
             throw new IllegalStateException("Can't select a Level - either no Area is active or no Area is selected");
         }
+
+        WebElement currentGrouping = selectedAreaDiv.findElement(GROUPING_SELECTED);
+        if (currentGrouping.getText().trim().equals(targetGrouping)) return new EAPView(driver);
+
+        WebElement currentGroupingSet = selectedAreaDiv.findElement(GROUPING_SET_VISIBLE);
+
         try{
-            WebElement levelLinks = driver.findElement(LEVELS_VISIBLE);
-            WebElement levelLink = levelLinks.findElement(By.partialLinkText(levelName));
-            levelLink.click();
+            WebElement groupingLink = currentGroupingSet.findElement(By.partialLinkText(targetGrouping));
+            groupingLink.click();
             waitForLoadingWrapper();
             return new EAPView(driver);
         } catch (NoSuchElementException e){
-            throw new IllegalArgumentException("Can't select Level '" + levelName +
+            throw new IllegalArgumentException("Can't select Level '" + targetGrouping +
                     "' - no link with that text could be found");
         }
     }
 
+    /*  */
     @Override
     public boolean isEnabled() {
         return true;
@@ -111,7 +129,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
         actions.add(ReportAction.NEW_REPORT);
 
-        if (driver.findElements(LEVELS_VISIBLE_LINKS).size()>0)
+        if (driver.findElements(GROUPINGS_AVAILABLE).size()>0)
             actions.add(ReportAction.NEW_GROUPING);
 
         return actions;
@@ -143,7 +161,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
             case NEW_REPORT:
                 return selectReport(option);
             case NEW_GROUPING:
-                return selectLevel(option);
+                return selectGrouping(option);
         }
         return null;
     }
@@ -153,15 +171,20 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         return "navMenu";
     }
 
-    private WebElement selectArea(WebElement area){
+    /*  */
+    private By getAreaDivSelector(String areaDataName){
+        return By.cssSelector(".area[data-name='" + areaDataName + "']");
+    }
+
+    private WebElement selectArea(WebElement targetArea){
         try {
-            if (!area.getAttribute("class").contains("selected")){
-                area.click();
-                waitTiny.until(reportGroupDisplayed(area));// TimeoutException
+            if (!areasAreEqual(driver.findElement(AREA_SELECTED), targetArea)){
+                targetArea.click();
+                waitTiny.until(reportGroupDisplayed(targetArea));// TimeoutException
             }
-            return area;
+            return targetArea;
         } catch (NoSuchElementException e){
-            throw new WebDriverException("NSEE trying to select Area '"+area.getText()+"'; "+e.getMessage());
+            throw new WebDriverException("NSEE trying to select Area '"+targetArea.getText()+"'; "+e.getMessage());
         } catch (TimeoutException e){
             throw new WebDriverException("Timeout Exception waiting for ReportGroups");
         }
@@ -191,19 +214,27 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         waitTiny.until(reportGroupDisplayed(area));
 
         List<String> levelNames = new ArrayList<String>();
-        for(WebElement levelButton : area.findElements(LEVELS_VISIBLE_LINKS)){
+        for(WebElement levelButton : area.findElements(GROUPINGS_AVAILABLE)){
             levelNames.add(levelButton.getText().trim());
         }
         return levelNames;
     }
 
+    private boolean areasAreEqual(WebElement area_1, WebElement area_2){
+        String areaName_1 = area_1.getAttribute("data-name");
+        String areaName_2 = area_2.getAttribute("data-name");
+
+        return areaName_1.equals(areaName_2);
+    }
+
+    /* */
     protected ExpectedCondition<Boolean> reportGroupDisplayed(WebElement area) {
 
         return new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
                 try {
-                    WebElement reportGroup = area.findElement(REPORT_GROUP_FOR_AREA);
+                    WebElement reportGroup = area.findElement(REPORT_GROUPS);
                     String style = reportGroup.getAttribute("style");
                     if (style.equals("")) return true;
                     if (style.equals("display: block;")) return true;

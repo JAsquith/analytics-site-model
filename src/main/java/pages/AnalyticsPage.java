@@ -43,7 +43,7 @@ public class AnalyticsPage extends AbstractAnalyticsObject {
     public final By LOGO = By.cssSelector("#logo>img");
 
     public final By MAIN_MENU_BUTTONS = By.cssSelector("#menuMain li");
-    public final By MAIN_MENU_LINKS = By.cssSelector("#menuMain li a");
+    public final By MAIN_MENU_LINKS = By.cssSelector("#tabsLeft li a");
     public final By MAIN_MENU_HOME = By.xpath("//img[@alt='Home']/../../..");
     public final By MAIN_MENU_DATA = By.xpath("//img[@alt='Data']/../../..");
     public final By MAIN_MENU_CONFIG = By.xpath("//img[@alt='Config.']/../../..");

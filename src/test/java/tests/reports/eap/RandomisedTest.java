@@ -48,7 +48,13 @@ public class RandomisedTest extends BaseTest {
         setupNewReport(cohort);
     }
 
-    @Test( description = "Random Report Actions", dataProvider = "randomLoops")
+    @Test( description = "Open Random Report" )
+    public void reportOpenedOK(){
+        assertWithScreenshot("Opening a Report View should not error",
+                report.getErrorMessage(), isEmptyOrNullString());
+    }
+
+    @Test( description = "Random Report Actions", dataProvider = "randomLoops", dependsOnMethods = { "reportOpenedOK" })
     public void testRandomReportActions(String loopIndex, String maxLoops){
 
         Random rnd = new Random();
@@ -147,10 +153,9 @@ public class RandomisedTest extends BaseTest {
         expandEAPYearGroup(selectRandomEAPYearGroup());
         expandReportSet(selectRandomReportSet());
         String reportArea = selectRandomReportButton();
+        saveScreenshot(context.getName()+"_preReportOpen.png");
         report = clickReportAreaButton(reportArea);
-
-        assertWithScreenshot("Opening a Report View should not error",
-                report.getErrorMessage(), isEmptyOrNullString());
+        saveScreenshot(context.getName()+"_postReportOpen.png");
     }
 
     @Step( "Go to the EAP Reports Home page" )
@@ -232,18 +237,18 @@ public class RandomisedTest extends BaseTest {
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
         actionGroups.add(report.navMenu);
         actionGroups.add(report.datasetsTab);
-        actionGroups.add(report.optionsTab);
+        //actionGroups.add(report.optionsTab);
 
         /* Todo: The following 'contingent' actionGroups need to be added:
             - DrillDownActions */
         if (report.filtersTab.isEnabled()) {
-            actionGroups.add(report.filtersTab);
+        //    actionGroups.add(report.filtersTab);
         }
         if (report.measuresTab.isEnabled()) {
-            actionGroups.add(report.measuresTab);
+        //    actionGroups.add(report.measuresTab);
         }
         if (report.residualsTab.isEnabled()) {
-            actionGroups.add(report.residualsTab);
+        //    actionGroups.add(report.residualsTab);
         }
 
         String groupsDesc = "[";
@@ -327,9 +332,9 @@ public class RandomisedTest extends BaseTest {
 
     @Step( "Reset TestAction elements" )
     private void resetActionOptions(){
-        group = report.navMenu;
+        group = null;
         action = ReportAction.NULL;
-        option = "Null";
+        option = "";
     }
 
     @DataProvider(name = "randomLoops")
