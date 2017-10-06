@@ -50,6 +50,7 @@ public class RandomisedTest extends BaseTest {
     }
 
     @Test( description = "Open Random Report" )
+    @Step( "Check the initial opening of a Report worked" )
     public void reportOpenedOK(){
         assertWithScreenshot("Opening a Report View should not error",
                 report.getErrorMessage(), isEmptyOrNullString());
@@ -241,12 +242,12 @@ public class RandomisedTest extends BaseTest {
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
         actionGroups.add(report.navMenu);
         actionGroups.add(report.datasetsTab);
-        //actionGroups.add(report.optionsTab);
+        actionGroups.add(report.optionsTab);
 
         /* Todo: The following 'contingent' actionGroups need to be added:
             - DrillDownActions */
         if (report.filtersTab.isEnabled()) {
-            //actionGroups.add(report.filtersTab);
+            actionGroups.add(report.filtersTab);
         }
         if (report.measuresTab.isEnabled()) {
             actionGroups.add(report.measuresTab);
@@ -256,7 +257,7 @@ public class RandomisedTest extends BaseTest {
         }
         if (!report.isStudentDetailReport() && report.reportTables.size()>0){
             for (ReportActions_Table table : report.reportTables){
-                //actionGroups.add(table);
+                actionGroups.add(table);
             }
         }
 
