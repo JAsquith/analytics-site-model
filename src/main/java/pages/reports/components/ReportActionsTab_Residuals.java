@@ -73,7 +73,7 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
         if(action == ReportAction.TOGGLE_EXCLUSION){
             IReportModal modal;
             if (ReportViewModal.isModalOpen(driver))
-                modal = new ReportViewModal_Filters(driver);
+                modal = new ReportViewModal_Residuals(driver);
             else
                 modal = openModal();
 

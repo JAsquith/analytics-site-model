@@ -80,7 +80,7 @@ public class ReportActions_Table extends AnalyticsComponent implements IReportAc
 
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
-        String linkIndex = option.substring(6,option.indexOf("[")-1);
+        String linkIndex = option.substring(5,option.indexOf("[")-1);
         tableLinks.get(Integer.valueOf(linkIndex)).click();
         return new EAPView(driver);
     }

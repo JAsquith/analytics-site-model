@@ -53,10 +53,11 @@ public class ReportViewModal_Residuals extends ReportViewModal implements IRepor
     }
 
     private String getJSForCheckBox(String qualName, String checkBox){
+        String cbIndex = (checkBox == "Exclude") ? "3" : "2";
         String js = "var names = document.querySelectorAll('"+QUAL_NAMES+"');";
         js += "var cbElement;";
         js += "var parent;";
-        js += "var optionType = " + ((checkBox == "Exclude") ? 3 : 2);
+        js += "var optionType = " + cbIndex +";";
         js += "for (i = 0; i < names.length; i++) {";
         js += "  var nameText = names[i].textContent.trim();";
         js += "  if (nameText == '"+qualName+"') {";

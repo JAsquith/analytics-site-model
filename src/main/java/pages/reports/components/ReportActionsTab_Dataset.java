@@ -144,8 +144,16 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     public EAPView selectTrackerColumn(String optionText){
         WebElement trackerElement = driver.findElement(TRACKER_COL_DDL);
-        Select trackerDDL = (Select)trackerElement;
-        trackerDDL.selectByVisibleText(optionText);
+        try {
+            Select trackerDDL = (Select) trackerElement;
+            trackerDDL.selectByVisibleText(optionText);
+        } catch (Exception e){
+            System.out.println("Exception while attempting to set tracker column!");
+            if (trackerElement!=null){
+                System.out.println("trackerElement class = '"+trackerElement.getClass().getName()+"'");
+            }
+            e.printStackTrace();
+        }
         return new EAPView(driver);
     }
 

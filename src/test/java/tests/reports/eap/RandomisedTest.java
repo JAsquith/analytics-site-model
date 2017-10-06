@@ -66,7 +66,7 @@ public class RandomisedTest extends BaseTest {
 
             buildAction(rnd);
 
-            report = applyRandomAction(group, action, option, action.name());
+            report = applyRandomAction(group, group.getName(), action, option, action.name());
 
         } catch (Exception e){
             saveScreenshot(context.getName()+"4_testException.png");
@@ -108,7 +108,7 @@ public class RandomisedTest extends BaseTest {
                     action = ReportAction.CHANGE_COMPARE;
                     List<String> options = group.getOptionsForAction(action);
                     option = options.get(rnd.nextInt(options.size() - 1) + 1);
-                    report = applyRandomAction(group, action, option, action.name());
+                    report = applyRandomAction(group, group.getName(), action, option, action.name());
                     requiredFieldsCount--;
                     compareDSRequired=false;
                 } else {
@@ -116,7 +116,7 @@ public class RandomisedTest extends BaseTest {
                     action = report.optionsTab.getRequiredAction();
                     List<String> options = group.getOptionsForAction(action);
                     option = options.get(rnd.nextInt(options.size() - 1) + 1);
-                    report = applyRandomAction(group, action, option, action.name());
+                    report = applyRandomAction(group, group.getName(), action, option, action.name());
                     requiredFieldsCount--;
                     requiredOptionFieldsCount--;
                 }
@@ -326,8 +326,8 @@ public class RandomisedTest extends BaseTest {
         }
     }
 
-    @Step( "{actionName} > {option}" )
-    private EAPView applyRandomAction(IReportActionGroup group, ReportAction action, String option, String actionName){
+    @Step( "{groupName} > {actionName} > {option}" )
+    private EAPView applyRandomAction(IReportActionGroup group, String groupName, ReportAction action, String option, String actionName){
         saveScreenshot(context.getName()+"2_beforeApply.png");
         EAPView newView = group.applyActionOption(action, option);
         assertWithScreenshot("Applying a Report Option/Action should not error",

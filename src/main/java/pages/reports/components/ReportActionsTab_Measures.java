@@ -81,13 +81,14 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
         if(action == ReportAction.TOGGLE_MEASURE){
             IReportModal modal;
             if (ReportViewModal.isModalOpen(driver))
-                modal = new ReportViewModal_Filters(driver);
+                modal = new ReportViewModal_Measures(driver);
             else
                 modal = openModal();
 
             String[] splitOption = option.split("\\[");
             String modalLabel = splitOption[0];
             String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+            modalOption = (modalOption.endsWith("]")) ? modalOption.substring(0,modalOption.length()-1) : modalOption;
             modal.toggleOption(modalLabel, modalOption);
             return modal.applyChanges();
         } else {
