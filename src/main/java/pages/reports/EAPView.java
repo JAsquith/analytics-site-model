@@ -33,6 +33,7 @@ public class EAPView extends AnalyticsPage{
     public ReportActionsTab_Measures measuresTab;
     public ReportActionsTab_Residuals residualsTab;
     public ReportActions_DisplayOptions viewOptions;
+    public List<ReportActions_Table> reportTables;
 
     // CONSTRUCTORS
     public EAPView(RemoteWebDriver aDriver){
@@ -44,8 +45,8 @@ public class EAPView extends AnalyticsPage{
             filtersTab = new ReportActionsTab_Filters(driver);
             measuresTab = new ReportActionsTab_Measures(driver);
             residualsTab = new ReportActionsTab_Residuals(driver);
-
             viewOptions = new ReportActions_DisplayOptions(driver);
+            reportTables = ReportActions_Table.getAllReportTables(driver);
             try {
                 waitMedium.until(ExpectedConditions.elementToBeClickable(KEY_CHARACTERISTICS_ICON));
             } catch (TimeoutException e) {

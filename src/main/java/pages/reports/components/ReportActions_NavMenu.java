@@ -32,7 +32,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
     private static final By REPORT_GROUP_ACTIVE = By.cssSelector(".rptGroup.active");
 
     private static final By REPORT_BUTTONS_FOR_ACTIVE_REPORT = By.cssSelector(".rptGroup.active.selected .rptBtn");
-    private static final By REPORT_BUTTON_ACTIVE = By.cssSelector(".rptBtn.active.selected");
+    private static final By REPORT_BUTTON_SELECTED = By.cssSelector(".rptBtn.selected");
     private static final By REPORT_LINKS_FOR_AREA = By.cssSelector(".rptBtn>a");
 
     /*
@@ -74,10 +74,18 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     public EAPView selectReport(WebElement selectedArea, String reportName){
         try{
-            String currentReport = selectedArea.findElement(REPORT_BUTTON_ACTIVE).getText().trim();
+/*
+            for(WebElement reportLink : selectedArea.findElements(REPORT_LINKS_FOR_AREA)){
+                if (reportLink.getText().trim().equals(reportName)){
+                    reportLink.click();
+                    return new EAPView(driver);
+                }
+            }
+            String currentReport = selectedArea.findElement(REPORT_BUTTON_SELECTED).getText().trim();
             if (reportName.equals(currentReport)){
                 return new EAPView(driver);
             }
+*/
             WebElement reportLink = selectedArea.findElement(By.linkText(reportName));
             reportLink.click();
             return new EAPView(driver);

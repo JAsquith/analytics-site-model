@@ -36,7 +36,7 @@ public class ReportActionsTab extends AnalyticsComponent {
         return !isDisabled();
     }
     public boolean isDisabled(){
-        if (getTabButton()==null) return false;
+        if (getTabButton()==null) return true;
         return tabButton.getAttribute("class").contains("disabled");
     }
 

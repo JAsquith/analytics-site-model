@@ -14,14 +14,19 @@ import java.util.List;
 
 public class ReportActions_Table extends AnalyticsComponent implements IReportActionGroup{
 
-    private static final By ALL_REPORT_TABLES = By.cssSelector("table.rpt");
+    private static final By ALL_REPORT_TABLES = By.cssSelector("table.rpt:not(#fakeTable)");
+    private static final By ALL_TABLE_TITLES = By.cssSelector(".tableTitle");
     private RemoteWebElement table;
+    private WebElement tableTitle;
+    private List<WebElement> tableLinks;
 
-    public static List<RemoteWebElement> getAllReportTables(RemoteWebDriver driver){
-        List<RemoteWebElement> allTables = new ArrayList<RemoteWebElement>();
-
+    public static List<ReportActions_Table> getAllReportTables(RemoteWebDriver driver){
+        List<ReportActions_Table> allTables = new ArrayList<ReportActions_Table>();
+        List<WebElement> tableTitles = driver.findElements(ALL_TABLE_TITLES);
+        int index = 0;
         for(WebElement table:driver.findElements(ALL_REPORT_TABLES)){
-            allTables.add((RemoteWebElement)table);
+            allTables.add(new ReportActions_Table((RemoteWebElement)table, tableTitles.get(index)));
+            index++;
         }
 
         return allTables;
@@ -29,9 +34,10 @@ public class ReportActions_Table extends AnalyticsComponent implements IReportAc
 
     /* Constructor method
     * ToDo: Javadoc */
-    public ReportActions_Table(RemoteWebDriver aDriver, RemoteWebElement table){
+    public ReportActions_Table(RemoteWebElement table, WebElement title){
         super((RemoteWebDriver)table.getWrappedDriver());
         this.table = table;
+        this.tableTitle = title;
     }
 
     /* Actions available within this component
@@ -41,7 +47,15 @@ public class ReportActions_Table extends AnalyticsComponent implements IReportAc
     * ToDo: Javadoc */
     @Override
     public boolean isEnabled(){
-        return false;
+        this.tableLinks = getTableLinks();
+        return tableLinks.size()>0;
+    }
+
+    private List<WebElement> getTableLinks() {
+        if (tableLinks==null) {
+            return table.findElements(By.tagName("a"));
+        }
+        return tableLinks;
     }
 
     @Override
@@ -58,18 +72,22 @@ public class ReportActions_Table extends AnalyticsComponent implements IReportAc
     public List<String> getOptionsForAction(ReportAction action) {
 
         List<String> options = new ArrayList<String>();
-
+        for (WebElement link:getTableLinks()){
+            options.add("Link "+tableLinks.indexOf(link)+" ["+link.getText()+"]");
+        }
         return options;
     }
 
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
-        return null;
+        String linkIndex = option.substring(6,option.indexOf("[")-1);
+        tableLinks.get(Integer.valueOf(linkIndex)).click();
+        return new EAPView(driver);
     }
 
     @Override
     public String getName() {
-        return "methodsTab";
+        return "Report Table ("+tableTitle.getText().trim()+")";
     }
 
     /*Actions/state queries used within more than one public method */

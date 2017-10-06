@@ -327,6 +327,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
     }
 
     public ReportAction getRequiredAction(){
+        selectTab();
         WebElement fieldWrapperDiv = driver.findElement(REQUIRED_FIELD);
         String fieldLabel = fieldWrapperDiv.findElement(By.tagName("div")).getText().trim();
         switch(fieldLabel){

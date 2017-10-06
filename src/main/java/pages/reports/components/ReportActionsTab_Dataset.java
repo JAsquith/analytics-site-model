@@ -30,6 +30,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     private static final By DATASET_OPTIONS_DIV = By.cssSelector(".list.ds");
     private static final By DATASET_OPTIONS = By.tagName("li");
 
+    private static final By COMPARE_TITLE = By.cssSelector(".dsListTitle.comp");
     private static final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div>span.datasetList");
     private static final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
 
@@ -47,7 +48,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* Querying the state of the page */
     public boolean compareRequired(){
-        WebElement compareDDL = driver.findElement(COMPARE_DROPDOWN);
+        WebElement compareDDL = driver.findElement(COMPARE_TITLE);
         if (compareDDL.getAttribute("class").contains("error")){
             System.out.println("Compare Required");
             return true;

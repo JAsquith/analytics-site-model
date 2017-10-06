@@ -80,6 +80,7 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
             String[] splitOption = option.split("\\[");
             String modalLabel = splitOption[0];
             String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+            modalOption = (modalOption.endsWith("]")) ? modalOption.substring(0,modalOption.length()-1) : modalOption;
             modal.toggleOption(modalLabel, modalOption);
             return modal.applyChanges();
         } else {

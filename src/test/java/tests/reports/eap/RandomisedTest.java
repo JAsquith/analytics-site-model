@@ -7,6 +7,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.*;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
+import pages.reports.components.ReportActions_Table;
 import pages.reports.components.ReportsHome_EAPYearGroup;
 import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
@@ -237,18 +238,23 @@ public class RandomisedTest extends BaseTest {
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
         actionGroups.add(report.navMenu);
         actionGroups.add(report.datasetsTab);
-        //actionGroups.add(report.optionsTab);
+        actionGroups.add(report.optionsTab);
 
         /* Todo: The following 'contingent' actionGroups need to be added:
             - DrillDownActions */
         if (report.filtersTab.isEnabled()) {
-        //    actionGroups.add(report.filtersTab);
+            actionGroups.add(report.filtersTab);
         }
         if (report.measuresTab.isEnabled()) {
-        //    actionGroups.add(report.measuresTab);
+            actionGroups.add(report.measuresTab);
         }
         if (report.residualsTab.isEnabled()) {
-        //    actionGroups.add(report.residualsTab);
+            actionGroups.add(report.residualsTab);
+        }
+        if (!report.isStudentDetailReport() && report.reportTables.size()>0){
+            for (ReportActions_Table table : report.reportTables){
+                actionGroups.add(table);
+            }
         }
 
         String groupsDesc = "[";
