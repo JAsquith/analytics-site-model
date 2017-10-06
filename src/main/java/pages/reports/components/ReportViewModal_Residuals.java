@@ -14,7 +14,8 @@ import java.util.List;
  */
 public class ReportViewModal_Residuals extends ReportViewModal implements IReportModal{
 
-    protected static final By QUAL_NAMES = By.cssSelector(".measureTbl td:nth-of-type(1)");
+    private static final String QUAL_NAMES_CSS = ".measureTbl td:nth-of-type(1)";
+    protected static final By QUAL_NAMES = By.cssSelector(QUAL_NAMES_CSS);
 
     // CONSTRUCTOR
     public ReportViewModal_Residuals(RemoteWebDriver aDriver){
@@ -54,7 +55,7 @@ public class ReportViewModal_Residuals extends ReportViewModal implements IRepor
 
     private String getJSForCheckBox(String qualName, String checkBox){
         String cbIndex = (checkBox == "Exclude") ? "3" : "2";
-        String js = "var names = document.querySelectorAll('"+QUAL_NAMES+"');";
+        String js = "var names = document.querySelectorAll('"+QUAL_NAMES_CSS+"');";
         js += "var cbElement;";
         js += "var parent;";
         js += "var optionType = " + cbIndex +";";

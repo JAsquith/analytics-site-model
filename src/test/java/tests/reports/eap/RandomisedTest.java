@@ -83,6 +83,9 @@ public class RandomisedTest extends BaseTest {
         // If we hit an error page, go back to ReportsHome and re-open a new report
         if(!report.getErrorMessage().equals("")){
             restartFromReportsHome();
+            zeroCohortCount = 0;
+            zeroEntriesCount = 0;
+            return;
         }
 
         // If there are no Students (and we're not on a Student Detail report, or no entries
@@ -238,12 +241,12 @@ public class RandomisedTest extends BaseTest {
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
         actionGroups.add(report.navMenu);
         actionGroups.add(report.datasetsTab);
-        actionGroups.add(report.optionsTab);
+        //actionGroups.add(report.optionsTab);
 
         /* Todo: The following 'contingent' actionGroups need to be added:
             - DrillDownActions */
         if (report.filtersTab.isEnabled()) {
-            actionGroups.add(report.filtersTab);
+            //actionGroups.add(report.filtersTab);
         }
         if (report.measuresTab.isEnabled()) {
             actionGroups.add(report.measuresTab);
@@ -253,7 +256,7 @@ public class RandomisedTest extends BaseTest {
         }
         if (!report.isStudentDetailReport() && report.reportTables.size()>0){
             for (ReportActions_Table table : report.reportTables){
-                actionGroups.add(table);
+                //actionGroups.add(table);
             }
         }
 
@@ -273,7 +276,7 @@ public class RandomisedTest extends BaseTest {
             actions = group.getValidActionsList();
             logToAllure(++logCount, "GroupActions: " + actions);
             action = actions.get(rnd.nextInt(actions.size()));
-            logToAllure(++logCount, "Chosen Actions: " + action);
+            logToAllure(++logCount, "Chosen Action: " + action.name.toUpperCase());
         } catch (Exception e) {
             logToAllure(++logCount,"Exception getting valid Test Action for Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
             throw e;

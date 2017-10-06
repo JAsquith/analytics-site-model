@@ -164,8 +164,8 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
                 String areaName = option.split("\\[")[0];
                 String reportName = option.split("\\[")[1];
                 reportName = reportName.substring(0, reportName.length()-1);
-                selectArea(areaName);
-                return selectReport(reportName);
+                WebElement area = selectArea(areaName);
+                return selectReport(area, reportName);
             case NEW_REPORT:
                 return selectReport(option);
             case NEW_GROUPING:
