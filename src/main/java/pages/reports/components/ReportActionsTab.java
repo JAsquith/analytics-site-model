@@ -41,19 +41,13 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
 
     public boolean isActive(){
-        return getTabContentsDiv()!=null;
+        return !isInactive();
     }
     public boolean isInactive() {
         return getTabContentsDiv()==null;
     }
 
-    public boolean isExpanded(){
-        if(isInactive()){
-            throw new IllegalStateException("Tab '" + tabName + "' is not currently active");
-        }
-        return getTabContentsDiv().getAttribute("class").contains("open");
-    }
-    public boolean canExpand(){
+    public boolean resizeable(){
         if(isInactive()){
             throw new IllegalStateException("Tab '" + tabName + "' is not currently active");
         }
@@ -61,10 +55,21 @@ public class ReportActionsTab extends AnalyticsComponent {
         if(expandButtons.size()==0){
             return false;
         }
-        if(!expandButtons.get(0).isDisplayed()){
-            return false;
+        return expandButtons.get(0).isDisplayed();
+    }
+    public boolean isExpanded(){
+        if(isInactive()){
+            throw new IllegalStateException("Tab '" + tabName + "' is not currently active");
         }
-        return isExpanded();
+        waitShort.until(resizeComplete());
+        return getTabContentsDiv().getAttribute("class").contains("open");
+    }
+    public boolean isCollapsed(){
+        return resizeable() && !isExpanded();
+    }
+
+    public boolean canExpand(){
+        return resizeable() && !isExpanded();
     }
 
     public ReportActionsTab selectTab(){

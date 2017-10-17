@@ -11,6 +11,7 @@ import pages.reports.components.ReportActions_Table;
 import pages.reports.components.ReportsHome_EAPYearGroup;
 import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
+import utils.ReportActionSet;
 
 import java.util.*;
 
@@ -23,9 +24,6 @@ public class RandomisedTest extends BaseTest {
     private ReportsHome_EAP reportsHome;
     private ReportsHome_EAPYearGroup yearDataGroup;
     private WebElement reportSet;
-    private IReportActionGroup group;
-    private ReportAction action;
-    private String option;
     private int zeroCohortCount = 0;
     private int zeroEntriesCount = 0;
     private int requiredFieldsCount = 0;
@@ -63,11 +61,9 @@ public class RandomisedTest extends BaseTest {
         try {
             // logToAllure(++logCount, String.format("Test %s of %s",loopIndex, maxLoops));
 
-            resetActionOptions();
+            ReportActionSet actionSet = buildActionSet(rnd);
 
-            buildAction(rnd);
-
-            report = applyRandomAction(group, group.getName(), action, option, action.name());
+            report = applyRandomAction(actionSet, actionSet.getDescription());
 
         } catch (Exception e){
             saveScreenshot(context.getName()+"4_testException.png");
@@ -107,20 +103,20 @@ public class RandomisedTest extends BaseTest {
         if (requiredFieldsCount>1) {
             Random rnd = new Random();
             while (compareDSRequired || requiredOptionFieldsCount > 0) {
+                ReportActionSet actionSet = new ReportActionSet(report.datasetsTab);
                 if (compareDSRequired) {
-                    group = report.datasetsTab;
-                    action = ReportAction.CHANGE_COMPARE;
-                    List<String> options = group.getOptionsForAction(action);
-                    option = options.get(rnd.nextInt(options.size() - 1) + 1);
-                    report = applyRandomAction(group, group.getName(), action, option, action.name());
+                    actionSet.action = ReportAction.CHANGE_COMPARE;
+                    List<String> options = actionSet.group.getOptionsForAction(actionSet.action);
+                    actionSet.option = options.get(rnd.nextInt(options.size() - 1) + 1);
+                    report = applyRandomAction(actionSet, actionSet.getDescription());
                     requiredFieldsCount--;
                     compareDSRequired=false;
                 } else {
-                    group = report.optionsTab;
-                    action = report.optionsTab.getRequiredAction();
-                    List<String> options = group.getOptionsForAction(action);
-                    option = options.get(rnd.nextInt(options.size() - 1) + 1);
-                    report = applyRandomAction(group, group.getName(), action, option, action.name());
+                    actionSet.group = report.optionsTab;
+                    actionSet.action = report.optionsTab.getRequiredAction();
+                    List<String> options = actionSet.group.getOptionsForAction(actionSet.action);
+                    actionSet.option = options.get(rnd.nextInt(options.size() - 1) + 1);
+                    report = applyRandomAction(actionSet, actionSet.getDescription());
                     requiredFieldsCount--;
                     requiredOptionFieldsCount--;
                 }
@@ -216,36 +212,38 @@ public class RandomisedTest extends BaseTest {
     }
 
     @Step( "Build a new TestAction" )
-    private void buildAction(Random rnd){
+    private ReportActionSet buildActionSet(Random rnd){
         saveScreenshot(context.getName()+"1_beforeBuild.png");
-        group = report.navMenu;
-        action = ReportAction.NULL;
-        option = "Null";
 
-        chooseActionGroup(rnd);
-        chooseAction(rnd);
-        chooseActionOption(rnd);
+        ReportActionSet actionSet = new ReportActionSet(report.navMenu);
+
+        actionSet.group = chooseActionGroup(rnd);
+        actionSet.action = chooseAction(actionSet.group, rnd);
+        actionSet.option =  chooseActionOption(actionSet, rnd);
+
+        return actionSet;
     }
 
-    private void chooseActionGroup(Random rnd) {
+    private IReportActionGroup chooseActionGroup(Random rnd) {
+        IReportActionGroup actionGroup;
         try {
             List<IReportActionGroup> actionGroups = getActionGroupList();
-            group = actionGroups.get(rnd.nextInt(actionGroups.size()));
-            logToAllure(++logCount, "Chosen Group: " + group.getName());
+            actionGroup = actionGroups.get(rnd.nextInt(actionGroups.size()));
+            logToAllure(++logCount, "Chosen Group: " + actionGroup.getName());
         } catch (Exception e) {
             logToAllure(++logCount,"Exception getting valid Action Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
             throw e;
         }
+        return actionGroup;
     }
 
     private List<IReportActionGroup> getActionGroupList(){
         List<IReportActionGroup> actionGroups = new ArrayList<IReportActionGroup>();
         actionGroups.add(report.navMenu);
+
         actionGroups.add(report.datasetsTab);
         actionGroups.add(report.optionsTab);
 
-        /* Todo: The following 'contingent' actionGroups need to be added:
-            - DrillDownActions */
         if (report.filtersTab.isEnabled()) {
             actionGroups.add(report.filtersTab);
         }
@@ -271,31 +269,36 @@ public class RandomisedTest extends BaseTest {
         return actionGroups;
     }
 
-    private void chooseAction(Random rnd) {
+    private ReportAction chooseAction(IReportActionGroup actionGroup, Random rnd) {
+        ReportAction reportAction;
         try {
             List<ReportAction> actions;
-            actions = group.getValidActionsList();
+            actions = actionGroup.getValidActionsList();
             logToAllure(++logCount, "GroupActions: " + actions);
-            action = actions.get(rnd.nextInt(actions.size()));
-            logToAllure(++logCount, "Chosen Action: " + action.name.toUpperCase());
+            reportAction = actions.get(rnd.nextInt(actions.size()));
+            logToAllure(++logCount, "Chosen Action: " + reportAction.toString().toUpperCase());
         } catch (Exception e) {
             logToAllure(++logCount,"Exception getting valid Test Action for Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
             throw e;
         }
         // Check whether we have any stored lists of actionOptions for actions which may change due to this current action:
-        if(actionOptionsToResetOn.containsKey(action.name)){
+        if(actionOptionsToResetOn.containsKey(reportAction.name)){
             // We do!  Clear them out so if those actions are re-run the options list is re-built:
-            for(ReportAction actionToReset : actionOptionsToResetOn.get(action.name)){
+            for(ReportAction actionToReset : actionOptionsToResetOn.get(reportAction.name)){
                 staticOptionsForAction.remove(actionToReset);
             }
-            actionOptionsToResetOn.remove(action.name);
+            actionOptionsToResetOn.remove(reportAction.name);
         }
+        return reportAction;
     }
 
-    private void chooseActionOption(Random rnd) {
+    private String chooseActionOption(ReportActionSet actionSet, Random rnd) {
+        IReportActionGroup group = actionSet.group;
+        ReportAction action = actionSet.action;
+        String actionOption = "";
         try {
             List<String> actionOptions;
-            if (action.optionsStatic){
+            if (action.isStatic()){
                 // The options for this action may be stored for re-use
                 // Check if we have a copy of them from a previous test
                 if (staticOptionsForAction.containsKey(action)) {
@@ -322,29 +325,31 @@ public class RandomisedTest extends BaseTest {
                 actionOptions = group.getOptionsForAction(action);
             }
             logToAllure(++logCount, "TestActionOptions: " + actionOptions);
-            option = actionOptions.get(rnd.nextInt(actionOptions.size()));
-            logToAllure(++logCount, "Chosen Option: " + option);
+            actionOption = actionOptions.get(rnd.nextInt(actionOptions.size()));
+            logToAllure(++logCount, "Chosen Option: " + actionOption);
         } catch (Exception e){
             logToAllure(++logCount,"Exception getting options for TestAction: "+e.getClass().getName()+System.lineSeparator()+ "Exception message: "+e.getMessage());
             throw e;
         }
+        return actionOption;
     }
 
-    @Step( "{groupName} > {actionName} > {option}" )
-    private EAPView applyRandomAction(IReportActionGroup group, String groupName, ReportAction action, String option, String actionName){
+    @Step( "{description}" )
+    private EAPView applyRandomAction(ReportActionSet actionSet, String description){
         saveScreenshot(context.getName()+"2_beforeApply.png");
-        EAPView newView = group.applyActionOption(action, option);
+        EAPView newView = actionSet.group.applyActionOption(actionSet.action, actionSet.option);
         assertWithScreenshot("Applying a Report Option/Action should not error",
                 report.getErrorMessage(), isEmptyOrNullString());
         saveScreenshot(context.getName()+"3_success.png");
-        return newView;
-    }
 
-    @Step( "Reset TestAction elements" )
-    private void resetActionOptions(){
-        group = null;
-        action = ReportAction.NULL;
-        option = "";
+        if(actionSet.action.subAction != null){
+            ReportActionSet subActionSet = new ReportActionSet(actionSet.group);
+            subActionSet.action = actionSet.action.subAction;
+            subActionSet.option = chooseActionOption(subActionSet, new Random());
+            newView = applyRandomAction(subActionSet, subActionSet.getDescription());
+        }
+
+        return newView;
     }
 
     @DataProvider(name = "randomLoops")
