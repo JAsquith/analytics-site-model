@@ -2,18 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Regression Setup" parallel="tests" thread-count="4">
 
+    <listeners>
+        <listener class-name="listeners.LinkedTestsSuiteListener"/>
+    </listeners>
+
     <suite-files>
 
-        <suite-file path="DevTests.xml" />
+        <!-- 
+		<suite-file path="AuthGroupTests.xml" />
+		-->
 
-        <!--
-        <suite-file path="DevTests.xml" />
-
-        <suite-file path="AuthGroupTests.xml" />
-
-        <suite-file path="ReportFigureTests.xml" />
--->
-
+		<suite-file path="ReportFigureTests.xml" />
+		<suite-file path="RandomTests.xml" />
 
     </suite-files>
 

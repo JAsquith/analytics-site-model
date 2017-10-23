@@ -169,7 +169,9 @@ public class ReportActionsTab extends AnalyticsComponent {
 
             @Override
             public String toString() {
-                return "The Tab button's class attribute contains 'active'";
+
+                String s = tabButton.getAttribute("class");
+                return String.format("the tab button's class attribute (%s) to contain 'active'",s);
             }
         };
     }
@@ -190,7 +192,8 @@ public class ReportActionsTab extends AnalyticsComponent {
 
             @Override
             public String toString() {
-                return "The Tab (div.pan) element's style attribute contains 'overflow'";
+                String s = getTabContentsDiv().getAttribute("style");
+                return String.format ("the Tab (div.pan) element's style attribute (%s) to not contain 'overflow'", s);
             }
         };
     }

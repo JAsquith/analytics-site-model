@@ -97,7 +97,12 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         WebElement currentGrouping;
         try{
             currentGrouping = selectedAreaDiv.findElement(GROUPING_SELECTED);
-            if (currentGrouping.getText().trim().equals(targetGrouping)) return new EAPView(driver);
+            if (currentGrouping.getText().trim().equals(targetGrouping)) {
+                targetGrouping = targetGrouping.equals("Quals") ? "Qualifications" : targetGrouping;
+                WebElement groupingSpan = currentGroupingSet.findElement(By.tagName("span"));
+                groupingSpan.click();
+                return new EAPView(driver);
+            }
         } catch (NoSuchElementException e) {
             // This caters for the case that the active and selected area/report are different
             // Bad coding style, but f*** it!
@@ -194,16 +199,15 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
     }
 
     private WebElement selectArea(WebElement targetArea){
+        String s = "trying to select Area '"+targetArea.getText();
         try {
             if (!areasAreEqual(getSelectedArea(), targetArea)){
                 targetArea.click();
-                waitTiny.until(reportGroupDisplayed(targetArea));// TimeoutException
+                waitTiny.until(reportGroupDisplayed(targetArea));
             }
             return targetArea;
         } catch (NoSuchElementException e){
-            throw new WebDriverException("NSEE trying to select Area '"+targetArea.getText()+"'; "+e.getMessage());
-        } catch (TimeoutException e){
-            throw new WebDriverException("Timeout Exception waiting for ReportGroups");
+            throw new WebDriverException("NSEE " + s + "'; "+e.getMessage());
         }
     }
 
@@ -282,9 +286,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
                 try {
                     WebElement reportGroup = area.findElement(REPORT_GROUPS);
                     String style = reportGroup.getAttribute("style");
-                    if (style.contains("scroll")) return null;
                     if (style.contains("overflow")) return null;
-                    //if (style.equals("")) return true;
                     if (style.equals("display: block;")) return true;
                     return true;
                 } catch (StaleElementReferenceException e) {
@@ -295,7 +297,8 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
             @Override
             public String toString() {
                 String areaName = area.findElement(By.cssSelector(".areaName")).getText().trim();
-                return "The Report Group for " + areaName + " has stopped scrolling";
+                String s = area.findElement(REPORT_GROUPS).getAttribute("style");
+                return String.format("Style attribute (%s) of Report Group for %areaName to not contain 'overflow'", s, areaName);
             }
         };
     }

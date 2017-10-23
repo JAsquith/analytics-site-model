@@ -4,24 +4,8 @@
 
     <parameter name="debug" value="false" />
 
-    <test name="Milton #1 - Headlines Summary - Attainment/Progress 8 Summary">
-        <parameter name="test-id" value="000019" />
-        <parameter name="username" value="demtes185072" />
-        <parameter name="password" value="DsBjFrGy2" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="section-name" value="Attainment/Progress 8 Summary" />
-        <parameter name="expected-report-figures-file" value="something.csv" />
-
-        <classes>
-            <class name="tests.reports.eap.headlines.MeasureFigures" />
-        </classes>
-    </test>
-
     <test name="Andy #1 - A8P8 Overview Filters - P8">
-        <parameter name="test-id" value="000020" />
+        <parameter name="test-id" value="AR000020" />
         <parameter name="username" value="roand171650" />
         <parameter name="password" value="Funkad3lic" />
         <parameter name="keystage" value="6" />
@@ -45,7 +29,7 @@
     </test>
 
     <test name="Ian #1 - Headline Filters - Positive P8">
-        <parameter name="test-id" value="000021" />
+        <parameter name="test-id" value="IJ000021" />
         <parameter name="username" value="oneaut185180" />
         <parameter name="password" value="KcZiGnGh6" />
         <parameter name="keystage" value="6" />
@@ -63,7 +47,7 @@
     </test>
 
     <test name="Ian #2 - EBacc Strong Pass Filters - EBacc Standard Pass">
-        <parameter name="test-id" value="000022" />
+        <parameter name="test-id" value="IJ000022" />
         <parameter name="username" value="twoaut185182" />
         <parameter name="password" value="AbDoWnHq9" />
         <parameter name="keystage" value="6" />
@@ -82,7 +66,7 @@
     </test>
 
     <test name="Ian #3 - EBacc Standard Pass Filters - EBacc Strong Pass">
-        <parameter name="test-id" value="000023" />
+        <parameter name="test-id" value="IJ000023" />
         <parameter name="username" value="thraut185184" />
         <parameter name="password" value="CkGkPsSc3" />
         <parameter name="keystage" value="6" />
@@ -101,7 +85,7 @@
     </test>
 
     <test name="Ian #4 - A8P8 Overview Students - KS2 Prior">
-        <parameter name="test-id" value="000024" />
+        <parameter name="test-id" value="IJ000024" />
         <parameter name="username" value="oneaut185273" />
         <parameter name="password" value="RdDsRtUj4" />
         <parameter name="keystage" value="6" />
@@ -119,7 +103,7 @@
     </test>
 
     <test name="Ian #5 - A8P8 Overview Filters - KS2 Prior">
-        <parameter name="test-id" value="000025" />
+        <parameter name="test-id" value="IJ000025" />
         <parameter name="username" value="twoaut185274" />
         <parameter name="password" value="QpFdUgMw6" />
         <parameter name="keystage" value="6" />
@@ -137,7 +121,7 @@
     </test>
 
     <test name="Mark #1 - Grades Overview Students - Average Points">
-        <parameter name="test-id" value="000026" />
+        <parameter name="test-id" value="MS000026" />
         <parameter name="username" value="tesmar185342" />
         <parameter name="password" value="FfWbNjMf9" />
         <parameter name="keystage" value="6" />
@@ -157,7 +141,7 @@
     </test>
 
     <test name="Mark #2 - A8/P8 Overview Students - KS2 Prior">
-        <parameter name="test-id" value="000027" />
+        <parameter name="test-id" value="MS000027" />
         <parameter name="username" value="tesmar185343" />
         <parameter name="password" value="AtSxEaNn8" />
         <parameter name="keystage" value="6" />
@@ -178,7 +162,7 @@
     </test>
 
     <test name="Mark #3 - Basics Contribution Filters - KS2 Eng">
-        <parameter name="test-id" value="000028" />
+        <parameter name="test-id" value="MS000028" />
         <parameter name="username" value="tesmar185344" />
         <parameter name="password" value="WbJuRuTu9" />
         <parameter name="keystage" value="6" />
@@ -201,7 +185,7 @@
     </test>
 
     <test name="Mark #4 - VA Overview Students - Sci VA">
-        <parameter name="test-id" value="000029" />
+        <parameter name="test-id" value="MS000029" />
         <parameter name="username" value="tesmar185345" />
         <parameter name="password" value="WnCcWrCo4" />
         <parameter name="keystage" value="6" />
@@ -223,7 +207,7 @@
     </test>
 
     <test name="Mark #5 - EBacc Standard Filters - StdPass">
-        <parameter name="test-id" value="000030" />
+        <parameter name="test-id" value="MS000030" />
         <parameter name="username" value="tesmar185346" />
         <parameter name="password" value="GcJzMoPs6" />
         <parameter name="keystage" value="6" />
@@ -245,7 +229,7 @@
     </test>
 
     <test name="Mark #6 - Grades Grade List Students - KS2 Banding">
-        <parameter name="test-id" value="000031" />
+        <parameter name="test-id" value="MS000031" />
         <parameter name="username" value="tesmar185347" />
         <parameter name="password" value="TpWfArWt7" />
         <parameter name="keystage" value="6" />

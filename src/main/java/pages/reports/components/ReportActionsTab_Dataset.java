@@ -31,7 +31,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     private static final By DATASET_OPTIONS = By.tagName("li");
 
     private static final By COMPARE_TITLE = By.cssSelector(".dsListTitle.comp");
-    private static final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div>span.datasetList");
+    private static final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div span.datasetList");
     private static final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
 
     private static final By TRACKER_COL_DDL = By.id("TrackerColDDL");
