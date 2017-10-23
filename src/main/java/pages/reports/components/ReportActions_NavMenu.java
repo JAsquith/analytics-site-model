@@ -103,6 +103,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
             // Bad coding style, but f*** it!
         }
         try{
+            targetGrouping = targetGrouping.equals("Quals") ? "Qualifications" : targetGrouping;
             WebElement groupingLink = currentGroupingSet.findElement(By.partialLinkText(targetGrouping));
             groupingLink.click();
             waitForLoadingWrapper();

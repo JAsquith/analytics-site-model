@@ -76,6 +76,7 @@ public class ReportActionsTab extends AnalyticsComponent {
         if (!getTabButton().getAttribute("class").contains("active")){
             getTabButton().click();
             waitShort.until(tabSwitchComplete());
+            waitForLoadingWrapper();
         }
         return this;
     }
@@ -168,7 +169,7 @@ public class ReportActionsTab extends AnalyticsComponent {
 
             @Override
             public String toString() {
-                return "The Tab's button has the 'open' class";
+                return "The Tab button's class attribute contains 'active'";
             }
         };
     }
@@ -189,7 +190,7 @@ public class ReportActionsTab extends AnalyticsComponent {
 
             @Override
             public String toString() {
-                return "The Tab's 'pan' div doesn't have the overflow css attribute";
+                return "The Tab (div.pan) element's style attribute contains 'overflow'";
             }
         };
     }
