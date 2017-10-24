@@ -54,22 +54,38 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         actions.add(ReportAction.TOGGLE_MEASURE);
+
+        if (getTabButton().findElements(RESET_ICON).size()>0){
+            actions.add(ReportAction.RESET_MEASURES);
+        }
+
         return actions;
     }
 
     @Override
     public List<String> getOptionsForAction(ReportAction action) {
-        selectAndExpandTab();
-
         List<String> options = new ArrayList<String>();
 
-        IReportModal modal = openModal();
+        switch (action){
+            case TOGGLE_MEASURE:
+                selectAndExpandTab();
 
-        for (String optionGroup : modal.getGroupsList()){
-            List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
-            for(String value : optionGroupValues){
-                options.add(optionGroup+"["+value+"]");
-            }
+                IReportModal modal = openModal();
+
+                for (String optionGroup : modal.getGroupsList()){
+                    List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
+                    for(String value : optionGroupValues){
+                        options.add(optionGroup+"["+value+"]");
+                    }
+                }
+                break;
+
+            case RESET_MEASURES:
+                options.add("Reset");
+                break;
+
+            default:
+                throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Measures tab");
         }
 
         return options;
@@ -78,21 +94,27 @@ public class ReportActionsTab_Measures extends ReportActionsTab implements IRepo
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
 
-        if(action == ReportAction.TOGGLE_MEASURE){
-            IReportModal modal;
-            if (ReportViewModal.isModalOpen(driver))
-                modal = new ReportViewModal_Measures(driver);
-            else
-                modal = openModal();
+        switch (action){
+            case TOGGLE_MEASURE:
+                IReportModal modal;
+                if (ReportViewModal.isModalOpen(driver))
+                    modal = new ReportViewModal_Measures(driver);
+                else
+                    modal = openModal();
 
-            String[] splitOption = option.split("\\[");
-            String modalLabel = splitOption[0];
-            String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
-            modalOption = (modalOption.endsWith("]")) ? modalOption.substring(0,modalOption.length()-1) : modalOption;
-            modal.toggleOption(modalLabel, modalOption);
-            return modal.applyChanges();
-        } else {
-            throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Measures tab");
+                String[] splitOption = option.split("\\[");
+                String modalLabel = splitOption[0];
+                String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+                modalOption = (modalOption.endsWith("]")) ? modalOption.substring(0,modalOption.length()-1) : modalOption;
+                modal.toggleOption(modalLabel, modalOption);
+                return modal.applyChanges();
+
+            case RESET_MEASURES:
+                this.resetTab();
+                return new EAPView(driver);
+
+            default:
+                throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Measures tab");
         }
     }
 

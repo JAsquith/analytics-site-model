@@ -48,43 +48,62 @@ public class ReportActionsTab_Filters extends ReportActionsTab implements IRepor
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         actions.add(ReportAction.TOGGLE_FILTER);
+
+        // Reset option
+        if (getTabButton().findElements(RESET_ICON).size()>0){
+            actions.add(ReportAction.RESET_FILTERS);
+        }
+
         return actions;
     }
 
     @Override
     public List<String> getOptionsForAction(ReportAction action) {
-        selectAndExpandTab();
-
         List<String> options = new ArrayList<String>();
 
-        IReportModal modal = openModal();
+        switch (action){
+            case TOGGLE_FILTER:
+                selectAndExpandTab();
+                IReportModal modal = openModal();
 
-        for (String optionGroup : modal.getGroupsList()){
-            List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
-            for(String value : optionGroupValues){
-                options.add(optionGroup+"["+value+"]");
-            }
+                for (String optionGroup : modal.getGroupsList()){
+                    List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
+                    for(String value : optionGroupValues){
+                        options.add(optionGroup+"["+value+"]");
+                    }
+                }
+                break;
+            case RESET_FILTERS:
+                options.add("Reset");
+                break;
+            default:
+                throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Filters tab");
         }
-
         return options;
     }
 
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
-        if(action == ReportAction.TOGGLE_FILTER){
-            IReportModal modal;
-            if (ReportViewModal.isModalOpen(driver))
-                modal = new ReportViewModal_Filters(driver);
-            else
-                modal = openModal();
+        switch (action){
+            case TOGGLE_FILTER:
+                IReportModal modal;
+                if (ReportViewModal.isModalOpen(driver))
+                    modal = new ReportViewModal_Filters(driver);
+                else
+                    modal = openModal();
 
-            String[] splitOption = option.split("\\[");
-            String modalLabel = splitOption[0];
-            String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
-            modal.toggleOption(modalLabel, modalOption);
-            return modal.applyChanges();
-        } else {
-            throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Filters tab");
+                String[] splitOption = option.split("\\[");
+                String modalLabel = splitOption[0];
+                String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+                modal.toggleOption(modalLabel, modalOption);
+                return modal.applyChanges();
+
+            case RESET_FILTERS:
+                this.resetTab();
+                return new EAPView(driver);
+
+            default:
+                throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Filters tab");
         }
     }
 

@@ -47,22 +47,35 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
     public List<ReportAction> getValidActionsList() {
         List<ReportAction> actions = new ArrayList<ReportAction>();
         actions.add(ReportAction.TOGGLE_EXCLUSION);
+
+        if (getTabButton().findElements(RESET_ICON).size()>0) actions.add(ReportAction.RESET_EXCLUSIONS);
+
         return actions;
     }
 
     @Override
     public List<String> getOptionsForAction(ReportAction action) {
-        selectAndExpandTab();
-
         List<String> options = new ArrayList<String>();
+        switch (action){
+            case TOGGLE_EXCLUSION:
+                selectAndExpandTab();
 
-        IReportModal modal = openModal();
+                IReportModal modal = openModal();
 
-        for (String optionGroup : modal.getGroupsList()){
-            List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
-            for(String value : optionGroupValues){
-                options.add(optionGroup+"["+value+"]");
-            }
+                for (String optionGroup : modal.getGroupsList()){
+                    List<String> optionGroupValues = modal.getValuesForGroup(optionGroup);
+                    for(String value : optionGroupValues){
+                        options.add(optionGroup+"["+value+"]");
+                    }
+                }
+                break;
+
+            case RESET_EXCLUSIONS:
+                options.add("Reset");
+                break;
+
+            default:
+                throw new IllegalArgumentException(action.name()+" is not a valid action on the Residual Exclusions tab");
         }
 
         return options;
@@ -70,21 +83,27 @@ public class ReportActionsTab_Residuals extends ReportActionsTab implements IRep
 
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
-        if(action == ReportAction.TOGGLE_EXCLUSION){
-            IReportModal modal;
-            if (ReportViewModal.isModalOpen(driver))
-                modal = new ReportViewModal_Residuals(driver);
-            else
-                modal = openModal();
+        switch (action){
+            case TOGGLE_EXCLUSION:
+                IReportModal modal;
+                if (ReportViewModal.isModalOpen(driver))
+                    modal = new ReportViewModal_Residuals(driver);
+                else
+                    modal = openModal();
 
-            String[] splitOption = option.split("\\[");
-            String modalLabel = splitOption[0];
-            String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
-            modalOption = (modalOption.endsWith("]")) ? modalOption.substring(0,modalOption.length()-1) : modalOption;
-            modal.toggleOption(modalLabel, modalOption);
-            return modal.applyChanges();
-        } else {
-            throw new IllegalArgumentException("Unexpected ReportAction ("+action+") on Residuals tab");
+                String[] splitOption = option.split("\\[");
+                String modalLabel = splitOption[0];
+                String modalOption = splitOption[1].substring(0,splitOption[1].length()-1);
+                modalOption = (modalOption.endsWith("]")) ? modalOption.substring(0,modalOption.length()-1) : modalOption;
+                modal.toggleOption(modalLabel, modalOption);
+                return modal.applyChanges();
+
+            case RESET_EXCLUSIONS:
+                this.resetTab();
+                return new EAPView(driver);
+
+            default:
+                throw new IllegalArgumentException(action.name()+" is not a valid action on the Residual Exclusions tab");
         }
     }
 

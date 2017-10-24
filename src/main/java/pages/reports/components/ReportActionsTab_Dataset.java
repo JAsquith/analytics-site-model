@@ -164,11 +164,23 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         selectAndExpandTab();
 
         List<ReportAction> actions = new ArrayList();
+
+        // Focus Dataset options
         actions.add(ReportAction.CHANGE_FOCUS);
         WebElement vtp = getViewTrackProject();
         if (vtp.findElements(VTP_ALL_AVAIL).size()>0){
             actions.add(ReportAction.FOCUS_VTP);
         }
+
+        // Tracker options
+        List<WebElement> trackerColDDLs = driver.findElements(TRACKER_COL_DDL);
+        if(trackerColDDLs.size()>0){
+            if(trackerColDDLs.get(0).isDisplayed()){
+                actions.add(ReportAction.TRACKER_COLUMN);
+            }
+        }
+
+        // Compare dataset options
         if (driver.findElements(COMPARE_DROPDOWN).size()>0){
             actions.add(ReportAction.CHANGE_COMPARE);
             vtp = getViewTrackProject(true);
@@ -176,10 +188,12 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 actions.add(ReportAction.COMPARE_VTP);
             }
         }
-        List<WebElement> trackerColDDLs = driver.findElements(TRACKER_COL_DDL);
-        if(trackerColDDLs.size()>0){
-            if(trackerColDDLs.get(0).isDisplayed()) actions.add(ReportAction.TRACKER_COLUMN);
+
+        // Reset option
+        if (getTabButton().findElements(RESET_ICON).size()>0){
+            actions.add(ReportAction.RESET_DATASETS);
         }
+
         return actions;
     }
 
@@ -196,6 +210,10 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 return getVTPOptions(true);
             case TRACKER_COLUMN:
                 return getTrackerColumns();
+            case RESET_DATASETS:
+                List<String> options = new ArrayList<String>();
+                options.add("Reset");
+                return options;
             default:
                 throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Datasets tab");
         }
@@ -214,6 +232,8 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
                 return showCompareDataAs(option);
             case TRACKER_COLUMN:
                 selectTrackerColumn(option);
+            case RESET_DATASETS:
+                this.resetTab();
             default:
                 throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Datasets tab");
         }

@@ -10,6 +10,7 @@ public enum ReportAction {
     CHANGE_COMPARE("Change Compare"),
     COMPARE_VTP("Show Compare As"),
     TRACKER_COLUMN("Change Tracker Column"),
+    RESET_DATASETS("Reset"),
 
     // Actions on the Options tab
     EAP_TRACKING("Filter By Track Status"),
@@ -28,13 +29,19 @@ public enum ReportAction {
     IN_A8_BASKET("Select In A8 Basket"),
     STUDENT("Select Student", CHANGE_FOCUS.name),
     STUDENT_INFO("Select Student Info"),
+    RESET_OPTIONS("Reset"),
 
     // Actions on the Filters tab
     TOGGLE_FILTER("Toggle Filter", CHANGE_FOCUS.name),
+    RESET_FILTERS("Reset"),
+
     // Actions on the Measures tab
     TOGGLE_MEASURE("Toggle Measure", CHANGE_FOCUS.name),
+    RESET_MEASURES("Reset"),
+
     // Actions on the Residual Exclusions tab
     TOGGLE_EXCLUSION("Toggle Qualification Exclusion", CHANGE_FOCUS.name),
+    RESET_EXCLUSIONS("Reset"),
 
     // Actions in the View Navigation menu
     NEW_AREA_AND_REPORT("Select a random Area & Report"),

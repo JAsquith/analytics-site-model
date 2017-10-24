@@ -388,6 +388,7 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
         if(optionIsEnabled(COMP_GRADE_FILTER_SUB_DDL)) actions.add(ReportAction.COMPARE_SUB_GRADE);
         if(optionIsEnabled(IN_A8_BASKET_DDL)) actions.add(ReportAction.IN_A8_BASKET);
         if(optionIsEnabled(STUDENT_FILTER_DDL)) actions.add(ReportAction.STUDENT);
+        if(getTabButton().findElements(RESET_ICON).size()>0) actions.add(ReportAction.RESET_OPTIONS);
         return actions;
     }
 
@@ -412,6 +413,11 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
             case IN_A8_BASKET:
             case STUDENT:
                 return getDDLOptions(action);
+            case RESET_OPTIONS:
+                List<String> options = new ArrayList<String>();
+                options.add("Reset");
+                return options;
+
             default:
                 throw new IllegalArgumentException(action.name()+" is not a valid action on the Options tab");
         }
@@ -419,15 +425,19 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
 
     @Override
     public EAPView applyActionOption(ReportAction action, String option) {
-        super.selectAndExpandTab();
-        if(action.equals(ReportAction.EAP_TRACKING)){
-            filterByTrack(option);
-        } else {
-            WebElement targetDDL = driver.findElement(getLocatorForDDLAction(action));
-            new Select(targetDDL).selectByVisibleText(option);
-            waitForLoadingWrapper();
+        switch (action){
+            case EAP_TRACKING:
+                filterByTrack(option);
+                break;
+            case RESET_OPTIONS:
+                this.resetTab();
+                break;
+            default:
+                selectAndExpandTab();
+                WebElement targetDDL = driver.findElement(getLocatorForDDLAction(action));
+                new Select(targetDDL).selectByVisibleText(option);
         }
-        return new EAPListView(driver);
+        return new EAPView(driver);
     }
 
     @Override
