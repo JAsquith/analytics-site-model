@@ -149,6 +149,14 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     @Override
     public List<String> getOptionsForAction(ReportAction action) {
+        // If the navMenu is obscured by an expanded tab, collapse the tab
+        ReportActionsTab currentTab = new EAPView(driver).getCurrentTab();
+        if (currentTab!=null){
+            if (currentTab.isExpanded()){
+                currentTab.collapseTab();
+            }
+        }
+
         switch(action){
             case NEW_AREA_REPORT_AND_GROUPING:
                 return getAreaChangeOptions();

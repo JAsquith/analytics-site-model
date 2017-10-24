@@ -96,6 +96,14 @@ public class EAPView extends AnalyticsPage{
     }
 
     //  - QUERYING THE STATE OF THE PAGE
+    public ReportActionsTab getCurrentTab(){
+        if (datasetsTab.isActive()) return datasetsTab;
+        if (optionsTab.isActive()) return optionsTab;
+        if (filtersTab.isActive()) return filtersTab;
+        if (measuresTab.isActive()) return measuresTab;
+        if (residualsTab.isActive()) return residualsTab;
+        return null;
+    }
     public int getCohortCount(){
         List<WebElement> cohortCountBadges = driver.findElements(COHORT_COUNT_BADGE);
         if (cohortCountBadges.size()==0){
