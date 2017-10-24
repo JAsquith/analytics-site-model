@@ -4,7 +4,10 @@ import enums.ReportAction;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.testng.ITestContext;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
 import pages.reports.components.ReportActions_Table;
@@ -72,9 +75,21 @@ public class RandomisedTest extends BaseTest {
             logToAllure(++logCount, "Stack trace: "+getStackTraceAsString(e));
             throw e;
         }
+
+        try {
+            postActionChecks();
+            assertWithScreenshot("PostActionChecks should not cause a a Report to error",
+                    report.getErrorMessage(), isEmptyOrNullString());
+        } catch (AssertionError assertionError){
+            restartFromReportsHome();
+            zeroCohortCount = 0;
+            zeroEntriesCount = 0;
+            throw assertionError;
+        }
+
     }
 
-    @AfterMethod
+//    @AfterMethod
     public void postActionChecks(){
 
         // If we hit an error page, go back to ReportsHome and re-open a new report

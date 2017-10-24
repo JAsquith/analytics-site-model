@@ -1,6 +1,7 @@
 package pages.reports.components;
 
 import enums.ReportAction;
+import enums.ReportViewType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -345,6 +346,22 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         }
         return optionNames;
     }
+
+    private ReportViewType getFocusReportViewType() {
+        return getFocusReportViewType(false);
+    }
+
+    private ReportViewType getFocusReportViewType(boolean compare){
+        selectTab();
+        WebElement span = getViewTrackProject(compare).findElement(By.tagName("span"));
+        String classAttr = span.getAttribute("class");
+        if (classAttr.contains("canView")) return ReportViewType.VIEW;
+        if (classAttr.contains("HasSBP")) return ReportViewType.PROJECT;
+        if (classAttr.contains("IsTracker")) return ReportViewType.TRACK;
+        return null;
+    }
+
+
 
     /* Expected conditions specific to this component */
     private ExpectedCondition<Boolean> psuedoOptionsDisplayed(By optionsLocator){
