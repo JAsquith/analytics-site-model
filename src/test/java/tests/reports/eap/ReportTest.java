@@ -46,6 +46,10 @@ public abstract class ReportTest extends BaseTest {
                     getStringParam("report-view"),
                     getStringParam("report-level"));
 
+            if (report == null){
+                throw new IllegalStateException("Requested Area is disabled");
+            }
+
             // Apply any report options, filters, etc. defined in the test parameters
             applyReportOptions();
 

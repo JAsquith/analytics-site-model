@@ -149,10 +149,14 @@ public class FigureChecking extends SISRATest {
     private EAPView openView(EAPView reportPage){
         // Choose the Area > Report > Level
         try {
-            reportPage.openView(
+            reportPage = reportPage.openView(
                     getTestParam("area"),
                     getTestParam("report"),
                     getTestParam("level"));
+
+            if (reportPage == null){
+                throw new IllegalStateException("Requested Area is disabled");
+            }
 
             return reportPage;
         }

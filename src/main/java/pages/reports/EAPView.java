@@ -61,6 +61,8 @@ public class EAPView extends AnalyticsPage{
 
         // Show the table of links to views within the given areaName
         WebElement area = navMenu.selectArea(areaName);
+        if (area==null) return null;
+
         navMenu.selectReport(area, reportName).
                 navMenu.selectGrouping(levelName);
 

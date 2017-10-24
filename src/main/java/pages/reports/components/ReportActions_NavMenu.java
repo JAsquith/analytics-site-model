@@ -19,6 +19,8 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
      */
     private static final By AREAS = By.cssSelector(".area");
     private static final By AREAS_INACTIVE = By.cssSelector(".area:not(.active)");
+    private static final By AREAS_ENABLED = By.cssSelector(".area:not(.disabled)");
+    private static final By AREAS_ENABLED_INACTIVE = By.cssSelector(".area:not(.disabled):not(.active)");
     private static final By AREA_ACTIVE = By.cssSelector(".area.active");
     private static final By AREA_SELECTED = By.cssSelector(".area.selected");
 
@@ -200,6 +202,9 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     private WebElement selectArea(WebElement targetArea){
         String s = "trying to select Area '"+targetArea.getText();
+        if (areaDisabled(targetArea)){
+            return null;
+        }
         try {
             if (!areasAreEqual(getSelectedArea(), targetArea)){
                 targetArea.click();
@@ -223,7 +228,7 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     private List<String> getAreaChangeOptions(){
         List<String> areaNames = new ArrayList<String>();
-        for(WebElement area : driver.findElements(AREAS_INACTIVE)){
+        for(WebElement area : driver.findElements(AREAS_ENABLED_INACTIVE)){
             for(String reportName : getReportsForArea(area)){
                 areaNames.add(area.findElement(AREA_BUTTON).getText().trim()+"["+reportName+"]");
             }
@@ -233,7 +238,9 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
 
     private List<String> getReportsForArea(WebElement area){
         List<String> reportNames = new ArrayList<String>();
-        selectArea(area);
+        if(selectArea(area)==null){
+            throw new IllegalStateException("Requested Area is disabled");
+        }
         for(WebElement reportLink : area.findElements(REPORT_LINKS_FOR_AREA)){
             reportNames.add(reportLink.getText().trim());
         }
@@ -243,7 +250,9 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
     private List<String> getAvailableReportLevels(WebElement area){
         WebElement selectedReport = driver.findElement(REPORT_BUTTON_SELECTED);
         if (!selectedReport.isDisplayed()) {
-            selectArea(area);
+            if(selectArea(area)==null){
+                throw new IllegalStateException("Requested Area is disabled");
+            }
         }
         try {
             waitTiny.until(ExpectedConditions.visibilityOfElementLocated(GROUPINGS_AVAILABLE));
@@ -275,6 +284,12 @@ public class ReportActions_NavMenu extends AnalyticsComponent implements IReport
         String areaName_2 = area_2.getAttribute("data-name");
 
         return areaName_1.equals(areaName_2);
+    }
+    private boolean areaEnabled(WebElement area){
+        return !areaDisabled(area);
+    }
+    private boolean areaDisabled(WebElement area){
+        return area.getAttribute("class").contains("disabled");
     }
 
     /* */
