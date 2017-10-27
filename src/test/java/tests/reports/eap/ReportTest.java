@@ -121,10 +121,10 @@ public abstract class ReportTest extends BaseTest {
                 report = report.datasetsTab.showFocusDataAs(value);
                 break;
             case "Actual":
-                report = report.datasetsTab.selectFocusDataset(value);
+                report = report.datasetsTab.selectFocusCollection(value);
                 break;
             case "Compare":
-                report = report.datasetsTab.selectCompareDataset(value);
+                report = report.datasetsTab.selectCompareCollection(value);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");

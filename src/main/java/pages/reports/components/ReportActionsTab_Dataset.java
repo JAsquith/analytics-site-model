@@ -2,10 +2,7 @@ package pages.reports.components;
 
 import enums.ReportAction;
 import enums.ReportViewType;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
@@ -27,15 +24,21 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     private static final By VIEW_TRACK_PROJECT = By.cssSelector(".vtp");
     private static final By VTP_ALL_AVAIL = By.cssSelector(".avail");
 
-    private static final By DATASET_DROPDOWN = By.cssSelector(".tabcontent>span.datasetList");
-    private static final By DATASET_OPTIONS_DIV = By.cssSelector(".list.ds");
-    private static final By DATASET_OPTIONS = By.tagName("li");
+    private static final By FOCUS_DROPDOWN = By.cssSelector(".tabcontent>span.datasetList");
+    private static final By FOCUS_OPTIONS_DIV = By.cssSelector(".list.ds");
 
     private static final By COMPARE_TITLE = By.cssSelector(".dsListTitle.comp");
     private static final By COMPARE_DROPDOWN = By.cssSelector(".tabcontent>div span.datasetList");
     private static final By COMPARE_OPTIONS_DIV = By.cssSelector(".list.cds");
 
+    private static final By DS_LIST_OPTIONS = By.tagName("li");
+    private static final By DS_LIST_ITEM_DOTS_SPAN = By.cssSelector(".dsDots");
+
     private static final By TRACKER_COL_DDL = By.id("TrackerColDDL");
+    private static final By VTP_OPTION_VIEW = By.cssSelector(".canView");
+    private static final By VTP_OPTION_TRACK = By.cssSelector(".IsTracker");
+    private static final By VTP_OPTION_PROJECT = By.cssSelector(".HasSBP");
+    private static final By VTP_OPTION_ANY = By.cssSelector(".canView,.HasSBP,.IsTracker");
 
     /* Constructor method
     * ToDo: Javadoc */
@@ -60,30 +63,41 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* Actions available within this component
     * ToDo: Javadoc */
-    public EAPView selectFocusDataset(String optionText){
+    public EAPView selectFocusCollection(String optionText) {
+        return selectFocusCollection(optionText, "", false);
+    }
 
-        // Switch to the Dataset tab & expand it if required
+    public EAPView selectFocusCollection(String optionText, String showAs, boolean slideOutVTP){
+
+        By vtpOptionLocator;
+        vtpOptionLocator = getDDLVTPLocatorByLabel(showAs);
+
+        // Switch to the Dataset tab & show the Focus pseudo DDL Options
         selectAndExpandTab();
-
         expandFocusPsuedoSelect();
-        boolean found = false;
+
         for(WebElement option : getFocusPsuedoOptions()){
             if (option.getText().equals(optionText)){
-                option.click();
-                found = true;
-                break;
+                if (slideOutVTP){
+                    option.click();
+                    // todo: wait for the slide out to complete
+                }
+                try {
+                    option.findElement(vtpOptionLocator).click();
+                } catch (NoSuchElementException e){
+                    String eMsg = String.format("'%s' is not available for collection '%s' in the current state", showAs, optionText);
+                    throw new IllegalStateException(eMsg);
+                }
+                waitForLoadingWrapper();
+                return new EAPView(driver);
             }
         }
 
-        if(!found){
-            throw new IllegalArgumentException("Could not find an options for dataset '"+ optionText +"'");
-        }
+        throw new IllegalArgumentException("Could not find '" + optionText + "' in the Focus dataset options");
 
-        waitForLoadingWrapper();
-        return new EAPListView(driver);
     }
 
-    public EAPView selectCompareDataset(String optionText){
+    public EAPView selectCompareCollection(String optionText){
         // Switch to the Dataset tab & expand it if required
         selectAndExpandTab();
 
@@ -160,6 +174,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
+
     @Override
     public List<ReportAction> getValidActionsList() {
         selectAndExpandTab();
@@ -197,14 +212,13 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
         return actions;
     }
-
     @Override
     public List<String> getOptionsForAction(ReportAction action) {
         switch(action){
             case CHANGE_FOCUS:
-                return getFocusDatasetNames();
+                return getFocusCollectionNames();
             case CHANGE_COMPARE:
-                return getCompareDatasetNames();
+                return getCompareCollectionNames();
             case FOCUS_VTP:
                 return getVTPOptions(false);
             case COMPARE_VTP:
@@ -224,9 +238,9 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     public EAPView applyActionOption(ReportAction action, String option) {
         switch(action){
             case CHANGE_FOCUS:
-                return selectFocusDataset(option);
+                return selectFocusCollection(option);
             case CHANGE_COMPARE:
-                return selectCompareDataset(option);
+                return selectCompareCollection(option);
             case FOCUS_VTP:
                 return showFocusDataAs(option);
             case COMPARE_VTP:
@@ -246,28 +260,28 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     }
 
     /* Actions/state queries used within more than one public method */
+
     private void expandFocusPsuedoSelect(){
-        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+        WebElement optionsDiv = driver.findElement(FOCUS_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
             return;
         }
-        WebElement select = driver.findElement(DATASET_DROPDOWN);
+        WebElement select = driver.findElement(FOCUS_DROPDOWN);
         select.click();
-        waitShort.until(psuedoOptionsDisplayed(DATASET_OPTIONS_DIV));
+        waitShort.until(psuedoOptionsDisplayed(FOCUS_OPTIONS_DIV));
     }
     private void collapseFocusPsuedoSelect(){
-        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
+        WebElement optionsDiv = driver.findElement(FOCUS_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
-            WebElement select = driver.findElement(DATASET_DROPDOWN);
+            WebElement select = driver.findElement(FOCUS_DROPDOWN);
             select.click();
-            waitShort.until(psuedoOptionsHidden(DATASET_OPTIONS_DIV));
+            waitShort.until(psuedoOptionsHidden(FOCUS_OPTIONS_DIV));
         }
     }
     private List<WebElement> getFocusPsuedoOptions(){
-        WebElement optionsDiv = driver.findElement(DATASET_OPTIONS_DIV);
-        return optionsDiv.findElements(DATASET_OPTIONS);
+        WebElement optionsDiv = driver.findElement(FOCUS_OPTIONS_DIV);
+        return optionsDiv.findElements(DS_LIST_OPTIONS);
     }
-
     private void expandComparePsuedoSelect(){
         WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
@@ -277,6 +291,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         select.click();
         waitShort.until(psuedoOptionsDisplayed(COMPARE_OPTIONS_DIV));
     }
+
     private void collapseComparePsuedoSelect(){
         WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
@@ -287,40 +302,59 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     }
     private List<WebElement> getComparePsuedoOptions(){
         WebElement optionsDiv = driver.findElement(COMPARE_OPTIONS_DIV);
-        return optionsDiv.findElements(DATASET_OPTIONS);
+        return optionsDiv.findElements(DS_LIST_OPTIONS);
     }
-
     private WebElement getViewTrackProject() {
         return getViewTrackProject(false);
     }
+
     private WebElement getViewTrackProject(boolean forCompare) {
         selectAndExpandTab();
 
         int dsType = forCompare ? 1 : 0;
         return driver.findElements(VIEW_TRACK_PROJECT).get(dsType);
     }
-
-    private WebElement getVTPButton(WebElement vtp, String reportType){
+    private WebElement getVTPButton(WebElement vtp, String buttonLabel){
         for(WebElement option : vtp.findElements(VTP_ALL_AVAIL)){
-            if(option.getText().equals(reportType)){
+            if(option.getText().equals(buttonLabel)){
                 return option;
             }
         }
         return null;
     }
 
-    private List<String> getFocusDatasetNames(){
+    private By getDDLVTPLocatorByLabel(String showAs) {
+        switch (showAs.toLowerCase()){
+            case "current":
+                // Set the vtpLocator based on how the current view is being shown
+            case "view":
+                return VTP_OPTION_VIEW;
+            case "track":
+                return VTP_OPTION_TRACK;
+            case "project":
+                return VTP_OPTION_PROJECT;
+            case "":
+                return VTP_OPTION_ANY;
+            default:
+                throw new IllegalArgumentException("'" + showAs + "' is not a valid View-Project-Track option");
+        }
+    }
+
+    private List<String> getFocusCollectionNames(){
         expandFocusPsuedoSelect();
         List<String> optionNames = new ArrayList<String>();
         for(WebElement option : getFocusPsuedoOptions()){
             if(!option.getAttribute("class").contains("active")){
-                optionNames.add(option.getText());
+                String collName = option.getText();
+                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
+                collName = collName.replace(dotsText, "").trim();
+                optionNames.add(collName);
             }
         }
         collapseFocusPsuedoSelect();
         return optionNames;
     }
-    private List<String> getCompareDatasetNames(){
+    private List<String> getCompareCollectionNames(){
         expandComparePsuedoSelect();
         List<String> optionNames = new ArrayList<String>();
         for(WebElement option : getComparePsuedoOptions()){
