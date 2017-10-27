@@ -439,4 +439,23 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         };
     }
 
+    private ExpectedCondition<Boolean> vtpSlideOutComplete(WebElement dsListItem){
+        return new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                try {
+                    WebElement shim = dsListItem.findElement(By.cssSelector(".dsDots"));
+                    if (shim.getAttribute("style").contains("overflow")) return null;
+                    return true;
+                } catch (StaleElementReferenceException e) {
+                    return null;
+                }
+            }
+
+            @Override
+            public String toString() {
+                return "the 'vtp shim' for " + dsListItem.getText() + " to finish sliding out";
+            }
+        };
+    }
 }
