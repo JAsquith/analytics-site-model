@@ -356,10 +356,12 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         List<String> optionNames = new ArrayList<String>();
         for(WebElement option : getFocusPsuedoOptions()){
             if(!option.getAttribute("class").contains("active")){
-                String collName = option.getText();
-                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
-                collName = collName.replace(dotsText, "").trim();
-                optionNames.add(collName);
+                String collName = option.getText().trim();
+                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText().trim();
+                if (!dotsText.equals("X X X")) {
+                    collName = collName.replace(dotsText, "").trim();
+                    optionNames.add(collName);
+                }
             }
         }
         collapseFocusPsuedoSelect();
@@ -369,11 +371,13 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         expandComparePsuedoSelect();
         List<String> optionNames = new ArrayList<String>();
         for(WebElement option : getComparePsuedoOptions()){
-            if(!option.getAttribute("class").contains("active")){
-                String collName = option.getText();
-                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
-                collName = collName.replace(dotsText, "").trim();
-                optionNames.add(collName);
+            String collName = option.getText().trim();
+            if(!option.getAttribute("class").contains("active") && !collName.equals("none")){
+                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText().trim();
+                if (!dotsText.equals("X X")) {
+                    collName = collName.replace(dotsText, "").trim();
+                    optionNames.add(collName);
+                }
             }
         }
         collapseComparePsuedoSelect();

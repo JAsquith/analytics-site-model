@@ -8,11 +8,11 @@
 
     <suite-files>
 
-        <!-- 
+        <!--
+        <suite-file path="ReportFigureTests.xml" />
 		<suite-file path="AuthGroupTests.xml" />
 		-->
 
-		<suite-file path="ReportFigureTests.xml" />
 		<suite-file path="RandomTests.xml" />
 
     </suite-files>

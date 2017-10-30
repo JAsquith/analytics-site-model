@@ -355,7 +355,11 @@ public class ReportActionsTab_Options extends ReportActionsTab implements IRepor
 
     public boolean optionIsEnabled(By locator){
         WebElement testElement;
-        testElement = driver.findElement(locator);
+        try {
+            testElement = driver.findElement(locator);
+        } catch (NoSuchElementException e){
+            return false;
+        }
         // If we're looking for the OnTrack menu, we can check the menu itself *DOES NOT* have the disabled class
         if(locator == ON_TRACK_MENU){
             return !testElement.getAttribute("class").contains("disabled");
