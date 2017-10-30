@@ -50,7 +50,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         tabContentsBy = CONTENTS_DIV;
     }
 
-    /* Querying the state of the page */
+    /* public page state methods */
     public boolean compareRequired(){
         WebElement compareDDL = driver.findElement(COMPARE_TITLE);
         if (compareDDL.getAttribute("class").contains("error")){
@@ -60,32 +60,33 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return false;
     }
 
-
-    /* Actions available within this component
-    * ToDo: Javadoc */
-    public EAPView selectFocusCollection(String optionText) {
-        return selectFocusCollection(optionText, "", false);
+    /* public page action methods */
+    public EAPView selectFocusCollection(String dsName) {
+        return selectFocusCollection(dsName, "", false);
     }
 
-    public EAPView selectFocusCollection(String optionText, String showAs, boolean slideOutVTP){
+    public EAPView selectFocusCollection(String dsName, String showAs, boolean slideOutVtp){
 
         By vtpOptionLocator;
-        vtpOptionLocator = getDDLVTPLocatorByLabel(showAs);
+        vtpOptionLocator = getDDLVtpLocatorByLabel(showAs);
 
         // Switch to the Dataset tab & show the Focus pseudo DDL Options
         selectAndExpandTab();
         expandFocusPsuedoSelect();
 
         for(WebElement option : getFocusPsuedoOptions()){
-            if (option.getText().equals(optionText)){
-                if (slideOutVTP){
+            String collName = option.getText();
+            String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
+            collName = collName.replace(dotsText, "").trim();
+            if (collName.equals(dsName)){
+                if (slideOutVtp){
                     option.click();
-                    // todo: wait for the slide out to complete
+                    waitShort.until(vtpSlideOutComplete(option));
                 }
                 try {
                     option.findElement(vtpOptionLocator).click();
                 } catch (NoSuchElementException e){
-                    String eMsg = String.format("'%s' is not available for collection '%s' in the current state", showAs, optionText);
+                    String eMsg = String.format("'%s' is not available for Main Focus Collection '%s' in the current state", showAs, dsName);
                     throw new IllegalStateException(eMsg);
                 }
                 waitForLoadingWrapper();
@@ -93,32 +94,43 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
             }
         }
 
-        throw new IllegalArgumentException("Could not find '" + optionText + "' in the Focus dataset options");
+        throw new IllegalArgumentException("Could not find '" + dsName + "' in the Main Focus dataset options");
 
     }
 
-    public EAPView selectCompareCollection(String optionText){
+    public EAPView selectCompareCollection(String dsName) {
+        return selectCompareCollection(dsName, "", false);
+    }
+
+    public EAPView selectCompareCollection(String dsName, String showAs, boolean slideOutVtp){
+        By vtpOptionLocator;
+        vtpOptionLocator = getDDLVtpLocatorByLabel(showAs);
+
         // Switch to the Dataset tab & expand it if required
         selectAndExpandTab();
-
         expandComparePsuedoSelect();
 
-        boolean found = false;
         for(WebElement option : getComparePsuedoOptions()){
-            String currentText = option.getText();
-            if (currentText.equals(optionText) || currentText.equals(optionText+" (Assessments)")){
-                option.click();
-                found = true;
-                break;
+            String collName = option.getText();
+            String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
+            collName = collName.replace(dotsText, "").trim();
+            if (collName.equals(dsName)){
+                if (slideOutVtp){
+                    option.click();
+                    waitShort.until(vtpSlideOutComplete(option));
+                }
+                try {
+                    option.findElement(vtpOptionLocator).click();
+                } catch (NoSuchElementException e){
+                    String eMsg = String.format("'%s' is not available for Compare Collection '%s' in the current state", showAs, dsName);
+                    throw new IllegalStateException(eMsg);
+                }
+                waitForLoadingWrapper();
+                return new EAPView(driver);
             }
         }
 
-        if(!found){
-            throw new IllegalArgumentException("Could not find an options for dataset '"+ optionText +"'");
-        }
-
-        waitForLoadingWrapper();
-        return new EAPListView(driver);
+        throw new IllegalArgumentException("Could not find '" + dsName + "' in the Compare dataset options");
     }
 
     public EAPView showFocusDataAs(String reportType){
@@ -174,7 +186,6 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
     /* These component actions implement the IReportActionGroup interface
     * ToDo: Javadoc */
-
     @Override
     public List<ReportAction> getValidActionsList() {
         selectAndExpandTab();
@@ -258,9 +269,9 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     public String getName() {
         return "datasetTab";
     }
+    /* /End of IReportActionGroup methods*/
 
-    /* Actions/state queries used within more than one public method */
-
+    /* private methods */
     private void expandFocusPsuedoSelect(){
         WebElement optionsDiv = driver.findElement(FOCUS_OPTIONS_DIV);
         if (optionsDiv.isDisplayed()){
@@ -323,7 +334,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         return null;
     }
 
-    private By getDDLVTPLocatorByLabel(String showAs) {
+    private By getDDLVtpLocatorByLabel(String showAs) {
         switch (showAs.toLowerCase()){
             case "current":
                 // Set the vtpLocator based on how the current view is being shown
@@ -359,7 +370,10 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         List<String> optionNames = new ArrayList<String>();
         for(WebElement option : getComparePsuedoOptions()){
             if(!option.getAttribute("class").contains("active")){
-                optionNames.add(option.getText());
+                String collName = option.getText();
+                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
+                collName = collName.replace(dotsText, "").trim();
+                optionNames.add(collName);
             }
         }
         collapseComparePsuedoSelect();
@@ -394,8 +408,6 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         if (classAttr.contains("IsTracker")) return ReportViewType.TRACK;
         return null;
     }
-
-
 
     /* Expected conditions specific to this component */
     private ExpectedCondition<Boolean> psuedoOptionsDisplayed(By optionsLocator){
@@ -444,8 +456,13 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
             @Override
             public Boolean apply(WebDriver driver) {
                 try {
-                    WebElement shim = dsListItem.findElement(By.cssSelector(".dsDots"));
-                    if (shim.getAttribute("style").contains("overflow")) return null;
+                    String style = dsListItem.
+                            findElement(By.cssSelector(".dsDots")).
+                            getAttribute("style");
+
+                    if (style == null) return null;
+                    if (style.contains("overflow")) return null;
+                    if (style.equals("")) return null;
                     return true;
                 } catch (StaleElementReferenceException e) {
                     return null;

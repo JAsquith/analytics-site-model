@@ -1,67 +1,67 @@
-Name,Filter Value
-Ethnic Code,MOTH
-Compare With Set (Assessments) >,
-Difference >,
-Ethnic Code,MWAS
-Compare With Set (Assessments) >,
-Difference >,
-Ethnic Code,MWBC
-Compare With Set (Assessments) >,
-Difference >,
-Ethnic Code,REFU
-Compare With Set (Assessments) >,
-Difference >,
-Ethnic Code,WBRI
-Compare With Set (Assessments) >,
-Difference >,
-Ethnic Code,WIRI
-Compare With Set (Assessments) >,
-Difference >,
-Ethnic Code,WIRT
-Compare With Set (Assessments) >,
-Difference >,
-FSM Ever 6,N
-Compare With Set (Assessments) >,
-Difference >,
-FSM Ever 6,Y
-Compare With Set (Assessments) >,
-Difference >,
-Gender,Female
-Compare With Set (Assessments) >,
-Difference >,
-Gender,Male
-Compare With Set (Assessments) >,
-Difference >,
-Gifted Talented,N
-Compare With Set (Assessments) >,
-Difference >,
-Gifted Talented,Y
-Compare With Set (Assessments) >,
-Difference >,
-KS2 Banding,Lower
-Compare With Set (Assessments) >,
-Difference >,
-KS2 Banding,Middle
-Compare With Set (Assessments) >,
-Difference >,
-KS2 Banding,Upper/High
-Compare With Set (Assessments) >,
-Difference >,
-Looked After,N
-Compare With Set (Assessments) >,
-Difference >,
-Looked After,Y
-Compare With Set (Assessments) >,
-Difference >,
-SEN,E
-Compare With Set (Assessments) >,
-Difference >,
-SEN,K
-Compare With Set (Assessments) >,
-Difference >,
-SEN,N
-Compare With Set (Assessments) >,
-Difference >,
-Summary,
-Compare With Set (Assessments) >,
-Difference >,
+Name,Filter Value,EBacc Strong Pass
+Ethnic Code,MOTH,2
+Compare With Set (Assessments) >,,0
+Difference >,,2
+Ethnic Code,MWAS,0
+Compare With Set (Assessments) >,,0
+Difference >,,0
+Ethnic Code,MWBC,5
+Compare With Set (Assessments) >,,0
+Difference >,,5
+Ethnic Code,REFU,3
+Compare With Set (Assessments) >,,
+Difference >,,
+Ethnic Code,WBRI,1
+Compare With Set (Assessments) >,,0
+Difference >,,1
+Ethnic Code,WIRI,2
+Compare With Set (Assessments) >,,0
+Difference >,,2
+Ethnic Code,WIRT,3
+Compare With Set (Assessments) >,,0
+Difference >,,3
+FSM Ever 6,N,9
+Compare With Set (Assessments) >,,0
+Difference >,,9
+FSM Ever 6,Y,7
+Compare With Set (Assessments) >,,0
+Difference >,,7
+Gender,Female,3
+Compare With Set (Assessments) >,,0
+Difference >,,3
+Gender,Male,13
+Compare With Set (Assessments) >,,0
+Difference >,,13
+Gifted Talented,N,9
+Compare With Set (Assessments) >,,0
+Difference >,,9
+Gifted Talented,Y,7
+Compare With Set (Assessments) >,,0
+Difference >,,7
+KS2 Banding,Lower,7
+Compare With Set (Assessments) >,,0
+Difference >,,7
+KS2 Banding,Middle,3
+Compare With Set (Assessments) >,,0
+Difference >,,3
+KS2 Banding,Upper/High,6
+Compare With Set (Assessments) >,,0
+Difference >,,6
+Looked After,N,8
+Compare With Set (Assessments) >,,0
+Difference >,,8
+Looked After,Y,8
+Compare With Set (Assessments) >,,0
+Difference >,,8
+SEN,E,4
+Compare With Set (Assessments) >,,0
+Difference >,,4
+SEN,K,4
+Compare With Set (Assessments) >,,0
+Difference >,,4
+SEN,N,8
+Compare With Set (Assessments) >,,0
+Difference >,,8
+Summary,,16
+Compare With Set (Assessments) >,,0
+Difference >,,16
