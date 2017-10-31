@@ -39,6 +39,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     private static final By VTP_OPTION_TRACK = By.cssSelector(".IsTracker");
     private static final By VTP_OPTION_PROJECT = By.cssSelector(".HasSBP");
     private static final By VTP_OPTION_ANY = By.cssSelector(".canView,.HasSBP,.IsTracker");
+    private static final String COMPARE_DDL_NULL_OPTION = "none";
 
     /* Constructor method
     * ToDo: Javadoc */
@@ -112,8 +113,10 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
 
         for(WebElement option : getComparePsuedoOptions()){
             String collName = option.getText();
-            String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
-            collName = collName.replace(dotsText, "").trim();
+            if (!collName.equals(COMPARE_DDL_NULL_OPTION)) {
+                String dotsText = option.findElement(DS_LIST_ITEM_DOTS_SPAN).getText();
+                collName = collName.replace(dotsText, "").trim();
+            }
             if (collName.equals(dsName)){
                 if (slideOutVtp){
                     option.click();
@@ -257,9 +260,10 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
             case COMPARE_VTP:
                 return showCompareDataAs(option);
             case TRACKER_COLUMN:
-                selectTrackerColumn(option);
+                return selectTrackerColumn(option);
             case RESET_DATASETS:
                 this.resetTab();
+                return new EAPView(driver);
             default:
                 throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Datasets tab");
         }

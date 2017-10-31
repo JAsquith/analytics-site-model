@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Report Figure Tests" parallel="tests" thread-count="4">
 
-    <parameter name="debug" value="false" />
+    <parameter name="debug" value="true" />
 
+<!--
     <test name="Andy #1 - A8P8 Overview Filters - P8">
         <parameter name="test-id" value="AR000020" />
         <parameter name="username" value="roand171650" />
@@ -140,7 +141,7 @@
         </classes>
     </test>
 
-    <test name="Mark #2 - A8/P8 Overview Students - KS2 Prior">
+    <test name="Mark #2 - A8P8 Overview Students - KS2 Prior">
         <parameter name="test-id" value="MS000027" />
         <parameter name="username" value="tesmar185343" />
         <parameter name="password" value="AtSxEaNn8" />
@@ -246,6 +247,186 @@
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>
+    </test>
+-->
+
+    <test name="Chris #1 - Grades Totals Quals - Average Points">
+        <parameter name="test-id" value="CF-000001" />
+
+        <parameter name="username" value="chrisf196309" />
+        <parameter name="password" value="NnRoUyNq7" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Autumn 1" />
+        <parameter name="report-area" value="Grades" />
+        <parameter name="report-view" value="Totals" />
+        <parameter name="report-level" value="Quals" />
+
+        <parameter name="column-name" value="Average Points" />
+        <parameter name="dataset-options" value="Compare=Targets" />
+        <parameter name="grade-filter-options" value="Faculty=Languages|OnTrack=On Or Above|Grade Type=GCSE A*-G Single|Actual Grade Operator=Less Than|Actual Grade Grade=A" />
+        <parameter name="view-options" value="Column Sort=Residual|Column Sort Direction=Ascending|Figure Type=%|Sub Whole=Whole|Breakdown=Looked After" />
+        <parameter name="filters" value="Colour Band=***None***|Colour Band=Gold|Colour Band=Silver|Gifted Talented=No|Pupil Premium=Yes" />
+        <parameter name="measures" value="Pupils Included (Science Coverage)=Include+Include|Achieving 9-7 in English and Maths=Exclude+Exclude" />
+        <parameter name="residuals" value="Da Dance|Dr Drama|Ft Food Technology" />
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+    </test>
+
+    <test name="Chris #2 - Grades - Totals Quals - Total Points">
+        <parameter name="test-id" value="CF-000002" />
+
+        <parameter name="username" value="chrisregression" />
+        <parameter name="password" value="Regression27" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Spring 2" />
+        <parameter name="report-area" value="Grades" />
+        <parameter name="report-view" value="Totals" />
+        <parameter name="report-level" value="Quals" />
+
+        <parameter name="column-name" value="Total Points" />
+        <parameter name="dataset-options" value="Compare=Autumn 2" />
+        <parameter name="grade-filter-options" value="Faculty=Humanities|OnTrack=On Or Above" />
+        <parameter name="view-options" value="Column Sort=Avg EAP Diff (Sub) (Diff)|Figure Type=%|Breakdown=KS2 Banding|In A8 Basket=In A8 Basket" />
+        <parameter name="filters" value="House=None|Pupil Premium=Yes" />
+        <parameter name="measures" value="Achieving Ebacc Strong=Include|Achieving 9-4 in English and Maths=+Include" />
+        <parameter name="residuals" value="xx Arabic RESULT|xx Greek RESULT|xx Portuguese RESULT|Mx BTEC Dip Music Technology" />
+        <parameter name="expected-report-figures-file" value="Chris #2 - Grades - Totals Quals - Total Points.csv" />
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #3 - A8P8 EBacc Students - Slots Est">
+        <parameter name="test-id" value="CF-000003" />
+
+        <parameter name="username" value="chrisregression" />
+        <parameter name="password" value="Regression27" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Autumn 2" />
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Ebacc" />
+        <parameter name="report-level" value="Students" />
+
+        <parameter name="column-name" value="Slots Est" />
+        <parameter name="dataset-options" value="Compare=Exams" />
+        <parameter name="grade-filter-options" value="Faculty=Maths|Qualification=St Statistics RESULT|KS2 Core=5b" />
+        <parameter name="view-options" value="Column Sort=Slot 2 Pts|Breakdown=Reg Group" />
+        <parameter name="filters" value="Gender=Female|Gifted Talented=Yes|House=CIN|House=None|SEN=No SEN" />
+        <parameter name="measures" value="Achieving 5 Standard Passes inc EM=Include" />
+        <parameter name="expected-report-figures-file" value="Chris #3 - A8P8 EBacc Students - Slots Est.csv" />
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #4 - A8P8 Open Students - Tot Pts">
+        <parameter name="test-id" value="CF-000004" />
+        <parameter name="username" value="chrisregression" />
+        <parameter name="password" value="Regression27" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Spring 1" />
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Open" />
+        <parameter name="report-level" value="Students" />
+
+        <parameter name="column-name" value="Tot Pts" />
+        <parameter name="dataset-options" value="Compare=Spring 2" />
+        <parameter name="grade-filter-options" value="Faculty=Ar Art|Compare Grade Operator=Greater Than|Compare Grade Grade=D|Compare Grade Subgrade=+" />
+        <parameter name="view-options" value="Column Sort=Slot 3 Pts (Diff)|Breakdown=FSM Ever 6" />
+        <parameter name="filters" value="Ethnic Code=BAOF|Ethnic Code=MWBA|Ethnic Code=WBRI|Ethnic Code=WEUR|Gifted Talented=No|SEND Monitoring=N|SEND Monitoring=School Action Plus" />
+        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include|Entered for EBacc English=+Include|Achieving at least 1 qualification=Include+Include|Achieving 9-7 in English and Maths=+Exclude" />
+        <parameter name="expected-report-figures-file" value="Chris #4 - A8P8 Open Students - Tot Pts.csv" />
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #5 - Grades Totals Quals - Average Points">
+        <parameter name="username" value="chrisregression" />
+        <parameter name="password" value="Regression27" />
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Targets" />
+        <parameter name="report-area" value="Grades" />
+        <parameter name="report-view" value="Totals" />
+        <parameter name="report-level" value="Quals" />
+
+        <parameter name="column-name" value="Average Points" />
+        <parameter name="dataset-options" value="Compare=Exams|Actual=Summer 1|Compare=Spring 2|Compare=Spring 1|Compare=Autumn 2|Actual=Autumn 1|Compare=Targets" />
+        <parameter name="grade-filter-options" value="Faculty=Languages|OnTrack=On Or Above|Grade Type=GCSE A*-G Single|Actual Grade Operator=Less Than|Actual Grade Grade=A" />
+        <parameter name="view-options" value="Column Sort=Residual|Column Sort Direction=Ascending|Figure Type=%|Sub Whole=Whole|Breakdown=Looked After" />
+        <parameter name="filters" value="Colour Band=***None***|Colour Band=Gold|Colour Band=Silver|Gifted Talented=No|Pupil Premium=Yes" />
+        <parameter name="measures" value="Pupils Included (Science Coverage)=Include+Include|Achieving 9-7 in English and Maths=Exclude+Exclude" />
+        <parameter name="residuals" value="Da Dance|Dr Drama|Ft Food Technology" />
+        <parameter name="expected-report-figures-file" value="" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #6">
+
+        <parameter name="expected-report-figures-file" value="Chris #3 - A8P8 EBacc Students - Slots Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #7">
+
+        <parameter name="expected-report-figures-file" value="Chris #3 - A8P8 EBacc Students - Slots Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #8">
+
+        <parameter name="expected-report-figures-file" value="Chris #3 - A8P8 EBacc Students - Slots Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #9">
+
+        <parameter name="expected-report-figures-file" value="Chris #3 - A8P8 EBacc Students - Slots Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
+    </test>
+
+    <test name="Chris #10">
+
+        <parameter name="expected-report-figures-file" value="Chris #3 - A8P8 EBacc Students - Slots Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+
     </test>
 
 </suite>

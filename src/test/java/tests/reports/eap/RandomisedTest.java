@@ -10,7 +10,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.ReportActions_Table;
 import pages.reports.components.ReportsHome_EAPYearGroup;
 import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
@@ -259,6 +258,7 @@ public class RandomisedTest extends BaseTest {
         actionGroups.add(report.datasetsTab);
         actionGroups.add(report.optionsTab);
 
+/*
         if (report.filtersTab.isEnabled()) {
             actionGroups.add(report.filtersTab);
         }
@@ -273,6 +273,7 @@ public class RandomisedTest extends BaseTest {
                 actionGroups.add(table);
             }
         }
+*/
 
         String groupsDesc = "[";
         for(IReportActionGroup group : actionGroups){
