@@ -4,6 +4,7 @@ import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.apache.commons.codec.binary.Base64;
 import org.hamcrest.Matcher;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
@@ -76,7 +77,7 @@ public abstract class BaseTest {
             return "Failed to initialise RemoteWebDriver ["+e.getMessage()+"]";
         }
 
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1400,1600));
 
         driver.get(applicationUrl);
         return "";
@@ -193,6 +194,7 @@ public abstract class BaseTest {
 
     @Attachment(value = "{filename}")
     protected byte[] saveScreenshot(String filename){
+
         String base64Screenshot = driver.getScreenshotAs(OutputType.BASE64);
         byte[] decodedScreenshot = Base64.decodeBase64(base64Screenshot.getBytes());
 

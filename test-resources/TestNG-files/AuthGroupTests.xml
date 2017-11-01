@@ -6,7 +6,7 @@
 
     <!-- Login Page Tests -->
     <test name="Invalid credentials should fail login">
-        <parameter name="test-id" value="000001" />
+        <parameter name="test-id" value="ACC-000001" />
         <parameter name="username" value="AsqJam" />
         <parameter name="password" value="Password1" />
 
@@ -25,7 +25,7 @@
 
     <!-- Users in the SISRA Default Auth groups -->
     <test name="Default Group - User">
-        <parameter name="test-id" value="000003" />
+        <parameter name="test-id" value="ACC-000003" />
         <parameter name="username" value="tesuse184707" />
         <parameter name="password" value="VfMcTfCh3" />
         <parameter name="auth-group" value="User" />

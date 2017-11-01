@@ -112,7 +112,7 @@ public class ReportActionsTab extends AnalyticsComponent {
 
     public void selectAndExpandTab(){
         selectTab();
-        //expandTab();
+        expandTab();
     }
 
     public void resetTab(){
