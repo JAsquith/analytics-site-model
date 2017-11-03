@@ -143,7 +143,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         WebElement vtp = getViewTrackProject();
         WebElement button = getVTPButton(vtp, reportType);
         if(button==null){
-            if(reportType.equals("View") || reportType.equals("Tracker") || reportType.equals("Projection")){
+            if(reportType.equals("View") || reportType.equals("Track") || reportType.equals("Project")){
                 throw new IllegalStateException(reportType + " is not currently available for the Focus Data");
             } else {
                 throw new IllegalArgumentException(reportType + " is not a valid option for the Focus Data");
@@ -161,7 +161,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         WebElement vtp = getViewTrackProject(true);
         WebElement button = getVTPButton(vtp, reportType);
         if(button==null){
-            if(reportType.equals("View") || reportType.equals("Projection")){
+            if(reportType.equals("View") || reportType.equals("Project")){
                 throw new IllegalStateException(reportType + " is not currently available for the Compare Data");
             } else {
                 throw new IllegalArgumentException(reportType + " is not a valid option for the Compare Data");

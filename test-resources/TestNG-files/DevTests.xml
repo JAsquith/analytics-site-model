@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Development Suite" parallel="tests" thread-count="4">
+<suite name="Development Suite" parallel="tests" thread-count="1">
 
     <listeners>
         <listener class-name="listeners.LinkedTestsSuiteListener"/>
@@ -8,15 +8,87 @@
 
     <parameter name="debug" value="true" />
 
-    <test name="Milton #2 - Random - SISRA Milton Phase 8 - 1617">
-        <parameter name="test-id" value="000032" />
-        <parameter name="username" value="Phase6" />
-        <parameter name="password" value="wsS!SRA125" />
-        <parameter name="cohort" value="17" />
-        <parameter name="maxLoops" value="100" />
+    <test name="Ian 2 - A8P8 Overview Filters - A8 Pts">
+        <parameter name="test-id" value="IJ-000002" />
+
+        <parameter name="username" value="tworeg187167" />
+        <parameter name="password" value="QdXmQiJz9" />
+
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="20" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Y11T3" />
+        <parameter name="openMethod" value="Reports" />
+        <parameter name="openButton" value="" />
+
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Overview" />
+        <parameter name="report-level" value="Filters" />
+
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+
+        <parameter name="column-name" value="A8 Pts" />
+        <parameter name="expected-report-figures-file" value="Ian 2 - A8P8 Overview Filters - A8 Pts.csv" />
+
         <classes>
-            <class name="tests.reports.eap.RandomisedTest" />
+            <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>
     </test>
+
+<!--
+    <test name="Ian 3 - A8P8 Overview Filters - Average A8 Grade">
+        <parameter name="test-id" value="IJ-000003" />
+
+        <parameter name="username" value="thrreg187168" />
+        <parameter name="password" value="DnGbZiYt9" />
+
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="20" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Y11T3" />
+        <parameter name="openMethod" value="Reports" />
+        <parameter name="openButton" value="" />
+
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Overview" />
+        <parameter name="report-level" value="Filters" />
+
+        <parameter name="dataset-options" value="Compare=Y10T1|Compare As=Project" />
+
+        <parameter name="column-name" value="Average A8 Grade" />
+        <parameter name="expected-report-figures-file" value="Ian 3 - A8P8 Overview Filters - Average A8 Grade.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+    </test>
+
+    <test name="Ian 4 - A8P8 Overview Filters - A8 Est">
+        <parameter name="test-id" value="IJ-000004" />
+
+        <parameter name="username" value="foureg187169" />
+        <parameter name="password" value="YkTqRoUv7" />
+
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="20" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Y11T3" />
+        <parameter name="openMethod" value="Reports" />
+        <parameter name="openButton" value="" />
+
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Overview" />
+        <parameter name="report-level" value="Filters" />
+
+        <parameter name="dataset-options" value="Compare=Y10T1|Compare As=Project" />
+
+        <parameter name="column-name" value="A8 Est" />
+        <parameter name="expected-report-figures-file" value="Ian 4 - A8P8 Overview Filters - A8 Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+    </test>
+-->
 
 </suite>

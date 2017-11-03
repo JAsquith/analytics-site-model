@@ -34,6 +34,22 @@ public abstract class ReportTest extends BaseTest {
             login(user, pass, true);
 
             // Open the reports for the correct dataset
+            String openMethod = getStringParam("openMethod");
+            String cohort = getStringParam("cohort");
+            String eapYear = getStringParam("year");
+            String dsName = getStringParam("dataset");
+
+            switch (openMethod){
+                case "Reports":
+                    String trackCol = getStringParam("trackerCol");
+                    String btnName = getStringParam("button");
+                    report = openTestDataset(cohort,eapYear,trackCol,dsName,btnName);
+                    break;
+
+                case "Qualification/Class":
+
+
+            }
             report = openTestDataset(getStringParam("cohort"),
                     getStringParam("year"),
                     getStringParam("trackerCol"),
@@ -126,12 +142,17 @@ public abstract class ReportTest extends BaseTest {
             case "Compare":
                 report = report.datasetsTab.selectCompareCollection(value);
                 break;
+            case "Actual As":
+                report = report.datasetsTab.showFocusDataAs(value);
+                break;
+            case "Compare As":
+                report = report.datasetsTab.showCompareDataAs(value);
+                break;
             default:
                 throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");
         }
 
     }
-
 
     public void applyAllStudentFilters(){
         String[] filters = getArrayParam("filters");
