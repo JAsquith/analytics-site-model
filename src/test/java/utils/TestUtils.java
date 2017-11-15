@@ -92,7 +92,9 @@ public class TestUtils {
             return dependsOnTestId;
         }
         if (testListExists){
-            return testListLine[1];
+            if (testListLine.length>1){
+                return testListLine[1];
+            }
         }
         return "";
     }
@@ -135,7 +137,7 @@ public class TestUtils {
         String gridType = getTestSetting("grid-type", "sisra");
 
         String domain = getTestSetting(gridType + ".Hub", "localhost:4444/wd/hub");
-        String user = getTestSetting(gridType + ".User");;
+        String user = getTestSetting(gridType + ".User");
         String password = getTestSetting(gridType + ".Password");
 
         if(user.equals("") || password.equals("")){
