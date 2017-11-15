@@ -56,7 +56,7 @@ public class EAPHeadlineView extends EAPView {
                 "newDiv = document.createElement('DIV');" +
                 "newDiv.setAttribute('id', 'se-table-data');" +
                 "newDiv.innerHTML = tableText;" +
-                "document.querySelector('body>*:not(script)').appendChild(newDiv);";
+                "document.querySelector('#layoutNotif').appendChild(newDiv);";
 
         return "sectionName = '" + sectionName + "';" +
                 mainJS;
