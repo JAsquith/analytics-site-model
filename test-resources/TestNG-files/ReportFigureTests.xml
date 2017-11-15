@@ -5,7 +5,6 @@
     <parameter name="debug" value="true" />
 
     <!-- WORKING & PASSING -->
-
     <test name="Dom 1 - Grades Totals Quals - On Track">
         <parameter name="test-id" value="CF-000010" />
 
@@ -90,6 +89,7 @@
     </test>
 
     <test name="Chris 3 - A8P8 EBacc Students - Slots Est">
+        <!-- Setup fails due to bug 16979 -->
         <parameter name="test-id" value="CF-000003" />
 
         <parameter name="username" value="regchr196339" />
@@ -147,6 +147,38 @@
         </classes>
     </test>
 
+    <test name="Chris 8 - Grades Totals Faculties - Residual">
+        <parameter name="test-id" value="CF-000008" />
+
+        <parameter name="username" value="regchr196345" />
+        <parameter name="password" value="CpQpSoRk3" />
+
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Targets" />
+        <parameter name="openMethod" value="Reports" />
+        <parameter name="openButton" value="Whole School" />
+
+        <parameter name="report-area" value="Grades" />
+        <parameter name="report-view" value="Totals" />
+        <parameter name="report-level" value="Faculties" />
+
+        <parameter name="dataset-options" value="Compare=Summer 1" />
+        <parameter name="grade-filter-options" value="Grade Type=GCSE A*-G Single|Actual Grade Operator=Less Than|Actual Grade Grade=A|Actual Grade Subgrade==" />
+        <parameter name="view-options" value="Column Sort=Total Grades|Figure Type=%|Breakdown=EAL" />
+        <parameter name="filters" value="FSM Ever 6=No|Looked After=No" />
+        <parameter name="measures" value="Achieving EBacc 2 x Science Strong=+Exclude" />
+        <parameter name="residuals" value="Cs Computer Science|Ex NCFE Engineering Studies|Md Media Studies|Py Photography" />
+
+        <parameter name="column-name" value="Residual" />
+        <parameter name="expected-report-figures-file" value="Chris 8 - Grades Totals Faculties - Residual.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+    </test>
+
     <test name="Chris 9 - Grades Totals Faculties - Avg EAP Diff (Sub)">
         <parameter name="test-id" value="CF-000009" />
 
@@ -180,28 +212,28 @@
     </test>
 
     <test name="Ian 1 - A8P8 Overview Students - P8">
-        <parameter name="test-id" value="IJ-000001" />
+            <parameter name="test-id" value="IJ-000001" />
 
-        <parameter name="username" value="onereg187166" />
-        <parameter name="password" value="DbAjQuTa6" />
+            <parameter name="username" value="onereg187166" />
+            <parameter name="password" value="DbAjQuTa6" />
 
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="20" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Y11T3" />
-        <parameter name="openMethod" value="Reports" />
+            <parameter name="keystage" value="6" />
+            <parameter name="cohort" value="20" />
+            <parameter name="year" value="11" />
+            <parameter name="dataset" value="Y11T3" />
+            <parameter name="openMethod" value="Reports" />
 
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Students" />
+            <parameter name="report-area" value="A8/P8" />
+            <parameter name="report-view" value="Overview" />
+            <parameter name="report-level" value="Students" />
 
-        <parameter name="column-name" value="P8" />
-        <parameter name="expected-report-figures-file" value="Ian 1 - A8P8 Overview Students - P8.csv" />
+            <parameter name="column-name" value="P8" />
+            <parameter name="expected-report-figures-file" value="Ian 1 - A8P8 Overview Students - P8.csv" />
 
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
+            <classes>
+                <class name="tests.reports.eap.general.ListViewFigures" />
+            </classes>
+        </test>
 
     <test name="Ian 2 - A8P8 Overview Filters - A8 Pts">
         <parameter name="test-id" value="IJ-000002" />
@@ -311,6 +343,33 @@
         </classes>
     </test>
 
+    <test name="Ian 6 - A8P8 EngMat Filters - Eng P8">
+        <parameter name="test-id" value="IJ-000006" />
+
+        <parameter name="username" value="sixreg187172" />
+        <parameter name="password" value="MbXzZsSd8" />
+
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="20" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Y11T3" />
+        <parameter name="openMethod" value="Reports" />
+        <parameter name="openButton" value="" />
+
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Eng/Mat" />
+        <parameter name="report-level" value="Filters" />
+
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+
+        <parameter name="column-name" value="Eng P8" />
+        <parameter name="expected-report-figures-file" value="Ian 6 - A8P8 EngMat Filters - Eng P8.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+    </test>
+
     <test name="Ian 7 - A8P8 EngMat Filters - Eng A8 Est">
         <parameter name="test-id" value="IJ-000007" />
 
@@ -332,6 +391,33 @@
 
         <parameter name="column-name" value="Eng A8 Est" />
         <parameter name="expected-report-figures-file" value="Ian 7 - A8P8 EngMat Filters - Eng A8 Est.csv" />
+
+        <classes>
+            <class name="tests.reports.eap.general.ListViewFigures" />
+        </classes>
+    </test>
+
+    <test name="Ian 8 - A8P8 EngMat Filters - Mat A8 Pts">
+        <parameter name="test-id" value="IJ-000008" />
+
+        <parameter name="username" value="eigreg187173" />
+        <parameter name="password" value="PzWuUqGi3" />
+
+        <parameter name="keystage" value="6" />
+        <parameter name="cohort" value="20" />
+        <parameter name="year" value="11" />
+        <parameter name="dataset" value="Y11T3" />
+        <parameter name="openMethod" value="Reports" />
+        <parameter name="openButton" value="" />
+
+        <parameter name="report-area" value="A8/P8" />
+        <parameter name="report-view" value="Eng/Mat" />
+        <parameter name="report-level" value="Filters" />
+
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+
+        <parameter name="column-name" value="Mat A8 Pts" />
+        <parameter name="expected-report-figures-file" value="Ian 8 - A8P8 EngMat Filters - Mat A8 Pts.csv" />
 
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
@@ -419,33 +505,6 @@
         </classes>
     </test>
 
-    <test name="Ian 8 - A8P8 EngMat Filters - Mat A8 Pts">
-        <parameter name="test-id" value="IJ-000008" />
-
-        <parameter name="username" value="eigreg187173" />
-        <parameter name="password" value="PzWuUqGi3" />
-
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="20" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Y11T3" />
-        <parameter name="openMethod" value="Reports" />
-        <parameter name="openButton" value="" />
-
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Eng/Mat" />
-        <parameter name="report-level" value="Filters" />
-
-        <parameter name="dataset-options" value="Compare=Y10T1" />
-
-        <parameter name="column-name" value="Mat A8 Pts" />
-        <parameter name="expected-report-figures-file" value="Ian 8 - A8P8 EngMat Filters - Mat A8 Pts.csv" />
-
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
     <test name="Ian 12 - A8P8 EBacc Filters - Slot 2 Pts" >
         <parameter name="test-id" value="IJ-000012" />
 
@@ -500,33 +559,6 @@
         </classes>
     </test>
 
-    <test name="Ian 6 - A8P8 EngMat Filters - Eng P8">
-        <parameter name="test-id" value="IJ-000006" />
-
-        <parameter name="username" value="sixreg187172" />
-        <parameter name="password" value="MbXzZsSd8" />
-
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="20" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Y11T3" />
-        <parameter name="openMethod" value="Reports" />
-        <parameter name="openButton" value="" />
-
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Eng/Mat" />
-        <parameter name="report-level" value="Filters" />
-
-        <parameter name="dataset-options" value="Compare=Y10T1" />
-
-        <parameter name="column-name" value="Eng P8" />
-        <parameter name="expected-report-figures-file" value="Ian 6 - A8P8 EngMat Filters - Eng P8.csv" />
-
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
     <test name="Ian 14 - A8P8 EBacc Filters - Total Pts" >
         <parameter name="test-id" value="IJ-000014" />
 
@@ -571,38 +603,6 @@
         <parameter name="column-name" value="EBacc A8 Est" />
         <parameter name="dataset-options" value="Compare=Y10T1" />
         <parameter name="expected-report-figures-file" value="Ian 15 - A8P8 EBacc Filters - EBacc A8 Est.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Chris 8 - Grades Totals Faculties - Residual">
-        <parameter name="test-id" value="CF-000008" />
-
-        <parameter name="username" value="regchr196345" />
-        <parameter name="password" value="CpQpSoRk3" />
-
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="openMethod" value="Reports" />
-        <parameter name="openButton" value="Whole School" />
-
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Totals" />
-        <parameter name="report-level" value="Faculties" />
-
-        <parameter name="dataset-options" value="Compare=Summer 1" />
-        <parameter name="grade-filter-options" value="Grade Type=GCSE A*-G Single|Actual Grade Operator=Less Than|Actual Grade Grade=A|Actual Grade Subgrade==" />
-        <parameter name="view-options" value="Column Sort=Total Grades|Figure Type=%|Breakdown=EAL" />
-        <parameter name="filters" value="FSM Ever 6=No|Looked After=No" />
-        <parameter name="measures" value="Achieving EBacc 2 x Science Strong=+Exclude" />
-        <parameter name="residuals" value="Cs Computer Science|Ex NCFE Engineering Studies|Md Media Studies|Py Photography" />
-
-        <parameter name="column-name" value="Residual" />
-        <parameter name="expected-report-figures-file" value="Chris 8 - Grades Totals Faculties - Residual.csv" />
-
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>
@@ -893,7 +893,7 @@
         <parameter name="report-view" value="Open" />
         <parameter name="report-level" value="Filters" />
 
-        <parameter name="dataset-options" value="Compare=Y10T1|Compare As=Project" />
+        <parameter name="dataset-options" value="Compare=Y10T1" />
 
         <parameter name="column-name" value="Open P8" />
         <parameter name="expected-report-figures-file" value="Ian 26 - A8P8 Open Filters - Open P8.csv" />
@@ -988,7 +988,7 @@
         <parameter name="test-id" value="IJ-000030" />
 
         <parameter name="username" value="atreg196403" />
-        <parameter name="password" value="NeGbEhHi5" />
+        <parameter name="password" value="YqRqXdZy3" />
 
         <parameter name="keystage" value="6" />
         <parameter name="cohort" value="20" />
@@ -1001,7 +1001,7 @@
         <parameter name="report-view" value="Open" />
         <parameter name="report-level" value="Filters" />
 
-        <parameter name="dataset-options" value="Compare=Y10T1|Compare As=Project" />
+        <parameter name="dataset-options" value="Compare=Y10T1" />
 
         <parameter name="column-name" value="KS2 Prior" />
         <parameter name="expected-report-figures-file" value="Ian 30 - A8P8 Open Filters - KS2 Prior.csv" />
@@ -1086,389 +1086,92 @@
 
     </test>
 
-    <!--
-    -->
+    <test name="Ian 34 - Headlines Summary - A8P8 English">
+        <parameter name="test-id" value="IJ-000034" />
 
-<!-- DISABLED - NEED TO BE VERIFIED -->
-<!--
-        <test name="Andy 1 - A8P8 Overview Filters - P8">
-            <parameter name="test-id" value="AR-000020" />
-            <parameter name="username" value="roand171650" />
-            <parameter name="password" value="Funkad3lic" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Y11 Autumn" />
-            <parameter name="report-area" value="A8/P8" />
-            <parameter name="report-view" value="Overview" />
-            <parameter name="report-level" value="Filters" />
-            <parameter name="column-name" value="P8" />
-            <parameter name="dataset-options" value="Compare=Data Set 4" />
-            <parameter name="grade-filter-options"
-                       value="Faculty=Humanities|Qualification=History|Actual Grade Operator=greater or equal|Actual Grade Grade=D|Compare Grade Operator=less than|Compare Grade Grade=A*" />
-            <parameter name="view-options" value="Column Sort=Eng P8 (Diff)|Column Sort Direction=Descending|In A8 Basket=In A8 Basket|Sub Whole=Whole" />
-            <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High|KS2 Banding=Lower|Pupil Premium=Not PP" />
-            <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=+Include" />
-            <parameter name="expected-report-figures-file" value="Andy - 1 - A8P8OverviewFilters - P8.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-
-        <test name="Mark 1 - Grades Overview Students - Average Points">
-            <parameter name="test-id" value="MS-000026" />
-            <parameter name="username" value="tesmar185342" />
-            <parameter name="password" value="FfWbNjMf9" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Exams" />
-            <parameter name="report-area" value="Grades" />
-            <parameter name="report-view" value="Overview" />
-            <parameter name="report-level" value="Quals" />
-            <parameter name="column-name" value="Average Points" />
-            <parameter name="grade-filter-options" value="OnTrack=Above Track|Grade Type=All A8 Quals" />
-            <parameter name="view-options" value="Figure Type=%|StdCum=Std|Breakdown=Armed Forces|In A8 Basket=In A8 Basket|Sub Whole=Sub" />
-            <parameter name="expected-report-figures-file" value="Mark - 1 - GradesOverviewStudents - Average Points.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-
-        <test name="Mark 2 - A8P8 Overview Students - KS2 Prior">
-            <parameter name="test-id" value="MS-000027" />
-            <parameter name="username" value="tesmar185343" />
-            <parameter name="password" value="AtSxEaNn8" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Targets" />
-            <parameter name="report-area" value="A8/P8" />
-            <parameter name="report-view" value="Overview" />
-            <parameter name="report-level" value="Students" />
-            <parameter name="column-name" value="KS2 Prior" />
-            <parameter name="grade-filter-options" value="Faculty=English|Qualification=English Language" />
-            <parameter name="view-options" value="Column Sort=KS2 Prior|Breakdown=Ethnic Code" />
-            <parameter name="filters" value="Armed Forces=N|Armed Forces=Y|Gender=F|Gender=M" />
-            <parameter name="expected-report-figures-file" value="Mark - 2 - A8P8OverviewStudents - KS2 Prior.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-
-        <test name="Mark 3 - Basics Contribution Filters - KS2 Eng">
-            <parameter name="test-id" value="MS-000028" />
-            <parameter name="username" value="tesmar185344" />
-            <parameter name="password" value="WbJuRuTu9" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Targets" />
-            <parameter name="report-area" value="Basics" />
-            <parameter name="report-view" value="Contribution" />
-            <parameter name="report-level" value="Filters" />
-            <parameter name="column-name" value="KS2 Eng" />
-            <parameter name="dataset-options" value="Compare=Exams" />
-            <parameter name="grade-filter-options" value="Faculty=Maths|Qualification=Maths|OnTrack=On Or Above|Actual Grade Operator=Greater Than|Actual Grade Grade=3|Actual Grade Subgrade=-" />
-            <parameter name="view-options" value="Column Sort=KS2 Eng|Column Sort Direction=Ascending" />
-            <parameter name="filters" value="EAL=N|Ethnic Code=WENG|Gender=F|Gender=M" />
-            <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include+Include|Pupils achieving a Positive Progress 8 score=Include+Include" />
-            <parameter name="expected-report-figures-file" value="Mark - 3 - BasicsContributionFilters - KS2 Eng.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-
-        <test name="Mark 4 - VA Overview Students - Sci VA">
-            <parameter name="test-id" value="MS-000029" />
-            <parameter name="username" value="tesmar185345" />
-            <parameter name="password" value="WnCcWrCo4" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Exams" />
-            <parameter name="report-area" value="VA" />
-            <parameter name="report-view" value="Overview" />
-            <parameter name="report-level" value="Students" />
-            <parameter name="column-name" value="Sci VA" />
-            <parameter name="grade-filter-options" value="Faculty=Science" />
-            <parameter name="view-options" value="Column Sort=Sci VA|Breakdown=Gender" />
-            <parameter name="filters" value="Ethnic Code=MWBA|Ethnic Code=WENG|Gender=F|Gender=M" />
-            <parameter name="measures" value="Achieving 9-5 in English=Include|Achieving 9-5 in Maths=Exclude" />
-            <parameter name="expected-report-figures-file" value="Mark - 4 - VAOverviewStudents - Sci VA.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-
-        <test name="Mark 5 - EBacc Standard Filters - StdPass">
-            <parameter name="test-id" value="MS-000030" />
-            <parameter name="username" value="tesmar185346" />
-            <parameter name="password" value="GcJzMoPs6" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Targets" />
-            <parameter name="report-area" value="EBacc" />
-            <parameter name="report-view" value="Standard Pass" />
-            <parameter name="report-level" value="Filters" />
-            <parameter name="column-name" value="EBacc Standard Pass" />
-            <parameter name="grade-filter-options" value="Faculty=Humanities|Qualification=RS|OnTrack=On Or Above" />
-            <parameter name="view-options" value="Figure Type=|Sub Whole=Sub" />
-            <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High" />
-            <parameter name="measures" value="Achieving 9-4 in English and Maths=Include" />
-            <parameter name="expected-report-figures-file" value="Mark - 5 - EBaccStandardFilters - StdPass.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-
-        <test name="Mark 6 - Grades Grade List Students - KS2 Banding">
-            <parameter name="test-id" value="MS-000031" />
-            <parameter name="username" value="tesmar185347" />
-            <parameter name="password" value="TpWfArWt7" />
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Exams" />
-            <parameter name="report-area" value="Grades" />
-            <parameter name="report-view" value="Grade List" />
-            <parameter name="report-level" value="Students" />
-            <parameter name="column-name" value="KS2 Banding" />
-            <parameter name="grade-filter-options" value="Qualification=English Language|OnTrack=All" />
-            <parameter name="view-options" value="Breakdown=KS2 Banding|Sub Whole=Sub" />
-            <parameter name="expected-report-figures-file" value="Mark - 6 - GradesGradeListStudents - KS2 Banding.csv" />
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-    -->
-
-<!-- DISABLED - WAITING FOR CHRIS TO CONFIRM EXPECTED VALUES -->
-<!--
-    <test name="Chris 6 - Grades Totals Qualifications - Total Grades">
-        <parameter name="test-id" value="CF-000006" />
-
-        <parameter name="username" value="regchr196342" />
-        <parameter name="password" value="DuFvEgYz4" />
+        <parameter name="username" value="ayreg196408" />
+        <parameter name="password" value="MgRgPuUv6" />
 
         <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
+        <parameter name="cohort" value="20" />
         <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
+        <parameter name="dataset" value="Y11T3" />
 
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Totals" />
-        <parameter name="report-level" value="Quals" />
+        <parameter name="section-name" value="Attainment/Progress 8 - English" />
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+        <parameter name="view-options" value="Breakdown=KS2 Banding" />
 
-        <parameter name="dataset-options" value="Compare=Exams" />
-        &lt;!&ndash; Edited "Grade Type" to "GCSE/Non-GCSE" &ndash;&gt;
-        <parameter name="grade-filter-options" value="OnTrack=Above Track|Faculty=Science|GCSE/Non-GCSE=GCSE" />
-        <parameter name="view-options" value="Column Sort=Average Points|Column Sort Direction=Ascending|Sub Whole=Whole|Breakdown=Maths Learning Pathway" />
-        <parameter name="filters" value="House=CP|House=EHA|House=LAC|House=None|KS2 Banding=_N/A|KS2 Banding=Lower|KS2 Banding=Middle" />
-        <parameter name="measures" value="Entered for EBacc English=+Include|Entered for EBacc Humanities=+Include|Achieving 9-4 in English=+Include|Taking 3 Single Sciences (GCSE Only)=+Include" />
-        <parameter name="residuals" value="Da Dance|Dr Drama" />
-
-        <parameter name="column-name" value="Total Grades" />
-        <parameter name="expected-report-figures-file" value="Chris 6 - Grades Totals Qualifications - Total Grades.csv" />
-
+        <parameter name="expected-report-figures-file" value="Ian 34 - Headlines Summary - A8P8 English.csv" />
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.reports.eap.headlines.MeasureFigures" />
         </classes>
+
     </test>
 
-    <test name="Chris 7 - Grades Totals Students - Average Points">
-        <parameter name="test-id" value="CF-000007" />
+    <test name="Ian 35 - Headlines Summary - A8P8 Maths">
+        <parameter name="test-id" value="IJ-000035" />
 
-        <parameter name="username" value="regchr196343" />
-        <parameter name="password" value="VoZuCqZk7" />
+        <parameter name="username" value="azreg196409" />
+        <parameter name="password" value="ZaXgVcUm8" />
 
         <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
+        <parameter name="cohort" value="20" />
         <parameter name="year" value="11" />
-        <parameter name="dataset" value="Autumn 2" />
-        <parameter name="openMethod" value="Reports" />
-        <parameter name="openButton" value="Whole School" />
+        <parameter name="dataset" value="Y11T3" />
 
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Totals" />
-        <parameter name="report-level" value="Students" />
+        <parameter name="section-name" value="Attainment/Progress 8 - Maths" />
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+        <parameter name="view-options" value="Breakdown=Gender" />
 
-        <parameter name="dataset-options" value="Compare=Targets" />
-        <parameter name="grade-filter-options" value="Grade Type=All A8 Quals|GCSE/Non-GCSE=GCSE" />
-        <parameter name="view-options" value="Column Sort=On/Above Track (Diff)|Sub Whole=Whole|Breakdown=Colour Band" />
-        <parameter name="filters" value="EAL=Yes|FSM Ever 6=Yes" />
-        <parameter name="measures" value="Achieving EBacc Strong=+Exclude|Achieving 5 Standard Passes inc EM=+Exclude" />
-
-        <parameter name="column-name" value="Average Grade" />
-        <parameter name="expected-report-figures-file" value="Chris 7 - Grades Totals Students - Average Points.csv" />
-
+        <parameter name="expected-report-figures-file" value="Ian 35 - Headlines Summary - A8P8 Maths.csv" />
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.reports.eap.headlines.MeasureFigures" />
         </classes>
+
     </test>
 
-    <test name="Chris 10 - Grades Totals Quals - On-Above Track">
-        <parameter name="test-id" value="CF-000010" />
+    <test name="Ian 36 - Headlines Summary - A8P8 EBacc">
+        <parameter name="test-id" value="IJ-000036" />
 
-        <parameter name="username" value="regchr196346" />
-        <parameter name="password" value="YyWjWuZi8" />
+        <parameter name="username" value="bareg196465" />
+        <parameter name="password" value="NzZtGeUc8" />
 
         <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
+        <parameter name="cohort" value="20" />
         <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="openMethod" value="Reports" />
-        <parameter name="openButton" value="Whole School" />
+        <parameter name="dataset" value="Y11T3" />
 
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Totals" />
-        <parameter name="report-level" value="Quals" />
+        <parameter name="section-name" value="Attainment/Progress 8 - EBacc" />
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+        <parameter name="view-options" value="Breakdown=Gifted Talented" />
 
-        <parameter name="dataset-options" value="Compare=Autumn 2" />
-        <parameter name="grade-filter-options" value="Grade Type=All A8 Quals|GCSE/Non-GCSE=GCSE" />
-        <parameter name="view-options" value="Column Sort=Avg EAP Diff (Sub)|Column Sort Direction=Ascending|Sub Whole=Whole|In A8 Basket=Not In A8 Basket|Breakdown=SEND Monitoring" />
-        <parameter name="filters" value="Gifted Talented=No|Pupil Premium=Yes" />
-        <parameter name="measures" value="Achieving EBacc English Strong=+Exclude|Achieving EBacc Maths Strong=+Exclude" />
-        <parameter name="residuals" value="Ar Art|Bi Biology|xx Italian" />
-
-        <parameter name="column-name" value="On/Above Track" />
-        <parameter name="expected-report-figures-file" value="Chris 10 - Grades Totals Quals - On-Above Track.csv" />
-
+        <parameter name="expected-report-figures-file" value="Ian 36 - Headlines Summary - A8P8 EBacc.csv" />
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.reports.eap.headlines.MeasureFigures" />
         </classes>
+
     </test>
--->
 
-<!-- DISABLED FOR BEING A DIRTY DUPLICATE!! -->
-<!--
-        <test name="Chris 5 - Grades Totals Quals - Average Points">
-            <parameter name="test-id" value="CF-000005" />
+    <test name="Ian 37 - Headlines Summary - A8P8 Open">
+        <parameter name="test-id" value="IJ-000037" />
 
-            <parameter name="username" value="regchr196341" />
-            <parameter name="password" value="YgSuBvWy2" />
+        <parameter name="username" value="bbreg196466" />
+        <parameter name="password" value="FmPzVcRf8" />
 
-            <parameter name="keystage" value="6" />
-            <parameter name="cohort" value="17" />
-            <parameter name="year" value="11" />
-            <parameter name="dataset" value="Targets" />
-
-            <parameter name="report-area" value="Grades" />
-            <parameter name="report-view" value="Totals" />
-            <parameter name="report-level" value="Quals" />
-
-            <parameter name="dataset-options" value="Compare=Exams|Actual=Summer 1|Compare=Spring 2|Compare=Spring 1|Compare=Autumn 2|Actual=Autumn 1|Compare=Targets" />
-            <parameter name="grade-filter-options" value="Faculty=Languages|OnTrack=On Or Above|Grade Type=GCSE A*-G Single|Actual Grade Operator=Less Than|Actual Grade Grade=A" />
-            <parameter name="view-options" value="Column Sort=Residual|Column Sort Direction=Ascending|Figure Type=%|Sub Whole=Whole|Breakdown=Looked After" />
-            <parameter name="filters" value="Colour Band=***None***|Colour Band=Gold|Colour Band=Silver|Gifted Talented=No|Pupil Premium=Yes" />
-            <parameter name="measures" value="Pupils Included (Science Coverage)=Include+Include|Achieving 9-7 in English and Maths=Exclude+Exclude" />
-            <parameter name="residuals" value="Da Dance|Dr Drama|Ft Food Technology" />
-
-            <parameter name="column-name" value="Average Points" />
-            <parameter name="expected-report-figures-file" value="Chris 5 - Grades Totals Quals - Average Points.csv" />
-
-            <classes>
-                <class name="tests.reports.eap.general.ListViewFigures" />
-            </classes>
-        </test>
-    -->
-
-<!-- DISABLED FOR BEING IN SCHOOLS THAT ARE SUBJECT TO CHANGE -->
-<!--
-    <test name="Ian 1 - Headline Filters - Positive P8">
-        <parameter name="test-id" value="IJ-000021" />
-        <parameter name="username" value="oneaut185180" />
-        <parameter name="password" value="KcZiGnGh6" />
         <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="18" />
+        <parameter name="cohort" value="20" />
         <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="Headlines" />
-        <parameter name="report-view" value="Filters" />
-        <parameter name="report-level" value="Whole School" />
-        <parameter name="column-name" value="Positive P8 Score" />
-        <parameter name="expected-report-figures-file" value="Ian - 1 - HeadlinesFilters - Positive P8.csv" />
+        <parameter name="dataset" value="Y11T3" />
+
+        <parameter name="section-name" value="Attainment/Progress 8 - Open" />
+        <parameter name="dataset-options" value="Compare=Y10T1" />
+        <parameter name="view-options" value="Breakdown=SEN" />
+
+        <parameter name="expected-report-figures-file" value="Ian 37 - Headlines Summary - A8P8 Open.csv" />
         <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
+            <class name="tests.reports.eap.headlines.MeasureFigures" />
         </classes>
+
     </test>
-
-    <test name="Ian 2 - EBacc Strong Pass Filters - EBacc Standard Pass">
-        <parameter name="test-id" value="IJ-000022" />
-        <parameter name="username" value="twoaut185182" />
-        <parameter name="password" value="AbDoWnHq9" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="19" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="EBacc" />
-        <parameter name="report-view" value="Strong Pass" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="EBacc Standard Pass" />
-        <parameter name="dataset-options" value="Compare=Compare With Set" />
-        <parameter name="expected-report-figures-file" value="Ian - 2 - EBaccStrongPass - StdPass.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Ian 3 - EBacc Standard Pass Filters - EBacc Strong Pass">
-        <parameter name="test-id" value="IJ-000023" />
-        <parameter name="username" value="thraut185184" />
-        <parameter name="password" value="CkGkPsSc3" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="19" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="EBacc" />
-        <parameter name="report-view" value="Standard Pass" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="EBacc Strong Pass" />
-        <parameter name="dataset-options" value="Compare=Compare With Set" />
-        <parameter name="expected-report-figures-file" value="Ian - 3 - EBaccStdPass - StrongPass.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Ian 4 - A8P8 Overview Students - KS2 Prior">
-        <parameter name="test-id" value="IJ-000024" />
-        <parameter name="username" value="oneaut185273" />
-        <parameter name="password" value="RdDsRtUj4" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="16" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Students" />
-        <parameter name="column-name" value="KS2 Prior" />
-        <parameter name="expected-report-figures-file" value="Ian - 4 - A8P8OverviewStudents - KS2 Prior.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Ian 5 - A8P8 Overview Filters - KS2 Prior">
-        <parameter name="test-id" value="IJ-000025" />
-        <parameter name="username" value="twoaut185274" />
-        <parameter name="password" value="QpFdUgMw6" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="16" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Assessments" />
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="KS2 Prior" />
-        <parameter name="expected-report-figures-file" value="Ian - 5 - A8P8OverviewFilters - KS2 Prior.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
--->
-
-
 
 </suite>

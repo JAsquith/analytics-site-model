@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Random Suite" parallel="tests" thread-count="4">
+
+    <parameter name="debug" value="true" />
+
+    <test name="Random #1 - Restore Milton">
+        <parameter name="test-id" value="RND-00001" />
+        <parameter name="username" value="Phase6" />
+        <parameter name="password" value="wsS!SRA125" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #2 - Demo School">
+        <parameter name="test-id" value="RND-00002" />
+        <parameter name="username" value="auttom194704" />
+        <parameter name="password" value="KsFcYfHk6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="50" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #3 - Restore Milton">
+        <parameter name="test-id" value="RND-00003" />
+        <parameter name="username" value="randmd196759" />
+        <parameter name="password" value="WcSkTiVh5" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #4 - Restore Milton">
+        <parameter name="test-id" value="RND-00004" />
+        <parameter name="username" value="randmb196757" />
+        <parameter name="password" value="PsCoDpRf6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #5 - Restore Milton">
+        <parameter name="test-id" value="RND-00005" />
+        <parameter name="username" value="randmc196758" />
+        <parameter name="password" value="HrTcYmEo3" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #5 - Restore Milton">
+        <parameter name="test-id" value="RND-00005" />
+        <parameter name="username" value="randmg196761" />
+        <parameter name="password" value="DnVoJmEu6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #6 - Restore Milton">
+        <parameter name="test-id" value="RND-00006" />
+        <parameter name="username" value="randmf196760" />
+        <parameter name="password" value="XzNcSkNq2" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #7 - Restore Milton">
+        <parameter name="test-id" value="RND-00007" />
+        <parameter name="username" value="randmh196762" />
+        <parameter name="password" value="XiKdShAu6" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #8 - Restore Milton">
+        <parameter name="test-id" value="RND-00008" />
+        <parameter name="username" value="randmi196763" />
+        <parameter name="password" value="FsTwMcUz9" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+    <test name="Random #9 - Restore Milton">
+        <parameter name="test-id" value="RND-00009" />
+        <parameter name="username" value="randmj196764" />
+        <parameter name="password" value="NvCwAuFr2" />
+        <parameter name="cohort" value="17" />
+        <parameter name="maxLoops" value="25" />
+        <classes>
+            <class name="tests.reports.eap.RandomisedTest" />
+        </classes>
+    </test>
+
+</suite>
