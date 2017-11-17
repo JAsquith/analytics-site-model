@@ -2,10 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Development Suite" parallel="tests" thread-count="1">
 
-    <listeners>
-        <listener class-name="listeners.LinkedTestsSuiteListener"/>
-    </listeners>
-
     <parameter name="debug" value="true" />
 
     <!-- FLAKY IN PRODUCTION -->
@@ -73,7 +69,16 @@
 
 -->
 
-    <!-- TO BE VERIFIED -->
+    <test name="InProgress - Republish Test">
+
+
+
+        <classes>
+            <class name="tests.admin.data.EAPPublishTest" />
+        </classes>
+    </test>
+
+    <!-- DATA NEEDS TO BE COPIED TO A PROPER REGRESSION SCHOOL -->
     <test name="Andy 1 - A8P8 Overview Filters - P8">
         <parameter name="test-id" value="AR-000020" />
         <parameter name="username" value="roand171650" />
@@ -93,134 +98,6 @@
         <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High|KS2 Banding=Lower|Pupil Premium=Not PP" />
         <parameter name="measures" value="Achieving at least 1 qualification=Include|Achieving EBacc Humanities Strong=+Include" />
         <parameter name="expected-report-figures-file" value="Andy - 1 - A8P8OverviewFilters - P8.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Mark 1 - Grades Overview Students - Average Points">
-        <parameter name="test-id" value="MS-000026" />
-        <parameter name="username" value="tesmar185342" />
-        <parameter name="password" value="FfWbNjMf9" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Quals" />
-        <parameter name="column-name" value="Average Points" />
-        <parameter name="grade-filter-options" value="OnTrack=Above Track|Grade Type=All A8 Quals" />
-        <parameter name="view-options" value="Figure Type=%|StdCum=Std|Breakdown=Armed Forces|In A8 Basket=In A8 Basket|Sub Whole=Sub" />
-        <parameter name="expected-report-figures-file" value="Mark - 1 - GradesOverviewStudents - Average Points.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Mark 2 - A8P8 Overview Students - KS2 Prior">
-        <parameter name="test-id" value="MS-000027" />
-        <parameter name="username" value="tesmar185343" />
-        <parameter name="password" value="AtSxEaNn8" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="report-area" value="A8/P8" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Students" />
-        <parameter name="column-name" value="KS2 Prior" />
-        <parameter name="grade-filter-options" value="Faculty=English|Qualification=English Language" />
-        <parameter name="view-options" value="Column Sort=KS2 Prior|Breakdown=Ethnic Code" />
-        <parameter name="filters" value="Armed Forces=N|Armed Forces=Y|Gender=F|Gender=M" />
-        <parameter name="expected-report-figures-file" value="Mark - 2 - A8P8OverviewStudents - KS2 Prior.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Mark 3 - Basics Contribution Filters - KS2 Eng">
-        <parameter name="test-id" value="MS-000028" />
-        <parameter name="username" value="tesmar185344" />
-        <parameter name="password" value="WbJuRuTu9" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="report-area" value="Basics" />
-        <parameter name="report-view" value="Contribution" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="KS2 Eng" />
-        <parameter name="dataset-options" value="Compare=Exams" />
-        <parameter name="grade-filter-options" value="Faculty=Maths|Qualification=Maths|OnTrack=On Or Above|Actual Grade Operator=Greater Than|Actual Grade Grade=3|Actual Grade Subgrade=-" />
-        <parameter name="view-options" value="Column Sort=KS2 Eng|Column Sort Direction=Ascending" />
-        <parameter name="filters" value="EAL=N|Ethnic Code=WENG|Gender=F|Gender=M" />
-        <parameter name="measures" value="Pupils Included (Progress 8 Coverage)=Include+Include|Pupils achieving a Positive Progress 8 score=Include+Include" />
-        <parameter name="expected-report-figures-file" value="Mark - 3 - BasicsContributionFilters - KS2 Eng.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Mark 4 - VA Overview Students - Sci VA">
-        <parameter name="test-id" value="MS-000029" />
-        <parameter name="username" value="tesmar185345" />
-        <parameter name="password" value="WnCcWrCo4" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="VA" />
-        <parameter name="report-view" value="Overview" />
-        <parameter name="report-level" value="Students" />
-        <parameter name="column-name" value="Sci VA" />
-        <parameter name="grade-filter-options" value="Faculty=Science" />
-        <parameter name="view-options" value="Column Sort=Sci VA|Breakdown=Gender" />
-        <parameter name="filters" value="Ethnic Code=MWBA|Ethnic Code=WENG|Gender=F|Gender=M" />
-        <parameter name="measures" value="Achieving 9-5 in English=Include|Achieving 9-5 in Maths=Exclude" />
-        <parameter name="expected-report-figures-file" value="Mark - 4 - VAOverviewStudents - Sci VA.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Mark 5 - EBacc Standard Filters - StdPass">
-        <parameter name="test-id" value="MS-000030" />
-        <parameter name="username" value="tesmar185346" />
-        <parameter name="password" value="GcJzMoPs6" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Targets" />
-        <parameter name="report-area" value="EBacc" />
-        <parameter name="report-view" value="Standard Pass" />
-        <parameter name="report-level" value="Filters" />
-        <parameter name="column-name" value="EBacc Standard Pass" />
-        <parameter name="grade-filter-options" value="Faculty=Humanities|Qualification=RS|OnTrack=On Or Above" />
-        <parameter name="view-options" value="Figure Type=|Sub Whole=Sub" />
-        <parameter name="filters" value="KS2 Banding=Middle|KS2 Banding=Upper/High" />
-        <parameter name="measures" value="Achieving 9-4 in English and Maths=Include" />
-        <parameter name="expected-report-figures-file" value="Mark - 5 - EBaccStandardFilters - StdPass.csv" />
-        <classes>
-            <class name="tests.reports.eap.general.ListViewFigures" />
-        </classes>
-    </test>
-
-    <test name="Mark 6 - Grades Grade List Students - KS2 Banding">
-        <parameter name="test-id" value="MS-000031" />
-        <parameter name="username" value="tesmar185347" />
-        <parameter name="password" value="TpWfArWt7" />
-        <parameter name="keystage" value="6" />
-        <parameter name="cohort" value="17" />
-        <parameter name="year" value="11" />
-        <parameter name="dataset" value="Exams" />
-        <parameter name="report-area" value="Grades" />
-        <parameter name="report-view" value="Grade List" />
-        <parameter name="report-level" value="Students" />
-        <parameter name="column-name" value="KS2 Banding" />
-        <parameter name="grade-filter-options" value="Qualification=English Language|OnTrack=All" />
-        <parameter name="view-options" value="Breakdown=KS2 Banding|Sub Whole=Sub" />
-        <parameter name="expected-report-figures-file" value="Mark - 6 - GradesGradeListStudents - KS2 Banding.csv" />
         <classes>
             <class name="tests.reports.eap.general.ListViewFigures" />
         </classes>

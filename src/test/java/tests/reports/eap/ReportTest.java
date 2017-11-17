@@ -17,7 +17,6 @@ public abstract class ReportTest extends BaseTest {
     protected EAPView report;
 
     @BeforeTest()
-    @Step ( "Login, Open the required Report, and apply required Options " )
     @Parameters( { "username", "password" })
     public void setup(ITestContext testContext, String user, String pass){
 
@@ -47,7 +46,7 @@ public abstract class ReportTest extends BaseTest {
                     break;
 
                 case "Qualification/Class":
-
+                    //Todo
 
             }
             report = openTestDataset(getStringParam("cohort"),
@@ -71,10 +70,19 @@ public abstract class ReportTest extends BaseTest {
 
         } catch (Exception e){
             saveScreenshot(context.getName()+"_SetupFail.png");
-            if (driver!=null){
-                driver.quit();
+            StackTraceElement[] stackTraceElements = e.getStackTrace();
+            int stackIndex = 0;
+            String fullStack = "Stack Trace Elements:\n\n";
+            String sisraStack = "Selected Stack Trace Elements: \n\n";
+            for(StackTraceElement traceElement : stackTraceElements){
+                String msg = String.format("Stack Element[%d]: %s \n", stackIndex++, traceElement.toString());
+                fullStack += msg;
+                if (traceElement.getClassName().startsWith("pages")||traceElement.getClassName().startsWith("tests")){
+                    sisraStack += msg;
+                }
             }
-            e.printStackTrace();
+            logToAllure(sisraStack);
+            logToAllure(fullStack);
             fail("Test Setup Failed! Exception: "+e.getMessage());
         }
     }

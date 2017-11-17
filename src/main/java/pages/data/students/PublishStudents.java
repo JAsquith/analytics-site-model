@@ -21,7 +21,7 @@ public class PublishStudents extends AnalyticsPage {
     public final By PUBLISH_BUTTON = By.id("smtBtQue");
     public final By LOCAL_PUBLISH_BUTTON = By.id("smtBt");
     public final By CLOSE_PUB_PROG_MODAL_BUTTON = By.cssSelector(".pubFinished");
-    public final By LAST_PUBLISHED_INFO_TEXT = By.className("smallInfo");
+    public final By LAST_PUBLISHED_INFO_TEXT = By.cssSelector(".smallInfo>span");
 
     /**
      * Simple constructor

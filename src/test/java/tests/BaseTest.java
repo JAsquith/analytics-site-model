@@ -77,7 +77,7 @@ public abstract class BaseTest {
             return "Failed to initialise RemoteWebDriver ["+e.getMessage()+"]";
         }
 
-        driver.manage().window().setSize(new Dimension(1400,1600));
+        driver.manage().window().setSize(new Dimension(1600,1440));
 
         driver.get(applicationUrl);
         return "";
@@ -183,12 +183,11 @@ public abstract class BaseTest {
     @Attachment(value = "[{logIndex}] Log Message")
     private String actualLogToAllure(int logIndex, String msg){
         System.out.println("["+logIndex+"] "+msg);
-        logCount = logIndex;
         return msg;
     }
 
-    protected String logToAllure(int logIndex, String msg){
-        if (debugMode) return actualLogToAllure(logIndex, msg);
+    protected String logToAllure(String msg){
+        if (debugMode) return actualLogToAllure(++logCount, msg);
         return "";
     }
 

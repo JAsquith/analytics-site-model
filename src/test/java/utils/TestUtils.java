@@ -11,9 +11,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static utils.TestConstants.TESTS_TO_RUN_FILE_NAME;
 import static utils.TestConstants.TEST_PROPERTIES_FILENAME;
@@ -191,5 +197,52 @@ public class TestUtils {
         }
 
         return caps;
+    }
+
+    public static LocalDateTime parseLastPublishedString(String s){
+
+        int atIndex = s.indexOf(" at ");
+        String datePart = s.substring(0, atIndex).trim();
+        String timePart = s.substring(atIndex+5).trim();
+
+        // Parse the date
+        LocalDate pubDate = null;
+        if(s.startsWith("Today")){
+            pubDate = LocalDate.now();
+        }
+        if(s.startsWith("Yesterday")){
+            pubDate = LocalDate.now().minusDays(1);
+        }
+        if (pubDate == null){
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM yyyy");
+            pubDate = LocalDate.parse(deleteOrdinal(datePart), dateFormatter);
+        }
+
+        // Parse the time
+        LocalDateTime pubDateTime = null;
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("k:mm");
+
+        LocalTime pubTime = null;
+        try{
+            pubTime = LocalTime.parse(timePart, timeFormatter);
+            System.out.println(String.format("Parsed Time: '%s'", timePart));
+        } catch (Exception e){
+            System.out.println(String.format("Exception parsing Time: '%s'", timePart));
+            throw e;
+        }
+
+        return LocalDateTime.of(pubDate, pubTime);
+
+    }
+
+    public static final Pattern dateOrdinalPattern = Pattern.compile("([0-9]+)(st|nd|rd|th)");
+
+    private static String deleteOrdinal(String dateString) {
+        Matcher m = dateOrdinalPattern.matcher(dateString);
+        while (m.find()) {
+            dateString = dateString.replaceAll(Matcher.quoteReplacement(m.group(0)), m.group(1));
+        }
+        return dateString;
+
     }
 }
