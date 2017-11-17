@@ -39,7 +39,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     private static final By VTP_OPTION_TRACK = By.cssSelector(".IsTracker");
     private static final By VTP_OPTION_PROJECT = By.cssSelector(".HasSBP");
     private static final By VTP_OPTION_ANY = By.cssSelector(".canView,.HasSBP,.IsTracker");
-    public static final String COMPARE_DDL_NULL_OPTION = "none";
+    private static final String COMPARE_DDL_NULL_OPTION = "none";
 
     /* Constructor method
     * ToDo: Javadoc */
@@ -143,7 +143,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         WebElement vtp = getViewTrackProject();
         WebElement button = getVTPButton(vtp, reportType);
         if(button==null){
-            if(reportType.equals("View") || reportType.equals("Tracker") || reportType.equals("Projection")){
+            if(reportType.equals("View") || reportType.equals("Track") || reportType.equals("Project")){
                 throw new IllegalStateException(reportType + " is not currently available for the Focus Data");
             } else {
                 throw new IllegalArgumentException(reportType + " is not a valid option for the Focus Data");
@@ -161,7 +161,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
         WebElement vtp = getViewTrackProject(true);
         WebElement button = getVTPButton(vtp, reportType);
         if(button==null){
-            if(reportType.equals("View") || reportType.equals("Projection")){
+            if(reportType.equals("View") || reportType.equals("Project")){
                 throw new IllegalStateException(reportType + " is not currently available for the Compare Data");
             } else {
                 throw new IllegalArgumentException(reportType + " is not a valid option for the Compare Data");
@@ -260,9 +260,10 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
             case COMPARE_VTP:
                 return showCompareDataAs(option);
             case TRACKER_COLUMN:
-                selectTrackerColumn(option);
+                return selectTrackerColumn(option);
             case RESET_DATASETS:
                 this.resetTab();
+                return new EAPView(driver);
             default:
                 throw new IllegalArgumentException(action.toString()+" is not a valid ReportAction for the Datasets tab");
         }

@@ -21,6 +21,26 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.is;
 
+/**
+ * This test class checks the figures in one section of the Headlines > Summary report.<p>
+ *
+ * The TestNG &lt;test&gt; that invokes this class <em>must</em> have the following parameters:
+ *  test-id: - a string matching a test id listed in the TestsList.csv file
+ *  username: - a valid username to access an Analytics school on the dev server
+ *  password: - the password to match the specified username
+ *  cohort: - a two-digit cohort id (e.g. "17" identifies the cohort who completed KS4 in summer 2017)
+ *  year: a one or two digit numeric string identifying the EAP Year the target dataset is linked to
+ *  dataset: the name of the dataset to be checked
+ *  section-name: a string matching the title text of a section on the Headlines > Summary report
+ *  expected-report-figures-file: a file path string relative to $project$\test-resources\table-data\expected
+ *
+ * The TestNG &lt;test&gt; that invokes this class <em>may</em> have the following parameters:
+ *  dataset-options: one or more '|' delimited actions such as changing the focus/compare dataset
+ *  filters: one or more '|' delimited filter-group&filter-value pairs
+ *  Todo - complete this list
+ *
+ * @author  Milton Asquith
+ */
 @Epic( "EAP Reports" )
 @Feature( "Headlines Summary Figures" )
 @Story( "Check a Section of the Headlines Summary Report" )

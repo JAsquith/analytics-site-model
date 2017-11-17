@@ -41,10 +41,13 @@ public class ReportActionsTab extends AnalyticsComponent {
     }
 
     public boolean isActive(){
-        return !isInactive();
+        if (getTabContentsDiv()==null){
+            return false;
+        }
+        return tabContentsDiv.isDisplayed();
     }
     public boolean isInactive() {
-        return getTabContentsDiv()==null;
+        return !isActive();
     }
 
     public boolean resizeable(){
@@ -109,7 +112,7 @@ public class ReportActionsTab extends AnalyticsComponent {
 
     public void selectAndExpandTab(){
         selectTab();
-        //expandTab();
+        expandTab();
     }
 
     public void resetTab(){
@@ -125,6 +128,7 @@ public class ReportActionsTab extends AnalyticsComponent {
             throw new IllegalStateException("There are no applied options to be reset on Tab '"+tabName+"'");
         }
         resetButtons.get(0).click();
+        waitForLoadingWrapper();
         WebElement yesButton = waitShort.until(resetPopupDisplayed());
 
         if (confirm) {

@@ -30,7 +30,6 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
 
         try {
             WebElement label = getFilterValueElement(filterTitle, filterValue);
-            driver.executeScript("arguments[0].scrollIntoView(true);", label);
             label.click();
         } catch (Exception e){
             System.err.println("Filter [" + filterTitle + " > " + filterValue + "] not found");
@@ -126,6 +125,7 @@ public class ReportViewModal_Filters extends ReportViewModal implements IReportM
         js += "    }";
         js += "  }";
         js += "}";
+        js += "labelElement.scrollIntoView(true);";
         js += "return labelElement";
         return js;
     }

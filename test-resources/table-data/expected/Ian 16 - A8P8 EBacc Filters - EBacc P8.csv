@@ -1,0 +1,58 @@
+Name,Filter Value,EBacc P8
+Ethnic Code,MOTH,-0.158
+SBP from Y10T1 (Assessments) >,,-2.279
+Difference >,,2.121
+Ethnic Code,MWAS,-0.901
+SBP from Y10T1 (Assessments) >,,-3.321
+Difference >,,2.420
+Ethnic Code,WBRI,-0.779
+SBP from Y10T1 (Assessments) >,,-2.987
+Difference >,,2.207
+Ethnic Code,WIRI,-1.085
+SBP from Y10T1 (Assessments) >,,-3.489
+Difference >,,2.404
+Ethnic Code,WIRT,-0.938
+SBP from Y10T1 (Assessments) >,,-3.354
+Difference >,,2.416
+FSM Ever 6,N,-0.984
+SBP from Y10T1 (Assessments) >,,-3.127
+Difference >,,2.143
+FSM Ever 6,Y,-0.531
+SBP from Y10T1 (Assessments) >,,-2.950
+Difference >,,2.419
+Gender,F,-0.812
+SBP from Y10T1 (Assessments) >,,-3.237
+Difference >,,2.425
+Gender,M,-0.743
+SBP from Y10T1 (Assessments) >,,-2.907
+Difference >,,2.164
+Gifted Talented,N,-0.810
+SBP from Y10T1 (Assessments) >,,-3.167
+Difference >,,2.357
+Gifted Talented,Y,-0.674
+SBP from Y10T1 (Assessments) >,,-2.729
+Difference >,,2.055
+KS2 Banding,_N/A,
+SBP from Y10T1 (Assessments) >,,
+Difference >,,
+KS2 Banding,Lower,2.145
+SBP from Y10T1 (Assessments) >,,0.203
+Difference >,,1.942
+KS2 Banding,Middle,0.306
+SBP from Y10T1 (Assessments) >,,-2.164
+Difference >,,2.469
+KS2 Banding,Upper/High,-3.913
+SBP from Y10T1 (Assessments) >,,-6.472
+Difference >,,2.559
+SEN,E,-0.859
+SBP from Y10T1 (Assessments) >,,-3.049
+Difference >,,2.190
+SEN,K,-0.696
+SBP from Y10T1 (Assessments) >,,-3.098
+Difference >,,2.402
+SEN,N,-0.469
+SBP from Y10T1 (Assessments) >,,-2.681
+Difference >,,2.213
+Summary,,-0.772
+SBP from Y10T1 (Assessments) >,,-3.044
+Difference >,,2.272

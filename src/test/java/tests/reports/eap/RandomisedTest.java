@@ -10,7 +10,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.reports.EAPView;
 import pages.reports.ReportsHome_EAP;
-import pages.reports.components.ReportActions_Table;
 import pages.reports.components.ReportsHome_EAPYearGroup;
 import pages.reports.interfaces.IReportActionGroup;
 import tests.BaseTest;
@@ -21,6 +20,20 @@ import java.util.*;
 import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.testng.Assert.fail;
 
+/**
+ * This test class randomly opens EAP Reports and applies random Report Options
+ * to see if an unusual/unanticipated combination of data/actions could
+ * produce an error.<p>
+ *
+ * The TestNG &lt;test&gt; that invokes this class must have the following parameters:
+ *  test-id - a string matching a test id listed in the TestsList.csv file
+ *  username - a valid username to access an Analytics school on the dev server
+ *  password - the password to match the specified username
+ *  cohort - a two-digit cohort id (e.g. "17" identifies the cohort who completed KS4 in summer 2017)
+ *  maxLoops - an integer which indicates how many reports/report options to open/apply
+ *
+ * @author  Milton Asquith
+ */
 public class RandomisedTest extends BaseTest {
 
     protected EAPView report;
@@ -70,9 +83,9 @@ public class RandomisedTest extends BaseTest {
 
         } catch (Exception e){
             saveScreenshot(context.getName()+"4_testException.png");
-            logToAllure(++logCount, "Exception during Test Method: "+e.getClass().getName());
-            logToAllure(++logCount, "Exception message: "+e.getMessage());
-            logToAllure(++logCount, "Stack trace: "+getStackTraceAsString(e));
+            logToAllure("Exception during Test Method: "+e.getClass().getName());
+            logToAllure("Exception message: "+e.getMessage());
+            logToAllure("Stack trace: "+getStackTraceAsString(e));
             throw e;
         }
 
@@ -244,9 +257,9 @@ public class RandomisedTest extends BaseTest {
         try {
             List<IReportActionGroup> actionGroups = getActionGroupList();
             actionGroup = actionGroups.get(rnd.nextInt(actionGroups.size()));
-            logToAllure(++logCount, "Chosen Group: " + actionGroup.getName());
+            logToAllure("Chosen Group: " + actionGroup.getName());
         } catch (Exception e) {
-            logToAllure(++logCount,"Exception getting valid Action Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
+            logToAllure("Exception getting valid Action Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
             throw e;
         }
         return actionGroup;
@@ -259,6 +272,7 @@ public class RandomisedTest extends BaseTest {
         actionGroups.add(report.datasetsTab);
         actionGroups.add(report.optionsTab);
 
+/*
         if (report.filtersTab.isEnabled()) {
             actionGroups.add(report.filtersTab);
         }
@@ -273,13 +287,14 @@ public class RandomisedTest extends BaseTest {
                 actionGroups.add(table);
             }
         }
+*/
 
         String groupsDesc = "[";
         for(IReportActionGroup group : actionGroups){
             groupsDesc += group.getName()+",";
         }
         groupsDesc += "]";
-        logToAllure(++logCount, "Valid ActionGroups: " + groupsDesc);
+        logToAllure("Valid ActionGroups: " + groupsDesc);
 
         return actionGroups;
     }
@@ -289,11 +304,11 @@ public class RandomisedTest extends BaseTest {
         try {
             List<ReportAction> actions;
             actions = actionGroup.getValidActionsList();
-            logToAllure(++logCount, "GroupActions: " + actions);
+            logToAllure("GroupActions: " + actions);
             reportAction = actions.get(rnd.nextInt(actions.size()));
-            logToAllure(++logCount, "Chosen Action: " + reportAction.toString().toUpperCase());
+            logToAllure("Chosen Action: " + reportAction.toString().toUpperCase());
         } catch (Exception e) {
-            logToAllure(++logCount,"Exception getting valid Test Action for Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
+            logToAllure("Exception getting valid Test Action for Group: "+e.getClass().getName()+System.lineSeparator()+"Exception message: "+e.getMessage());
             throw e;
         }
         // Check whether we have any stored lists of actionOptions for actions which may change due to this current action:
@@ -339,11 +354,11 @@ public class RandomisedTest extends BaseTest {
             } else {
                 actionOptions = group.getOptionsForAction(action);
             }
-            logToAllure(++logCount, "TestActionOptions: " + actionOptions);
+            logToAllure("TestActionOptions: " + actionOptions);
             actionOption = actionOptions.get(rnd.nextInt(actionOptions.size()));
-            logToAllure(++logCount, "Chosen Option: " + actionOption);
+            logToAllure("Chosen Option: " + actionOption);
         } catch (Exception e){
-            logToAllure(++logCount,"Exception getting options for TestAction: "+e.getClass().getName()+System.lineSeparator()+ "Exception message: "+e.getMessage());
+            logToAllure("Exception getting options for TestAction: "+e.getClass().getName()+System.lineSeparator()+ "Exception message: "+e.getMessage());
             throw e;
         }
         return actionOption;

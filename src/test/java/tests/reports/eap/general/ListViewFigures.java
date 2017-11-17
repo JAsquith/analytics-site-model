@@ -32,7 +32,7 @@ public class ListViewFigures extends ReportTest{
     private String column;
     private String table;
 
-    @Test ( description = "1. Read the Report View" )
+    @Test ( description = "1. Check Report Column Exported" )
     @Parameters( {"column-name", "expected-report-figures-file"} )
     @Step ( "Saving Name and {columnName} values to actual/{expectedFiguresFileName}" )
     public void extractReportFigures(String columnName, String expectedFiguresFileName){
@@ -54,7 +54,7 @@ public class ListViewFigures extends ReportTest{
         }
     }
 
-    @Test( description = "2. Check Number of Rows",
+    @Test( description = "2. Check Report Export Row Count",
             dependsOnMethods = "extractReportFigures")
     @Parameters( {"expected-report-figures-file"} )
     @Step ( "actual/{expectedFiguresFileName} & expected/{expectedFiguresFileName} have the same number of lines" )

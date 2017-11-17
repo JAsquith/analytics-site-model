@@ -17,7 +17,6 @@ public abstract class ReportTest extends BaseTest {
     protected EAPView report;
 
     @BeforeTest()
-    @Step ( "Login, Open the required Report, and apply required Options " )
     @Parameters( { "username", "password" })
     public void setup(ITestContext testContext, String user, String pass){
 
@@ -34,6 +33,22 @@ public abstract class ReportTest extends BaseTest {
             login(user, pass, true);
 
             // Open the reports for the correct dataset
+            String openMethod = getStringParam("openMethod");
+            String cohort = getStringParam("cohort");
+            String eapYear = getStringParam("year");
+            String dsName = getStringParam("dataset");
+
+            switch (openMethod){
+                case "Reports":
+                    String trackCol = getStringParam("trackerCol");
+                    String btnName = getStringParam("button");
+                    report = openTestDataset(cohort,eapYear,trackCol,dsName,btnName);
+                    break;
+
+                case "Qualification/Class":
+                    //Todo
+
+            }
             report = openTestDataset(getStringParam("cohort"),
                     getStringParam("year"),
                     getStringParam("trackerCol"),
@@ -55,10 +70,19 @@ public abstract class ReportTest extends BaseTest {
 
         } catch (Exception e){
             saveScreenshot(context.getName()+"_SetupFail.png");
-            if (driver!=null){
-                driver.quit();
+            StackTraceElement[] stackTraceElements = e.getStackTrace();
+            int stackIndex = 0;
+            String fullStack = "Stack Trace Elements:\n\n";
+            String sisraStack = "Selected Stack Trace Elements: \n\n";
+            for(StackTraceElement traceElement : stackTraceElements){
+                String msg = String.format("Stack Element[%d]: %s \n", stackIndex++, traceElement.toString());
+                fullStack += msg;
+                if (traceElement.getClassName().startsWith("pages")||traceElement.getClassName().startsWith("tests")){
+                    sisraStack += msg;
+                }
             }
-            e.printStackTrace();
+            logToAllure(sisraStack);
+            logToAllure(fullStack);
             fail("Test Setup Failed! Exception: "+e.getMessage());
         }
     }
@@ -126,12 +150,17 @@ public abstract class ReportTest extends BaseTest {
             case "Compare":
                 report = report.datasetsTab.selectCompareCollection(value);
                 break;
+            case "Actual As":
+                report = report.datasetsTab.showFocusDataAs(value);
+                break;
+            case "Compare As":
+                report = report.datasetsTab.showCompareDataAs(value);
+                break;
             default:
                 throw new IllegalArgumentException("Unknown Dataset Option '"+field+"'");
         }
 
     }
-
 
     public void applyAllStudentFilters(){
         String[] filters = getArrayParam("filters");
