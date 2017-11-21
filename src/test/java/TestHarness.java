@@ -1,5 +1,8 @@
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import utils.ExcelFile;
 import utils.TestUtils;
 
 import java.time.LocalDateTime;
@@ -16,62 +19,52 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class TestHarness {
 
     @Test(dataProvider = "testDates")
-    public void testDateParsing(String pubDate, Boolean expected){
+    public void testDateParsing(String pubDate, String deployDate, String expOutcome)
+    {
 
-        String cutoffString = "Friday 17th November 2017 at 09:57";
-        LocalDateTime cutoffDT = TestUtils.parseLastPublishedString(cutoffString);
+        LocalDateTime cutoffDT = TestUtils.parseDeployDateString(deployDate);
+        LocalDateTime pubDT = TestUtils.parseLastPubDateString(pubDate);
 
-        String assertText = String.format("%s is before %s", pubDate, cutoffString);
+        boolean testResult = (pubDT.isBefore(cutoffDT) || pubDT.isEqual(cutoffDT));
 
-        try {
-            LocalDateTime pubDT = TestUtils.parseLastPublishedString(pubDate);
+        String actOutcome = testResult ? "earlier than or equal to" : "later than";
 
-            boolean testResult = (pubDT.isBefore(cutoffDT) || pubDT.isEqual(cutoffDT));
-            assertThat(assertText, testResult, is(expected));
-        } catch (Exception e){
-            System.out.println("Test Exception!");
-        }
+        String assertText = String.format("%1$tD at %1$tR is %2$s %3$tD at %3$tR", pubDT, expOutcome, cutoffDT);
+        assertThat(assertText, actOutcome, is(expOutcome));
     }
 
     @DataProvider(name = "testDates")
     public Iterator<Object[]> createTestDates(){
         List<Object []> testCases = new ArrayList<>();
 
-        String[] testValues = {
-                "Today at 09:56",
-                "Today at 09:57",
-                "Today at 09:58",
-                "Yesterday at 09:56",
-                "Yesterday at 09:57",
-                "Yesterday at 09:58",
-                "Thursday 16th November 2017 at 09:56",
-                "Thursday 16th November 2017 at 09:57",
-                "Thursday 16th November 2017 at 09:58",
-                "Friday 17th November 2017 at 09:56",
-                "Friday 17th November 2017 at 09:57",
-                "Friday 17th November 2017 at 09:58"
-        };
+        ExcelFile xlFile = null;
+        int casesCount = 0;
+        try
+        {
+            xlFile = new ExcelFile("PublishDateVerificationData.xlsx");
+            casesCount = xlFile.getRowCount("CaseData") - 1;
+        } catch (Exception e)
+        {
+            System.out.println("File Not Found: PublishDateVerificationData.xlsx");
+            e.printStackTrace();
+        }
 
-        Boolean[] testResults = {
-                true,
-                true,
-                false,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                true,
-                false
-        };
-        int i = 0;
-        for(String testValue : testValues){
-            testCases.add(new Object[]{testValue, testResults[i++]});
+        if (xlFile == null)
+        {
+            return testCases.iterator();
+        }
+
+        XSSFSheet xlSheet = xlFile.getXlWorkbook().getSheet("CaseData");
+
+        for (int caseIndex = 1; caseIndex <= casesCount; caseIndex++)
+        {
+            XSSFRow xlRow = xlSheet.getRow(caseIndex);
+            String pubDate = xlRow.getCell(0).getStringCellValue();
+            String deployDate = xlRow.getCell(1).getStringCellValue();
+            String expectedOutcome = xlRow.getCell(2).getStringCellValue();
+            testCases.add(new Object[]{pubDate, deployDate, expectedOutcome});
         }
         return testCases.iterator();
     }
-
 
 }

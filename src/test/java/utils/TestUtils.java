@@ -199,11 +199,23 @@ public class TestUtils {
         return caps;
     }
 
-    public static LocalDateTime parseLastPublishedString(String s){
+    public static LocalDateTime parseDeployDateString(String s)
+    {
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        return LocalDateTime.parse(deleteOrdinal(s), dateFormatter);
+    }
+
+    public static LocalDateTime parseLastPubDateString(String s)
+    {
+
+        if (s.startsWith("Fail") || s.startsWith("Not"))
+        {
+            return LocalDateTime.of(LocalDate.MIN, LocalTime.MIN);
+        }
 
         int atIndex = s.indexOf(" at ");
         String datePart = s.substring(0, atIndex).trim();
-        String timePart = s.substring(atIndex+5).trim();
+        String timePart = s.substring(atIndex + 4).trim();
 
         // Parse the date
         LocalDate pubDate = null;
@@ -220,12 +232,11 @@ public class TestUtils {
 
         // Parse the time
         LocalDateTime pubDateTime = null;
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("k:mm");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("H:mm");
 
         LocalTime pubTime = null;
         try{
             pubTime = LocalTime.parse(timePart, timeFormatter);
-            System.out.println(String.format("Parsed Time: '%s'", timePart));
         } catch (Exception e){
             System.out.println(String.format("Exception parsing Time: '%s'", timePart));
             throw e;

@@ -64,14 +64,18 @@ public class PublishStudents extends AnalyticsPage {
     }
     public PublishStudents clickPublishAndWait(int publishTypeID) {
         // Uses a switch to future-proof for other publishing methods
+        WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
         switch (publishTypeID) {
             case 0:
+                wait.until(ExpectedConditions.elementToBeClickable(PUBLISH_BUTTON));
                 driver.findElement(PUBLISH_BUTTON).click();
-                WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
                 wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON));
                 return this;
             case 1:
+                wait.until(ExpectedConditions.elementToBeClickable(LOCAL_PUBLISH_BUTTON));
                 driver.findElement(LOCAL_PUBLISH_BUTTON).click();
+                waitForLoadingWrapper(PUBLISH_WAIT);
+                wait.until(ExpectedConditions.elementToBeClickable(LOCAL_PUBLISH_BUTTON));
                 return this;
             default:
                 throw new IllegalArgumentException("publishTypeID ("+publishTypeID+") must be 0 or 1");
@@ -103,7 +107,12 @@ public class PublishStudents extends AnalyticsPage {
             sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
         }
         if (loadByUrl){
-            driver.get(getSiteBaseUrl()+PAGE_URL);
+            String targetUrl = getSiteBaseUrl() + PAGE_URL;
+            if (driver.getCurrentUrl().equals(targetUrl))
+            {
+                return this;
+            }
+            driver.get(targetUrl);
         } else {
             if(sideMenu == null){
                 sideMenu = new DataSideMenu(driver);

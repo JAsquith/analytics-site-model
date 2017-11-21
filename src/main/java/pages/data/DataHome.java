@@ -30,10 +30,13 @@ public class DataHome extends AnalyticsPage {
         if (loadByUrl) {
             openByUrl();
         }
-        waitMedium.until(ExpectedConditions.or(
-                ExpectedConditions.textToBe(PAGE_TITLE,"Data"),
-                ExpectedConditions.textToBe(PAGE_TITLE,"Grades")
-        ));
+        if (new DataAdminSelect(driver).getCurrentAdminYear().equals(""))
+        {
+            waitMedium.until(ExpectedConditions.or(
+                    ExpectedConditions.textToBe(PAGE_TITLE, "Data"),
+                    ExpectedConditions.textToBe(PAGE_TITLE, "Grades")
+            ));
+        }
         this.waitForLoadingWrapper();
     }
 
