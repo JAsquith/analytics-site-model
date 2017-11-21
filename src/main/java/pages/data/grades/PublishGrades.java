@@ -7,10 +7,10 @@ import pages.AnalyticsPage;
 import pages.data.DataHome;
 import pages.data.components.DataAdminSelect;
 import pages.data.components.DataSideMenu;
-import pages.data.grades.components.PublishAssessmentsYearRow;
 import pages.data.grades.components.PublishDatasetsRow;
 import pages.data.grades.components.PublishGradesModal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,21 +62,20 @@ public class PublishGrades extends AnalyticsPage {
         }
     }
 
-    public final String PAGE_URL = "/EAPAdmin/Publish/Grades";
+    private final String PAGE_URL = "/EAPAdmin/Publish/Grades";
 
-    public final By DATA_SETS_TAB = By.cssSelector(".pageTabContainer>.pageTab>a,.pageTabContainer>.pageTab>span");
-    public final By ASSESSMENTS_YEAR_TABS = By.cssSelector(".pageTab>div>span,.pageTab>div>a");
+    private final By PUB_ADMIN_TABLE = By.cssSelector(".pubAdminTable");
+    private final By PUB_ADMIN_ROWS = By.cssSelector(".pubAdminTable tr");
+    private final By DATA_SETS_TAB = By.cssSelector(".pageTabContainer>.pageTab>a,.pageTabContainer>.pageTab>span");
+    private final By ASSESSMENTS_YEAR_TABS = By.cssSelector(".pageTab>div>span,.pageTab>div>a");
+
+    private final By DATASET_NAME_CELLS = By.cssSelector(".pubAdminTable tr:not(:first-child) td:nth-of-type(2)");
 
 /* Unused, but potentially useful, locators:
-
-    public final By REPORTS_OR_TRACKER_TABS = By.cssSelector(".pageTab>span,.pageTab>a");
-    public final By REPORTS_OR_TRACKER_TAB_SELECTED = By.cssSelector(".pageTab>span");
-    public final By REPORTS_OR_TRACKER_TAB_UNSELECTED = By.cssSelector(".pageTab>a");
 
     private final By DATA_SETS_TAB_SELECTED = By.cssSelector(".pageTabContainer>.pageTab>span");
     private final By DATA_SETS_TAB_UNSELECTED = By.cssSelector(".pageTabContainer>.pageTab>a");
 
-    public final By DATASET_NAME_CELLS = By.cssSelector(".pubAdminTable tr:not(:first-child) td:nth-of-type(2)");
 
     public final By ASSESSMENTS_YEAR_TAB_SELECTED = By.cssSelector(".pageTab>div>span");
     public final By ASSESSMENTS_YEAR_TABS_UNSELECTED = By.cssSelector(".pageTab>div>a");
@@ -106,7 +105,12 @@ public class PublishGrades extends AnalyticsPage {
             sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
         }
         if (loadByUrl){
-            driver.get(getSiteBaseUrl()+PAGE_URL);
+            String targetUrl = getSiteBaseUrl() + PAGE_URL;
+            if (driver.getCurrentUrl().equals(targetUrl))
+            {
+                return this;
+            }
+            driver.get(targetUrl);
         } else {
             if (sideMenu == null){
                 sideMenu = new DataSideMenu(driver);
@@ -116,11 +120,40 @@ public class PublishGrades extends AnalyticsPage {
             }
             sideMenu.clickMenuOption("Publish Grades");
         }
-
         return this;
     }
 
-    // Methods to select a specified Main Tab (i.e. Reports/Trackers/Flight Paths)
+    // Getting the current state of the page
+    public List<String> getDatasetNames()
+    {
+        List<String> names = new ArrayList<>();
+        selectDatasetsTab();
+        List<WebElement> dsNameCells = driver.findElements(DATASET_NAME_CELLS);
+        for (WebElement dsNameCell : dsNameCells)
+        {
+            names.add(dsNameCell.getText().trim());
+        }
+        return names;
+    }
+
+    public int publishActionsAvailable()
+    {
+        // If the pubAdminTable is present there must be something that is publishable on this tab
+        int rowsCount = driver.findElements(PUB_ADMIN_ROWS).size();
+        switch (rowsCount)
+        {
+            case 7:
+                return 1;
+            case 11:
+                return 2;
+            case 15:
+                return 3;
+            default:
+                return 0;
+        }
+    }
+
+    // Interacting with the page
     public PublishGrades clickMainTab(MainTab tabType){
         WebElement tab = driver.findElement(tabType.getTabSelector());
         if (tab.getTagName().equals("a")){
@@ -128,18 +161,6 @@ public class PublishGrades extends AnalyticsPage {
             waitForLoadingWrapper();
         }
         return this;
-    }
-
-    // Methods to show the Grades Publish Modal for a given set of grades
-    public PublishGradesModal clickPublishFor(String datasetName){
-        selectDatasetsTab();
-        PublishDatasetsRow row = new PublishDatasetsRow(driver, datasetName);
-        return row.clickPublish();
-    }
-    public PublishGradesModal clickPublishFor(int year, int term, int slot){
-        selectYearTab(year);
-        PublishAssessmentsYearRow row = new PublishAssessmentsYearRow(driver, term, slot);
-        return row.publish();
     }
 
     public PublishGrades selectDatasetsTab(){
@@ -158,6 +179,13 @@ public class PublishGrades extends AnalyticsPage {
             waitForLoadingWrapper();
         }
         return this;
+    }
+
+    public PublishGradesModal clickPublishFor(String datasetName)
+    {
+        selectDatasetsTab();
+        PublishDatasetsRow row = new PublishDatasetsRow(driver, datasetName);
+        return row.clickPublish();
     }
 
     private WebElement getYearTab(int yearNum){

@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 import pages.data.grades.PublishGrades;
 import pages.data.grades.PublishGrades.MainTab;
 import pages.data.grades.components.PublishGradesModal;
-import tests.admin.data.EAPPublishTest;
+import tests.admin.data.RepublishTest;
 
 /**
  * Add Javadoc comments here!
  */
 
-public class PublishGradesTest extends EAPPublishTest {
+public class PublishGradesTest extends RepublishTest {
 
     PublishGrades page;
     PublishGradesModal modal;
@@ -21,7 +21,7 @@ public class PublishGradesTest extends EAPPublishTest {
     @BeforeTest
     @Step( "Select the Main Publish Type tab on the Publish Grades page" )
     public void setup(){
-        // EAPPublishTest.setup should have run and got us to the Publish Grades page
+        // RepublishTest.setup should have run and got us to the Publish Grades page
         // Now we need to select the "Reports", "Tracker" or "Flight Paths" Main tab
         String gradesPublishType = getStringParam("grades-publish-type", "Report");
         page = selectMainTab(gradesPublishType);

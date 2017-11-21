@@ -34,7 +34,8 @@ public abstract class BaseTest {
      *
      */
 
-    public String applicationUrl;
+    protected String testDomain;
+    protected String applicationUrl;
     protected boolean debugMode;
 
     protected TestUtils utils;
@@ -97,9 +98,8 @@ public abstract class BaseTest {
         context = context_TestNG;
         utils = new TestUtils(context_TestNG);
         debugMode = getBooleanParam("debug", false);
-
-        applicationUrl = getStringParam("test.protocol")+"://"+
-                getStringParam("test.domain") + ".sisraanalytics.co.uk";
+        testDomain = getStringParam("test.domain");
+        applicationUrl = getStringParam("test.protocol") + "://" + testDomain + ".sisraanalytics.co.uk";
     }
 
     /**

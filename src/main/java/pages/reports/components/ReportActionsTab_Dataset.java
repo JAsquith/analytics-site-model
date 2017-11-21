@@ -193,7 +193,7 @@ public class ReportActionsTab_Dataset extends ReportActionsTab implements IRepor
     public List<ReportAction> getValidActionsList() {
         selectAndExpandTab();
 
-        List<ReportAction> actions = new ArrayList();
+        List<ReportAction> actions = new ArrayList<>();
 
         // Focus Dataset options
         actions.add(ReportAction.CHANGE_FOCUS);

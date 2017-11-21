@@ -4,7 +4,7 @@ import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 import pages.data.students.PublishStudents;
-import tests.admin.data.EAPPublishTest;
+import tests.admin.data.RepublishTest;
 
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.not;
@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.not;
  */
 
 @Story( "Publishing EAP Student Data" )
-public class PublishStudentsTest extends EAPPublishTest {
+public class PublishStudentsTest extends RepublishTest {
 
     @Test( description = "Publish Student Data" )
     @Step( "Publish Student Data for {cohort}>{year}" )

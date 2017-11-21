@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.AnalyticsComponent;
 
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -95,11 +94,14 @@ public class DataAdminSelect extends AnalyticsComponent {
         return getKeystageSelect().getFirstSelectedOption().getText();
     }
     public String getCurrentAdminYear(){
-        WebElement adminYearSpan = driver.findElement(ADMIN_YEAR_SPAN);
-        if (adminYearSpan.getAttribute("class").contains("fake")){
+        try
+        {
+            Select adminYear = new Select(driver.findElement(SELECT_ADMIN_YEAR));
+            return adminYear.getFirstSelectedOption().getText();
+        } catch (Exception e)
+        {
             return "";
         }
-        return getAdminYearSelect().getFirstSelectedOption().getText();
     }
 
     // CHANGING THE STATE OF THE CURRENT PAGE
@@ -154,6 +156,17 @@ public class DataAdminSelect extends AnalyticsComponent {
         hideProfiler();
         checkCurrentModeIs("EAP", true);
 
+        Select adminYear = getAdminYearSelect();
+        adminYear.selectByValue(newAdminYear);
+
+        waitForLoadingWrapper(MEDIUM_WAIT);
+        return new DataSideMenu(driver);
+
+/*
+    ALL THE BELOW HAS BEEN REPLACED WITH:
+        Select adminYear = getAdminYearSelect();
+        adminYear.selectByValue(newAdminYear);
+==================================================================
         int cohortYear = Integer.valueOf(newAdminYear);
         int currentYear = Calendar.getInstance().get(Calendar.YEAR) - 2000;
 
@@ -178,9 +191,8 @@ public class DataAdminSelect extends AnalyticsComponent {
                 selectEAPAdminYearByLabel(cohortLabel2);
             }
         }
+*/
 
-        waitForLoadingWrapper(MEDIUM_WAIT);
-        return new DataSideMenu(driver);
     }
 
     private void hideProfiler(){

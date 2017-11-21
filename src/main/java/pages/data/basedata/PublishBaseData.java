@@ -22,7 +22,7 @@ public class PublishBaseData extends AnalyticsPage {
     public final By PUBLISH_BUTTON = By.id("smtBtQue");
     public final By LOCAL_PUBLISH_BUTTON = By.id("smtBt");
     public final By CLOSE_PUB_PROG_MODAL_BUTTON = By.cssSelector(".pubFinished");
-    public final By LAST_PUBLISHED_INFO_TEXT = By.className("smallInfo");
+    public final By LAST_PUBLISHED_INFO_TEXT = By.cssSelector(".smallInfo>span");
 
     /**
      * Simple constructor
@@ -66,14 +66,14 @@ public class PublishBaseData extends AnalyticsPage {
     }
 
     public PublishBaseData clickPublishAndWait(int publishTypeID){
+        WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
         switch (publishTypeID){
             case 0:
                 driver.findElement(PUBLISH_BUTTON).click();
-                WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
                 wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON));
                 return this;
             case 1:
-                driver.findElement(LOCAL_PUBLISH_BUTTON);
+                driver.findElement(LOCAL_PUBLISH_BUTTON).click();
                 waitForLoadingWrapper(PUBLISH_WAIT);
                 return this;
             default:
@@ -100,7 +100,12 @@ public class PublishBaseData extends AnalyticsPage {
             sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
         }
         if (loadByUrl){
-            driver.get(getSiteBaseUrl()+PAGE_URL);
+            String targetUrl = getSiteBaseUrl() + PAGE_URL;
+            if (driver.getCurrentUrl().equals(targetUrl))
+            {
+                return this;
+            }
+            driver.get(targetUrl);
         } else {
             if (sideMenu == null){
                 sideMenu = new DataSideMenu(driver);
