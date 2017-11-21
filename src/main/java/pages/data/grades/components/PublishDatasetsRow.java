@@ -1,20 +1,25 @@
 package pages.data.grades.components;
 
-import pages.AnalyticsComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import pages.AnalyticsComponent;
+import pages.data.grades.interfaces.IPublishGradesRow;
 
 import java.util.List;
 
 /**
  * A component object representing the content and actions within one row of the Publish Data Sets table
  */
-public class PublishDatasetsRow extends AnalyticsComponent{
+public class PublishDatasetsRow
+        extends AnalyticsComponent
+        implements IPublishGradesRow {
 
-    private int cssRowIndex;
     private final By DATASET_NAME_CELLS = By.cssSelector(".pubAdminTable tr:not(:first-child) td:nth-of-type(2)");
+    private WebElement mainDetailsRow;
     private final By PUBLISH_BUTTON = By.linkText("Publish");
+    private static final By PUB_INFO_SPAN = By.cssSelector(".smallInfo>span");
+    private WebElement pubInfoRow;
 
     /**
      * Creates a Component object for a row of the Publish Datasets table identified by the dataset param.
@@ -46,15 +51,22 @@ public class PublishDatasetsRow extends AnalyticsComponent{
         initByIndex(dsIndex);
     }
 
+    public String getLastPublishedInfo()
+    {
+        return pubInfoRow.findElement(PUB_INFO_SPAN).getText();
+    }
+
     public PublishGradesModal clickPublish(){
-        tableRow.findElement(PUBLISH_BUTTON).click();
+        mainDetailsRow.findElement(PUBLISH_BUTTON).click();
         waitForLoadingWrapper();
         return new PublishGradesModal(driver);
     }
 
     private void initByIndex(int dsIndex){
-        cssRowIndex = (dsIndex * 2) + 1;
-        tableRow = driver.findElement(By.cssSelector(".pubAdminTable tr:nth-of-type(" + cssRowIndex + ")"));
+        int mainRowCssIndex = (dsIndex * 2) + 1;
+        int pubInfoRowCssIndex = mainRowCssIndex + 1;
+        mainDetailsRow = driver.findElement(By.cssSelector(".pubAdminTable tr:nth-of-type(" + mainRowCssIndex + ")"));
+        pubInfoRow = driver.findElement(By.cssSelector(".pubAdminTable tr:nth-of-type(" + pubInfoRowCssIndex + ")"));
     }
 
 }
