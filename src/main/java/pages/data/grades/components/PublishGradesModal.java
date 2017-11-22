@@ -99,11 +99,11 @@ public class PublishGradesModal extends AnalyticsComponent{
                 waitForLoadingWrapper(LONG_WAIT);
                 WebDriverWait wait = new WebDriverWait(driver, PUBLISH_WAIT);
                 wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON)).click();
-                return new PublishGrades(driver);
+                return new PublishGrades(driver).loaded();
             case 1:
                 driver.findElement(LOCAL_PUBLISH_BUTTON).click();
                 waitForLoadingWrapper(PUBLISH_WAIT);
-                return new PublishGrades(driver);
+                return new PublishGrades(driver).loaded();
             default:
                 throw new IllegalArgumentException("publishTypeID ("+publishTypeID+") must be 0 or 1");
         }

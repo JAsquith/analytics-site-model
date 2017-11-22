@@ -3,9 +3,8 @@ package pages.data.grades;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.AnalyticsPage;
-import pages.data.DataHome;
-import pages.data.components.DataAdminSelect;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import pages.data.DataPage;
 import pages.data.components.DataSideMenu;
 import pages.data.grades.components.PublishDatasetsRow;
 import pages.data.grades.components.PublishGradesModal;
@@ -16,7 +15,7 @@ import java.util.List;
 /**
  * Represents the components and actions on the Publish Grades page.
 */
-public class PublishGrades extends AnalyticsPage {
+public class PublishGrades extends DataPage {
 
     public enum MainTab {
         REPORTS(1), TRACKER(2), FLIGHT_PATHS(3);
@@ -92,34 +91,28 @@ public class PublishGrades extends AnalyticsPage {
     }
 
     public PublishGrades load(String cohort, boolean loadByUrl){
-        DataSideMenu sideMenu = null;
 
-        if(!cohort.equals("")){
-            DataHome dataPage = new DataHome(driver, true);
-            DataAdminSelect modeAndCohort = dataPage.getDataAdminSelect();
-            modeAndCohort.selectMode("EAP");
+        DataSideMenu sideMenu = this.openCohortInDataArea(cohort);
 
-            if (cohort.length() > 2){
-                cohort = cohort.substring(cohort.length()-2);
-            }
-            sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
-        }
         if (loadByUrl){
             String targetUrl = getSiteBaseUrl() + PAGE_URL;
             if (driver.getCurrentUrl().equals(targetUrl))
             {
-                return this;
+                return this.loaded();
             }
             driver.get(targetUrl);
         } else {
-            if (sideMenu == null){
-                sideMenu = new DataSideMenu(driver);
-            }
             if (!sideMenu.isTabSelected("GRADES")){
                 sideMenu.clickTab("GRADES");
             }
             sideMenu.clickMenuOption("Publish Grades");
         }
+        return this.loaded();
+    }
+
+    public PublishGrades loaded()
+    {
+        waitShort.until(ExpectedConditions.elementToBeClickable(DATA_SETS_TAB));
         return this;
     }
 

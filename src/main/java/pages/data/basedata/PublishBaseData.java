@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.AnalyticsPage;
-import pages.data.DataHome;
-import pages.data.components.DataAdminSelect;
+import pages.data.DataPage;
 import pages.data.components.DataSideMenu;
 
 import java.util.List;
@@ -15,7 +13,7 @@ import java.util.List;
 /**
  * Represents the contents and interactive elements on the Publish KS2 / EAP page of EAP
  */
-public class PublishBaseData extends AnalyticsPage {
+public class PublishBaseData extends DataPage {
 
     public final String PAGE_URL = "/EAPAdmin/Publish/KS2EAP";
 
@@ -87,18 +85,8 @@ public class PublishBaseData extends AnalyticsPage {
 
     public PublishBaseData load(String cohort, boolean loadByUrl){
 
-        DataSideMenu sideMenu = null;
+        DataSideMenu sideMenu = this.openCohortInDataArea(cohort);
 
-        if(!cohort.equals("")){
-            DataHome dataPage = new DataHome(driver, true);
-            DataAdminSelect modeAndCohort = dataPage.getDataAdminSelect();
-            modeAndCohort.selectMode("EAP");
-
-            if (cohort.length() > 2){
-                cohort = cohort.substring(cohort.length()-2);
-            }
-            sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
-        }
         if (loadByUrl){
             String targetUrl = getSiteBaseUrl() + PAGE_URL;
             if (driver.getCurrentUrl().equals(targetUrl))

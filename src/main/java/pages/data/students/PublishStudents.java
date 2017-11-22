@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.AnalyticsPage;
-import pages.data.DataHome;
-import pages.data.components.DataAdminSelect;
+import pages.data.DataPage;
 import pages.data.components.DataSideMenu;
 
 import java.util.List;
@@ -15,7 +13,7 @@ import java.util.List;
 /**
  * Represents the contents and interactive elements on the Publish Students Page of EAP
  */
-public class PublishStudents extends AnalyticsPage {
+public class PublishStudents extends DataPage {
 
     public final String PAGE_URL = "/EAPAdmin/Publish/Students";
     public final By PUBLISH_BUTTON = By.id("smtBtQue");
@@ -95,17 +93,8 @@ public class PublishStudents extends AnalyticsPage {
     }
 
     public PublishStudents load(String cohort, boolean loadByUrl){
-        DataSideMenu sideMenu = null;
-        if(cohort.length()>0) {
-            DataHome dataPage = new DataHome(driver, true);
-            DataAdminSelect modeAndCohort = dataPage.getDataAdminSelect();
-            modeAndCohort.selectMode("EAP");
+        DataSideMenu sideMenu = this.openCohortInDataArea(cohort);
 
-            if (cohort.length() > 2) {
-                cohort = cohort.substring(cohort.length() - 2);
-            }
-            sideMenu = modeAndCohort.selectEAPAdminYearByCohortNum(cohort);
-        }
         if (loadByUrl){
             String targetUrl = getSiteBaseUrl() + PAGE_URL;
             if (driver.getCurrentUrl().equals(targetUrl))

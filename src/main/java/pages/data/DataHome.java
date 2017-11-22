@@ -4,14 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import pages.AnalyticsPage;
 import pages.data.components.DataAdminSelect;
-import pages.data.components.DataSideMenu;
 
 /**
  * Extends the AnalyticsPage class to model components and elements on the Data Home Page
  */
-public class DataHome extends AnalyticsPage {
+public class DataHome extends DataPage {
 
 //FIELDS
     private final String PAGE_PATH = "/EAPAdmin";
@@ -46,12 +44,6 @@ public class DataHome extends AnalyticsPage {
     protected WebElement getSISRAMsgsGroup(){
     return driver.findElement(SISRA_MSG_BLOCK);
 }
-    public DataAdminSelect getDataAdminSelect(){
-        return new DataAdminSelect(driver);
-    }
-    public DataSideMenu getEAPSideMenu(){
-        return new DataSideMenu(driver);
-    }
 
     //  - ACCESSORS FOR SPECIFIC INFORMATION
     public String getMessageGroupHeading(String groupType){

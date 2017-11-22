@@ -71,9 +71,24 @@ public class RepublishTest extends BaseTest {
 
             // instantiate the List to hold details of the publishing events we trigger
             republishEvents = new ArrayList<>();
+        } catch (Exception e)
+        {
+            saveScreenshot(context.getName() + "_SetupFail.png");
+            fail("Exception during setup::readTestSettings\n\n" + e.getMessage());
+        }
 
+        try
+        {
             // Login
             login(user, pass, true);
+        } catch (Exception e)
+        {
+            saveScreenshot(context.getName() + "_SetupFail.png");
+            fail("Exception during setup::Login\n\n" + e.getMessage());
+        }
+
+        try
+        {
 
             // Try to republish any out of date data
             // Todo - different exception handling to ensure all areas in all cohorts are checked
@@ -85,7 +100,7 @@ public class RepublishTest extends BaseTest {
         } catch (Exception e)
         {
             saveScreenshot(context.getName() + "_SetupFail.png");
-            fail("Test Setup Failed! Exception: " + e.getMessage());
+            fail("Exception during setup::RepublishCohort\n\n" + e.getMessage());
         }
 
     }
@@ -96,42 +111,94 @@ public class RepublishTest extends BaseTest {
         // Republish Student Data (if required)
         if (repubStudents)
         {
-            republishStudents(cohort);
+            try
+            {
+                republishStudents(cohort);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+                String methodName = super.getCurrentMethodName();
+                logToAllure("Exception in " + methodName + "::students");
+                logToAllure(e.getMessage());
+                saveScreenshot(methodName + ".png");
+                throw e;
+            }
         }
 
         // Republish Baseline Data (if required)
         if (repubBasedata)
         {
-            republishBasedata(cohort);
+            try
+            {
+                republishBasedata(cohort);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+                String methodName = super.getCurrentMethodName();
+                logToAllure("Exception in " + methodName + "::basedata");
+                logToAllure(e.getMessage());
+                saveScreenshot(methodName + ".png");
+                throw e;
+            }
         }
 
         // Republish Grades Data (if required)
         if (repubGrades)
         {
-            republishGrades(cohort);
+            try
+            {
+                republishGrades(cohort);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+                String methodName = super.getCurrentMethodName();
+                logToAllure("Exception in " + methodName + "::grades");
+                logToAllure(e.getMessage());
+                saveScreenshot(methodName + ".png");
+                throw e;
+            }
+
         }
     }
 
     private void republishStudents(String cohort)
     {
-        PublishStudents studentsPub = new PublishStudents(driver).load(cohort, true);
-        String lastPublishedInfo = studentsPub.getLastPublishedInfo();
-        LocalDateTime pubDate = TestUtils.parseLastPubDateString(lastPublishedInfo);
-        if (pubDate.isBefore(deployDate))
+        try
         {
-            publishStudents(studentsPub, lastPublishedInfo);
-            republishEvents.add(new Object[]{"Students", cohort, "", 0});
-        } else
+            PublishStudents studentsPub = new PublishStudents(driver).load(cohort, true);
+            String lastPublishedInfo = studentsPub.getLastPublishedInfo();
+            LocalDateTime pubDate = TestUtils.parseLastPubDateString(lastPublishedInfo);
+            if (pubDate.isBefore(deployDate))
+            {
+                publishStudents(studentsPub, lastPublishedInfo);
+                republishEvents.add(new Object[]{"Students", cohort, "", 0});
+            } else
+            {
+                logToAllure(String.format("Skipping: %s > Students (Last published: %s)", cohort, lastPublishedInfo));
+            }
+        } catch (Exception e)
         {
-            logToAllure(String.format("Skipping: %s > Students (Last published: %s)", cohort, lastPublishedInfo));
+            e.printStackTrace();
+            String methodName = super.getCurrentMethodName();
+            logToAllure("Exception in " + methodName + "::grades");
+            logToAllure(e.getMessage());
+            saveScreenshot(methodName + ".png");
+            throw e;
         }
     }
 
     @Step("Publishing Student Data (last published: {lastPub})")
     private void publishStudents(PublishStudents studentsPub, String lastPub)
     {
-        saveScreenshot("Students.png");
-        studentsPub.clickPublishAndWait(publishType);
+        try
+        {
+            studentsPub.clickPublishAndWait(publishType);
+        } catch (Exception e)
+        {
+            saveScreenshot("Students.png");
+            e.printStackTrace();
+            logToAllure("Exception while clicking Students > Publish: " + e.getMessage());
+        }
     }
 
     private void republishBasedata(String cohort)
@@ -152,8 +219,15 @@ public class RepublishTest extends BaseTest {
     @Step("Publishing Base Data (last published: {lastPub})")
     private void publishBasedata(PublishBaseData basedataPub, String lastPub)
     {
-        saveScreenshot("Basedata.png");
-        basedataPub.clickPublishAndWait(publishType);
+        try
+        {
+            basedataPub.clickPublishAndWait(publishType);
+        } catch (Exception e)
+        {
+            saveScreenshot("Basedata.png");
+            e.printStackTrace();
+            logToAllure("Exception while clicking KS2/EAP > Publish: " + e.getMessage());
+        }
     }
 
     private void republishGrades(String cohort)
@@ -201,7 +275,16 @@ public class RepublishTest extends BaseTest {
     @Step("Publishing Grades Dataset {dsInfo}")
     private PublishGrades publishGradesData(IPublishGradesRow row, String dsInfo)
     {
-        return row.clickPublish().clickPublish(publishType);
+        try
+        {
+            return row.clickPublish().clickPublish(publishType);
+        } catch (Exception e)
+        {
+            saveScreenshot("Dataset.png");
+            e.printStackTrace();
+            logToAllure("Exception while clicking " + dsInfo + " > Publish: " + e.getMessage());
+            return null;
+        }
     }
 
     @Test(dataProvider = "publishEvents", description = "Publishing is up to date")
@@ -230,41 +313,85 @@ public class RepublishTest extends BaseTest {
     @Step("Cohort {cohort} Students publish date check")
     public void checkStudentPublish(String cohort)
     {
-        PublishStudents stuPubPage = new PublishStudents(driver).load(cohort, true);
-        LocalDateTime published = TestUtils.parseLastPubDateString(stuPubPage.getLastPublishedInfo());
-        String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
-        assertWithScreenshot(rsn, published, is(after(deployDate)));
+        try
+        {
+            PublishStudents stuPubPage = new PublishStudents(driver).load(cohort, true);
+            LocalDateTime published = TestUtils.parseLastPubDateString(stuPubPage.getLastPublishedInfo());
+            String rsn = String.format("Published (%1$te/%1$tm/%1$tY at %1$tR) > Deployed (%2$te/%2$tm/%2$tY at %2$tR)", published, deployDate);
+            assertWithScreenshot(rsn, published, is(after(deployDate)));
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            String methodName = super.getCurrentMethodName();
+            logToAllure("Exception in " + methodName);
+            logToAllure(e.getMessage());
+            saveScreenshot(methodName + ".png");
+            throw e;
+        }
     }
 
     @Step("Cohort {cohort} Basedata publish date check")
     public void checkBasedataPublish(String cohort)
     {
-        PublishBaseData pubPage = new PublishBaseData(driver).load(cohort, true);
-        LocalDateTime published = TestUtils.parseLastPubDateString(pubPage.getLastPublishedInfo());
-        String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
-        assertWithScreenshot(rsn, published, after(deployDate));
+        try
+        {
+            PublishBaseData pubPage = new PublishBaseData(driver).load(cohort, true);
+            LocalDateTime published = TestUtils.parseLastPubDateString(pubPage.getLastPublishedInfo());
+            String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
+            assertWithScreenshot(rsn, published, after(deployDate));
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            String methodName = super.getCurrentMethodName();
+            logToAllure("Exception in " + methodName);
+            logToAllure(e.getMessage());
+            saveScreenshot(methodName + ".png");
+            throw e;
+        }
     }
 
     @Step("Cohort {cohort} > {dsName} publish date check")
     private void checkDatasetPublish(String cohort, String dsName)
     {
-        PublishGrades pubPage = new PublishGrades(driver).load(cohort, true);
-        pubPage.selectDatasetsTab();
-        PublishDatasetsRow dsRow = new PublishDatasetsRow(driver, dsName);
-        LocalDateTime published = TestUtils.parseLastPubDateString(dsRow.getLastPublishedInfo());
-        String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
-        assertWithScreenshot(rsn, published, after(deployDate));
+        try
+        {
+            PublishGrades pubPage = new PublishGrades(driver).load(cohort, true);
+            pubPage.selectDatasetsTab();
+            PublishDatasetsRow dsRow = new PublishDatasetsRow(driver, dsName);
+            LocalDateTime published = TestUtils.parseLastPubDateString(dsRow.getLastPublishedInfo());
+            String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
+            assertWithScreenshot(rsn, published, after(deployDate));
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            String methodName = super.getCurrentMethodName();
+            logToAllure("Exception in " + methodName);
+            logToAllure(e.getMessage());
+            saveScreenshot(methodName + ".png");
+            throw e;
+        }
     }
 
     @Step("Cohort {cohort} > Year {eapYear} > Collection[{slotIndex}] publish date check")
     private void checkCollectionPublish(String cohort, String eapYear, int slotIndex)
     {
-        PublishGrades pubPage = new PublishGrades(driver).load(cohort, true);
-        pubPage.selectYearTab(slotIndex);
-        PublishAssessmentsYearRow yrRow = new PublishAssessmentsYearRow(driver, Integer.valueOf(eapYear), slotIndex);
-        LocalDateTime published = TestUtils.parseLastPubDateString(yrRow.getLastPublishedInfo());
-        String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
-        assertWithScreenshot(rsn, published, after(deployDate));
+        try
+        {
+            PublishGrades pubPage = new PublishGrades(driver).load(cohort, true);
+            pubPage.selectYearTab(Integer.valueOf(eapYear));
+            PublishAssessmentsYearRow yrRow = new PublishAssessmentsYearRow(driver, slotIndex);
+            LocalDateTime published = TestUtils.parseLastPubDateString(yrRow.getLastPublishedInfo());
+            String rsn = String.format("Published (%1$tD at %1$tR) > Deployed (%2$tD at %2$tR)", published, deployDate);
+            assertWithScreenshot(rsn, published, after(deployDate));
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            String methodName = super.getCurrentMethodName();
+            logToAllure("Exception in " + methodName);
+            logToAllure(e.getMessage());
+            saveScreenshot(methodName + ".png");
+            throw e;
+        }
     }
 
     @DataProvider(name = "publishEvents")

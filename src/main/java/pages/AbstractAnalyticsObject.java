@@ -58,7 +58,7 @@ public abstract class AbstractAnalyticsObject {
      * @throws  org.openqa.selenium.TimeoutException if timeout expires
      */
     public Boolean waitForLoadingWrapper(int timeout){
-        return waitForLoadingWrapper(timeout, true);
+        return waitForLoadingWrapper(timeout, false);
     }
 
     public Boolean waitForLoadingWrapper(int timeout, boolean hideOnTimeout){
