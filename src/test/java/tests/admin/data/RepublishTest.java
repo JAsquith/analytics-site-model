@@ -23,6 +23,7 @@ import java.util.List;
 
 import static org.exparity.hamcrest.date.LocalDateTimeMatchers.after;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.testng.Assert.fail;
 
 @Epic("EAP Publishing")
@@ -51,12 +52,13 @@ public class RepublishTest extends BaseTest {
         {
             fail(initResult);
         }
-
+        String deployDateStr = "00/00/0000 00:00:00";
         try
         {
             // Settings from the test.properties file
             publishType = this.testDomain.equals("www") ? 0 : 1;
-            deployDate = TestUtils.parseDeployDateString(getStringParam("deploy-date")).plusSeconds(1);
+            deployDateStr = getStringParam("deploy-date");
+            deployDate = TestUtils.parseDeployDateString(deployDateStr);
 
             // Settings that may be overridden in the XML test parameters
             boolean l_repubStudents = getBooleanParam("student-data", false);
@@ -94,7 +96,7 @@ public class RepublishTest extends BaseTest {
             // Todo - different exception handling to ensure all areas in all cohorts are checked
             for (String cohort : cohorts)
             {
-                republishSingleCohort(cohort);
+                checkCohort(deployDateStr, cohort);
             }
 
         } catch (Exception e)
@@ -105,15 +107,15 @@ public class RepublishTest extends BaseTest {
 
     }
 
-    @Step("Checking for required publish events in cohort: {cohort}")
-    private void republishSingleCohort(String cohort)
+    @Step("Checking for data published before {deployDateStr} in cohort: {cohort}")
+    private void checkCohort(String deployDateStr, String cohort)
     {
         // Republish Student Data (if required)
         if (repubStudents)
         {
             try
             {
-                republishStudents(cohort);
+                checkStudentsPubDate(cohort);
             } catch (Exception e)
             {
                 e.printStackTrace();
@@ -130,7 +132,7 @@ public class RepublishTest extends BaseTest {
         {
             try
             {
-                republishBasedata(cohort);
+                checkBasedataPubDate(cohort);
             } catch (Exception e)
             {
                 e.printStackTrace();
@@ -147,7 +149,7 @@ public class RepublishTest extends BaseTest {
         {
             try
             {
-                republishGrades(cohort);
+                checkGradesPubDates(cohort);
             } catch (Exception e)
             {
                 e.printStackTrace();
@@ -161,7 +163,7 @@ public class RepublishTest extends BaseTest {
         }
     }
 
-    private void republishStudents(String cohort)
+    private void checkStudentsPubDate(String cohort)
     {
         try
         {
@@ -201,7 +203,7 @@ public class RepublishTest extends BaseTest {
         }
     }
 
-    private void republishBasedata(String cohort)
+    private void checkBasedataPubDate(String cohort)
     {
         PublishBaseData basedataPub = new PublishBaseData(driver).load(cohort, true);
         String lastPublishedInfo = basedataPub.getLastPublishedInfo();
@@ -230,7 +232,7 @@ public class RepublishTest extends BaseTest {
         }
     }
 
-    private void republishGrades(String cohort)
+    private void checkGradesPubDates(String cohort)
     {
         PublishGrades gradesPub = new PublishGrades(driver).load(cohort, true);
         for (String dsName : gradesPub.getDatasetNames())
@@ -253,13 +255,13 @@ public class RepublishTest extends BaseTest {
             for (int slotIndex = 1; slotIndex < pubActionsCount + 1; slotIndex++)
             {
                 PublishAssessmentsYearRow yrRow = new PublishAssessmentsYearRow(driver, slotIndex);
+                String lastPublishedInfo = yrRow.getLastPublishedInfo();
                 if (yrRow.publishAvailable())
                 {
-                    String lastPublishedInfo = yrRow.getLastPublishedInfo();
                     LocalDateTime pubDate = TestUtils.parseLastPubDateString(lastPublishedInfo);
                     if (pubDate.isBefore(deployDate))
                     {
-                        String info = "Year " + year + " slot " + slotIndex + " of " + (pubActionsCount + 1)
+                        String info = "Year " + year + " slot " + slotIndex + " of " + (pubActionsCount)
                                 + " (last published: " + lastPublishedInfo + ")";
                         gradesPub = publishGradesData(yrRow, info);
                         republishEvents.add(new Object[]{"Collection", cohort, String.valueOf(year), slotIndex});
@@ -267,7 +269,8 @@ public class RepublishTest extends BaseTest {
                     {
                         logToAllure(String.format("Skipping: %s > Year %d[%d] (Last published: %s)", cohort, year, slotIndex, lastPublishedInfo));
                     }
-                }
+                } else
+                    logToAllure(String.format("Skipping: %s > Year %d[%d] (Last published: %s)", cohort, year, slotIndex, lastPublishedInfo));
             }
         }
     }
@@ -289,21 +292,21 @@ public class RepublishTest extends BaseTest {
 
     @Test(dataProvider = "publishEvents", description = "Publishing is up to date")
     @Parameters({"pubType", "cohort", "datasetOrYear", "slotIndex"})
-    public void checkPublishEvent(String pubType, String cohort, String datasetOrYear, Integer slotIndex)
+    public void checkPublishEventsSuccessful(String pubType, String cohort, String datasetOrYear, Integer slotIndex)
     {
         switch (pubType)
         {
             case "Students":
-                checkStudentPublish(cohort);
+                checkStudentPublishEvent(cohort);
                 return;
             case "BaseData":
-                checkBasedataPublish(cohort);
+                checkBasedataPublishEvent(cohort);
                 return;
             case "Dataset":
-                checkDatasetPublish(cohort, datasetOrYear);
+                checkDatasetPublishEvent(cohort, datasetOrYear);
                 return;
             case "Collection":
-                checkCollectionPublish(cohort, datasetOrYear, slotIndex);
+                checkCollectionPublishEvent(cohort, datasetOrYear, slotIndex);
                 return;
             default:
                 // Houston, we have a problem!
@@ -311,7 +314,7 @@ public class RepublishTest extends BaseTest {
     }
 
     @Step("Cohort {cohort} Students publish date check")
-    public void checkStudentPublish(String cohort)
+    public void checkStudentPublishEvent(String cohort)
     {
         try
         {
@@ -331,7 +334,7 @@ public class RepublishTest extends BaseTest {
     }
 
     @Step("Cohort {cohort} Basedata publish date check")
-    public void checkBasedataPublish(String cohort)
+    public void checkBasedataPublishEvent(String cohort)
     {
         try
         {
@@ -351,7 +354,7 @@ public class RepublishTest extends BaseTest {
     }
 
     @Step("Cohort {cohort} > {dsName} publish date check")
-    private void checkDatasetPublish(String cohort, String dsName)
+    private void checkDatasetPublishEvent(String cohort, String dsName)
     {
         try
         {
@@ -373,7 +376,7 @@ public class RepublishTest extends BaseTest {
     }
 
     @Step("Cohort {cohort} > Year {eapYear} > Collection[{slotIndex}] publish date check")
-    private void checkCollectionPublish(String cohort, String eapYear, int slotIndex)
+    private void checkCollectionPublishEvent(String cohort, String eapYear, int slotIndex)
     {
         try
         {
@@ -399,4 +402,23 @@ public class RepublishTest extends BaseTest {
     {
         return republishEvents.iterator();
     }
+
+    @Test(dataProvider = "noPublishEvents", description = "No Republishing Events Triggered")
+    @Parameters({"pubEventsCount"})
+    public void noEventsDummyTest(int pubEventsCount)
+    {
+        assertThat("No publishing events were triggered in this school", 0, is(0));
+    }
+
+    @DataProvider(name = "noPublishEvents")
+    public Iterator<Object[]> getNoEventsDummyTest()
+    {
+        List<Object[]> noEvents = new ArrayList<Object[]>();
+        if (republishEvents.size() == 0)
+        {
+            noEvents.add(new Object[]{0});
+        }
+        return noEvents.iterator();
+    }
+
 }

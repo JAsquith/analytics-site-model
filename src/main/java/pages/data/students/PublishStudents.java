@@ -111,6 +111,7 @@ public class PublishStudents extends DataPage {
             }
             sideMenu.clickMenuOption("Publish Students");
         }
+        waitForLoadingWrapper();
         return this;
     }
 

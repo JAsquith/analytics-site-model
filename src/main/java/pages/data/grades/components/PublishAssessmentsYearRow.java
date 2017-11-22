@@ -87,6 +87,10 @@ public class PublishAssessmentsYearRow
 
     public boolean publishAvailable()
     {
+        if (getLastPublishedInfo().startsWith("Not"))
+        {
+            return false;
+        }
         try
         {
             mainDetailRow.findElement(PUBLISH_BUTTON);

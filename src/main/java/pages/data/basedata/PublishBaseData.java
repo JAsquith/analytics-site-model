@@ -68,11 +68,16 @@ public class PublishBaseData extends DataPage {
         switch (publishTypeID){
             case 0:
                 driver.findElement(PUBLISH_BUTTON).click();
+                waitForLoadingWrapper();
                 wait.until(ExpectedConditions.elementToBeClickable(CLOSE_PUB_PROG_MODAL_BUTTON));
+                // ??
                 return this;
             case 1:
+                waitForLoadingWrapper();
                 driver.findElement(LOCAL_PUBLISH_BUTTON).click();
+                wait.until(ExpectedConditions.elementToBeClickable(OVERLAY_LOADING_WRAPPER));
                 waitForLoadingWrapper(PUBLISH_WAIT);
+                wait.until(ExpectedConditions.elementToBeClickable(LOCAL_PUBLISH_BUTTON));
                 return this;
             default:
                 throw new IllegalArgumentException("publishTypeID ("+publishTypeID+") must be 0 or 1");
@@ -103,6 +108,7 @@ public class PublishBaseData extends DataPage {
             }
             sideMenu.clickMenuOption("Publish KS2 / EAP");
         }
+        waitForLoadingWrapper();
         return this;
     }
 

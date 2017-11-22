@@ -136,11 +136,11 @@ public class PublishGrades extends DataPage {
         switch (rowsCount)
         {
             case 7:
-                return 1;
-            case 11:
                 return 2;
+            case 11:
+                return 4;
             case 15:
-                return 3;
+                return 6;
             default:
                 return 0;
         }
